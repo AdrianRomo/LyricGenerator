@@ -1,0 +1,171 @@
+\BOOKMARK [-1][-]{part.1}{I Trabajo Terminal I}{}% 1
+\BOOKMARK [0][-]{appendix.Alph1}{Introducci\363n}{part.1}% 2
+\BOOKMARK [1][-]{section.Alph1.1}{Objetivos.}{appendix.Alph1}% 3
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Objetivo general. }{section.Alph1.1}% 4
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{Objetivos particulares.}{section.Alph1.1}% 5
+\BOOKMARK [1][-]{section.Alph1.2}{Trabajo previo.}{appendix.Alph1}% 6
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Trabajo Previo 1}{section.Alph1.2}% 7
+\BOOKMARK [2][-]{subsection.Alph1.2.2}{Trabajo Previo 2}{section.Alph1.2}% 8
+\BOOKMARK [1][-]{section.Alph1.3}{Justificaci\363n.}{appendix.Alph1}% 9
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{Limites y alcances}{section.Alph1.3}% 10
+\BOOKMARK [1][-]{section.Alph1.4}{Metodolog\355a.}{appendix.Alph1}% 11
+\BOOKMARK [1][-]{section.Alph1.5}{Organizaci\363n del documento}{appendix.Alph1}% 12
+\BOOKMARK [2][-]{subsection.Alph1.5.1}{Cap\355tulo 2. Marco te\363rico.}{section.Alph1.5}% 13
+\BOOKMARK [2][-]{subsection.Alph1.5.2}{Cap\355tulo 3. An\341lisis.}{section.Alph1.5}% 14
+\BOOKMARK [2][-]{subsection.Alph1.5.3}{Cap\355tulo 4. Dise\361o.}{section.Alph1.5}% 15
+\BOOKMARK [2][-]{subsection.Alph1.5.4}{Cap\355tulo 5. Desarrollo.}{section.Alph1.5}% 16
+\BOOKMARK [2][-]{subsection.Alph1.5.5}{Cap\355tulo 6. Avances y trabajo por hacer.}{section.Alph1.5}% 17
+\BOOKMARK [0][-]{appendix.Alph2}{Marco te\363rico}{part.1}% 18
+\BOOKMARK [1][-]{subsection.Alph2.0.1}{Github Students Pack}{appendix.Alph2}% 19
+\BOOKMARK [1][-]{section.Alph2.1}{Redes neuronales}{appendix.Alph2}% 20
+\BOOKMARK [2][-]{subsection.Alph2.1.1}{Tipos de Redes Neuronales}{section.Alph2.1}% 21
+\BOOKMARK [1][-]{section.Alph2.2}{Base de datos}{appendix.Alph2}% 22
+\BOOKMARK [2][-]{subsection.Alph2.2.1}{Tipos de bases de datos}{section.Alph2.2}% 23
+\BOOKMARK [1][-]{section.Alph2.3}{\277Qu\351 es una canci\363n?}{appendix.Alph2}% 24
+\BOOKMARK [2][-]{subsection.Alph2.3.1}{Elementos de una canci\363n}{section.Alph2.3}% 25
+\BOOKMARK [2][-]{subsection.Alph2.3.2}{Introducci\363n}{section.Alph2.3}% 26
+\BOOKMARK [2][-]{subsection.Alph2.3.3}{Verso}{section.Alph2.3}% 27
+\BOOKMARK [2][-]{subsection.Alph2.3.4}{Pre-estribillo}{section.Alph2.3}% 28
+\BOOKMARK [2][-]{subsection.Alph2.3.5}{Estribillo}{section.Alph2.3}% 29
+\BOOKMARK [2][-]{subsection.Alph2.3.6}{Puente}{section.Alph2.3}% 30
+\BOOKMARK [2][-]{subsection.Alph2.3.7}{Cierre}{section.Alph2.3}% 31
+\BOOKMARK [2][-]{subsection.Alph2.3.8}{Estructura de una canci\363n}{section.Alph2.3}% 32
+\BOOKMARK [1][-]{section.Alph2.4}{Cadenas de Markov}{appendix.Alph2}% 33
+\BOOKMARK [1][-]{section.Alph2.5}{Flask}{appendix.Alph2}% 34
+\BOOKMARK [1][-]{section.Alph2.6}{Tema 4}{appendix.Alph2}% 35
+\BOOKMARK [1][-]{section.Alph2.7}{Tema 5}{appendix.Alph2}% 36
+\BOOKMARK [2][-]{subsection.Alph2.7.1}{Subtema 5.1}{section.Alph2.7}% 37
+\BOOKMARK [2][-]{subsection.Alph2.7.2}{Subtema 5.2}{section.Alph2.7}% 38
+\BOOKMARK [2][-]{subsection.Alph2.7.3}{Objetivos de la criptograf\355a.}{section.Alph2.7}% 39
+\BOOKMARK [2][-]{subsection.Alph2.7.4}{Usos de la criptograf\355a.}{section.Alph2.7}% 40
+\BOOKMARK [2][-]{subsection.Alph2.7.5}{Criptograf\355a sim\351trica y asim\351trica.}{section.Alph2.7}% 41
+\BOOKMARK [2][-]{subsection.Alph2.7.6}{Criptograf\355a a nivel de aplicaci\363n.}{section.Alph2.7}% 42
+\BOOKMARK [1][-]{section.Alph2.8}{Tema 6}{appendix.Alph2}% 43
+\BOOKMARK [2][-]{subsection.Alph2.8.1}{Historia}{section.Alph2.8}% 44
+\BOOKMARK [2][-]{subsection.Alph2.8.2}{\277Qu\351 es Tema 6?}{section.Alph2.8}% 45
+\BOOKMARK [2][-]{subsection.Alph2.8.3}{Objetivo de Tema 6}{section.Alph2.8}% 46
+\BOOKMARK [2][-]{subsection.Alph2.8.4}{\277C\363mo funciona?}{section.Alph2.8}% 47
+\BOOKMARK [2][-]{subsection.Alph2.8.5}{Propiedades de Tema 6}{section.Alph2.8}% 48
+\BOOKMARK [2][-]{subsection.Alph2.8.6}{All-or-Nothing and the Package Transform \(AONT\)}{section.Alph2.8}% 49
+\BOOKMARK [2][-]{subsection.Alph2.8.7}{Comparando Chaffing and Winnowing contra Cifrado y Esteganograf\355a}{section.Alph2.8}% 50
+\BOOKMARK [-1][-]{part.2}{ Sprint 1.}{}% 51
+\BOOKMARK [0][-]{appendix.Alph3}{An\341lisis.}{part.2}% 52
+\BOOKMARK [1][-]{section.Alph3.1}{Estudio de Factibilidad.}{appendix.Alph3}% 53
+\BOOKMARK [2][-]{subsection.Alph3.1.1}{Factibilidad T\351cnica}{section.Alph3.1}% 54
+\BOOKMARK [2][-]{subsection.Alph3.1.2}{Factibilidad Operativa}{section.Alph3.1}% 55
+\BOOKMARK [2][-]{subsection.Alph3.1.3}{Factibilidad Econ\363mica}{section.Alph3.1}% 56
+\BOOKMARK [1][-]{section.Alph3.2}{Herramientas a usar.}{appendix.Alph3}% 57
+\BOOKMARK [2][-]{subsection.Alph3.2.1}{Software.}{section.Alph3.2}% 58
+\BOOKMARK [2][-]{subsection.Alph3.2.2}{Hardware.}{section.Alph3.2}% 59
+\BOOKMARK [1][-]{section.Alph3.3}{Arquitectura del sistema.}{appendix.Alph3}% 60
+\BOOKMARK [2][-]{subsection.Alph3.3.1}{Descripci\363n de la arquitectura del sistema.}{section.Alph3.3}% 61
+\BOOKMARK [1][-]{section.Alph3.4}{Diagrama BPMN}{appendix.Alph3}% 62
+\BOOKMARK [2][-]{subsection.Alph3.4.1}{Diagrama BPMN Proceso: Inicio de Sesi\363n}{section.Alph3.4}% 63
+\BOOKMARK [1][-]{section.Alph3.5}{Diagrama de casos de uso general.}{appendix.Alph3}% 64
+\BOOKMARK [1][-]{section.Alph3.6}{Componente I. Extensi\363n.}{appendix.Alph3}% 65
+\BOOKMARK [2][-]{subsection.Alph3.6.1}{Descripci\363n.}{section.Alph3.6}% 66
+\BOOKMARK [2][-]{subsection.Alph3.6.2}{Estudio de requerimientos.}{section.Alph3.6}% 67
+\BOOKMARK [2][-]{subsection.Alph3.6.3}{Reglas del negocio.}{section.Alph3.6}% 68
+\BOOKMARK [1][-]{section.Alph3.7}{Componente II: Servidor autentificador.}{appendix.Alph3}% 69
+\BOOKMARK [2][-]{subsection.Alph3.7.1}{Descripci\363n.}{section.Alph3.7}% 70
+\BOOKMARK [2][-]{subsection.Alph3.7.2}{Estudio de requerimientos.}{section.Alph3.7}% 71
+\BOOKMARK [2][-]{subsection.Alph3.7.3}{Reglas del negocio.}{section.Alph3.7}% 72
+\BOOKMARK [1][-]{section.Alph3.8}{Componente III: API.}{appendix.Alph3}% 73
+\BOOKMARK [2][-]{subsection.Alph3.8.1}{Descripci\363n.}{section.Alph3.8}% 74
+\BOOKMARK [2][-]{subsection.Alph3.8.2}{Estudio de requerimientos.}{section.Alph3.8}% 75
+\BOOKMARK [2][-]{subsection.Alph3.8.3}{Reglas del negocio.}{section.Alph3.8}% 76
+\BOOKMARK [0][-]{appendix.Alph4}{Dise\361o.}{part.2}% 77
+\BOOKMARK [1][-]{section.Alph4.1}{Componente I: Extensi\363n.}{appendix.Alph4}% 78
+\BOOKMARK [2][-]{subsection.Alph4.1.1}{Diagrama de casos de uso}{section.Alph4.1}% 79
+\BOOKMARK [2][-]{subsection.Alph4.1.2}{Diagrama de flujo.}{section.Alph4.1}% 80
+\BOOKMARK [2][-]{subsection.Alph4.1.3}{Diagrama de flujo de datos.}{section.Alph4.1}% 81
+\BOOKMARK [2][-]{subsection.Alph4.1.4}{Diagrama de clases.}{section.Alph4.1}% 82
+\BOOKMARK [2][-]{subsection.Alph4.1.5}{Diagramas de secuencia.}{section.Alph4.1}% 83
+\BOOKMARK [2][-]{subsection.Alph4.1.6}{Diagrama de actividades}{section.Alph4.1}% 84
+\BOOKMARK [2][-]{subsection.Alph4.1.7}{Interfaz de usuario.}{section.Alph4.1}% 85
+\BOOKMARK [2][-]{subsection.Alph4.1.8}{Requisitos de dise\361o.}{section.Alph4.1}% 86
+\BOOKMARK [2][-]{subsection.Alph4.1.9}{Algoritmos.}{section.Alph4.1}% 87
+\BOOKMARK [1][-]{section.Alph4.2}{Componente II: Servidor Autentificador.}{appendix.Alph4}% 88
+\BOOKMARK [2][-]{subsection.Alph4.2.1}{Diagrama de casos de uso.}{section.Alph4.2}% 89
+\BOOKMARK [2][-]{subsection.Alph4.2.2}{Diagrama de flujo.}{section.Alph4.2}% 90
+\BOOKMARK [2][-]{subsection.Alph4.2.3}{Diagrama de flujo de datos.}{section.Alph4.2}% 91
+\BOOKMARK [2][-]{subsection.Alph4.2.4}{Diagrama de clases.}{section.Alph4.2}% 92
+\BOOKMARK [2][-]{subsection.Alph4.2.5}{Diagramas de secuencias.}{section.Alph4.2}% 93
+\BOOKMARK [2][-]{subsection.Alph4.2.6}{Diagrama de actividades.}{section.Alph4.2}% 94
+\BOOKMARK [1][-]{section.Alph4.3}{Componente III: API.}{appendix.Alph4}% 95
+\BOOKMARK [2][-]{subsection.Alph4.3.1}{Diagrama de casos de uso.}{section.Alph4.3}% 96
+\BOOKMARK [2][-]{subsection.Alph4.3.2}{Diagrama de flujo.}{section.Alph4.3}% 97
+\BOOKMARK [2][-]{subsection.Alph4.3.3}{Diagrama de flujo de datos.}{section.Alph4.3}% 98
+\BOOKMARK [2][-]{subsection.Alph4.3.4}{Diagrama de clases.}{section.Alph4.3}% 99
+\BOOKMARK [2][-]{subsection.Alph4.3.5}{Diagramas de secuencias.}{section.Alph4.3}% 100
+\BOOKMARK [2][-]{subsection.Alph4.3.6}{Diagrama de actividades}{section.Alph4.3}% 101
+\BOOKMARK [2][-]{subsection.Alph4.3.7}{Interfaz de usuario.}{section.Alph4.3}% 102
+\BOOKMARK [2][-]{subsection.Alph4.3.8}{Algoritmos.}{section.Alph4.3}% 103
+\BOOKMARK [0][-]{appendix.Alph5}{Desarrollo.}{part.2}% 104
+\BOOKMARK [1][-]{section.Alph5.1}{Componente I. Extensi\363n.}{appendix.Alph5}% 105
+\BOOKMARK [2][-]{subsection.Alph5.1.1}{Archivo popup.html}{section.Alph5.1}% 106
+\BOOKMARK [2][-]{subsection.Alph5.1.2}{Archivo background.js}{section.Alph5.1}% 107
+\BOOKMARK [1][-]{section.Alph5.2}{Componente II. Servidor Autentificador.}{appendix.Alph5}% 108
+\BOOKMARK [2][-]{subsection.Alph5.2.1}{Manejador de paquetes de Node \(npm\).}{section.Alph5.2}% 109
+\BOOKMARK [2][-]{subsection.Alph5.2.2}{Componentes.}{section.Alph5.2}% 110
+\BOOKMARK [1][-]{section.Alph5.3}{Componente III. API.}{appendix.Alph5}% 111
+\BOOKMARK [2][-]{subsection.Alph5.3.1}{API}{section.Alph5.3}% 112
+\BOOKMARK [2][-]{subsection.Alph5.3.2}{Servicio Web.}{section.Alph5.3}% 113
+\BOOKMARK [0][-]{appendix.Alph6}{Pruebas.}{part.2}% 114
+\BOOKMARK [1][-]{section.Alph6.1}{Pruebas de integraci\363n.}{appendix.Alph6}% 115
+\BOOKMARK [2][-]{subsection.Alph6.1.1}{Extensi\363n y Servidor autentificador.}{section.Alph6.1}% 116
+\BOOKMARK [2][-]{subsection.Alph6.1.2}{Extensi\363n y Servicio Web.}{section.Alph6.1}% 117
+\BOOKMARK [2][-]{subsection.Alph6.1.3}{Servidor Autentificador y API.}{section.Alph6.1}% 118
+\BOOKMARK [1][-]{section.Alph6.2}{Tiempos de ejecuci\363n.}{appendix.Alph6}% 119
+\BOOKMARK [2][-]{subsection.Alph6.2.1}{Algoritmo de Chaffing.}{section.Alph6.2}% 120
+\BOOKMARK [2][-]{subsection.Alph6.2.2}{Algoritmo de Winnowing.}{section.Alph6.2}% 121
+\BOOKMARK [2][-]{subsection.Alph6.2.3}{Inicio de sesi\363n.}{section.Alph6.2}% 122
+\BOOKMARK [-1][-]{part.3}{ Trabajo Terminal II}{}% 123
+\BOOKMARK [-1][-]{part.4}{ Sprint 2.}{}% 124
+\BOOKMARK [0][-]{appendix.Alph7}{An\341lisis.}{part.4}% 125
+\BOOKMARK [1][-]{section.Alph7.1}{Arquitectura del sistema.}{appendix.Alph7}% 126
+\BOOKMARK [2][-]{subsection.Alph7.1.1}{Descripci\363n de la arquitectura del sistema.}{section.Alph7.1}% 127
+\BOOKMARK [1][-]{section.Alph7.2}{Componente I. Extensi\363n.}{appendix.Alph7}% 128
+\BOOKMARK [2][-]{subsection.Alph7.2.1}{Descripci\363n.}{section.Alph7.2}% 129
+\BOOKMARK [2][-]{subsection.Alph7.2.2}{Cambios planteados.}{section.Alph7.2}% 130
+\BOOKMARK [2][-]{subsection.Alph7.2.3}{Cambios al estudio de requerimientos y reglas de negocio.}{section.Alph7.2}% 131
+\BOOKMARK [1][-]{section.Alph7.3}{Componente II: Servidor autentificador.}{appendix.Alph7}% 132
+\BOOKMARK [2][-]{subsection.Alph7.3.1}{Descripci\363n.}{section.Alph7.3}% 133
+\BOOKMARK [2][-]{subsection.Alph7.3.2}{Cambios Planteados.}{section.Alph7.3}% 134
+\BOOKMARK [2][-]{subsection.Alph7.3.3}{Cambios al estudio de requerimientos y reglas de negocio.}{section.Alph7.3}% 135
+\BOOKMARK [1][-]{section.Alph7.4}{Componente III: API.}{appendix.Alph7}% 136
+\BOOKMARK [2][-]{subsection.Alph7.4.1}{Descripci\363n.}{section.Alph7.4}% 137
+\BOOKMARK [2][-]{subsection.Alph7.4.2}{Cambios planteados.}{section.Alph7.4}% 138
+\BOOKMARK [2][-]{subsection.Alph7.4.3}{Cambios al estudio de requerimientos y reglas de negocio.}{section.Alph7.4}% 139
+\BOOKMARK [0][-]{appendix.Alph8}{Dise\361o.}{part.4}% 140
+\BOOKMARK [1][-]{section.Alph8.1}{Componente I: Extensi\363n.}{appendix.Alph8}% 141
+\BOOKMARK [2][-]{subsection.Alph8.1.1}{Cambios en el algoritmo.}{section.Alph8.1}% 142
+\BOOKMARK [1][-]{section.Alph8.2}{Componente II: Servidor Autentificador.}{appendix.Alph8}% 143
+\BOOKMARK [2][-]{subsection.Alph8.2.1}{Cambios realizados.}{section.Alph8.2}% 144
+\BOOKMARK [2][-]{subsection.Alph8.2.2}{Diagrama de Actividades.}{section.Alph8.2}% 145
+\BOOKMARK [2][-]{subsection.Alph8.2.3}{Diagrama de Secuencia.}{section.Alph8.2}% 146
+\BOOKMARK [1][-]{section.Alph8.3}{Componente III: API.}{appendix.Alph8}% 147
+\BOOKMARK [2][-]{subsection.Alph8.3.1}{Cambios realizados.}{section.Alph8.3}% 148
+\BOOKMARK [2][-]{subsection.Alph8.3.2}{Cambio en el algoritmo.}{section.Alph8.3}% 149
+\BOOKMARK [2][-]{subsection.Alph8.3.3}{Diagrama de Flujo.}{section.Alph8.3}% 150
+\BOOKMARK [0][-]{appendix.Alph9}{Desarrollo.}{part.4}% 151
+\BOOKMARK [1][-]{section.Alph9.1}{Componente I: Extensi\363n.}{appendix.Alph9}% 152
+\BOOKMARK [2][-]{subsection.Alph9.1.1}{Cambios en el manifest.}{section.Alph9.1}% 153
+\BOOKMARK [2][-]{subsection.Alph9.1.2}{Implementaci\363n del Chaffing.}{section.Alph9.1}% 154
+\BOOKMARK [1][-]{section.Alph9.2}{Componente II: Servidor Autentificador.}{appendix.Alph9}% 155
+\BOOKMARK [2][-]{subsection.Alph9.2.1}{Servidor de accesos FTP.}{section.Alph9.2}% 156
+\BOOKMARK [1][-]{section.Alph9.3}{Componente III: API.}{appendix.Alph9}% 157
+\BOOKMARK [2][-]{subsection.Alph9.3.1}{Nuevo Proceso de Winnowing y eliminaci\363n del descifrado AES.}{section.Alph9.3}% 158
+\BOOKMARK [2][-]{subsection.Alph9.3.2}{Guardado del certificado}{section.Alph9.3}% 159
+\BOOKMARK [0][-]{appendix.Alph10}{Pruebas.}{part.4}% 160
+\BOOKMARK [1][-]{section.Alph10.1}{Pruebas de integraci\363n.}{appendix.Alph10}% 161
+\BOOKMARK [2][-]{subsection.Alph10.1.1}{Extensi\363n y Servidor autentificador}{section.Alph10.1}% 162
+\BOOKMARK [2][-]{subsection.Alph10.1.2}{Extensi\363n y Servicio Web}{section.Alph10.1}% 163
+\BOOKMARK [2][-]{subsection.Alph10.1.3}{Servidor Autentificador y API}{section.Alph10.1}% 164
+\BOOKMARK [1][-]{section.Alph10.2}{Pruebas funcionales.}{appendix.Alph10}% 165
+\BOOKMARK [1][-]{section.Alph10.3}{Tiempos de ejecuci\363n.}{appendix.Alph10}% 166
+\BOOKMARK [2][-]{subsection.Alph10.3.1}{Algoritmo de Chaffing.}{section.Alph10.3}% 167
+\BOOKMARK [2][-]{subsection.Alph10.3.2}{Algoritmo de Winnowing.}{section.Alph10.3}% 168
+\BOOKMARK [2][-]{subsection.Alph10.3.3}{Inicio de sesi\363n.}{section.Alph10.3}% 169
+\BOOKMARK [0][-]{appendix.Alph11}{Conclusiones}{part.4}% 170
+\BOOKMARK [0][-]{appendix.Alph12}{Trabajo a futuro.}{part.4}% 171
