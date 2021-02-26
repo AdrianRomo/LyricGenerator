@@ -1,0 +1,3 @@
+#TO DO THINGS:
+
+- Fix Glossary (doesn't show in any page)
