@@ -498,21 +498,22 @@ natural y redes neuronales}\\
     
 	\chapter{\textcolor{azulescom}{Marco teórico}}
 
-		\subsection{Github Student Pack}
-		Decidimos solicitar este paquete que tiene Github para estudiantes debido a lo que este nos ofrece al ser estudiantes, en especial, el que más nos interesa es la posibilidad de hospedar aplicaciones web por un periodo de 1 año, para ello primero necesitamos entrar a la siguiente página, https://education.github.com/pack donde iniciaremos sesión con nuestra cuenta de Github, una vez iniciada la sesión se nos pedirá un correo electrónico el cual este vinculada con una institución educativa, en nuestro caso se introdujo el correo institucional.\par
-		Se nos envía un correo para verificar que el correo sea válido, una vez verificado el correo electrónico introducido, en la página web a un lado de este nos aparecerá el nombre de la institución educativa, en este caso, el Instituto Politécnico Nacional es la institución educativa que nos respalda. Y por último se nos pide agregar el que vamos a hacer en la plataforma.\par
+		\section{Github Student Pack}
+		Decidimos solicitar este paquete que tiene Github para estudiantes debido a los distintos servicios que este ofrece al ser estudiantes, como lo son el acceso a de hosteo en DigitalOcean, Servicios en la nube y recursos de aprendizaje en Microsoft Azure, un Dyno personalizable en Heroku, entre otros. De entre todos los servicios que ofrecen, el que más interesa es la posibilidad de hospedar aplicaciones web por un periodo de 1 año, como lo es namecheap.\par
+		Para ello se requiere entrar a la siguiente página, https://education.github.com/pack donde se iniciará  sesión con una cuenta de Github, una vez iniciada la sesión se pedirá un correo electrónico el cual esté  vinculado con una institución educativa, en este caso se introdujo el correo institucional.\par
+		Se envía un correo para verificar que el correo sea válido, una vez verificado el correo electrónico introducido, en la página web a un lado de este aparecerá el nombre de la institución educativa, en este caso, el Instituto Politécnico Nacional. Y por último se pide agregar sobre que vamos a hacer en la plataforma.\par
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/GitHub/GitS1.png}
 			\centering 
 			\caption{Github realacionado con el correo institucional}
 		\end{figure}
-		Ya cuando enviamos la solicitud con nuestra información nos aparece un mensaje en el cual nos dicen que obtendremos una respuesta sobre nuestra solicitud en menos de 22 días.\par
+		Una vez enviada la solicitud con la información aparecerá un mensaje en el cual dice que obtendremos una respuesta sobre la solicitud en menos de 22 días.\par
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/GitHub/GitS2.png}
 			\centering 
 			\caption{Tiempo de espera de aprovación de la solicitud}
 		\end{figure}
-		Nunca se obtuvo una respuesta en forma de correo electronico por parte de Github, sino que simplemente a la cuenta con la que solicitamos este paquete de estudiante se le otorgo, este es posible saberlo, ya que entrando a la cuenta si checamos nuestro perfil, en la parte inferior aparecerá un icono de pro, con el cual se nos da el acceso solicitado.
+		En este caso no se obtuvo una respuesta en forma de correo electrónico por parte de Github, sino que simplemente a la cuenta con la que solicitamos este paquete de estudiante se le otorgo, es posible verificar esto entrando a la cuenta checando el perfil, en la parte inferior aparecerá un icono de pro, con el cual se nos da el acceso solicitado.
 		\begin{figure}[H]
 			\includegraphics[width=4cm]{./imagenes/MarcoTeorico/GitHub/Githubpro.png}
 			\centering 
@@ -640,6 +641,54 @@ natural y redes neuronales}\\
 			\centering 
 			\caption{Diagrama De Estados finitos De Una Cadena De Markov}
 		\end{figure}
+	
+		\section{Markovify}
+		\subsection{¿Qué es markovify?}
+		Markovify es un generador de cadenas de Markov simple y extensible. En este momento, su uso principal es construir modelos de Markov de grandes corpus de texto y generar oraciones aleatorias a partir de estos.
+		\subsection{Razones de usar markovify}
+		\begin{itemize}
+			\item Los modelos se pueden almacenar como JSON, lo que le permite almacenar en caché sus resultados y guardarlos para más adelante.
+			\item Los métodos de análisis de texto y generación de oraciones son altamente extensibles, lo que le permite establecer sus propias reglas.
+		\end{itemize}
+		\subsection{¿Cómo se usa markovify?}
+		Lo primero que se tiene que hacer es obtener el texto como una cadena de texto (String), para esto usamos lo siguiente, lo que nos permite obtener la cadena de texto del archivo que queremos usar como corpus para markovify.
+		\begin{minted}{python}
+			with open("/path/a/mi/corpus.txt") as f:
+			text = f.read()  
+		\end{minted}
+		Una vez obtenido el corpus debemos generar el modelo, para eso se hace uso del siguiente código:
+		\begin{minted}{python}
+			text_model = markovify.Text(text) 
+		\end{minted}
+		Después de haber generado el modelo, es comenzar a crear oraciones con este modelo para ello se pueden hacer de la siguiente manera:
+		\begin{minted}{python}
+			print(text_model.make_sentence())
+			print(text_model.make_short_sentence(250))
+		\end{minted}
+		Con estas instrucciones, se generan oraciones aleatorias con base al corpus con el que se creó el modelo, si usamos make\_short\_sentence(x), las oraciones generadas serán de no más de x número de caracteres.\par
+		El tamaño del estado es la cantidad de palabras de las que depende la probabilidad de una palabra siguiente. De forma predeterminada, markovify.Text() usa un tamaño de estado de 2. Pero se puede crear una instancia de un modelo con un tamaño de estado diferente usando lo siguiente:
+		\begin{minted}{python}
+			text_model = markovify.Text(text, state_size=4)
+		\end{minted}
+		Haciendo uso de markovify se pueden combinar uno o más modelos usando markovify.combine() dicha función acepta 2 argumentos
+		\begin{itemize}
+			\item \textbf{Modelos (models): }Son una lista de objetos markovify para combinar. Pueden ser instancias de markovify.Chain o markovify.Text (o sus subclases), pero todas deben ser del mismo tipo.
+			\item \textbf{Pesos (weights): }Es una lista (la longitud exacta de los modelos) de enteros o flotantes que indican cuánto énfasis relativo colocar en cada fuente. Predeterminado: [1, 1, ...]. Este argumento es opcional.
+		\end{itemize}
+		Por ejemplo:
+		\begin{minted}{python}
+			model_a = markovify.Text(text_a)
+			model_b = markovify.Text(text_b)
+			model_combo = markovify.combine([ model_a, model_b ], [ 1.5, 1 ])
+		\end{minted}
+		En este caso se combina el modelo a con el modelo b y a demás se le de un 50\% mas de peso a las conexiones del modelo a.\par
+		Cuando se tiene generado un modelo, también se puede compilar para mejorar la velocidad de generación de texto y reducir el tamaño del modelo. Para ello hacemos uso de la siguiente instrucción.
+		\begin{minted}{python}
+			text_model = text_model.compile()
+		\end{minted}
+		Actualmente, los modelos compilados no se pueden combinar con otros modelos usando markovify.combine(). Si se desea combinar modelos, primero se deben combinar y luego se compila el resultado de esa combinación.
+		\textbf{Notas: }Si no se va a trabajar markovify con texto se hace uso de la clase markovify.Chain().\par
+		Markovify funciona mejor con textos grandes y bien puntuados. Si el texto no usa puntos para delimitar oraciones, se debe colocar cada oración en una nueva línea y usar la clase markovify.NewlineText() en lugar de la clase markovify.Text().
 
 		\section{Flask}
 		Flask es un marco (framework) web, el cual es un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u ORM por sus siglas en inglés (Object Relational Manager), pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
@@ -691,7 +740,6 @@ natural y redes neuronales}\\
 		\begin{center}
 		@app.route('/login', methods=['POST'])
 		\end{center}
-		Aun me falta mas por escribir sobre Flask...
 
 	    A continuación en el cuadro \ref{cuadro:MetododsAutentificacion}, mostraremos algunas tablas comparativas que servirán para tener una mejor perspectiva de las ventajas, desventajas.
 		
