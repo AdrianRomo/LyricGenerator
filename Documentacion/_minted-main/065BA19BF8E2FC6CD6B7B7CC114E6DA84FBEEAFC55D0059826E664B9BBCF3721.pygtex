@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+			\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}/path/a/mi/corpus.txt\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+			\PYG{n}{text} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+\end{Verbatim}

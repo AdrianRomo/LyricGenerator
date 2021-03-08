@@ -818,21 +818,59 @@ natural y redes neuronales}\\
 		 
 		 Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.
 		 
-		  \Gls{Palabra1}. \\
+		\begin{table}[ht]\caption{Tabla Comparativa de distintos Servidores Web}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{c c c}% centered columns (3 columns)
+					\hline\hline                        %inserts double horizontal lines
+					Apache & NGINX & Tomcat \\ [0.5ex]% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Apache viene con ventajas útiles\\ sobre Nginx, como sería su fácil\\ configuración, muchos módulos, y\\ un entorno amigable con los\\ primerizos.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Nginx fue creado para resolver el\\ llamado “problema c10k”,\\ significando que un servidor web\\ que usa hilos para manejar \\solicitudes del usuario es incapaz\\ de gestionar más de 10,000\\ conexiones al mismo tiempo.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Tomcat fue creado\\ específicamente para aplicaciones\\ Java, mientras que Apache es un\\ servidor HTTP de propósito\\ general.\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}De código abierto y gratuito,\\incluso para su uso comercial.\\ Software estable y confiable.\\Frecuentemente actualizado\\incluyendo actualizaciones\\ regulares a los parches de\\ seguridad.
+					\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Nginx es uno de los servidores\\ web que soluciona el problema\\ c10k y probablemente el más\\ exitoso al hacerlo, no crea un\\ nuevo proceso por cada solicitud y\\ en su lugar, maneja toda solicitud\\ entrante en un único hilo.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable\\ comparado a otros servidores\\ web. Por ejemplo, para correr\\ WordPress, la mejor elección es\\ un servidor HTTP de propósito\\ general como Apache o Nginx.\end{tabular} \\
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Funciona de forma intuitiva, con\\ sitios web hechos con WordPress.\\ Comunidad grande y posibilidad\\ de contactar con soporte\\ disponible de manera sencilla en\\ caso de cualquier problema. 
+					\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}El modelo basado en eventos de\\ Nginx distribuye solicitudes de\\ usuario entre procesos\\ trabajadores de una manera\\ eficiente, llevando con ello a una\\ mejor escalabilidad.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Entre sus desventajas\\ se pueden llegar a tener\\problemas de rendimiento en\\ sitios web con tráfico\\ extremadamente pesado.\\Tantas opciones de configuración\\ pueden llevar a vulnerabilidades\\ de seguridad.
+					\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Si necesitas manejar un sitio web\\ con un alto tráfico, Nginx es una\\ excelente opción, puesto que\\ puede hacerlo con un mínimo uso\\ de los recursos.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+					[1ex]      % [1ex] adds vertical space
+					\hline%inserts single line
+				\end{tabular}\label{table:nonlin}% is used to refer this table in the text
+			}
+		\end{table}
 		
 		\begin{itemize}
-		    \item \textbf{Palabras en negritas:}  \lipsum[4]
-		    \item \textbf{Palabras en negritas:} \lipsum[4]
+		    \item \textbf{Palabras en negritas:}
         \end{itemize}
 		
-		 \lipsum[4] \cite{refCookies} \\
+		\cite{refCookies} \\
 		
-		\paragraph{}
-		\lipsum[4]
+		\clearpage
 		
+	    \section{Servidor Web}
+	    El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Jala contenido del servidor en cada petición del usuario y lo entrega al sitio web.
+	    Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java, y otros.
+	    Cuando escuchas la palabra ''servidor web'', piensa en eso como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
+	    
+	    \section{Certificado SSL}
+		Conocido como (Secure Sockets Layer) o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape in los 1990. SSL crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin los problemas de espionaje, manipulación de la información, y falsificación del mensaje. Básicamente, la capa SSL permite que dos partes tengan una "conversación" privada.
+		Para establecer esta conexión segura, se instala en un servidor web un certificado SSL (también llamado ''certificado digital'') que cumple dos funciones:
+		-	Autenticar la identidad del sitio web, garantizando a los visitantes que no están en un sitio falso.
+		-	Cifrar la información transmitida.
 		
-
-	    \section{Tema 5}
+		Hay varios tipos de certificados SSL según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo
+		
+	    
 	        \subsection{Subtema 5.1}
 	            		\lipsum[4] <<\textit{kryptós}>> (oculto) y <<\textit{logos}>> (estudio). Según la Real Academia Española significa 'estudio de los sistemas, claves y lenguajes ocultos o secretos', sin embargo, brindándole un contexto a esta definición decimos que es el arte y ciencia que se encarga de diseñar sistemas para ocultar mensajes, y buscar la manera de romper dichos sistemas \cite{refCriptology}.\\
             \subsection{Subtema 5.2}

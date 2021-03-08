@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+			\PYG{n}{text\PYGZus{}model} \PYG{o}{=} \PYG{n}{markovify}\PYG{o}{.}\PYG{n}{Text}\PYG{p}{(}\PYG{n}{text}\PYG{p}{,} \PYG{n}{state\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{)}
+\end{Verbatim}

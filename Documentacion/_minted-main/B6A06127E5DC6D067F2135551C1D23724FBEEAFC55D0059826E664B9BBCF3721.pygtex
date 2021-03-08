@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text\PYGZus{}model}\PYG{o}{.}\PYG{n}{make\PYGZus{}sentence}\PYG{p}{())}
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text\PYGZus{}model}\PYG{o}{.}\PYG{n}{make\PYGZus{}short\PYGZus{}sentence}\PYG{p}{(}\PYG{l+m+mi}{250}\PYG{p}{))}
+\end{Verbatim}
