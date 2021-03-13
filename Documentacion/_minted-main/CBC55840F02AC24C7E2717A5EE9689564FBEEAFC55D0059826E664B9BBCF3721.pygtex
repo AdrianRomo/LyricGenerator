@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-			\PYG{n}{model\PYGZus{}a} \PYG{o}{=} \PYG{n}{markovify}\PYG{o}{.}\PYG{n}{Text}\PYG{p}{(}\PYG{n}{text\PYGZus{}a}\PYG{p}{)}
-			\PYG{n}{model\PYGZus{}b} \PYG{o}{=} \PYG{n}{markovify}\PYG{o}{.}\PYG{n}{Text}\PYG{p}{(}\PYG{n}{text\PYGZus{}b}\PYG{p}{)}
-			\PYG{n}{model\PYGZus{}combo} \PYG{o}{=} \PYG{n}{markovify}\PYG{o}{.}\PYG{n}{combine}\PYG{p}{([} \PYG{n}{model\PYGZus{}a}\PYG{p}{,} \PYG{n}{model\PYGZus{}b} \PYG{p}{],} \PYG{p}{[} \PYG{l+m+mf}{1.5}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{p}{])}
-\end{Verbatim}
