@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf8 -*-
 
 import argparse
@@ -37,8 +37,7 @@ if args.verbose:
     logging.basicConfig(level=logging.DEBUG)
 
 artists = [
-    'NF',
-    'Eminem'
+    'Metallica'
 ]
 
 logger.info(f'Lyrics saved in directory{args.lyrics_dir}.')

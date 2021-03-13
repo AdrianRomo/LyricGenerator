@@ -6,8 +6,8 @@ import urllib.request
 from bs4 import BeautifulSoup
 from config import tokens
 class GeniusArtistDataCollect:
-"""A wrapper class that is able to retrieve, clean, and organize all the album songs of a given artist
-Uses the Genius API and webscraping techniques to get the data."""
+    """A wrapper class that is able to retrieve, clean, and organize all the album songs of a given artist
+    Uses the Genius API and webscraping techniques to get the data."""
 def __init__(self, client_access_token, artist_name):
     """
     Instantiate a GeniusArtistDataCollect object
