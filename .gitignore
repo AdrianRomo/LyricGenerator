@@ -36,19 +36,21 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+__pycache__
 
 # Virtual Environments #
 ######################
 venv/
+.env
 .idea/
 bin/
 include/
 lib/
 share/
-.env
+
+# Other Files #
+######################
 *.csv
-upgrade.py
 postingid.txt
-__pycache__
 Markovify/Markov/lyrics150k.txt
 maroon5.txt
