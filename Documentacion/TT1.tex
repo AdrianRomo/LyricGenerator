@@ -838,60 +838,35 @@ natural y redes neuronales}\\
 	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.
 	 	 \Gls{Palabra1}. \\
 		
-		\begin{table}[H]
-			\centering
+		\newpage
+		En el cuadro 1 que se presenta a continuación, se muestran las características de aplicaciones web similares y comparándolas con nuestra propuesta:
+		
+		\begin{table}[hbt!]\caption{Tabla comparativa de los distintos servidores web contemplados}% title of Table
+			\centering % used for centering table
 			\resizebox{15cm}{!} {
-				\begin{tabular}{|l|l|l|}
-					Apache & NGINX & Tomcat\\ \hline
-					\begin{tabular}[c]{@{}l@{}}Apache viene con ventajas \'utiles \\
-						sobre Nginx, como sería su fácil \\
-						configuración, muchos módulos, y \\
-						un entorno amigable con los \\
-						primerizos.\end{tabular} & 
-					\begin{tabular}[c]{@{}l@{}}Nginx fue creado para resolver el \\
-						llamado "problema c10k", \\
-						significando que un servidor web \\
-						que usa hilos para manejar \\
-						solicitudes del usuario es incapaz \\
-						de gestionar más de 10,000 \\
-						conexiones al mismo tiempo.\end{tabular} &
-					\begin{tabular}[c]{@{}l@{}}Tomcat fue creado específicamente \\
-						para aplicaciones Java, mientras \\
-						que Apache es un servidor HTTP de\\
-						propósito general.\end{tabular}  \\ \hline
-					\begin{tabular}[c]{@{}l@{}}De código abierto y gratuito,\\ 
-						incluso para su uso comercial. \\
-						Software estable y confiable.\\
-						Frecuentemente actualizado \\
-						incluyendo actualizaciones \\
-						regulares a los parches de \\
-						seguridad.\end{tabular} & 
-					\begin{tabular}[c]{@{}l@{}}Nginx es uno de los servidores\\
-						 web que soluciona el problema \\
-						 c10k y probablemente el más \\
-						 exitoso al hacerlo, no crea un \\
-						 nuevo proceso por cada solicitud y\\ 
-						 en su lugar, maneja toda solicitud \\
-						 entrante en un único hilo.\end{tabular} &
-					\begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable \\
-						comparado a otros servidores web.\\
-						Por ejemplo, para correr \\
-						WordPress, la mejor elección es \\
-						un servidor HTTP de propósito \\
-						general como Apache o Nginx.\end{tabular}  \\ \hline					
-					\begin{tabular}[c]{@{}l@{}}Funciona de forma intuitiva, con \\
-						sitios web hechos con WordPress.\\
-						Comunidad grande y posibilidad \\
-						de contactar con soporte \\
-						disponible de manera sencilla \\
-						en caso de cualquier problema.\end{tabular}
-					
-				\end{tabular}
+				\begin{tabular}{c c c}% centered columns (3 columns)
+					\hline\hline                        %inserts double horizontal lines
+					Apache & NGINX & Tomcat \\ [0.5ex]% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Apache viene con ventajas útiles\\ sobre Nginx, como sería su fácil \\configuración, muchos módulos, y \\un entorno amigable con los\\ primerizos.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Nginx fue creado para resolver el\\ llamado “problema c10k”,\\ significando que un servidor web \\que usa hilos para manejar \\solicitudes del usuario es incapaz \\de gestionar más de 10,000\\ conexiones al mismo tiempo.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Tomcat fue creado \\específicamente para aplicaciones \\Java, mientras que Apache es un \\servidor HTTP de propósito \\general.\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}De código abierto y gratuito,\\ incluso para su uso comercial.\\ Software estable y confiable.\\Frecuentemente actualizado \\incluyendo actualizaciones\\ regulares a los parches de \\seguridad.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Nginx es uno de los servidores \\web que soluciona el problema \\c10k y probablemente el más \\exitoso al hacerlo, no crea un \\nuevo proceso por cada solicitud y \\en su lugar, maneja toda solicitud \\entrante en un único hilo.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable \\comparado a otros servidores \\web. Por ejemplo, para correr \\WordPress, la mejor elección es \\un servidor HTTP de propósito \\general como Apache o Nginx.\end{tabular} \\
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Funciona de forma intuitiva, con \\sitios web hechos con WordPress. \\Comunidad grande y posibilidad \\de contactar con soporte \\disponible de manera sencilla en \\caso de cualquier problema.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}El modelo basado en eventos de \\Nginx distribuye solicitudes de \\usuario entre procesos \\trabajadores de una manera \\eficiente, llevando con ello a una \\mejor escalabilidad.\end{tabular}
+					&  \\
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Problemas de rendimiento en \\sitios web con tráfico\\ extremadamente pesado. \\Tantas opciones de configuración \\pueden llevar a vulnerabilidades \\de seguridad.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Si necesitas manejar un sitio web \\con un alto tráfico, Nginx es una \\excelente opción, puesto que \\puede hacerlo con un mínimo uso \\de los recursos.\end{tabular}
+					&  \\
+					[1ex]      % [1ex] adds vertical space
+				\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
 			}
-			\caption[Apache]{Tabla comparativa de los distintos servidores web contemplados}
-			\label{cuadro:VentajasServidor}
 		\end{table}
-		\lipsum[4]
 		
 		
 
