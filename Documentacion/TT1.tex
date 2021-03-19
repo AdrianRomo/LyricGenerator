@@ -832,17 +832,65 @@ natural y redes neuronales}\\
 	    
 	    Una de las técnicas de autentificación que actualmente se usa es ''recordar la sesión'' usando las ''cookies'', en la siguiente sección, nos adentraremos en definir qué son las cookies y exponer sus vulnerabilidades.
 	    
-	    \section{Tema 4}
-	 \lipsum[4] \Gls{Palabra1}. \\
+	    \section{Apache}
+	 	Apache es un servidor web gratuito y de código abierto que permite que los dueños de sitios web mostrar contenido en ellas, no es un servidor físico, sino más bien un software que corre en un servidor.
+	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y regreso entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo HTTP, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.
+	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.
+	 	 \Gls{Palabra1}. \\
 		
-		\begin{itemize}
-		    \item \textbf{Palabras en negritas:}  \lipsum[4]
-		    \item \textbf{Palabras en negritas:} \lipsum[4]
-        \end{itemize}
-		
-		 \lipsum[4] \cite{refCookies} \\
-		
-		\paragraph{}
+		\begin{table}[H]
+			\centering
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|l|l|l|}
+					Apache & NGINX & Tomcat\\ \hline
+					\begin{tabular}[c]{@{}l@{}}Apache viene con ventajas \'utiles \\
+						sobre Nginx, como sería su fácil \\
+						configuración, muchos módulos, y \\
+						un entorno amigable con los \\
+						primerizos.\end{tabular} & 
+					\begin{tabular}[c]{@{}l@{}}Nginx fue creado para resolver el \\
+						llamado "problema c10k", \\
+						significando que un servidor web \\
+						que usa hilos para manejar \\
+						solicitudes del usuario es incapaz \\
+						de gestionar más de 10,000 \\
+						conexiones al mismo tiempo.\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Tomcat fue creado específicamente \\
+						para aplicaciones Java, mientras \\
+						que Apache es un servidor HTTP de\\
+						propósito general.\end{tabular}  \\ \hline
+					\begin{tabular}[c]{@{}l@{}}De código abierto y gratuito,\\ 
+						incluso para su uso comercial. \\
+						Software estable y confiable.\\
+						Frecuentemente actualizado \\
+						incluyendo actualizaciones \\
+						regulares a los parches de \\
+						seguridad.\end{tabular} & 
+					\begin{tabular}[c]{@{}l@{}}Nginx es uno de los servidores\\
+						 web que soluciona el problema \\
+						 c10k y probablemente el más \\
+						 exitoso al hacerlo, no crea un \\
+						 nuevo proceso por cada solicitud y\\ 
+						 en su lugar, maneja toda solicitud \\
+						 entrante en un único hilo.\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable \\
+						comparado a otros servidores web.\\
+						Por ejemplo, para correr \\
+						WordPress, la mejor elección es \\
+						un servidor HTTP de propósito \\
+						general como Apache o Nginx.\end{tabular}  \\ \hline					
+					\begin{tabular}[c]{@{}l@{}}Funciona de forma intuitiva, con \\
+						sitios web hechos con WordPress.\\
+						Comunidad grande y posibilidad \\
+						de contactar con soporte \\
+						disponible de manera sencilla \\
+						en caso de cualquier problema.\end{tabular}
+					
+				\end{tabular}
+			}
+			\caption[Apache]{Tabla comparativa de los distintos servidores web contemplados}
+			\label{cuadro:VentajasServidor}
+		\end{table}
 		\lipsum[4]
 		
 		
