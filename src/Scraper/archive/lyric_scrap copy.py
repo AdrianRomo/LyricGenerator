@@ -20,4 +20,3 @@ df = df.drop_duplicates()
 df = df.reset_index(drop=True)
 print(df['Idiom'].value_counts())
 df.to_csv('output.csv')
-
