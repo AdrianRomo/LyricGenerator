@@ -46,336 +46,334 @@
 \contentsline {section}{\numberline {2.4}Cadenas de Markov}{45}{section.Alph2.4}%
 \contentsline {section}{\numberline {2.5}Flask}{46}{section.Alph2.5}%
 \contentsline {section}{\numberline {2.6}Apache}{50}{section.Alph2.6}%
-\contentsline {section}{\numberline {2.7}Tema 5}{51}{section.Alph2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Subtema 5.1}{51}{subsection.Alph2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Subtema 5.2}{52}{subsection.Alph2.7.2}%
-\contentsline {subsubsection}{\numberline {2.7.2.1}Criptografía moderna.}{53}{subsubsection.Alph2.7.2.1}%
-\contentsline {subsection}{\numberline {2.7.3}Objetivos de la criptografía.}{53}{subsection.Alph2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Usos de la criptografía.}{54}{subsection.Alph2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5}Criptografía simétrica y asimétrica.}{54}{subsection.Alph2.7.5}%
-\contentsline {subsubsection}{\numberline {2.7.5.1}Criptografía simétrica.}{55}{subsubsection.Alph2.7.5.1}%
-\contentsline {subsubsection}{\numberline {2.7.5.2}Criptografía asimétrica.}{55}{subsubsection.Alph2.7.5.2}%
-\contentsline {subsection}{\numberline {2.7.6}Criptografía a nivel de aplicación.}{58}{subsection.Alph2.7.6}%
-\contentsline {subsubsection}{\numberline {2.7.6.1}SSL/TLS.}{58}{subsubsection.Alph2.7.6.1}%
-\contentsline {subsubsection}{\numberline {2.7.6.2}OpenSSL}{58}{subsubsection.Alph2.7.6.2}%
-\contentsline {paragraph}{}{59}{section*.21}%
-\contentsline {section}{\numberline {2.8}Tema 6}{59}{section.Alph2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Historia}{59}{subsection.Alph2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}¿Qu\'e es Tema 6?}{59}{subsection.Alph2.8.2}%
-\contentsline {paragraph}{}{59}{section*.22}%
-\contentsline {paragraph}{}{60}{section*.23}%
-\contentsline {paragraph}{}{60}{section*.24}%
-\contentsline {paragraph}{}{60}{section*.25}%
-\contentsline {paragraph}{}{61}{section*.27}%
-\contentsline {paragraph}{}{61}{section*.29}%
-\contentsline {subsection}{\numberline {2.8.3}Objetivo de Tema 6}{61}{subsection.Alph2.8.3}%
-\contentsline {paragraph}{}{61}{section*.30}%
-\contentsline {subsection}{\numberline {2.8.4}¿Cómo funciona?}{62}{subsection.Alph2.8.4}%
-\contentsline {paragraph}{}{62}{section*.31}%
-\contentsline {subsection}{\numberline {2.8.5}Propiedades de Tema 6}{64}{subsection.Alph2.8.5}%
-\contentsline {paragraph}{}{64}{section*.35}%
-\contentsline {subsection}{\numberline {2.8.6}All-or-Nothing and the Package Transform (AONT)}{64}{subsection.Alph2.8.6}%
-\contentsline {paragraph}{}{65}{section*.36}%
-\contentsline {paragraph}{}{65}{section*.37}%
-\contentsline {paragraph}{}{66}{section*.38}%
-\contentsline {subsection}{\numberline {2.8.7}Comparando Chaffing and Winnowing contra Cifrado y Esteganograf\'ia}{67}{subsection.Alph2.8.7}%
-\contentsline {subsubsection}{\numberline {2.8.7.1}Chafing and Winnowing vs Cifrado}{67}{subsubsection.Alph2.8.7.1}%
-\contentsline {subsubsection}{\numberline {2.8.7.2}Chaffing and Winnowing vs Esteganograf\'ia}{68}{subsubsection.Alph2.8.7.2}%
-\contentsline {part}{\hspace {1em}Sprint 1.}{70}{part.2}%
-\contentsline {chapter}{\numberline {3}\leavevmode {\color {azulescom}Análisis.}}{71}{appendix.Alph3}%
-\contentsline {section}{\numberline {3.1}Estudio de Factibilidad.}{71}{section.Alph3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Factibilidad Técnica}{71}{subsection.Alph3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Factibilidad Operativa}{73}{subsection.Alph3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Factibilidad Económica}{74}{subsection.Alph3.1.3}%
-\contentsline {section}{\numberline {3.2}Herramientas a usar.}{75}{section.Alph3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Software.}{75}{subsection.Alph3.2.1}%
-\contentsline {paragraph}{HTML5.}{75}{section*.45}%
-\contentsline {paragraph}{CSS3.\\}{76}{section*.46}%
-\contentsline {paragraph}{Frameworks CSS.\\}{77}{section*.47}%
-\contentsline {subparagraph}{Bootstrap.\\}{78}{section*.48}%
-\contentsline {subparagraph}{Materialize.\\}{78}{section*.49}%
-\contentsline {paragraph}{JavaScript. \\}{78}{section*.50}%
-\contentsline {paragraph}{JQuery. \\}{79}{section*.51}%
-\contentsline {paragraph}{CryptoJs. \\}{80}{section*.52}%
-\contentsline {paragraph}{NodeJs.\\}{80}{section*.53}%
-\contentsline {paragraph}{Java.\\}{80}{section*.54}%
-\contentsline {subparagraph}{Spring Framework.\\}{80}{section*.55}%
-\contentsline {paragraph}{Apache Tomcat.\\}{81}{section*.56}%
-\contentsline {paragraph}{OpenSSL.\\}{81}{section*.57}%
-\contentsline {paragraph}{MongoDB. \\}{82}{section*.58}%
-\contentsline {paragraph}{MySQL. \\}{82}{section*.59}%
-\contentsline {paragraph}{JSEncrypt.\\}{83}{section*.60}%
-\contentsline {paragraph}{VSFTPD.\\}{83}{section*.61}%
-\contentsline {paragraph}{Wireshark. \\}{84}{section*.62}%
-\contentsline {paragraph}{}{85}{section*.63}%
-\contentsline {subsection}{\numberline {3.2.2}Hardware.}{85}{subsection.Alph3.2.2}%
-\contentsline {section}{\numberline {3.3}Arquitectura del sistema.}{86}{section.Alph3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Descripci\'on de la arquitectura del sistema.}{86}{subsection.Alph3.3.1}%
-\contentsline {section}{\numberline {3.4}Diagrama BPMN}{88}{section.Alph3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Diagrama BPMN Proceso: Inicio de Sesión}{89}{subsection.Alph3.4.1}%
-\contentsline {section}{\numberline {3.5}Diagrama de casos de uso general.}{90}{section.Alph3.5}%
-\contentsline {section}{\numberline {3.6}Componente I. Extensión.}{90}{section.Alph3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Descripción.}{90}{subsection.Alph3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Estudio de requerimientos.}{91}{subsection.Alph3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.2.1}Requerimientos Funcionales.}{91}{subsubsection.Alph3.6.2.1}%
-\contentsline {subsubsection}{\numberline {3.6.2.2}Requerimientos no Funcionales.}{93}{subsubsection.Alph3.6.2.2}%
-\contentsline {subsection}{\numberline {3.6.3}Reglas del negocio.}{93}{subsection.Alph3.6.3}%
-\contentsline {section}{\numberline {3.7}Componente II: Servidor autentificador.}{95}{section.Alph3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Descripción.}{95}{subsection.Alph3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Estudio de requerimientos.}{95}{subsection.Alph3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.2.1}Requerimientos funcionales.}{95}{subsubsection.Alph3.7.2.1}%
-\contentsline {subsubsection}{\numberline {3.7.2.2}Requerimientos no funcionales.}{96}{subsubsection.Alph3.7.2.2}%
-\contentsline {subsection}{\numberline {3.7.3}Reglas del negocio.}{96}{subsection.Alph3.7.3}%
-\contentsline {section}{\numberline {3.8}Componente III: API.}{97}{section.Alph3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Descripción.}{97}{subsection.Alph3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Estudio de requerimientos.}{98}{subsection.Alph3.8.2}%
-\contentsline {subsubsection}{\numberline {3.8.2.1}Requerimientos funcionales.}{98}{subsubsection.Alph3.8.2.1}%
-\contentsline {subsubsection}{\numberline {3.8.2.2}Requerimientos no funcionales.}{99}{subsubsection.Alph3.8.2.2}%
-\contentsline {subsection}{\numberline {3.8.3}Reglas del negocio.}{99}{subsection.Alph3.8.3}%
-\contentsline {chapter}{\numberline {4}\leavevmode {\color {azulescom}Diseño.}}{101}{appendix.Alph4}%
-\contentsline {section}{\numberline {4.1}Componente I: Extensión.}{101}{section.Alph4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Diagrama de casos de uso}{101}{subsection.Alph4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}Descripción de casos de uso.}{102}{subsubsection.Alph4.1.1.1}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{102}{section*.74}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{102}{section*.75}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{102}{section*.76}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{102}{section*.77}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{103}{section*.79}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{103}{section*.80}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{103}{section*.81}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{103}{section*.82}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{104}{section*.84}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{104}{section*.85}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{104}{section*.86}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{104}{section*.87}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{105}{section*.89}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{106}{section*.90}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{106}{section*.91}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{106}{section*.92}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{106}{section*.93}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{107}{section*.94}%
-\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{107}{section*.95}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 3 ...}{107}{section*.96}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{108}{section*.98}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{108}{section*.99}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{108}{section*.100}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{108}{section*.101}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{109}{section*.103}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{110}{section*.104}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{110}{section*.105}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{110}{section*.106}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{111}{section*.107}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{111}{section*.108}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{112}{section*.110}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{112}{section*.111}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{112}{section*.112}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{112}{section*.113}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{112}{section*.114}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{113}{section*.115}%
-\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{113}{section*.116}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{113}{section*.117}%
-\contentsline {subsection}{\numberline {4.1.2}Diagrama de flujo.}{114}{subsection.Alph4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}Descripción diagrama de flujo.}{114}{subsubsection.Alph4.1.2.1}%
-\contentsline {subsection}{\numberline {4.1.3}Diagrama de flujo de datos.}{116}{subsection.Alph4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.3.1}Descripción diagrama de flujo de datos.}{116}{subsubsection.Alph4.1.3.1}%
-\contentsline {subsection}{\numberline {4.1.4}Diagrama de clases.}{117}{subsection.Alph4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.4.1}Descripción de diagrama de clases}{117}{subsubsection.Alph4.1.4.1}%
-\contentsline {subsection}{\numberline {4.1.5}Diagramas de secuencia.}{120}{subsection.Alph4.1.5}%
-\contentsline {subsubsection}{\numberline {4.1.5.1}Diagrama de secuencia: Realizar petición.}{120}{subsubsection.Alph4.1.5.1}%
-\contentsline {paragraph}{Descripción:}{120}{section*.122}%
-\contentsline {subsubsection}{\numberline {4.1.5.2}Diagrama de secuencia: Habilitar extensión.}{121}{subsubsection.Alph4.1.5.2}%
-\contentsline {paragraph}{Descripción:}{121}{section*.124}%
-\contentsline {subsubsection}{\numberline {4.1.5.3}Diagrama de secuencia: Deshabilitar extensión.}{122}{subsubsection.Alph4.1.5.3}%
-\contentsline {paragraph}{Descripción:}{122}{section*.126}%
-\contentsline {subsubsection}{\numberline {4.1.5.4}Diagrama de secuencia: Inicio de sesión}{123}{subsubsection.Alph4.1.5.4}%
-\contentsline {paragraph}{Descripción:}{123}{section*.128}%
-\contentsline {subsubsection}{\numberline {4.1.5.5}Diagrama de secuencia: Cerrar sesión.}{124}{subsubsection.Alph4.1.5.5}%
-\contentsline {paragraph}{Descripción:}{124}{section*.130}%
-\contentsline {subsubsection}{\numberline {4.1.5.6}Diagrama de secuencia: Registrarse en servidor autentificador.}{125}{subsubsection.Alph4.1.5.6}%
-\contentsline {paragraph}{Descripción:}{125}{section*.132}%
-\contentsline {subsubsection}{\numberline {4.1.5.7}Diagrama de secuencia: Revocar certificado.}{126}{subsubsection.Alph4.1.5.7}%
-\contentsline {paragraph}{Descripción:}{126}{section*.134}%
-\contentsline {subsection}{\numberline {4.1.6}Diagrama de actividades}{127}{subsection.Alph4.1.6}%
-\contentsline {subsubsection}{\numberline {4.1.6.1}Descripción del diagrama de actividades.}{128}{subsubsection.Alph4.1.6.1}%
-\contentsline {subsection}{\numberline {4.1.7}Interfaz de usuario.}{128}{subsection.Alph4.1.7}%
-\contentsline {subsubsection}{\numberline {4.1.7.1}Pantalla Inicial.}{128}{subsubsection.Alph4.1.7.1}%
-\contentsline {subsubsection}{\numberline {4.1.7.2}Tab de la extensión.}{130}{subsubsection.Alph4.1.7.2}%
-\contentsline {subsection}{\numberline {4.1.8}Requisitos de diseño.}{138}{subsection.Alph4.1.8}%
-\contentsline {subsubsection}{\numberline {4.1.8.1}Requisitos de ejecución de la extensi\'on}{138}{subsubsection.Alph4.1.8.1}%
-\contentsline {subsubsection}{\numberline {4.1.8.2}Requisitos para el envío del código autentificador}{138}{subsubsection.Alph4.1.8.2}%
-\contentsline {subsection}{\numberline {4.1.9}Algoritmos.}{139}{subsection.Alph4.1.9}%
-\contentsline {paragraph}{}{140}{section*.151}%
-\contentsline {subsubsection}{\numberline {4.1.9.1}Complejidad computacional.}{142}{subsubsection.Alph4.1.9.1}%
-\contentsline {section}{\numberline {4.2}Componente II: Servidor Autentificador.}{142}{section.Alph4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Diagrama de casos de uso.}{142}{subsection.Alph4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Descripción de casos de uso.}{143}{subsubsection.Alph4.2.1.1}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{143}{section*.155}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{143}{section*.156}%
-\contentsline {paragraph}{... Trayectoria alternativa 1 ...}{143}{section*.157}%
-\contentsline {paragraph}{... Fin de Trayectoria alternativa 1 ...}{144}{section*.158}%
-\contentsline {paragraph}{... Trayectoria alternativa 2 ...}{144}{section*.159}%
-\contentsline {paragraph}{... Fin de Trayectoria alternativa 2 ...}{144}{section*.160}%
-\contentsline {paragraph}{... Trayectoria principal ...}{145}{section*.162}%
-\contentsline {paragraph}{... Fin Trayectoria principal ...}{145}{section*.163}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{145}{section*.164}%
-\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{146}{section*.165}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{146}{section*.166}%
-\contentsline {paragraph}{... Fin Trayectoria Alternativa 2 ...}{146}{section*.167}%
-\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{146}{section*.168}%
-\contentsline {paragraph}{... Fin Trayectorai Alternativa 3 ...}{146}{section*.169}%
-\contentsline {paragraph}{... Trayectoria principal ...}{147}{section*.171}%
-\contentsline {paragraph}{... Fin Trayectoria principal ...}{147}{section*.172}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{147}{section*.173}%
-\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{147}{section*.174}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{148}{section*.175}%
-\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{148}{section*.176}%
-\contentsline {paragraph}{... Trayectoria principal ...}{149}{section*.178}%
-\contentsline {paragraph}{... Fin Trayectoria principal ...}{149}{section*.179}%
-\contentsline {paragraph}{... Trayectoria alternativa 1 ...}{149}{section*.180}%
-\contentsline {paragraph}{... Fin Trayectoria alternativa 1 ...}{149}{section*.181}%
-\contentsline {subsection}{\numberline {4.2.2}Diagrama de flujo.}{150}{subsection.Alph4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Descripción diagrama de flujo.}{150}{subsubsection.Alph4.2.2.1}%
-\contentsline {subsection}{\numberline {4.2.3}Diagrama de flujo de datos.}{151}{subsection.Alph4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.1}Descripción diagrama de flujo de datos.}{151}{subsubsection.Alph4.2.3.1}%
-\contentsline {subsection}{\numberline {4.2.4}Diagrama de clases.}{152}{subsection.Alph4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.4.1}Descripción de diagrama de clases}{152}{subsubsection.Alph4.2.4.1}%
-\contentsline {subsection}{\numberline {4.2.5}Diagramas de secuencias.}{155}{subsection.Alph4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.5.1}Diagrama de secuencia 1}{155}{subsubsection.Alph4.2.5.1}%
-\contentsline {paragraph}{Descripción:}{155}{section*.186}%
-\contentsline {subsubsection}{\numberline {4.2.5.2}Diagrama de secuencia 2}{156}{subsubsection.Alph4.2.5.2}%
-\contentsline {paragraph}{Descripción:}{156}{section*.188}%
-\contentsline {subsubsection}{\numberline {4.2.5.3}Diagrama de secuencia 3}{157}{subsubsection.Alph4.2.5.3}%
-\contentsline {paragraph}{Descripción:}{157}{section*.190}%
-\contentsline {subsubsection}{\numberline {4.2.5.4}Diagrama de secuencia 4}{158}{subsubsection.Alph4.2.5.4}%
-\contentsline {paragraph}{Descripción:}{158}{section*.192}%
-\contentsline {subsection}{\numberline {4.2.6}Diagrama de actividades.}{159}{subsection.Alph4.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.6.1}Descripción del diagrama de actividades.}{159}{subsubsection.Alph4.2.6.1}%
-\contentsline {section}{\numberline {4.3}Componente III: API.}{160}{section.Alph4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Diagrama de casos de uso.}{160}{subsection.Alph4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Descripción de diagrama de casos de uso.}{161}{subsubsection.Alph4.3.1.1}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{161}{section*.196}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{161}{section*.197}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{161}{section*.198}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{162}{section*.199}%
-\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{162}{section*.200}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{162}{section*.201}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{163}{section*.203}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{163}{section*.204}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{163}{section*.205}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{163}{section*.206}%
-\contentsline {paragraph}{... Trayectoria Principal ...}{164}{section*.208}%
-\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{164}{section*.209}%
-\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{164}{section*.210}%
-\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{164}{section*.211}%
-\contentsline {subsection}{\numberline {4.3.2}Diagrama de flujo.}{165}{subsection.Alph4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Descripción diagrama de flujo.}{165}{subsubsection.Alph4.3.2.1}%
-\contentsline {subsection}{\numberline {4.3.3}Diagrama de flujo de datos.}{166}{subsection.Alph4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Descripción diagrama de flujo de datos.}{166}{subsubsection.Alph4.3.3.1}%
-\contentsline {subsection}{\numberline {4.3.4}Diagrama de clases.}{167}{subsection.Alph4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.4.1}Descripción diagrama de clases.}{167}{subsubsection.Alph4.3.4.1}%
-\contentsline {subsection}{\numberline {4.3.5}Diagramas de secuencias.}{170}{subsection.Alph4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.5.1}Descripción de diagrama de Secuencia CIII\_SD\_UC1.}{171}{subsubsection.Alph4.3.5.1}%
-\contentsline {subsubsection}{\numberline {4.3.5.2}Descripción de diagrama de Secuencia CIII\_SD\_UC2.}{171}{subsubsection.Alph4.3.5.2}%
-\contentsline {subsubsection}{\numberline {4.3.5.3}Descripción de diagrama de Secuencia CIII\_SD\_UC3.}{172}{subsubsection.Alph4.3.5.3}%
-\contentsline {subsection}{\numberline {4.3.6}Diagrama de actividades}{173}{subsection.Alph4.3.6}%
-\contentsline {subsubsection}{\numberline {4.3.6.1}Descripción diagrama de actividades.}{173}{subsubsection.Alph4.3.6.1}%
-\contentsline {subsection}{\numberline {4.3.7}Interfaz de usuario.}{173}{subsection.Alph4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}Algoritmos.}{177}{subsection.Alph4.3.8}%
-\contentsline {subsubsection}{\numberline {4.3.8.1}Complejidad computacional.}{179}{subsubsection.Alph4.3.8.1}%
-\contentsline {chapter}{\numberline {5}\leavevmode {\color {azulescom}Desarrollo}.}{181}{appendix.Alph5}%
-\contentsline {section}{\numberline {5.1}Componente I. Extensión.}{181}{section.Alph5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Archivo popup.html}{181}{subsection.Alph5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Archivo background.js}{182}{subsection.Alph5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}Interceptar petición.}{182}{subsubsection.Alph5.1.2.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.2}Creación del patrón de Chaffing}{182}{subsubsection.Alph5.1.2.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.3}Generación del chaffing.}{182}{subsubsection.Alph5.1.2.3}%
-\contentsline {section}{\numberline {5.2}Componente II. Servidor Autentificador.}{183}{section.Alph5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Manejador de paquetes de Node (npm).}{183}{subsection.Alph5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Componentes.}{184}{subsection.Alph5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Crear nuevo usuario.}{185}{subsubsection.Alph5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Obtener certificado.}{185}{subsubsection.Alph5.2.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.3}Revocar certificado.}{185}{subsubsection.Alph5.2.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.2.4}Verificar certificado.}{185}{subsubsection.Alph5.2.2.4}%
-\contentsline {section}{\numberline {5.3}Componente III. API.}{185}{section.Alph5.3}%
-\contentsline {subsection}{\numberline {5.3.1}API}{186}{subsection.Alph5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.1.1}Creación.}{186}{subsubsection.Alph5.3.1.1}%
-\contentsline {subsubsection}{\numberline {5.3.1.2}Implementación de la solución.}{187}{subsubsection.Alph5.3.1.2}%
-\contentsline {paragraph}{ApiApplication.java}{187}{section*.227}%
-\contentsline {paragraph}{APIController.java}{187}{section*.228}%
-\contentsline {paragraph}{El paquete TT2018B003.comp3.API.Utils}{187}{section*.229}%
-\contentsline {paragraph}{El paquete TT2018B003.comp3.API.Service}{187}{section*.230}%
-\contentsline {subsection}{\numberline {5.3.2}Servicio Web.}{188}{subsection.Alph5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Modificaciones al inicio de sesión.}{188}{subsubsection.Alph5.3.2.1}%
-\contentsline {chapter}{\numberline {6}\leavevmode {\color {azulescom}Pruebas.}}{190}{appendix.Alph6}%
-\contentsline {section}{\numberline {6.1}Pruebas de integración.}{190}{section.Alph6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Extensión y Servidor autentificador.}{190}{subsection.Alph6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Extensión y Servicio Web.}{191}{subsection.Alph6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Servidor Autentificador y API.}{191}{subsection.Alph6.1.3}%
-\contentsline {section}{\numberline {6.2}Tiempos de ejecución.}{191}{section.Alph6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Algoritmo de Chaffing.}{192}{subsection.Alph6.2.1}%
-\contentsline {paragraph}{Tiempo de ejecución: }{192}{section*.234}%
-\contentsline {subsection}{\numberline {6.2.2}Algoritmo de Winnowing.}{192}{subsection.Alph6.2.2}%
-\contentsline {paragraph}{Tiempo de ejecución: }{192}{section*.235}%
-\contentsline {subsection}{\numberline {6.2.3}Inicio de sesión.}{192}{subsection.Alph6.2.3}%
-\contentsline {paragraph}{Tiempo promedio de ejecución: }{192}{section*.236}%
-\contentsline {part}{\hspace {1em}Trabajo Terminal II}{193}{part.3}%
-\contentsline {part}{\hspace {1em}Sprint 2.}{194}{part.4}%
-\contentsline {chapter}{\numberline {7}\leavevmode {\color {azulescom}Análisis.}}{195}{appendix.Alph7}%
-\contentsline {section}{\numberline {7.1}Arquitectura del sistema.}{195}{section.Alph7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Descripci\'on de la arquitectura del sistema.}{195}{subsection.Alph7.1.1}%
-\contentsline {section}{\numberline {7.2}Componente I. Extensión.}{196}{section.Alph7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Descripción.}{196}{subsection.Alph7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Cambios planteados.}{196}{subsection.Alph7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Cambios al estudio de requerimientos y reglas de negocio.}{197}{subsection.Alph7.2.3}%
-\contentsline {paragraph}{Requerimientos funcionales}{197}{section*.238}%
-\contentsline {paragraph}{Requerimientos no funcionales}{197}{section*.239}%
-\contentsline {paragraph}{Reglas del negocio}{197}{section*.240}%
-\contentsline {section}{\numberline {7.3}Componente II: Servidor autentificador.}{197}{section.Alph7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Descripción.}{197}{subsection.Alph7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Cambios Planteados.}{198}{subsection.Alph7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Cambios al estudio de requerimientos y reglas de negocio.}{198}{subsection.Alph7.3.3}%
-\contentsline {section}{\numberline {7.4}Componente III: API.}{199}{section.Alph7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Descripción.}{199}{subsection.Alph7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Cambios planteados.}{199}{subsection.Alph7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Cambios al estudio de requerimientos y reglas de negocio.}{199}{subsection.Alph7.4.3}%
-\contentsline {chapter}{\numberline {8}\leavevmode {\color {azulescom}Diseño.}}{201}{appendix.Alph8}%
-\contentsline {section}{\numberline {8.1}Componente I: Extensión.}{201}{section.Alph8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Cambios en el algoritmo.}{201}{subsection.Alph8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.1.1}Complejidad computacional.}{203}{subsubsection.Alph8.1.1.1}%
-\contentsline {section}{\numberline {8.2}Componente II: Servidor Autentificador.}{203}{section.Alph8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Cambios realizados.}{203}{subsection.Alph8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Diagrama de Actividades.}{203}{subsection.Alph8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}Diagrama de Secuencia.}{203}{subsection.Alph8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.3.1}Diagrama de secuencia: Crear nuevo usuario.}{203}{subsubsection.Alph8.2.3.1}%
-\contentsline {subsubsection}{\numberline {8.2.3.2}Diagrama de secuencia: Revocar certificado.}{203}{subsubsection.Alph8.2.3.2}%
-\contentsline {subsubsection}{\numberline {8.2.3.3}Diagrama de secuencia: Obtener certificado.}{204}{subsubsection.Alph8.2.3.3}%
-\contentsline {subsubsection}{\numberline {8.2.3.4}Diagrama de secuencia: Verificar certificado.}{204}{subsubsection.Alph8.2.3.4}%
-\contentsline {section}{\numberline {8.3}Componente III: API.}{204}{section.Alph8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Cambios realizados.}{204}{subsection.Alph8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Cambio en el algoritmo.}{204}{subsection.Alph8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.2.1}Complejidad computacional.}{206}{subsubsection.Alph8.3.2.1}%
-\contentsline {subsection}{\numberline {8.3.3}Diagrama de Flujo.}{206}{subsection.Alph8.3.3}%
-\contentsline {chapter}{\numberline {9}\leavevmode {\color {azulescom}Desarrollo.}}{207}{appendix.Alph9}%
-\contentsline {section}{\numberline {9.1}Componente I: Extensión.}{207}{section.Alph9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Cambios en el manifest.}{207}{subsection.Alph9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Implementación del Chaffing.}{207}{subsection.Alph9.1.2}%
-\contentsline {section}{\numberline {9.2}Componente II: Servidor Autentificador.}{208}{section.Alph9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Servidor de accesos FTP.}{208}{subsection.Alph9.2.1}%
-\contentsline {section}{\numberline {9.3}Componente III: API.}{209}{section.Alph9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Nuevo Proceso de Winnowing y eliminación del descifrado AES.}{209}{subsection.Alph9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Guardado del certificado}{209}{subsection.Alph9.3.2}%
-\contentsline {chapter}{\numberline {10}\leavevmode {\color {azulescom}Pruebas.}}{210}{appendix.Alph10}%
-\contentsline {section}{\numberline {10.1}Pruebas de integración.}{210}{section.Alph10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Extensión y Servidor autentificador}{210}{subsection.Alph10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}Extensión y Servicio Web}{211}{subsection.Alph10.1.2}%
-\contentsline {subsection}{\numberline {10.1.3}Servidor Autentificador y API}{211}{subsection.Alph10.1.3}%
-\contentsline {section}{\numberline {10.2}Pruebas funcionales.}{211}{section.Alph10.2}%
-\contentsline {section}{\numberline {10.3}Tiempos de ejecución.}{212}{section.Alph10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Algoritmo de Chaffing.}{213}{subsection.Alph10.3.1}%
-\contentsline {paragraph}{Tiempo de ejecución: }{213}{section*.256}%
-\contentsline {subsection}{\numberline {10.3.2}Algoritmo de Winnowing.}{213}{subsection.Alph10.3.2}%
-\contentsline {paragraph}{Tiempo de ejecución: }{213}{section*.257}%
-\contentsline {subsection}{\numberline {10.3.3}Inicio de sesión.}{213}{subsection.Alph10.3.3}%
-\contentsline {paragraph}{Tiempo promedio de ejecución: }{214}{section*.258}%
-\contentsline {chapter}{\numberline {11}\leavevmode {\color {azulescom}Conclusiones}}{215}{appendix.Alph11}%
-\contentsline {chapter}{\numberline {12}\leavevmode {\color {azulescom}Trabajo a futuro.}}{216}{appendix.Alph12}%
+\contentsline {section}{\numberline {2.7}Servidor Web}{51}{section.Alph2.7}%
+\contentsline {section}{\numberline {2.8}Certificado SSL}{52}{section.Alph2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Objetivos de la criptografía.}{52}{subsection.Alph2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Usos de la criptografía.}{53}{subsection.Alph2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Criptografía simétrica y asimétrica.}{53}{subsection.Alph2.8.3}%
+\contentsline {subsubsection}{\numberline {2.8.3.1}Criptografía simétrica.}{53}{subsubsection.Alph2.8.3.1}%
+\contentsline {subsubsection}{\numberline {2.8.3.2}Criptografía asimétrica.}{54}{subsubsection.Alph2.8.3.2}%
+\contentsline {subsection}{\numberline {2.8.4}Criptografía a nivel de aplicación.}{56}{subsection.Alph2.8.4}%
+\contentsline {subsubsection}{\numberline {2.8.4.1}SSL/TLS.}{57}{subsubsection.Alph2.8.4.1}%
+\contentsline {subsubsection}{\numberline {2.8.4.2}OpenSSL}{57}{subsubsection.Alph2.8.4.2}%
+\contentsline {paragraph}{}{58}{section*.21}%
+\contentsline {section}{\numberline {2.9}Tema 6}{58}{section.Alph2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Historia}{58}{subsection.Alph2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}¿Qu\'e es Tema 6?}{58}{subsection.Alph2.9.2}%
+\contentsline {paragraph}{}{58}{section*.22}%
+\contentsline {paragraph}{}{59}{section*.23}%
+\contentsline {paragraph}{}{59}{section*.24}%
+\contentsline {paragraph}{}{59}{section*.25}%
+\contentsline {paragraph}{}{59}{section*.27}%
+\contentsline {paragraph}{}{60}{section*.29}%
+\contentsline {subsection}{\numberline {2.9.3}Objetivo de Tema 6}{60}{subsection.Alph2.9.3}%
+\contentsline {paragraph}{}{60}{section*.30}%
+\contentsline {subsection}{\numberline {2.9.4}¿Cómo funciona?}{61}{subsection.Alph2.9.4}%
+\contentsline {paragraph}{}{61}{section*.31}%
+\contentsline {subsection}{\numberline {2.9.5}Propiedades de Tema 6}{63}{subsection.Alph2.9.5}%
+\contentsline {paragraph}{}{63}{section*.35}%
+\contentsline {subsection}{\numberline {2.9.6}All-or-Nothing and the Package Transform (AONT)}{63}{subsection.Alph2.9.6}%
+\contentsline {paragraph}{}{64}{section*.36}%
+\contentsline {paragraph}{}{64}{section*.37}%
+\contentsline {paragraph}{}{65}{section*.38}%
+\contentsline {subsection}{\numberline {2.9.7}Comparando Chaffing and Winnowing contra Cifrado y Esteganograf\'ia}{66}{subsection.Alph2.9.7}%
+\contentsline {subsubsection}{\numberline {2.9.7.1}Chafing and Winnowing vs Cifrado}{66}{subsubsection.Alph2.9.7.1}%
+\contentsline {subsubsection}{\numberline {2.9.7.2}Chaffing and Winnowing vs Esteganograf\'ia}{67}{subsubsection.Alph2.9.7.2}%
+\contentsline {part}{\hspace {1em}Sprint 1.}{69}{part.2}%
+\contentsline {chapter}{\numberline {3}\leavevmode {\color {azulescom}Análisis.}}{70}{appendix.Alph3}%
+\contentsline {section}{\numberline {3.1}Estudio de Factibilidad.}{70}{section.Alph3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Factibilidad Técnica}{70}{subsection.Alph3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Factibilidad Operativa}{72}{subsection.Alph3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Factibilidad Económica}{73}{subsection.Alph3.1.3}%
+\contentsline {section}{\numberline {3.2}Herramientas a usar.}{74}{section.Alph3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Software.}{74}{subsection.Alph3.2.1}%
+\contentsline {paragraph}{HTML5.}{74}{section*.45}%
+\contentsline {paragraph}{CSS3.\\}{75}{section*.46}%
+\contentsline {paragraph}{Frameworks CSS.\\}{76}{section*.47}%
+\contentsline {subparagraph}{Bootstrap.\\}{77}{section*.48}%
+\contentsline {subparagraph}{Materialize.\\}{77}{section*.49}%
+\contentsline {paragraph}{JavaScript. \\}{77}{section*.50}%
+\contentsline {paragraph}{JQuery. \\}{78}{section*.51}%
+\contentsline {paragraph}{CryptoJs. \\}{79}{section*.52}%
+\contentsline {paragraph}{NodeJs.\\}{79}{section*.53}%
+\contentsline {paragraph}{Java.\\}{79}{section*.54}%
+\contentsline {subparagraph}{Spring Framework.\\}{79}{section*.55}%
+\contentsline {paragraph}{Apache Tomcat.\\}{80}{section*.56}%
+\contentsline {paragraph}{OpenSSL.\\}{80}{section*.57}%
+\contentsline {paragraph}{MongoDB. \\}{81}{section*.58}%
+\contentsline {paragraph}{MySQL. \\}{81}{section*.59}%
+\contentsline {paragraph}{JSEncrypt.\\}{82}{section*.60}%
+\contentsline {paragraph}{VSFTPD.\\}{82}{section*.61}%
+\contentsline {paragraph}{Wireshark. \\}{83}{section*.62}%
+\contentsline {paragraph}{}{84}{section*.63}%
+\contentsline {subsection}{\numberline {3.2.2}Hardware.}{84}{subsection.Alph3.2.2}%
+\contentsline {section}{\numberline {3.3}Arquitectura del sistema.}{85}{section.Alph3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Descripci\'on de la arquitectura del sistema.}{85}{subsection.Alph3.3.1}%
+\contentsline {section}{\numberline {3.4}Diagrama BPMN}{87}{section.Alph3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Diagrama BPMN Proceso: Inicio de Sesión}{88}{subsection.Alph3.4.1}%
+\contentsline {section}{\numberline {3.5}Diagrama de casos de uso general.}{89}{section.Alph3.5}%
+\contentsline {section}{\numberline {3.6}Componente I. Extensión.}{89}{section.Alph3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Descripción.}{89}{subsection.Alph3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Estudio de requerimientos.}{90}{subsection.Alph3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}Requerimientos Funcionales.}{90}{subsubsection.Alph3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}Requerimientos no Funcionales.}{92}{subsubsection.Alph3.6.2.2}%
+\contentsline {subsection}{\numberline {3.6.3}Reglas del negocio.}{92}{subsection.Alph3.6.3}%
+\contentsline {section}{\numberline {3.7}Componente II: Servidor autentificador.}{94}{section.Alph3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Descripción.}{94}{subsection.Alph3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Estudio de requerimientos.}{94}{subsection.Alph3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}Requerimientos funcionales.}{94}{subsubsection.Alph3.7.2.1}%
+\contentsline {subsubsection}{\numberline {3.7.2.2}Requerimientos no funcionales.}{95}{subsubsection.Alph3.7.2.2}%
+\contentsline {subsection}{\numberline {3.7.3}Reglas del negocio.}{95}{subsection.Alph3.7.3}%
+\contentsline {section}{\numberline {3.8}Componente III: API.}{96}{section.Alph3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Descripción.}{96}{subsection.Alph3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Estudio de requerimientos.}{97}{subsection.Alph3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}Requerimientos funcionales.}{97}{subsubsection.Alph3.8.2.1}%
+\contentsline {subsubsection}{\numberline {3.8.2.2}Requerimientos no funcionales.}{98}{subsubsection.Alph3.8.2.2}%
+\contentsline {subsection}{\numberline {3.8.3}Reglas del negocio.}{98}{subsection.Alph3.8.3}%
+\contentsline {chapter}{\numberline {4}\leavevmode {\color {azulescom}Diseño.}}{100}{appendix.Alph4}%
+\contentsline {section}{\numberline {4.1}Componente I: Extensión.}{100}{section.Alph4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Diagrama de casos de uso}{100}{subsection.Alph4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Descripción de casos de uso.}{101}{subsubsection.Alph4.1.1.1}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{101}{section*.74}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{101}{section*.75}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{101}{section*.76}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{101}{section*.77}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{102}{section*.79}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{102}{section*.80}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{102}{section*.81}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{102}{section*.82}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{103}{section*.84}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{103}{section*.85}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{103}{section*.86}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{103}{section*.87}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{104}{section*.89}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{105}{section*.90}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{105}{section*.91}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{105}{section*.92}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{105}{section*.93}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{106}{section*.94}%
+\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{106}{section*.95}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 3 ...}{106}{section*.96}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{107}{section*.98}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{107}{section*.99}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{107}{section*.100}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{107}{section*.101}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{108}{section*.103}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{109}{section*.104}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{109}{section*.105}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{109}{section*.106}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{110}{section*.107}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{110}{section*.108}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{111}{section*.110}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{111}{section*.111}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{111}{section*.112}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{111}{section*.113}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{111}{section*.114}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{112}{section*.115}%
+\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{112}{section*.116}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 2 ...}{112}{section*.117}%
+\contentsline {subsection}{\numberline {4.1.2}Diagrama de flujo.}{113}{subsection.Alph4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Descripción diagrama de flujo.}{113}{subsubsection.Alph4.1.2.1}%
+\contentsline {subsection}{\numberline {4.1.3}Diagrama de flujo de datos.}{115}{subsection.Alph4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}Descripción diagrama de flujo de datos.}{115}{subsubsection.Alph4.1.3.1}%
+\contentsline {subsection}{\numberline {4.1.4}Diagrama de clases.}{116}{subsection.Alph4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}Descripción de diagrama de clases}{116}{subsubsection.Alph4.1.4.1}%
+\contentsline {subsection}{\numberline {4.1.5}Diagramas de secuencia.}{119}{subsection.Alph4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.5.1}Diagrama de secuencia: Realizar petición.}{119}{subsubsection.Alph4.1.5.1}%
+\contentsline {paragraph}{Descripción:}{119}{section*.122}%
+\contentsline {subsubsection}{\numberline {4.1.5.2}Diagrama de secuencia: Habilitar extensión.}{120}{subsubsection.Alph4.1.5.2}%
+\contentsline {paragraph}{Descripción:}{120}{section*.124}%
+\contentsline {subsubsection}{\numberline {4.1.5.3}Diagrama de secuencia: Deshabilitar extensión.}{121}{subsubsection.Alph4.1.5.3}%
+\contentsline {paragraph}{Descripción:}{121}{section*.126}%
+\contentsline {subsubsection}{\numberline {4.1.5.4}Diagrama de secuencia: Inicio de sesión}{122}{subsubsection.Alph4.1.5.4}%
+\contentsline {paragraph}{Descripción:}{122}{section*.128}%
+\contentsline {subsubsection}{\numberline {4.1.5.5}Diagrama de secuencia: Cerrar sesión.}{123}{subsubsection.Alph4.1.5.5}%
+\contentsline {paragraph}{Descripción:}{123}{section*.130}%
+\contentsline {subsubsection}{\numberline {4.1.5.6}Diagrama de secuencia: Registrarse en servidor autentificador.}{124}{subsubsection.Alph4.1.5.6}%
+\contentsline {paragraph}{Descripción:}{124}{section*.132}%
+\contentsline {subsubsection}{\numberline {4.1.5.7}Diagrama de secuencia: Revocar certificado.}{125}{subsubsection.Alph4.1.5.7}%
+\contentsline {paragraph}{Descripción:}{125}{section*.134}%
+\contentsline {subsection}{\numberline {4.1.6}Diagrama de actividades}{126}{subsection.Alph4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.6.1}Descripción del diagrama de actividades.}{127}{subsubsection.Alph4.1.6.1}%
+\contentsline {subsection}{\numberline {4.1.7}Interfaz de usuario.}{127}{subsection.Alph4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.7.1}Pantalla Inicial.}{127}{subsubsection.Alph4.1.7.1}%
+\contentsline {subsubsection}{\numberline {4.1.7.2}Tab de la extensión.}{129}{subsubsection.Alph4.1.7.2}%
+\contentsline {subsection}{\numberline {4.1.8}Requisitos de diseño.}{137}{subsection.Alph4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.8.1}Requisitos de ejecución de la extensi\'on}{137}{subsubsection.Alph4.1.8.1}%
+\contentsline {subsubsection}{\numberline {4.1.8.2}Requisitos para el envío del código autentificador}{137}{subsubsection.Alph4.1.8.2}%
+\contentsline {subsection}{\numberline {4.1.9}Algoritmos.}{138}{subsection.Alph4.1.9}%
+\contentsline {paragraph}{}{139}{section*.151}%
+\contentsline {subsubsection}{\numberline {4.1.9.1}Complejidad computacional.}{141}{subsubsection.Alph4.1.9.1}%
+\contentsline {section}{\numberline {4.2}Componente II: Servidor Autentificador.}{141}{section.Alph4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Diagrama de casos de uso.}{141}{subsection.Alph4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Descripción de casos de uso.}{142}{subsubsection.Alph4.2.1.1}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{142}{section*.155}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{142}{section*.156}%
+\contentsline {paragraph}{... Trayectoria alternativa 1 ...}{142}{section*.157}%
+\contentsline {paragraph}{... Fin de Trayectoria alternativa 1 ...}{143}{section*.158}%
+\contentsline {paragraph}{... Trayectoria alternativa 2 ...}{143}{section*.159}%
+\contentsline {paragraph}{... Fin de Trayectoria alternativa 2 ...}{143}{section*.160}%
+\contentsline {paragraph}{... Trayectoria principal ...}{144}{section*.162}%
+\contentsline {paragraph}{... Fin Trayectoria principal ...}{144}{section*.163}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{144}{section*.164}%
+\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{145}{section*.165}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{145}{section*.166}%
+\contentsline {paragraph}{... Fin Trayectoria Alternativa 2 ...}{145}{section*.167}%
+\contentsline {paragraph}{... Trayectoria Alternativa 3 ...}{145}{section*.168}%
+\contentsline {paragraph}{... Fin Trayectorai Alternativa 3 ...}{145}{section*.169}%
+\contentsline {paragraph}{... Trayectoria principal ...}{146}{section*.171}%
+\contentsline {paragraph}{... Fin Trayectoria principal ...}{146}{section*.172}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{146}{section*.173}%
+\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{146}{section*.174}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{147}{section*.175}%
+\contentsline {paragraph}{... Fin Trayectoria Alternativa 1 ...}{147}{section*.176}%
+\contentsline {paragraph}{... Trayectoria principal ...}{148}{section*.178}%
+\contentsline {paragraph}{... Fin Trayectoria principal ...}{148}{section*.179}%
+\contentsline {paragraph}{... Trayectoria alternativa 1 ...}{148}{section*.180}%
+\contentsline {paragraph}{... Fin Trayectoria alternativa 1 ...}{148}{section*.181}%
+\contentsline {subsection}{\numberline {4.2.2}Diagrama de flujo.}{149}{subsection.Alph4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Descripción diagrama de flujo.}{149}{subsubsection.Alph4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Diagrama de flujo de datos.}{150}{subsection.Alph4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Descripción diagrama de flujo de datos.}{150}{subsubsection.Alph4.2.3.1}%
+\contentsline {subsection}{\numberline {4.2.4}Diagrama de clases.}{151}{subsection.Alph4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}Descripción de diagrama de clases}{151}{subsubsection.Alph4.2.4.1}%
+\contentsline {subsection}{\numberline {4.2.5}Diagramas de secuencias.}{154}{subsection.Alph4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.5.1}Diagrama de secuencia 1}{154}{subsubsection.Alph4.2.5.1}%
+\contentsline {paragraph}{Descripción:}{154}{section*.186}%
+\contentsline {subsubsection}{\numberline {4.2.5.2}Diagrama de secuencia 2}{155}{subsubsection.Alph4.2.5.2}%
+\contentsline {paragraph}{Descripción:}{155}{section*.188}%
+\contentsline {subsubsection}{\numberline {4.2.5.3}Diagrama de secuencia 3}{156}{subsubsection.Alph4.2.5.3}%
+\contentsline {paragraph}{Descripción:}{156}{section*.190}%
+\contentsline {subsubsection}{\numberline {4.2.5.4}Diagrama de secuencia 4}{157}{subsubsection.Alph4.2.5.4}%
+\contentsline {paragraph}{Descripción:}{157}{section*.192}%
+\contentsline {subsection}{\numberline {4.2.6}Diagrama de actividades.}{158}{subsection.Alph4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.6.1}Descripción del diagrama de actividades.}{158}{subsubsection.Alph4.2.6.1}%
+\contentsline {section}{\numberline {4.3}Componente III: API.}{159}{section.Alph4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Diagrama de casos de uso.}{159}{subsection.Alph4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Descripción de diagrama de casos de uso.}{160}{subsubsection.Alph4.3.1.1}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{160}{section*.196}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{160}{section*.197}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{160}{section*.198}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{161}{section*.199}%
+\contentsline {paragraph}{... Trayectoria Alternativa 2 ...}{161}{section*.200}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{161}{section*.201}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{162}{section*.203}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{162}{section*.204}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{162}{section*.205}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{162}{section*.206}%
+\contentsline {paragraph}{... Trayectoria Principal ...}{163}{section*.208}%
+\contentsline {paragraph}{... Fin de la Trayectoria Principal ...}{163}{section*.209}%
+\contentsline {paragraph}{... Trayectoria Alternativa 1 ...}{163}{section*.210}%
+\contentsline {paragraph}{... Fin de la Trayectoria Alternativa 1 ...}{163}{section*.211}%
+\contentsline {subsection}{\numberline {4.3.2}Diagrama de flujo.}{164}{subsection.Alph4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Descripción diagrama de flujo.}{164}{subsubsection.Alph4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Diagrama de flujo de datos.}{165}{subsection.Alph4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Descripción diagrama de flujo de datos.}{165}{subsubsection.Alph4.3.3.1}%
+\contentsline {subsection}{\numberline {4.3.4}Diagrama de clases.}{166}{subsection.Alph4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}Descripción diagrama de clases.}{166}{subsubsection.Alph4.3.4.1}%
+\contentsline {subsection}{\numberline {4.3.5}Diagramas de secuencias.}{169}{subsection.Alph4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.5.1}Descripción de diagrama de Secuencia CIII\_SD\_UC1.}{170}{subsubsection.Alph4.3.5.1}%
+\contentsline {subsubsection}{\numberline {4.3.5.2}Descripción de diagrama de Secuencia CIII\_SD\_UC2.}{170}{subsubsection.Alph4.3.5.2}%
+\contentsline {subsubsection}{\numberline {4.3.5.3}Descripción de diagrama de Secuencia CIII\_SD\_UC3.}{171}{subsubsection.Alph4.3.5.3}%
+\contentsline {subsection}{\numberline {4.3.6}Diagrama de actividades}{172}{subsection.Alph4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.6.1}Descripción diagrama de actividades.}{172}{subsubsection.Alph4.3.6.1}%
+\contentsline {subsection}{\numberline {4.3.7}Interfaz de usuario.}{172}{subsection.Alph4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Algoritmos.}{176}{subsection.Alph4.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.8.1}Complejidad computacional.}{178}{subsubsection.Alph4.3.8.1}%
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {azulescom}Desarrollo}.}{180}{appendix.Alph5}%
+\contentsline {section}{\numberline {5.1}Componente I. Extensión.}{180}{section.Alph5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Archivo popup.html}{180}{subsection.Alph5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Archivo background.js}{181}{subsection.Alph5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Interceptar petición.}{181}{subsubsection.Alph5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}Creación del patrón de Chaffing}{181}{subsubsection.Alph5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}Generación del chaffing.}{181}{subsubsection.Alph5.1.2.3}%
+\contentsline {section}{\numberline {5.2}Componente II. Servidor Autentificador.}{182}{section.Alph5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Manejador de paquetes de Node (npm).}{182}{subsection.Alph5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Componentes.}{183}{subsection.Alph5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Crear nuevo usuario.}{184}{subsubsection.Alph5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Obtener certificado.}{184}{subsubsection.Alph5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Revocar certificado.}{184}{subsubsection.Alph5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Verificar certificado.}{184}{subsubsection.Alph5.2.2.4}%
+\contentsline {section}{\numberline {5.3}Componente III. API.}{184}{section.Alph5.3}%
+\contentsline {subsection}{\numberline {5.3.1}API}{185}{subsection.Alph5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Creación.}{185}{subsubsection.Alph5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}Implementación de la solución.}{186}{subsubsection.Alph5.3.1.2}%
+\contentsline {paragraph}{ApiApplication.java}{186}{section*.227}%
+\contentsline {paragraph}{APIController.java}{186}{section*.228}%
+\contentsline {paragraph}{El paquete TT2018B003.comp3.API.Utils}{186}{section*.229}%
+\contentsline {paragraph}{El paquete TT2018B003.comp3.API.Service}{186}{section*.230}%
+\contentsline {subsection}{\numberline {5.3.2}Servicio Web.}{187}{subsection.Alph5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Modificaciones al inicio de sesión.}{187}{subsubsection.Alph5.3.2.1}%
+\contentsline {chapter}{\numberline {6}\leavevmode {\color {azulescom}Pruebas.}}{189}{appendix.Alph6}%
+\contentsline {section}{\numberline {6.1}Pruebas de integración.}{189}{section.Alph6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Extensión y Servidor autentificador.}{189}{subsection.Alph6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Extensión y Servicio Web.}{190}{subsection.Alph6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Servidor Autentificador y API.}{190}{subsection.Alph6.1.3}%
+\contentsline {section}{\numberline {6.2}Tiempos de ejecución.}{190}{section.Alph6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Algoritmo de Chaffing.}{191}{subsection.Alph6.2.1}%
+\contentsline {paragraph}{Tiempo de ejecución: }{191}{section*.234}%
+\contentsline {subsection}{\numberline {6.2.2}Algoritmo de Winnowing.}{191}{subsection.Alph6.2.2}%
+\contentsline {paragraph}{Tiempo de ejecución: }{191}{section*.235}%
+\contentsline {subsection}{\numberline {6.2.3}Inicio de sesión.}{191}{subsection.Alph6.2.3}%
+\contentsline {paragraph}{Tiempo promedio de ejecución: }{191}{section*.236}%
+\contentsline {part}{\hspace {1em}Trabajo Terminal II}{192}{part.3}%
+\contentsline {part}{\hspace {1em}Sprint 2.}{193}{part.4}%
+\contentsline {chapter}{\numberline {7}\leavevmode {\color {azulescom}Análisis.}}{194}{appendix.Alph7}%
+\contentsline {section}{\numberline {7.1}Arquitectura del sistema.}{194}{section.Alph7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Descripci\'on de la arquitectura del sistema.}{194}{subsection.Alph7.1.1}%
+\contentsline {section}{\numberline {7.2}Componente I. Extensión.}{195}{section.Alph7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Descripción.}{195}{subsection.Alph7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Cambios planteados.}{195}{subsection.Alph7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Cambios al estudio de requerimientos y reglas de negocio.}{196}{subsection.Alph7.2.3}%
+\contentsline {paragraph}{Requerimientos funcionales}{196}{section*.238}%
+\contentsline {paragraph}{Requerimientos no funcionales}{196}{section*.239}%
+\contentsline {paragraph}{Reglas del negocio}{196}{section*.240}%
+\contentsline {section}{\numberline {7.3}Componente II: Servidor autentificador.}{196}{section.Alph7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Descripción.}{196}{subsection.Alph7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Cambios Planteados.}{197}{subsection.Alph7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Cambios al estudio de requerimientos y reglas de negocio.}{197}{subsection.Alph7.3.3}%
+\contentsline {section}{\numberline {7.4}Componente III: API.}{198}{section.Alph7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Descripción.}{198}{subsection.Alph7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Cambios planteados.}{198}{subsection.Alph7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Cambios al estudio de requerimientos y reglas de negocio.}{198}{subsection.Alph7.4.3}%
+\contentsline {chapter}{\numberline {8}\leavevmode {\color {azulescom}Diseño.}}{200}{appendix.Alph8}%
+\contentsline {section}{\numberline {8.1}Componente I: Extensión.}{200}{section.Alph8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Cambios en el algoritmo.}{200}{subsection.Alph8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.1}Complejidad computacional.}{202}{subsubsection.Alph8.1.1.1}%
+\contentsline {section}{\numberline {8.2}Componente II: Servidor Autentificador.}{202}{section.Alph8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Cambios realizados.}{202}{subsection.Alph8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Diagrama de Actividades.}{202}{subsection.Alph8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Diagrama de Secuencia.}{202}{subsection.Alph8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.1}Diagrama de secuencia: Crear nuevo usuario.}{202}{subsubsection.Alph8.2.3.1}%
+\contentsline {subsubsection}{\numberline {8.2.3.2}Diagrama de secuencia: Revocar certificado.}{202}{subsubsection.Alph8.2.3.2}%
+\contentsline {subsubsection}{\numberline {8.2.3.3}Diagrama de secuencia: Obtener certificado.}{203}{subsubsection.Alph8.2.3.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.4}Diagrama de secuencia: Verificar certificado.}{203}{subsubsection.Alph8.2.3.4}%
+\contentsline {section}{\numberline {8.3}Componente III: API.}{203}{section.Alph8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Cambios realizados.}{203}{subsection.Alph8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Cambio en el algoritmo.}{203}{subsection.Alph8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}Complejidad computacional.}{205}{subsubsection.Alph8.3.2.1}%
+\contentsline {subsection}{\numberline {8.3.3}Diagrama de Flujo.}{205}{subsection.Alph8.3.3}%
+\contentsline {chapter}{\numberline {9}\leavevmode {\color {azulescom}Desarrollo.}}{206}{appendix.Alph9}%
+\contentsline {section}{\numberline {9.1}Componente I: Extensión.}{206}{section.Alph9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Cambios en el manifest.}{206}{subsection.Alph9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Implementación del Chaffing.}{206}{subsection.Alph9.1.2}%
+\contentsline {section}{\numberline {9.2}Componente II: Servidor Autentificador.}{207}{section.Alph9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Servidor de accesos FTP.}{207}{subsection.Alph9.2.1}%
+\contentsline {section}{\numberline {9.3}Componente III: API.}{208}{section.Alph9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Nuevo Proceso de Winnowing y eliminación del descifrado AES.}{208}{subsection.Alph9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Guardado del certificado}{208}{subsection.Alph9.3.2}%
+\contentsline {chapter}{\numberline {10}\leavevmode {\color {azulescom}Pruebas.}}{209}{appendix.Alph10}%
+\contentsline {section}{\numberline {10.1}Pruebas de integración.}{209}{section.Alph10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Extensión y Servidor autentificador}{209}{subsection.Alph10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Extensión y Servicio Web}{210}{subsection.Alph10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}Servidor Autentificador y API}{210}{subsection.Alph10.1.3}%
+\contentsline {section}{\numberline {10.2}Pruebas funcionales.}{210}{section.Alph10.2}%
+\contentsline {section}{\numberline {10.3}Tiempos de ejecución.}{211}{section.Alph10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Algoritmo de Chaffing.}{212}{subsection.Alph10.3.1}%
+\contentsline {paragraph}{Tiempo de ejecución: }{212}{section*.256}%
+\contentsline {subsection}{\numberline {10.3.2}Algoritmo de Winnowing.}{212}{subsection.Alph10.3.2}%
+\contentsline {paragraph}{Tiempo de ejecución: }{212}{section*.257}%
+\contentsline {subsection}{\numberline {10.3.3}Inicio de sesión.}{212}{subsection.Alph10.3.3}%
+\contentsline {paragraph}{Tiempo promedio de ejecución: }{213}{section*.258}%
+\contentsline {chapter}{\numberline {11}\leavevmode {\color {azulescom}Conclusiones}}{214}{appendix.Alph11}%
+\contentsline {chapter}{\numberline {12}\leavevmode {\color {azulescom}Trabajo a futuro.}}{215}{appendix.Alph12}%

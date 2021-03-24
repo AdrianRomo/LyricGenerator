@@ -870,32 +870,28 @@ natural y redes neuronales}\\
 		
 		
 
-	    \section{Tema 5}
-	        \subsection{Subtema 5.1}
-	            		\lipsum[4] <<\textit{kryptós}>> (oculto) y <<\textit{logos}>> (estudio). Según la Real Academia Española significa 'estudio de los sistemas, claves y lenguajes ocultos o secretos', sin embargo, brindándole un contexto a esta definición decimos que es el arte y ciencia que se encarga de diseñar sistemas para ocultar mensajes, y buscar la manera de romper dichos sistemas \cite{refCriptology}.\\
-            \subsection{Subtema 5.2}
-                ''\textit{Criptografía}'', palabra proveniente del griego <<\textit{kryptós}>> (oculto) y <<\textit{graphos}>> (escribir), es definida por la Real Academia Española como 'el arte de escribir con clave secreta o de un modo enigmático'. Nuevamente, la definición de la RAE nos da un panorama general de lo que trata esta rama de la criptología, sin embargo, en la actualidad tenemos definiciones más extensas y precisas que nos ayudan a entender las funciones de este arte.\\
-                
-                A continuación, se presentan dos definiciones de la criptografía, cabe mencionar que estás definiciones están orientadas al uso de la criptografía en la informática y las telecomunicaciones actualmente.\\
-                Jorge Ramio Aguirre nos brinda la siguiente definición en su libro 'Seguridad informática y criptografía' \cite{refRamioAguirre}.
-                \begin{center}
-                    \textit{''Rama inicial de las matemáticas y en la actualidad también de la informática y la telemática, que hace uso de métodos y técnicas con el objeto principal de cifrar, y por tanto proteger, un mensaje o archivo por medio de un algoritmo, usando una o más claves.''}
-                \end{center}
-                Finalmente, Menezes, Van Oorschot y Vanstone, no brindan en su libro una definición formal de lo que es la criptografía (traducción) \cite{refHandBookOfAppliedCryptography}.
-                \begin{center}
-                    \textit{''Estudio de técnicas matemáticas relacionadas con los aspectos de la seguridad de la información tales como la confidencialidad, la integridad de datos, la autentificación de entidad y del origen de datos. La criptografía no comprende sólo a los medios para proveer seguridad de información, sino a un conjunto de técnicas.''}
-                \end{center}
-                
-                A elección del lector elegir aquella definición que le convenza más, nosotros una vez finalizado la exposición de estas definiciones de criptografía, continuaremos con una breve remembranza de la historia de esta disciplina.\\
-                
-                En egipto hace 4000 años, tuvo su primera aparición la criptografía, cuando un maestro egipcio escribió la historia de su señor utilizando jeroglíficos poco comunes tratando de imprimir cierta jerarquía. Este primer acercamiento a la criptografía, utilizaba las técnicas de sustitución y transposición de símbolos de una manera similar a la base del concepto general de cifrado. Posteriormente, las antiguas civilizaciones occidentales comienzan a adoptar estas técnicas para mantener determinada información oculta, principalmente con propósitos militares, diplomáticos y religiosos. Mientras la criptografía crecía alrededor del mundo, el criptoanálisis también lo hacía, con el objetivo de hallar el mensaje original a partir de un mensaje cifrado, sin conocer el método utilizado \cite{refSandra} \cite{refCriptografia}.\\
-                
-                El la historia conocida después de lo antes mencionado, existe un punto crucial en el desarrollo de la criptografía tal y como la conocemos hoy en día hasta la llegada de las computadoras. Este punto fue la Segunda Guerra Mundial, en donde se construyeron máquinas de cifrado mecánicas y electromecánicas que aceleraban el proceso de cifrado y descifrado. Los alemanes desarrollaron la famosa máquina 'Enigma', que precisamente mediante unos rotores automatizaba el proceso de cifrado y descifrado de mensaje, brindándole al ejército una ventaja considerable en la inversión de tiempo en la comunicación.
-                
-            \subsubsection{Criptografía moderna.}
-                En la actualidad, el término \textit{'criptografía moderna'} hace alusión al desarrollo de esta ciencia en las áreas de la teoría de la información y las comunicaciones. Claude Shannon, considerado por muchos como el padre de la criptografía matemática, en su libro ''Sistemas secretos'' estableció las bases para las implementaciones de los algoritmos actuales a mediados de los años 50s \cite{refCriptografia}.\\
-                En los años 70s, el público general tuvo acceso al trabajo de Claude, además surgió la llegada de las computadoras y la publicación el primer borrador del algoritmo de criptografía simétrica DES, el cual fue el primer algoritmo público, basado en técnicas matemáticas y criptográficas modernas. Todo ello representó los cimientos para un rápido crecimiento en la criptografía, hasta eventualmente llegar a otro hecho sumamente relevante que determinó gran parte de las transacciones que realizamos hoy en día en internet. Dicho hecho fue el artículo de las nuevas direcciones de criptografía hecho por Whitfield Diffie y Martin Hellman, el cual trataba de un nuevo método para distribuir llaves, que eventualmente se llamaría criptografía asimétrica.
-                
+	    \section{Servidor Web}
+	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Jala contenido del servidor en cada petición del usuario y lo entrega al sitio web.\\
+	        Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java, y otros.\\
+	        Cuando escuchas la palabra ‘servidor web’, piensa en eso como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
+
+		 \section{Certificado SSL}
+			Conocido como (Secure Sockets Layer) o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape in los 1990. SSL crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin los problemas de espionaje, manipulación de la información, y falsificación del mensaje. Básicamente, la capa SSL permite que dos partes tengan una "conversación" privada.\\
+			Para establecer esta conexión segura, se instala en un servidor web un certificado SSL (también llamado "certificado digital") que cumple dos funciones:
+			
+			\begin{itemize}
+				\item Autentificar la identidad del sitio web, garantizando a los visitantes que no están en un sitio falso. 
+				\item Cifrar la informaci\'on transmitida.
+			\end{itemize}
+		
+			Hay varios tipos de certificados SSL según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo:
+			
+			\begin{itemize}
+				\item \'Unico: Asegura un nombre de dominio o subdominio completo (FQDN por sus siglas en ingl\'es). 
+				\item Comod\'in: Cubre un nombre de dominio y un n\'umero ilimitado de sus subdominios.
+				\item Multidominio: Asegura varios nombres de dominio.
+			\end{itemize}
+            
             \subsection{Objetivos de la criptografía.}
                 Algunos de los objetivos que se busca con la implementación de la criptografía para la seguridad de la información son los siguientes:
                 \begin{itemize}
