@@ -338,13 +338,13 @@ natural y redes neuronales}\\
     %   %   %   %   %   %   %   %   %	%
     \chapter{\textcolor{azulescom}{Introducción}}
     
-    En la actualidad la industria musical obtiene ganancias a través de la creación y divulgación de la música de
-    manera física y digital (Bourreau and Gensollen 2006 [1]), dejando que aficionados y emprendedores de la
-    música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. La generación de texto es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Recientemente, hay gran cantidad de trabajos (Generating Text with Recurrent Neural Networks [2], Convolutional Neural Networks for Sentence Classification [3]) los cuales propusieron generar texto utilizando redes neuronales recurrentes y redes neuronales convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
+    En la actualidad la industria musical obtiene ganancias a través de la creación y divulgación de la música  de
+    manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la
+    música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. La generación de texto es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Recientemente, hay gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) los cuales propusieron generar texto utilizando redes neuronales recurrentes y redes neuronales convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
     
     Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso. Mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características hacen que generar letras musicales sea mucho más difícil que generar textos normales.\par
     
-    La mayoría de las investigaciones actuales sobre generación de letras vienen con muchas condiciones, como dar una pieza de melodía (Automatic Generation of Melodic Accompaniments for Lyrics [4]), o solo generar un tipo específico de letra (Conditional Rap Lyrics Generation with Denoising Autoencoders [5]). Sin embargo, la generación de letras por medio de inteligencia artificial dado un estilo y un tema es un asunto poco trabajado. Por lo tanto, planeamos centrarnos en este nuevo problema. Estamos interesados en ver si el modelo propuesto puede aprender diferentes características en un género musical y generar letras que sean acorde a este. Actualmente, en el mercado se encuentran cuatro aplicaciones web que tienen una funcionalidad similar a la propuesta en este Trabajo Terminal:\par
+    La mayoría de las investigaciones actuales sobre generación de letras vienen con muchas condiciones, como dar una pieza de melodía (Automatic Generation of Melodic Accompaniments for Lyrics \cite{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}), o solo generar un tipo específico de letra (Conditional Rap Lyrics Generation with Denoising Autoencoders \cite{Conditional_Rap_Lyrics_Generation}). Sin embargo, la generación de letras por medio de inteligencia artificial dado un estilo y un tema es un asunto poco trabajado. Por lo tanto, planeamos centrarnos en este nuevo problema. Estamos interesados en ver si el modelo propuesto puede aprender diferentes características en un género musical y generar letras que sean acorde a este. Actualmente, en el mercado se encuentran cuatro aplicaciones web que tienen una funcionalidad similar a la propuesta en este Trabajo Terminal:\par
     
     \begin{itemize}
     	\item These lyrics do not exist.
@@ -390,7 +390,7 @@ natural y redes neuronales}\\
 
 \section{Objetivos.}
 	\subsection{Objetivo general.}
-	Se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se le dificulte componer nuevas letras musicales para que puedan interpretarlas y crear nuevas canciones. Haciendo uso de un conjunto de datos (dataset) y herramientas alojadas en la nube (Google Cloud Platform o Amazon Web Services) se van a procesar estos datos, se pretende crear un módulo que encuentre patrones por medio de redes neuronales para analizar la semántica mediante técnicas y herramientas ya existentes de procesamiento de lenguaje natural. Se van a realizar pruebas y experimentos con estas herramientas antes de la implementación (Bert [6], spaCy [7]) para poder generar versos. A su vez se va a desarrollar una interfaz web intuitiva en versión prototipo donde el usuario va a poder utilizar esta herramienta donde se le va a mostrar la letra musical que se va a generar en ese momento. Esta herramienta pretende ayudar a los usuarios mencionados anteriormente con el fin de impulsar la carrera de futuros artistas en la industria musical que no tengan los suficientes recursos para poder contratar servicios particulares de compositores.
+	Crear una herramienta de apoyo para estudiantes o aficionados interesados en este rubro que se les dificulte componer nuevas letras musicales de un solo género musical debido a la carencia de creatividad, la falta de conocimientos en la estructura del género o que no tengan inspiración suficiente para poder crear nuevas canciones, esto con el fin de impulsar la carrera de futuros artistas en la industria musical que no tengan los suficientes recursos para poder contratar servicios particulares de compositores.
 	
 	\subsection{Objetivos particulares.}
 		\begin{itemize}
@@ -401,21 +401,19 @@ natural y redes neuronales}\\
     	\end{itemize}
 		
     	\section{Justificación.}
-    	El crear nuevas composiciones musicales puede llegar a ser muy difícil, estresante e incluso agotador para cualquier aficionado o incluso algunos expertos en este medio, esto se debe a la falta de creatividad y/o tiempo de quien lo quiera realizar [8]. En ocasiones se pueden contratar servicios particulares para la producción de la letra de una canción, sin embargo, puede ser muy costoso y en ocasiones el resultado final no alcanza a llenar las expectativas de la inversión que se hace; por ende, se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se les dificulte componer nuevas letras musicales. Normalmente las letras musicales creadas por el humano, tienden a estar compuestas por patrones de acuerdo al género musical [9]. Algunos ejemplos de estos patrones pueden ser las rimas, enunciados, frases cortas y que tengan una semántica correcta, estos pueden ser encontrados por medio de procesamiento de lenguaje natural y una investigación profunda en la composición de letras de estos géneros. Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma. Nos proponemos orientar esta solución en un entorno de nube, donde la información de configuración, servicios y datos necesarios pueden mantenerse de forma independiente a la implementación, facilitando la adaptación y flexibilidad de la plataforma. Nuestro proyecto ayudará al usuario utilizando herramientas como el procesamiento de lenguaje natural, redes neuronales, aprendizaje de máquina (machine learning) y servidores en la nube. A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta es generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales, se tendrán resultados completamente diferentes con propuestas distintas. En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software , se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial , Procesamiento de Lenguaje Natural , Web Application Development , Programación Orientada a Objetos , Análisis de Algoritmos , así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita . \cite{refRivestSeguridad}.
-    	    
-    	    \subsection{Limites y alcances}
-    	    Los limites y alcances que tienen este trabajo terminal son los que se enlistan a continuación:\\
-	
-        	\textbf{Limites}
-            \begin{itemize}
-        	\item \lipsum[1]
-        	    \item \lipsum[3]
-        	\end{itemize}
-        	
-        	\textbf{Alcances}
-        	\begin{itemize}
-        	    \item \lipsum[7]
-            \end{itemize}
+    	El crear nuevas composiciones musicales puede llegar a ser muy difícil, estresante e incluso agotador para cualquier aficionado o incluso algunos expertos en este medio, esto se debe a la falta de creatividad y/o tiempo de quien lo quiera realizar \cite{What_about_the_music}. En ocasiones se pueden contratar servicios particulares para la producción de la letra de una canción, sin embargo, puede ser muy costoso y en ocasiones el resultado final no alcanza a llenar las expectativas de la inversión que se hace; por ende, se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se les dificulte componer nuevas letras musicales.
+    	
+    	Normalmente las letras musicales creadas por el humano, tienden a estar compuestas por patrones de acuerdo al género musical \cite{genero_musical_en_la_musica_popular}. Algunos ejemplos de estos patrones pueden ser las rimas, enunciados, frases cortas y que tengan una semántica correcta, estos pueden ser encontrados por medio de procesamiento de lenguaje natural y una investigación profunda en la composición de letras de estos géneros.
+    	
+    	Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma.
+    	
+    	Nos proponemos orientar esta solución en un entorno de nube, donde la información de configuración, servicios y datos necesarios pueden mantenerse de forma independiente a la implementación, facilitando la adaptación y flexibilidad de la plataforma.
+    	
+    	Nuestro proyecto ayudará al usuario utilizando herramientas como el procesamiento de lenguaje natural, redes neuronales, aprendizaje de máquina (machine learning) y servidores en la nube. Se hará uso de un conjunto de datos (dataset) y herramientas alojadas en la nube (Google Cloud Platform o Amazon Web Services) para procesar estos datos; se pretende utilizar un módulo que encuentre patrones por medio de redes neuronales para analizar la semántica mediante técnicas y herramientas ya existentes de procesamiento de lenguaje natural. Se van a realizar pruebas y experimentos con estas herramientas antes de la implementación (Bert \cite{Bert}, spaCy\cite{spaCy}) para poder generar versos. A su vez se va a desarrollar una interfaz web intuitiva en versión prototipo donde el usuario va a poder utilizar esta herramienta donde se le va a mostrar la letra musical que se va a generar en ese momento.
+    	
+    	A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta es generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales, se tendrán resultados completamente diferentes con propuestas distintas.
+    	
+    	En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software, se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial, Procesamiento de Lenguaje Natural, Web Application Development, Programación Orientada a Objetos, Análisis de Algoritmos, así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita.
     	
 	    \section{Metodolog\'ia.}
 	    Para el desarrollo de este trabajo terminal se utilizará la metodología ágil Scrum, debido a que este es un
@@ -5011,15 +5009,43 @@ natural y redes neuronales}\\
 
 	\newpage
 \end{comment}
-	%Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+	% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 	\newpage
 
     \begin{thebibliography}{20}
-    \bibitem{refRAE}  		
+   		\bibitem{refRAE}  		
 		Real Academia Española (2020, noviembre), Diccionario de la lengua española, [En línea]. Disponible: https://dle.rae.es [Último acceso: 10 de diciembre del 2020].
 
 		\bibitem{refOxfordLex}  		
 		Oxford Lexico (2020, noviembre), Definitions, Meanings, Synonyms, and Grammar by Oxford, [En línea]. Disponible: https://www.lexico.com [Último acceso: 2 de diciembre del 2020].
+		
+		 %  Introducción
+		\bibitem{Bourreau_and_Gensollen}  		
+		Chaney, D. (2012). The Music Industry in the Digital Age: Consumer Participation in Value Creation. International Journal of Arts Management, (1), pp. 15.
+		
+		\bibitem{Generating_Text_with_RNN}  	
+		Sutskever, I., Martens, J., Hinton, G. E. (2011, January). Generating text with recurrent neural networks. In ICML.
+		
+		\bibitem{CNN_for_Sentence_Classification}  	
+		Kim, Y. (2014). Convolutional neural networks for sentence classification. arXiv preprint arXiv:1408.5882.
+		
+		\bibitem{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}  	
+		Monteith, K., Martinez, T. R., \& Ventura, D. (2012, May). Automatic Generation of Melodic Accompaniments for Lyrics. In ICCC, pp. 87-94.
+		
+		\bibitem{Conditional_Rap_Lyrics_Generation}  	
+		Nikolov, N. I., Malmi, E., Northcutt, C. G., Parisi, L. (2020). Conditional Rap Lyrics Generation with Denoising Autoencoders. arXiv preprint arXiv:2004.03965.
+		
+		\bibitem{What_about_the_music}  	
+		Baker, F. A. (2015). What about the music? Music therapists’ perspectives on the role of music in the therapeutic songwriting process. Psychology of Music, 43(1), pp. 122-139.
+		
+		\bibitem{genero_musical_en_la_musica_popular}  	
+		Guerrero, J. (2012). El género musical en la música popular: algunos problemas para su caracterización. Trans. Revista transcultural de música, (16), pp. 1-22.
+		
+		\bibitem{Bert}  	
+		Wang, A., \& Cho, K. (2019). Bert has a mouth, and it must speak: Bert as a markov random field language model. arXiv preprint arXiv:1902.04094.
+		
+		\bibitem{spaCy}  	
+		Honnibal, M.,\& Montani, I. (2017). spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing.
 
 		\bibitem{refSistema}  		
 		O. Jaramillo, Universidad Nacional Autonoma de México (2007, mayo 03), El concepto de Sistema, [En línea]. Disponible: https://www.ier.unam.mx/~ojs/pub/Termodinamica/node9.html [Último acceso: 2 de diciembre del 2020].
@@ -5059,6 +5085,35 @@ natural y redes neuronales}\\
 
 		\bibitem{refFlask3}  		
 		A. Abdelaal (2019), Deploying a Flask Application to Heroku, [En línea]. Disponible: https://stackabuse.com/deploying-a-flask-application-to-heroku/ [Último acceso: 16 de diciembre del 2020].
+		
+		% Apache
+		\bibitem{Apache}  		
+		https://httpd.apache.org/
+		\bibitem{what_is_apache}  		
+		https://www.hostinger.com/tutorials/what-is-apache
+		% Servidor Web
+		\bibitem{What_is_a_web_server}  		
+		https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
+		\bibitem{Apache}  		
+		https://httpd.apache.org/
+		% Certificado SSL
+		\bibitem{SSL}  		
+		https://letsencrypt.org/es/
+		\bibitem{what_is_SSL} 
+		https://www.sslshopper.com/what-is-ssl.html
+		\bibitem{ssl_certificates} 
+		https://www.verisign.com/es_LA/website-presence/online/ssl-certificates/index.xhtml
+		% Plataforma en la nube de ML 
+		\bibitem{data_science_in_the_cloud} 
+		https://towardsdatascience.com/data-science-in-the-cloud-239b795a5792 (September 2020)
+		\bibitem{comparing-google-cloud-platform-aws-and-azure} 
+		https://medium.com/georgian-impact-blog/comparing-google-cloud-platform-aws-and-azure-d4a52a3adbd2 (May 2020)
+		\bibitem{cloud_vs_onprem} 
+		https://determined.ai/blog/cloud-v-onprem/ (July, 2020)
+		\bibitem{what_is_jupyter} 
+		https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html 
+		\bibitem{google_cloud_vs_aws} 
+		https://kinsta.com/blog/google-cloud-vs-aws/ (March, 2021)
     
     
     %---------------------------Referencias Originales ↓----------------------------%
