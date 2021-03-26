@@ -514,13 +514,13 @@ natural y redes neuronales}\\
             
 
             \subsection{Capítulo 2. Marco teórico.}
-                \lipsum[4]
+                En esta parte del documento, describiremos puntos esenciales de nuestro trabajo como la definición una red neuronal, cual planeamos utilizar, como es que se compone una canción, cadenas de markov para la generación de textos, así como herramientas y servicios que estamos probando para su futura implementación dentro del trabajo. 
              
             \subsection{Capítulo 3. Análisis.}
                 Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los 3 componente que tenemos en el sistema.
              
             \subsection{Capítulo 4. Diseño.}
-                En el tercer capítulo, nos adentraremos en el desarrollo del los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de codificación. En este capítulo se desarrollan y explican los siguientes diagramas: 'Casos de uso', 'Flujo', 'Flujo de datos', 'Clases', 'Secuencia' y 'Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
+                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de codificación. En este capítulo se desarrollan y explican los siguientes diagramas: 'Casos de uso', 'Flujo', 'Flujo de datos', 'Clases', 'Secuencia' y 'Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
                 
             \subsection{Capítulo 5. Desarrollo.}
                 En este capítulo, mostraremos lo que hemos desarrollado para este TT1 (Componente I). Se muestra que el prototipo cumpla los requerimientos que se le impusieron en la sección de análisis.
@@ -592,10 +592,11 @@ natural y redes neuronales}\\
 %					\centering 
 %					\caption{Diagrama Red Neuronal Convolucional}
 %				\end{figure}
-				\subsubsection{Recurrent Neural Network – Long Short Term Memory}
+				\subsection{Recurrent Neural Network – Long Short Term Memory}
 				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
 				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
-				Este tipo de red neuronal es muy efectiva en tecnologías que requieran conversión de texto a voz o generación de texto.\par
+				Se distinguen por su "memoria", ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\par
+				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.\par
 				\begin{figure}[H]
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
@@ -5117,6 +5118,9 @@ natural y redes neuronales}\\
 
 		\bibitem{refTiposRedesNeu3}  		
 		P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
+		
+		\bibitem{refTiposRedesNeu4} 
+		IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks#toc-what-are-r-btVB33l5 [Último acceso: 26 de marzo del 2021].
 
 		\bibitem{refQueEsBD}  		
 		Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
