@@ -435,7 +435,7 @@ natural y redes neuronales}\\
 	    			Procesos
 	    			& \begin{tabular}[c]{@{}l@{}}Iterativo e incremental\\ desarrollando sprints\end{tabular}
 	    			& \begin{tabular}[c]{@{}l@{}}Continuo\end{tabular}
-	    			& \begin{tabular}[c]{@{}l@{}}Iterativo e incremental de forma\\ continua desarrollando\\ iteraciones\end{tabular} \\% inserting body of the table 
+	    			& \begin{tabular}[c]{@{}l@{}}Iterativo e incremental\\ de forma continua\\desarrollando iteraciones\end{tabular} \\% inserting body of the table 
 	    			\hline
 	    			Personas
 	    			& \begin{tabular}[c]{@{}l@{}}Las personas son el\\ centro\end{tabular}
@@ -470,7 +470,7 @@ natural y redes neuronales}\\
 	    \\
 	    Iteración\\
 	    En Scrumban, las iteraciones son cortas para garantizar que el equipo pueda adaptarse al entorno cambiante durante el proyecto. La duración de estas iteraciones en este proyecto se medirán como máximo en lapsos de dos semanas.\\
-	    \\
+	   	\newpage
 	    Priorización\\
 	    La priorización se da de tal forma que las tareas más importantes se colocan en la parte superior de la tabla de planificación seguidas por las tareas menos importantes.\\
 	    Antes de llegar al tablero las tareas deben pasar por 3 etapas donde se van depurando las tareas a realizar para largo plazo (1 año), medio plazo (6 meses) y corto plazo (3 meses) siendo de esta última de donde salen las tareas más claras que se pueden completar y que ganan mayor prioridad para la próxima iteración.\\
@@ -483,32 +483,6 @@ natural y redes neuronales}\\
 	    \\
 	    Triaje\\
 	    Ocurre después de la congelación de funciones, y es el punto donde el gerente del proyecto decide cuáles de las características en desarrollo se completarán y cuáles quedarán sin terminar.\\
-	    \\
-	    Dado lo anterior, se decidió usar scrumban como metodología y se pretenden desarrollar 4 iteraciones en cada Trabajo Terminal:\\
-	    \\
-	    
-	    \begin{figure}[H]
-	    	\begin{center}	                      \includegraphics[width=7cm]{./imagenes/Introduccion/scrumban_buckets.jpeg}
-	    		\caption[Fases de la metodología por prototipos]{Diagrama de los fases de la metodología de prototipos evolutivos.}
-	    		\label{fig:metodologia}
-	    	\end{center}
-	    \end{figure}
-	    
-	    Trabajo Terminal 1.
-	    \begin{itemize}
-	    	\item Se construirá una base de datos acorde al proyecto, la cual contendr\'a las letras musicales de distintos artistas, as\'i como su g\'enero.
-	    	\item Se realizar\'a una limpieza a los datos extra\'idos de la base de datos.
-	    	\item Se seleccionar\'an e implementar\'an las herramientas necesarias para trabajar en la construcci\'on de un modelo para la red neuronal.
-	    	\item Se integrar\'a el modelo generado a la nube para su entrenamiento.
-	    \end{itemize}
-	    Trabajo Terminal 2.        
-	    \begin{itemize}
-	    	\item Se implementar\'a la interfaz
-	    	\item Se integrar\'a el front-end con el back-end
-	    	\item Se realizar\'an las pruebas pertinentes, as\'i como la reingenier\'ia requerida. 
-	    	\item Se desarrollar\'an los manuales t\'ecnico y de usuario.
-	    \end{itemize}
-    
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
             
@@ -561,6 +535,7 @@ natural y redes neuronales}\\
 	    El aprendizaje profundo (deep learning) es, de hecho, un nuevo nombre o enfoque de la inteligencia artificial llamada redes neuronales. Las redes neuronales son una forma de hacer que las computadoras aprendan, en donde la computadora \Gls{Aprende} a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\par
 		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia delante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\par
 		Cuando una red neuronal está siendo entrenada, la información que de entrenamiento pasa a alimentar las capas inferiores (capas de entrada) la cual será procesada y pasada a posteriores capas donde será transformada hasta llegar a las capas superiores (capas de salida).\cite{refQueSonRedesNeu}
+		\newpage
 %        	\subsection{Tipos de Redes Neuronales}
 %        	    Los diferentes tipos de redes neuronales usan diferentes principios para determinar sus reglas. Cada uno de los tipos de redes neuronales tienen sus propias debilidades y fortalezas, a continuación, describiremos algunas de las más utilizadas y sus aplicaciones.
 %        	    \subsubsection{Feedforward Neural Network – Artificial Neuron}
@@ -592,6 +567,7 @@ natural y redes neuronales}\\
 %					\centering 
 %					\caption{Diagrama Red Neuronal Convolucional}
 %				\end{figure}
+
 				\subsection{Recurrent Neural Network – Long Short Term Memory}
 				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
 				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
@@ -632,7 +608,7 @@ natural y redes neuronales}\\
 %				Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
 %				\subsubsection{Base de datos orientada a objetos}
 %				En esta se tratan de almacenar los objetos completos (\Gls{Estado} y comportamiento), incorpora todos los conceptos del paradigma orientado a objetos (encapsulamiento, herencia, polimorfismo)\par
-		  
+		  \newpage
 	    \section{¿Qué es una canción?}
 	    De manera resumida podemos decir que una canción es una composición literaria, generalmente en verso, a la que se le puede acompañar con música para poder ser cantada.\cite{refEstructuraCancion1}\par
 			\subsection{Elementos de una canción}
@@ -668,7 +644,7 @@ natural y redes neuronales}\\
 			  \item Puente
 			  \item Cierre
 			\end{itemize}
-
+		\newpage
 		\section{Cadenas de Markov}
 	    Las cadenas de Markov son un \Gls{Sistema} matemático la cuales experimenta con las transiciones de un \Gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que definen a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\par
 		Son procesos \Gls{Estocastico}s, pero con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende, ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\par
@@ -1173,10 +1149,10 @@ natural y redes neuronales}\\
 	\end{comment}
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
-%   				SPRINT 1 					  %
+%   				Iteración 1 					  %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-    \part{Sprint 1.}
+    \part{Iteración 1.}
     
 %   %   %   %   %   %   %   %   %   %
 %		        Capítulo 3					%
@@ -1193,7 +1169,7 @@ natural y redes neuronales}\\
     		\item \textbf{Factibilidad Econ\'omica:} Consiste en el análisis de los recursos financieros necesarios para llevar a cabo la elaboraci\'on del trabajo terminal.
     	\end{itemize}
     	\subsection{Factibilidad Técnica}
-    	Dentro de este apartado explicaremos detalladamente las tecnologías que usaremos. Para la elección de estas herramientas nos basamos en las tecnologías que más se usan en la actualidad, así como las que cuentan con el mayor soporte para su trabajo en la nube, a su vez se detallan las características de los equipos de c\'omputo con los que contamos actualmente.
+    	Dentro de este apartado se explica detalladamente las tecnologías que se utilizarán. La elección de estas herramientas estuvo basada en las tecnologías que más se usan en la actualidad, así como las que cuentan con el mayor soporte para su trabajo en la nube, a su vez se detallan las características de los equipos de c\'omputo con los que se cuenta actualmente.
     	\begin{table}[H]
     		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
     			\hline
@@ -1219,74 +1195,57 @@ natural y redes neuronales}\\
     		\end{tabular}
     		\caption[Herramientas de Software]{Herramientas de Software a utilizar}
     	\end{table}
-    	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que utilizaremos, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este trabajo terminal.
-    	\begin{table}[H]
-    		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
-    			\hline
-    			\rowcolor{guindapoli}
-    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware [1]}}}\\
-    			\hline
-    			\cellcolor{azulclaro}Procesador &
-    			Ryzen 5 3600\\
-    			\hline
-    			\cellcolor{azulclaro}Tarjeta de video & 
-    			Amd Radeon Rx580\\
-    			\hline
-    			\cellcolor{azulclaro}Memoria RAM &
-    			32 GB\\
-    			\hline
-    			\cellcolor{azulclaro}Disco Duro &
-    			512Gb SSD y 1Tb HDD\\
-    			\hline
-    		\end{tabular}
-    		\caption[Equipo de Hardware 1]{Equipo de hardware a utilizar [1]}
-    	\end{table}
-    	\begin{table}[H]
-    		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
-    			\hline
-    			\rowcolor{guindapoli}
-    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware [2]}}}\\
-    			\hline
-    			\rowcolor{azulfuerte}Marca & Apple\\
-    			\hline
-    			\cellcolor{azulclaro}Modelo &  iMac Late 2012\\ 
-    			\hline
-    			\cellcolor{azulclaro}Procesador &
-    			Intel Core i5\\
-    			\hline
-    			\cellcolor{azulclaro}Tarjeta de video & 
-    			NVIDIA GeForce GT 640M 512 MB\\
-    			\hline
-    			\cellcolor{azulclaro}Memoria RAM &
-    			8 GB\\
-    			\hline
-    			\cellcolor{azulclaro}Disco Duro &
-    			256 SSD y 1Tb HDD\\
-    			\hline
-    		\end{tabular}
-    		\caption[Equipo de Hardware 2]{Equipo de hardware a utilizar [2]}
-    	\end{table}
-    	\begin{table}[H]
-    		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
-    			\hline
-    			\rowcolor{guindapoli}
-    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware [3]}}}\\
-    			\hline
-    			\cellcolor{azulclaro}Procesador &
-    			Amd FX-8350\\
-    			\hline
-    			\cellcolor{azulclaro}Tarjeta de video & 
-    			Nvidia Geforce 1050ti\\
-    			\hline
-    			\cellcolor{azulclaro}Memoria RAM &
-    			16 GB\\
-    			\hline
-    			\cellcolor{azulclaro}Disco Duro &
-    			1Tb HDD\\
-    			\hline
-    		\end{tabular}
-    		\caption[Equipo de Hardware 3]{Equipo de hardware a utilizar [3]}
-    	\end{table}
+    	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que se utiliza, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este trabajo terminal.
+            	    \begin{table}[H]
+    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+    		\rowcolor{guindapoli}
+    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [1]}}}\\
+    		\hline
+    		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
+    		\hline
+    		\rowcolor{white}Tarjeta de video & Amd Radeon Rx58\\
+    		\hline
+    		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
+    		\hline
+    		\rowcolor{white}Disco duro & 1Tb HDD y 512Gb SSD\\
+    		\hline
+    	\end{tabular}
+    \end{table}
+        	    \begin{table}[H]
+    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+    		\rowcolor{guindapoli}
+    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [2]}}}\\
+    		\hline
+    		\rowcolor{azulclaro}Marca & Apple\\
+    		\hline
+    		\rowcolor{white}Modelo & iMac Late 2012\\
+    		\hline
+    		\rowcolor{azulclaro}Procesador & Intel Core i5\\
+    		\hline
+    		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
+    		\hline
+    		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
+    		\hline
+    		\rowcolor{white}Disco duro & 1Tb y 256 Gb SSD\\
+    		\hline
+    	\end{tabular}
+    \end{table}
+        	    \begin{table}[H]
+	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+		\rowcolor{guindapoli}
+		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [3]}}}\\
+		\hline
+		\rowcolor{azulclaro}Procesador & Amd FX-8350\\
+		\hline
+		\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
+		\hline
+		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
+		\hline
+		\rowcolor{white}Disco duro & 1Tb HDD\\
+		\hline
+	\end{tabular}
+\end{table}
+\newpage
     	Junto con las herramientas de hardware y software a utilizar es necesario mencionar los servicios b\'asicos que son relevantes para el desarrollo de este trabajo terminal como lo son:
     	\begin{itemize}
     		\item Luz Eléctrica
@@ -1333,23 +1292,23 @@ natural y redes neuronales}\\
     		\item \textbf{Capital Humano:} Se tienen contemplados aproximadamente 36 días laborales, es decir 288 horas para la elaboración de este trabajo terminal en el cual participaremos los tres integrantes
     		\item \textbf{Capital Técnico:} Se cuentan con las viviendas de cada uno de los integrantes y principalmente los equipos de cómputo correspondientes.
     	\end{itemize}
-    	En cuanto a los costos monetarios de todo el trabajo terminal se tiene lo siguiente:
+    	En cuanto a los costos monetarios de todo el trabajo terminal se cuenta con el siguiente equipo:
     	\begin{itemize}
     		\item \textbf{Servicios}\\
     		En cuando a los servicios se considera un gasto mensual aproximado de \$1,600.00 que al multiplicarlo por todo el tiempo de elaboración tenemos \$ 14,400.00.
     		\item \textbf{Software} \\
-    		En este caso durante en algunos periodos del trabajo terminal usaremos herramientas gratuitas y de software libre, en cuanto al servicio de la de la nube de AWS, se planea trabajar inicialmente con alguno de los paquetes gratuitos, y si se llegaran a consumir los recursos de ese paquete, se procederá a unirse a un plan donde se cobran 0.15 centavos de dólar cada hora de uso.
+    		En este caso durante algunos periodos se usarán herramientas gratuitas y de software libre, en cuanto al servicio en la de la nube de AWS, se planea trabajar inicialmente con alguno de los paquetes gratuitos, y si se llegaran a consumir los recursos de ese paquete, se procederá a unirse a un plan donde se cobran 0.15 centavos de dólar cada hora de uso.
     		\item \textbf{Hardware}\\
-    		En este caso y como se mencionó anteriormente utilizaremos los equipos de cómputo personales de cada integrante lo que da un costo aproximado total de \$ 24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual. 
+    		Se utilizarán los equipos de cómputo personal de cada integrante lo que daría un costo aproximado total de \$ 24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual. 
     		\item \textbf{Recursos Humanos}\\
-    		Estamos estimando un gasto de \$15,000.00 por cada integrante para la elaboración de este trabajo terminal por lo que se genera un gasto total de \$45,000.00
+    		Se estima un gasto aproximado de \$15,000.00 por cada integrante dell equipo para la elaboración del proyecto por lo que se generará un gasto total de \$45,000.00
     	\end{itemize}
     	Por lo que el costo final del desarrollo de este trabajo terminal es: \\
     	\begin{center}
     		\$83,420.00
     	\end{center}
     	\textbf{Conclusión} 
-    	Tras realizar el análisis el estudio de factibilidad de este trabajo terminal es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{''Viable''} iniciando de esta manera su implementación acorde con las fechas mencionadas.
+    	Tras realizar el análisis el estudio de factibilidad de este proyectp es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{"Viable"} iniciando de esta manera su implementación acorde con las fechas mencionadas.
     	    
     	\section{Herramientas a usar.}
 			\subsection{Software.}
@@ -1382,14 +1341,6 @@ natural y redes neuronales}\\
                 \item Hay un menor control por parte del maquetador de lo que realmente está sucediendo en la visualización de la página web. Esto suele ser un problema cuando se tiene que corregir algún efecto indeseado.
                 \item Al diseñar con código prehecho, podemos estar limitándonos en cuanto las posibilidades de elección del diseño web.
             \end{itemize}
-            
-            \subparagraph{Bootstrap.\\}
-			Boostrap es framework de código abierto que contiene HTML, CSS y JS, en la actualidad, Bootstrap se ha convertido en uno de los frameworks de front-end más importantes en la actualidad.
-			\cite{refBootstrap}
-			
-			
-			\subparagraph{Materialize.\\}
-			Materialize es un framework CSS creado y diseñado por Google. Combina los principios clásicos de diseño con las tecnologías e innovación moderna de Material Desing. El objetivo de materialize es desarrollar un sistema de diseño que permita la unificación de la experiencia del usuario a través de los productos de google.
 			
 			\paragraph {JavaScript. \\}
 			JavaScript es considerado como el lenguaje de programación de html y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados "scripts", se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
@@ -1404,22 +1355,6 @@ natural y redes neuronales}\\
 			 Antes de continuar con JQuery, debemos saber que es un framework. Un framework es un producto que sirve como base para la programación avanzada de aplicaciones, la cual aporta una serie de funciones o códigos para realizar tareas habituales. Dicho de otra manera, un framework son librerías de código que contienen procesos o rutinas listos para hacer uso. Habitualmente los programadores utilizan los frameworks para no tener que desarrollar ellos mismos las tareas más básicas, puesto que en el propio framework ya hay implementaciones que están probadas, funcionan y no se necesitan volver a programar.\\
 			 
 			 Una vez comprendido que es un framework podemos continuar con jQuery. Este framework (para el lenguaje Javascript), es un producto que nos simplifica la vida para programar en este lenguaje. jQuery implementa una serie de clases (programación orientada a objetos) que nos permiten programar sin preocuparnos del navegador con el que nos está visitando el usuario, ya que funcionan de forma exacta en todas las plataformas más habituales. Así pues, este framework Javascript, nos ofrece una infraestructura con la que tendremos mucha mayor facilidad para la creación de aplicaciones complejas del lado del cliente. Por ejemplo, con jQuery obtendremos ayuda en la creación de interfaces de usuario, efectos dinámicos, aplicaciones que hacen uso de Ajax, etc. Cuando se programa Javascript con jQuery se tiene a su disposición una interfaz para programación que nos permitirá hacer cosas con el navegador que estemos seguros que funcionarán para todos los visitantes de la página.\cite{refJQuery}\\
-			
-			\paragraph{CryptoJs. \\}
-			CryptoJs es una colección estándar y segura de algoritmos criptográficos implementados para JavaScript usando las mejores practicas y patrones. En este trabajo usaremos CryptoJS en el desarrollo del Componente I, específicamente, utilizaremos los algoritmos de cifrado SHA-256 y AES, ya implementados con ella.\cite{refCryptoJs} 
-			
-			\paragraph{NodeJs.\\}
-			NodeJS es un framework de ejecución de JavaScript orientado a eventos asíncronos para construir aplicaciones en red escalables. Cabe destacar que a diferencia de la mayoría del código JavaScript, no se ejecuta en el navegador, sino en un servidor.
-			\cite{refNodeJs}\\
-			
-			NodeJs tiene una amplia cantidad de librerías para el desarrollo web, una herramienta de la cual nosotros haremos uso es la librería ó paquete de OpenSSL, el cual nos permite crear certificados SSL (x509) con código mas limpio, ya que este paquete se encarga de hacer las llamadas al sistema para la creación de los certificados, haciendo llamadas a sus funciones nos permite crear ó revocar, entre muchas otras acciones, las cuales nos ayudarán a la creación del componente 2 (Autoridad certificadora). \cite{refNodeOpenSSL}
-			
-			\paragraph{Java.\\}
-		    Java es un lenguaje de programación y una plataforma informática comercializada por primera vez en 1995 por Sun Microsystems. El lenguaje de programación Java fue originalmente desarrollado por James Gosling, de Sun Microsystems (constituida en 1983 y posteriormente adquirida el 27 de enero de 2010 por la compañía Oracle), y publicado en 1995 como un componente fundamental de la plataforma Java de Sun Microsystems. Su sintaxis deriva en gran medida de C y C++, pero tiene menos utilidades de bajo nivel que cualquiera de ellos. Las aplicaciones de Java son compiladas a bytecode (clase Java), que puede ejecutarse en cualquier máquina virtual Java (JVM) sin importar la arquitectura de la computadora subyacente  \cite{refJava}.
-		    
-		    \subparagraph{Spring Framework.\\}
-		    Spring es un framework para el desarrollo de aplicaciones y contenedor de inversión de control, de código abierto para la plataforma Java. Si bien las características fundamentales de Spring Framework pueden ser usadas en cualquier aplicación desarrollada en Java, existen variadas extensiones para la construcción de aplicaciones web sobre la plataforma Java EE. A pesar de que no impone ningún modelo de programación en particular, este framework se ha vuelto popular en la comunidad al ser considerado una alternativa, sustituto, e incluso un complemento al modelo EJB (Enterprise JavaBean) \cite{refSpring}.
-		    En este trabajo utilizaremos Spring Framework 5 para el desarrollo del Componente III, específicamente la API.
 		    
 		    \paragraph{Apache Tomcat.\\}
 		    Apache Tomcat (también llamado Jakarta Tomcat o simplemente Tomcat) funciona como un contenedor de servlets desarrollado bajo el proyecto Jakarta en la Apache Software Foundation. Tomcat implementa las especificaciones de los servlets y de JavaServer Pages (JSP) de Oracle Corporation (aunque creado por Sun Microsystems).
@@ -1467,36 +1402,6 @@ natural y redes neuronales}\\
                 \item Presentan deficiencias con datos gráficos, multimedia, CAD y sistemas de información geográfica.
                 \item No se manipulan de forma eficiente los bloques de texto como tipo de dato.
             \end{itemize}
-            
-            \paragraph{JSEncrypt.\\}
-            Generada por Travis Tidwell, JSEncrypt es una librería para JavaScript que permite el cifrado, descifrado y la generación de llaves de RSA con OpenSSL.
-            
-            \paragraph{VSFTPD.\\}
-            VSFTPD son las siglas para Very Secure File Transport Protocol Daemon y es un servidor de FTP que nos da la ventaja de garantizarnos seguridad, estabilidad y desempeño al momento de montarlo, además de que nos permite configurar su control de acceso mediante una serie de criterios, un factor muy útil y necesario que utilizaremos más adelante para el desarrollo de nuestro segundo prototipo.
-            \cite{refVSFTPD}
-            La herramienta se escogió debido a la comparación de los diferentes protocolos de internet que permiten el intercambio de archivos, los cuales son:\\
-            \begin{itemize}
-                \item \textbf{FTP}: \textit{File Transfer Protocol} ó \textit{Protocolo de transferencia de archivos} es un protocolo para transferencia de archivos entre sistemas conectados a una red. Desde un equipo cliente se puede puede conectar a un servidor para descargar archivos desde él o para enviarle archivos, independientemente del sistema operativo utilizado en cada equipo. FTP nos permite tener un control de accesos de las diferentes carpetas, dando así diferentes prioridades. Al subir archivos al servidor FTP si se remplaza alguno, éste no podrá recuperarse \cite{FTPprotocoloOSI}.
-                \item \textbf{HTTP}: \textit{Hypertext Transfer Protocol} ó \textit{Transferencia de HiperTexto} es un protocolo cliente-servidor que establece los intercambios de información entre los clientes web y los servidores HTTP. La versión mas reciente de HTTP es la 1.1, y su especificación se encuentra recogida en el documento RFC 2616. HTTP se establece sobre la capa TCP/IP \cite{HTTPprotocloOSI}. Las tres operaciones más usadas que permiten a un cliente dialogar con el servidor son \cite{FTPprotocoloOSI}:
-                \begin{enumerate}
-                    \item GET: Recoger un objeto
-                    \item POST: Enviar información al servidor
-                    \item HEAD: Solicitar las caracteristicas de un objeto 
-                \end{enumerate}
-                \item \textbf{TFTP}: \textit{Protocolo Trivial de Transferencia de Archivos} es un protocolo que proporciona la transferencia de archivos sin autenticación de usuario. TFTP está más enfocado a las aplicaciones que no necesitan las interacciones sofisticadas que proporciona el protocolo de transferencia de archivos (FTP) \cite{TFTPprotocoloOSI}.
-                \item \textbf{SMTP}: \textit{Simple Mail Transfer Protocol} ó \textit{Protocolo Simple de Transferencia de Correo} es protocolo que funciona en línea, encapsulado en una trama TCP/IP. El correo se envía directamente al Servidor de Correo del destinatario. El protocolo SMTP funciona con comandos de textos enviados al servidor SMTP. A cada comando enviado por el Cliente le sigue una respuesta del servidor SMTP compuesta por un número y un mensaje descriptivo \cite{SMTPprotocoloOSI}. 
-                \item \textbf{HTTPS}: \textit{HyperText Transfer Protocol Secure} ó \textit{Protocolo Seguro de Transferencia de Hipertexto} es un protocolo de comunicación de Internet que protege la integridad y la confidencialidad de los datos de los usuarios entre sus ordenadores y el sitio web. Los datos que se envían mediante HTTPS están protegidos con el protocolo Seguridad en la capa de transporte (TLS), que da estas tres capas clave de seguridad \cite{HTTPSprotocolOSI}: 
-                \begin{enumerate}
-                    \item Cifrado: Se cifran los datos intercambiados.
-                    \item Integridad de los datos: Los datos no pueden modificarse ni dañarse durante las transferencias.
-                    \item Autenticación: Demuestra que los usuarios se comunican con el sitio web previsto. Proporciona protección frente a los ataques \textit{man-in-the-middle}.
-                \end{enumerate}
-                
-            \end{itemize}
-            
-			\paragraph{Wireshark. \\}
-			Wireshark es una analizador de paquetes de red. Un analizador captura paquetes de red y muestra los datos del paquete con el mayor detalle posible. Ésta herramienta es software libre y es el mejor analizador de paquetes hoy en día \cite{refWireshark}. Utilizaremos Wireshark para analizar los paquetes que viajan a través de la red, en este caso la petición modificada la cual contiene el certificado y el patrón ocultados mediante el método \textit{Chaffing}.
-			\label{WiresharkDefinition}
 			
 			\paragraph{}
 			
@@ -1504,86 +1409,55 @@ natural y redes neuronales}\\
 			
 		\subsection{Hardware.}
 			En el ámbito del hardware, utilizaremos los equipos de cómputo con los cuales contamos actualmente los integrantes de este equipo, los cuales se especificarán a continuación: 
-			
-			\begin{table}[H]
-				\begin{tabular}{|p{3.5cm}||p{10cm}|}
-					\rowcolor{guindapoli}
-					\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [1]}}}\\
-					\hline
-					\rowcolor{azulclaro}Marca & Asus\\
-					\hline
-					\rowcolor{white}Modelo & FX505GM-BN061T\\
-					\hline
-					\rowcolor{azulclaro}Procesador & Intel Core i5 8th Gen\\
-					\hline
-					\rowcolor{white}Tarjeta de video & NVidia GeForce GTX 1060\\
-					\hline
-					\rowcolor{azulclaro}Memoria RAM & 8 GB\\
-					\hline
-					\rowcolor{white}Disco duro & 256 GB SSD y 1 TB HDD\\
-					\hline
-				\end{tabular}
-			\end{table}
-			
-			\begin{table}[H]
-				\begin{tabular}{|p{3.5cm}||p{10cm}|}
-					\rowcolor{guindapoli}
-			        \multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [2]}}}\\
-					\hline
-					\rowcolor{azulclaro}Marca & HP\\
-					\hline
-					\rowcolor{white}Modelo & Pavilion g4\\
-					\hline
-					\rowcolor{azulclaro}Procesador & Intel Core i3\\
-					\hline
-					\rowcolor{white}Tarjeta de video & Intel Sandybridge Mobile\\
-					\hline
-					\rowcolor{azulclaro}Memoria RAM & 6 GB\\
-					\hline
-					\rowcolor{white}Disco duro & 500GB\\
-					\hline
-				\end{tabular}
-			\end{table}
-			
-			\begin{table}[H]
-				\begin{tabular}{|p{3.5cm}||p{10cm}|}
-					\rowcolor{guindapoli}
-					\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [3]}}}\\
-					\hline
-					\rowcolor{azulclaro}Marca & DELL\\
-					\hline
-					\rowcolor{white}Modelo & Inspiron 5567\\
-					\hline
-					\rowcolor{azulclaro}Procesador & Intel Core i7\\
-					\hline
-					\rowcolor{white}Tarjeta de video & Radeon (TM) R7 M445\\
-					\hline
-					\rowcolor{azulclaro}Memoria RAM & 16 GB\\
-					\hline
-					\rowcolor{white}Disco duro & 256 GB SSD y 1 TB HDD\\
-					\hline
-				\end{tabular}
-			\end{table}
-    	    
-    	    \begin{table}[H]
-				\begin{tabular}{|p{3.5cm}||p{10cm}|}
-					\rowcolor{guindapoli}
-					\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [4]}}}\\
-					\hline
-					\rowcolor{azulclaro}Marca & HP\\
-					\hline
-					\rowcolor{white}Modelo & Pavilion 15-p000ns\\
-					\hline
-					\rowcolor{azulclaro}Procesador & AMD A A8-5545M\\
-					\hline
-					\rowcolor{white}Tarjeta de video & Radeon R8 M540\\
-					\hline
-					\rowcolor{azulclaro}Memoria RAM & 8 GB\\
-					\hline
-					\rowcolor{white}Disco duro & 1TB\\
-					\hline
-				\end{tabular}
-			\end{table}
+            	    \begin{table}[H]
+	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+		\rowcolor{guindapoli}
+		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [1]}}}\\
+		\hline
+		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
+		\hline
+		\rowcolor{white}Tarjeta de video & Amd Radeon Rx58\\
+		\hline
+		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
+		\hline
+		\rowcolor{white}Disco duro & 1Tb HDD y 512Gb SSD\\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+		\rowcolor{guindapoli}
+		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [2]}}}\\
+		\hline
+		\rowcolor{azulclaro}Marca & Apple\\
+		\hline
+		\rowcolor{white}Modelo & iMac Late 2012\\
+		\hline
+		\rowcolor{azulclaro}Procesador & Intel Core i5\\
+		\hline
+		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
+		\hline
+		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
+		\hline
+		\rowcolor{white}Disco duro & 1Tb y 256 Gb SSD\\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+		\rowcolor{guindapoli}
+		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [3]}}}\\
+		\hline
+		\rowcolor{azulclaro}Procesador & Amd FX-8350\\
+		\hline
+		\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
+		\hline
+		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
+		\hline
+		\rowcolor{white}Disco duro & 1Tb HDD\\
+		\hline
+	\end{tabular}
+\end{table}
     	    
     	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%                                                       %
@@ -1592,7 +1466,7 @@ natural y redes neuronales}\\
 		%                                                       %
 		%                                                       %
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    	
+    	\begin{comment} % ESTO SI VAAAAAAA
     	\section{Arquitectura del sistema.}
             \begin{figure}[H]
         		\begin{center}
@@ -1623,6 +1497,7 @@ natural y redes neuronales}\\
 		%                                                       %
 		%                                                       %
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\end{comment}
     	\begin{comment}
     	contenidos...
     	\section{Diagrama BPMN}
@@ -1945,6 +1820,7 @@ natural y redes neuronales}\\
 	            \textbf{CIII\_RN4. Inicio de Sesi\'on.} El servidor debe contar con dos inicios de sesión, uno propio del negocio y otro propio del incio de sesión con \textit{Chaffing and Winnowing}.\\
 	            \label{CIII_RN4}
 	            \end{comment}
+	            \begin{comment}
 	            %%\textbf{CIII\_RN5. }
 	    %   %   %   %   %   %   %   %   %   %
 	    %		        Capítulo 4					%
@@ -3574,7 +3450,7 @@ natural y redes neuronales}\\
 	    
 	        \subsubsection{Descripción de diagrama de casos de uso.}
 	        
-	        
+	        \end{comment}
 	        \begin{comment}
     	    \begin{table}[H]
     			\begin{tabular}{ |p{3.5cm}||p{9.5cm}|}
@@ -3703,7 +3579,7 @@ natural y redes neuronales}\\
     		\paragraph{... Fin de la Trayectoria Alternativa 4 ...}
     	    \newpage
     		\end{comment}
-    		
+    		\begin{comment}
     		
     		
     		\begin{table}[H]
@@ -4088,7 +3964,7 @@ natural y redes neuronales}\\
                 \subsubsection{Descripción de diagrama de Secuencia CIII\_SD\_UC1.}
                 Para este diagrama, el servicio web recibirá una petición, y posteriormente la API se encargará de interceptarla, realizará la etapa de Winnowing y obtendrá el certificado de la petición con Chaffing, se la enviará al Servidor Autentificador para que este busque si ya tiene registrado a este certificado, enviando una respuesta al servicio web del tipo acceso que dará, ya que si no lo tiene registrado tendrá que iniciar sesión de forma tradicional por primera vez en el servicio, de forma contraria si se encuentra registrado dará acceso de forma inmediata a la sesión del usuario correspondiente.\\
                 \end{comment}
-                
+                \begin{comment}
                 \textbf{Diagrama de Secuencia 1. Comprobar Certificado.} 
                 \begin{figure}[H]
                 	\begin{center}	\includegraphics[width=12cm]{./imagenes/Disenio/Componente_3/CIII_SD_UC2.png}
@@ -4556,6 +4432,7 @@ natural y redes neuronales}\\
 	            El tiempo que se muestra a continuación es el promedio de 100 inicios de sesión.
 	            
 	            \paragraph{Tiempo promedio de ejecución: } 1101.68 ms.\\
+	            \end{comment}
 	    \begin{comment}
 	    contenidos...
 %   %   %   %   %   %   %   %   %   %
@@ -5120,7 +4997,7 @@ natural y redes neuronales}\\
 		P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
 		
 		\bibitem{refTiposRedesNeu4} 
-		IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks#toc-what-are-r-btVB33l5 [Último acceso: 26 de marzo del 2021].
+		IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
 
 		\bibitem{refQueEsBD}  		
 		Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
@@ -5174,167 +5051,25 @@ natural y redes neuronales}\\
     
     
     %---------------------------Referencias Originales ↓----------------------------%
-       
-	    \bibitem{refSeguridadWebAguilar}  
-		A. Aguilera Hernández (2014, abril 25), Sugerencias de Seguridad para Sitios Web, [En línea]. Disponible: https://www.seguridad.unam.mx/historico/documento/index.html-id=1143. [Último acceso: 15 de febrero del 2019].
-	    
-	    \bibitem{refRamioAguirre} 
-        J. R. Aguirre, \textit{Seguridad Informática y Criptografía}, 2da edición, Madrid, España: Universidad Politécnica de Madrid, 2006.
-	    
-	    \bibitem{refRivestSeguridad}
-		M. Bellare y A. Boldyreva, ''The Security of Chaffing and Winnowing'', California, San Diego, 2015. Disponible: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.\\1.160.4853\&rep=rep1\&type=pdf. [Último acceso: 5 de mayo del 2019].
-	
-		\bibitem{refCriptology} 
-		A. Beutelspacher, \textit{Cryptology}, edición 1994, Washington, Estados Unidos de América: Mathematical Association of America, 1994.
-		
-		\bibitem{bbvarecoradContrasenia}
-		BBVA de México (2018), ¿Es seguro guardar las contraseñas en el navegador? [En línea] Disponible: https://www.bbva.com/es/seguro-guardar-contrasenas-navegador/ [Último acceso: 15 de noviembre de 2019]   
-	
-	    \bibitem{protocoloHTTP} 
-        CCM (2017), El protocolo HTTP, [En línea]. Disponible: https://es.ccm.net/contents/264-el-protocolo-http. [Último acceso: 6 Mayo 2019].
 
-		\bibitem{refSandra} 
-        S. Díaz Santiago, ''Generacion De Sucesiones Criptográficamente Fuertes'', tesis de Maestría, División de ciencias básicas e ingeniería, UAM, D.F., México, 2005.
-		
-		\bibitem{refRoboIdentidad}
-		C. C. Espinosa Madrigal (2011, junio 16), Robo de Identidad y Consecuencias Sociales, [En línea]. Disponible: https://www.seguridad.unam.mx/historico/documento/\\index.html-id=16?fbclid=IwAR0u8WAXORvBxZ3H-aMzlBhd-6o7g8ycS88eRu7nY1t1XVtCufhEcQ7hWDs. [Último acceso: 15 de febrero del 2019].
-		
-		\bibitem{refSHA1}
-        T. Fisher (2019), What Is SHA-1 and How Is It Used for Data Verification?, [En línea]. Disponible: https://www.lifewire.com/what-is-sha-1-2626011. [Último acceso: 5 mayo 2019].
-		
-		\bibitem{refElGranLibro} 
-		J. D. Gauchat, \textit{El gran libro de HTML5, CSS3 y Javascript}, 1ra edición, Barcelona, España: MARCOMBO S.A., 2012. 
-		
-		\bibitem{refEncontrarLuegoAdivinar}
-		S.  Goldwasser y S. Micali, ''Probabilistic encryption'', \textit{Journal  of Computer and System Science}, vol. 28, no. 4, pp. 270–299, 1984.
-		
-		\bibitem{refJQuery}
-        desarrolloweb.com (2019), Manual de JQuery, [En línea]. Disponible: http://dmaspv.com/files/page/07042011180222\_manual\%20de\%20\\jquery\%20en\%20pdf\%20desarrollowebcom.pdf. [Último acceso: 2 de noviembre del 2019].
-		
-		\bibitem{refCryptoJs}
-        Google code (2019), crypto-js, [En línea]. Disponible: https://code.google.com/archive/p/crypto-js/. [Último acceso: 5 de mayo del 2019].
-		
-		\bibitem{refIBMTRIRIGAYear}
-        IBM Community (2019), TRIRIGA Wiki Home, [En línea]. DIsponible: 	https://www.ibm.com/developerworks/community/wikis\\
-        /home?lang=en\#!/wiki/IBM\%20TRIRIGA1. [Último acceso: 5 mayo 2019].
-        
-        \bibitem{refIBMTRIRIGA}
-        IBM (2019), IBM TRIRIGA Application Platform, [En línea]. Disponible: https://www.ibm.com/support/knowledgecenter/es/SSHEB3\_3.6.0/co m.ibm.tap.doc/sso\_topics/t\_ctr\_authenticate.html. [Último acceso: 5 mayo 2019].
-		
-	    \bibitem{refFuncionalidadCookies}
-		J. Pacheco (2018, julio 18), Entre cookies y privacidad,  Oficina de Seguridad del Internauta, [En línea]. Disponible: https://www.osi.es/es/actualidad/blog/2018/07/18/entre-cookies-y-privacidad. [Último acceso: 5 de mayo del 2019].
-		
-		\bibitem{ComparisonAuthenticationMethodsResources} 
-	    A. Komarova y A. Menshchikov, ''Comparison of Authentication Methods on Web Resources'' en Proceedings of the Second International Scientific Conference ''Intelligent Information Technologies for Industry'', Varna, Bulgaria, 14–16 Septiembre, 2017, pp 106-120.
-	    
-	    \bibitem{refAONT}
-    	J. Larkin, ''Implementation of Chaffing and Winnowing: providing confidentiality without encryption'', tesis de Licenciatura en Ciencias de la Computación, University of Bath Bath, Inglaterra, 2006. [En línea]. Disponible: 
-    	https://pdfs.semanticscholar.org/5520/1a43a747f4a3fb554f241c7b7bc76 36b4a07.pdf. [Último acceso: 5 de mayo del 2019].
-		
-		\bibitem{refCriptografia} 
-        A. Maiorano, \textit{Criptografia: Tecnicas De Desarrollo Para Profesionales}, 1ra edición, D.F., México: Alfaomega, 2009.
-		
-		\bibitem{refChaffingVsEsteganografia} 
-    	A. Maurya1, P. Kumar Saini y N. Goel, ''Chaffing and Winnowing without using steganography and encryption technique'', \textit{International Journal of Information Technology and Knowledge Management}, vol. 4, no. 4, pp 515-517, Diciembre, 2011
-		
-		\bibitem{refHandBookOfAppliedCryptography} 
-        A. J. Menezes, P. v. Oorschot y S. Vanstone, \textit{Handbook of Applied Cryptography}, 1ra edición, Florida, Estados Unidos de América: CRC Press, 1996.
-		
-		\bibitem{refJavaScript} 
-		Mozilla (2019, mayo 2), JavaScript. [En línea]. Disponible:
-		https://developer.mozilla.org/en-US/docs/Web/JavaScript [Último acceso: 5 de mayo del 2019].
-		
-		\bibitem{filesystemmozilla}
-        Mozilla, (2019, 19 marzo), FileSystem, [En línea]. Disponible: https://developer.mozilla.org/es/docs/Web/API/FileSystem. [Último acceso: 5 de mayo del 2019].
-		
-		\bibitem{Pressman} 
-		R. S. Pressman, \textit{Ingeniería del Software. Un enfoque práctico}, 7ma edición, D.F, México: McGraw-Hill, 2010.
-		
-		\bibitem{refCryptohraphyWithoutEncryption}
-		R. L. Rivest, ''Chaffing and Winnowing: Confidentiality without Encryption'', Laboratorio de ciencias de la computación del MIT, Massachusetts, Estados Unidos de América, 1998.
-		
-		\bibitem{refSeguridadWeb} 
-		A. Romero Mier y Terán y M. A. Vasquéz Martínez (2016, abril 19), Aspectos Básicos de la Seguridad en Aplicaciones Web. [En línea]. Disponble: https://www.seguridad.unam.mx/historico/documento/\\index.html-id=17. [Último acceso: 5 de mayo del 2019].
-        
-        \bibitem{refCryptography}
-	    Universidad Politécnica de Madrid (2004), Criptografía, [En línea]. Disponible: http://www.dma.fi.upm.es/recursos/aplicaciones/matematica\_ discreta/web/aritmetica\_modular/criptografia.html. [Último acceso: 5 de mayo del 2019].
 	    
 	    \bibitem{refMongoDB}
-	    MongoDB. (2019), ¿Qué es MongoDB?, [En línea]. Disponible: https://www.mongodb.com/es. [Último acceso: 2 de noviembre del 2019].
-	    
-	    \bibitem{opensslmillones}
-        VeriSign Inc. (2019), Todo lo que debe saber sobre certificados SSL, [En línea]. Disponible: https://www.verisign.com/es\_LA/website-presence/online/ssl-certificates/index.xhtml. [Último acceso: 5 de mayo del 2019].
-        
-        \bibitem{refWireshark}
-        Wireshark (2019), What is Wireshark?, [En línea]. Disponible: https://www.wireshark.org/docs/wsug\_html\_chunked/Chap\\terIntroduction.html\#ChIntroWhatIs. [Último acceso: 20 abril 2019].
-        
-        \bibitem{refKerberos}
-        Kerberos (2019), Descripción del Kerberos un servicio de autenticación para los sistemas de red abierta, [En línea]. Disponible: https://www.cisco.com/c/es\_mx/support/docs/security-vpn/kerberos/16087-1.html\#whatisit
-        
-        \bibitem{refCertificados}
-        Van Tilborg, Henk C.A, ''Encyclopedia of Cryptography and Security''. \textit{Eindhoven University of Technology The Netherlands}, United States of America, Editorial Springer, 2005, 671 pag. 
-        
-        \bibitem{refCertificadosElectronicos}
-        L. Hernández Encinas (2015), Las Firmas y los Certificados electrónicos (de la Administración Pública del Estado-CSIC) [En línea]. Disponible: http://www.itefi.csic.es/sites/default/files/hernandez-encinas/firma-y-certificado-electronico.pdf [Último acceso: 6 noviembre 2019]
+	    MongoDB. (2019), ¿Qué es MongoDB?, [En línea]. Disponible: https://www.mongodb.com/es. [Último acceso: 26 Marzo 2021].
         
         \bibitem{refCookies}
-        Universitat de Valéncia (2016), ¿Qué son las cookies? [En línea]. Disponible:           https://www.uv.es/uvweb/universidad/es/politica-privacidad/politica-cookies/son-cookies--1285919089226.html [Último acceso: 6 noviembre 2019]
-        
-        \bibitem{refMaterialize}
-        J. C. Teague, \textit{Speaking in Styles: Fundamentals of CSS for Web Designers}. 1ra edición. California EEUU: New Riders, 2009.
-        
-        \bibitem{refBootstrap}
-        Bootstrap (2019), About Bootstrap [En línea]. Disponible: https://getbootstrap.com/docs/4.3/about/overview/ [Último acceso: 6 noviembre 2019]
-        
-        \bibitem{refNodeJs}
-        Node.js Foundation (2019), Acerca de Node.js [En línea]. Disponible: https://nodejs.org/es/about/ [Último acceso: 6 de noviembre 2019]
+        Universitat de Valéncia (2016), ¿Qué son las cookies? [En línea]. Disponible:           https://www.uv.es/uvweb/universidad/es/politica-privacidad/politica-cookies/son-cookies--1285919089226.html [Último acceso: 26 Marzo 2021]
         
         \bibitem{refNodeOpenSSL}
-        Noteworthy Programming Masterpiece (2019), openssl-nodejs [En línea]. Disponible: https://www.npmjs.com/package/openssl-nodejs [Último acceso: 6 noviembre 2019]
-        
-        \bibitem{refJava}
-        D. Bell, M. Parr, \textit{Java para estudiantes}. 3ra edición. México: Pearson Education, 2003.
-        
-        \bibitem{refSpring}
-        Walls, Craig, \textit{Spring in Action}. 5ta edición. EEUU: Manning, 2018.
+        Noteworthy Programming Masterpiece (2019), openssl-nodejs [En línea]. Disponible: https://www.npmjs.com/package/openssl-nodejs [Último acceso: 26 Marzo 2021]
         
         \bibitem{refTomcat}
-        The Apache Software Foundation (2019), Apache Tomcat [En línea]. Disponible: http://tomcat.apache.org/index.html [Último acceso: 6 noviembre 2019]
+        The Apache Software Foundation (2019), Apache Tomcat [En línea]. Disponible: http://tomcat.apache.org/index.html [Último acceso: 26 Marzo 2021]
         
         \bibitem{refmysql}
-        Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 6 noviembre 2019]
+        Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
         
-        \bibitem{refER}
-        Tecnicatura de gestión universitaria (2008), Modelo relacional. Conceptos básicos y fundamentos [En línea]. Disponible:     http://oftgu.eco.catedras.unc.edu.ar/unidad-3/sistemas-de-gestion-de-base-de-datos/modelo-relacional-conceptos-basicos-y-fundamentos/ [Último acceso: 6 de noviembre 2019]
-        
-        \bibitem{refJavaSecurity}
-        Oracle (2010), Package java.security [En línea]. Disponible:        https://docs.oracle.com/javase/7/docs/api/java/security/package-summary.html\#package\_description [Último acceso: 6 noviembre 2019]
-        
-        \bibitem{refVSFTPD}
-        Security Appstop (2012), About vsftpd [En línea]. Disponible:
-        https://security.appspot.com/vsftpd.html\#about [Último acceso: 10 de noviembre 2019]
-        
-        \bibitem{refCertificateAuthority}
-        Johannes A. Buchmann, Evangelos Karatsiolis, A.W.: Introduction to Public Key Infrastructures. Springer (2013)
-        
-        \bibitem{FTPprotocoloOSI}
-        Hostalia whitepapers (2010), ¿Sabes cómo utlizar el protocolo FTP? [En línea]. Disponible: https://www.hostalia.com/news/noviembre10/sabes-como-utilizar-el-protocolo-FTP.pdf [Último acceso: 19 de octubre de 2019]
-        
-        \bibitem{HTTPprotocloOSI}
-        E-Reding (2001), Protocolo HTTP [En línea]. Disponible: http://bibing.us.es/proyectos/abreproy/11372/fichero/Memoria\%252F05+-+Protocolo+HTTP.pdf [Último acceso: 21 de octubre de 2019]
-        
-        \bibitem{TFTPprotocoloOSI}
-        IBM (2018), Protocolo trivial de transferencia de archivos [En línea]. Disponible: https://www.ibm.com/support/knowledgecenter/es/ssw\_ibm\_i\_73/rzal5/\\rzal5overview.htm [Último acceso: 28 de octubre de 2019]
-        
-        \bibitem{SMTPprotocoloOSI}
-        EcuRed (2011), Protocolo SMTP [En línea]. Disponible: https://www.ecured.cu/Protocolo\_SMTP [Último acceso: 05 de noviembre de 2019] 
-        
-        \bibitem{HTTPSprotocolOSI}
-        Ayuda de Search de Console (2019), Proteger sitios web con el protocolo HTTPS [En Línea]. Disponible: https://support.google.com/webmasters/answer/6073543?hl=es-419 [Último acceso: 06 de noviembre de 2019]
-	
 	\end{thebibliography}	
 
 \end{document}
-                % \paragraph{Requerimientos Funcionales} En cuanto a los requerimientos funcionales que se modificaron nos encontramos con la \ref{CI_RF13} en el cual se hace mención de 
 
 
