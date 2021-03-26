@@ -416,36 +416,99 @@ natural y redes neuronales}\\
     	En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software, se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial, Procesamiento de Lenguaje Natural, Web Application Development, Programación Orientada a Objetos, Análisis de Algoritmos, así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita.
     	
 	    \section{Metodolog\'ia.}
-	    Para el desarrollo de este trabajo terminal se utilizará la metodología ágil Scrum, debido a que este es un
-	    proceso de gestión el cual reduce la complejidad en el desarrollo de productos para satisfacer las necesidades de los clientes. Además, permite trabajar de manera eficiente colaborativamente, es decir, en equipo, para obtener el mejor resultado posible. Ken Schwaber y Jeff Sutherland [10] explican Scrum de una manera clara y simple. Dicen que no es una colección de partes y/o componentes definidos de manera prescriptiva, sino que está basado en un modelo de proceso empírico, basado en la autoorganización de los equipos los cuales logran lidiar con lo imprevisible, resolviendo los problemas complejos inspeccionándolos y adaptándose continuamente. Scrum contiene los siguientes eventos:
+	    Para el desarrollo de este trabajo terminal se utilizará la metodología ágil Scrumban, que combina algunas partes de la 
+	    metodología Scrum y Kanban, debido a que este es un proceso de gestión el cual reduce la complejidad en el desarrollo de 
+	    productos para satisfacer las necesidades de los clientes. Además, permite trabajar de manera eficiente colaborativamente, 
+	    es decir, en equipo, para obtener el mejor resultado posible.\\\\
+	    Scrumban combina la estructura que utiliza Scrum con los métodos basados en flujo junto con la visualización de Kanban.
+	    Es decir, se le permite a los equipos tener la agilidad de Scrum y la simplicidad de Kanban sin tener que utilizar las 
+	    actualizaciones de roles y es más sencillo de adoptar.\\\\
+	    En la siguiente tabla se pueden observar las principales diferencias entre las tres metodologías:
+	    
+	    \begin{table}[hbt!]\caption{Tabla comparativa de los distintos servidores web contemplados}% title of Table
+	    	\centering % used for centering table
+	    	\resizebox{15cm}{!} {
+	    		\begin{tabular}{c c c c}% centered columns (3 columns)
+	    			\hline\hline                        %inserts double horizontal lines
+	    			& Scrum & Kanban & Scrumban \\ [0.5ex]% inserts table %heading
+	    			\hline                  % inserts single horizontal line
+	    			Procesos
+	    			& \begin{tabular}[c]{@{}l@{}}Iterativo e incremental\\ desarrollando sprints\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Continuo\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Iterativo e incremental de forma\\ continua desarrollando\\ iteraciones\end{tabular} \\% inserting body of the table 
+	    			\hline
+	    			Personas
+	    			& \begin{tabular}[c]{@{}l@{}}Las personas son el\\ centro\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Las personas son el pilar\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Equipo motivado con personas\\ como pilar y en el centro\end{tabular}\\
+	    			\hline
+	    			Producto
+	    			& Foco en la efectividad
+	    			& \begin{tabular}[c]{@{}l@{}}Foco en la eficiencia\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Balance entre efectividad y\\ eficiencia\end{tabular}\\
+	    			\hline
+	    			Organizaci\'on
+	    			& \begin{tabular}[c]{@{}l@{}}Mejora continua del producto\end{tabular}
+	    			& Mejora continua del proceso
+	    			& \begin{tabular}[c]{@{}l@{}}Mejora continua del producto y\\ del proceso\end{tabular}\\
+	    			\hline
+	    			Equipo
+	    			& \begin{tabular}[c]{@{}l@{}}De 3 a 9 personas\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}No hay limitaciones\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}El equipo no requiere de un\\ número específico de integrantes\end{tabular}\\
+	    			\hline
+	    			Roles
+	    			& \begin{tabular}[c]{@{}l@{}}Scrum master\\Product owner\\Scrum team\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}Pueden incluir especialistas o\\ integrantes generalizados\end{tabular}
+	    			& \begin{tabular}[c]{@{}l@{}}No requiere un rol específico\end{tabular}\\
+	    			[1ex]      % [1ex] adds vertical space
+	    		\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
+	    	}
+	    \end{table}
+	    
+	    Scrumban utiliza iteraciones y se monitorea con la ayuda de un tablero visual. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (WIP por sus siglas en inglés Work in Progress). Cuando WIP cae por debajo del nivel predeterminado, se establece un activador de planificación bajo demanda para que el equipo sepa cuándo planificar a continuación.\\
+	    \\
+	    Iteración\\
+	    En Scrumban, las iteraciones son cortas para garantizar que el equipo pueda adaptarse al entorno cambiante durante el proyecto. La duración de estas iteraciones en este proyecto se medirán como máximo en lapsos de dos semanas.\\
+	    \\
+	    Priorización\\
+	    La priorización se da de tal forma que las tareas más importantes se colocan en la parte superior de la tabla de planificación seguidas por las tareas menos importantes.\\
+	    Antes de llegar al tablero las tareas deben pasar por 3 etapas donde se van depurando las tareas a realizar para largo plazo (1 año), medio plazo (6 meses) y corto plazo (3 meses) siendo de esta última de donde salen las tareas más claras que se pueden completar y que ganan mayor prioridad para la próxima iteración.\\
+	    \\
+	    Principio de Elección\\
+	    Cada miembro del equipo elige solo qué tarea de la sección “Tareas Pendientes” va a completar a continuación.\\
+	    \\
+	    Congelación de Funciones\\
+	    Se utiliza en Scrumban cuando se acerca la fecha límite del proyecto, significando que sólo pueden trabajar sobre las tareas previamente pensadas sin cabida para implementar nuevas características.\\
+	    \\
+	    Triaje\\
+	    Ocurre después de la congelación de funciones, y es el punto donde el gerente del proyecto decide cuáles de las características en desarrollo se completarán y cuáles quedarán sin terminar.\\
+	    \\
+	    Dado lo anterior, se decidió usar scrumban como metodología y se pretenden desarrollar 4 iteraciones en cada Trabajo Terminal:\\
+	    \\
+	    
+	    \begin{figure}[H]
+	    	\begin{center}	                      \includegraphics[width=7cm]{./imagenes/Introduccion/scrumban_buckets.jpeg}
+	    		\caption[Fases de la metodología por prototipos]{Diagrama de los fases de la metodología de prototipos evolutivos.}
+	    		\label{fig:metodologia}
+	    	\end{center}
+	    \end{figure}
+	    
+	    Trabajo Terminal 1.
 	    \begin{itemize}
-	    	\item Planificación del Sprint (Sprint Planning)
-	    	\item Scrum Diario (Daily Scrum)
-	    	\item Revisión del Sprint (Sprint Review)
-	    	\item Retrospectiva del Sprint (Sprint Retrospective)
+	    	\item Se construirá una base de datos acorde al proyecto, la cual contendr\'a las letras musicales de distintos artistas, as\'i como su g\'enero.
+	    	\item Se realizar\'a una limpieza a los datos extra\'idos de la base de datos.
+	    	\item Se seleccionar\'an e implementar\'an las herramientas necesarias para trabajar en la construcci\'on de un modelo para la red neuronal.
+	    	\item Se integrar\'a el modelo generado a la nube para su entrenamiento.
 	    \end{itemize}
-    	Estos eventos existen con el fin de establecer una regularidad y minimizar la necesidad de reuniones no definidas en Scrum. Estos eventos son bloques de tiempo (time boxes), de tal forma que todos cuentan con una duración máxima. También se definen los siguientes artefactos:
-		\begin{itemize}
-			\item Lista de Producto (Product Backlog)
-			\item Lista de Pendientes del Sprint (Sprint Backlog)
-			\item Incremento (Increment)
-		\end{itemize}
-		Los artefactos en Scrum se definen para así fomentar la transparencia de la información de tal manera que todos
-		los involucrados tengan el mismo entendimiento de que es lo que se está llevando a cabo, además de que nos
-		crean oportunidades para realizar inspecciones y adaptaciones.
-		Se nos permite crear Sprints, los cuales son ciclos breves de un mes o menos con diferentes fases, en las cuales
-		al final de cada ciclo se define la fecha para la entrega de una versión del producto deseado. Debido a que se
-		trata de una versión, no se indica la finalización del proyecto, sino que habrá un mantenimiento constante para
-		que se obtenga un producto final óptimo.
-    		
-    		 \begin{figure}[H]
-    			\begin{center}	                      \includegraphics[width=7cm]{./imagenes/Introduccion/Meto_Prototipos.jpeg}
-    			\caption[Fases de la metodología por prototipos]{Diagrama de los fases de la metodología de prototipos evolutivos.}
-    			\label{fig:metodologia}
-    			\end{center}
-    		\end{figure}
-    		A continuación se indica cada una de las etapas de la metodología con lo que se realizar\'a en cada una de estas:\cite{Pressman}.
-    	
+	    Trabajo Terminal 2.        
+	    \begin{itemize}
+	    	\item Se implementar\'a la interfaz
+	    	\item Se integrar\'a el front-end con el back-end
+	    	\item Se realizar\'an las pruebas pertinentes, as\'i como la reingenier\'ia requerida. 
+	    	\item Se desarrollar\'an los manuales t\'ecnico y de usuario.
+	    \end{itemize}
+    
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
             
