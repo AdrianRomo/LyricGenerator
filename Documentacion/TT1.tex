@@ -483,13 +483,12 @@ natural y redes neuronales}\\
 	    \\
 	    Triaje\\
 	    Ocurre después de la congelación de funciones, y es el punto donde el gerente del proyecto decide cuáles de las características en desarrollo se completarán y cuáles quedarán sin terminar.\\
-
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
             
 
             \subsection{Capítulo 2. Marco teórico.}
-                En esta parte del documento, describiremos puntos esenciales de nuestro trabajo como la definición una red neuronal, cual planeamos utilizar, como es que se compone una canción, cadenas de markov para la generación de textos, así como herramientas y servicios que estamos probando para su futura implementación dentro del trabajo. 
+                En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones técnicas, de herramientas y servicios así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
              
             \subsection{Capítulo 3. Análisis.}
                 Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los 3 componente que tenemos en el sistema.
@@ -573,11 +572,11 @@ natural y redes neuronales}\\
 				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
 				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
 				Se distinguen por su "memoria", ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\par
-				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.\par
-				\begin{figure}[H]
+				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
+				\newpage
+				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
-					\caption{Diagrama Red Neuronal Recurrente}
 				\end{figure}
 %				\subsubsection{Modular Neural Network}
 %				Esta red está constituida por un numero variado de redes, las cuales funcionan de manera independiente y realizan subtareas. Las diferentes redes, en realidad no interactúan entre si durante la ejecución del proceso. Trabajan de manera independiente para lograr una misma salida.\par
@@ -1364,28 +1363,14 @@ natural y redes neuronales}\\
 			Dos de las opciones propuestas fueron Java y \Gls{Palabra1}; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, html y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
 			HTML5 es una mejora de esta combinación, lo que unió todos estos elementos. HTML5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, html provee los elementos estructurales, CSS se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que HTML5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
 			
-			\paragraph{CSS3.\\}
-			Ya se ha mencionado anteriormente como es que HTML5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de CSS se concentra en volver la estructura de HTML utilizable y atractivo a la vista.\\
+			\paragraph{CSS.\\}
+			HTML5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de CSS se concentra en volver la estructura de HTML utilizable y atractivo a la vista.\\
 			
-			Oficialmente CSS no tiene nada que ver con HTML4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de HTML. Al principio, atributos dentro de las etiquetas HTML proveóan estilos esenciales para cada elemento, pero a medida que HTML evolucionó, la escritura de códigos se volvió más compleja y html por sí mismo no pudo satisfacer más las demandas de los diseñadores. En consecuencia a esta demanda, CSS fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de HTML.\\
+			Oficialmente CSS no tiene nada que ver con HTML4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de HTML. Al principio, atributos dentro de las etiquetas HTML proveóan estilos esenciales para cada elemento, pero a medida que HTML evolucionó, la escritura de códigos se volvió más compleja y html por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\
+			
+			En consecuencia a esta demanda, CSS fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de HTML.\\
 			
 			La versión 3 de CSS sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de HTML5 fue desarrollada considerando CSS a cargo del diseño, Debido a esta consideración, la integración entre HTML y CSS es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos HTML5 también estamos haciendo referencia a CSS3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en CSS3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con HTML5 \cite{refElGranLibro}.
-			
-			\paragraph{Frameworks CSS.\\}
-			Un framework de CSS es una biblioteca de estilos genéricos que puede ser usada para implementar diseños web. Aportan una serie de utilidades que pueden ser aprovechadas frecuentemente en los distintos diseños web.
-			Un framework de CSS, si está bien diseñado e implementado, proporciona las siguientes ventajas \cite{refMaterialize}:
-            \begin{itemize}
-                \item Proporcionar una forma fácil y por tanto rápida de implementar diseños web.
-                \item Nos aseguran que el diseño va a funcionar en una amplia gama de navegadores.
-                \item Nos aseguran que su código cumple cierta normas estándar.
-                \item  Nos aseguran cierto grado de fiabilidad en la eficacia de las utilidades que nos aportan. El framework se supone que está bien probado para asegurarnos que no hay errores.
-            \end{itemize}
-            Sin embargo, un framework de CSS puede llevar aparejado las siguientes desventajas\cite{refMaterialize}:
-            \begin{itemize}
-                \item La importación de código del framework que no es necesario en nuestro diseño web concreto. Esto provoca un incremento innecesario del consumo del ancho de banda y del tiempo de descarga.
-                \item Hay un menor control por parte del maquetador de lo que realmente está sucediendo en la visualización de la página web. Esto suele ser un problema cuando se tiene que corregir algún efecto indeseado.
-                \item Al diseñar con código prehecho, podemos estar limitándonos en cuanto las posibilidades de elección del diseño web.
-            \end{itemize}
 			
 			\paragraph {JavaScript. \\}
 			JavaScript es considerado como el lenguaje de programación de html y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados "scripts", se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
@@ -1395,12 +1380,12 @@ natural y redes neuronales}\\
 			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\
 			
 			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (APIs) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
-			
+			\begin{comment}
 			\paragraph{JQuery. \\}
 			 Antes de continuar con JQuery, debemos saber que es un framework. Un framework es un producto que sirve como base para la programación avanzada de aplicaciones, la cual aporta una serie de funciones o códigos para realizar tareas habituales. Dicho de otra manera, un framework son librerías de código que contienen procesos o rutinas listos para hacer uso. Habitualmente los programadores utilizan los frameworks para no tener que desarrollar ellos mismos las tareas más básicas, puesto que en el propio framework ya hay implementaciones que están probadas, funcionan y no se necesitan volver a programar.\\
 			 
 			 Una vez comprendido que es un framework podemos continuar con jQuery. Este framework (para el lenguaje Javascript), es un producto que nos simplifica la vida para programar en este lenguaje. jQuery implementa una serie de clases (programación orientada a objetos) que nos permiten programar sin preocuparnos del navegador con el que nos está visitando el usuario, ya que funcionan de forma exacta en todas las plataformas más habituales. Así pues, este framework Javascript, nos ofrece una infraestructura con la que tendremos mucha mayor facilidad para la creación de aplicaciones complejas del lado del cliente. Por ejemplo, con jQuery obtendremos ayuda en la creación de interfaces de usuario, efectos dinámicos, aplicaciones que hacen uso de Ajax, etc. Cuando se programa Javascript con jQuery se tiene a su disposición una interfaz para programación que nos permitirá hacer cosas con el navegador que estemos seguros que funcionarán para todos los visitantes de la página.\cite{refJQuery}\\
-		    
+		    	\end{comment}
 		    \paragraph{Apache Tomcat.\\}
 		    Apache Tomcat (también llamado Jakarta Tomcat o simplemente Tomcat) funciona como un contenedor de servlets desarrollado bajo el proyecto Jakarta en la Apache Software Foundation. Tomcat implementa las especificaciones de los servlets y de JavaServer Pages (JSP) de Oracle Corporation (aunque creado por Sun Microsystems).
 		    
@@ -1412,9 +1397,9 @@ natural y redes neuronales}\\
 		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.
             
             Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios HTTPS). Estas herramientas ayudan al sistema a implementar el Secure Sockets Layer (SSL), así como otros protocolos relacionados con la seguridad, como el Transport Layer Security (TLS). OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
-            
+            \begin{comment}
             Para este trabajo terminal utilizaremos OpenSSL para generar los certificados de los usuarios, así como los certificados autofirmados para el Componente II y el Componente III.
-            
+            \end{comment}
             \paragraph{MongoDB. \\}
             MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o ''columnas'' que no tienen por qué repetirse de un registro a otro. \\
             Las características más destacadas son su velocidad y su sencillo sistema de consulta de los contenidos de la base de datos. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
