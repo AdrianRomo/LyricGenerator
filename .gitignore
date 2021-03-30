@@ -47,7 +47,19 @@ bin/
 include/
 lib/
 share/
-
+# LaTex Files #
+*.aux
+*.glo
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+_minted-2020-B002-TT1-V1/
+# Datasets #
+Datasets/
 # Other Files #
 ######################
 *.csv
