@@ -38,15 +38,18 @@ songs, this in order to boost the career of future artists in the music industry
 <!--te-->
 
 ## Built with 
+![Python 3.9.2](https://img.shields.io/badge/-Python3.9.2-05122A?style=flat&logo=python)
+![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
+![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
+![Flask](https://img.shields.io/badge/-Flask-05122A?style=flat&logo=flask)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap&logoColor=563D7C)
+![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)
+![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)
+
 - [AWS Platform](https://aws.amazon.com)
 - [BERT](https://huggingface.co/transformers/model_doc/bert.html)
 - [GPT-2](https://openai.com/blog/gpt-2-1-5b-release/)
 - [Kaggle Dataset](https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres)
-- [React](https://reactjs.org)
-- [Python 3.9.2](https://www.python.org)
-- [Flask](http://flask.pocoo.org/)
-- [Bootstrap](http://getbootstrap.com/) - Extensive list of components and  Bundled Javascript plugins.
-
 
 ##  Demo
 
