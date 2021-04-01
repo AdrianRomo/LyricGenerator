@@ -817,8 +817,6 @@ natural y redes neuronales}\\
 				\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
 			}
 		\end{table}
-		
-		
 
 	    \section{Servidor Web}
 	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Jala contenido del servidor en cada petición del usuario y lo entrega al sitio web.\\
@@ -844,6 +842,48 @@ natural y redes neuronales}\\
 		
 		\newpage
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
+		
+		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitan este montón de iteraciones para producir el modelo más preciso. El cómputo en la nube permite modelar capacidad de almacenamiento y maneja cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, AWS ofrece instancias de GPU’s con capacidad de memoria que va de los 8 a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
+		Las GPU son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece GPU's de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
+		
+		\subsection{Amazon}
+		Dentro de las bondades que ofrecen los Servicios Web de Amazon (AWS por sus siglas en ingl\'es) y que nos pueden servir en nuestro proyecto se pueden encontrar: 
+		
+		\begin{itemize}
+			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (EC2 por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
+			Aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, y recomendaciones.\\ 
+			El mercado de AWS ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo. Las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas por uno mismo. Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker. Se puede hacer uso de una "Jupyter notebook" para construir un modelo propio de aprendizaje automático y \textbf{visualizar su información}.
+			
+			\item \textbf{Lex:} Fue diseñado para integrar chatbots en aplicaciones. Lex cuenta con capacidades de aprendizaje profundo basado en procesamiento de lenguaje natural (NLP) y reconocimiento automático de voz. La API puede reconocer texto hablado y escrito. 
+			\item \textbf{Rekognition:} Es un servicio de visión computacional que simplifica el proceso de desarrollo para aplicaciones de reconocimiento de imagen y vídeo.
+		\end{itemize}
+		
+		\subsection{Azure}
+		Comparado a AWS, las propuestas del aprendiza de máquina de Azure son más flexibles en términos de algoritmos out-of-the-box.
+		
+		\begin{itemize}
+			\item \textbf{Servicios de Aprendizaje Automático:} Es una gran librería de algoritmos de aprendizaje automático pre-entrenados y pre-empacados, también provee de un ambiente para implementar estos algoritmos y aplicarlos a aplicaciones del mundo real. Se puede usar la interfaz de usuario para entrenar, probar y evaluar los modelos así como también provee soluciones para Inteligencia Artificial (IA) (Esto incluye visualización y otra información que puede ayudar a comprender el comportamiento del modelo y comparar algoritmos para encontrar la mejor opción). Algunas de las ofertas dentro de este apartado son:
+			
+			\begin{itemize}
+				\item \textbf{Paquetes de Python:} Contiene funciones y librerías para visión computacional, análisis de texto, previsión, y aceleramiento de hardware. 
+				\item \textbf{Gestión de Modelo:} Provee un entorno para acoger modelos, gestionar versiones, y monitorear modelos que corran en Azure o en soluciones propias de la casa.
+				\item \textbf{Workbench:} Una simple línea de comandos y entorno de escritorio con dashboards y herramientas de seguimiento del desarrollo de modelos. 
+			\end{itemize}
+			
+			\item \textbf{Frameworks de Servicio de Bots:} Provee de un entorno para la construcción, despliegue, y prueba  de bots usando diferentes lenguajes de programación.
+		\end{itemize}
+		
+		\subsection{Google}
+		Google provee servicios de aprendizaje automático e Inteligencia Artificial (IA) en dos niveles – Motor de Aprendizaje automático de Google Cloud para profesionales de datos experimentados y la plataforma para principiantes de Cloud AutoML (Aprendizaje Automático-Automático).
+		
+		\begin{itemize}
+			\item \textbf{AutoML:} Una plataforma de aprendizaje automático basada en la nube desarrollada para usuarios sin experiencia. Se pueden cargar datasets, entrenar modelos, y desplegarlos en un sitio web. AutoML se integra con todos los servicios de Google y guarda la información en la nube.\\
+			Se pueden desplegar modelos entrenados vía una interfaz de REST API. Se puede acceder a un cierto número de productos AutoML disponibles a través de una interfaz gráfica.
+			\item \textbf{Motor de Aprendizaje Automático:} Se puede usar Google Cloud ML para entrenar un modelo complejo apalancando la infraestructura de la GPU y la Unidad de Procesamiento de Tensor (TPU por sus siglas en inglés). Incluso se puede usar el servicio para desplegar un modelo entrenado de manera externa.\\
+			El Aprendizaje automático en la Nube automatiza todo el monitoreo y los procesos proveedores de recursos para ejecutar las tareas;  aparte de hospedar y entrenar, Cloud ML también puede llevar a cabo ajustes de hiperparámetros que influencian la precisión de las predicciones.
+			\item \textbf{Tensorflow:} Es una librería de software open-source que usa gráficas de flujo de datos para operaciones numéricas. Las operaciones matemáticas en estas gráficas son representados por nodos, mientras que los bordes representan la información transferida de un nodo a otro. La información en TensorFlow es representada en forma de tensores, los cuales son arreglos multidimensionales.\\ Tensorflow es usualmente usado para investigación y práctica de aprendizaje profundo, y es multi-plataforma por lo que se puede correr en GPUs, CPUs, TPUs y plataformas móviles.
+		\end{itemize}
+		
 		\begin{table}[hbt!]\caption{Tabla comparativa de las diversas plataformas contempladas}% title of Table
 			\centering % used for centering table
 			\resizebox{15cm}{!} {
@@ -884,6 +924,58 @@ natural y redes neuronales}\\
 				\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
 			}
 		\end{table}
+	
+		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue fáciles.\\
+		\\
+		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plata de la Nube de Google (GCP) usa un paquete llamado "what if tool" la cual se puede integrar junto a un "Jupyter Notebook" y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
+		\\
+		El debbuger de SageMkaer de AWS permite analizar cómo es que la ingeniería de caractgerísticas y el refinado del modelo son hechos, o de forma más concisa, permite ver qué sucede durante el entrenamiento del modelo.\\
+		\\
+		Azure, por su parte, provee un módulo propio en su SDK el cual parece tener la mejor integración de entre las tres plataformas.\\♦
+		\\
+		\textbf{Costo y Rendimiento del Modelo}\\
+		\\
+		Azure y GCP puntúan ligeramente mejor que AWS, esto no necesariamente significa que una plataforma es mejor que otra.\\
+		\\
+		El costo, por otro lado, resultó ser más interesante. El costo de AWS fue considerablemente menor que GCP y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
+		\\
+		Si se tienen problemas con el presupuesto y el gasto por el 5 por ciento extra de mejora en el rendimiento no justifica el retorno, la historia se vuelve completamente distinta.\\
+		\\
+		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. AWS y GCP parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones antes que haciendo uso de una interfaz.\\
+		\\
+		Tanto GCP como AWS ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
+		
+		\begin{table}[hbt!]\caption{Tabla comparativa GCP vs AWS}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{c c c}% centered columns (3 columns)
+					\hline\hline                        %inserts double horizontal lines
+					Tipo de Instancia
+					& \begin{tabular}[c]{@{}l@{}}Precio de EC2\\(por hora)\end{tabular} 
+					& \begin{tabular}[c]{@{}l@{}}Precio de Google\\(por hora)\end{tabular}\\ [0.5ex]% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Propósito\\General\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\$0.134\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\$0.15\end{tabular} \\% inserting body of the table 
+					\hline
+					Cómputo\\Optimizado
+					& \begin{tabular}[c]{@{}l@{}}\$0.136\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\$0.188\end{tabular}\\
+					\hline
+					Optimizado de\\Memoria
+					& \begin{tabular}[c]{@{}l@{}}\$0.201\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\$0.295\end{tabular}\\
+					\hline
+					GPU
+					& \begin{tabular}[c]{@{}l@{}}\$0.526\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}\$1.4\end{tabular}\\
+					[1ex]      % [1ex] adds vertical space
+				\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
+			}
+		\end{table}
+		
+		Llegados a este punto en la comparación para nuestras necesidades resulta claro que la opción ideal para las necesidades de nuestro proyecto es AWS debido a que es más barato que las otras 2 plataformas su herramienta SageMaker nos permitirá saber cómo es que se está entrenando el modelo.
+		
 		
             \begin{comment}
             \subsection{Objetivos de la criptografía.}
