@@ -83,18 +83,12 @@ Currently on Development.
 Currently on Development.
 
 ## To-do
-- Implement Neural Networks
-- Test and evaluate best results of Lyric Generation with:
-    - Bert
-    - GPT-2
-    - Markov chains
-- Train the model in AWS Platform.
-- Create Website in React.
-- Merge Frontend and Backend.
-- Add Documentation in LaTex.
-- User Manual.
-- Tech Manual.
-
+[Documentación](/Documentacion/README.md)
+[Scraper](/src/Scraper/README.md)
+[Neural Networks](/src/Neural%20Networks/README.md)
+[Front-end](/src/Front-end/README.md)
+[Manual de Usuario](/Documentacion/Manual%20de%20Usuario/README.md)
+[Manual Técnico](/Documentacion/Manual%20Tecnico/README.md)
 ## To-Implement
 - Create API REST of Generated Lyrics
 
