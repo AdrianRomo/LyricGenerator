@@ -49,7 +49,7 @@ songs, this in order to boost the career of future artists in the music industry
 - [AWS Platform](https://aws.amazon.com)
 - [BERT](https://huggingface.co/transformers/model_doc/bert.html)
 - [GPT-2](https://openai.com/blog/gpt-2-1-5b-release/)
-- [Kaggle Dataset](https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres)
+- [Kaggle Dataset](https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres)
 
 ##  Demo
 
