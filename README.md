@@ -83,12 +83,12 @@ Currently on Development.
 Currently on Development.
 
 ## To-do
-[Documentación](/Documentacion/README.md)
-[Scraper](/src/Scraper/README.md)
-[Neural Networks](/src/Neural%20Networks/README.md)
-[Front-end](/src/Front-end/README.md)
-[Manual de Usuario](/Documentacion/Manual%20de%20Usuario/README.md)
-[Manual Técnico](/Documentacion/Manual%20Tecnico/README.md)
+- [Documentación](/Documentacion/README.md)
+- [Scraper](/src/Scraper/README.md)
+- [Neural Networks](/src/Neural%20Networks/README.md)
+- [Front-end](/src/Front-end/README.md)
+- [Manual de Usuario](/Documentacion/Manual%20de%20Usuario/README.md)
+- [Manual Técnico](/Documentacion/Manual%20Tecnico/README.md)
 ## To-Implement
 - Create API REST of Generated Lyrics
 
