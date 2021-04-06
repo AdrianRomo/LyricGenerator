@@ -494,16 +494,16 @@ natural y redes neuronales}\\
             
 
             \subsection{Capítulo 2. Marco teórico.}
-                En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones técnicas, de herramientas y servicios así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
+                En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones técnicas, herramientas y servicios así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
              
             \subsection{Capítulo 3. Análisis.}
-                Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los 3 componente que tenemos en el sistema.
+                Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los tres componentes que tenemos en el sistema.
              
             \subsection{Capítulo 4. Diseño.}
-                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de codificación. En este capítulo se desarrollan y explican los siguientes diagramas: 'Casos de uso', 'Flujo', 'Flujo de datos', 'Clases', 'Secuencia' y 'Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
+                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrollan y explican los siguientes diagramas: 'Casos de uso', 'Flujo', 'Flujo de datos', 'Clases', 'Secuencia' y 'Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
                 
             \subsection{Capítulo 5. Desarrollo.}
-                En este capítulo, mostraremos lo que hemos desarrollado para este TT1 (Componente I). Se muestra que el prototipo cumpla los requerimientos que se le impusieron en la sección de análisis.
+                En este capítulo mostraremos lo que se ha desarrollado para este Trabajo Terminal I (Iteración I e Iteración II). Se muestra que el prototipo cumpla los requerimientos que se le impusieron en la sección de análisis.
             
             \subsection{Capítulo 6. Avances y trabajo por hacer.}
                 En el último capítulo de este reporte, hablaremos de los avances que hemos logrado a lo largo de la asignatura de trabajo terminal I y además, exponemos el trabajo esperado para la asignatura de trabajo terminal II.
@@ -537,11 +537,12 @@ natural y redes neuronales}\\
 %			\caption{Activación del students pack}
 %		\end{figure}
 		\section{Inteligencia Artificial}
-		Por Inteligencia Artificial se entiende a una simulación de procesos computacionales cognitivos que abarcan diferentes áreas de investigación, tales son como...
-		Se tiene como objetivo el simular un comportamiento inteligente en las máquinas, es decir, razonar, aprender, percibir, comunicarse y desarrollarse en entornos más complejos.
+		Por Inteligencia Artificial se entiende a una simulación de procesos computacionales cognitivos para que simulen el comportamiento de una mente humana, estos comportamientos abarcan diferentes áreas de investigación, como el razonamiento, aprendizaje, percepción, comunicación y la capacidad de desarrollarse en entornos más complejos.
+		"La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificail utiliza muchas técnicas diferentes apra resolver una gran variedad de tareas que se encuentran en todas partes." \cite{Inteligencia_Artificial}
+		Como objetivo, la Inteligencia Artificial pretende hacer un uso de los recursos tecnológicos para desarrollar modelos computacionales y poder resolver problemas del mundo real evolucionando constantemente.
 	    \section{Redes neuronales}
 	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto
-	    El aprendizaje profundo o deep learning es un nombre o enfoque reciente de la inteligencia artificial llamada redes neuronales. Las redes neuronales son una forma de hacer que las computadoras aprendan, en donde la computadora \Gls{aprende} a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\par
+	    El aprendizaje profundo o deep learning es un nombre o enfoque reciente de la inteligencia artificial llamada redes neuronales. Las redes neuronales son una forma de hacer que las computadoras aprendan, en donde la computadora aprende a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\par
 		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia delante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\par
 		Cuando una red neuronal está siendo entrenada, la información que de entrenamiento pasa a alimentar las capas inferiores (capas de entrada) la cual será procesada y pasada a posteriores capas donde será transformada hasta llegar a las capas superiores (capas de salida).\cite{refQueSonRedesNeu}
 
@@ -576,7 +577,7 @@ natural y redes neuronales}\\
 %					\centering 
 %					\caption{Diagrama Red Neuronal Convolucional}
 %				\end{figure}
-
+				\subsection{Aprendizaje de las Redes Neuronales}
 				\subsection{Recurrent Neural Network – Long Short Term Memory}
 				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
 				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
@@ -587,12 +588,7 @@ natural y redes neuronales}\\
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
 				\end{figure}
-			
-				\subsection{La Neurona}
-				\subsection{Aprendizaje de las Redes Neuronales}
-				\subsection{Redes Long-Short Term}
-				Funcionamiento de las redes neuronales Long-Short Term
-				\subsection{Berth}
+				\subsection{Bert}
 				\subsection{GPT-2}
 %				\subsubsection{Modular Neural Network}
 %				Esta red está constituida por un numero variado de redes, las cuales funcionan de manera independiente y realizan subtareas. Las diferentes redes, en realidad no interactúan entre si durante la ejecución del proceso. Trabajan de manera independiente para lograr una misma salida.\par
@@ -628,7 +624,7 @@ natural y redes neuronales}\\
 	    \section{¿Qué es una canción?}
 	    De manera resumida podemos decir que una canción es una composición literaria, generalmente en verso, a la que se le puede acompañar con música para poder ser cantada.\cite{refEstructuraCancion1}\par
 			\subsection{Elementos de una canción}
-			Los elementos que conforman una canción son los siguietes:
+			Los elementos que conforman una canción son los siguientes:
 			\subsection{Introducción}
 			Generalmente es una parte única la cual aparece al inicio de una canción, acompañada de una \Gls{Armonia} o \Gls{Melodia} compuesta solo para este inicio. El objetivo principal de la introducción es captar la atención y generar un ambiente.\cite{refEstructuraCancion2}\par
 			\subsection{Verso}
@@ -648,7 +644,7 @@ natural y redes neuronales}\\
 			  \item Estribillo
 			  \item Verso
 			  \item Estribillo
-			\end{itemize}
+			\end{itemize}\par
 			La estructura más usada en una canción es la siguiente
 			\begin{itemize}
 			  \item Introducción
@@ -939,7 +935,7 @@ natural y redes neuronales}\\
 		\end{table}
 	
 		\newpage
-		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue fáciles.\\
+		Los 3 proveedores de la tabla anterior han alojado servicios de "Jupyter Notebook" (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue fáciles.\\
 		\\
 		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plata de la Nube de Google (GCP) usa un paquete llamado "what if tool" la cual se puede integrar junto a un "Jupyter Notebook" y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
 		\\
