@@ -1,9 +1,9 @@
 # TO DO Documentación:
 
-- [ ] Checar como poner comillas correctamente en LaTex
-- [ ] Cambiar todos los acrónimos a formato LaTex
+- [ ] Checar como poner comillas correctamente en LaTex - Se puede simplemente poner con "" o con ''
+- [ ] Cambiar todos los acrónimos a formato LaTex - Ya se hicieron los acrónimos que aparecian en Flask
 - [ ] Cambiar todos las palabras técnicas a Glosario
-- [ ] Arreglar Glosario (No se muestra al principio del documento como debería)
+- [ ] Arreglar Glosario (No se muestra al principio del documento como debería) - duda, según yo el glosario va antes de las referecias bibliograficas
 
 ## Información de cada sección:
 
@@ -21,12 +21,12 @@
 		- [X] 1.4.4. Capítulo 5. Desarrollo
 		- [X] 1.4.5. Capítulo 6. Avances y trabajo por hacer
 - [X] 2. Marco teórico
-	- [ ] 2.1. Inteligencia Artificial - Falta Agregar Información con sus referencias
+	- [X] 2.1. Inteligencia Artificial
 	- [X] 2.2. Redes neuronales 
 		- [X] 2.2.1. Recurrent Neural Network 
 			- [X] Long Short Term Memory 
-		- [ ] 2.2.2. La Red Neurona - Falta especificar qué es una neurona
-		- [ ] 2.2.3. Aprendizaje de las Redes Neuronales - Falta agregar información del funcionamiento o aprendizaje de redes neuronales
+		- [X] 2.2.2. Neuronas
+		- [ ] 2.2.3. Aprendizaje de las Redes Neuronales - Falta agregar información del funcionamiento o aprendizaje de redes neuronales (Alfredo trabajando este punto)
 		- [X] 2.2.4. Redes Long-Short Term 
 		- [ ] 2.2.5. Bert - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
 		- [ ] 2.2.6. GPT-2 - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
@@ -42,7 +42,7 @@
 		- [X] 2.4.7. Cierre. 
 		- [X] 2.4.8. Estructura de una canción 
 	- [X] 2.5. Cadenas de Markov 
-	- [ ] 2.6. Flask - Cambiar acrónimos a LaTex
+	- [X] 2.6. Flask
 	- [X] 2.7. Apache. 
 	- [X] 2.8. Servidor Web. 
 	- [X] 2.9. Certificado SSL 

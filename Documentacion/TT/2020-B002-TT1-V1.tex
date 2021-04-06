@@ -44,6 +44,7 @@
 \usepackage{verbatim}
 %%PARA IMÁGENES EN LÍNEA
 %\usepackage[english]{babel}
+\usepackage{acronym} %%Acrónimos
 
 %%código
 % \usepackage{listings}
@@ -116,8 +117,12 @@
     description={Conocidas también con Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
 
-%\acrlong{}  \acrshort{} 
-\newacronym{acronimo1}{ACRONIMO1}{Significado}
+%%Acrónimos
+\acrodef{ORM}{Object Relational Manager}
+\acrodef{WSGI}{Web Server Gateway Interface}
+\acrodef{DBMS}{Sistema de gestión de base de datos}
+\acrodef{AWS}{Amazon Web Services}
+
 
 %------------------FINAL DE GLOSARIO-----------------------%
 
@@ -538,7 +543,8 @@ natural y redes neuronales}\\
 %		\end{figure}
 		\section{Inteligencia Artificial}
 		Por Inteligencia Artificial se entiende a una simulación de procesos computacionales cognitivos para que simulen el comportamiento de una mente humana, estos comportamientos abarcan diferentes áreas de investigación, como el razonamiento, aprendizaje, percepción, comunicación y la capacidad de desarrollarse en entornos más complejos.
-		"La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificail utiliza muchas técnicas diferentes apra resolver una gran variedad de tareas que se encuentran en todas partes." \cite{Inteligencia_Artificial}
+		"La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificial utiliza muchas técnicas diferentes apra resolver una gran variedad de tareas que se encuentran en todas partes." \cite{Inteligencia_Artificial}\par
+		En ciencias de la computación, el término de inteligencia artificial se refiere a cualquier inteligencia similar a la humana exhibida por una computadora, robot u otra máquina. En el uso popular, la inteligencia artificial hace referencia a la capacidad de una computadora o máquina para imitar las capacidades del cerebro humano, es decir, aprender de ejemplos y experiencias, reconocer objetos, comprender y responder al lenguaje, tomar decisiones, resolver problemas y combinar estas y otras capacidades para realizar funciones que un ser humano podría realizar. \cite{refInteligencia_Artificial2}\par
 		Como objetivo, la Inteligencia Artificial pretende hacer un uso de los recursos tecnológicos para desarrollar modelos computacionales y poder resolver problemas del mundo real evolucionando constantemente.
 	    \section{Redes neuronales}
 	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto
@@ -588,6 +594,20 @@ natural y redes neuronales}\\
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
 				\end{figure}
+				\subsection{Neuronas}
+				\subsubsection{Neurona Natural}
+				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\par
+				Este impulso viaja siempre en el mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, existe un espacio de separación entre ellas denominado sinapsis o espacio sináptico. Cuando el impulso nervioso llega al extremo del axón se liberan neurotransmisores al espacio sináptico transformando la señal eléctrica en otra química que penetra en la dendrita de la neurona contigua. Desencadenando un impulso eléctrico en la neurona receptora y se repite el proceso con la contigua.\cite{refNeuronaNat}
+				\begin{figure}[H] \caption{Estructura de una neurona}
+					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
+					\centering 
+				\end{figure}			
+				\subsubsection{Neurona Artificial}
+				La complejidad de las neuronas reales se abstrae mucho cuando se realiza el modelado neuronas artificiales. Estas consisten básicamente en entradas, que se multiplican por pesos (fuerza de las respectivas señales), y luego calculada por una función matemática que determina la activación de la neurona. Otra función (que puede ser la identidad) calcula la salida de la neurona artificial (a veces en dependencia de un cierto umbral). Las redes neuronales combinan neuronas artificiales para procesar información.\cite{refNeuronaArt}
+				\begin{figure}[H] \caption{Neurona Artificial}
+					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
+					\centering 
+				\end{figure}
 				\subsection{Bert}
 				\subsection{GPT-2}
 %				\subsubsection{Modular Neural Network}
@@ -603,7 +623,7 @@ natural y redes neuronales}\\
         \section{Base de datos}
         Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital, con la finalidad de realizar alguna consulta futura, ingreso de nuevos datos, actualización o eliminación de estos.\par
 		Las bases de datos se componen de una o más tablas las cuales son las encargadas de guardar un conjunto de datos, estas se dividen en columnas y filas.\par
-		Una base de datos generalmente es manejada por un \Gls{Sistema} de gestión de base de datos (DBMS). En conjunto, los datos y el DBMS, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
+		Una base de datos generalmente es manejada por un \Gls{Sistema} de gestión de base de datos (DBMS). En conjunto, los datos y el \ac{DBMS}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
 			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
 %			\subsection{Tipos de bases de datos}
@@ -671,14 +691,14 @@ natural y redes neuronales}\\
 		\end{figure}
 
 		\section{Flask}
-		Flask es un marco (framework) web, el cual es un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u ORM por sus siglas en inglés (Object Relational Manager), pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
-		WGSI son las siglas de Web Server Gateway Interface (Interfaz de Puerta de enlace del Servidor Web) la cual es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
-		Para poder empezar a trabaja con un proyecto o aplicación web Flask lo primero que hacemos es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias del proyecto. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\par
-		Para poder hacer esto, en la terminal escribimos algo como:\par
+		Flask es un marco (framework) web, el cual es un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \ac{ORM} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
+		\ac{WSGI} (Interfaz de Puerta de enlace del Servidor Web) la cual es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
+		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que hacemos es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias del proyecto. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\par
+		Para poder hacer esto, en la terminal escribimos:\par
 		\begin{center}
 		virtualenv --no-site-packages myapp\par
 		\end{center}
-		Al usar ese comando creara un directorio con la siguiente estructura:\par
+		Al usar ese comando creará un directorio con la siguiente estructura:\par
 		\begin{itemize}
 		    \item myapp/
 		    \begin{itemize}
@@ -695,7 +715,7 @@ natural y redes neuronales}\\
 		        \item Scripts/
 		    \end{itemize}
 		\end{itemize}
-		Para poder trabajar con este ambiente en la terminal debemos acceder a la carpeta bin o Scripts y activar este ambiente de la siguiente manera:\par
+		Para poder trabajar con este ambiente, en la terminal debemos acceder a la carpeta bin o Scripts y activar este ambiente de la siguiente manera:\par
 		\begin{center}
 		source myapp/bin/actívate\par
 		source myapp/Scripts/activate
@@ -709,7 +729,7 @@ natural y redes neuronales}\\
 		def hello_world():  
 		    return 'Hello, World!'  
 		\end{minted}
-		Se guarda como cualquier otra aplicación de Python y se ejecuta de la misma manera que una aplicación de Python. Una vez ejecutada te aparecerá los siguiente en terminal:\par
+		Se guarda como cualquier otra aplicación de Python y se ejecuta de la misma manera que una aplicación de Python. Una vez ejecutada aparecerá lo siguiente en terminal:\par
 		\begin{center}
 		* Running on http://127.0.0.1:5000/
 		\end{center}
@@ -720,7 +740,6 @@ natural y redes neuronales}\\
 		\begin{center}
 		@app.route('/login', methods=['POST'])
 		\end{center}
-		Aun me falta mas por escribir sobre Flask...
 %	    A continuación en el cuadro \ref{cuadro:MetododsAutentificacion}, mostraremos algunas tablas comparativas que servirán para tener una mejor perspectiva de las ventajas, desventajas.
 		
 %		\begin{table}[H]
@@ -5124,6 +5143,9 @@ natural y redes neuronales}\\
 		\bibitem{refMaquinasFinitas}  		
 		J. A. Gutiérrez Orozco, Escuela Superior de Cómputo (2008, septiembre 15), Máquinas de Estados Finitos, [En línea]. Disponible: http://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/Summer\_Research\_files/maquinasef.pdf [Último acceso: 15 de diciembre del 2020].
 
+		\bibitem{refInteligencia_Artificial2}
+		IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
+
 		\bibitem{refQueSonRedesNeu}  		
 		L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].
 
@@ -5138,6 +5160,12 @@ natural y redes neuronales}\\
 		
 		\bibitem{refTiposRedesNeu4} 
 		IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
+		
+		\bibitem{refNeuronaNat}
+		amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
+
+		\bibitem{refNeuronaArt}
+		C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
 
 		\bibitem{refQueEsBD}  		
 		Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
