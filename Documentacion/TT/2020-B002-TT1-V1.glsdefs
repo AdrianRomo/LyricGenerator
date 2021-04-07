@@ -1,0 +1,30 @@
+\ifglsentryexists{}{}%
+{%
+\gls@defglossaryentry{}%
+{%
+name={\Hy@xspace@end },%
+sort={\Hy@xspace@end },%
+type={acronym},%
+first={\endgroup \pdfendlink \glsspace ()},%
+firstplural={\endgroup \pdfendlink s\glsspace (s)},%
+text={},%
+plural={s},%
+description={\close@pdflink },%
+descriptionplural={\close@pdflink \acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\endgroup \pdfendlink },%
+longplural={\endgroup \pdfendlink s},%
+short={},%
+shortplural={s},%
+counter={page},%
+parent={},%
+%
+}%
+}%

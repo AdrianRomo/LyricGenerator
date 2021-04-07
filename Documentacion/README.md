@@ -1,9 +1,10 @@
 # TO DO Documentación:
 
-- [ ] Checar como poner comillas correctamente en LaTex - Se puede simplemente poner con "" o con ''
-- [ ] Cambiar todos los acrónimos a formato LaTex - Ya se hicieron los acrónimos que aparecian en Flask
-- [ ] Cambiar todos las palabras técnicas a Glosario
-- [ ] Arreglar Glosario (No se muestra al principio del documento como debería) - duda, según yo el glosario va antes de las referecias bibliograficas
+- [X] Checar como poner comillas correctamente en LaTex -> Se puede con “Hola”
+- [X] Arreglar Glosario y Acrónimos (No se muestra al principio del documento como debería)
+- [ ] Cambiar y agregar todos los acrónimos a formato LaTex
+- [ ] Cambiar y agregar todos las palabras técnicas a Glosario
+
 
 ## Información de cada sección:
 

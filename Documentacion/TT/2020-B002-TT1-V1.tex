@@ -44,7 +44,7 @@
 \usepackage{verbatim}
 %%PARA IMÁGENES EN LÍNEA
 %\usepackage[english]{babel}
-\usepackage{acronym}
+\usepackage[acronym]{glossaries}
 %%Acrónimos
 
 %%código
@@ -62,12 +62,8 @@
 
 %---------------------------GLOSARIO----------------------------%
 \usepackage{glossaries}
+
 \makeglossaries
-\newglossaryentry{Palabra1}
-{
-	name=Palabra1,
-	description={Es una Palabra 1.\cite{refRAE}}
-}
 \newglossaryentry{Convolucional}
 {
     name=Convolucional,
@@ -117,12 +113,10 @@
     name=Máquinas de Estados Finitos,
     description={Conocidas también con Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
-
-%%Acrónimos
-\acrodef{ORM}{Object Relational Manager}
-\acrodef{WSGI}{Web Server Gateway Interface}
-\acrodef{DBMS}{Sistema de gestión de base de datos}
-\acrodef{AWS}{Amazon Web Services}
+\newacronym{orm}{ORM}{Object Relational Manager}
+\newacronym{wsgi}{WSGI}{Web Server Gateway Interface}
+\newacronym{dbms}{DBMS}{Sistema de gestión de base de datos}
+\newacronym{aws}{AWS}{Amazon Web Services}
 
 
 %------------------FINAL DE GLOSARIO-----------------------%
@@ -326,8 +320,9 @@ natural y redes neuronales}\\
 		
 		\newpage
 		\renewcommand*\glossaryname{{\textcolor{azulescom}{Glosario.}}}
-		
 		\printglossary
+		\renewcommand*\glossaryname{{\textcolor{azulescom}{Acrónimos.}}}
+		\printglossary[title={\textcolor{azulescom}{Acrónimos.}}, type=\acronymtype]
 	\end{appendices}
 	
    \textcolor{guindapoli}{\part{Trabajo Terminal I}}
@@ -343,7 +338,6 @@ natural y redes neuronales}\\
     %                               				  %
     %   %   %   %   %   %   %   %   %	%
     \chapter{\textcolor{azulescom}{Introducción}}
-    
     En la actualidad la industria musical obtiene ganancias a través de la creación y divulgación de la música  de
     manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la
     música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. La generación de texto es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Recientemente, hay gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) los cuales propusieron generar texto utilizando redes neuronales recurrentes y redes neuronales convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
@@ -624,7 +618,7 @@ natural y redes neuronales}\\
         \section{Base de datos}
         Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital, con la finalidad de realizar alguna consulta futura, ingreso de nuevos datos, actualización o eliminación de estos.\par
 		Las bases de datos se componen de una o más tablas las cuales son las encargadas de guardar un conjunto de datos, estas se dividen en columnas y filas.\par
-		Una base de datos generalmente es manejada por un \Gls{Sistema} de gestión de base de datos (DBMS). En conjunto, los datos y el \ac{DBMS}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
+		Una base de datos generalmente es manejada por un \acrfull{dbms}. En conjunto, los datos y el \acrshort{dbms}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
 			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
 %			\subsection{Tipos de bases de datos}
@@ -692,8 +686,8 @@ natural y redes neuronales}\\
 		\end{figure}
 
 		\section{Flask}
-		Flask es un marco (framework) web, el cual es un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \ac{ORM} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
-		\ac{WSGI} (Interfaz de Puerta de enlace del Servidor Web) la cual es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
+		Flask es un marco (framework) web, el cual es un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
+		\acrshort{wsgi} (Interfaz de Puerta de enlace del Servidor Web) la cual es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
 		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que hacemos es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias del proyecto. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\par
 		Para poder hacer esto, en la terminal escribimos:\par
 		\begin{center}
@@ -814,8 +808,7 @@ natural y redes neuronales}\\
 	    \section{Apache}
 	 	Apache es un servidor web gratuito y de código abierto que permite que los dueños de sitios web mostrar contenido en ellas, no es un servidor físico, sino más bien un software que corre en un servidor.
 	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y regreso entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo HTTP, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.
-	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.
-	 	 \Gls{Palabra1}. \\
+	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.\\
 		
 		\newpage
 		En el cuadro 1 que se presenta a continuación, se muestran las características de aplicaciones web similares y comparándolas con nuestra propuesta:
@@ -1477,7 +1470,7 @@ natural y redes neuronales}\\
     		\$83,420.00
     	\end{center}
     	\textbf{Conclusión} 
-    	Tras realizar el análisis el estudio de factibilidad de este proyectp es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{"Viable"} iniciando de esta manera su implementación acorde con las fechas mencionadas.
+    	Tras realizar el análisis el estudio de factibilidad de este proyectp es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
     	    
     	\section{Herramientas a usar.}
 			\subsection{Software.}
@@ -1485,7 +1478,7 @@ natural y redes neuronales}\\
 			
 			\paragraph{HTML5.}
 			HTML comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de html motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
-			Dos de las opciones propuestas fueron Java y \Gls{Palabra1}; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, html y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
+			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, html y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
 			HTML5 es una mejora de esta combinación, lo que unió todos estos elementos. HTML5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, html provee los elementos estructurales, CSS se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que HTML5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
 			
 			\paragraph{CSS.\\}
@@ -1500,7 +1493,7 @@ natural y redes neuronales}\\
 			\paragraph {JavaScript. \\}
 			JavaScript es considerado como el lenguaje de programación de html y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
 			Su primera aproximación a un uso real, fue en mayor parte para "dar vida a una página web", como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
-			JavaScript fue desarrollado por \Gls{Palabra1}, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo "funciona" dentro de una página html.\\
+			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo "funciona" dentro de una página html.\\
 			JavaScript fue declarado como estándar del European Computer Manufacturers Association (ECMA) en 1997, y poco después, también fue estandarizado por ISO \cite{refJavaScript}. \\ 
 			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\
 			
@@ -2014,16 +2007,16 @@ natural y redes neuronales}\\
 					Navegador de Google Chrome.\\ 
 					\hline
 					\cellcolor{azulclaro}Propósito &
-					Este caso de uso permite al navegador realizar una petición \acrshort{Palabra1}, ordenada por el usuario o un sistema externo.\\
+					Este caso de uso permite al navegador realizar una petición, ordenada por el usuario o un sistema externo.\\
 					\hline
 					\cellcolor{azulclaro}Entradas &
 					URL del servicio web solicitado.\\
 					\hline
 					\cellcolor{azulclaro}Salidas &
-					Petición \acrshort{Palabra1}.\\
+					Petición.\\
 					\hline
 					\cellcolor{azulclaro}Pre-condiciones&
-					Algún agente externo (Sistema o usuario) ha ordenado al navegador mandar una petición \acrshort{Palabra1}.\\
+					Algún agente externo (Sistema o usuario) ha ordenado al navegador mandar una petición.\\
 					\hline
 					\cellcolor{azulclaro}Post-condiciones&
 					Creación de la petición HTTP.\\
