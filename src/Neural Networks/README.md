@@ -4,7 +4,7 @@
 - [ ] Hacer Pruebas con Bert
 - [ ] Generar Rimas con Bert
 - [ ] Pruebas con GPT-2 y Bert
-- [ ] Pruebas con Markovify y Bert
+- [ ] Pruebas con Markovify y Bert - **Alfredo lo esta haciendo**
 - [ ] Hacer Test.py
 - [ ] Hacer Tests con nuestra base de datos (cambiar valores hasta que quede leíble) 
 
