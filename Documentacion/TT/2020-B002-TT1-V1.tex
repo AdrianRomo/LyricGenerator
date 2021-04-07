@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 \usepackage{enumitem,kantlipsum}
-\usepackage{lipsum}
 \usepackage{array}
 % Códigos y codificación para caracteres en español
 \usepackage{listings}
@@ -44,8 +43,10 @@
 \usepackage{verbatim}
 %%PARA IMÁGENES EN LÍNEA
 %\usepackage[english]{babel}
-\usepackage[acronym]{glossaries}
+
 %%Acrónimos
+\usepackage[acronym]{glossaries}
+
 
 %%código
 % \usepackage{listings}
@@ -218,10 +219,11 @@
    showtabs=false,
    captionpos=b
 }
-
+% Rename Appendice to Anexos
+\renewcommand\appendixpagename{Anexos}
+\renewcommand\appendixtocname{Anexos}
 
 \begin{document}
-	
 	%PARA QUE DETECTE HASTA SUBSUBSECTION
 	\setcounter{secnumdepth}{3}
 	
@@ -338,13 +340,11 @@ natural y redes neuronales}\\
     %                               				  %
     %   %   %   %   %   %   %   %   %	%
     \chapter{\textcolor{azulescom}{Introducción}}
-    En la actualidad la industria musical obtiene ganancias a través de la creación y divulgación de la música  de
-    manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la
-    música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. La generación de texto es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Recientemente, hay gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) los cuales propusieron generar texto utilizando redes neuronales recurrentes y redes neuronales convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
+    La industria musical obtiene ganancias a través de la creación y divulgación de la música de manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. Esta es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Hay una gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) que proponen generar texto utilizando redes neuronales recurrentes y/o convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
     
-    Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso. Mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características hacen que generar letras musicales sea mucho más difícil que generar textos normales.\par
+    Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso. Mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características hacen que generar letras musicales sea mucho más difícil que textos normales.\par
     
-    La mayoría de las investigaciones actuales sobre generación de letras vienen con muchas condiciones, como dar una pieza de melodía (Automatic Generation of Melodic Accompaniments for Lyrics \cite{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}), o solo generar un tipo específico de letra (Conditional Rap Lyrics Generation with Denoising Autoencoders \cite{Conditional_Rap_Lyrics_Generation}). Sin embargo, la generación de letras por medio de inteligencia artificial dado un estilo y un tema es un asunto poco trabajado. Por lo tanto, planeamos centrarnos en este nuevo problema. Estamos interesados en ver si el modelo propuesto puede aprender diferentes características en un género musical y generar letras que sean acorde a este. Actualmente, en el mercado se encuentran cuatro aplicaciones web que tienen una funcionalidad similar a la propuesta en este Trabajo Terminal:\par
+    La mayoría de las investigaciones actuales sobre generación de letras vienen con muchas condiciones, como dar una pieza de melodía (Automatic Generation of Melodic Accompaniments for Lyrics \cite{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}), o solo generar un tipo específico de letra (Conditional Rap Lyrics Generation with Denoising Autoencoders \cite{Conditional_Rap_Lyrics_Generation}). Sin embargo, la generación de letras por medio de inteligencia artificial dado un estilo y tema muy poco trabajado. Por lo tanto, planeamos centrarnos en este nuevo problema. Estamos interesados en ver si el modelo propuesto puede aprender diferentes características en un género musical y generar letras que sean acorde a este. Actualmente, en el mercado se encuentran cuatro aplicaciones web que tienen una funcionalidad similar a la propuesta en este Trabajo Terminal:\par
     
     \begin{itemize}
     	\item These lyrics do not exist.
@@ -973,9 +973,7 @@ natural y redes neuronales}\\
 			\resizebox{15cm}{!} {
 				\begin{tabular}{c c c}% centered columns (3 columns)
 					\hline\hline                        %inserts double horizontal lines
-					Tipo de Instancia
-					& \begin{tabular}[c]{@{}l@{}}Precio de EC2\\(por hora)\end{tabular} 
-					& \begin{tabular}[c]{@{}l@{}}Precio de Google\\(por hora)\end{tabular}\\ [0.5ex]% inserts table %heading
+					Tipo de Instancia & Precio de EC2 (por hora) & Precio de Google (por hora) \\ [0.5ex]% inserts table %heading
 					\hline                  % inserts single horizontal line
 					\begin{tabular}[c]{@{}l@{}}Propósito\\General\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}\$0.134\end{tabular}
@@ -993,100 +991,34 @@ natural y redes neuronales}\\
 					& \begin{tabular}[c]{@{}l@{}}\$0.526\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}\$1.4\end{tabular}\\
 					[1ex]      % [1ex] adds vertical space
-				\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
+				\end{tabular}\label{table:ComparacionPlataformas}% is used to refer this table in the text
 			}
 		\end{table}
-		
+	
 		Llegados a este punto en la comparación para nuestras necesidades resulta claro que la opción ideal para las necesidades de nuestro proyecto es AWS debido a que es más barato que las otras 2 plataformas su herramienta SageMaker nos permitirá saber cómo es que se está entrenando el modelo.
 		
 		
             \begin{comment}
-            \subsection{Objetivos de la criptografía.}
-                Algunos de los objetivos que se busca con la implementación de la criptografía para la seguridad de la información son los siguientes:
-                \begin{itemize}
-                    \item \textbf{Confidencialidad:} este objetivo, también conocido como privacidad de la información, implica mantener en secreto una determinada información, por tanto, sólo aquellas personas que estén autorizadas tendrán acceso a ella.
-                    \item \textbf{Autentificación:} este objetivo, implica hablar de la corroboración de la identidad de una entidad, por tanto, asegura que la entidad de donde la información es originada pueda ser identificada.
-                    \item \textbf{Integridad:} este objetivo asegura que determinada información no haya sido alterada por personas no autorizadas o por cualquier otro medio no conocido.
-                    \item \textbf{No repudio:} este objetivo previene que una entidad niegue un envío de información de un acuerdo preestablecido.
-                \end{itemize}
-            \subsection{Usos de la criptografía.}
-                Los usos que tiene la criptografía son muy variadas, dependiendo del ámbito donde se está aplicando. Las siguientes usos, son sólo algunas de los tantos que hay y provienen de distintos objetivos que tiene la criptografía aplicada a la seguridad de la información \cite{refCriptografia}.
-                \begin{itemize}
-                    \item \textbf{Autorización:} permiso concreto, de una parte o entidad, para el acceso o la realización de una tarea especifica.
-                    \item \textbf{Validación:} proveer una autorización para el uso o la manipulación de información o recursos.
-                    \item \textbf{Control de acceso:} restricción de acceso a la información o recurso.
-                    \item \textbf{Certificación:} respaldo de información por una entidad externa de confianza.
-                    \item \textbf{Confirmación:} acuse de recibo a servicios que han sido dados.
-                    \item \textbf{Anonimato:} ocultamiento de la identidad de una entidad.
-                \end{itemize}
-                
-            \subsection{Criptografía simétrica y asimétrica.}
-                Anteriormente en la historia de la criptografía, se hizo una rápida mención del nacimiento de estos dos métodos de cifrado, en esta sección se explicará más profundamente sus funciones con el fin de que el lector conozca un poco más y entienda porque hemos decidido utilizar determinado método para cumplir con los objetivos de este trabajo.
-                
-                \subsubsection{Criptografía simétrica.}
-                En la criptografía simétrica, tanto el emisor como el receptor comparten una única llave secreta para cifrar y descifrar la información que se deseé transmitir. Esto implica que ambas partes de la comunicación deben tener un acuerdo antes de que se realice la comunicación. La seguridad de este tipo de algoritmos radica en mantener segura la llave secreta, por tanto, si ésta es revelada, cualquiera con acceso a ella puede descifrar el mensaje. Por estas razones, este tipo de criptografía puede ser visto como 'criptografía de llave privada'. Algunos de los algoritmos más famosos de criptografía simétrica son: DES (Data Encryption Standard), TripleDES, AES (Advanced Encryption Standard) y IDEA (International Data Encryption Algorithm) \cite{refCriptografia}.\\
-                En el esquema de la Figura \ref{fig:criptoSimetrica}, se muestran los pasos que sigue un protocolo de criptografía simétrica. Definamos 'A' como una entidad que pretende enviar un mensaje a otra entidad llamada 'B'. Luego entonces, ambas partes acordarán una 'Llave Secreta' con la que 'A' cifrará el mensaje utilizando un algoritmo establecido, mandando el resultado (Texto Cifrado) a 'B' que descifrará el mensaje con la misma llave y algoritmo que 'A'.
-                
-                \begin{figure}[H]
-        			\begin{center}	                  \includegraphics[width=14cm]{./imagenes/MarcoTeorico/cripto_simetrica.png}
-        				\caption{Esquema del protocolo de criptografía simétrica.}
-        				\label{fig:criptoSimetrica}
-        			\end{center}
-        		\end{figure}
-        		
-        		\subsubsection{Criptografía asimétrica.}
-        		La  criptografía  de  clave  pública  fue  inventada  en 1976  por  los  matemáticos  Whitfield Diffie y Martin Hellman y es la base de la criptografía moderna. \\
-        		En los algoritmos de criptografía asimétrica, el receptor posee una llave pública y una llave privada para poder descifrar los mensajes. Las claves privadas deben ser conocidas únicamente por su propietario, mientras que la correspondiente clave pública puede ser dada a conocer abiertamente. Si un usuario quiere enviar a otro un mensaje de forma que sólo el receptor pueda entenderlo, lo codificará con la clave pública del receptor y éste utilizará su clave privada, que solo él tiene, para poder leerlo. Dicho esto, podemos llamar llave de cifrado a la llave publica y llave de descifrado a la llave privada, siendo ambas totalmente diferentes una de la otra. Algunos de los algoritmos más famosos de criptografía asimétrica son: RSA y ElGamal \cite{refCriptografia}.\\
-        		La criptografía asimétrica está basada en la utilización de números primos muy grandes. Si multiplicamos entre sí dos números primos muy grandes, el resultado obtenido no puede descomponerse eficazmente, es decir, utilizando los métodos aritméticos más avanzados en las computadoras más avanzadas sería necesario utilizar durante miles de millones de años tantas computadoras como átomos existen en el universo. El proceso será más seguro cuanto mayor sea el tamaño de los números primos utilizados.\\
-        		
-        		En el esquema de la Figura \ref{fig:criptoAsimetrica}, se muestran los pasos que sigue un protocolo de criptografía asimétrica. Definamos 'A' como una entidad que desea enviar información a otra llamada 'B'. Luego entonces, 'B' enviará a 'A' su llave pública para que 'A' cifre la información utilizándola. Cuando la información (Texto Cifrado) haya viajado a través del canal inseguro para que 'B' la reciba, 'B' descifrará el Texto Cifrado con su llave privada.
-        		
-        		\begin{figure}[H]
-        			\begin{center}	                  \includegraphics[width=14cm]{./imagenes/MarcoTeorico/cripto_asimetrica.png}
-        				\caption{Esquema del protocolo de criptografía asimétrica.}
-        				\label{fig:criptoAsimetrica}
-        			\end{center}
-        		\end{figure}
-        		
-    		\textbf{Algoritmo RSA.}\\
-    		\textit{RSA} es el algoritmo de cifrado asimétrico más popular en la actualidad. Creado por Ron Rivest, Adi Shamir y Leonard Adleman y publicado en el año 1977. El algoritmo es considerado seguro, en tanto sean utilizadas llaves de longitud suficientemente seguras (se siguen utilizando llaves de 1024 bits, pero ya se recomienda al menos una longitud de 2048). El algoritmo sirve tanto para cifrar y descifrar, así como también para la generación de firmas digitales. Es, en la actualidad, ampliamente utilizado en protocolos de comercio electrónico. La seguridad \textit{RSA} está basada en la dificultad de realizar el \textit{factoreo} de números grandes. La llave privada y la publica son generadas o calculadas en función de un par de números primos, del orden de los 200 dígitos o más grandes aún \cite{refCriptografia}. \\
-    		Al describir ya concretamente al algoritmo, se establece que para la generación del par de llaves (llave publica y privada) se deberán seleccionar dos números primos grandes aleatorios, $p$ y $q$, y se calculara $n$ como su producto:
-    		
-    		\begin{center}
-    		    $n=pq$
-    		\end{center}
-    		
-    		La llave de cifrado, $e$, será elegida también de manera aleatoria, tal que $e$ y $(p-1)(q-1)$ sean primos relativos.\\
-    		La llave de descifrado $d$ será obtenida despejando la ecuación:
-    		
-    		\begin{center}
-    		    $ed=1 mod (p-1)(q-1)$
-    		\end{center}
-    		
-    		En otras palabras, o mejor dicho, en otros símbolos:
-    		
-    		\begin{center}
-    		    $d=e^{-1} mod ((p-1)(q-1))$
-    		\end{center}
-		    
-		    Los números $e$ y $n$ componen la llave privada; el número $d$ corresponde a la llave privada; $p$ y $q$ serán descartados pero no revelados.\\
-		    A la hora de cifrar un mensaje $m$, éste deberá ser dividido en bloques más pequeños que $n$ y cada parte del texto-cifrado, $c$, será obtenida mediante:
-		    
-		    \begin{center}
-		        $c_i=m^{e}_imodn$
-		    \end{center}
-		    
-		    Para el descifrado, cada parte o bloque del texto-cifrado se tomará para calcular:
-		    
-		    \begin{center}
-		        $m_i=c^{d}_imodn$
-		    \end{center}
-		    
-		    El patrón con el que se genera el código \textit{Chaffing} no puede viajar a través de la red visible para cualquier entidad que quiera obtener dicha petición, por lo que, debemos cifrarlo con algún algoritmo confiable.\\
-		    El algoritmo RSA nos proporciona esa seguridad, debido a que es un cifrado asimétrico con el cual podemos cifrar el patrón con la llave publica del servicio. Una vez que la petición cifrada llegue al servicio, este será capaz de descifrar dicho mensaje con su llave privada, para así poder ver el mensaje original.\\
-        		
-	   
+           \section{Inteligencia Artificial}
+           \subsection{¿Qu\'e es la Inteligencia Artificial?}
+           
+            \subsection{Historia}
             
+            \subsection{Objetivos de la Inteligencia Artificial.}
+            \subsection{¿Cómo funciona?}   
+            \subsection{Usos de la Inteligencia Artificial.}
+                
+                
+            \subsection{Inteligencia Artificial Supervisada y no supervisada.}
+               
+                
+                \subsubsection{Inteligencia Artificial Supervisada.}
+                
+        		
+        		\subsubsection{Inteligencia Artificial No Supervisada.}
+        		
+    		\subsection{Procesamiento de Lenguaje Natural.}\\
+    		
             \subsection{Criptografía a nivel de aplicación.}
                 La criptografía a nivel de aplicación se entiende como aplicaciones o programas informáticos que hacen uso de diferentes técnicas criptográficas. Al hablar de criptografía en el nivel de aplicación, también podría considerarse a los protocolos criptográficos de alto nivel, los cuales determinan como han de comunicarse ambas partes, que algoritmos usar, define formatos, etc \cite{refCriptografia}.
                 
@@ -1113,200 +1045,6 @@ natural y redes neuronales}\\
 	            
 	            Esta última herramienta, es la que usaremos para este trabajo terminal. Se creará un certificado de cada usuario a partir de sus datos de inicio de sesión para autentificarlo en los servicios web en donde quiera acceder. Esto se explicará más a detalle en el análisis del Componente II.
 	            
-	    \paragraph{}
-	    Ahora que se ha expuesto el uso de la criptografía en este trabajo, procedemos a platicar acerca del método \textit{Chaffing and Winnowing} y cómo se implementará en este trabajo.
-	   
-	    \section{Tema 6}
-	    \subsection{Historia}
-	    Chaffing and Winnowing es una técnica que logra confidencialidad sin usar ning\'un proceso de cifrado para el env\'io de datos sobre un canal inseguro. El nombre \textbf{Chaffing and Winnowing} el nombre proviene de la agricultura: D\'espues de que el grano ha sido cosechado y trillado es mezclado con paja fibrosa no comestible. La paja y el grano son separados por el movimiento de las hojas y la paja es descartada.
-	    \'Esta t\'ecnica fue creada por Ron Rivest y fue publicada en un articulo en l\'inea el 18 de Marzo de 1998 \cite{refCryptohraphyWithoutEncryption}.
-	    A\'unque parece ser similar a un cifrado tradicional o esteganograf\'ia, chaffing and winnowing no puede ser clasificado como uno de ellos.\\
-	    \'Esta t\'ecnica permite el env\'io de datos evitando la responsabilidad del cifrado de su contenido. Cuando se usa chaffing and winnowing, el emisor transmite el mensaje sin cifrar (texto plano). Aunque el emisor y el receptor comparten una llave, ellos la usan s\'olo para autentificar. Sin embargo, una tercera parte puede hacer su comunicaci\'on confidencial durante el env\'io simult\'aneo de mensajes especialmente mensajes diseñados a través del mismo canal.
-	    
-	    \subsection{¿Qu\'e es Tema 6?}
-	    
-	    \paragraph{}
-        Chaffing and Winnowing es un nuevo esquema establecido por Rivest en 1998. Este esquema ofrece confidencialidad para el contenido de un mensaje sin involucrarse con cifrado ni estenografía \cite{refCriptografia}.
-	    
-        El proceso \textbf{Chaffing} no hace uso de un cifrado por lo que no tiene una ''clave de cifrado''. Este proceso consiste en agregar paquetes inv\'alidos (Informaci\'on innecesaria) al mensaje a enviar, haciendo que el mensaje viaje seguro a la vista de todos los posibles ''atacantes''.\\
-        El proceso de \textbf{Winnowing} no emplea alg\'un tipo de cifrado, por lo que al igual que el proceso chaff no tiene una ''clave de descifrado''. Intentando regular la confidencialidad que provee un cifrado damos paso a la esteganograf\'ia y el proceso de winnowing \cite{refCryptohraphyWithoutEncryption}.
-        
-        \paragraph{}
-        Existen dos partes en el envio de mensajes con winnowing: Autentificaci\'on (Agregando MACs) y agregando paquetes chaff. Nosotros nos enfocaremos mas al uso de paquetes chaff para el env\'io seguro de informaci\'on, ya que, el receptor es quien remueve los paquetes chaff para obtener el mensaje original. 
-        
-        \paragraph{}
-        Los siguientes esquemas explican como es que se lleva a cabo el proceso de \textbf{Chaffing and Winnowing} en diferentes escenarios.
-        
-		\paragraph{}
-		\textbf{Escenario 1:} Alice se est\'a comunicando con Bob en un solo camino de comunicación sobre un canal inseguro y Charles agrega los paquetes de Chaff.\\
-		\begin{figure}[!htb]
-			\begin{center}	                  \includegraphics[width=14cm]{./imagenes/MarcoTeorico/chaffProcess.png}
-				\caption{Charles agrega los paquetes inválidos.}
-			\end{center}
-		\end{figure}
-		
-		En el escenario anterior Alice y Bob se están comunicando mutuamente por un canal de comunicación no seguro, en donde son enviados paquetes no cifrados. Alice y Bob comparten la llave de autentificación la cual será usada para el proceso de autentificación. Cuando Alice envía un mensaje a Bob, su mensaje es autenticado de su lado y es enviado a Charles antes de ser enviado a Bob. Charles agrega los paquetes chaff a la secuencia transmitida por Alice, al agregar los paquetes chaff, Charles provee confidencialidad para la comunicación entre Alice y Bob. Pero donde Charles no conoce la llave secreta compartida entre Alice y Bob. Por lo que el proceso de chaffing no necesita ningún conocimiento de la llave secreta de autentificación compartida.
-		\paragraph{}
-		\textbf{Escenario 2:} Alice se comunica con Bob en un camino de comunicación inseguro y en el cual Charles no agrega los paquetes chaff si no que multiplexa los flujos de las dos partes (David y Alice). Este escenario es diferente al anterior, ya que se multiplexa el flujo de datos de Alice y Bob con el flujo de datos de David y Jane, y cuando el paquete llega a Bob el flujo de paquetes de David hacia Jane es el chaff de Bob y es descartado y vice versa para Jane.
-		
-		\begin{figure}[H]
-			\begin{center}	                  \includegraphics[width=14cm]{./imagenes/MarcoTeorico/escenario2.png}
-				\caption{Charles no agrega los paquetes pero multiplexa los flujos.}
-			\end{center}
-		\end{figure}
-		
-		\paragraph{}
-		\textbf{Escenario 3:} Alice se comunica con Bob en un canal de comunicación inseguro y Alice no agrega los paquetes chaff. En este escenario, Alice desarrolla la autentificación de sus mensajes, por lo que Alice aplica chaffing para autentificar los mensajes y producir una secuencia de paquetes que serán transmitidos a Bob por la vía de Charles. Bob lleva a cabo el proceso de winnowing para recuperar el mensaje original.
-		
-		\subsection{Objetivo de Tema 6}
-		
-		\paragraph{}
-		El objetivo de seguridad del esquema de chaffing-and-winnowing es proporcionar privacidad en un entorno simétrico. 
-        Desde un punto de vista de seguridad, este esquema debe tratarse simplemente como un esquema de cifrado simétrico. Hay algunos procesos de ''cifrado'' que toman un mensaje y crean un ''texto cifrado'', y algún proceso de ''descifrado'' toma el texto cifrado y recupera el mensaje, ambos operando bajo una clave secreta en com\'un. (Para el esquema Chaffing and Winnowing es la clave para el MAC). Estos procesos no se implementan de manera ''habitual'', pero, de manera abstracta, deben existir, de lo contrario no se logra la privacidad  \cite{refRivestSeguridad} \cite{refEncontrarLuegoAdivinar}.  
-        \begin{center}
-            \textit{''No es una propiedad de seguridad novedosa, sino un conjunto novedoso de restricciones en los procesos dirigidos a lograr una propiedad de seguridad estándar''\\
-            ''Encontrar-luego-adivinar''. Extensión más directa al caso simétrico de la noción de indistinguibilidad.}
-        \end{center}
-		
-		Haciendo uso de \textbf{Chaffing and Winnowing} se asegura que los adversarios no obtengan información del mensaje transmitido a lo largo de un canal de comunicación inseguro entre dos partes. \\
-		Rivest propone un esquema, el cual cuenta con tres partes principales \cite{refCryptohraphyWithoutEncryption}.
-		\begin{enumerate}
-		    \item \textbf{Autentificación} Es el proceso de descomponer el mensaje original en un paquete más pequeño y complementar cada paquete con un código de autentificación de mensaje (MAC).
-		    \item \textbf{Chaffing} Es el proceso de agregar paquetes inválidos (Chaff packets).
-		    \item \textbf{Winnowing} Es el proceso de remover paquetes Chaff para obtener el mensaje original en texto plano.
-		\end{enumerate}
-		
-		\subsection{¿Cómo funciona?}
-		
-		\paragraph{}
-		El esquema de Chaffing and Winnowing deja que cada paquete conste de: 
-		\begin{itemize}
-		    \item Un número de serie
-		    \item Contenido del paquete
-		    \item Código de autentificación del mensaje
-		\end{itemize}
-		Cuando son enviados los paquetes, el mensaje con el texto plano se descompone en pequeños paquetes los cuales contienen datos y el tamaño del paquete original. Entonces, el emisor (Alice) usa el algoritmo de \textbf{código de autentificación de mensaje} (MAC) para generar el valor MAC para ser agregado al paquete y el cual se basa en el número de serie, contenido del paquete y la llave autentificación. La Figura \ref{fig:ChaffingSalidaPaquetes}, muestra la salida del paquete después del proceso de autentificaci\'on.
-		\begin{figure}[H]
-			\begin{center}	                  \includegraphics[width=7cm]{./imagenes/MarcoTeorico/descomposicionChaffing.png}
-				\caption{Secuencia de Chaffing después del proceso de autentificación.}
-				\label{fig:ChaffingSalidaPaquetes}
-			\end{center}
-		\end{figure}
-		Esta secuencia de paquetes es enviada a Charles (ISP) para llevar a cabo el proceso de Chaffing. Charles agrega paquetes chaff a la secuencia de paquetes antes de ser enviados por medio del canal de comunicación y ser recibidos por Bob. \\
-		Existen dos maneras donde Charles puede enviar la secuencia de chaff hacia Bob. La primera es enviando aleatoriamente mezclados los paquetes chaff para formar una secuencia y la otra manera es enviarlos de manera ordenada por el n\'umero de serie seguido del contenido del mensaje. En la Figura \ref{fig:ManerasChaffing}, se muestra cómo es el proceso de chaff en esta secuencia.
-		\begin{figure}[H]
-         \centering
-          \subfloat[Primera manera]{
-           \label{f:Primera manera}
-            \includegraphics[width=0.5\textwidth]{./imagenes/MarcoTeorico/firstway_Chaff.png}}
-          \subfloat[Segunda manera]{
-           \label{f:Segunda manera}
-            \includegraphics[width=0.5\textwidth]{./imagenes/MarcoTeorico/secondway_Chaff.png}}
-         \caption[Formas del proceso de chaff]{Las dos maneras para el proceso de chaff pueden ser utilizadas. Los paquetes chaff son los mensajes de color rojo.}
-         \label{fig:ManerasChaffing}
-         \label{f:Enfoques}
-        \end{figure}
-		Una vez que la secuencia de chaff llega a Bob, el último proceso es Winnowing. Bob determina la secuencia del mensaje que es válida del paquete chaff usando una función hash para el contenido de cada paquete y la llave de autentificación para re-calcular el MAC y compararlo contra el MAC del paquete recibido, si la comparación falla, el paquete chaff es descartado. Si la comparaci\'on es valida, entonces el paquete es parte del mensaje original. En la Figura \ref{fig:ChaffingWinnowing}, se muestra el proceso completo de Chaffing and Winnowing \cite{refCryptohraphyWithoutEncryption}.
-
-		\begin{figure}[H]
-			\begin{center}	                  \includegraphics[width=14cm]{./imagenes/MarcoTeorico/chaff_winn.png}
-				\caption{Visión general del proceso Chaffing and Winnowing.}
-				\label{fig:ChaffingWinnowing}
-			\end{center}
-		\end{figure}
-        
-        \subsection{Propiedades de Tema 6}
-        
-        \paragraph{}
-        \begin{itemize}
-		    \item La técnica de Chaffing y Winnowing no depende de la fuerza del esquema de cifrado para proporcionar confidencialidad debido al hecho de que es muy difícil distinguir la informaci\'on \'util de los paquetes chaff sin la clave secreta. Por lo tanto, la dificultad de distinguir la informaci\'on \'util del chaff proporciona confidencialidad al esquema.
-		    \item La operación de Chaffing puede ser realizada por un tercero, ya que la clave secreta compartida no es necesaria en el proceso del mismo.
-		    \item Los paquetes de Chaff no tienen que contener datos aleatorios, ya que uno podría usar un mensaje válido con una clave secreta diferente para hacer el paquete de Chaff. Cuando el receptor recibe esos paquetes de Chaff, se verán como paquetes de Chaff, ya que la clave que se usa para volver a calcular el Chaff es diferente de la que los hace.
-		\end{itemize}
-		
-		\subsection{All-or-Nothing and the Package Transform (AONT)}
-        
-        All-or-Nothing and the Package Transform es una variación dentro de la tecnica Chaffing and Winnowing, donde se mejora la eficiencia de su esquema original. AONT es la transformación de pre-procesamiento que permite a las partes enviar más datos (en términos de bit) por paquete en lugar de solo uno. Este pre-procesamiento es una transformación sin cifrado que toma el mensaje de texto sin formato y produce un mensaje empaquetado que luego se procesa de la manera normal de Chaffing and Winnowing \cite{refAONT}. Las definiciones de la transformación AONT son las siguientes:
-        
-        \begin{enumerate}
-            \item El algoritmo de transformación es \textbf{reversible}: Dado el bloque de mensaje transformado, el receptor puede obtener el mensaje de texto sin formato original.
-            \item El algoritmo de transformación y su inverso son \textbf{computables} de manera eficiente: Lo que significa que es computacionalmente factible recrear el texto original dada la llave privada y recibir todos los paquetes con éxito.
-            \item La transformación no es \textbf{computacionalmente factible}: Esto significa que si se ha recibido parte del paquete de la transmisión, cualquiera que esté intentando leer el mensaje no puede hacerlo ya que la transformación \textbf{AONT} requiere que se reciba todo el mensaje, de lo contrario no entrega nada.
-            \item La transformación es una \textbf{técnica sin cifrado}: La técnica de pre-procesamiento no tiene llaves y no hay una llave secreta compartida involucrada en la operación. Cualquier persona que haya recibido todos los mensajes transformados del paquete puede recuperar el mensaje de texto original.
-        \end{enumerate}
-        
-        \paragraph{}
-        \textbf{¿Cómo funciona AONT?}
-        
-        \paragraph{}
-        Supongamos que el mensaje de entrada es el siguiente: $m_{1},m_{2},...,m_{n}$.\\
-        Seleccionamos una llave aleatoria $K'$ el cual se usará para la función del paquete de transformación.\\
-        Se calcula la secuencia transformada ${m'}_{1}, {m'}_{2},...,{m'}_{s}$ para ${s'}=s+1$ como se muestra a continuación:\\
-        Tenemos:
-        \begin{center}
-            $m_{i} \otimes E(K',i)$ for  $i=1,2,3,...,s$
-        \end{center}
-        También:
-        \begin{center}
-            $m'_{s'}=K' \otimes h_{1} \otimes h_{2} \otimes ... \otimes h_{s}$
-        \end{center}
-        
-        Donde:
-        \begin{center}
-            $h_i=E(K_0,m'_i \otimes i)$ for $i=1,2,...,s$
-        \end{center}
-        
-        Donde $K_0$ es una llave conocida pública fija.\\
-        Para que el receptor en el otro extremo obtenga el $K_0$, el cual es la llave para el uso de \textbf{AONT}, el receptor realiza el siguiente cálculo:
-        
-        \begin{center}
-            $K'=m'_s \otimes h_1 \otimes h_2 \otimes ... \otimes h_s$
-        \end{center}
-        \begin{center}
-            $m_i=m'_i \otimes E(K',i)$ for $i=1,2,...,s$
-        \end{center}
-        
-        \paragraph{}
-        AONT toma el mensaje de texto sin formato de entrada y los transforma, luego crea un bloque para almacenar los mensajes transformados antes de pasar al proceso de autentificación. Después, se genera el paquete Chaff (la cantidad de paquetes Chaff no tiene que ser igual a los paquetes de la informaci\'on \'util).\\
-        Esta técnica produce una menor sobrecarga que la sugerencia número 1. El AONT ofrece más confidencialidad al esquema de Chaffing and Winnowing, ya que el adversario debe recibir todo el bloque de mensajes de transformación e identificar correctamente todo el paquete de la informaci\'on \'util para obtener el mensaje de texto original. La Figura \ref{fig:C&W_AONT}, muestra la descripción general de Chaffing y Winnowing si se agrega la función AONT \cite{refAONT}.
-        
-        \begin{figure}[H]
-			\begin{center}	          \includegraphics[width=14cm]{./imagenes/MarcoTeorico/chaffVsCrypto.png}
-				\caption{Proceso de Chaffing and Winnowing junto con AONT.}
-				\label{fig:C&W_AONT}
-			\end{center}
-		\end{figure}
-		
-        \textbf{¿Cómo AONT puede hacer la diferencia?}\\
-        \begin{enumerate}
-            \item Requiere menos ancho de banda al transferir paquetes, ya que se pueden transferir más bits en un paquete en lugar de un bit por paquete.
-            \item Los paquetes Chaff son más fáciles de generar, ya que AONT transforma el mensaje de texto plano en bits aleatorios.
-            \item La distinción entre Chaffing and Winnowing es más difícil: Si el adversario va a ejercer fuerza bruta en los paquetes, la tarea se ralentizará por el factor del número de bloque de mensajes. Dado que el bloque de mensaje de información adicional se mezcla aleatoriamente dentro de los flujos de paquetes de Chaffing and Winnowing, sin saber que es muy difícil que el bloque adicional proporcione la posibilidad de elegir el bloque de mensaje correcto de los paquetes para obtener el texto plano original.
-        \end{enumerate}
-        
-        \subsection{Comparando Chaffing and Winnowing contra Cifrado y Esteganograf\'ia}
-        
-        En esta sección explicaremos porque Chaffing and Winnowing no puede ser clasificado como una técnica de cifrado o Estenografía.\\
-        
-        \subsubsection{Chafing and Winnowing vs Cifrado}
-        
-        Nosotros podríamos clasificar Chaffing and Winnowing como un método de cifrado, pero volvamos a recordar el principio de un Cifrado.
-        El principal objetivo de un cifrado es ocultar el mensaje en texto plano de tal manera que oculta su contenido con el uso de una clave de cifrado para el texto cifrado.
-        Por otro lado, en el esquema original de Chaffing and Winnowing, una llave compartida es usada con el fin de autentificar la validación de los paquetes ya sea del emisor o del receptor. Además, Chaffing and Winnowing no hace uso de ninguna técnica de cifrado para ocultar el contenido de un mensaje y que nadie pueda ver dicho mensaje, solo aquellos con la llave correspondiente pueden determinar que paquetes contienen la información valida. En la figura \ref{fig:C&W_AONT}, se muestra como se puede ver el esquema Chaffing and Winnowing como una técnica de cifrado. \\
-        
-        Chaffing y Winnowing pueden verse como \textbf{un tipo especial de esquema de cifrado simétrico}, ya que la operación \textbf{chaffing} es similar al ''proceso de cifrado''. En la operación de chaffing, el texto cifrado se crea para producir un paquete de la informaci\'on \'util no válido que se envía al receptor. Luego, el receptor realiza el ''proceso de descifrado'', que implica descartar el paquete de desperdicios y recuperar el mensaje original. Ambas operaciones operan bajo una llave secreta común que se usa para derivar el valor MAC.\\
-        
-        Pero la diferencia es, \textit{Chaffing y Winnowing} dos partes que no buscan lograr la confidencialidad. El emisor comparte una clave secreta con el receptor para que el receptor pueda usar la clave secreta para autentificarse (si se afirma que el mensaje recibido proviene del remitente deseado). Pero la ganancia de confidencialidad proviene de la dificultad de distinguir el paquete Chaff del paquete de la informaci\'on \'util. Mientras que en el cifrado, la clave se utiliza para lograr la confidencialidad mediante la creación de texto cifrado que oculta el contenido del mensaje de personas \cite{refCryptohraphyWithoutEncryption}.\\
-        
-        Chaffing y Winnowing junto con el esquema AONT, el esquema en sí es muy parecido al cifrado, excepto que la clave que se usa en la transformación AONT, se elige aleatoriamente cada vez en lugar de fijarla. Además, el último bloque de mensajes es exclusivo o de la clave y todo el hash del bloque de mensajes está allí para garantizar que cualquier modificación en el bloque de mensajes cambiará la clave $K'$ calculado por el receptor. Por lo tanto, el último bloque de mensajes ${m'}_{s'}$ está allí solo con el propósito de autentificación. Por lo tanto, Chaffing y Winnowing con el esquema AONT no pueden ser clasificados bajo cifrado \cite{refAONT}.\\
-        
-        \subsubsection{Chaffing and Winnowing vs Esteganograf\'ia}
-        La esteganografía trata de cómo ocultar, dentro de un mensaje público, información secreta. La agregación de información 'extra' es también un secreto, es decir, nadie externo a la comunicación sabe que en ese mensaje público se ha agregado información \cite{refCriptografia}. Un ejemplo de esta técnica de cifrado, se puede visualizar claramente en la utilización de tinta invisible en cartas. El emisor escribe una carta común y corriente con tinta visible, pero además, escribe información secreta con tinta invisible. Luego entonces, el receptor, aplicando el método correspondiente, descubrirá la información mandada con tinta invisible, pero agentes externos, ni siquiera saben la existencia de dicha información. En la actualidad, la esteganografía es muy utilizada para ocultar información en archivos de imágenes.\\
-        
-        Para algunas personas, Chaffing and Winnowing puede ser clasificado como una técnica esteganograf\'ia. Sin embargo, el objetivo principal de la estenografía, como se mencionó antes, es el de ocultar el mensaje original dentro de otro mensaje, por lo tanto, nadie aparte del emisor y el receptor sabrá que hay un mensaje oculto. Contrario a Chaffing and Winnowing, en donde cualquiera puede ver el contenido del mensaje, ya que este método no trata de esconderlo de los posibles atacantes. Otra diferencia es que en esteganograf\'ia el emisor tiene que ocultar el mensaje el mismo, mientras que en Chaffing and Winnowing no necesariamente es así, ya que una ''tercera parte'' puede hacerlo \cite{refChaffingVsEsteganografia}.\\
-        
-        Por lo tanto, Chaffing and Winnowing no puede ser considerado como esteganograf\'ia.\\
-        
          Para nuestro trabajo terminal usaremos \textit{Chaffing and Winnowing}, proponiendo así un nuevo método de autentificación para servicios web. \\
 	\end{comment}
 
@@ -1415,7 +1153,7 @@ natural y redes neuronales}\\
     	Los recursos operativos de este trabajo terminal se calcularon con base en los recursos humanos con los que se cuenta actualmente y un análisis de las horas que el personal estará en operación trabajando sobre éste, el cual se muestra a continuación:
     	
     	\begin{table}[H]
-    		\begin{tabular}{|p{1.7cm}|p{1.6cm}|p{1.6cm}|p{1.6cm}|p{1.6cm}|p{1.6cm}|}
+    		\begin{tabular}{|p{1.9cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|}
     			\hline
     			\rowcolor{guindapoli}
     			\multicolumn{6}{|c|}{\textbf{\textcolor{white}{Horas a trabajar en el desarrollo del trabajo terminal}}}\\
@@ -1439,7 +1177,7 @@ natural y redes neuronales}\\
     			\cellcolor{azulclaro}Noviembre & 31 & 8 & 18 & 2 & 36 \\ 
     			\hline
     		\end{tabular}
-    		\caption[Horas de trabajo]{Relación de horas de trabajo estimadas para la realización de este trabajo terminal}
+    		\caption[Horas de trabajo]{Relación horas de trabajo estimadas para la realización de este trabajo terminal}
     	\end{table}
     	Con esto podemos concluir que contamos con 286 horas, suficiente tiempo para el desarrollo de este trabajo terminal, ya que las horas totales de trabajo están contempladas para cada uno de los integrantes del equipo
     	
@@ -1452,7 +1190,7 @@ natural y redes neuronales}\\
     	En cuanto a los costos monetarios de todo el trabajo terminal se cuenta con el siguiente equipo:
     	\begin{itemize}
     		\item \textbf{Servicios}\\
-    		En cuando a los servicios se considera un gasto mensual aproximado de \$1,600.00 que al multiplicarlo por todo el tiempo de elaboración tenemos \$ 14,400.00.
+    		En cuanto a los servicios se considera un gasto mensual aproximado de \$1,600.00 que al multiplicarlo por todo el tiempo de elaboración tenemos \$ 14,400.00.
     		\item \textbf{Software} \\
     		En este caso durante algunos periodos se usarán herramientas gratuitas y de software libre, en cuanto al servicio en la de la nube de AWS, se planea trabajar inicialmente con alguno de los paquetes gratuitos, y si se llegaran a consumir los recursos de ese paquete, se procederá a unirse a un plan donde se cobran 0.15 centavos de dólar cada hora de uso.
     		\item \textbf{Hardware}\\
@@ -1493,26 +1231,12 @@ natural y redes neuronales}\\
 			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\
 			
 			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (APIs) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
-			\begin{comment}
-			\paragraph{JQuery. \\}
-			 Antes de continuar con JQuery, debemos saber que es un framework. Un framework es un producto que sirve como base para la programación avanzada de aplicaciones, la cual aporta una serie de funciones o códigos para realizar tareas habituales. Dicho de otra manera, un framework son librerías de código que contienen procesos o rutinas listos para hacer uso. Habitualmente los programadores utilizan los frameworks para no tener que desarrollar ellos mismos las tareas más básicas, puesto que en el propio framework ya hay implementaciones que están probadas, funcionan y no se necesitan volver a programar.\\
-			 
-			 Una vez comprendido que es un framework podemos continuar con jQuery. Este framework (para el lenguaje Javascript), es un producto que nos simplifica la vida para programar en este lenguaje. jQuery implementa una serie de clases (programación orientada a objetos) que nos permiten programar sin preocuparnos del navegador con el que nos está visitando el usuario, ya que funcionan de forma exacta en todas las plataformas más habituales. Así pues, este framework Javascript, nos ofrece una infraestructura con la que tendremos mucha mayor facilidad para la creación de aplicaciones complejas del lado del cliente. Por ejemplo, con jQuery obtendremos ayuda en la creación de interfaces de usuario, efectos dinámicos, aplicaciones que hacen uso de Ajax, etc. Cuando se programa Javascript con jQuery se tiene a su disposición una interfaz para programación que nos permitirá hacer cosas con el navegador que estemos seguros que funcionarán para todos los visitantes de la página.\cite{refJQuery}\\
-		    	\end{comment}
-		    \paragraph{Apache Tomcat.\\}
-		    Apache Tomcat (también llamado Jakarta Tomcat o simplemente Tomcat) funciona como un contenedor de servlets desarrollado bajo el proyecto Jakarta en la Apache Software Foundation. Tomcat implementa las especificaciones de los servlets y de JavaServer Pages (JSP) de Oracle Corporation (aunque creado por Sun Microsystems).
-		    
-		    Tomcat es un contenedor web con soporte de servlets y JSPs. Tomcat no es un servidor de aplicaciones, como JBoss o JOnAS. Incluye el compilador Jasper, que compila JSPs convirtiéndolas en servlets. El motor de servlets de Tomcat a menudo se presenta en combinación con el servidor web Apache. Tomcat puede funcionar como servidor web por sí mismo. En sus inicios existió la percepción de que el uso de Tomcat de forma autónoma era sólo recomendable para entornos de desarrollo y entornos con requisitos mínimos de velocidad y gestión de transacciones. Hoy en día ya no existe esa percepción y Tomcat es usado como servidor web autónomo en entornos con alto nivel de tráfico y alta disponibilidad. Dado que Tomcat fue escrito en Java, funciona en cualquier sistema operativo que disponga de la máquina virtual Java \cite{refTomcat}.
-		    
-		    En este trabajo terminal, estaremos usando Apache Tomcat 9.
 		    
 		    \paragraph{OpenSSL.\\}
 		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.
             
             Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios HTTPS). Estas herramientas ayudan al sistema a implementar el Secure Sockets Layer (SSL), así como otros protocolos relacionados con la seguridad, como el Transport Layer Security (TLS). OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
-            \begin{comment}
-            Para este trabajo terminal utilizaremos OpenSSL para generar los certificados de los usuarios, así como los certificados autofirmados para el Componente II y el Componente III.
-            \end{comment}
+      
             \paragraph{MongoDB. \\}
             MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o ''columnas'' que no tienen por qué repetirse de un registro a otro. \\
             Las características más destacadas son su velocidad y su sencillo sistema de consulta de los contenidos de la base de datos. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
@@ -1546,8 +1270,17 @@ natural y redes neuronales}\\
                 \item No se manipulan de forma eficiente los bloques de texto como tipo de dato.
             \end{itemize}
 			
-			\paragraph{}
-			
+			\paragraph{Flask}
+			\paragraph{Gunicorn}
+			\paragraph{Python}
+			\paragraph{Bert}
+			\paragraph{GPT-2}
+			\paragraph{EC2}
+			\paragraph{SageMaker}
+			\paragraph{CLI}
+			\paragraph{SageMaker}
+			\paragraph{S3}
+			\paragraph{Apache}
 			
 			
 		\subsection{Hardware.}
@@ -1601,47 +1334,189 @@ natural y redes neuronales}\\
 		\hline
 	\end{tabular}
 \end{table}
-
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       %
+%                                                       %
+%               Arquitectura de Sistema   %
+%                                                       %
+%                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Arquitectura del sistema.}
+	        \subsection{Descripci\'on de la arquitectura del sistema.}
+	        \subsection{Aspectos Econ\'omicos}
+	        Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
+	        \subsection{Aspectos Legales}
+	         
+\section{Diagrama de casos de uso general.}
+% Cada caso de uso llevará un Formato tipo:
+% \section{Nombre Caso de uso.} % Nombre de caso de uso
+% \section{Descripción de Caso de Uso.} % Nombre de caso de uso
+% \subsection{Estudio de requerimientos.} % Describir a detalle el caso de uso, 5-10 renglones
+% \subsubsection{Requerimientos Funcionales.} % Todos los Requerimientos funcionales para el caso de uso
+% \subsubsection{Requerimientos no Funcionales.} % Todos los Requerimientos funcionales para el caso de uso
+% \subsection{Reglas del negocio.} % Martin y Odell (1998) y Russel (1995) proponen que una regla de negocio es un restricción que opera sobre el sistema para este caso de uso
+.
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
 %   				Iteración 1 					  %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-	\part{Iteración 1.}
-	\chapter{\textcolor{azulescom}{Base de Datos}} % Explicar como se sacó la Base de Datos
-	\chapter{\textcolor{azulescom}{Género Musical}} % Explicar por qué se sacó de este género musical
-	\chapter{\textcolor{azulescom}{Resultados}}
-	%   %   %   %   %   %   %   %   %	%	%
-	%		       											%
-	%   				Iteración 2 					  %
-	%                               				  		%
-	%   %   %   %   %   %   %   %   %	%   %     
-	\part{Iteración 2.}
-	\chapter{\textcolor{azulescom}{Limpieza}} % Explicar cómo se limpió la base de datos
-	\chapter{\textcolor{azulescom}{Regular Expressions}} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-	\chapter{\textcolor{azulescom}{Técnicas de Scrapping}} % Explicar la técnica que se usó para scrappear la base de datos
-	\chapter{\textcolor{azulescom}{Implementación}} % Explicar como se obtuvo en código la base de datos limpia
-	\chapter{\textcolor{azulescom}{Resultados}} % Explicar los Resultados
-		%   %   %   %   %   %   %   %   %	%	%
-	%		       											%
-	%   				Iteración 3 					  %
-	%                               				  		%
-	%   %   %   %   %   %   %   %   %	%   %     
-	\part{Iteración 3.}
-	\chapter{\textcolor{azulescom}{Herramientas}} % Herramientas para generar el modelo
-	\chapter{\textcolor{azulescom}{Modelo}} % Explicar las partes del modelo con sus diagramas
-	\chapter{\textcolor{azulescom}{Implementación}} % Explicar como se implementó con código o pasos para obtener el modelo en AWS
-	\chapter{Resultados} % Explicar los Resultados
-		%   %   %   %   %   %   %   %   %	%	%
-	%		       											%
-	%   				Iteración 4 					  %
-	%                               				  		%
-	%   %   %   %   %   %   %   %   %	%   %     
-	\part{Iteración 4.}
-	\chapter{\textcolor{azulescom}{Integración}} % Explicar cómo se configuró el modelo en la nube 
-	\chapter{\textcolor{azulescom}{Herramientas}} % Explicar las herramientas más a fondo
-	\chapter{\textcolor{azulescom}{Implementación}} % Explicar como se implementó con código o pasos para obtener el modelo en AWS
-	\chapter{\textcolor{azulescom}{Resultados}} % Explicar los Resultados
+\chapter{\textcolor{azulescom}{Iteración 1.}}
+\section{Descripción.}
+\section{Base de Datos} % Explicar como se sacó la Base de Datos
+\section{Género Musical} % Explicar por qué se sacó de este género musical
+\section{Resultados}
+%   %   %   %   %   %   %   %   %	%	%
+%		       											%
+%   				Iteración 2 				   %
+%                               				  		%
+%   %   %   %   %   %   %   %   %	%   %     
+\chapter{\textcolor{azulescom}{Iteración 2.}}
+\section{Descripción.}
+\section{Limpieza} % Explicar cómo se limpió la base de datos
+\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\section{Resultados} % Explicar los Resultados
+% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+\newpage
+
+\begin{thebibliography}{20}
+	\bibitem{refRAE}  		
+	Real Academia Española (2020, noviembre), Diccionario de la lengua española, [En línea]. Disponible: https://dle.rae.es [Último acceso: 10 de diciembre del 2020].
+	
+	\bibitem{refOxfordLex}  		
+	Oxford Lexico (2020, noviembre), Definitions, Meanings, Synonyms, and Grammar by Oxford, [En línea]. Disponible: https://www.lexico.com [Último acceso: 2 de diciembre del 2020].
+	
+	%  Introducción
+	\bibitem{Bourreau_and_Gensollen}  		
+	Chaney, D. (2012). The Music Industry in the Digital Age: Consumer Participation in Value Creation. International Journal of Arts Management, (1), pp. 15.
+	
+	\bibitem{Generating_Text_with_RNN}  	
+	Sutskever, I., Martens, J., Hinton, G. E. (2011, January). Generating text with recurrent neural networks. In ICML.
+	
+	\bibitem{CNN_for_Sentence_Classification}  	
+	Kim, Y. (2014). Convolutional neural networks for sentence classification. arXiv preprint arXiv:1408.5882.
+	
+	\bibitem{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}  	
+	Monteith, K., Martinez, T. R., \& Ventura, D. (2012, May). Automatic Generation of Melodic Accompaniments for Lyrics. In ICCC, pp. 87-94.
+	
+	\bibitem{Conditional_Rap_Lyrics_Generation}  	
+	Nikolov, N. I., Malmi, E., Northcutt, C. G., Parisi, L. (2020). Conditional Rap Lyrics Generation with Denoising Autoencoders. arXiv preprint arXiv:2004.03965.
+	
+	\bibitem{What_about_the_music}  	
+	Baker, F. A. (2015). What about the music? Music therapists’ perspectives on the role of music in the therapeutic songwriting process. Psychology of Music, 43(1), pp. 122-139.
+	
+	\bibitem{genero_musical_en_la_musica_popular}  	
+	Guerrero, J. (2012). El género musical en la música popular: algunos problemas para su caracterización. Trans. Revista transcultural de música, (16), pp. 1-22.
+	
+	\bibitem{Bert}  	
+	Wang, A., \& Cho, K. (2019). Bert has a mouth, and it must speak: Bert as a markov random field language model. arXiv preprint arXiv:1902.04094.
+	
+	\bibitem{spaCy}  	
+	Honnibal, M.,\& Montani, I. (2017). spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing.
+	
+	\bibitem{refSistema}  		
+	O. Jaramillo, Universidad Nacional Autonoma de México (2007, mayo 03), El concepto de Sistema, [En línea]. Disponible: https://www.ier.unam.mx/~ojs/pub/Termodinamica/node9.html [Último acceso: 2 de diciembre del 2020].
+	
+	\bibitem{refMaquinasFinitas}  		
+	J. A. Gutiérrez Orozco, Escuela Superior de Cómputo (2008, septiembre 15), Máquinas de Estados Finitos, [En línea]. Disponible: http://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/Summer\_Research\_files/maquinasef.pdf [Último acceso: 15 de diciembre del 2020].
+	
+	\bibitem{refInteligencia_Artificial2}
+	IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
+	
+	\bibitem{refQueSonRedesNeu}  		
+	L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].
+	
+	\bibitem{refTiposRedesNeu1}  		
+	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Network\_Zoo [Último acceso: 20 de noviembre del 2020].
+	
+	\bibitem{refTiposRedesNeu2}  		
+	A. Mehta (2019, enero 25), A Comprehensive Guide to Types of Neural Networks, [En línea]. Disponible: https://www.digitalvidya.com/blog/types-of-neural-networks/ [Último acceso: 15 de noviembre del 2020].
+	
+	\bibitem{refTiposRedesNeu3}  		
+	P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
+	
+	\bibitem{refTiposRedesNeu4} 
+	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
+	
+	\bibitem{refNeuronaNat}
+	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
+	
+	\bibitem{refNeuronaArt}
+	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
+	
+	\bibitem{refQueEsBD}  		
+	Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
+	
+	\bibitem{refEstructuraCancion1}  		
+	Escribir Canciones (2008), Estructura y elementos de una canción, [En línea]. Disponible: https://dle.rae.es [Último acceso: 2 de diciembre del 2020].
+	
+	\bibitem{refEstructuraCancion2}  		
+	Swing this Music (2008), ¿QUÉ SECCIONES PUEDE TENER UNA CANCIÓN?española, [En línea]. Disponible: https://sites.google.com/site/swingthismusiccast/interpretacio/estructura-cancion/secciones-de-una-cancion [Último acceso: 2 de diciembre del 2020].
+	
+	\bibitem{refMarkov}  		
+	J. R. Norris (1997), Markov Chains, [En línea]. Disponible: https://cape.fcfm.buap.mx/jdzf/cursos/procesos/libros/norris.pdf [Último acceso: 15 de diciembre del 2020].
+	
+	\bibitem{refFlask1}  		
+	Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
+	
+	\bibitem{refFlask2}  		
+	Gajesh (2019, julio 17), The complete Flask beginner tutorial, [En línea]. Disponible: https://dev.to/gajesh/the-complete-flask-beginner-tutorial-124i [Último acceso: 16 de diciembre del 2020].
+	
+	\bibitem{refFlask3}  		
+	A. Abdelaal (2019), Deploying a Flask Application to Heroku, [En línea]. Disponible: https://stackabuse.com/deploying-a-flask-application-to-heroku/ [Último acceso: 16 de diciembre del 2020].
+	
+	% Apache
+	\bibitem{Apache}  		
+	Documentation Group. (n.d.). Welcome! - The Apache HTTP Server Project. Apache. Retrieved April 6, 2021, from https://httpd.apache.org/
+	\bibitem{what_is_apache}  		
+	G., D. (2021, March 9). What is Apache? An In-Depth Overview of Apache Web Server. Hostinger Tutorials. https://www.hostinger.com/tutorials/what-is-apache
+	% Servidor Web
+	\bibitem{What_is_a_web_server}  		
+	What is a web server? - Learn web development | MDN. (2021, January 27). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_web\_server
+	% Certificado SSL
+	\bibitem{SSL}  		
+	https://letsencrypt.org/es/
+	\bibitem{what_is_SSL} 
+	What is SSL? (2017, May 15). SSLSHOPPER. https://www.sslshopper.com/what-is-ssl.html
+	\bibitem{ssl_certificates} 
+	Verisign. (2015, August 30). ¿Qué es un certificado SSL? – Verisign. Verisign NameStudio. https://www.verisign.com/es\_LA/website-presence/online/ssl-certificates/index.xhtml
+	% Plataforma en la nube de ML 
+	\bibitem{data_science_in_the_cloud} 
+	Bavati, I. (2020, September 22). Data Science in the Cloud - Towards Data Science. Medium. https://towardsdatascience.com/data-science-in-the-cloud-239b795a5792 (September 2020)
+	\bibitem{comparing-google-cloud-platform-aws-and-azure} 
+	G. (2021, March 5). Comparing Google Cloud Platform, AWS and Azure - Georgian Impact Blog. Medium. https://medium.com/georgian-impact-blog/comparing-google-cloud-platform-aws-and-azure-d4a52a3adbd2
+	\bibitem{cloud_vs_onprem} 
+	J. (2020, July 30). Choosing Your Deep Learning Infrastructure: The Cloud vs. On-Prem Debate. Determined AI. https://determined.ai/blog/cloud-v-onprem
+	\bibitem{what_is_jupyter} 
+	I., A. (2015, October 2). Jupyter/IPython Notebook Quick Start Guide. Jupyter Notebook Beginner Guide. https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what\_is\_jupyter.html
+	\bibitem{google_cloud_vs_aws} 
+	Jones, E. (2021, March 25). Google Cloud vs AWS in 2021 (Comparing the Giants). Kinsta. https://kinsta.com/blog/google-cloud-vs-aws/
+	
+	
+	%---------------------------Referencias Originales ↓----------------------------%
+	
+	
+	\bibitem{refMongoDB}
+	MongoDB. (2019), ¿Qué es MongoDB?, [En línea]. Disponible: https://www.mongodb.com/es. [Último acceso: 26 Marzo 2021].
+	
+	\bibitem{refCookies}
+	Universitat de Valéncia (2016), ¿Qué son las cookies? [En línea]. Disponible:           https://www.uv.es/uvweb/universidad/es/politica-privacidad/politica-cookies/son-cookies--1285919089226.html [Último acceso: 26 Marzo 2021]
+	
+	\bibitem{refNodeOpenSSL}
+	Noteworthy Programming Masterpiece (2019), openssl-nodejs [En línea]. Disponible: https://www.npmjs.com/package/openssl-nodejs [Último acceso: 26 Marzo 2021]
+	
+	\bibitem{refTomcat}
+	The Apache Software Foundation (2019), Apache Tomcat [En línea]. Disponible: http://tomcat.apache.org/index.html [Último acceso: 26 Marzo 2021]
+	
+	\bibitem{refmysql}
+	Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
+	
+\end{thebibliography}	
+\end{document}
+% ESTO SI VAAAAAAAAAAAAAAAA EN TT1, tomarlo como referencia
     	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%                                                       %
 		%                                                       %
@@ -1649,7 +1524,8 @@ natural y redes neuronales}\\
 		%                                                       %
 		%                                                       %
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    	\begin{comment} % ESTO SI VAAAAAAA
+    	% ESTO SI VAAAAAAA
+    	\begin{comment} 
     	\section{Arquitectura del sistema.}
             \begin{figure}[H]
         		\begin{center}
@@ -1677,16 +1553,6 @@ natural y redes neuronales}\\
 	        \subsection{Aspectos Econ\'omicos}
 	        Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
 	        \subsection{Aspectos Legales}
-	        
-	    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		%                                                       %
-		%                                                       %
-		%                       BPMN General                    %
-		%                                                       %
-		%                                                       %
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\end{comment}
-    	\begin{comment}
     	contenidos...
     	\section{Diagrama BPMN}
         	\begin{figure}[H]
@@ -1735,7 +1601,7 @@ natural y redes neuronales}\\
 		    Para inyectar el certificado autentificador, es necesario crear un \textit{''patrón de chaffing''}, este patrón lo generaremos aleatoriamente para después mandarlo junto con la petición HTTP.
 		    Dicho patrón irá cifrado con la clave pública del Componente III (API). El objetivo de mandar el patrón junto con el protocolo HTTP, es que el servidor pueda descifrar el patrón con su clave privada y con él realizar la etapa de \textit{winnowing} para extraer el certificado.\\
 		    %Por el momento, dicho patrón no irá cifrado, ya que para esto es necesario la implementación del servidor del servicio web de prueba, para poder conocer su llave pública y cifrar el patrón. Sin embargo, en el prototipo 1 del subsistema 3 se implementará el servidor y con ello su cifrado asimétrico. El objetivo de mandar el patrón junto con el protocolo HTTP, es que el servidor pueda leer el patrón y realizar la etapa de \textit{winnowing}, para extraer el certificado.\\
-            
+            \end{comment}
 
 
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1744,8 +1610,8 @@ natural y redes neuronales}\\
 			%                REQUERIMIENTOS PII                     %
 			%                                                       %
 			%                                                       %
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ESTO SI VA
+			\begin{comment}
 		    \subsection{Estudio de requerimientos.}
 				\subsubsection{Requerimientos Funcionales.}
 				{\setlength{\parindent}{12pt}
@@ -2008,13 +1874,13 @@ natural y redes neuronales}\\
 	            \textbf{CIII\_RN4. Inicio de Sesi\'on.} El servidor debe contar con dos inicios de sesión, uno propio del negocio y otro propio del incio de sesión con \textit{Chaffing and Winnowing}.\\
 	            \label{CIII_RN4}
 	            \end{comment}
-	            \begin{comment}
-	            %%\textbf{CIII\_RN5. }
+	            
 	    %   %   %   %   %   %   %   %   %   %
 	    %		        Capítulo 4					%
 	    %   			DISEÑO 						%
 	    %                               				  %
 	    %   %   %   %   %   %   %   %   %	%
+	    \begin{comment}
 	\chapter{\textcolor{azulescom}{Diseño.}}
 			
 		\section{Componente I: Extensión.}
@@ -4621,650 +4487,545 @@ natural y redes neuronales}\\
 	            
 	            \paragraph{Tiempo promedio de ejecución: } 1101.68 ms.\\
 	            \end{comment}
+% ESTO SI VAAAAAAAAAAAAAAAA EN TT1
+
+\begin{comment}
+%   %   %   %   %   %   %   %   %	%	%
+%		       											%
+%   				Iteración 3 					  %
+%                               				  		%
+%   %   %   %   %   %   %   %   %	%   %     
+\chapter{\textcolor{azulescom}{Iteración 3.}}
+\section{Herramientas} % Herramientas para generar el modelo
+\section{Modelo} % Explicar las partes del modelo con sus diagramas
+\section{Implementación} % Explicar como se implementó con código o pasos para obtener el modelo en AWS
+\section{Resultados} % Explicar los Resultados
+%   %   %   %   %   %   %   %   %	%	%
+%		       											%
+%   				Iteración 4 					  %
+%                               				  		%
+%   %   %   %   %   %   %   %   %	%   %     
+\chapter{\textcolor{azulescom}{Iteración 4.}}
+\section{Integración} % Explicar cómo se configuró el modelo en la nube 
+\section{Herramientas} % Explicar las herramientas más a fondo
+\section{Implementación} % Explicar como se implementó con código o pasos para obtener el modelo en AWS
+\section{Resultados} % Explicar los Resultados
+
 	    \begin{comment}
-	    contenidos...
+contenidos...
 %   %   %   %   %   %   %   %   %   %
 %		         								  %
 %   	TRABAJO TERMINAL 2 		 %
 %                               				  %
 %   %   %   %   %   %   %   %   %	%
-   \textcolor{guindapoli}{\part{Trabajo Terminal II}}
-   
-	%   %   %   %   %   %   %   %   %   %
-	%		        								  %
-	%   			SPRINT 2 					%
-	%                               				  %
-	%   %   %   %   %   %   %   %   %	%            
-	            
-	\part{Sprint 2.}
-	%   %   %   %   %   %   %   %   %   %
-	%		        Capítulo 7					%
-	%   			ANÁLISIS 					%
-	%                               				  %
-	%   %   %   %   %   %   %   %   %	%
-	\chapter{\textcolor{azulescom}{Análisis.}}
-    	    
-    	\section{Arquitectura del sistema.}
-            \begin{figure}[H]
-        		\begin{center}
-        		\caption{Arquitectura General del Sistema}
-	            \end{center}
-	        \end{figure}    
-	        \subsection{Descripci\'on de la arquitectura del sistema.}
-	            El sistema seguirá manteniendo la misma arquitectura del prototipo 1, debido a que los cambios para el prototipo 2 son cambios internos que no afectan el flujo de la información.
-	            
-	            Los cambios por componentes son los siguientes:
-	            \begin{enumerate}
-	                \item \textbf{Navegador Chrome con la Extensi\'on instalada}: En este bloque la modificación que se lleva a cabo es en el proceso de \textit{Chaffing} el cual ahora se inyectara \textit{Chaffing} ó bien basura en el certificado. Recordemos que en el prototipo 1 se inyectaba el certificado en el apartado de Accept el cual ocupaba como \textit{Chaffing} el valor del header Accept.
-	                
-	                %Explicar aqui el cambio que se hizo
-	                
-	                \item \textbf{Servidor autentificador:} Este componente tendrá pocas modificaciones en el aspecto de seguridad. Ya que en la base de datos del componente se guarda la ruta donde esta el certificado de cada usuario, por lo que, se necesitará tener un control de accesos para evitar cualquier robo de certificados. Éste control de accesos por FTP, sólo le dará acceso a la autoridad certificadora, para que la misma pueda obtener los certificados de los usuarios y mandárselos cuando lo necesiten.
-	                
-	                \item \textbf{Servidor web con API instalada:} Las modificaciones para este componente son en el desarrollo del \textit{Winnowing}, debido a que el componente 1 tiene cambios en el \textit{Chaffing} por lo tanto, el proceso de Winnowing debe ser modificado también.
-	            \end{enumerate}
-    
-		\section{Componente I. Extensión.}
-		    \subsection{Descripción.}
-		    
-		        Como sabemos, el componente 1 será el encargado de interceptar las peticiones de los usuarios para inyectar el \textit{Chaffing} y enviar la petición modificada.\\
-		        La modificación que tendrá el componente 1 es en el aspecto de seguridad, el cual se modificará en el patrón del \textit{Chaffing} para tener un patrón repetido, y asi tener menos caracteres en el mismo y por lo tanto, tener menos caracteres en el patrón. \\
-		        En el Prototipo 1 por tener una gran cantidad de caracteres en el \textit{Chaffing} se necesitaba cifrar con AES y después la llave cifrarla con RSA por lo que representaba un gasto computacional extra que podría ser eliminado. Para este prototipo se pretende reducir el patrón en tamaño de tal manera que se pueda repetir siguiendo el comportamiento de una \textit{lista circular enlazada}.\\
-		    
-		    \subsection{Cambios planteados.}
-    		    \begin{itemize}
-    		        \item \textbf{Eliminación del atributo usuario: } En este prototipo ya no se contará con un nombre de usuario ya que con el email y la contraseña del mismo eran suficientes para que el componente funcionara correctamente.
-    		        \item \textbf{Chaffing sin caracteres inválidos: }Debido a la nueva implementación del Chaffing se consideró desde un inicio generar solamente caracteres imprimibles por lo que la aplicación del \textit{Base 64} ya no será necesaria. 
-    		        \item \textbf{Reducción del tamaño del patrón: }  Uno de los problemas que pudimos detectar en el primer componente fue que el patrón tenía la misma longitud del chaffing lo que representaba un envío de información un tanto grande a lo que planteamos modificar el algoritmo de generación de patrón así como el de generación del chaffing permitiendo reducir la cantidad de datos enviados manteniendo la confidencialidad que en un principio se planteó.
-    		        \item \textbf{Eliminación del cifrado AES: } Como consecuencia del punto anterior se considerará dejar de un tamaño definido la longitud del patrón, logrando de esta manera que solo sea necesario cifrarlo mediante RSA sin la necesidad de AES con lo que se busca reducir el costo computacional tanto en este componente como en los que dependan del mismo. 
-    		    \end{itemize}
-    		    
-		    \subsection{Cambios al estudio de requerimientos y reglas de negocio.}
+\textcolor{guindapoli}{\part{Trabajo Terminal II}}
 
-                Para este componente los cambios son un tanto mínimos los cuales se enlistan a continuación:
-                \paragraph{Requerimientos funcionales} En cuanto a los requerimientos funcionales que se modificaron nos encontramos con el requerimiento funcional \textbf{CI RF13. Registro en servidor autentificador.} de la sección \ref{CI_RF13} en el cual se hace mención de un nombre de usuario que para este prototipo no es necesario por lo que los datos a ingresar serán: email y contraseña.
-                
-                \paragraph{Requerimientos no funcionales} Debido a que en este prototipo ya se consideran enviar caracteres válidos en las peticiones HTTP, el requerimiento no funcional  \textbf{CI RNF4. Codificación en base64 del Chaffing. } de la sección \ref{CI_RNF4} ya no será necesario.
-                
-                \paragraph{Reglas del negocio} Como consecuencia de la eliminación del atributo \textit{nombre de usuario} igualmente ya no son necesarias las siguientes reglas del negocio: \textbf{CI RN7. Longitud del campo de usuario.} y \textbf{CI RN9. Caracteres permitidos en campo usuario.} de la sección \ref{CI_RN7}. \\
-                
-                El resto de los requerimientos y reglas del negocio quedan de la misma manera.
-		    
-		    
-	    \section{Componente II: Servidor autentificador.}
-	        \subsection{Descripción.}
-	        
-	            Este componente es el encargado de guardar los certificados del usuario, para mandarlos a sus respectivos usuarios (siempre que los usuarios lo necesiten). Por lo que es importante que los certificados por ningún motivo estén vulnerables. Dando así lugar a la creación de un control de accesos por FTP para que la autoridad certificadora sólo tenga acceso a estos archivos (Certificados) de los usuarios. Este control de accesos evitará que atacantes quienes quieran obtener el certificado de los usuarios, estos no podrán debido al control de accesos. Dando mayor seguridad a los usuarios que hagan uso de la extensión (Componente I).
-	            
-            \subsection{Cambios Planteados.}
-                \begin{itemize}
-                    \item \textbf{Control de accesos por FTP: } En este prototipo se creara un servidor FTP la cual solamente la autoridad certificadora tendrá acceso, debido a que en este servidor la autoridad almacenará los certificados de los usuarios. Donde, en la base de datos la autoridad certificadora solamente tendrá almacenados los datos del usuario como lo son: 
-                    \begin{itemize}
-                        \item Correo electrónico (email)
-                        \item Contraseña
-                    \end{itemize}
-                \end{itemize}
-                
-            
-            \subsection{Cambios al estudio de requerimientos y reglas de negocio.}
-            
-            Los requerimientos funcionales de este componente para este prototipo deberán cambiar en el aspecto de la creación de certificados. En el prototipo 1 los requerimientos funcionales hacían alusión en crear los certificados por cada usuario dentro del servidor (Autoridad certificadora). \\
-            Puesto que esto deja una vulnerabilidad en la autoridad certificadora, todos los requerimientos funcionales deberán: 
-            \begin{itemize}
-                \item Generar
-                \item Guardar
-                \item Revocar
-                \item Actualizar
-                \item Comprobar
-            \end{itemize}
-            Todo lo anterior, desde los certificados almacenados en el servidor FTP y ya no desde los certificados almacenados en la autoridad certificadora.
-            Como requerimiento no funcional se agrega:\\
-            
-            \setlength{\parindent}{0cm}
-        
-            \textbf{CII\_RNF5. Servidor de acceso.} la autoridad certificadora deberá tener acceso y privilegios en el servidor FTP donde se almacenarán los certificados.
-            
-	        
-        \section{Componente III: API.}
-            \subsection{Descripción.}
-        
-                Para este prototipo, hemos planteado la modificación del proceso de \textit{Winnowing} que realiza la API, debido a que el patrón y por tanto el proceso de \textit{Chaffing} en el Componente I han cambiado. Además, como una mejora en la seguridad, nos hemos planteado que el Servicio Web no tenga almacenado en su base de datos el certificado del usuario. De esta manera la única entidad que almacenará los certificados de los usuarios será el Componente II.
-                
-                El resto de la funcionalidad se mantendrá tal y como estaba en el Prototipo 1. 
-               
-            \subsection{Cambios planteados.}
-	            
-	            \begin{itemize}
-	                \item \textbf{Nuevo proceso de Winnowing: } debido a los cambios realizados para el Prototipo 2 al Componente I, es necesario crear otro algoritmo capaz de obtener el certificado del header de la petición HTTP que el usuario mando. Este algoritmo se adaptará al nuevo patrón teniendo en cuenta que su tamaño ahora es menor y buscando el óptimo desempeño. En la sección de diseño se puede apreciar las cambios al algoritmo.
-	                \item \textbf{Eliminación del descifrado AES: } el patrón ya no se descifrará con AES puesto que en el Componente I se elimino ese cifrado para mejorar la velocidad del algoritmo, quedando sólo el cifrado RSA.
-	                \item \textbf{Guardado del certificado: } buscando evitar que el servicio web guarde el certificado en su base de datos, hemos planteado que la API, una vez realizado el proceso de winnowing y la validación del certificado regrese un código SHA256 del mismo. De esta manera, el servicio web sólo guardará en su base de datos un código el cual, gracias a la función SHA, no puede ser revertido en caso de que un atacante quisiera obtener el certificado. Una vez realizado los cambios, el certificado sólo se almacenará en el Componente II.
-	            \end{itemize}
-	            
-	        \subsection{Cambios al estudio de requerimientos y reglas de negocio.}
-                El requerimiento funcional \textbf{CIII\_RF10. Retorno del certificado} de la sección \ref{CIII_RF10}, explica que la API deberá retornar el certificado y su estatus al servicio web. Este requerimiento corregido queda de la siguiente manera.\\
-                
-                {
-                \setlength{\parindent}{0cm}
-                
-                \textbf{CIII\_RF10. Retorno de certificado.} La API deberá retornar el código SHA256 del certificado y su estatus al servicio para que este pueda realizar la lógica del negocio necesaria para el inicio de sesión.\\
-                \label{P2_CIII_RF10}
-                }
-                
-                Finalmente, el requerimiento funcional \textbf{CIII\_RF11. Descifrado AES al patrón} de la sección \ref{CIII_RF11} se eliminará como consecuencia del cambios planteado en la sección anterior.\\ 
-                
-                El resto de los requerimientos y reglas del negocio quedan de la misma manera.
-	%   %   %   %   %   %   %   %   %   %
-	%		        Capítulo 8					%
-	%   			DISEÑO 					    %
-	%                               				  %
-	%   %   %   %   %   %   %   %   %	%                
-    \chapter{\textcolor{azulescom}{Diseño.}}
-			
-		\section{Componente I: Extensión.}
-		
-		    \subsection{Cambios en el algoritmo.}
-		        Los cambios planteados son muy parecidos entre si ya que uno es consecuencia del otro por lo que la parte que se modificó recae completamente en el algoritmo de este componente, resultando como se muestra a continuación:\\
-		        Algoritmo utilizado para la generación del patrón de chaffing:\\
-                \begin{algorithm}[H] % Algoritmo para obtener el patrón de Chaffing_v2
-                    \SetAlgoLined
-                    \KwData{low, high}
-                    \KwResult{pattern,ones}
-                    $lenPattern \longleftarrow 150*8 $\;
-                    $ones \longleftarrow rand(low,high) $\;
-                    $pattern[lenPattern] \longleftarrow 0$\;
-                    $i \longleftarrow 0$\;
-                    \While{$ i < ones$}{
-                        $x \longleftarrow securerand(size)$\;
-                      \If{$pattern[x] != 1$}{
-                            $pattern[x] \longleftarrow 1$\;
-                            $i \longleftarrow i + 1$\;
-                       }
-                       
-                       
-                     }
-                    \SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
-                    \caption{getPattern: Generación de patrón de chaffing del Prototipo 2}
-                \end{algorithm}
-                Consideramos este algoritmo muy simple ya que es bastante intuitivo analizar su comportamiendo, el algoritmo inicia definiendo la longitud del patrón para luego calcular de manera aleatoria la cantidad de unos que contendrá, esto en un rango definido por nosotros que más adelante se explicará, se inicializa el patrón con ceros para mas tarde iniciar con un ciclo que con base en posiciones aleatorias obtendrá una posición el la cual se colocará un 1 terminando en el momento que todos los unos calculados se encuentren en el patrón.\\
+%   %   %   %   %   %   %   %   %   %
+%		        								  %
+%   			SPRINT 2 					%
+%                               				  %
+%   %   %   %   %   %   %   %   %	%            
 
-                Algoritmo utilizado para la generación del Chaffing:\\
-                \begin{algorithm}[H]
-                    \SetAlgoLined
-                    \KwData{Cert}
-                    \KwResult{Chaffing,pattern}
-                    $lenCert \longleftarrow lenght(Cert)$\;
-                    $pattern,ones \longleftarrow getPattern(550, 650)$\;
-                    $Chaffing \longleftarrow " "$\;
-                    %Contadores para agarrar el siguiente byte del cert o Accept.
-                    $rep \longleftarrow roof(lenCert/ones)$\;
-                    %Para cada elemento de como resultó el patrón.
-                    $i \longleftarrow 0$\;
-                    $k \longleftarrow 0$\;
-                    \While{$ i < rep$}{
-                        \ForEach{$j$ in $pattern$}{
-                            \eIf{$j == '1'$}{
-                            $Chaffing \longleftarrow Chaffing + Cert[k]$\;
-                            $k \longleftarrow k + 1$\;
-                            $ones \longleftarrow ones - 1$\;
-                            }{%Else, es un 0, entonces se coloca el siguiente byte del Accept.
-                            $Chaffing \longleftarrow Chaffing + fake()$\;
-                            }
-                            \If{$ones == 0$}{
-                            $break$\;
-                            }
-                        }
-                        $i \longleftarrow i + 1$\;
-                    }
-                    \SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
-                    \caption{getChaff: Generación de chaffing del prototipo 2}
-                \end{algorithm}
-                En este caso el algoritmo que genera gran parte de los datos que se incluirán en la cabecera \textit{HTTP} inicia calculando la longitud del certificado original para luego mandar a llamar a la función \textit{getPattern(int, int)} que calcula el patrón como se explicó previamente; esta función recibe dos enteros como entrada los cuales estáticamente definimos como 150 bytes necesarios para determinar el números de unos con los que contará el patrón, esto debido a que la longitud máxima de RSA es de 254 bytes, sin embargo requiere de ciertos bytes extras que utiliza para poder realizar el cifrado y descifrado de manera correcta, por lo que a nuestro sistema se ajusto a esta cantidad de 150 bytes.
-                
-                \subsubsection{Complejidad computacional.}
-                    Haciendo un analisis de los algoritmos anteriormente mostrados, deducimos que la complejidad del algoritmo de \textit{chaffing} del prototipo 2 es:
-                    $O(n)$ donde $n$ es el
-                
-        
-        \section{Componente II: Servidor Autentificador.}
-            \subsection{Cambios realizados.}
-            Debido a las reglas del negocio que se tuvieron que ajustar, también se realizaron unos cambios en alguno de los diagramas, a continuación se mostraran los cambios realizados. 
-            
-            \subsection{Diagrama de Actividades.}
-            Para el Diagrama de Actividades, no se realizaron cambios drásticos en la lógica de su diseño, sin embargo se agregó el servidor FTP y con esto tener un control de acceso para que solo puedan acceder usuarios permitidos, y con ello este diagrama se ajustó a como sigue:
-                \begin{figure}[H]
-                    \centering                    
-                    \caption{Ajustes al Diagrama de Actividades del Componente II.}
-                    \label{fig:CII_DA_PII}
-                \end{figure}
-                
-            \subsection{Diagrama de Secuencia.}
-                \subsubsection{Diagrama de secuencia: Crear nuevo usuario.}
-                Se ajusto para que los certificados se almacenaran en el servidor de acceso FTP.
-                    \begin{figure}[H]
-                        \centering              
-                        \caption{Ajustes al Diagrama de Secuencia crear nuevo usuario del componente II.}
-                        \label{fig:CII_SD_UC1_PII}
-                    \end{figure}
-                    
-                \subsubsection{Diagrama de secuencia: Revocar certificado.}
-                Se realizaron cambios para que cuando se revoque el certificado, todas las validaciones ahora se contemplen para acceder en el servidor de acceso FTP.
-	                \begin{figure}[H]
-                        \centering                        
-                        \caption{Ajustes al Diagrama de Secuencia revocar certificado del componente II.}
-                        \label{fig:CII_SD_UC2_PII}
-                    \end{figure}
-                    
-                \subsubsection{Diagrama de secuencia: Obtener certificado.}
-                Al momento de que la extensión requiera del certificado, este componente tendrá que acceder al servidor de acceso FTP para obtener y devolverle el certificado.
-	                \begin{figure}[H]
-                        \centering                        
-                        \caption{Ajustes al Diagrama de Secuencia obtener certificado del componente II.}
-                        \label{fig:CII_SD_UC3_PII}
-                    \end{figure}
-                    
-                \subsubsection{Diagrama de secuencia: Verificar certificado.}
-                Nuevamente se realizaron cambios para ajustar la procedencia del certificado para que se obtenga del servidor de acceso FTP al momento en que la API requiera buscar a un usuario en el Servidor Autentificador. Autentificador.
-	                \begin{figure}[H]
-                        \centering                        
-                        \caption{Ajustes al Diagrama de Secuencia verificar certificado del componente II.}
-                        \label{fig:CII_SD_UC4_PII}
-                    \end{figure}
-                    
-                    
-	    \section{Componente III: API.}
-	        \subsection{Cambios realizados.}
-	        Para estos cambios se eliminó la lógica en la que el mismo Servicio Web guarda los certificados con los que le da acceso a los usuarios en una base de datos, en cambio se sustituyó con una comunicación con el componente dos, Servidor Autentificador, para que le pregunte únicamente si el usuario se encuentra registrado, y le devuelva un hash del certificado para compararlo con el que recibió por parte de la Extensión, esto con el fin de saber si existe el usuario y su certificado está actualizado o si requiere de actualizarlo por alguna revocación.
-	        
-	        \subsection{Cambio en el algoritmo.}
-                Debido a que se realizaron cambios en la etapa de \textit{Chaffing} del componente 1, es necesario ajustar igualmente la forma en la que se realiza el Winnowing para este componente, ahora el algoritmo que realiza la obtención del patrón y la etapa de \textit{Winnowing} se explica a continuación.
-                
-                \begin{algorithm}[H]
-                    \SetAlgoLined
-                    \KwData{chaffing, patternCipher, privateKey, sizeCert}
-                    \KwResult{cert,header}
-                    
-                    $pattern[] \longleftarrow rsa.decipher(patternCipher, privateKey)$\;
-                    $cert \longleftarrow " "$\;
-                    $rep \longleftarrow sizeCert / numOnes(pattern)$\;
-                    % contadores
-                    $contRep \longleftarrow 0$\; 
-                    \While{$i < rep$}{
-                        \While{$ j < pattern.length$}{
-                            %Obteniendo el certificado
-                            \If{$cert.length == sizeCert$}{
-                                $break$\;
-                            }
-                            \If{$patt[j] == 1$}{
-                                    $cert +=     chaffing[i+(pattern.length * contRep)]$\;
-                            }
-                            $j \longleftarrow j + 1$\;
-                        }
-                        $i \longleftarrow i + 1$\;
-                     }
-                    \SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
-                    \caption{Cambios en el algoritmo de Winnowing para obtener el certificado.}
-                \end{algorithm}
-                
-                Para este prototipo, ahora vamos a tener un el patrón de chaffing cifrado únicamente mediante RSA, y este patrón será de un tamaño aproximado de 150 bytes, para realizar este algoritmo se requiere del chaffing con el que se va a trabajar, el patrón cifrado con RSA, la llave privada para descifrar el patrón y el tamaño en bytes del certificado.\\
-                
-                Primero se realiza el descifrado de este patrón mediante RSA, una vez que tenemos descifrado el patrón, vamos a proceder a realizar la etapa de Winnowing. Necesitamos saber cuántas veces necesitamos recorrer este patrón, por lo cual se obtiene en una variable dividiendo el tamaño del certificado, mencionado anteriormente, y el número de unos que contiene el patrón, ahora recorreremos el patrón en busca de un uno, cuando lo encontramos quiere decir que este es un caracter válido para tomar como caracter del certificado, por lo que lo agregamos a nuestra variable del certificado, y repetiremos esto tantas veces como el resultado de la división anteriormente mencionada.\\
-                
-                Al finalizar esta etapa de \textit{Winnowing}, nos quedamos con el certificado que fue enviado en la petición, así podremos proseguir con la lógica de nuestro sistema, que es comunicarnos con el Servidor Autentificador, para verificar con este mismo si el certificado es uno válido para nuestro inicio de sesión.
-                
-                \subsubsection{Complejidad computacional.}
-                    Haciendo un analisis del algoritmo anteriormente mostrado, deducimos que la complejidad del algoritmo de \textit{winnowing} del prototipo 2 es:
-                    $O(n)$
-                
-	        \subsection{Diagrama de Flujo.}
-	        \begin{figure}[H]
-                \centering               
-                \caption{Ajustes al Diagrama de Flujo Componente III.}
-                \label{fig:CII_FD_PII}
-            \end{figure}
-            
-            Se realizaron unos cambios para este diagrama, se agregó un flujo en el cuál se muestra la forma en el que la API se comunica con el Servidor Autentificador para saber la validez del certificado, primero le envía el Hash del usuario que se puede obtener con el certificado, el Servidor Autentificador lo busca y le envía el hash de este certificado, después la API transforma el primer certificado que recibió mediante la petición y lo compara con el Hash que recibe del Servidor Autentificador, si son iguales entonces podemos dar acceso al usuario que envío esta petición, sin embargo si la comparación resulta diferente, entonces quiere decir que el usuario no tiene un certificado válido o actualizado, por lo que debe de volver a iniciar sesión en el Servicio Web para que pueda reasignarle correctamente su certificado válido a esta cuenta.
+\part{Sprint 2.}
+%   %   %   %   %   %   %   %   %   %
+%		        Capítulo 7					%
+%   			ANÁLISIS 					%
+%                               				  %
+%   %   %   %   %   %   %   %   %	%
+\chapter{\textcolor{azulescom}{Análisis.}}
+
+\section{Arquitectura del sistema.}
+\begin{figure}[H]
+\begin{center}
+\caption{Arquitectura General del Sistema}
+\end{center}
+\end{figure}    
+\subsection{Descripci\'on de la arquitectura del sistema.}
+El sistema seguirá manteniendo la misma arquitectura del prototipo 1, debido a que los cambios para el prototipo 2 son cambios internos que no afectan el flujo de la información.
+
+Los cambios por componentes son los siguientes:
+\begin{enumerate}
+\item \textbf{Navegador Chrome con la Extensi\'on instalada}: En este bloque la modificación que se lleva a cabo es en el proceso de \textit{Chaffing} el cual ahora se inyectara \textit{Chaffing} ó bien basura en el certificado. Recordemos que en el prototipo 1 se inyectaba el certificado en el apartado de Accept el cual ocupaba como \textit{Chaffing} el valor del header Accept.
+
+%Explicar aqui el cambio que se hizo
+
+\item \textbf{Servidor autentificador:} Este componente tendrá pocas modificaciones en el aspecto de seguridad. Ya que en la base de datos del componente se guarda la ruta donde esta el certificado de cada usuario, por lo que, se necesitará tener un control de accesos para evitar cualquier robo de certificados. Éste control de accesos por FTP, sólo le dará acceso a la autoridad certificadora, para que la misma pueda obtener los certificados de los usuarios y mandárselos cuando lo necesiten.
+
+\item \textbf{Servidor web con API instalada:} Las modificaciones para este componente son en el desarrollo del \textit{Winnowing}, debido a que el componente 1 tiene cambios en el \textit{Chaffing} por lo tanto, el proceso de Winnowing debe ser modificado también.
+\end{enumerate}
+
+\section{Componente I. Extensión.}
+\subsection{Descripción.}
+
+Como sabemos, el componente 1 será el encargado de interceptar las peticiones de los usuarios para inyectar el \textit{Chaffing} y enviar la petición modificada.\\
+La modificación que tendrá el componente 1 es en el aspecto de seguridad, el cual se modificará en el patrón del \textit{Chaffing} para tener un patrón repetido, y asi tener menos caracteres en el mismo y por lo tanto, tener menos caracteres en el patrón. \\
+En el Prototipo 1 por tener una gran cantidad de caracteres en el \textit{Chaffing} se necesitaba cifrar con AES y después la llave cifrarla con RSA por lo que representaba un gasto computacional extra que podría ser eliminado. Para este prototipo se pretende reducir el patrón en tamaño de tal manera que se pueda repetir siguiendo el comportamiento de una \textit{lista circular enlazada}.\\
+
+\subsection{Cambios planteados.}
+\begin{itemize}
+\item \textbf{Eliminación del atributo usuario: } En este prototipo ya no se contará con un nombre de usuario ya que con el email y la contraseña del mismo eran suficientes para que el componente funcionara correctamente.
+\item \textbf{Chaffing sin caracteres inválidos: }Debido a la nueva implementación del Chaffing se consideró desde un inicio generar solamente caracteres imprimibles por lo que la aplicación del \textit{Base 64} ya no será necesaria. 
+\item \textbf{Reducción del tamaño del patrón: }  Uno de los problemas que pudimos detectar en el primer componente fue que el patrón tenía la misma longitud del chaffing lo que representaba un envío de información un tanto grande a lo que planteamos modificar el algoritmo de generación de patrón así como el de generación del chaffing permitiendo reducir la cantidad de datos enviados manteniendo la confidencialidad que en un principio se planteó.
+\item \textbf{Eliminación del cifrado AES: } Como consecuencia del punto anterior se considerará dejar de un tamaño definido la longitud del patrón, logrando de esta manera que solo sea necesario cifrarlo mediante RSA sin la necesidad de AES con lo que se busca reducir el costo computacional tanto en este componente como en los que dependan del mismo. 
+\end{itemize}
+
+\subsection{Cambios al estudio de requerimientos y reglas de negocio.}
+
+Para este componente los cambios son un tanto mínimos los cuales se enlistan a continuación:
+\paragraph{Requerimientos funcionales} En cuanto a los requerimientos funcionales que se modificaron nos encontramos con el requerimiento funcional \textbf{CI RF13. Registro en servidor autentificador.} de la sección \ref{CI_RF13} en el cual se hace mención de un nombre de usuario que para este prototipo no es necesario por lo que los datos a ingresar serán: email y contraseña.
+
+\paragraph{Requerimientos no funcionales} Debido a que en este prototipo ya se consideran enviar caracteres válidos en las peticiones HTTP, el requerimiento no funcional  \textbf{CI RNF4. Codificación en base64 del Chaffing. } de la sección \ref{CI_RNF4} ya no será necesario.
+
+\paragraph{Reglas del negocio} Como consecuencia de la eliminación del atributo \textit{nombre de usuario} igualmente ya no son necesarias las siguientes reglas del negocio: \textbf{CI RN7. Longitud del campo de usuario.} y \textbf{CI RN9. Caracteres permitidos en campo usuario.} de la sección \ref{CI_RN7}. \\
+
+El resto de los requerimientos y reglas del negocio quedan de la misma manera.
+
+
+\section{Componente II: Servidor autentificador.}
+\subsection{Descripción.}
+
+Este componente es el encargado de guardar los certificados del usuario, para mandarlos a sus respectivos usuarios (siempre que los usuarios lo necesiten). Por lo que es importante que los certificados por ningún motivo estén vulnerables. Dando así lugar a la creación de un control de accesos por FTP para que la autoridad certificadora sólo tenga acceso a estos archivos (Certificados) de los usuarios. Este control de accesos evitará que atacantes quienes quieran obtener el certificado de los usuarios, estos no podrán debido al control de accesos. Dando mayor seguridad a los usuarios que hagan uso de la extensión (Componente I).
+
+\subsection{Cambios Planteados.}
+\begin{itemize}
+\item \textbf{Control de accesos por FTP: } En este prototipo se creara un servidor FTP la cual solamente la autoridad certificadora tendrá acceso, debido a que en este servidor la autoridad almacenará los certificados de los usuarios. Donde, en la base de datos la autoridad certificadora solamente tendrá almacenados los datos del usuario como lo son: 
+\begin{itemize}
+\item Correo electrónico (email)
+\item Contraseña
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Cambios al estudio de requerimientos y reglas de negocio.}
+
+Los requerimientos funcionales de este componente para este prototipo deberán cambiar en el aspecto de la creación de certificados. En el prototipo 1 los requerimientos funcionales hacían alusión en crear los certificados por cada usuario dentro del servidor (Autoridad certificadora). \\
+Puesto que esto deja una vulnerabilidad en la autoridad certificadora, todos los requerimientos funcionales deberán: 
+\begin{itemize}
+\item Generar
+\item Guardar
+\item Revocar
+\item Actualizar
+\item Comprobar
+\end{itemize}
+Todo lo anterior, desde los certificados almacenados en el servidor FTP y ya no desde los certificados almacenados en la autoridad certificadora.
+Como requerimiento no funcional se agrega:\\
+
+\setlength{\parindent}{0cm}
+
+\textbf{CII\_RNF5. Servidor de acceso.} la autoridad certificadora deberá tener acceso y privilegios en el servidor FTP donde se almacenarán los certificados.
+
+
+\section{Componente III: API.}
+\subsection{Descripción.}
+
+Para este prototipo, hemos planteado la modificación del proceso de \textit{Winnowing} que realiza la API, debido a que el patrón y por tanto el proceso de \textit{Chaffing} en el Componente I han cambiado. Además, como una mejora en la seguridad, nos hemos planteado que el Servicio Web no tenga almacenado en su base de datos el certificado del usuario. De esta manera la única entidad que almacenará los certificados de los usuarios será el Componente II.
+
+El resto de la funcionalidad se mantendrá tal y como estaba en el Prototipo 1. 
+
+\subsection{Cambios planteados.}
+
+\begin{itemize}
+\item \textbf{Nuevo proceso de Winnowing: } debido a los cambios realizados para el Prototipo 2 al Componente I, es necesario crear otro algoritmo capaz de obtener el certificado del header de la petición HTTP que el usuario mando. Este algoritmo se adaptará al nuevo patrón teniendo en cuenta que su tamaño ahora es menor y buscando el óptimo desempeño. En la sección de diseño se puede apreciar las cambios al algoritmo.
+\item \textbf{Eliminación del descifrado AES: } el patrón ya no se descifrará con AES puesto que en el Componente I se elimino ese cifrado para mejorar la velocidad del algoritmo, quedando sólo el cifrado RSA.
+\item \textbf{Guardado del certificado: } buscando evitar que el servicio web guarde el certificado en su base de datos, hemos planteado que la API, una vez realizado el proceso de winnowing y la validación del certificado regrese un código SHA256 del mismo. De esta manera, el servicio web sólo guardará en su base de datos un código el cual, gracias a la función SHA, no puede ser revertido en caso de que un atacante quisiera obtener el certificado. Una vez realizado los cambios, el certificado sólo se almacenará en el Componente II.
+\end{itemize}
+
+\subsection{Cambios al estudio de requerimientos y reglas de negocio.}
+El requerimiento funcional \textbf{CIII\_RF10. Retorno del certificado} de la sección \ref{CIII_RF10}, explica que la API deberá retornar el certificado y su estatus al servicio web. Este requerimiento corregido queda de la siguiente manera.\\
+
+{
+\setlength{\parindent}{0cm}
+
+\textbf{CIII\_RF10. Retorno de certificado.} La API deberá retornar el código SHA256 del certificado y su estatus al servicio para que este pueda realizar la lógica del negocio necesaria para el inicio de sesión.\\
+\label{P2_CIII_RF10}
+}
+
+Finalmente, el requerimiento funcional \textbf{CIII\_RF11. Descifrado AES al patrón} de la sección \ref{CIII_RF11} se eliminará como consecuencia del cambios planteado en la sección anterior.\\ 
+
+El resto de los requerimientos y reglas del negocio quedan de la misma manera.
+\end{comment}
+%   %   %   %   %   %   %   %   %   %
+%		        Capítulo 8					%
+%   			DISEÑO 					    %
+%                               				  %
+%   %   %   %   %   %   %   %   %	%       
+\begin{comment}         
+\chapter{\textcolor{azulescom}{Diseño.}}
+
+\section{Componente I: Extensión.}
+
+\subsection{Cambios en el algoritmo.}
+Los cambios planteados son muy parecidos entre si ya que uno es consecuencia del otro por lo que la parte que se modificó recae completamente en el algoritmo de este componente, resultando como se muestra a continuación:\\
+Algoritmo utilizado para la generación del patrón de chaffing:\\
+\begin{algorithm}[H] % Algoritmo para obtener el patrón de Chaffing_v2
+\SetAlgoLined
+\KwData{low, high}
+\KwResult{pattern,ones}
+$lenPattern \longleftarrow 150*8 $\;
+$ones \longleftarrow rand(low,high) $\;
+$pattern[lenPattern] \longleftarrow 0$\;
+$i \longleftarrow 0$\;
+\While{$ i < ones$}{
+$x \longleftarrow securerand(size)$\;
+\If{$pattern[x] != 1$}{
+$pattern[x] \longleftarrow 1$\;
+$i \longleftarrow i + 1$\;
+}
+
+
+}
+\SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
+\caption{getPattern: Generación de patrón de chaffing del Prototipo 2}
+\end{algorithm}
+Consideramos este algoritmo muy simple ya que es bastante intuitivo analizar su comportamiendo, el algoritmo inicia definiendo la longitud del patrón para luego calcular de manera aleatoria la cantidad de unos que contendrá, esto en un rango definido por nosotros que más adelante se explicará, se inicializa el patrón con ceros para mas tarde iniciar con un ciclo que con base en posiciones aleatorias obtendrá una posición el la cual se colocará un 1 terminando en el momento que todos los unos calculados se encuentren en el patrón.\\
+
+Algoritmo utilizado para la generación del Chaffing:\\
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwData{Cert}
+\KwResult{Chaffing,pattern}
+$lenCert \longleftarrow lenght(Cert)$\;
+$pattern,ones \longleftarrow getPattern(550, 650)$\;
+$Chaffing \longleftarrow " "$\;
+%Contadores para agarrar el siguiente byte del cert o Accept.
+$rep \longleftarrow roof(lenCert/ones)$\;
+%Para cada elemento de como resultó el patrón.
+$i \longleftarrow 0$\;
+$k \longleftarrow 0$\;
+\While{$ i < rep$}{
+\ForEach{$j$ in $pattern$}{
+\eIf{$j == '1'$}{
+$Chaffing \longleftarrow Chaffing + Cert[k]$\;
+$k \longleftarrow k + 1$\;
+$ones \longleftarrow ones - 1$\;
+}{%Else, es un 0, entonces se coloca el siguiente byte del Accept.
+$Chaffing \longleftarrow Chaffing + fake()$\;
+}
+\If{$ones == 0$}{
+$break$\;
+}
+}
+$i \longleftarrow i + 1$\;
+}
+\SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
+\caption{getChaff: Generación de chaffing del prototipo 2}
+\end{algorithm}
+En este caso el algoritmo que genera gran parte de los datos que se incluirán en la cabecera \textit{HTTP} inicia calculando la longitud del certificado original para luego mandar a llamar a la función \textit{getPattern(int, int)} que calcula el patrón como se explicó previamente; esta función recibe dos enteros como entrada los cuales estáticamente definimos como 150 bytes necesarios para determinar el números de unos con los que contará el patrón, esto debido a que la longitud máxima de RSA es de 254 bytes, sin embargo requiere de ciertos bytes extras que utiliza para poder realizar el cifrado y descifrado de manera correcta, por lo que a nuestro sistema se ajusto a esta cantidad de 150 bytes.
+
+\subsubsection{Complejidad computacional.}
+Haciendo un analisis de los algoritmos anteriormente mostrados, deducimos que la complejidad del algoritmo de \textit{chaffing} del prototipo 2 es:
+$O(n)$ donde $n$ es el
+
+
+\section{Componente II: Servidor Autentificador.}
+\subsection{Cambios realizados.}
+Debido a las reglas del negocio que se tuvieron que ajustar, también se realizaron unos cambios en alguno de los diagramas, a continuación se mostraran los cambios realizados. 
+
+\subsection{Diagrama de Actividades.}
+Para el Diagrama de Actividades, no se realizaron cambios drásticos en la lógica de su diseño, sin embargo se agregó el servidor FTP y con esto tener un control de acceso para que solo puedan acceder usuarios permitidos, y con ello este diagrama se ajustó a como sigue:
+\begin{figure}[H]
+\centering                    
+\caption{Ajustes al Diagrama de Actividades del Componente II.}
+\label{fig:CII_DA_PII}
+\end{figure}
+
+\subsection{Diagrama de Secuencia.}
+\subsubsection{Diagrama de secuencia: Crear nuevo usuario.}
+Se ajusto para que los certificados se almacenaran en el servidor de acceso FTP.
+\begin{figure}[H]
+\centering              
+\caption{Ajustes al Diagrama de Secuencia crear nuevo usuario del componente II.}
+\label{fig:CII_SD_UC1_PII}
+\end{figure}
+
+\subsubsection{Diagrama de secuencia: Revocar certificado.}
+Se realizaron cambios para que cuando se revoque el certificado, todas las validaciones ahora se contemplen para acceder en el servidor de acceso FTP.
+\begin{figure}[H]
+\centering                        
+\caption{Ajustes al Diagrama de Secuencia revocar certificado del componente II.}
+\label{fig:CII_SD_UC2_PII}
+\end{figure}
+
+\subsubsection{Diagrama de secuencia: Obtener certificado.}
+Al momento de que la extensión requiera del certificado, este componente tendrá que acceder al servidor de acceso FTP para obtener y devolverle el certificado.
+\begin{figure}[H]
+\centering                        
+\caption{Ajustes al Diagrama de Secuencia obtener certificado del componente II.}
+\label{fig:CII_SD_UC3_PII}
+\end{figure}
+
+\subsubsection{Diagrama de secuencia: Verificar certificado.}
+Nuevamente se realizaron cambios para ajustar la procedencia del certificado para que se obtenga del servidor de acceso FTP al momento en que la API requiera buscar a un usuario en el Servidor Autentificador. Autentificador.
+\begin{figure}[H]
+\centering                        
+\caption{Ajustes al Diagrama de Secuencia verificar certificado del componente II.}
+\label{fig:CII_SD_UC4_PII}
+\end{figure}
+
+
+\section{Componente III: API.}
+\subsection{Cambios realizados.}
+Para estos cambios se eliminó la lógica en la que el mismo Servicio Web guarda los certificados con los que le da acceso a los usuarios en una base de datos, en cambio se sustituyó con una comunicación con el componente dos, Servidor Autentificador, para que le pregunte únicamente si el usuario se encuentra registrado, y le devuelva un hash del certificado para compararlo con el que recibió por parte de la Extensión, esto con el fin de saber si existe el usuario y su certificado está actualizado o si requiere de actualizarlo por alguna revocación.
+
+\subsection{Cambio en el algoritmo.}
+Debido a que se realizaron cambios en la etapa de \textit{Chaffing} del componente 1, es necesario ajustar igualmente la forma en la que se realiza el Winnowing para este componente, ahora el algoritmo que realiza la obtención del patrón y la etapa de \textit{Winnowing} se explica a continuación.
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwData{chaffing, patternCipher, privateKey, sizeCert}
+\KwResult{cert,header}
+
+$pattern[] \longleftarrow rsa.decipher(patternCipher, privateKey)$\;
+$cert \longleftarrow " "$\;
+$rep \longleftarrow sizeCert / numOnes(pattern)$\;
+% contadores
+$contRep \longleftarrow 0$\; 
+\While{$i < rep$}{
+\While{$ j < pattern.length$}{
+%Obteniendo el certificado
+\If{$cert.length == sizeCert$}{
+$break$\;
+}
+\If{$patt[j] == 1$}{
+$cert +=     chaffing[i+(pattern.length * contRep)]$\;
+}
+$j \longleftarrow j + 1$\;
+}
+$i \longleftarrow i + 1$\;
+}
+\SetAlgorithmName{Algoritmo}{algoritmo}{Algoritmos}
+\caption{Cambios en el algoritmo de Winnowing para obtener el certificado.}
+\end{algorithm}
+
+Para este prototipo, ahora vamos a tener un el patrón de chaffing cifrado únicamente mediante RSA, y este patrón será de un tamaño aproximado de 150 bytes, para realizar este algoritmo se requiere del chaffing con el que se va a trabajar, el patrón cifrado con RSA, la llave privada para descifrar el patrón y el tamaño en bytes del certificado.\\
+
+Primero se realiza el descifrado de este patrón mediante RSA, una vez que tenemos descifrado el patrón, vamos a proceder a realizar la etapa de Winnowing. Necesitamos saber cuántas veces necesitamos recorrer este patrón, por lo cual se obtiene en una variable dividiendo el tamaño del certificado, mencionado anteriormente, y el número de unos que contiene el patrón, ahora recorreremos el patrón en busca de un uno, cuando lo encontramos quiere decir que este es un caracter válido para tomar como caracter del certificado, por lo que lo agregamos a nuestra variable del certificado, y repetiremos esto tantas veces como el resultado de la división anteriormente mencionada.\\
+
+Al finalizar esta etapa de \textit{Winnowing}, nos quedamos con el certificado que fue enviado en la petición, así podremos proseguir con la lógica de nuestro sistema, que es comunicarnos con el Servidor Autentificador, para verificar con este mismo si el certificado es uno válido para nuestro inicio de sesión.
+
+\subsubsection{Complejidad computacional.}
+Haciendo un analisis del algoritmo anteriormente mostrado, deducimos que la complejidad del algoritmo de \textit{winnowing} del prototipo 2 es:
+$O(n)$
+
+\subsection{Diagrama de Flujo.}
+\begin{figure}[H]
+\centering               
+\caption{Ajustes al Diagrama de Flujo Componente III.}
+\label{fig:CII_FD_PII}
+\end{figure}
+
+Se realizaron unos cambios para este diagrama, se agregó un flujo en el cuál se muestra la forma en el que la API se comunica con el Servidor Autentificador para saber la validez del certificado, primero le envía el Hash del usuario que se puede obtener con el certificado, el Servidor Autentificador lo busca y le envía el hash de este certificado, después la API transforma el primer certificado que recibió mediante la petición y lo compara con el Hash que recibe del Servidor Autentificador, si son iguales entonces podemos dar acceso al usuario que envío esta petición, sin embargo si la comparación resulta diferente, entonces quiere decir que el usuario no tiene un certificado válido o actualizado, por lo que debe de volver a iniciar sesión en el Servicio Web para que pueda reasignarle correctamente su certificado válido a esta cuenta.
+\end{comment}
 %   %   %   %   %   %   %   %   %   %
 %		        Capítulo 9					%
 %   			DESARROLLO 			   %
 %                               				  %
-%   %   %   %   %   %   %   %   %	%	    
-	\chapter{\textcolor{azulescom}{Desarrollo.}}
-	
-    	\section{Componente I: Extensión.}
-            Los cambios planteados y diseñados en las secciones Análisis y Diseño del Prototipo 2 tuvieron consecuencias en el desarrollo del Componente I. En esta sección se mostrarán los cambios hechos para la implementación del Prototipo 2.
-            
-            \subsection{Cambios en el manifest.}
-                Para este segundo prototipo hemos hecho cambios en el archivo manifest de la extensión. Como se puede notar en el código \ref{cod:manifest_P2} la versión de la extensión cambios de 1.0 a 2.0, con el objetivo de tener un control de versiones y se removió el uso de la librería \textit{CryptoJS} que usabamos para cifrar con AES, ya que en este prototipo removimos ese método de cifrado.
-                
-                    
-            \subsection{Implementación del Chaffing.}
-                Los cambios planteados en este prototipo, repercuten por sobre todas las cosas en la implementación del algoritmo de \textit{Chaffing}. El código \ref{cod:chaffingProcess_P2} muestra el proceso de chaffing, invocando a las funciones \textit{getPattern} del código \ref{cod:getPattern_P2} para obtener el patrón del chaffing y \textit{makeChaffing} el código \ref{cod:makeChaffing_P2} para realizar el chaffing. Además en la línea 11 del código \ref{cod:chaffingProcess_P2} se muestra que ahora sólo se cifra con RSA el patrón de chaffing.
-                
-            
-                Con el código mostrado anteriormente, ahora el Componente I es capaz de cumplir con los cambios propuestos y las ventajas que ellos lograron.
-            
-        \section{Componente II: Servidor Autentificador.}
-        
-            Los cambios planteados en Análisis y Diseño del prototipo 2, tuvieron como consecuencia modificaciones en las diferentes funciones del componente 2. En esta sección se mostrarán los cambios realizados para tener la funcionalidad requerida del prototipo 2.
-        
-            \subsection{Servidor de accesos FTP.}
-            Debido a que en el prototipo 1, la autoridad certificadora (Componente 2) queda vulnerable a posibles ataques para la obtención de certificados guardados de los usuarios. Este prototipo proporciona a la autoridad un servidor de accesos por FTP, en el que éste le dará únicamente acceso a la autoridad certificadora, para que así ningún otro usuario pueda obtener los certificados guardados. La autoridad certificadora, sólo necesitará tener almacenado el correo email y contraseña del usuario en su base de datos, por lo que la misma no necesita estar protegida ante posibles ataques.
-            El paquete \textbf{ftp} para NodeJs nos ayudará a llevar a cabo esta conexión.
-            
-            \begin{itemize}
-                \item ftp (versión 0.3.10): Este paquete nos ayuda a establecer conexión a un servidor ftp con funciones preestablecidas de la librería, por lo que en NodeJs solo bastará con llamar a las funciones put o get para obtener el archivo o guardar un archivo según sea el caso. 
-            \end{itemize}
-        
-            El código \ref{cod:conexionFTPget} muestra la implementación necesaria para poder conectar al servidor FTP y obtener certificados del mismo. En este caso el usuario es \textbf{diegoarturomg} y contraseña \textbf{211096} para acceder al servidor FTP.\\
-            
-            Esta implementación se llevará a cabo tanto en obtener certificado como en verificar certificado. Debido a que son funciones get de FTP.
-            
-            
-        
-        
-            El código \ref{cod:conexionFTPput} muestra la implementación necesaria para poder conectar al servidor FTP y guardar certificados en el mismo. El usuario y contraseña son los mismos.\\
-            
-            Esta implementación se llevará a cabo tanto en guardar usuario como en revocar certificado. Debido a que son funciones get de FTP.
-            
-            
-            
-        
-	
-	    \section{Componente III: API.}
-	    
-	        \subsection{Nuevo Proceso de Winnowing y eliminación del descifrado AES.}
+%   %   %   %   %   %   %   %   %	%
+\begin{comment}	    
+\chapter{\textcolor{azulescom}{Desarrollo.}}
 
-            	Debido  a  los  cambios  realizados  con  el  patrón  en  el  Componente  I  es necesario realizar la adaptación pertinente a este proceso considerando que la parte encargada de este proceso involucra completamente a la API, por lo tanto el código del proceso de winnowing quedó como se muestra en el siguiente fragmento de código: 
-                
-            
-            	En donde nos podemos percatar de la eliminación por un lado del decode en base 64 y del descifrado del patrón mediante AES y por otro de la nueva implementación del patrón y el ajuste para obtener el mismo resultado eliminando algunos pasos. 
+\section{Componente I: Extensión.}
+Los cambios planteados y diseñados en las secciones Análisis y Diseño del Prototipo 2 tuvieron consecuencias en el desarrollo del Componente I. En esta sección se mostrarán los cambios hechos para la implementación del Prototipo 2.
 
-            \subsection{Guardado del certificado}
+\subsection{Cambios en el manifest.}
+Para este segundo prototipo hemos hecho cambios en el archivo manifest de la extensión. Como se puede notar en el código \ref{cod:manifest_P2} la versión de la extensión cambios de 1.0 a 2.0, con el objetivo de tener un control de versiones y se removió el uso de la librería \textit{CryptoJS} que usabamos para cifrar con AES, ya que en este prototipo removimos ese método de cifrado.
 
-	            Algo muy importante a considerar en este prototipo es que de ahora en adelante el único que almacena el certificado del usuario es el mismo usuario en su extensión y el servidor autentificador, por lo que el servicio web solo pasa a recibir un código SHA256 del mismo certificado, cuidando siempre la confidencialidad de este dato. Esta implementación de manera similar a la anterior se realiza en la API en estas simples lineas de código:
+
+\subsection{Implementación del Chaffing.}
+Los cambios planteados en este prototipo, repercuten por sobre todas las cosas en la implementación del algoritmo de \textit{Chaffing}. El código \ref{cod:chaffingProcess_P2} muestra el proceso de chaffing, invocando a las funciones \textit{getPattern} del código \ref{cod:getPattern_P2} para obtener el patrón del chaffing y \textit{makeChaffing} el código \ref{cod:makeChaffing_P2} para realizar el chaffing. Además en la línea 11 del código \ref{cod:chaffingProcess_P2} se muestra que ahora sólo se cifra con RSA el patrón de chaffing.
+
+
+Con el código mostrado anteriormente, ahora el Componente I es capaz de cumplir con los cambios propuestos y las ventajas que ellos lograron.
+
+\section{Componente II: Servidor Autentificador.}
+
+Los cambios planteados en Análisis y Diseño del prototipo 2, tuvieron como consecuencia modificaciones en las diferentes funciones del componente 2. En esta sección se mostrarán los cambios realizados para tener la funcionalidad requerida del prototipo 2.
+
+\subsection{Servidor de accesos FTP.}
+Debido a que en el prototipo 1, la autoridad certificadora (Componente 2) queda vulnerable a posibles ataques para la obtención de certificados guardados de los usuarios. Este prototipo proporciona a la autoridad un servidor de accesos por FTP, en el que éste le dará únicamente acceso a la autoridad certificadora, para que así ningún otro usuario pueda obtener los certificados guardados. La autoridad certificadora, sólo necesitará tener almacenado el correo email y contraseña del usuario en su base de datos, por lo que la misma no necesita estar protegida ante posibles ataques.
+El paquete \textbf{ftp} para NodeJs nos ayudará a llevar a cabo esta conexión.
+
+\begin{itemize}
+\item ftp (versión 0.3.10): Este paquete nos ayuda a establecer conexión a un servidor ftp con funciones preestablecidas de la librería, por lo que en NodeJs solo bastará con llamar a las funciones put o get para obtener el archivo o guardar un archivo según sea el caso. 
+\end{itemize}
+
+El código \ref{cod:conexionFTPget} muestra la implementación necesaria para poder conectar al servidor FTP y obtener certificados del mismo. En este caso el usuario es \textbf{diegoarturomg} y contraseña \textbf{211096} para acceder al servidor FTP.\\
+
+Esta implementación se llevará a cabo tanto en obtener certificado como en verificar certificado. Debido a que son funciones get de FTP.
+
+
+
+
+El código \ref{cod:conexionFTPput} muestra la implementación necesaria para poder conectar al servidor FTP y guardar certificados en el mismo. El usuario y contraseña son los mismos.\\
+
+Esta implementación se llevará a cabo tanto en guardar usuario como en revocar certificado. Debido a que son funciones get de FTP.
+
+
+
+
+
+\section{Componente III: API.}
+
+\subsection{Nuevo Proceso de Winnowing y eliminación del descifrado AES.}
+
+Debido  a  los  cambios  realizados  con  el  patrón  en  el  Componente  I  es necesario realizar la adaptación pertinente a este proceso considerando que la parte encargada de este proceso involucra completamente a la API, por lo tanto el código del proceso de winnowing quedó como se muestra en el siguiente fragmento de código: 
+
+
+En donde nos podemos percatar de la eliminación por un lado del decode en base 64 y del descifrado del patrón mediante AES y por otro de la nueva implementación del patrón y el ajuste para obtener el mismo resultado eliminando algunos pasos. 
+
+\subsection{Guardado del certificado}
+
+Algo muy importante a considerar en este prototipo es que de ahora en adelante el único que almacena el certificado del usuario es el mismo usuario en su extensión y el servidor autentificador, por lo que el servicio web solo pasa a recibir un código SHA256 del mismo certificado, cuidando siempre la confidencialidad de este dato. Esta implementación de manera similar a la anterior se realiza en la API en estas simples lineas de código:
+
+Es importante aclarar que esta salida solo se obtiene mediante el mismo proceso de validación que se mencionó en el Prototipo 1 de este Componente, de la misma manera se sigue regresando el status como se había analizado desde un inicio.
 \end{comment}	           
+%   %   %   %   %   %   %   %   %   %
+%		        Capítulo 10					%
+%   			PRUEBAS 			      %
+%                               				  %
+%   %   %   %   %   %   %   %   %	%	
 \begin{comment}
-                Es importante aclarar que esta salida solo se obtiene mediante el mismo proceso de validación que se mencionó en el Prototipo 1 de este Componente, de la misma manera se sigue regresando el status como se había analizado desde un inicio.
-	%   %   %   %   %   %   %   %   %   %
-	%		        Capítulo 10					%
-	%   			PRUEBAS 			      %
-	%                               				  %
-	%   %   %   %   %   %   %   %   %	%	
-	\chapter{\textcolor{azulescom}{Pruebas.}}
-	    Las pruebas que aquí se presentan fueron realizadas con los equipos de la sección de Hardware en Herramientas a Usar, sobre una red local creada con un celular Huawei P20, cuya velocidad de conexión es de 76Mb/s, con una intensidad de señal catalogada como 'Excelente', es decir, los equipos estaban dentro de un radio de 3m del punto de conexión (Huawei P20). 
-	   
-	    \section{Pruebas de integración.}
-	    
-    	    En esta sección se mostrará las pruebas de comunicación entre los distintos componentes, comprobando así que los datos enviados entre uno y otro sean los indicados para llevar a cabo un proceso de \textit{Chaffing} y \textit{Winnowing} correctamente, y por ende un inicio de sesión correcto.
-    	    
-    	    \subsection{Extensión y Servidor autentificador}
-        	    La comunicación entre el Componente I y el Componente II se establece por medio de una conexión SSL, por que los tanto los datos de inicio de sesión como el certificado viajaran de forma segura. La figura \ref{fig:WiresharkC1_C2} muestra los datos recibidos por el componente 1, el cual es el certificado. Cabe destacar que los datos que se muestran están planos ya que los datos se descifran y se muestran en el apartado \textit{Network} de Google Chrome.
-    	    
-        	    \begin{figure}[H]
-        	        \centering
-        	        
-        	        \caption{Respuesta de la Autoridad Certificadora hacia la Extensión}
-        	        \label{fig:WiresharkC1_C2}
-    	        \end{figure}
-    	    
-    	        Por otra parte al ver el mensaje de la figura \ref{fig:sesionIniciadaExito} se puede decir que la conexión se estableció satisfactoriamente y se obtuvo el certificado.
-    	    
-        	    \begin{figure}[H]
-        	        \centering 
-        	        
-        	        \caption{Sesión iniciada con éxito (Obtención de certificado de la Autoridad certificadora.)}    	 \label{fig:sesionIniciadaExito}
-    	        \end{figure}
-	        
-	        \subsection{Extensión y Servicio Web}
-	        
-	            La comunicación entre el Componente I y Componente III es donde viajará el \textit{Chaffing}, esta parte es importante debido a que el Chaffing viaja en el encabezado de la petición, y para saber que esta viajando en red hicimos uso del analizador de protocolos \textbf{Wireshark}. La figura \ref{fig:Wireshark_C1_C3} mustra la petición en wireshark donde se puede ver el apartado de \textbf{Chaffing} y el apartado de \textbf{Pattern}.
-	        
-    	        \begin{figure}[H]
-        	        \centering 
-        	        
-        	        \caption{Analizador de protocolos Wireshark de la petición dada por el usuario hacia servicio web.)}    	 \label{fig:Wireshark_C1_C3}
-    	        \end{figure}
-	        
-	        \subsection{Servidor Autentificador y API}
-	        
-    	        La comunicación entre el Componente II y Componente III sirve para verificar el certificado, debido a que la API (después de obtener el Winnowing) hace una petición a la autoridad certificadora para verificar si el certificado que obtuvo aún no ha sido revocado. En la figura \ref{fig:Wireshark_C2_C3} muestra desde el analizador de protocolos \textit{Wireshark} la respuesta que le manda la autoridad certificadora a la API.
-    	        
-    	        \begin{figure}[H]
-        	        \centering 
-        	        
-        	        \caption{Analizador de protocolos Wireshark de la petición dada por la API hacia la autoridad certificadora.)}    	 
-        	        \label{fig:Wireshark_C2_C3}
-    	        \end{figure}
-	        
-	    
-	    \section{Pruebas funcionales.}
-    	    Realizamos pruebas del funcionamiento de nuestro prototipo 2, para asegurarnos que sean correctas las entradas y salidas de nuestro sistema para este prototipo. Empezaremos con la parte del usuario, donde comprobaremos que la extensión está recibiendo el certificado del usuario de manera correcta al iniciar sesión. 
-	    
-    	    \begin{figure}[H]
-    	        \centering
-    	        
-    	        \caption{Inicio de sesión en la extensión}
-    	        \label{fig:pruebaInicioSesionUI}
-    	    \end{figure}
-	    
-    	    \begin{figure}[H]
-    	        \centering
-    	        
-    	        \caption{Certificado del cliente devuelto por el Servidor Autentificador}
-    	        \label{fig:certClienteRed}
-    	    \end{figure}
-	    
-	        Si el usuario logra obtener su certificado, entonces puede proceder a utilizar la extensión, vamos ahora a ingresar a nuestro Servicio Web de prueba, la página de la veterinaria. Si es la primera vez que accedemos, entonces debemos de registrarnos para crear nuestra cuenta de usuario en este servicio, y después iniciar sesión de manera rutinaria con nuestras credenciales, esto para que la extensión pueda asociar el certificado de la extensión de este usuario a esta cuenta, y así cuando vuelva a acceder a este mismo Servicio Web, nuestro sistema le dará acceso. 
-	    
-    	    \begin{figure}[H]
-    	        \centering
-    	        
-    	        \caption{Página de inicio del Servicio Web}
-    	        \label{fig:pruebaHomeUser}
-    	    \end{figure}
-	    
-    	    \begin{figure}[H]
-    	        \centering
-    	        
-    	        \caption{Inicio de sesión con la extensión habilitada.}
-    	        \label{fig:pruebasLoginChaffing}
-    	    \end{figure}
-	    
-	        Como podemos observar, nuestro inicio de sesión en la extensión nos pide que iniciemos sesión para vincular las credenciales, si este mensaje aparece quiere decir que todo va bien, porque la extensión detectó que es la primera vez que se inicia sesión en el Servicio Web, por lo que requiere de tu inicio de sesión para poder asignarle este usuario al certificado que va a ir inyectado con \textit{Chaffing} en la petición al servidor.\\
-	    
-    	    Cuando ingresemos nuestras credenciales, vamos a probar cerrando sesión en el Servicio Web y volviendo a entrar a la misma: 
-    	    \begin{figure}[H]
-    	        \centering
-    	        
-    	        \caption{Inicio de sesión exitoso a la cuenta con el certificado asignado.}
-    	        \label{fig:pruebasLoginHomeUser}
-    	    \end{figure}
-    	    Como podemos darnos cuenta, al querer volver a iniciar sesión nos da acceso de inmediato a nuestra cuenta para este Servicio Web, debido a que anteriormente se había asignado el mismo certificado a la cuenta que se le dio acceso.
-	    
-	    
-	    \section{Tiempos de ejecución.}
-	        En esta sección mostraremos el tiempo de ejecución de los algoritmos desarrollados para el Prototipo 2, así como la comparación con el Prototipo 1 para demostrar la mejoría que hubo. Todas las pruebas fueron realizadas en igualdad de condiciones, es decir, la computadora recién prendida (sin ningún programa abierto) y sólo ejecutando el algoritmo.\\
-	        
-	        \subsection{Algoritmo de Chaffing.}
-	        
-                Se realizó una prueba al algoritmo de \textit{Chaffing}, el cual incluye: creación de patrón, proceso de chaffing y cifrado de patrón, todo del prototipo 2. Para la prueba se utilizó una función de JavaScript llamada \textit{performance.now()}, la cual mide el tiempo con una precisión de milisegundos.\\
-	            
-	            \paragraph{Tiempo de ejecución: } 17.43 ms.\\
-	            
-	            Si comparamos el tiempo de ejecución del algoritmo de \textit{Chaffing} del Prototipo 1, el cual era de 434.2925 ms, podemos ver que la mejoría fue de 416.8625ms gracias, principalmente, a la disminución del tamaño del patrón (que afecta directamente a la manera en que se crea y en que se recorre para hacer el Chaffing) y a la eliminación del cifrado por bloques AES.
-	            
-	        \subsection{Algoritmo de Winnowing.}
-	        
-	            Se realizó una prueba al algoritmo de \textit{Winnowing}, el cual incluye: descifrado del patrón y proceso de winnowing. Para la prueba se utilizó una función de Java llamada \textit{System.currentTimeMillis()}, la cual mide el tiempo con una precisión de milisegundos.\\
-	            
-	            \paragraph{Tiempo de ejecución: } 12.46 ms.\\
-	            
-	            Si comparamos el tiempo de ejecución del algoritmo de \textit{Winnowing} del Prototipo 1, el cual era de 53.99ms, podemos ver que la mejoría fue de 41.53ms gracias a la disminución del tamaño del patrón y a la eliminación del descifrado por bloques AES.
-	        
-	        \subsection{Inicio de sesión.}
-	    
-	            Se realizaron un total de 100 pruebas del inicio de sesión por medio de este Trabajo Terminal. Este proceso incluye el tiempo que transcurre desde que el usuario da click en el botón de iniciar sesión en el Servicio Web, es decir, la interceptación de la petición por parte del Componente I) hasta la impresión de la respuesta del Servicio Web, es decir, el inicio de sesión completado exitosamente mostrando la pantalla de inicio del Servicio Web.
-	            Para medir el tiempo, se utilizó la función de JavaScript llamada \textit{performance.now()}, al igual que en la medición del algoritmo de Chaffing, puesto que esta medición se realiza desde el Componente I. Extensión.\\
-	            El tiempo que se muestra a continuación es el promedio de 100 inicios de sesión.
-	            
-	            \paragraph{Tiempo promedio de ejecución: } 335.28 ms.\\
-	            
-	            Si comparamos el tiempo de inicio de sesión del Prototipo 1, el cual era de 1101.68ms, podemos ver que la mejoría fue de 766.4ms con lo cual se comprueba que el Prototipo 2 es una mejora sustancial al sistema desarrollado en este trabajo sin la pérdida de seguridad.
-	
+\chapter{\textcolor{azulescom}{Pruebas.}}
+Las pruebas que aquí se presentan fueron realizadas con los equipos de la sección de Hardware en Herramientas a Usar, sobre una red local creada con un celular Huawei P20, cuya velocidad de conexión es de 76Mb/s, con una intensidad de señal catalogada como 'Excelente', es decir, los equipos estaban dentro de un radio de 3m del punto de conexión (Huawei P20). 
+
+\section{Pruebas de integración.}
+
+En esta sección se mostrará las pruebas de comunicación entre los distintos componentes, comprobando así que los datos enviados entre uno y otro sean los indicados para llevar a cabo un proceso de \textit{Chaffing} y \textit{Winnowing} correctamente, y por ende un inicio de sesión correcto.
+
+\subsection{Extensión y Servidor autentificador}
+La comunicación entre el Componente I y el Componente II se establece por medio de una conexión SSL, por que los tanto los datos de inicio de sesión como el certificado viajaran de forma segura. La figura \ref{fig:WiresharkC1_C2} muestra los datos recibidos por el componente 1, el cual es el certificado. Cabe destacar que los datos que se muestran están planos ya que los datos se descifran y se muestran en el apartado \textit{Network} de Google Chrome.
+
+\begin{figure}[H]
+\centering
+
+\caption{Respuesta de la Autoridad Certificadora hacia la Extensión}
+\label{fig:WiresharkC1_C2}
+\end{figure}
+
+Por otra parte al ver el mensaje de la figura \ref{fig:sesionIniciadaExito} se puede decir que la conexión se estableció satisfactoriamente y se obtuvo el certificado.
+
+\begin{figure}[H]
+\centering 
+
+\caption{Sesión iniciada con éxito (Obtención de certificado de la Autoridad certificadora.)}    	 \label{fig:sesionIniciadaExito}
+\end{figure}
+
+\subsection{Extensión y Servicio Web}
+
+La comunicación entre el Componente I y Componente III es donde viajará el \textit{Chaffing}, esta parte es importante debido a que el Chaffing viaja en el encabezado de la petición, y para saber que esta viajando en red hicimos uso del analizador de protocolos \textbf{Wireshark}. La figura \ref{fig:Wireshark_C1_C3} mustra la petición en wireshark donde se puede ver el apartado de \textbf{Chaffing} y el apartado de \textbf{Pattern}.
+
+\begin{figure}[H]
+\centering 
+
+\caption{Analizador de protocolos Wireshark de la petición dada por el usuario hacia servicio web.)}    	 \label{fig:Wireshark_C1_C3}
+\end{figure}
+
+\subsection{Servidor Autentificador y API}
+
+La comunicación entre el Componente II y Componente III sirve para verificar el certificado, debido a que la API (después de obtener el Winnowing) hace una petición a la autoridad certificadora para verificar si el certificado que obtuvo aún no ha sido revocado. En la figura \ref{fig:Wireshark_C2_C3} muestra desde el analizador de protocolos \textit{Wireshark} la respuesta que le manda la autoridad certificadora a la API.
+
+\begin{figure}[H]
+\centering 
+
+\caption{Analizador de protocolos Wireshark de la petición dada por la API hacia la autoridad certificadora.)}    	 
+\label{fig:Wireshark_C2_C3}
+\end{figure}
+
+
+\section{Pruebas funcionales.}
+Realizamos pruebas del funcionamiento de nuestro prototipo 2, para asegurarnos que sean correctas las entradas y salidas de nuestro sistema para este prototipo. Empezaremos con la parte del usuario, donde comprobaremos que la extensión está recibiendo el certificado del usuario de manera correcta al iniciar sesión. 
+
+\begin{figure}[H]
+\centering
+
+\caption{Inicio de sesión en la extensión}
+\label{fig:pruebaInicioSesionUI}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\caption{Certificado del cliente devuelto por el Servidor Autentificador}
+\label{fig:certClienteRed}
+\end{figure}
+
+Si el usuario logra obtener su certificado, entonces puede proceder a utilizar la extensión, vamos ahora a ingresar a nuestro Servicio Web de prueba, la página de la veterinaria. Si es la primera vez que accedemos, entonces debemos de registrarnos para crear nuestra cuenta de usuario en este servicio, y después iniciar sesión de manera rutinaria con nuestras credenciales, esto para que la extensión pueda asociar el certificado de la extensión de este usuario a esta cuenta, y así cuando vuelva a acceder a este mismo Servicio Web, nuestro sistema le dará acceso. 
+
+\begin{figure}[H]
+\centering
+
+\caption{Página de inicio del Servicio Web}
+\label{fig:pruebaHomeUser}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\caption{Inicio de sesión con la extensión habilitada.}
+\label{fig:pruebasLoginChaffing}
+\end{figure}
+
+Como podemos observar, nuestro inicio de sesión en la extensión nos pide que iniciemos sesión para vincular las credenciales, si este mensaje aparece quiere decir que todo va bien, porque la extensión detectó que es la primera vez que se inicia sesión en el Servicio Web, por lo que requiere de tu inicio de sesión para poder asignarle este usuario al certificado que va a ir inyectado con \textit{Chaffing} en la petición al servidor.\\
+
+Cuando ingresemos nuestras credenciales, vamos a probar cerrando sesión en el Servicio Web y volviendo a entrar a la misma: 
+\begin{figure}[H]
+\centering
+
+\caption{Inicio de sesión exitoso a la cuenta con el certificado asignado.}
+\label{fig:pruebasLoginHomeUser}
+\end{figure}
+Como podemos darnos cuenta, al querer volver a iniciar sesión nos da acceso de inmediato a nuestra cuenta para este Servicio Web, debido a que anteriormente se había asignado el mismo certificado a la cuenta que se le dio acceso.
+
+
+\section{Tiempos de ejecución.}
+En esta sección mostraremos el tiempo de ejecución de los algoritmos desarrollados para el Prototipo 2, así como la comparación con el Prototipo 1 para demostrar la mejoría que hubo. Todas las pruebas fueron realizadas en igualdad de condiciones, es decir, la computadora recién prendida (sin ningún programa abierto) y sólo ejecutando el algoritmo.\\
+
+\subsection{Algoritmo de Chaffing.}
+
+Se realizó una prueba al algoritmo de \textit{Chaffing}, el cual incluye: creación de patrón, proceso de chaffing y cifrado de patrón, todo del prototipo 2. Para la prueba se utilizó una función de JavaScript llamada \textit{performance.now()}, la cual mide el tiempo con una precisión de milisegundos.\\
+
+\paragraph{Tiempo de ejecución: } 17.43 ms.\\
+
+Si comparamos el tiempo de ejecución del algoritmo de \textit{Chaffing} del Prototipo 1, el cual era de 434.2925 ms, podemos ver que la mejoría fue de 416.8625ms gracias, principalmente, a la disminución del tamaño del patrón (que afecta directamente a la manera en que se crea y en que se recorre para hacer el Chaffing) y a la eliminación del cifrado por bloques AES.
+
+\subsection{Algoritmo de Winnowing.}
+
+Se realizó una prueba al algoritmo de \textit{Winnowing}, el cual incluye: descifrado del patrón y proceso de winnowing. Para la prueba se utilizó una función de Java llamada \textit{System.currentTimeMillis()}, la cual mide el tiempo con una precisión de milisegundos.\\
+
+\paragraph{Tiempo de ejecución: } 12.46 ms.\\
+
+Si comparamos el tiempo de ejecución del algoritmo de \textit{Winnowing} del Prototipo 1, el cual era de 53.99ms, podemos ver que la mejoría fue de 41.53ms gracias a la disminución del tamaño del patrón y a la eliminación del descifrado por bloques AES.
+
+\subsection{Inicio de sesión.}
+
+Se realizaron un total de 100 pruebas del inicio de sesión por medio de este Trabajo Terminal. Este proceso incluye el tiempo que transcurre desde que el usuario da click en el botón de iniciar sesión en el Servicio Web, es decir, la interceptación de la petición por parte del Componente I) hasta la impresión de la respuesta del Servicio Web, es decir, el inicio de sesión completado exitosamente mostrando la pantalla de inicio del Servicio Web.
+Para medir el tiempo, se utilizó la función de JavaScript llamada \textit{performance.now()}, al igual que en la medición del algoritmo de Chaffing, puesto que esta medición se realiza desde el Componente I. Extensión.\\
+El tiempo que se muestra a continuación es el promedio de 100 inicios de sesión.
+
+\paragraph{Tiempo promedio de ejecución: } 335.28 ms.\\
+
+Si comparamos el tiempo de inicio de sesión del Prototipo 1, el cual era de 1101.68ms, podemos ver que la mejoría fue de 766.4ms con lo cual se comprueba que el Prototipo 2 es una mejora sustancial al sistema desarrollado en este trabajo sin la pérdida de seguridad.
+
 %   %   %   %   %   %   %   %   %   %
 %		        Capítulo 11					%
 %   			CONCLUSIONES 		%
 %                               				  %
 %   %   %   %   %   %   %   %   %	%
-	\chapter{\textcolor{azulescom}{Conclusiones}}
+\chapter{\textcolor{azulescom}{Conclusiones}}
 
-		
+
 %   %   %   %   %   %   %   %   %   %
 %		        Capítulo 12					%
 %   	TRABAJO A FUTURO		  %
 %                               				  %
 %   %   %   %   %   %   %   %   %	%
-	\chapter{\textcolor{azulescom}{Trabajo a futuro.}}
+\chapter{\textcolor{azulescom}{Trabajo a futuro.}}
 
-	\newpage
+\newpage
+
+
 \end{comment}
-	% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
-	\newpage
 
-    \begin{thebibliography}{20}
-   		\bibitem{refRAE}  		
-		Real Academia Española (2020, noviembre), Diccionario de la lengua española, [En línea]. Disponible: https://dle.rae.es [Último acceso: 10 de diciembre del 2020].
-
-		\bibitem{refOxfordLex}  		
-		Oxford Lexico (2020, noviembre), Definitions, Meanings, Synonyms, and Grammar by Oxford, [En línea]. Disponible: https://www.lexico.com [Último acceso: 2 de diciembre del 2020].
-		
-		 %  Introducción
-		\bibitem{Bourreau_and_Gensollen}  		
-		Chaney, D. (2012). The Music Industry in the Digital Age: Consumer Participation in Value Creation. International Journal of Arts Management, (1), pp. 15.
-		
-		\bibitem{Generating_Text_with_RNN}  	
-		Sutskever, I., Martens, J., Hinton, G. E. (2011, January). Generating text with recurrent neural networks. In ICML.
-		
-		\bibitem{CNN_for_Sentence_Classification}  	
-		Kim, Y. (2014). Convolutional neural networks for sentence classification. arXiv preprint arXiv:1408.5882.
-		
-		\bibitem{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}  	
-		Monteith, K., Martinez, T. R., \& Ventura, D. (2012, May). Automatic Generation of Melodic Accompaniments for Lyrics. In ICCC, pp. 87-94.
-		
-		\bibitem{Conditional_Rap_Lyrics_Generation}  	
-		Nikolov, N. I., Malmi, E., Northcutt, C. G., Parisi, L. (2020). Conditional Rap Lyrics Generation with Denoising Autoencoders. arXiv preprint arXiv:2004.03965.
-		
-		\bibitem{What_about_the_music}  	
-		Baker, F. A. (2015). What about the music? Music therapists’ perspectives on the role of music in the therapeutic songwriting process. Psychology of Music, 43(1), pp. 122-139.
-		
-		\bibitem{genero_musical_en_la_musica_popular}  	
-		Guerrero, J. (2012). El género musical en la música popular: algunos problemas para su caracterización. Trans. Revista transcultural de música, (16), pp. 1-22.
-		
-		\bibitem{Bert}  	
-		Wang, A., \& Cho, K. (2019). Bert has a mouth, and it must speak: Bert as a markov random field language model. arXiv preprint arXiv:1902.04094.
-		
-		\bibitem{spaCy}  	
-		Honnibal, M.,\& Montani, I. (2017). spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing.
-
-		\bibitem{refSistema}  		
-		O. Jaramillo, Universidad Nacional Autonoma de México (2007, mayo 03), El concepto de Sistema, [En línea]. Disponible: https://www.ier.unam.mx/~ojs/pub/Termodinamica/node9.html [Último acceso: 2 de diciembre del 2020].
-
-		\bibitem{refMaquinasFinitas}  		
-		J. A. Gutiérrez Orozco, Escuela Superior de Cómputo (2008, septiembre 15), Máquinas de Estados Finitos, [En línea]. Disponible: http://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/Summer\_Research\_files/maquinasef.pdf [Último acceso: 15 de diciembre del 2020].
-
-		\bibitem{refInteligencia_Artificial2}
-		IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
-
-		\bibitem{refQueSonRedesNeu}  		
-		L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].
-
-		\bibitem{refTiposRedesNeu1}  		
-		S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Network\_Zoo [Último acceso: 20 de noviembre del 2020].
-
-		\bibitem{refTiposRedesNeu2}  		
-		A. Mehta (2019, enero 25), A Comprehensive Guide to Types of Neural Networks, [En línea]. Disponible: https://www.digitalvidya.com/blog/types-of-neural-networks/ [Último acceso: 15 de noviembre del 2020].
-
-		\bibitem{refTiposRedesNeu3}  		
-		P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
-		
-		\bibitem{refTiposRedesNeu4} 
-		IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
-		
-		\bibitem{refNeuronaNat}
-		amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
-
-		\bibitem{refNeuronaArt}
-		C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
-
-		\bibitem{refQueEsBD}  		
-		Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
-
-		\bibitem{refEstructuraCancion1}  		
-		Escribir Canciones (2008), Estructura y elementos de una canción, [En línea]. Disponible: https://dle.rae.es [Último acceso: 2 de diciembre del 2020].
-
-		\bibitem{refEstructuraCancion2}  		
-		Swing this Music (2008), ¿QUÉ SECCIONES PUEDE TENER UNA CANCIÓN?española, [En línea]. Disponible: https://sites.google.com/site/swingthismusiccast/interpretacio/estructura-cancion/secciones-de-una-cancion [Último acceso: 2 de diciembre del 2020].
-
-		\bibitem{refMarkov}  		
-		J. R. Norris (1997), Markov Chains, [En línea]. Disponible: https://cape.fcfm.buap.mx/jdzf/cursos/procesos/libros/norris.pdf [Último acceso: 15 de diciembre del 2020].
-
-		\bibitem{refFlask1}  		
-		Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
-
-		\bibitem{refFlask2}  		
-		Gajesh (2019, julio 17), The complete Flask beginner tutorial, [En línea]. Disponible: https://dev.to/gajesh/the-complete-flask-beginner-tutorial-124i [Último acceso: 16 de diciembre del 2020].
-
-		\bibitem{refFlask3}  		
-		A. Abdelaal (2019), Deploying a Flask Application to Heroku, [En línea]. Disponible: https://stackabuse.com/deploying-a-flask-application-to-heroku/ [Último acceso: 16 de diciembre del 2020].
-		
-		% Apache
-		\bibitem{Apache}  		
-		Documentation Group. (n.d.). Welcome! - The Apache HTTP Server Project. Apache. Retrieved April 6, 2021, from https://httpd.apache.org/
-		\bibitem{what_is_apache}  		
-		G., D. (2021, March 9). What is Apache? An In-Depth Overview of Apache Web Server. Hostinger Tutorials. https://www.hostinger.com/tutorials/what-is-apache
-		% Servidor Web
-		\bibitem{What_is_a_web_server}  		
-		What is a web server? - Learn web development | MDN. (2021, January 27). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_web\_server
-		% Certificado SSL
-		\bibitem{SSL}  		
-		https://letsencrypt.org/es/
-		\bibitem{what_is_SSL} 
-		What is SSL? (2017, May 15). SSLSHOPPER. https://www.sslshopper.com/what-is-ssl.html
-		\bibitem{ssl_certificates} 
-		Verisign. (2015, August 30). ¿Qué es un certificado SSL? – Verisign. Verisign NameStudio. https://www.verisign.com/es\_LA/website-presence/online/ssl-certificates/index.xhtml
-		% Plataforma en la nube de ML 
-		\bibitem{data_science_in_the_cloud} 
-		Bavati, I. (2020, September 22). Data Science in the Cloud - Towards Data Science. Medium. https://towardsdatascience.com/data-science-in-the-cloud-239b795a5792 (September 2020)
-		\bibitem{comparing-google-cloud-platform-aws-and-azure} 
-		G. (2021, March 5). Comparing Google Cloud Platform, AWS and Azure - Georgian Impact Blog. Medium. https://medium.com/georgian-impact-blog/comparing-google-cloud-platform-aws-and-azure-d4a52a3adbd2
-		\bibitem{cloud_vs_onprem} 
-		J. (2020, July 30). Choosing Your Deep Learning Infrastructure: The Cloud vs. On-Prem Debate. Determined AI. https://determined.ai/blog/cloud-v-onprem
-		\bibitem{what_is_jupyter} 
-		I., A. (2015, October 2). Jupyter/IPython Notebook Quick Start Guide. Jupyter Notebook Beginner Guide. https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what\_is\_jupyter.html
-		\bibitem{google_cloud_vs_aws} 
-		Jones, E. (2021, March 25). Google Cloud vs AWS in 2021 (Comparing the Giants). Kinsta. https://kinsta.com/blog/google-cloud-vs-aws/
-    
-    
-    %---------------------------Referencias Originales ↓----------------------------%
-
-	    
-	    \bibitem{refMongoDB}
-	    MongoDB. (2019), ¿Qué es MongoDB?, [En línea]. Disponible: https://www.mongodb.com/es. [Último acceso: 26 Marzo 2021].
-        
-        \bibitem{refCookies}
-        Universitat de Valéncia (2016), ¿Qué son las cookies? [En línea]. Disponible:           https://www.uv.es/uvweb/universidad/es/politica-privacidad/politica-cookies/son-cookies--1285919089226.html [Último acceso: 26 Marzo 2021]
-        
-        \bibitem{refNodeOpenSSL}
-        Noteworthy Programming Masterpiece (2019), openssl-nodejs [En línea]. Disponible: https://www.npmjs.com/package/openssl-nodejs [Último acceso: 26 Marzo 2021]
-        
-        \bibitem{refTomcat}
-        The Apache Software Foundation (2019), Apache Tomcat [En línea]. Disponible: http://tomcat.apache.org/index.html [Último acceso: 26 Marzo 2021]
-        
-        \bibitem{refmysql}
-        Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
-        
-	\end{thebibliography}	
-
-\end{document}
+%\end{document}
 
 
