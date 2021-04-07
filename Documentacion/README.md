@@ -2,8 +2,8 @@
 
 - [X] Checar como poner comillas correctamente en LaTex -> Se puede con “Hola”
 - [X] Arreglar Glosario y Acrónimos (No se muestra al principio del documento como debería)
-- [ ] Cambiar y agregar todos los acrónimos a formato LaTex
-- [ ] Cambiar y agregar todos las palabras técnicas a Glosario
+- [ ] Cambiar y agregar todos los acrónimos a formato LaTex -> **Jaime lo esta haciendo**
+- [ ] Cambiar y agregar todos las palabras técnicas a Glosario. -> **Adrian lo hace**
 
 
 ## Información de cada sección:
@@ -27,7 +27,7 @@
 		- [X] 2.2.1. Recurrent Neural Network 
 			- [X] Long Short Term Memory 
 		- [X] 2.2.2. Neuronas
-		- [ ] 2.2.3. Aprendizaje de las Redes Neuronales - Falta agregar información del funcionamiento o aprendizaje de redes neuronales (Alfredo trabajando este punto)
+		- [ ] 2.2.3. Aprendizaje de las Redes Neuronales - Falta agregar información del funcionamiento o aprendizaje de redes neuronales -> **Alfredo trabajando este punto** 
 		- [X] 2.2.4. Redes Long-Short Term 
 		- [ ] 2.2.5. Bert - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
 		- [ ] 2.2.6. GPT-2 - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
@@ -47,7 +47,7 @@
 	- [X] 2.7. Apache. 
 	- [X] 2.8. Servidor Web. 
 	- [X] 2.9. Certificado SSL 
-	- [ ] 2.10. Plataforma en la Nube de Aprendizaje Automático
+	- [ ] 2.10. Plataforma en la Nube de Aprendizaje Automático -> **Jaime lo hará**
 		- [ ] 2.10.1. Amazon - Dejar solo los servicios que se usarán
 		- [ ] 2.10.2. Azure. - Comentarlo
 		- [ ] 2.10.3. Google. - Comentarlo
@@ -56,12 +56,12 @@
 - [X] 3. Análisis 
 	- [X] 3.1. Estudio de Factibilidad 
 		- [X] 3.1.1. Factibilidad Técnica 
-		- [X] 3.1.2. Factibilidad Operativa - Arreglar tabla (líneas)
+		- [ ] 3.1.2. Factibilidad Operativa - Arreglar tabla (líneas)
 		- [X] 3.1.3. Factibilidad Económica 
 	- [X] 3.2. Herramientas a usar  
 		- [X] 3.2.1. Software - Falta agregar (Gunicorn, Apache, Flask, Python, AWS (herramienta que se usará),Base de Datos (NOSQL), REACT,(si falta alguna ponerla)
 		- [X] 3.2.2. Hardware 
-
+- [ ] Bibliografía - Ordenar por orden de aparición. -> **Adrián lo hará**
 ## Falta agregar las secciones:
 ### Iteración 1. ( Base de Datos)
 - Base de Datos - Explicar como se sacó la Base de Datos
