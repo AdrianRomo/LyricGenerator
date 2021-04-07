@@ -24,13 +24,12 @@
        - [X] 2. Marco teórico
             - [X] 2.1. Inteligencia Artificial
             - [X] 2.2. Redes neuronales 
-                - [X] 2.2.1. Recurrent Neural Network 
-                    - [X] Long Short Term Memory 
-                - [X] 2.2.2. Neuronas
-                - [ ] 2.2.3. Aprendizaje de las Redes Neuronales - Falta agregar información del funcionamiento o aprendizaje de redes neuronales -> **Alfredo trabajando este punto** 
-                - [X] 2.2.4. Redes Long-Short Term 
-                - [ ] 2.2.5. Bert - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
-                - [ ] 2.2.6. GPT-2 - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes)
+                - [X] 2.2.1. Neuronas                 
+                - [X] 2.2.2. Aprendizaje de las Redes Neuronales
+                - [X] 2.2.3. Recurrent Neural Network 
+                    - [X] Long Short Term Memory
+                - [ ] 2.2.5. Bert - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes) -> **Alfredo trabajando este punto** 
+                - [ ] 2.2.6. GPT-2 - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes) -> **Alfredo trabajando este punto** 
             - [ ] 2.3. Base de datos - Falta agregar información
                 - [ ] 2.3.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
             - [ ] 2.4. Canción - Poner texto más formal y agregar una referencia con cita
@@ -56,7 +55,7 @@
        - [X] 3. Análisis 
             - [X] 3.1. Estudio de Factibilidad 
                 - [X] 3.1.1. Factibilidad Técnica 
-                - [ ] 3.1.2. Factibilidad Operativa - Arreglar tabla (líneas)
+                - [X] 3.1.2. Factibilidad Operativa
                 - [X] 3.1.3. Factibilidad Económica 
             - [X] 3.2. Herramientas a usar  
                 - [ ] 3.2.1. Software - Falta agregar (Gunicorn, Apache, Flask, Python, AWS (herramienta que se usará),Base de Datos (NOSQL), REACT,(si falta alguna ponerla)

@@ -114,13 +114,18 @@
     name=Máquinas de Estados Finitos,
     description={Conocidas también con Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
+
+%------------------FINAL DE GLOSARIO-----------------------%
+
+%---------------------------ACRÓNIMOS----------------------------%
+
 \newacronym{orm}{ORM}{Object Relational Manager}
 \newacronym{wsgi}{WSGI}{Web Server Gateway Interface}
 \newacronym{dbms}{DBMS}{Sistema de gestión de base de datos}
 \newacronym{aws}{AWS}{Amazon Web Services}
 
 
-%------------------FINAL DE GLOSARIO-----------------------%
+%------------------FINAL DE ACRÓNIMOS-----------------------%
 
 %------------------ESTABLECER COLORES----------------------%
 \definecolor{guindapoli}{RGB}{102, 0, 51}
@@ -578,17 +583,6 @@ natural y redes neuronales}\\
 %					\centering 
 %					\caption{Diagrama Red Neuronal Convolucional}
 %				\end{figure}
-				\subsection{Aprendizaje de las Redes Neuronales}
-				\subsection{Recurrent Neural Network – Long Short Term Memory}
-				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
-				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
-				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\par
-				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
-				\newpage
-				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
-					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
-					\centering 
-				\end{figure}
 				\subsection{Neuronas}
 				\subsubsection{Neurona Natural}
 				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\par
@@ -603,6 +597,25 @@ natural y redes neuronales}\\
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
 					\centering 
 				\end{figure}
+				\subsection{Aprendizaje de las Redes Neuronales}
+				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\par
+				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, o eliminarlas, o agregar y eliminar neuronas. Incluso podríamos modificar la función de entrada o la función de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\par
+				El entrenamiento es un proceso necesario para toda red neuronal, y es un proceso en el que la red se familiariza con el problema que necesita resolver. En la práctica, generalmente se tienen algunos datos recopilados en función de los cuales necesitamos crear nuestras predicciones, clasificación, o cualquier otro procesamiento. Estos datos se denominan conjunto de entrenamiento. Según el comportamiento durante el entrenamiento y la naturaleza del conjunto de entrenamiento, tenemos algunos tipos de aprendizajes:
+				\begin{itemize}
+					\item \textbf{Aprendizaje no supervisado: }el conjunto de entrenamiento solo contiene entradas. La red intenta identificar entradas similares y clasificarlas en ciertas categorías.
+					\item \textbf{Aprendizaje reforzado: }el conjunto de entrenamiento contiene entradas, pero la red también recibe información adicional durante la formación. Lo que sucede es que una vez que la red calcula la salida para una de las entradas, proporcionamos información que indica si el resultado fue correcto o incorrecto y, posiblemente, la naturaleza del error que cometió la red.
+					\item \textbf{Aprendizaje supervisado: }Aprendizaje supervisado: el conjunto de entrenamiento contiene entradas y salidas deseadas. De esta manera, la red puede verificar su salida calculada con la salida deseada y tomar las acciones pertinentes para reformular su cálculo.
+				\end{itemize}
+				\subsection{Recurrent Neural Network – Long Short Term Memory}
+				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
+				La primera capa esta forma de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo esta capa comenzara a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
+				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\par
+				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
+				\newpage
+				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
+					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
+					\centering 
+				\end{figure}				
 				\subsection{Bert}
 				\subsection{GPT-2}
 %				\subsubsection{Modular Neural Network}
@@ -1152,29 +1165,29 @@ natural y redes neuronales}\\
     	\subsection{Factibilidad Operativa}
     	Los recursos operativos de este trabajo terminal se calcularon con base en los recursos humanos con los que se cuenta actualmente y un análisis de las horas que el personal estará en operación trabajando sobre éste, el cual se muestra a continuación:
     	
-    	\begin{table}[H]
-    		\begin{tabular}{|p{1.9cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|}
-    			\hline
+    	\begin{table}[h!]
+    		\begin{tabular}{|p{2cm}|p{1.4cm}|p{2.2cm}|p{1.6cm}|p{2.2cm}|p{1.6cm}|}
+    			\hline    			
     			\rowcolor{guindapoli}
     			\multicolumn{6}{|c|}{\textbf{\textcolor{white}{Horas a trabajar en el desarrollo del trabajo terminal}}}\\
     			\hline
-    			\rowcolor{azulfuerte}Mes & No. de Días & Sábado y Domingo & Días h\'abiles & Horas de trabajo por día & Horas Totales \\
+    			Mes & No. de Días & Sábado y Domingo & Días hábiles & Horas de trabajo por día & Horas Totales \\
     			\hline
-    			\cellcolor{azulclaro}Marzo & 31 & 8 & 22 & 2 & 44 \\ 
+    			Marzo & 31 & 8 & 22 & 2 & 44 \\ 
     			\hline
-    			\cellcolor{azulclaro}Abril & 30 & 8 & 15 & 2 & 30 \\ 
+    			Abril & 30 & 8 & 15 & 2 & 30 \\ 
     			\hline
-    			\cellcolor{azulclaro}Mayo & 31 & 10 & 19 & 2 & 38 \\
+    			Mayo & 31 & 10 & 19 & 2 & 38 \\
     			\hline
-    			\cellcolor{azulclaro}Junio & 30 & 10 & 17 & 2 & 34 \\
+    			Junio & 30 & 10 & 17 & 2 & 34 \\
     			\hline
-    			\cellcolor{azulclaro}Agosto & 31 & 10 & 18 & 2 & 24 \\
+    			Agosto & 31 & 10 & 18 & 2 & 24 \\
     			\hline
-    			\cellcolor{azulclaro}Septiembre & 30 & 8 & 20 & 2 & 40 \\ 
+    			Septiembre & 30 & 8 & 20 & 2 & 40 \\ 
     			\hline
-    			\cellcolor{azulclaro}Octubre & 31 & 10 & 20 & 2 & 40 \\ 
+    			Octubre & 31 & 10 & 20 & 2 & 40 \\ 
     			\hline
-    			\cellcolor{azulclaro}Noviembre & 31 & 8 & 18 & 2 & 36 \\ 
+    			Noviembre & 31 & 8 & 18 & 2 & 36 \\ 
     			\hline
     		\end{tabular}
     		\caption[Horas de trabajo]{Relación horas de trabajo estimadas para la realización de este trabajo terminal}
@@ -1429,6 +1442,16 @@ natural y redes neuronales}\\
 	\bibitem{refQueSonRedesNeu}  		
 	L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].
 	
+		
+	\bibitem{refNeuronaNat}
+	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
+	
+	\bibitem{refNeuronaArt}
+	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
+	
+	\bibitem{refAprendizajeRedes}  		
+	Rubik's Code  (2018, febrero), How do Artificial Neural Networks learn?, [En línea]. Disponible: https://rubikscode.net/2018/01/15/how-artificial-neural-networks-learn/ [Último acceso: 7 de abril del 2021].	
+	
 	\bibitem{refTiposRedesNeu1}  		
 	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Network\_Zoo [Último acceso: 20 de noviembre del 2020].
 	
@@ -1440,12 +1463,6 @@ natural y redes neuronales}\\
 	
 	\bibitem{refTiposRedesNeu4} 
 	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
-	
-	\bibitem{refNeuronaNat}
-	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
-	
-	\bibitem{refNeuronaArt}
-	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
 	
 	\bibitem{refQueEsBD}  		
 	Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
