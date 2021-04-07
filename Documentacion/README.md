@@ -41,6 +41,12 @@
                 - [X] 2.4.6. Puente.  
                 - [X] 2.4.7. Cierre. 
                 - [X] 2.4.8. Estructura de una canción 
+            - [ ] 2.5. Procesamiento de Lenguaje Natural - Agregar este punto.
+            	- Técnicas
+            	- Objetivo
+            	- Historia
+            	- Funcionalidad
+            	- Cómo funciona	
             - [X] 2.5. Cadenas de Markov 
             - [X] 2.6. Flask
             - [X] 2.7. Apache. 
