@@ -743,7 +743,7 @@ natural y redes neuronales}\\
 		Si se copia esa URL y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\par
 		Como se hizo mención al inicio, una de las características de Flask es que se pueden manejar las rutas de la aplicación web usando el método route(), siempre que un usuario visite esa ruta se va a ejecutar el método adjuntado a este.\par
 		Flask soporta diferentes tipos de estructuras de variables. Se pueden incluir cadenas personalizadas, números enteros y otros tipos de caracteres en las URLs.\par
-		Si se requiere manejar solicitudes, Flask tiene soporte para solicitudes de tipo GET y POST, por defecto Flask solo admite peticiones de tipo GET, si necesitamos hacer uso de peticiones tipo POST estas debe de estar especificada como parámetro de la función route(), por ejemplo:\par
+		Si se requiere manejar solicitudes, Flask tiene soporte para solicitudes de tipo GET y POST, por defecto Flask solo admite peticiones de tipo GET, por lo que si se necesita hacer uso de peticiones tipo POST esta debe de estar especificada como parámetro de la función route(), por ejemplo:\par
 		\begin{center}
 		@app.route('/login', methods=['POST'])
 		\end{center}
@@ -818,14 +818,13 @@ natural y redes neuronales}\\
 %	    Una de las técnicas de autentificación que actualmente se usa es ''recordar la sesión'' usando las ''cookies'', en la siguiente sección, nos adentraremos en definir qué son las cookies y exponer sus vulnerabilidades.
 	    
 	    \section{Apache}
-	 	Apache es un servidor web gratuito y de código abierto que permite que los dueños de sitios web mostrar contenido en ellas, no es un servidor físico, sino más bien un software que corre en un servidor.
-	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y regreso entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo HTTP, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.
+	 	Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
+	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo HTTP, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
 	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.\\
 		
 		\newpage
-		En el cuadro 1 que se presenta a continuación, se muestran las características de aplicaciones web similares y comparándolas con nuestra propuesta:
 		
-		\begin{table}[hbt!]\caption{Tabla comparativa de los distintos servidores web contemplados}% title of Table
+		\begin{table}[hbt!]\caption{Tabla comparativa de los distintos servidores web contemplados para nuestro proyecto}% title of Table
 			\centering % used for centering table
 			\resizebox{15cm}{!} {
 				\begin{tabular}{c c c}% centered columns (3 columns)
@@ -853,13 +852,13 @@ natural y redes neuronales}\\
 		\end{table}
 
 	    \section{Servidor Web}
-	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Jala contenido del servidor en cada petición del usuario y lo entrega al sitio web.\\
+	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\\
 	        Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java, y otros.\\
-	        Cuando escuchas la palabra ‘servidor web’, piensa en eso como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
+	        Cuando se escuche la palabra ‘servidor web’, se puede pensar en ello como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
 
 		 \section{Certificado SSL}
-			Conocido como (Secure Sockets Layer) o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape in los 1990. SSL crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin los problemas de espionaje, manipulación de la información, y falsificación del mensaje. Básicamente, la capa SSL permite que dos partes tengan una “conversación” privada.\\
-			Para establecer esta conexión segura, se instala en un servidor web un certificado SSL (también llamado "certificado digital") que cumple dos funciones:
+			Conocido como (Secure Sockets Layer) o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. SSL crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa SSL permite que dos partes tengan una “conversación” privada.\par
+			Para establecer esta conexión segura, se instala en un servidor web un certificado SSL (también llamado 'certificado digital') que cumple dos funciones:
 			
 			\begin{itemize}
 				\item Autentificar la identidad del sitio web, garantizando a los visitantes que no están en un sitio falso. 
