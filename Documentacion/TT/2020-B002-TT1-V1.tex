@@ -876,46 +876,52 @@ natural y redes neuronales}\\
 		\newpage
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
-		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitan este montón de iteraciones para producir el modelo más preciso. El cómputo en la nube permite modelar capacidad de almacenamiento y maneja cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, AWS ofrece instancias de GPU’s con capacidad de memoria que va de los 8 a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
-		Las GPU son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece GPU's de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
+		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\par 
+		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, AWS ofrece instancias de GPUs con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
+		Las GPUs son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece GPUs de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
 		\subsection{Amazon}
-		Dentro de las bondades que ofrecen los Servicios Web de Amazon (AWS por sus siglas en ingl\'es) y que nos pueden servir en nuestro proyecto se pueden encontrar: 
+		Dentro de las bondades que ofrecen los Servicios Web de Amazon (AWS por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
 		
 		\begin{itemize}
 			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (EC2 por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
-			Aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, y recomendaciones.\\ 
-			El mercado de AWS ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo. Las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas por uno mismo. Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker. Se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información.
+			Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\par 
+			El mercado de AWS ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\par 
+			Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
 			
-			\item \textbf{Lex:} Fue diseñado para integrar chatbots en aplicaciones. Lex cuenta con capacidades de aprendizaje profundo basado en procesamiento de lenguaje natural (NLP) y reconocimiento automático de voz. La API puede reconocer texto hablado y escrito. 
-			\item \textbf{Rekognition:} Es un servicio de visión computacional que simplifica el proceso de desarrollo para aplicaciones de reconocimiento de imagen y vídeo.
 		\end{itemize}
 		
-		\subsection{Azure}
-		Comparado a AWS, las propuestas del aprendiza de máquina de Azure son más flexibles en términos de algoritmos out-of-the-box.
+		\begin{comment}
 		
-		\begin{itemize}
+			\item \textbf{Lex:} Fue diseñado para integrar chatbots en aplicaciones. Lex cuenta con capacidades de aprendizaje profundo basado en procesamiento de lenguaje natural (NLP) y reconocimiento automático de voz. La API puede reconocer texto hablado y escrito. 
+			\item \textbf{Rekognition:} Es un servicio de visión computacional que simplifica el proceso de desarrollo para aplicaciones de reconocimiento de imagen y vídeo.
+		
+			\subsection{Azure}
+			Comparado a AWS, las propuestas del aprendiza de máquina de Azure son más flexibles en términos de algoritmos out-of-the-box.
+			
+			\begin{itemize}
 			\item \textbf{Servicios de Aprendizaje Automático:} Es una gran librería de algoritmos de aprendizaje automático pre-entrenados y pre-empacados, también provee de un ambiente para implementar estos algoritmos y aplicarlos a aplicaciones del mundo real. Se puede usar la interfaz de usuario para entrenar, probar y evaluar los modelos así como también provee soluciones para Inteligencia Artificial (IA) (Esto incluye visualización y otra información que puede ayudar a comprender el comportamiento del modelo y comparar algoritmos para encontrar la mejor opción). Algunas de las ofertas dentro de este apartado son:
 			
 			\begin{itemize}
-				\item \textbf{Paquetes de Python:} Contiene funciones y librerías para visión computacional, análisis de texto, previsión, y aceleramiento de hardware. 
-				\item \textbf{Gestión de Modelo:} Provee un entorno para acoger modelos, gestionar versiones, y monitorear modelos que corran en Azure o en soluciones propias de la casa.
-				\item \textbf{Workbench:} Una simple línea de comandos y entorno de escritorio con dashboards y herramientas de seguimiento del desarrollo de modelos. 
+			\item \textbf{Paquetes de Python:} Contiene funciones y librerías para visión computacional, análisis de texto, previsión, y aceleramiento de hardware. 
+			\item \textbf{Gestión de Modelo:} Provee un entorno para acoger modelos, gestionar versiones, y monitorear modelos que corran en Azure o en soluciones propias de la casa.
+			\item \textbf{Workbench:} Una simple línea de comandos y entorno de escritorio con dashboards y herramientas de seguimiento del desarrollo de modelos. 
 			\end{itemize}
 			
 			\item \textbf{Frameworks de Servicio de Bots:} Provee de un entorno para la construcción, despliegue, y prueba  de bots usando diferentes lenguajes de programación.
-		\end{itemize}
-		
-		\subsection{Google}
-		Google provee servicios de aprendizaje automático e Inteligencia Artificial (IA) en dos niveles – Motor de Aprendizaje automático de Google Cloud para profesionales de datos experimentados y la plataforma para principiantes de Cloud AutoML (Aprendizaje Automático-Automático).
-		
-		\begin{itemize}
+			\end{itemize}
+			
+			\subsection{Google}
+			Google provee servicios de aprendizaje automático e Inteligencia Artificial (IA) en dos niveles – Motor de Aprendizaje automático de Google Cloud para profesionales de datos experimentados y la plataforma para principiantes de Cloud AutoML (Aprendizaje Automático-Automático).
+			
+			\begin{itemize}
 			\item \textbf{AutoML:} Una plataforma de aprendizaje automático basada en la nube desarrollada para usuarios sin experiencia. Se pueden cargar datasets, entrenar modelos, y desplegarlos en un sitio web. AutoML se integra con todos los servicios de Google y guarda la información en la nube.\\
 			Se pueden desplegar modelos entrenados vía una interfaz de REST API. Se puede acceder a un cierto número de productos AutoML disponibles a través de una interfaz gráfica.
 			\item \textbf{Motor de Aprendizaje Automático:} Se puede usar Google Cloud ML para entrenar un modelo complejo apalancando la infraestructura de la GPU y la Unidad de Procesamiento de Tensor (TPU por sus siglas en inglés). Incluso se puede usar el servicio para desplegar un modelo entrenado de manera externa.\\
 			El Aprendizaje automático en la Nube automatiza todo el monitoreo y los procesos proveedores de recursos para ejecutar las tareas;  aparte de hospedar y entrenar, Cloud ML también puede llevar a cabo ajustes de hiperparámetros que influencian la precisión de las predicciones.
 			\item \textbf{Tensorflow:} Es una librería de software open-source que usa gráficas de flujo de datos para operaciones numéricas. Las operaciones matemáticas en estas gráficas son representados por nodos, mientras que los bordes representan la información transferida de un nodo a otro. La información en TensorFlow es representada en forma de tensores, los cuales son arreglos multidimensionales.\\ Tensorflow es usualmente usado para investigación y práctica de aprendizaje profundo, y es multi-plataforma por lo que se puede correr en GPU\'s, CPU\'s, TPU\'s y plataformas móviles.
-		\end{itemize}
+			\end{itemize}
+		\end{comment}
 		
 		\begin{table}[hbt!]\caption{Tabla comparativa de las diversas plataformas contempladas}% title of Table
 			\centering % used for centering table
@@ -924,7 +930,7 @@ natural y redes neuronales}\\
 					\hline\hline                        %inserts double horizontal lines
 					Característica & GCP & AWS & Azure \\ [0.5ex]% inserts table %heading
 					\hline                  % inserts single horizontal line
-					\begin{tabular}[c]{@{}l@{}}Hosted and/or local\\notebook\end{tabular}
+					\begin{tabular}[c]{@{}l@{}}Jupyter Notebook\\alojado de \\manera local\\ o remota\\\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Plataforma de IA\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}SageMaker Studio IDE\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}- Estudio de Notebooks\\ de Azure de Aprendizaje\\ Autom\'atico\\- Databrick de Azure\end{tabular} \\% inserting body of the table 
@@ -959,9 +965,9 @@ natural y redes neuronales}\\
 		\end{table}
 	
 		\newpage
-		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue fáciles.\\
+		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue sencillos.\\
 		\\
-		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plata de la Nube de Google (GCP) usa un paquete llamado “what if tool” la cual se puede integrar junto a un “Jupyter Notebook” y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
+		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plataforma de la Nube de Google (GCP) usa un paquete llamado “what if tool” el cual se puede integrar junto a un “Jupyter Notebook” y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
 		\\
 		El debbuger de SageMaker de AWS permite analizar cómo es que la ingeniería de características y el refinado del modelo son hechos, o de forma más concisa, permite ver qué sucede durante el entrenamiento del modelo.\\
 		\\
@@ -969,19 +975,19 @@ natural y redes neuronales}\\
 		\\
 		\textbf{Costo y Rendimiento del Modelo}\\
 		\\
-		Azure y GCP puntúan ligeramente mejor que AWS, esto no necesariamente significa que una plataforma es mejor que otra.\\
+		Azure y GCP puntúan ligeramente mejor que AWS en términos de rendimiento, esto no necesariamente significa que una plataforma es mejor que otra.\\
 		\\
-		El costo, por otro lado, resultó ser más interesante. El costo de AWS fue considerablemente menor que GCP y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
+		El costo, por otro lado, resulta ser más interesante. El costo de AWS fue considerablemente menor que GCP y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
 		\\
-		Si se tienen problemas con el presupuesto y el gasto por el 5 por ciento extra de mejora en el rendimiento no justifica el retorno, la historia se vuelve completamente distinta.\\
+%		Si se tienen problemas con el presupuesto y el gasto por el 5 por ciento extra de mejora en el rendimiento no justifica el retorno, la historia se vuelve completamente distinta.\\
 		\\
-		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. AWS y GCP parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones antes que haciendo uso de una interfaz.\\
+		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. AWS y GCP parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones, en vez de haciendo uso de una interfaz.\\
 		\\
 		Tanto GCP como AWS ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
 		
-		\begin{table}[hbt!]\caption{Tabla comparativa GCP vs AWS}% title of Table
+		\begin{table}[hbt!]\caption{Tabla comparativa GCP vs AWS (en dólares)}% title of Table
 			\centering % used for centering table
-			\resizebox{15cm}{!} {
+			\resizebox{13cm}{!} {
 				\begin{tabular}{c c c}% centered columns (3 columns)
 					\hline\hline                        %inserts double horizontal lines
 					Tipo de Instancia & Precio de EC2 (por hora) & Precio de Google (por hora) \\ [0.5ex]% inserts table %heading
@@ -1006,7 +1012,7 @@ natural y redes neuronales}\\
 			}
 		\end{table}
 	
-		Llegados a este punto en la comparación para nuestras necesidades resulta claro que la opción ideal para las necesidades de nuestro proyecto es AWS debido a que es más barato que las otras 2 plataformas su herramienta SageMaker nos permitirá saber cómo es que se está entrenando el modelo.
+		Habiendo analizado todo lo anterior, resulta claro que la opción ideal para las necesidades de nuestro proyecto es AWS debido a que es más barato que las otras dos plataformas y que posee la herramienta de SageMaker, siendo que la competencia no cuenta con alguna similar, y la cual nos permitirá saber cómo es que se está entrenando el modelo.
 		
 		
             \begin{comment}
@@ -1065,14 +1071,15 @@ natural y redes neuronales}\\
 	\chapter{\textcolor{azulescom}{Análisis.}}
 	    
     	\section{Estudio de Factibilidad.}
-    	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en él resultado, se tomará la decisión de proceder o no con su implementación. Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
+    	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\par 
+    	Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
     	\begin{itemize}
-    		\item \textbf{Factibilidad Técnica:} Este aspecto evalúa la infraestructura, es decir, los equipos, el software, el conocimiento, la experiencia, etc. que se poseen son los necesarios para efectuar las actividades del trabajo terminal.
+    		\item \textbf{Factibilidad Técnica:} Este aspecto evalúa que la infraestructura, es decir, los equipos, el software, el conocimiento, la experiencia, etc., que se posean son los necesarios para efectuar las actividades requeridas para la realización del Trabajo Terminal.
     		\item \textbf{Factibilidad Operativa:} Analiza si el personal posee las competencias necesarias para el desarrollo del proyecto.
-    		\item \textbf{Factibilidad Econ\'omica:} Consiste en el análisis de los recursos financieros necesarios para llevar a cabo la elaboraci\'on del trabajo terminal.
+    		\item \textbf{Factibilidad Econ\'omica:} Consiste en el análisis de los recursos financieros necesarios para llevar a cabo la elaboraci\'on del Trabajo Terminal.
     	\end{itemize}
     	\subsection{Factibilidad Técnica}
-    	Dentro de este apartado se explica detalladamente las tecnologías que se utilizarán. La elección de estas herramientas estuvo basada en las tecnologías que más se usan en la actualidad, así como las que cuentan con el mayor soporte para su trabajo en la nube, a su vez se detallan las características de los equipos de c\'omputo con los que se cuenta actualmente.
+    	Dentro de este apartado se explican detalladamente las tecnologías que se utilizarán. La elección de estas herramientas estuvo basada tanto en las tecnologías que más se usan en la actualidad como en las que cuentan con el mayor soporte para su trabajo en la nube, a su vez se detallan las características de los equipos de c\'omputo con los que se cuenta actualmente.
     	\begin{table}[H]
     		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
     			\hline
@@ -1098,7 +1105,7 @@ natural y redes neuronales}\\
     		\end{tabular}
     		\caption[Herramientas de Software]{Herramientas de Software a utilizar}
     	\end{table}
-    	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que se utiliza, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este trabajo terminal.
+    	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que se utiliza, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este Trabajo Terminal.
             	    \begin{table}[H]
     	\begin{tabular}{|p{3.5cm}||p{10cm}|}
     		\rowcolor{guindapoli}
@@ -1106,7 +1113,7 @@ natural y redes neuronales}\\
     		\hline
     		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
     		\hline
-    		\rowcolor{white}Tarjeta de video & Amd Radeon Rx58\\
+    		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
     		\hline
     		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
     		\hline
@@ -1155,10 +1162,10 @@ natural y redes neuronales}\\
     		\item Agua Potable
     		\item Internet
     	\end{itemize}
-    	Estos servicios forman parte de la factibilidad técnica ya que sin ellos no se podría realizar este trabajo terminal y por eso mismo generan un costo, dicho costo se menciona en la Factibilidad Económica.
+    	Estos servicios forman parte de la factibilidad técnica ya que sin ellos no se podría realizar este proyecto y por eso mismo generan un costo, dicho costo se menciona en la Factibilidad Económica.
     	
     	\subsection{Factibilidad Operativa}
-    	Los recursos operativos de este trabajo terminal se calcularon con base en los recursos humanos con los que se cuenta actualmente y un análisis de las horas que el personal estará en operación trabajando sobre éste, el cual se muestra a continuación:
+    	Los recursos operativos del presente Trabajo Terminal se calcularon con base en los recursos humanos con los que se cuenta actualmente y un análisis de las horas en las que el personal estará en operación, lo cual se muestra a continuación:
     	
     	\begin{table}[h!]
     		\begin{tabular}{|p{2cm}|p{1.4cm}|p{2.2cm}|p{1.6cm}|p{2.2cm}|p{1.6cm}|}
@@ -1185,33 +1192,33 @@ natural y redes neuronales}\\
     			Noviembre & 31 & 8 & 18 & 2 & 36 \\ 
     			\hline
     		\end{tabular}
-    		\caption[Horas de trabajo]{Relación horas de trabajo estimadas para la realización de este trabajo terminal}
+    		\caption[Horas de trabajo]{Relación de horas de trabajo estimadas para la realización de este trabajo terminal}
     	\end{table}
-    	Con esto podemos concluir que contamos con 286 horas, suficiente tiempo para el desarrollo de este trabajo terminal, ya que las horas totales de trabajo están contempladas para cada uno de los integrantes del equipo
+    	Con esto podemos concluir que contamos con 286 horas, suficiente tiempo para el desarrollo de este Trabajo Terminal, ya que las horas totales de trabajo están contempladas para cada uno de los integrantes del equipo
     	
     	\subsection{Factibilidad Económica}
-    	Luego de haber realizado el estudio de factibilidad técnica así como el operacional es necesario tomar en cuenta un estudio de factibilidad económica el cuan desglosará todo el gasto económico realizado para la elaboración de este trabajo terminal:
+    	Luego de haber realizado el estudio de factibilidad técnica así como el operacional es necesario tomar en cuenta un estudio de factibilidad económica el cual desglosará todo el gasto económico realizado para la elaboración de este Trabajo Terminal:
     	\begin{itemize}
-    		\item \textbf{Capital Humano:} Se tienen contemplados aproximadamente 36 días laborales, es decir 288 horas para la elaboración de este trabajo terminal en el cual participaremos los tres integrantes
-    		\item \textbf{Capital Técnico:} Se cuentan con las viviendas de cada uno de los integrantes y principalmente los equipos de cómputo correspondientes.
+    		\item \textbf{Capital Humano:} Se tienen contemplados aproximadamente 36 días laborales, es decir, 288 horas para la elaboración de este trabajo terminal en el cual participaremos los tres integrantes
+    		\item \textbf{Capital Técnico:} Se cuenta con las viviendas de cada uno de los integrantes así como con el principal equipo de cómputo de cada uno.
     	\end{itemize}
-    	En cuanto a los costos monetarios de todo el trabajo terminal se cuenta con el siguiente equipo:
+    	Respecto a los costos monetarios de todo el proyecto se tomo a consideración lo siguiente:
     	\begin{itemize}
     		\item \textbf{Servicios}\\
-    		En cuanto a los servicios se considera un gasto mensual aproximado de \$1,600.00 que al multiplicarlo por todo el tiempo de elaboración tenemos \$ 14,400.00.
+    		Se considera un gasto mensual aproximado de \$1,600.00 que al ser multiplicado por todo el tiempo de elaboración comtemplado nos da un total de \$ 14,400.00.
     		\item \textbf{Software} \\
-    		En este caso durante algunos periodos se usarán herramientas gratuitas y de software libre, en cuanto al servicio en la de la nube de AWS, se planea trabajar inicialmente con alguno de los paquetes gratuitos, y si se llegaran a consumir los recursos de ese paquete, se procederá a unirse a un plan donde se cobran 0.15 centavos de dólar cada hora de uso.
+    		Durante algunos periodos se va a hacer uso principalmente de herramientas gratuitas y de software libre, en cuanto al servicio de la nube de pretende hacer uso de AWS y trabajar inicialmente con los planes gratuitos que ofrece, y si se llegaran a consumir los recursos de ese plan entonces se procederá a cambiarnos a otro plan superior donde se cobra 0.15 centavos de dólar por hora de uso.
     		\item \textbf{Hardware}\\
-    		Se utilizarán los equipos de cómputo personal de cada integrante lo que daría un costo aproximado total de \$ 24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual. 
+    		Se utilizarán los equipos de cómputo personal de cada integrante, lo que da un costo total aproximado de \$ 24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual. 
     		\item \textbf{Recursos Humanos}\\
-    		Se estima un gasto aproximado de \$15,000.00 por cada integrante dell equipo para la elaboración del proyecto por lo que se generará un gasto total de \$45,000.00
+    		Se estima un gasto aproximado de \$15,000.00 por cada integrante del equipo para la elaboración del proyecto con lo que se generará un gasto total de \$45,000.00
     	\end{itemize}
-    	Por lo que el costo final del desarrollo de este trabajo terminal es: \\
+    	El costo final del desarrollo de este Trabajo Terminal una vez contemplados los puntos anteriores es de: \\
     	\begin{center}
     		\$83,420.00
     	\end{center}
     	\textbf{Conclusión} 
-    	Tras realizar el análisis el estudio de factibilidad de este proyectp es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
+    	Tras realizar el análisis el estudio de factibilidad de este proyecto es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el Trabajo Terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
     	    
     	\section{Herramientas a usar.}
 			\subsection{Software.}
@@ -1292,7 +1299,7 @@ natural y redes neuronales}\\
 			
 			
 		\subsection{Hardware.}
-			En el ámbito del hardware, utilizaremos los equipos de cómputo con los cuales contamos actualmente los integrantes de este equipo, los cuales se especificarán a continuación: 
+			Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
             	    \begin{table}[H]
 	\begin{tabular}{|p{3.5cm}||p{10cm}|}
 		\rowcolor{guindapoli}
@@ -1300,7 +1307,7 @@ natural y redes neuronales}\\
 		\hline
 		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
 		\hline
-		\rowcolor{white}Tarjeta de video & Amd Radeon Rx58\\
+		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
 		\hline
 		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
 		\hline
