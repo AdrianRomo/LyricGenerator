@@ -48,8 +48,16 @@ include/
 lib/
 share/
 # LaTex Files #
+*.acn
+*.acr
+*.alg
 *.aux
+*.bbl
+*.blg
+*.glg
 *.glo
+*.gls
+*.glsdefs
 *.ist
 *.lof
 *.log
