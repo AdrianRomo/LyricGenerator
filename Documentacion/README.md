@@ -28,34 +28,40 @@
                 - [X] 2.2.2. Aprendizaje de las Redes Neuronales
                 - [X] 2.2.3. Recurrent Neural Network 
                     - [X] Long Short Term Memory
-                - [ ] 2.2.5. Bert - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes) -> **Alfredo trabajando este punto** 
-                - [ ] 2.2.6. GPT-2 - Falta agregar información del funcionamiento, diagramas y explicación del modelo (imágenes) -> **Alfredo trabajando este punto** 
-            - [ ] 2.3. Base de datos - Falta agregar información
-                - [ ] 2.3.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
-            - [ ] 2.4. Canción - Poner texto más formal y agregar una referencia con cita
-                - [X] 2.4.1. Elementos de una canción 
-                - [X] 2.4.2. Introducción 
-                - [X] 2.4.3. Verso 
-                - [X] 2.4.4. Pre-estribillo. 
-                - [X] 2.4.5. Estribillo 
-                - [X] 2.4.6. Puente.  
-                - [X] 2.4.7. Cierre. 
-                - [X] 2.4.8. Estructura de una canción 
-            - [ ] 2.5. Procesamiento de Lenguaje Natural - Agregar este punto.
-            	- Técnicas
-            	- Objetivo
-            	- Historia
-            	- Funcionalidad
-            	- Cómo funciona	
-            - [X] 2.5. Cadenas de Markov 
-            - [X] 2.6. Flask
-            - [X] 2.7. Apache. 
-            - [X] 2.8. Servidor Web. 
-            - [X] 2.9. Certificado SSL 
-            - [ ] 2.10. Plataforma en la Nube de Aprendizaje Automático -> **Jaime lo hará**
-                - [ ] 2.10.1. Amazon - Dejar solo los servicios que se usarán
-                - [ ] 2.10.2. Azure. - Comentarlo
-                - [ ] 2.10.3. Google. - Comentarlo
+            - [ ] 2.3. Procesamiento de Lenguaje Natural - Agregar este punto.
+                - Técnicas
+                - Objetivo
+                - Historia
+                - Funcionalidad
+                - Cómo funciona -> **Alfredo trabajando este punto** 
+                - [X] 2.3.1 Transformers 
+            - [X] 2.4. BERT
+                - [X] 2.4.1.  ¿Que es Bert? 
+                - [X] 2.4.2.  ¿Como funciona BERT? 
+                - [X] 2.4.3.  BERT en la actualidad
+            - [X] 2.5. GPT-2
+                - [X] 2.5.1.  ¿Que es GPT-2?
+                - [X] 2.5.2.  Arquitectura GPT
+            - [ ] 2.6. Base de datos - Falta agregar información
+                - [ ] 2.6.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
+            - [ ] 2.7. Canción - Poner texto más formal y agregar una referencia con cita
+                - [X] 2.7.1. Elementos de una canción 
+                - [X] 2.7.2. Introducción 
+                - [X] 2.7.3. Verso 
+                - [X] 2.7.4. Pre-estribillo. 
+                - [X] 2.7.5. Estribillo 
+                - [X] 2.7.6. Puente.  
+                - [X] 2.7.7. Cierre. 
+                - [X] 2.7.8. Estructura de una canción 	
+            - [X] 2.8. Cadenas de Markov 
+            - [X] 2.9. Flask
+            - [X] 2.10. Apache. 
+            - [X] 2.11. Servidor Web. 
+            - [X] 2.12. Certificado SSL 
+            - [ ] 2.13. Plataforma en la Nube de Aprendizaje Automático -> **Jaime lo hará**
+                - [ ] 2.13.1. Amazon - Dejar solo los servicios que se usarán
+                - [ ] 2.13.2. Azure. - Comentarlo
+                - [ ] 2.13.3. Google. - Comentarlo
                 *Dejar solo tabla comparativa de Amazon, Azure y Google
 
        - [X] 3. Análisis 

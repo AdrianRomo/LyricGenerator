@@ -122,7 +122,11 @@
 \newacronym{orm}{ORM}{Object Relational Manager}
 \newacronym{wsgi}{WSGI}{Web Server Gateway Interface}
 \newacronym{dbms}{DBMS}{Sistema de gestión de base de datos}
-\newacronym{aws}{AWS}{Amazon Web Services}
+\newacronym{bert}{BERT}{Bidirectional Encoder Representations from Transformers}
+\newacronym{pln}{PLN}{Procesamiento del lenguaje natural}
+\newacronym{mlm}{MLM}{Modelado de lenguaje enmascarado}
+\newacronym{gpt}{GPT}{Generative Pretrained Transformer}
+\newacronym{bpe}{BPE}{Byte Pair Encoding}
 
 %------------------FINAL DE ACRÓNIMOS-----------------------%
 
@@ -615,9 +619,7 @@ natural y redes neuronales}\\
 				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
-				\end{figure}				
-				\subsection{Bert}
-				\subsection{GPT-2}
+				\end{figure}		
 %				\subsubsection{Modular Neural Network}
 %				Esta red está constituida por un numero variado de redes, las cuales funcionan de manera independiente y realizan subtareas. Las diferentes redes, en realidad no interactúan entre si durante la ejecución del proceso. Trabajan de manera independiente para lograr una misma salida.\par
 %				Como resultado, un largo y complejo proceso puede ser ejecutado rápido, separándolo en componentes individuales.\cite{refTiposRedesNeu2}\par
@@ -626,7 +628,87 @@ natural y redes neuronales}\\
 %					\centering 
 %					\caption{Diagrama Red Neuronal Modular}
 %				\end{figure}
-                
+        
+        \section{Procesamiento de Lenguaje Natural}
+        
+        \subsection{Transformers}
+        
+        El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra de una frase en función del resto de la secuencia, permitiendo así introducir el contexto en la representación matemática del texto.\par        
+        Se suele trabajar con lo transformadores en 2 etapas: \cite{refQueesuntransformer}
+        \begin{itemize}
+        	\item \textbf{Pre-entrenamiento: }en esta fase, el modelo aprende cómo se estructura el lenguaje de forma general, además de conseguir un conocimiento genérico del significado de las palabras. 
+        	\item \textbf{Afinado: }se le añaden ciertas capas a la arquitectura para adaptar los modelos a tareas concretas, y se les re-entrena en esas tareas.
+        \end{itemize}  
+   
+   		\subsubsection{Arquitectura de un transformer} 
+   		
+   		\begin{figure}[H] \caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
+   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
+   			\centering 
+   		\end{figure}     
+        
+        \section{BERT}
+        
+        \subsection{¿Qué es Bert?}
+        
+        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \par        
+        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\par        
+        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+        
+        \subsection{¿Cómo funciona BERT?}
+        
+        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de BERT, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\par        
+        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de "conocimiento". A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\par        
+        \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
+        
+        \begin{figure}[H] \caption{Representación de entrada de BERT y la separación de la oración por palabras y la asignación de valores.}
+        	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
+        	\centering 
+        \end{figure} 
+           
+        En la figura anterior, lo que se realiza es que se inserta un token [CLS] al principio de la primera oración y un token [SEP] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\par        
+        Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
+        
+        \subsection{BERT en la actualidad}
+        
+        BERT se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\par
+        Así como en la realización de tareas tales como: \cite{refBertactualidad}
+        \begin{itemize}
+        	\item Generación de lenguaje basadas en secuencia a secuencia (Respuesta a preguntas, resúmenes de documentos, predicción de siguiente oración, chatbots). 
+        	\item Comprensión del lenguaje natural (Entendimiento de la polisemia, la correferencia, la desambiguación de las palabras, clasificación de la palabras por sentimientos).
+        \end{itemize}         
+        
+        \section{GPT-2}
+        
+        \subsection{¿Qué es GPT-2?}  
+        
+        \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\par        
+        GPT-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. GPT-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
+        El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\par        
+        Ya que en \acrshort{gpt} no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\par
+        \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
+        \begin{itemize}
+        	\item Dividir palabra en secuencia de caracteres.
+        	\item Unirse al patrón de frecuencia más alta
+        	\item Continuar con el paso anterior hasta alcanzar el número máximo predefinido de subpalabras de iteraciones.
+        \end{itemize}
+    
+    	\subsection{Arquitectura GPT}
+    	
+    	\begin{figure}[H] \caption{Arquitectura del modelo de GPT-2 \cite{refarquitecturagpt}}
+    		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
+    		\centering 
+    	\end{figure}
+    
+    	El modelo de \acrshort{gpt} es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \par
+    	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
+    	
+    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por GPT-2}
+    		\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Gptsentence.png}
+    		\centering 
+    	\end{figure}
+    
+    	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
 
         \section{Base de datos}
         Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital con la finalidad de realizar distintas acciones como consultas futuras, ingreso de nuevos datos, actualización o eliminación de estos.\par
@@ -1446,8 +1528,7 @@ natural y redes neuronales}\\
 	IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
 	
 	\bibitem{refQueSonRedesNeu}  		
-	L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].
-	
+	L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].	
 		
 	\bibitem{refNeuronaNat}
 	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
@@ -1469,6 +1550,37 @@ natural y redes neuronales}\\
 	
 	\bibitem{refTiposRedesNeu4} 
 	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
+	
+	\bibitem{refQueesuntransformer} 
+	ref A. Vaca (2020, mayo), Transformers en Procesamiento del Lenguaje Natural, [En línea]. Disponible: https://www.iic.uam.es/innovacion/transformers-en-procesamiento-del-lenguaje-natural/  [Ultimo acceso: 15 de abril del 2021].
+	
+	\bibitem{refArqTransformer} 
+	ref A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L. Kaiser &  I. Polosukhin (2017, diciembre), Attention Is All You Need, [En línea]. Disponible: https://arxiv.org/pdf/1706.03762.pdf  [Ultimo acceso: 15 de abril del 2021].
+	
+	\bibitem{refQueesBert} 
+	ref J. Devlin, M. Chang, K. Lee, K. Toutanova (2019, mayo), BERT: Pre-training of Deep Bidirectional Transformers for
+	Language Understanding, [En línea]. Disponible: https://arxiv.org/pdf/1810.04805.pdf [Ultimo acceso: 11 de abril del 2021].
+	
+	\bibitem{refComofuncionaBert} 
+	ref R. Horev (2018, noviembre), BERT Explained: State of the art language model for NLP, [En línea]. Disponible: https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270 [Ultimo acceso: 11 de abril del 2021].
+	
+	\bibitem{refBertactualidad} 
+	ref B. Lutkevich (2020, enero), BERT language model, [En línea]. Disponible: https://searchenterpriseai.techtarget.com/definition/BERT-language-model [Ultimo acceso: 12 de abril del 2021].
+	
+	\bibitem{refQueesgpt} 
+	ref A. Radford, J. Wu, D. Amodei, D. Amodei, J. Clark, M. Brundage & I. Sutskever (2020, enero), Better Language Models and Their Implications, [En línea]. Disponible: https://openai.com/blog/better-language-models/ [Ultimo acceso: 14 de abril del 2021].
+	
+	\bibitem{refbpe} 
+	ref M. Edward (2019, febrero), Too powerful NLP model (GPT-2), [En línea]. Disponible:  https://towardsdatascience.com/too-powerful-nlp-model-generative-pre-training-2-4cc6afb6655 [Ultimo acceso: 14 de abril del 2021].
+	
+	\bibitem{refarquitecturagpt} 
+	ref A. Radford, K. Narasimhan, T. Salimans & I. Sutskever (2018), Improving Language Understanding by Generative Pre-Training, [En línea]. Disponible:  https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf  [Ultimo acceso: 14 de abril del 2021].
+	
+	\bibitem{refarquitecturagpt2} 
+	ref J. Montantes(2019, mayo), Examining the Transformer Architecture, [En línea]. Disponible: https://towardsdatascience.com/examining-the-transformer-architecture-part-1-the-openai-gpt-2-controversy-feceda4363bb  [Ultimo acceso: 14 de abril del 2021].
+	
+	\bibitem{refarquitecturagpt3}
+	ref J. Vig(2019, marzo), GPT-2: Understanding Language Generation through Visualization, [En línea]. Disponible: https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8   [Ultimo acceso: 14 de abril del 2021].
 	
 	\bibitem{refQueEsBD}  		
 	Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
