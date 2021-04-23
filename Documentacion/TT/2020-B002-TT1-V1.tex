@@ -631,7 +631,34 @@ natural y redes neuronales}\\
         
         \section{Procesamiento de Lenguaje Natural}
         
-        \subsection{Transformers}
+        El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.
+        
+        La \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y "comprender" su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
+        
+        \subsection{Tareas del Procesamiento de Lenguaje Natural}
+        
+        \begin{itemize}
+        	\item \textbf{Reconocimiento de voz: }La tarea pertinente al reconocimiento de voz es la conversión de la voz a texto, requiere convertir de manera confiable datos de voz en datos de texto. Lo que hace que el reconocimiento de voz sea especialmente desafiante es la forma en que las personas hablan: velocidad, arrastrando las palabras, con diferentes énfasis y entonación, así como con diferentes acentos.
+        	\item \textbf{Etiquetado de palabras: }Es el proceso de determinar la parte gramatical de una palabra o fragmento de texto en particular, en función de su uso y contexto.
+        	\item \textbf{Desambiguación de las palabras: }Es la selección del significado de una palabra con múltiples significados a través de un proceso de análisis semántico que determina la palabra que tiene más sentido en el contexto dado. 
+        	\item \textbf{Reconocimiento de entidad nombrada: }Identifica palabras o frases como entidades útiles, es decir, identifica nombres propios.
+        	\item \textbf{Resolución de correferencia: }Es la tarea de identificar si dos palabras se refieren a la misma entidad y cuándo. El ejemplo más común es determinar la persona u objeto al que se refiere un determinado pronombre.
+        	\item \textbf{Análisis de sentimientos: }Intenta extraer del texto cualidades subjetivas (actitudes, emociones, sarcasmo, confusión, sospecha).
+        	\item \textbf{Generación de lenguaje natural: }Es la tarea de producir texto en lenguaje comprensible por un humano.
+        \end{itemize} 
+    
+    	\subsection{Usos del Procesamiento de Lenguaje Natural}
+    	
+    	El procesamiento del lenguaje natural es el cerebro detrás de la inteligencia artificial en muchas aplicaciones del mundo real. Algunos ejemplos son los siguientes:
+    	
+    	\begin{itemize}
+    		\item \textbf{Aplicaciones dedicadas a la traducción: }un ejemplo de estos es Google Translate, el cual hace uso de BERT para el procesamiento del lenguaje natural así como para el etiquetado de las palabras que requiere traducir.
+    		\item \textbf{Asistentes virtuales y chatbots: }Asistentes como Siri o Alexa requieren de un reconocimiento de voz para distinguir comandos, así como para responder adecuadamente a estos. En el caso de los chatbots realizan un análisis contextual de las preguntas para proveer respuestas relacionadas a las mismas.
+    		\item \textbf{Análisis de sentimientos en redes sociales: }Consta de analizar el lenguaje utilizado en publicaciones en redes sociales, respuestas, reseñas y más para extraer actitudes y emociones en respuesta a productos, promociones y eventos; información que las empresas pueden usar en diseños de productos, campañas publicitarias y más
+    		\item \textbf{Resúmenes de textos: }Consta de realizar resúmenes y sinopsis de distintos textos.
+    	\end{itemize} 
+        
+        \section{Transformers}
         
         El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra de una frase en función del resto de la secuencia, permitiendo así introducir el contexto en la representación matemática del texto.\par        
         Se suele trabajar con lo transformadores en 2 etapas: \cite{refQueesuntransformer}
@@ -640,7 +667,7 @@ natural y redes neuronales}\\
         	\item \textbf{Afinado: }se le añaden ciertas capas a la arquitectura para adaptar los modelos a tareas concretas, y se les re-entrena en esas tareas.
         \end{itemize}  
    
-   		\subsubsection{Arquitectura de un transformer} 
+   		\subsection{Arquitectura de un transformer} 
    		
    		\begin{figure}[H] \caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
    			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
@@ -1550,6 +1577,9 @@ natural y redes neuronales}\\
 	
 	\bibitem{refTiposRedesNeu4} 
 	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
+	
+	\bibitem{refProcesamientoLN}
+	ref IBM Cloud Education (2020, julio 2), Natural Language Processing [En línea]. Disponible: https://www.ibm.com/cloud/learn/natural-language-processing [Ultimo acceso: 20 de abril del 2021].
 	
 	\bibitem{refQueesuntransformer} 
 	ref A. Vaca (2020, mayo), Transformers en Procesamiento del Lenguaje Natural, [En línea]. Disponible: https://www.iic.uam.es/innovacion/transformers-en-procesamiento-del-lenguaje-natural/  [Ultimo acceso: 15 de abril del 2021].
