@@ -62,13 +62,12 @@
                 - [X] 2.13.1. Amazon - Dejar solo los servicios que se usarán
                 - [X] 2.13.2. Azure. - Comentarlo
                 - [X] 2.13.3. Google. - Comentarlo
-                *Dejar solo tabla comparativa de Amazon, Azure y Google
-
+                *Dejar solo tabla comparativa de Amazon, Azure y Google*
        - [X] 3. Análisis 
-            - [ ] 3.1. Estudio de Factibilidad - Falta riesgo. ** Alfredo lo hace **
+            - [ ] 3.1. Estudio de Factibilidad - Falta riesgo. **Alfredo lo hace**
                 - [X] 3.1.1. Factibilidad Técnica
-                - [X] 3.1.2. Factibilidad Operativa - Agregar Computadora ideal ** Alfredo lo hace **
-                - [X] 3.1.3. Factibilidad Económica - Agregar Salarios con fuente ** Alfredo lo hace **
+                - [X] 3.1.2. Factibilidad Operativa - Agregar Computadora ideal **Alfredo lo hace**
+                - [X] 3.1.3. Factibilidad Económica - Agregar Salarios con fuente **Alfredo lo hace**
             - [X] 3.2. Herramientas a usar  
                 - [ ] 3.2.1. Software - Falta agregar (Gunicorn, Apache, Flask, Python, AWS (herramienta que se usará),Base de Datos (NOSQL), REACT,(si falta alguna ponerla) -> **Alfredo lo hace**
                 - [X] 3.2.2. Hardware
@@ -77,12 +76,10 @@
                     - [X] 3.3.2 Aspectos Económicos
                     - [X] 3.3.3 Aspectos Legales
                 - [X] 3.4 Diagrama de Casos de Uso General
-
         - [ ] 4. Iteración 1. ( Base de Datos) - **Adrian lo hace**
             - [ ] 4.1 Base de Datos - Explicar como se sacó la Base de Datos
             - [ ] 4.2 Género Musical - Explicar por qué se sacó de este género musical
             - [ ] 4.3 Resultados* - Explicar los Resultados
-
         - [ ] 5. Iteración 2. ( Limpieza Base de Datos ) -> ** Adrian lo hace **
             - [ ] 5.1 Descripción.
             - [ ] 5.2 Limpieza - Explicar cómo se limpió la base de datos
@@ -90,18 +87,15 @@
             - [ ] 5.4 Técnicas de Scrapping - Explicar la técnica que se usó para scrappear la base de datos
             - [ ] 5.5 Implementación - Explicar como se obtuvo en código la base de datos limpia
             - [ ] 5.6 Resultado - Explicar resultados
-
 	- [ ] 6. Iteración 3. ( Modelo para Neural Networks )
 		- [ ] 6.1 Herramientas - Herramientas para generar el modelo
 		- [ ] 6.2 Modelo - Explicar las partes del modelo con sus diagramas
 		- [ ] 6.3 Implementación - Explicar como se implementó con código o pasos para obtener el modelo en AWS
 		- [ ] 6.4 Resultados - Explicar los resultados obtenidos
-
 	- [ ] 7. Iteración 4. ( Generación Modelo en la Nube )
 		- [ ] 7.1 Integración - Explicar cómo se configuró el modelo en la nube 
 		- [ ] 7.2 Herramientas - Explicar las herramientas más a fondo
 		- [ ] 7.3 Implementación - Explicar como se implementó con código o pasos para obtener el modelo en AWS
 		- [ ] 7.4 Resultado - Explicar los resultados obtenidos
-
         - [ ] Bibliografía - Ordenar por orden de aparición. -> **Adrián lo hará**
 
