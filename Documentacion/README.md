@@ -33,7 +33,7 @@
                 - Objetivo
                 - Historia
                 - Funcionalidad
-                - Cómo funciona -> **Alfredo trabajando este punto** 
+                - Cómo funciona 
                 - [X] 2.3.1 Transformers 
             - [X] 2.4. BERT
                 - [X] 2.4.1.  ¿Que es Bert? 
