@@ -11,8 +11,8 @@
 - [X] I Trabajo Terminal I
 	- [X] 1. Introducción 
         - [X] 1.1. Objetivos 
-        - [X] 1.1.1. Objetivo general 
-        - [X] 1.1.2. Objetivos particulares 
+            - [X] 1.1.1. Objetivo general 
+            - [X] 1.1.2. Objetivos particulares 
         - [X] 1.2. Justificación 
         - [X] 1.3. Metodología 
         - [X] 1.4. Organización del documento 
@@ -29,53 +29,52 @@
                 - [X] 2.2.3. Recurrent Neural Network 
                     - [X] Long Short Term Memory
             - [ ] 2.3. Procesamiento de Lenguaje Natural - Agregar este punto. **Jaime lo hará**
-                - Técnicas
-                - Objetivo
-                - Historia
-                - Funcionalidad
-                - Cómo funciona 
-                - [X] 2.3.1 Transformers 
-            - [X] 2.4. BERT
-                - [X] 2.4.1.  ¿Que es Bert? 
-                - [X] 2.4.2.  ¿Como funciona BERT? 
-                - [X] 2.4.3.  BERT en la actualidad
-            - [X] 2.5. GPT-2
-                - [X] 2.5.1.  ¿Que es GPT-2?
-                - [X] 2.5.2.  Arquitectura GPT
-            - [ ] 2.6. Base de datos - Falta agregar información
-                - [ ] 2.6.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
-            - [ ] 2.7. Canción - Poner texto más formal y agregar una referencia con cita
-                - [X] 2.7.1. Elementos de una canción 
-                - [X] 2.7.2. Introducción 
-                - [X] 2.7.3. Verso 
-                - [X] 2.7.4. Pre-estribillo. 
-                - [X] 2.7.5. Estribillo 
-                - [X] 2.7.6. Puente.  
-                - [X] 2.7.7. Cierre. 
-                - [X] 2.7.8. Estructura de una canción 	
-            - [X] 2.8. Cadenas de Markov 
-            - [X] 2.9. Flask
-            - [X] 2.10. Apache. 
-            - [X] 2.11. Servidor Web. 
-            - [X] 2.12. Certificado SSL 
-            - [X] 2.13. Plataforma en la Nube de Aprendizaje Automático -> **Jaime lo hará**
-                - [X] 2.13.1. Amazon - Dejar solo los servicios que se usarán
-                - [X] 2.13.2. Azure. - Comentarlo
-                - [X] 2.13.3. Google. - Comentarlo
+                - [X] 2.3.1. Tareas del Procesamiento de Lenguaje Natural
+                - [X] 2.3.2. Usos del Procesamiento de Lenguaje Natural
+            - [X] 2.4. Transformers 
+                - [X] 2.4.1. Arquitectura de un Transformer
+            - [X] 2.5. BERT
+                - [X] 2.5.1.  ¿Que es Bert? 
+                - [X] 2.5.2.  ¿Como funciona BERT? 
+                - [X] 2.5.3.  BERT en la actualidad
+            - [X] 2.6. GPT-2
+                - [X] 2.6.1.  ¿Que es GPT-2?
+                - [X] 2.6.2.  Arquitectura GPT
+            - [ ] 2.7. Base de datos - Falta agregar información
+                - [ ] 2.7.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
+            - [ ] 2.8. Canción - Poner texto más formal y agregar una referencia con cita
+                - [X] 2.8.1. Elementos de una canción 
+                - [X] 2.8.2. Introducción 
+                - [X] 2.8.3. Verso 
+                - [X] 2.8.4. Pre-estribillo. 
+                - [X] 2.8.5. Estribillo 
+                - [X] 2.8.6. Puente.  
+                - [X] 2.8.7. Cierre. 
+                - [X] 2.8.8. Estructura de una canción 	
+            - [X] 2.9. Cadenas de Markov 
+            - [X] 2.10. Flask
+            - [X] 2.11. Apache. 
+            - [X] 2.12. Servidor Web. 
+            - [X] 2.13. Certificado SSL 
+            - [X] 2.14. Plataforma en la Nube de Aprendizaje Automático -> **Jaime lo hará**
+                - [X] 2.14.1. Amazon - Dejar solo los servicios que se usarán
+                - [X] 2.14.2. Azure. - Comentarlo
+                - [X] 2.14.3. Google. - Comentarlo
                 *Dejar solo tabla comparativa de Amazon, Azure y Google*
        - [X] 3. Análisis 
-            - [ ] 3.1. Estudio de Factibilidad - Falta riesgo. **Alfredo lo hace**
+            - [X] 3.1. Estudio de Factibilidad
                 - [X] 3.1.1. Factibilidad Técnica
-                - [X] 3.1.2. Factibilidad Operativa - Agregar Computadora ideal **Alfredo lo hace**
-                - [X] 3.1.3. Factibilidad Económica - Agregar Salarios con fuente **Alfredo lo hace**
-            - [X] 3.2. Herramientas a usar  
-                - [ ] 3.2.1. Software - Falta agregar (Gunicorn, Apache, Flask, Python, AWS (herramienta que se usará),Base de Datos (NOSQL), REACT,(si falta alguna ponerla) -> **Alfredo lo hace**
-                - [X] 3.2.2. Hardware
-                - [X] 3.3. Arquitectura del Sistema
-                    - [X] 3.3.1 Descripción de la Arquitectura del Sistema
-                    - [X] 3.3.2 Aspectos Económicos
-                    - [X] 3.3.3 Aspectos Legales
-                - [X] 3.4 Diagrama de Casos de Uso General
+                - [X] 3.1.2. Factibilidad Operativa
+                - [X] 3.1.3. Factibilidad Económica
+            - [ ] 3.2. Análisis de riesgo - **Alfredo lo hace**             
+            - [X] 3.3. Herramientas a usar  
+                - [X] 3.3.1. Software - Si hace falta alguna agregarla
+                - [X] 3.3.2. Hardware
+            - [ ] 3.4. Arquitectura del Sistema
+                - [ ] 3.4.1 Descripción de la Arquitectura del Sistema
+                - [ ] 3.4.2 Aspectos Económicos
+                - [ ] 3.4.3 Aspectos Legales
+            - [ ] 3.5 Diagrama de Casos de Uso General
         - [ ] 4. Iteración 1. ( Base de Datos) - **Adrian lo hace**
             - [ ] 4.1 Base de Datos - Explicar como se sacó la Base de Datos
             - [ ] 4.2 Género Musical - Explicar por qué se sacó de este género musical

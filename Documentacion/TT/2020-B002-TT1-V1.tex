@@ -151,6 +151,7 @@
 \newacronym{sql}{SQL}{Structured Query Language}
 \newacronym{cad}{CAD}{Computer Aided Design}
 \newacronym{cli}{CLI}{Command Line Interface}
+\newacronym{s3}{S3}{Simple Storage Service}
 \newacronym{hdd}{HDD}{Hard Drive Disk}
 \newacronym{ssd}{SSD}{Solid State Drive}
 \newacronym{iso}{ISO}{International Standardization Organization}
@@ -715,7 +716,7 @@ natural y redes neuronales}\\
         \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de "conocimiento". A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\par        
         \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
         
-        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.}
+        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
         	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
         	\centering 
         \end{figure} 
@@ -1214,17 +1215,38 @@ natural y redes neuronales}\\
     	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\par 
     	Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
     	\begin{itemize}
-    		\item \textbf{Factibilidad Técnica:} Este aspecto evalúa que la infraestructura, es decir, los equipos, el software, el conocimiento, la experiencia, etc. Que se poseen son los necesarios para efectuar las actividades requeridas para la realización del trabajo terminal.
+    		\item \textbf{Factibilidad Técnica:} Este aspecto evalúa que la infraestructura, es decir, los equipos, el software, el conocimiento, la experiencia, etc. que se poseen son los necesarios para efectuar las actividades requeridas para la realización del trabajo terminal.
     		\item \textbf{Factibilidad Operativa:} Analiza si el personal posee las competencias necesarias para el desarrollo del proyecto.
     		\item \textbf{Factibilidad Econ\'omica:} Consiste en el análisis de los recursos financieros necesarios para llevar a cabo la elaboraci\'on de este proyecto.
     	\end{itemize}
     	\subsection{Factibilidad Técnica}
-    	Dentro de este apartado se explican detalladamente las tecnologías que se utilizarán. La elección de estas herramientas estuvo basada tanto en las tecnologías que más se usan en la actualidad como en las que cuentan con el mayor soporte para su trabajo en la nube, a su vez se detallan las características de los equipos de c\'omputo con los que se cuenta actualmente.
+    	
+    	Dentro de este apartado se explican detalladamente las tecnologías que se utilizarán, así como las características de nuestros equipos de cómputo actualmente. La elección de estas herramientas estuvo basada tanto en las tecnologías que más se utilizan en la actualidad como las que cuentan con el mayor soporte para su trabajo en la nube, esto se debe a que los equipos con los que contamos actualmente no soportarían todo el trabajo.
+    	    	
+    	\begin{table}[H]
+    		\begin{tabular}{|p{3.5cm}||p{10cm}|}
+    			\rowcolor{guindapoli}
+    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo ideal.}}}\\
+    			\hline
+    			\rowcolor{azulclaro}Procesador & Intel i9 10900KF\\
+    			\hline
+    			\rowcolor{white}Tarjeta de video & RTX 3080 10Gb\\
+    			\hline
+    			\rowcolor{azulclaro}Memoria RAM & 32Gb DDR4\\
+    			\hline
+    			\rowcolor{white}Disco duro & 2Tb HDD y 512Gb SSD\\
+    			\hline
+    		\end{tabular}
+    		\caption[Equipo de cómputo ideal]{Equipo de cómputo ideal}
+    	\end{table}
+    	
+    	En la tabla anterior se muestra el equipo que requeriríamos para poder trabajar sin mayor dificultad al momento de realizar los entrenamientos de los modelos de redes neuronales que necesitamos para la realización de este trabajo, debido a la situación actual de la pandemia, en el mercado actual los componentes para el equipo son escasos y su precio en el mercado aumento. Por esa razón se utilizarán servicios de la nube para la realización de estos entrenamientos y nuestros equipos para el desarrollo del resto del proyecto.
+    	
     	\begin{table}[H]
     		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
     			\hline
     			\rowcolor{guindapoli}
-    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Factibilidad T\'ecnica}}}\\
+    			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Herramientas de Software a utilizar}}}\\
     			\hline
     			\cellcolor{azulclaro}Sistema Operativo & 
     			Linux, Mac, Windows \\ 
@@ -1240,61 +1262,65 @@ natural y redes neuronales}\\
     			\hline
     			\cellcolor{azulclaro}Servicio Nube &
     			Amazon Web Services\\
-    			\hline
-    			
+    			\hline    			
     		\end{tabular}
     		\caption[Herramientas de Software]{Herramientas de Software a utilizar}
     	\end{table}
+    
     	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que se utiliza, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este trabajo terminal.
-            	    \begin{table}[H]
-    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-    		\rowcolor{guindapoli}
-    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [1]}}}\\
-    		\hline
-    		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
-    		\hline
-    		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
-    		\hline
-    		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
-    		\hline
-    		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
-    		\hline
-    	\end{tabular}
+    	
+        \begin{table}[H]
+	    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+	    		\rowcolor{guindapoli}
+	    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
+	    		\hline
+	    		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
+	    		\hline
+	    		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
+	    		\hline
+	    		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
+	    		\hline
+	    		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
+	    		\hline
+	    	\end{tabular}
+    	\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
+   	  \end{table}
+      \begin{table}[H]
+	    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+	    		\rowcolor{guindapoli}
+	    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
+	    		\hline
+	    		\rowcolor{azulclaro}Marca & Apple\\
+	    		\hline
+	    		\rowcolor{white}Modelo & iMac Late 2012\\
+	    		\hline
+	    		\rowcolor{azulclaro}Procesador & Intel Core i5\\
+	    		\hline
+	    		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
+	    		\hline
+	    		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
+	    		\hline
+	    		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
+	    		\hline
+	    	\end{tabular}
+    	\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
     \end{table}
-        	    \begin{table}[H]
-    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-    		\rowcolor{guindapoli}
-    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [2]}}}\\
-    		\hline
-    		\rowcolor{azulclaro}Marca & Apple\\
-    		\hline
-    		\rowcolor{white}Modelo & iMac Late 2012\\
-    		\hline
-    		\rowcolor{azulclaro}Procesador & Intel Core i5\\
-    		\hline
-    		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
-    		\hline
-    		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
-    		\hline
-    		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
-    		\hline
-    	\end{tabular}
-    \end{table}
-        	    \begin{table}[H]
-	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-		\rowcolor{guindapoli}
-		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [3]}}}\\
-		\hline
-		\rowcolor{azulclaro}Procesador & Amd FX-8350\\
-		\hline
-		\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
-		\hline
-		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
-		\hline
-		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
-		\hline
-	\end{tabular}
-\end{table}
+    \begin{table}[H]
+			\begin{tabular}{|p{3.5cm}||p{10cm}|}
+				\rowcolor{guindapoli}
+				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
+				\hline
+				\rowcolor{azulclaro}Procesador & Amd FX-8350\\
+				\hline
+				\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
+				\hline
+				\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
+				\hline
+				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
+				\hline
+			\end{tabular}
+		\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
+   \end{table}
 \newpage
     	Junto con las herramientas de hardware y software a utilizar es necesario mencionar los servicios b\'asicos que son relevantes para el desarrollo de este trabajo terminal como lo son:
     	\begin{itemize}
@@ -1353,12 +1379,14 @@ natural y redes neuronales}\\
     		\item \textbf{Recursos Humanos}\\
     		Se estima un gasto aproximado de \$15,000.00 por cada integrante del equipo para la elaboración del proyecto con lo que se generará un gasto total de \$45,000.00
     	\end{itemize}
-    	En conclusión, el costo final del desarrollo de este trabajo terminal es de: \\
+    	Tomando en cuenta el salario promedio de un desarrollador de software el cual es de \$15,000.00 mensuales (este dato fue obtenido de mx.indeed.com), se consideró este salario para el desarrollo del proyecto, el cual tendría una duración de desarrollo de 6 meses aproximadamente, dando como resultado un salario total para los integrantes del equipo de \$270,000.00; el costo final del desarrollo de este trabajo terminal seria de: \\
     	\begin{center}
-    		\$83,420.00
+    		\$353,420.00
     	\end{center}
     	\textbf{Conclusión} 
     	Tras realizar el análisis el estudio de factibilidad de este proyecto es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
+    	
+    	\section{Análisis de riesgo}
     	    
     	\section{Herramientas a usar.}
 			\subsection{Software.}
@@ -1425,70 +1453,134 @@ natural y redes neuronales}\\
                 \item No se manipulan de forma eficiente los bloques de texto como tipo de dato.
             \end{itemize}
 			
-			\paragraph{Flask}
-			\paragraph{Gunicorn}
-			\paragraph{Python}
-			\paragraph{\acrshort{bert}}
-			\paragraph{\acrshort{gpt}-2}
-			\paragraph{\acrshort{ec2}}
-			\paragraph{SageMaker}
-			\paragraph{\acrshort{cli}}
-			\paragraph{SageMaker}
-			\paragraph{S3}
-			\paragraph{Apache}
+			\paragraph{Flask. \\}
+			Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\par
+			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\
+			Las principales ventajas de Flask son: 
+			\begin{itemize}
+				\item Permite escalar con facilidad la aplicación.
+				\item Es de fácil desarrollo, si entiendes Python.
+				\item Es flexible con la platillas que te da por default.
+				\item Es modular.
+			\end{itemize}
 			
+			Principales desventajas son: 
+			\begin{itemize}
+				\item No cuenta con muchas herramientas o librerias de apoyo.
+				\item No puede manejar peticiones multiples al mismo tiempo.
+			\end{itemize}
+		
+			\paragraph{Gunicorn. \\}
+			
+			Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
+			
+			\paragraph{Python. \\}
+			Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\par
+			Las principales ventajas de Python son: 
+			\begin{itemize}
+				\item Es fácil y rápido desarrollar una aplicación.
+				\item Cuenta con una gran cantidad de librerias.
+				\item Es fácil de entender el código y darle mantenimiento.
+			\end{itemize}
+			
+			Principales desventajas son: 
+			\begin{itemize}
+				\item En ocasiones la ejecución del código es lenta.
+				\item Consume mucha memoria.
+			\end{itemize}
+			\paragraph{\acrshort{bert}. \\}
+			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \par        
+			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\par        
+			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+			\paragraph{\acrshort{gpt}-2. \\}
+			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\par        
+			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
+			\paragraph{Amazon \acrshort{ec2}. \\}
+			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\
+			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
+			Las principales ventajas de Amazon \acrshort{ec2} son: 
+			\begin{itemize}
+				\item Cuenta con plantillas predeterminadas de maquinas virtuales y servidores.
+				\item Permite configurar la memoria, almacenamiento, CPU y otras caracteristicas depndiendo las necesidades del usuario.
+				\item Precios dependiendo del uso y características del equipo o servidor alquilado.
+			\end{itemize}
+			
+			Principales desventajas son: 
+			\begin{itemize}
+				\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
+				\item Los costos de soporte técnico son muy elevados..
+			\end{itemize}		
+			\paragraph{Amazon \acrshort{cli}. \\}
+			
+			Amazon \acrfull{cli} es una herramienta que reúne todos los servicios de \acrshort{aws} en una consola central, lo que le brinda un control sencillo de varios servicios de \acrshort{aws} con una sola herramienta. Como su nombre indica, los usuarios operan los distintos servicios desde la línea de comandos. 
+			
+			\paragraph{Amazon SageMaker. \\}
+			Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores de datos a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\
+			Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\
+			Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y puede escalar fácilmente para entrenar los modelos a escala de petabytes. Para acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\
+			Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.			
+			\paragraph{Amazon S3. \\}
+			Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
+			
+			\paragraph{Apache. \\}
+			Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
+			Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
+			Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 			
 		\subsection{Hardware.}
 			Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
-            	    \begin{table}[H]
-	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-		\rowcolor{guindapoli}
-		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [1]}}}\\
-		\hline
-		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
-		\hline
-		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
-		\hline
-		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
-		\hline
-		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
-		\hline
-	\end{tabular}
-\end{table}
-\begin{table}[H]
-	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-		\rowcolor{guindapoli}
-		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [2]}}}\\
-		\hline
-		\rowcolor{azulclaro}Marca & Apple\\
-		\hline
-		\rowcolor{white}Modelo & iMac Late 2012\\
-		\hline
-		\rowcolor{azulclaro}Procesador & Intel Core i5\\
-		\hline
-		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
-		\hline
-		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
-		\hline
-		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
-		\hline
-	\end{tabular}
-\end{table}
-\begin{table}[H]
-	\begin{tabular}{|p{3.5cm}||p{10cm}|}
-		\rowcolor{guindapoli}
-		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de hardware utilizado. [3]}}}\\
-		\hline
-		\rowcolor{azulclaro}Procesador & Amd FX-8350\\
-		\hline
-		\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
-		\hline
-		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
-		\hline
-		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
-		\hline
-	\end{tabular}
-\end{table}
+            \begin{table}[H]
+            	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+            		\rowcolor{guindapoli}
+            		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
+            		\hline
+            		\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
+            		\hline
+            		\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
+            		\hline
+            		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
+            		\hline
+            		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
+            		\hline
+            	\end{tabular}
+            	\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
+            \end{table}
+            \begin{table}[H]
+            	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+            		\rowcolor{guindapoli}
+            		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
+            		\hline
+            		\rowcolor{azulclaro}Marca & Apple\\
+            		\hline
+            		\rowcolor{white}Modelo & iMac Late 2012\\
+            		\hline
+            		\rowcolor{azulclaro}Procesador & Intel Core i5\\
+            		\hline
+            		\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
+            		\hline
+            		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
+            		\hline
+            		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
+            		\hline
+            	\end{tabular}
+            	\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
+            \end{table}
+            \begin{table}[H]
+            	\begin{tabular}{|p{3.5cm}||p{10cm}|}
+            		\rowcolor{guindapoli}
+            		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
+            		\hline
+            		\rowcolor{azulclaro}Procesador & Amd FX-8350\\
+            		\hline
+            		\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
+            		\hline
+            		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
+            		\hline
+            		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
+            		\hline
+            	\end{tabular}
+            	\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
+            \end{table}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       %
@@ -1687,6 +1779,10 @@ natural y redes neuronales}\\
 	\bibitem{google_cloud_vs_aws} 
 	Jones, E. (2021, March 25). Google Cloud vs AWS in 2021 (Comparing the Giants). Kinsta. https://kinsta.com/blog/google-cloud-vs-aws/
 	
+	
+	%-------Referencias Herramientas a usar---------%
+	\bibitem{refQuesPython}  
+	Python (2021), What is Python? Executive Summary, [En línea]. Disponible: https://www.python.org/doc/essays/blurb/ [Último acceso: 24 de abril del 2021].
 	
 	%---------------------------Referencias Originales ↓----------------------------%
 	
