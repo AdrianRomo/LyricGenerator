@@ -127,6 +127,33 @@
 \newacronym{mlm}{MLM}{Modelado de lenguaje enmascarado}
 \newacronym{gpt}{GPT}{Generative Pretrained Transformer}
 \newacronym{bpe}{BPE}{Byte Pair Encoding}
+\newacronym{wip}{WIP}{Work In Progress}
+\newacronym{cls}{CLS}{Classification}
+\newacronym{sep}{SEP}{Separate}
+\newacronym{json}{JSON}{Javascript Object Notation}
+\newacronym{url}{URL}{Uniform Source Locator}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{vps}{VPS}{Virtual Private Server}
+\newacronym{ssl}{SSL}{Secure Socket Layer}
+\newacronym{fqdn}{FQDN}{Fully Qualified Domain Name}
+\newacronym{aws}{AWS}{Amazon Web Services}
+\newacronym{gpu}{GPU}{Graphic Processor Unit}
+\newacronym{ec2}{EC2}{Elastic Compute Cloud}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{api}{API}{Application Programm Interface}
+\newacronym{gcp}{GCP}{Google Cloud Platform}
+\newacronym{sdk}{SDK}{Software Development Kit}
+\newacronym{html}{HTML}{Hypertext Markup Language}
+\newacronym{css}{CSS}{Cascading Style Sheet}
+\newacronym{ecma}{ECMA}{European Computer Manufacturers Association}
+\newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
+\newacronym{tls}{TLS}{Transport Layer Security}
+\newacronym{sql}{SQL}{Structured Query Language}
+\newacronym{cad}{CAD}{Computer Aided Design}
+\newacronym{cli}{CLI}{Command Line Interface}
+\newacronym{hdd}{HDD}{Hard Drive Disk}
+\newacronym{ssd}{SSD}{Solid State Drive}
+\newacronym{iso}{ISO}{International Standardization Organization}
 
 %------------------FINAL DE ACRÓNIMOS-----------------------%
 
@@ -474,7 +501,7 @@ natural y redes neuronales}\\
 	    	}
 	    \end{table}
 	    
-	    Scrumban utiliza iteraciones y se monitorea con la ayuda de un tablero visual. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (WIP por sus siglas en inglés Work in Progress). Cuando WIP cae por debajo del nivel predeterminado, se establece un activador de planificación bajo demanda para que el equipo sepa cuándo planificar a continuación.\\
+	    Scrumban utiliza iteraciones y se monitorea con la ayuda de un tablero visual. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (\acrshort{wip} por sus siglas en inglés Work in Progress). Cuando \acrshort{wip} cae por debajo del nivel predeterminado, se establece un activador de planificación bajo demanda para que el equipo sepa cuándo planificar a continuación.\\
 	    \\
 	    Iteración\\
 	    En Scrumban, las iteraciones son cortas para garantizar que el equipo pueda adaptarse al entorno cambiante durante el proyecto. La duración de estas iteraciones en este proyecto se medirán como máximo en lapsos de dos semanas.\\
@@ -633,7 +660,7 @@ natural y redes neuronales}\\
         
         El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.
         
-        La \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y "comprender" su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
+        El \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y "comprender" su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
         
         \subsection{Tareas del Procesamiento de Lenguaje Natural}
         
@@ -652,7 +679,7 @@ natural y redes neuronales}\\
     	El procesamiento del lenguaje natural es el cerebro detrás de la inteligencia artificial en muchas aplicaciones del mundo real. Algunos ejemplos son los siguientes:
     	
     	\begin{itemize}
-    		\item \textbf{Aplicaciones dedicadas a la traducción: }un ejemplo de estos es Google Translate, el cual hace uso de BERT para el procesamiento del lenguaje natural así como para el etiquetado de las palabras que requiere traducir.
+    		\item \textbf{Aplicaciones dedicadas a la traducción: }un ejemplo de estos es Google Translate, el cual hace uso de \acrshort{bert} para el procesamiento del lenguaje natural así como para el etiquetado de las palabras que requiere traducir.
     		\item \textbf{Asistentes virtuales y chatbots: }Asistentes como Siri o Alexa requieren de un reconocimiento de voz para distinguir comandos, así como para responder adecuadamente a estos. En el caso de los chatbots realizan un análisis contextual de las preguntas para proveer respuestas relacionadas a las mismas.
     		\item \textbf{Análisis de sentimientos en redes sociales: }Consta de analizar el lenguaje utilizado en publicaciones en redes sociales, respuestas, reseñas y más para extraer actitudes y emociones en respuesta a productos, promociones y eventos; información que las empresas pueden usar en diseños de productos, campañas publicitarias y más
     		\item \textbf{Resúmenes de textos: }Consta de realizar resúmenes y sinopsis de distintos textos.
@@ -684,21 +711,21 @@ natural y redes neuronales}\\
         
         \subsection{¿Cómo funciona BERT?}
         
-        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de BERT, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\par        
+        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\par        
         \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de "conocimiento". A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\par        
         \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
         
-        \begin{figure}[H] \caption{Representación de entrada de BERT y la separación de la oración por palabras y la asignación de valores.}
+        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.}
         	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
         	\centering 
         \end{figure} 
            
-        En la figura anterior, lo que se realiza es que se inserta un token [CLS] al principio de la primera oración y un token [SEP] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\par        
+        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\par        
         Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
         
         \subsection{BERT en la actualidad}
         
-        BERT se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\par
+        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\par
         Así como en la realización de tareas tales como: \cite{refBertactualidad}
         \begin{itemize}
         	\item Generación de lenguaje basadas en secuencia a secuencia (Respuesta a preguntas, resúmenes de documentos, predicción de siguiente oración, chatbots). 
@@ -710,7 +737,7 @@ natural y redes neuronales}\\
         \subsection{¿Qué es GPT-2?}  
         
         \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\par        
-        GPT-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. GPT-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
+        \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
         El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\par        
         Ya que en \acrshort{gpt} no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\par
         \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
@@ -722,7 +749,7 @@ natural y redes neuronales}\\
     
     	\subsection{Arquitectura GPT}
     	
-    	\begin{figure}[H] \caption{Arquitectura del modelo de GPT-2 \cite{refarquitecturagpt}}
+    	\begin{figure}[H] \caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
     		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
     		\centering 
     	\end{figure}
@@ -730,7 +757,7 @@ natural y redes neuronales}\\
     	El modelo de \acrshort{gpt} es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \par
     	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
     	
-    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por GPT-2}
+    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2}
     		\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Gptsentence.png}
     		\centering 
     	\end{figure}
@@ -742,7 +769,7 @@ natural y redes neuronales}\\
 		Las bases de datos se componen de una o más tablas divididas en columnas y filas y son las encargadas de guardar un conjunto de datos.\par
 		Una base de datos generalmente es manejada por un \acrfull{dbms}. En conjunto, los datos y el \acrshort{dbms}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
-			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
+			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo \acrshort{json}.\par
 %			\subsection{Tipos de bases de datos}
 %				\subsubsection{Bases de datos estáticas}
 %				Estas son de sólo lectura, utilizadas principalmente para almacenar datos históricos los cuales posteriormente se pueden utilizar para estudiar el comportamiento de un conjunto datos a través del tiempo, realizar proyecciones o tomar decisiones.\par
@@ -811,7 +838,7 @@ natural y redes neuronales}\\
 		\end{figure}
 
 		\section{Flask}
-		Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de URLS y un motor de plantillas. En general es un marco de aplicación web WSGI.\cite{refFlask3}\par
+		Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\par
 		La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
 		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que se hace es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias de este. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\par
 		Para poder hacer esto, en la terminal se escribe:\par
@@ -853,9 +880,9 @@ natural y redes neuronales}\\
 		\begin{center}
 		* Running on http://127.0.0.1:5000/
 		\end{center}
-		Si se copia esa URL y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\par
+		Si se copia esa \acrshort{url} y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\par
 		Como se hizo mención al inicio, una de las características de Flask es que se pueden manejar las rutas de la aplicación web usando el método route(), siempre que un usuario visite esa ruta se va a ejecutar el método adjuntado a este.\par
-		Flask soporta diferentes tipos de estructuras de variables. Se pueden incluir cadenas personalizadas, números enteros y otros tipos de caracteres en las URLs.\par
+		Flask soporta diferentes tipos de estructuras de variables. Se pueden incluir cadenas personalizadas, números enteros y otros tipos de caracteres en las \acrshort{url}s.\par
 		Si se requiere manejar solicitudes, Flask tiene soporte para solicitudes de tipo GET y POST, por defecto Flask solo admite peticiones de tipo GET, por lo que si se necesita hacer uso de peticiones tipo POST esta debe de estar especificada como parámetro de la función route(), por ejemplo:\par
 		\begin{center}
 		@app.route('/login', methods=['POST'])
@@ -932,8 +959,8 @@ natural y redes neuronales}\\
 	    
 	    \section{Apache}
 	 	Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
-	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo HTTP, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
-	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían VPS o alojamiento compartido.\\
+	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
+	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 		
 		\newpage
 		
@@ -950,7 +977,7 @@ natural y redes neuronales}\\
 					\hline
 					\begin{tabular}[c]{@{}l@{}}De código abierto y gratuito,\\ incluso para su uso comercial.\\ Software estable y confiable.\\Frecuentemente actualizado \\incluyendo actualizaciones\\ regulares a los parches de \\seguridad.\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Nginx es uno de los servidores \\web que soluciona el problema \\c10k y probablemente el más \\exitoso al hacerlo, no crea un \\nuevo proceso por cada solicitud y \\en su lugar, maneja toda solicitud \\entrante en un único hilo.\end{tabular}
-					& \begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable \\comparado a otros servidores \\web. Por ejemplo, para correr \\WordPress, la mejor elección es \\un servidor HTTP de propósito \\general como Apache o Nginx.\end{tabular} \\
+					& \begin{tabular}[c]{@{}l@{}}Tomcat es menos configurable \\comparado a otros servidores \\web. Por ejemplo, para correr \\WordPress, la mejor elección es \\un servidor \acrshort{http} de propósito \\general como Apache o Nginx.\end{tabular} \\
 					\hline
 					\begin{tabular}[c]{@{}l@{}}Funciona de forma intuitiva, con \\sitios web hechos con WordPress. \\Comunidad grande y posibilidad \\de contactar con soporte \\disponible de manera sencilla en \\caso de cualquier problema.\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}El modelo basado en eventos de \\Nginx distribuye solicitudes de \\usuario entre procesos \\trabajadores de una manera \\eficiente, llevando con ello a una \\mejor escalabilidad.\end{tabular}
@@ -970,18 +997,18 @@ natural y redes neuronales}\\
 	        Cuando se escuche la palabra ‘servidor web’, se puede pensar en ello como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
 
 		 \section{Certificado SSL}
-			Conocido como (Secure Sockets Layer) o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. SSL crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa SSL permite que dos partes tengan una “conversación” privada.\par
-			Para establecer esta conexión segura, se instala en un servidor web un certificado SSL (también llamado 'certificado digital') que cumple dos funciones:
+			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\par
+			Para establecer esta conexión segura, se instala en un servidor web un certificado \acrshort{ssl} (también llamado 'certificado digital') que cumple dos funciones:
 			
 			\begin{itemize}
 				\item Autentificar la identidad del sitio web, garantizando a los visitantes que no están en un sitio falso. 
 				\item Cifrar la informaci\'on transmitida.
 			\end{itemize}
 		
-			Hay varios tipos de certificados SSL según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo:
+			Hay varios tipos de certificados \acrshort{ssl} según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo:
 			
 			\begin{itemize}
-				\item \'Unico: Asegura un nombre de dominio o subdominio completo (FQDN por sus siglas en ingl\'es). 
+				\item \'Unico: Asegura un nombre de dominio o subdominio completo (\acrfull{fqdn} por sus siglas en ingl\'es). 
 				\item Comod\'in: Cubre un nombre de dominio y un n\'umero ilimitado de sus subdominios.
 				\item Multidominio: Asegura varios nombres de dominio.
 			\end{itemize}
@@ -990,16 +1017,16 @@ natural y redes neuronales}\\
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
 		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\par 
-		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, AWS ofrece instancias de GPUs con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
-		Las GPUs son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece GPUs de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
+		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
+		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
 		\subsection{Amazon}
-		Dentro de las bondades que ofrecen los Servicios Web de Amazon (AWS por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
+		Dentro de las bondades que ofrecen los Servicios Web de Amazon (\acrfull{aws} por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
 		
 		\begin{itemize}
-			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (EC2 por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
+			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (\acrfull{ec2} por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
 			Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\par 
-			El mercado de AWS ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\par 
+			El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\par 
 			Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
 			
 		\end{itemize}
@@ -1041,7 +1068,7 @@ natural y redes neuronales}\\
 			\resizebox{15cm}{!} {
 				\begin{tabular}{c c c c}% centered columns (3 columns)
 					\hline\hline                        %inserts double horizontal lines
-					Característica & GCP & AWS & Azure \\ [0.5ex]% inserts table %heading
+					Característica & \acrshort{gcp} & \acrshort{aws} & Azure \\ [0.5ex]% inserts table %heading
 					\hline                  % inserts single horizontal line
 					\begin{tabular}[c]{@{}l@{}}Jupyter Notebook\\alojado de \\manera local\\ o remota\\\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Plataforma de IA\end{tabular}
@@ -1063,7 +1090,7 @@ natural y redes neuronales}\\
 					& Si
 					& \begin{tabular}[c]{@{}l@{}}Si\end{tabular}\\
 					\hline
-					AutoML\\(UI y API) 
+					AutoML\\(\acrshort{ui} y \acrshort{api}) 
 					& \begin{tabular}[c]{@{}l@{}}Tabla de AutoML\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Autopiloto de\\SageMaker\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}AutoML\end{tabular}\\
@@ -1080,30 +1107,30 @@ natural y redes neuronales}\\
 		\newpage
 		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue sencillos.\\
 		\\
-		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plataforma de la Nube de Google (GCP) usa un paquete llamado “what if tool” el cual se puede integrar junto a un “Jupyter Notebook” y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
+		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plataforma de la Nube de Google (\acrshort{gcp}) usa un paquete llamado “what if tool” el cual se puede integrar junto a un “Jupyter Notebook” y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
 		\\
-		El debbuger de SageMaker de AWS permite analizar cómo es que la ingeniería de características y el refinado del modelo son hechos, o de forma más concisa, permite ver qué sucede durante el entrenamiento del modelo.\\
+		El debbuger de SageMaker de \acrshort{aws} permite analizar cómo es que la ingeniería de características y el refinado del modelo son hechos, o de forma más concisa, permite ver qué sucede durante el entrenamiento del modelo.\\
 		\\
-		Azure, por su parte, provee un módulo propio en su SDK el cual parece tener la mejor integración de entre las tres plataformas.\\
+		Azure, por su parte, provee un módulo propio en su \acrshort{sdk} el cual parece tener la mejor integración de entre las tres plataformas.\\
 		\\
 		\textbf{Costo y Rendimiento del Modelo}\\
 		\\
-		Azure y GCP puntúan ligeramente mejor que AWS en términos de rendimiento, esto no necesariamente significa que una plataforma es mejor que otra.\\
+		Azure y \acrshort{gcp} puntúan ligeramente mejor que \acrshort{aws} en términos de rendimiento, esto no necesariamente significa que una plataforma es mejor que otra.\\
 		\\
-		El costo, por otro lado, resulta ser más interesante. El costo de AWS fue considerablemente menor que GCP y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
+		El costo, por otro lado, resulta ser más interesante. El costo de \acrshort{aws} fue considerablemente menor que \acrshort{gcp} y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
 		\\
 %		Si se tienen problemas con el presupuesto y el gasto por el 5 por ciento extra de mejora en el rendimiento no justifica el retorno, la historia se vuelve completamente distinta.\\
 		\\
-		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. AWS y GCP parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones, en vez de haciendo uso de una interfaz.\\
+		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. \acrshort{aws} y \acrshort{gcp} parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones, en vez de haciendo uso de una interfaz.\\
 		\\
-		Tanto GCP como AWS ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
+		Tanto \acrshort{gcp} como \acrshort{aws} ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
 		
-		\begin{table}[hbt!]\caption{Tabla comparativa GCP vs AWS (en dólares)}% title of Table
+		\begin{table}[hbt!]\caption{Tabla comparativa \acrshort{gcp} vs \acrshort{aws} (en dólares)}% title of Table
 			\centering % used for centering table
 			\resizebox{13cm}{!} {
 				\begin{tabular}{c c c}% centered columns (3 columns)
 					\hline\hline                        %inserts double horizontal lines
-					Tipo de Instancia & Precio de EC2 (por hora) & Precio de Google (por hora) \\ [0.5ex]% inserts table %heading
+					Tipo de Instancia & Precio de \acrshort{ec2} (por hora) & Precio de Google (por hora) \\ [0.5ex]% inserts table %heading
 					\hline                  % inserts single horizontal line
 					\begin{tabular}[c]{@{}l@{}}Propósito\\General\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}\$0.134\end{tabular}
@@ -1117,7 +1144,7 @@ natural y redes neuronales}\\
 					& \begin{tabular}[c]{@{}l@{}}\$0.201\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}\$0.295\end{tabular}\\
 					\hline
-					GPU
+					\acrshort{gpu}
 					& \begin{tabular}[c]{@{}l@{}}\$0.526\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}\$1.4\end{tabular}\\
 					[1ex]      % [1ex] adds vertical space
@@ -1125,7 +1152,7 @@ natural y redes neuronales}\\
 			}
 		\end{table}
 	
-		En conclusión, la opción ideal para las necesidades de nuestro proyecto es AWS debido a que es más económico que las otras dos plataformas y cuenta con herramientas más útiles como SageMaker que nos permitirá saber cómo es que se está entrenando el modelo.
+		En conclusión, la opción ideal para las necesidades de nuestro proyecto es \acrshort{aws} debido a que es más económico que las otras dos plataformas y cuenta con herramientas más útiles como SageMaker que nos permitirá saber cómo es que se está entrenando el modelo.
 		
 		
             \begin{comment}
@@ -1230,7 +1257,7 @@ natural y redes neuronales}\\
     		\hline
     		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
     		\hline
-    		\rowcolor{white}Disco duro & 1Tb HDD y 512Gb SSD\\
+    		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
     		\hline
     	\end{tabular}
     \end{table}
@@ -1249,7 +1276,7 @@ natural y redes neuronales}\\
     		\hline
     		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
     		\hline
-    		\rowcolor{white}Disco duro & 1Tb y 256 Gb SSD\\
+    		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
     		\hline
     	\end{tabular}
     \end{table}
@@ -1264,7 +1291,7 @@ natural y redes neuronales}\\
 		\hline
 		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
 		\hline
-		\rowcolor{white}Disco duro & 1Tb HDD\\
+		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -1320,7 +1347,7 @@ natural y redes neuronales}\\
     		\item \textbf{Servicios}\\
     		Se considera un gasto mensual aproximado de \$1,600.00 que al ser multiplicado por todo el tiempo de elaboración comtemplado nos da un total de \$14,400.00.
     		\item \textbf{Software} \\
-    		Durante algunos periodos se va a hacer uso principalmente de herramientas gratuitas y de software libre, en cuanto al servicio en la nube se pretende hacer uso de AWS y trabajar inicialmente con los planes gratuitos que ofrece, en caso de que se lleguen a consumir los recursos de este plan, entonces se procederá a cambiarnos a otro plan superior donde el costo actual se cobra en \$ 0.15 centavos de dólar por hora de uso.
+    		Durante algunos periodos se va a hacer uso principalmente de herramientas gratuitas y de software libre, en cuanto al servicio en la nube se pretende hacer uso de \acrshort{aws} y trabajar inicialmente con los planes gratuitos que ofrece, en caso de que se lleguen a consumir los recursos de este plan, entonces se procederá a cambiarnos a otro plan superior donde el costo actual se cobra en \$ 0.15 centavos de dólar por hora de uso.
     		\item \textbf{Hardware}\\
     		Se utilizarán los equipos de cómputo personal de cada integrante, lo que da un costo aproximado de \$24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual del hardware. 
     		\item \textbf{Recursos Humanos}\\
@@ -1338,37 +1365,37 @@ natural y redes neuronales}\\
 			Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
 			
 			\paragraph{HTML5.}
-			HTML comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de html motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
-			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, html y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
-			HTML5 es una mejora de esta combinación, lo que unió todos estos elementos. HTML5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, html provee los elementos estructurales, CSS se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que HTML5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
+			\acrfull{html} comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de \acrshort{html} motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
+			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, \acrshort{html} y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
+			\acrshort{html}5 es una mejora de esta combinación, lo que unió todos estos elementos. \acrshort{html}5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, \acrshort{html} provee los elementos estructurales, \acrshort{css} se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que \acrshort{html}5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
 			
 			\paragraph{CSS.\\}
-			HTML5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de CSS se concentra en volver la estructura de HTML utilizable y atractivo a la vista.\\
+			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\
 			
-			Oficialmente CSS no tiene nada que ver con HTML4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de HTML. Al principio, atributos dentro de las etiquetas HTML proveóan estilos esenciales para cada elemento, pero a medida que HTML evolucionó, la escritura de códigos se volvió más compleja y html por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\
+			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveóan estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\
 			
-			En consecuencia a esta demanda, CSS fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de HTML.\\
+			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\
 			
-			La versión 3 de CSS sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de HTML5 fue desarrollada considerando CSS a cargo del diseño, Debido a esta consideración, la integración entre HTML y CSS es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos HTML5 también estamos haciendo referencia a CSS3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en CSS3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con HTML5 \cite{refElGranLibro}.
+			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
 			\paragraph {JavaScript. \\}
-			JavaScript es considerado como el lenguaje de programación de html y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
+			JavaScript es considerado como el lenguaje de programación de \acrshort{html} y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
 			Su primera aproximación a un uso real, fue en mayor parte para "dar vida a una página web", como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
-			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo "funciona" dentro de una página html.\\
-			JavaScript fue declarado como estándar del European Computer Manufacturers Association (ECMA) en 1997, y poco después, también fue estandarizado por ISO \cite{refJavaScript}. \\ 
+			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo "funciona" dentro de una página \acrshort{html}.\\
+			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\ 
 			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\
 			
-			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (APIs) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
+			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (\acrshort{api}s) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
 		    
 		    \paragraph{OpenSSL.\\}
 		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.
             
-            Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios HTTPS). Estas herramientas ayudan al sistema a implementar el Secure Sockets Layer (SSL), así como otros protocolos relacionados con la seguridad, como el Transport Layer Security (TLS). OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
+            Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios \acrshort{https}). Estas herramientas ayudan al sistema a implementar el \acrfull{ssl}, así como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
       
             \paragraph{MongoDB. \\}
             MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o ''columnas'' que no tienen por qué repetirse de un registro a otro. \\
             Las características más destacadas son su velocidad y su sencillo sistema de consulta de los contenidos de la base de datos. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
-            MongoDB utiliza un modelo NoSQL el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
+            MongoDB utiliza un modelo No\acrshort{sql} el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
             
             Las ventajas que ofrece MongoDB como herramienta de desarrollo de base de datos no relacionales son:
             \begin{itemize}
@@ -1380,7 +1407,7 @@ natural y redes neuronales}\\
             \end{itemize}
                     
             \paragraph{MySQL. \\}
-            Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft SQL Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\
+            Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft \acrshort{sql} Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\
             
             El modelo relacional, para el modelado y la gestión de bases de datos, es un modelo de datos basado en la lógica de predicados y en la teoría de conjuntos.
             Su idea fundamental es el uso de relaciones. Estas relaciones podrían considerarse en forma lógica como conjuntos de datos llamados tuplas. Es el modelo más utilizado en la actualidad para modelar problemas reales y administrar datos dinámicamente \cite{refER}.\\
@@ -1394,18 +1421,18 @@ natural y redes neuronales}\\
 
             Mientras que las principales desventajas son: 
             \begin{itemize}
-                \item Presentan deficiencias con datos gráficos, multimedia, CAD y sistemas de información geográfica.
+                \item Presentan deficiencias con datos gráficos, multimedia, \acrshort{cad} y sistemas de información geográfica.
                 \item No se manipulan de forma eficiente los bloques de texto como tipo de dato.
             \end{itemize}
 			
 			\paragraph{Flask}
 			\paragraph{Gunicorn}
 			\paragraph{Python}
-			\paragraph{Bert}
-			\paragraph{GPT-2}
-			\paragraph{EC2}
+			\paragraph{\acrshort{bert}}
+			\paragraph{\acrshort{gpt}-2}
+			\paragraph{\acrshort{ec2}}
 			\paragraph{SageMaker}
-			\paragraph{CLI}
+			\paragraph{\acrshort{cli}}
 			\paragraph{SageMaker}
 			\paragraph{S3}
 			\paragraph{Apache}
@@ -1424,7 +1451,7 @@ natural y redes neuronales}\\
 		\hline
 		\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
 		\hline
-		\rowcolor{white}Disco duro & 1Tb HDD y 512Gb SSD\\
+		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -1443,7 +1470,7 @@ natural y redes neuronales}\\
 		\hline
 		\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
 		\hline
-		\rowcolor{white}Disco duro & 1Tb y 256 Gb SSD\\
+		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -1458,7 +1485,7 @@ natural y redes neuronales}\\
 		\hline
 		\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
 		\hline
-		\rowcolor{white}Disco duro & 1Tb HDD\\
+		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
 		\hline
 	\end{tabular}
 \end{table}
