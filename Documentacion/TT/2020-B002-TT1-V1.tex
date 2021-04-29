@@ -343,6 +343,7 @@ natural y redes neuronales}\\
 %   				ÍNDICE 				  	  %
 %                               				  %
 %   %   %   %   %   %   %   %   %	%
+\appendixpageoff
 	\begin{appendices}
 		\renewcommand*\contentsname{{\textcolor{azulescom}{Índice.}}}
 		\tableofcontents
@@ -355,12 +356,6 @@ natural y redes neuronales}\\
 		\newpage
 		\renewcommand*\listtablename{{\textcolor{azulescom}{Índice de cuadros.}}}
 		\listoftables
-		
-		\newpage
-		\renewcommand*\glossaryname{{\textcolor{azulescom}{Glosario.}}}
-		\printglossary
-		\renewcommand*\glossaryname{{\textcolor{azulescom}{Acrónimos.}}}
-		\printglossary[title={\textcolor{azulescom}{Acrónimos.}}, type=\acronymtype]
 	\end{appendices}
 	
    \textcolor{guindapoli}{\part{Trabajo Terminal I}}
@@ -645,7 +640,7 @@ natural y redes neuronales}\\
 				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
 				\newpage
 				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
-					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
+					\includegraphics[width=10cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
 				\end{figure}		
 %				\subsubsection{Modular Neural Network}
@@ -748,14 +743,14 @@ natural y redes neuronales}\\
         	\item Continuar con el paso anterior hasta alcanzar el número máximo predefinido de subpalabras de iteraciones.
         \end{itemize}
     
-    	\subsection{Arquitectura GPT}
+    	\subsection{Arquitectura GPT-2}
     	
     	\begin{figure}[H] \caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
     		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
     		\centering 
     	\end{figure}
     
-    	El modelo de \acrshort{gpt} es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \par
+    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \par
     	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
     	
     	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2}
@@ -1648,7 +1643,45 @@ natural y redes neuronales}\\
 \section{Resultados} % Explicar los Resultados
 % Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 \newpage
-
+%   %   %   %   %   %   %   %   %	%	%
+%		       											%
+%   				Iteración 3				       %
+%                               				  		%
+%   %   %   %   %   %   %   %   %	%   %     
+\chapter{\textcolor{azulescom}{Iteración 3.}}
+\section{Descripción.}
+\section{Limpieza} % Explicar cómo se limpió la base de datos
+\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\section{Resultados} % Explicar los Resultados
+% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+\newpage
+%   %   %   %   %   %   %   %   %	%	%
+%		       											%
+%   				Iteración 4 				   %
+%                               				  		%
+%   %   %   %   %   %   %   %   %	%   %     
+\chapter{\textcolor{azulescom}{Iteración 4.}}
+\section{Descripción.}
+\section{Limpieza} % Explicar cómo se limpió la base de datos
+\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\section{Resultados} % Explicar los Resultados
+% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+\newpage
+\appendixpage
+	\begin{appendices}
+	%%Glosario
+	\newpage
+	\renewcommand*\glossaryname{{\textcolor{azulescom}{Glosario.}}}
+	\printglossary
+	%%Acrónimos
+	\newpage
+	\renewcommand*\glossaryname{{\textcolor{azulescom}{Acrónimos.}}}
+	\printglossary[title={\textcolor{azulescom}{Acrónimos.}}, type=\acronymtype]
+\end{appendices}
 \begin{thebibliography}{20}
 	\bibitem{refRAE}  		
 	Real Academia Española (2020, noviembre), Diccionario de la lengua española, [En línea]. Disponible: https://dle.rae.es [Último acceso: 10 de diciembre del 2020].
@@ -1724,7 +1757,7 @@ natural y redes neuronales}\\
 	ref A. Vaca (2020, mayo), Transformers en Procesamiento del Lenguaje Natural, [En línea]. Disponible: https://www.iic.uam.es/innovacion/transformers-en-procesamiento-del-lenguaje-natural/  [Ultimo acceso: 15 de abril del 2021].
 	
 	\bibitem{refArqTransformer} 
-	ref A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L. Kaiser &  I. Polosukhin (2017, diciembre), Attention Is All You Need, [En línea]. Disponible: https://arxiv.org/pdf/1706.03762.pdf  [Ultimo acceso: 15 de abril del 2021].
+	ref A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L. Kaiser \&  I. Polosukhin (2017, diciembre), Attention Is All You Need, [En línea]. Disponible: https://arxiv.org/pdf/1706.03762.pdf  [Ultimo acceso: 15 de abril del 2021].
 	
 	\bibitem{refQueesBert} 
 	ref J. Devlin, M. Chang, K. Lee, K. Toutanova (2019, mayo), BERT: Pre-training of Deep Bidirectional Transformers for
@@ -1737,13 +1770,13 @@ natural y redes neuronales}\\
 	ref B. Lutkevich (2020, enero), BERT language model, [En línea]. Disponible: https://searchenterpriseai.techtarget.com/definition/BERT-language-model [Ultimo acceso: 12 de abril del 2021].
 	
 	\bibitem{refQueesgpt} 
-	ref A. Radford, J. Wu, D. Amodei, D. Amodei, J. Clark, M. Brundage & I. Sutskever (2020, enero), Better Language Models and Their Implications, [En línea]. Disponible: https://openai.com/blog/better-language-models/ [Ultimo acceso: 14 de abril del 2021].
+	ref A. Radford, J. Wu, D. Amodei, D. Amodei, J. Clark, M. Brundage \& I. Sutskever (2020, enero), Better Language Models and Their Implications, [En línea]. Disponible: https://openai.com/blog/better-language-models/ [Ultimo acceso: 14 de abril del 2021].
 	
 	\bibitem{refbpe} 
 	ref M. Edward (2019, febrero), Too powerful NLP model (GPT-2), [En línea]. Disponible:  https://towardsdatascience.com/too-powerful-nlp-model-generative-pre-training-2-4cc6afb6655 [Ultimo acceso: 14 de abril del 2021].
 	
 	\bibitem{refarquitecturagpt} 
-	ref A. Radford, K. Narasimhan, T. Salimans & I. Sutskever (2018), Improving Language Understanding by Generative Pre-Training, [En línea]. Disponible:  https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf  [Ultimo acceso: 14 de abril del 2021].
+	ref A. Radford, K. Narasimhan, T. Salimans \& I. Sutskever (2018), Improving Language Understanding by Generative Pre-Training, [En línea]. Disponible:  https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language\_understanding\_paper.pdf  [Ultimo acceso: 14 de abril del 2021].
 	
 	\bibitem{refarquitecturagpt2} 
 	ref J. Montantes(2019, mayo), Examining the Transformer Architecture, [En línea]. Disponible: https://towardsdatascience.com/examining-the-transformer-architecture-part-1-the-openai-gpt-2-controversy-feceda4363bb  [Ultimo acceso: 14 de abril del 2021].
