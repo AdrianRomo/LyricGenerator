@@ -1,4 +1,3 @@
-
 \documentclass[12pt, a4paper, titlepage]{report}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
@@ -371,10 +370,8 @@ natural y redes neuronales}\\
     %                               				  %
     %   %   %   %   %   %   %   %   %	%
     \chapter{\textcolor{azulescom}{Introducción}}
-    La industria musical obtiene ganancias a través de la creación y divulgación de la música de manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. Esta es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Hay una gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) que proponen generar texto utilizando redes neuronales recurrentes y/o convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\par
-    
-    Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso, mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características particulares hacen que generar letras musicales sea mucho más difícil que textos normales.\par
-    
+    La industria musical obtiene ganancias a través de la creación y divulgación de la música de manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. Esta es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Hay una gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) que proponen generar texto utilizando redes neuronales recurrentes y/o convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\\\\
+    Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso, mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características particulares hacen que generar letras musicales sea mucho más difícil que textos normales.\\\\
     La mayoría de las investigaciones actuales sobre generación de letras vienen con muchas condiciones, como dar una pieza de melodía (Automatic Generation of Melodic Accompaniments for Lyrics \cite{Automatic_Generation_of_Melodic_Accompaniments_for_Lyrics}), o solo generar un tipo específico de letra (Conditional Rap Lyrics Generation with Denoising Autoencoders \cite{Conditional_Rap_Lyrics_Generation}). Sin embargo, la generación de letras por medio de inteligencia artificial dado un estilo y tema en particular, ha sido muy poco trabajado y debido a esto planeamos centrarnos en este nuevo problema. Estamos interesados en ver si el modelo propuesto puede aprender diferentes características de un género musical y generar letras que sean acorde a este. Actualmente, en el mercado se encuentran cuatro aplicaciones web que tienen una funcionalidad similar a la propuesta en este Trabajo Terminal:\par
     
     \begin{itemize}
@@ -432,18 +429,12 @@ natural y redes neuronales}\\
     	\end{itemize}
 		
     	\section{Justificación.}
-    	El crear nuevas composiciones musicales puede llegar a ser muy difícil, estresante e incluso agotador para cualquier aficionado o incluso algunos expertos en este medio, esto se debe a la falta de creatividad y/o tiempo de quien lo quiera realizar \cite{What_about_the_music}. En ocasiones se pueden contratar servicios particulares para la producción de la letra de una canción, sin embargo, puede ser muy costoso y en ocasiones el resultado final no alcanza a llenar las expectativas de la inversión que se hace; por ende, se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se les dificulte componer nuevas letras musicales.\\
-    	
-    	Normalmente las letras musicales creadas por el humano, tienden a estar compuestas por patrones de acuerdo al género musical \cite{genero_musical_en_la_musica_popular}. Algunos ejemplos de estos patrones pueden ser las rimas, enunciados, frases cortas y que tengan una semántica correcta, estos pueden ser encontrados por medio de procesamiento de lenguaje natural y una investigación profunda en la composición de letras de estos géneros.\\
-    	
-    	Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma.\\
-    	
-    	Nos proponemos orientar esta solución en un entorno de nube, donde la información de configuración, servicios y datos necesarios pueden mantenerse de forma independiente a la implementación, facilitando la adaptación y flexibilidad de la plataforma.\\
-    	
-    	Nuestro proyecto ayudará al usuario utilizando herramientas como el procesamiento de lenguaje natural, redes neuronales, aprendizaje de máquina (machine learning) y servidores en la nube. Se hará uso de un conjunto de datos (dataset) y herramientas alojadas en la nube (Google Cloud Platform o Amazon Web Services) para procesar estos datos; se pretende utilizar un módulo que encuentre patrones por medio de redes neuronales para analizar la semántica mediante técnicas y herramientas ya existentes de procesamiento de lenguaje natural. Se van a realizar pruebas y experimentos con estas herramientas antes de la implementación (Bert \cite{Bert}, spaCy\cite{spaCy}) para poder generar versos. A su vez se va a desarrollar una interfaz web intuitiva en versión prototipo donde el usuario va a poder utilizar esta herramienta la cual le va a mostrar la letra musical que se va a generar en ese momento.\\
-    	
-    	A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta se va a centrar en generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales se tendrán resultados completamente diferentes con propuestas distintas.\\
-    	
+    	El crear nuevas composiciones musicales puede llegar a ser muy difícil, estresante e incluso agotador para cualquier aficionado o incluso algunos expertos en este medio, esto se debe a la falta de creatividad y/o tiempo de quien lo quiera realizar \cite{What_about_the_music}. En ocasiones se pueden contratar servicios particulares para la producción de la letra de una canción, sin embargo, puede ser muy costoso y en ocasiones el resultado final no alcanza a llenar las expectativas de la inversión que se hace; por ende, se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se les dificulte componer nuevas letras musicales.\\\\
+    	Normalmente las letras musicales creadas por el humano, tienden a estar compuestas por patrones de acuerdo al género musical \cite{genero_musical_en_la_musica_popular}. Algunos ejemplos de estos patrones pueden ser las rimas, enunciados, frases cortas y que tengan una semántica correcta, estos pueden ser encontrados por medio de procesamiento de lenguaje natural y una investigación profunda en la composición de letras de estos géneros.\\\\
+    	Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma.\\\\
+    	Nos proponemos orientar esta solución en un entorno de nube, donde la información de configuración, servicios y datos necesarios pueden mantenerse de forma independiente a la implementación, facilitando la adaptación y flexibilidad de la plataforma.\\\\
+    	Nuestro proyecto ayudará al usuario utilizando herramientas como el procesamiento de lenguaje natural, redes neuronales, aprendizaje de máquina (machine learning) y servidores en la nube. Se hará uso de un conjunto de datos (dataset) y herramientas alojadas en la nube (Google Cloud Platform o Amazon Web Services) para procesar estos datos; se pretende utilizar un módulo que encuentre patrones por medio de redes neuronales para analizar la semántica mediante técnicas y herramientas ya existentes de procesamiento de lenguaje natural. Se van a realizar pruebas y experimentos con estas herramientas antes de la implementación (Bert \cite{Bert}, spaCy\cite{spaCy}) para poder generar versos. A su vez se va a desarrollar una interfaz web intuitiva en versión prototipo donde el usuario va a poder utilizar esta herramienta la cual le va a mostrar la letra musical que se va a generar en ese momento.\\\\
+    	A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta se va a centrar en generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales se tendrán resultados completamente diferentes con propuestas distintas.\\\\
     	En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software, se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial, Procesamiento de Lenguaje Natural, Web Application Development, Programación Orientada a Objetos, Análisis de Algoritmos, así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita.
     	
 	    \section{Metodolog\'ia.}
@@ -496,28 +487,27 @@ natural y redes neuronales}\\
 	    		\end{tabular}\label{table:VentajasServidor}% is used to refer this table in the text
 	    	}
 	    \end{table}
-	    
 	    Scrumban utiliza iteraciones y se monitorea con la ayuda de un tablero visual. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (\acrshort{wip} por sus siglas en inglés Work in Progress). Cuando \acrshort{wip} cae por debajo del nivel predeterminado, se establece un activador de planificación bajo demanda para que el equipo sepa cuándo planificar a continuación.\\
 	    \\
-	    Iteración\\
+	    \textbf{Iteración}\\
 	    En Scrumban, las iteraciones son cortas para garantizar que el equipo pueda adaptarse al entorno cambiante durante el proyecto. La duración de estas iteraciones en este proyecto se medirán como máximo en lapsos de dos semanas.\\
 	    \\
-	    Priorización\\
+	     \textbf{Priorización}\\
 	    La priorización se da de tal forma que las tareas más importantes se colocan en la parte superior de la tabla de planificación seguidas por las tareas menos importantes.\\
 	    Antes de llegar al tablero las tareas deben pasar por 3 etapas donde se van depurando las tareas a realizar para largo plazo (1 año), medio plazo (6 meses) y corto plazo (3 meses) siendo de esta última de donde salen las tareas más claras que se pueden completar y que ganan mayor prioridad para la próxima iteración.\\
 	    \\
-	    Principio de Elección\\
+	     \textbf{Principio de Elección}\\
 	    Cada miembro del equipo elige solo qué tarea de la sección “Tareas Pendientes” va a completar a continuación.\\
 	    \\
-	    Congelación de Funciones\\
+	     \textbf{Congelación de Funciones}\\
 	    Se utiliza en Scrumban cuando se acerca la fecha límite del proyecto, significando que sólo pueden trabajar sobre las tareas previamente pensadas sin cabida para implementar nuevas características.\\
 	    \\
-	    Triaje\\
+	     \textbf{Triaje}\\
 	    Ocurre después de la congelación de funciones, y es el punto donde el gerente del proyecto decide cuáles de las características en desarrollo se completarán y cuáles quedarán sin terminar.\\
 	    
-	    \begin{figure}[H] \caption{Funcionamiento de la planificación por cubetas}
+	    \begin{figure}[H] 
 	    	\includegraphics[width=12cm]{./imagenes/Introduccion/scrumban_buckets.jpg}
-	    	\centering 
+	    	\centering \caption{Funcionamiento de la planificación por cubetas}
 	    \end{figure}
 	    
         \section{Organización del documento}
@@ -531,10 +521,10 @@ natural y redes neuronales}\\
                 Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los tres componentes que tenemos en el sistema.
              
             \subsection{Capítulo 4. Diseño.}
-                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrollan y explican los siguientes diagramas: 'Casos de uso', 'Flujo', 'Flujo de datos', 'Clases', 'Secuencia' y 'Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
+                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrollan y explican los siguientes diagramas: `Casos de uso', `Flujo', `Flujo de datos', `Clases', `Secuencia' y `Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
                 
             \subsection{Capítulo 5. Desarrollo.}
-                En este capítulo mostraremos lo que se ha desarrollado para este Trabajo Terminal I (Iteración I e Iteración II). Se muestra que el prototipo cumpla los requerimientos que se le impusieron en la sección de análisis.
+                En este capítulo mostraremos lo que se ha desarrollado para este Trabajo Terminal I (Iteración I, Iteración II, Iteración III, Iteración IV). Se muestra que se cumplan los requerimientos que se impusieron en la sección de análisis.
             
             \subsection{Capítulo 6. Avances y trabajo por hacer.}
                 En el último capítulo de este reporte, hablaremos de los avances que hemos logrado a lo largo de la asignatura de Trabajo Terminal I y además, exponemos el trabajo esperado para la asignatura de Trabajo Terminal II.
@@ -569,14 +559,14 @@ natural y redes neuronales}\\
 %		\end{figure}
 		\section{Inteligencia Artificial}
 		Por Inteligencia Artificial se entiende a una simulación de procesos computacionales cognitivos para que simulen el comportamiento de una mente humana, estos comportamientos abarcan diferentes áreas de investigación, como el razonamiento, aprendizaje, percepción, comunicación y la capacidad de desarrollarse en entornos más complejos.
-		“La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificial utiliza muchas técnicas diferentes para resolver una gran variedad de tareas que se encuentran en todas partes.” \cite{Inteligencia_Artificial}\par
-		En ciencias de la computación, el término de inteligencia artificial se refiere a cualquier inteligencia similar a la humana exhibida por una computadora, robot u otra máquina. En el uso popular, la inteligencia artificial hace referencia a la capacidad de una computadora o máquina para imitar las capacidades del cerebro humano, es decir, aprender de ejemplos y experiencias, reconocer objetos, comprender y responder al lenguaje, tomar decisiones, resolver problemas y combinar estas y otras capacidades para realizar funciones que un ser humano podría realizar. \cite{refInteligencia_Artificial2}\par
+		“La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificial utiliza muchas técnicas diferentes para resolver una gran variedad de tareas que se encuentran en todas partes.” \cite{Inteligencia_Artificial}\\\\
+		En ciencias de la computación, el término de inteligencia artificial se refiere a cualquier inteligencia similar a la humana exhibida por una computadora, robot u otra máquina. En el uso popular, la inteligencia artificial hace referencia a la capacidad de una computadora o máquina para imitar las capacidades del cerebro humano, es decir, aprender de ejemplos y experiencias, reconocer objetos, comprender y responder al lenguaje, tomar decisiones, resolver problemas y combinar estas y otras capacidades para realizar funciones que un ser humano podría realizar. \cite{refInteligencia_Artificial2}\\\\
 		Como objetivo, la Inteligencia Artificial pretende hacer un uso de los recursos tecnológicos para desarrollar modelos computacionales y poder resolver problemas del mundo real evolucionando constantemente.
 	    \section{Redes neuronales}
-	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto.\\
+	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto.\\\\
 %	    El aprendizaje profundo o comunmente conocido como deep learning es un nombre o enfoque reciente de la inteligencia artificial llamada redes neuronales. 
-		Las redes neuronales son una forma de hacer que las computadoras aprendan, donde la computadora aprende a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\par
-		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia adelante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\par
+		Las redes neuronales son una forma de hacer que las computadoras aprendan, donde la computadora aprende a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\\\\
+		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia adelante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\\\\
 		Cuando una red neuronal está siendo entrenada la información de entrenamiento pasa a alimentar las capas inferiores (capas de entrada), donde será procesada y pasada a capas posteriores donde será transformada hasta llegar a las capas superiores (capas de salida).\cite{refQueSonRedesNeu}
 
 %        	\subsection{Tipos de Redes Neuronales}
@@ -612,7 +602,7 @@ natural y redes neuronales}\\
 %				\end{figure}
 				\subsection{Neuronas}
 				\subsubsection{Neurona Natural}
-				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\par
+				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\\\\
 				Este impulso viaja siempre en el mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, existe un espacio de separación entre ellas denominado sinapsis o espacio sináptico. Cuando el impulso nervioso llega al extremo del axón se liberan neurotransmisores al espacio sináptico transformando la señal eléctrica en otra química que penetra en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora y se repite el proceso con la contigua.\cite{refNeuronaNat}
 				\begin{figure}[H] \caption{Estructura de una neurona}
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
@@ -625,8 +615,8 @@ natural y redes neuronales}\\
 					\centering 
 				\end{figure}
 				\subsection{Aprendizaje de las Redes Neuronales}
-				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\par
-				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, o eliminarlas, o agregar y eliminar neuronas. Incluso podríamos modificar la función de entrada o la función de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\par
+				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\\\\
+				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, o eliminarlas, o agregar y eliminar neuronas. Incluso podríamos modificar la función de entrada o la función de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\\\\
 				El entrenamiento es un proceso necesario para toda red neuronal, y es un proceso en el que la red se familiariza con el problema que necesita resolver. En la práctica, generalmente se tienen algunos datos recopilados en función de los cuales necesitamos crear nuestras predicciones, clasificación, o cualquier otro procesamiento. Estos datos se denominan conjunto de entrenamiento. Según el comportamiento durante el entrenamiento y la naturaleza del conjunto de entrenamiento, tenemos algunos tipos de aprendizajes:
 				\begin{itemize}
 					\item \textbf{Aprendizaje no supervisado: }el conjunto de entrenamiento solo contiene entradas. La red intenta identificar entradas similares y clasificarlas en ciertas categorías.
@@ -634,9 +624,9 @@ natural y redes neuronales}\\
 					\item \textbf{Aprendizaje supervisado: }el conjunto de entrenamiento contiene entradas y salidas deseadas. De esta manera, la red puede verificar su salida calculada con la salida deseada y tomar las acciones pertinentes para reformular su cálculo.
 				\end{itemize}
 				\subsection{Recurrent Neural Network – Long Short Term Memory}
-				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\par
-				La primera capa esta formada de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo comenzará a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\par
-				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\par
+				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\\\\
+				La primera capa esta formada de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo comenzará a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\\\\
+				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\\\\
 				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
 				\newpage
 				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
@@ -654,9 +644,8 @@ natural y redes neuronales}\\
         
         \section{Procesamiento de Lenguaje Natural}
         
-        El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.
-        
-        El \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y 'comprender' su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
+        El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.\\\\
+        El \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y `comprender' su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
         
         \subsection{Tareas del Procesamiento de Lenguaje Natural}
         
@@ -683,7 +672,7 @@ natural y redes neuronales}\\
         
         \section{Transformers}
         
-        El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra de una frase en función del resto de la secuencia, permitiendo así introducir el contexto en la representación matemática del texto.\par        
+        El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra de una frase en función del resto de la secuencia, permitiendo así introducir el contexto en la representación matemática del texto.\\\\    
         Se suele trabajar con los transformadores en 2 etapas: \cite{refQueesuntransformer}
         \begin{itemize}
         	\item \textbf{Pre-entrenamiento: }En esta fase, el modelo aprende cómo se estructura el lenguaje de forma general, además de conseguir un conocimiento genérico del significado de las palabras. 
@@ -701,14 +690,14 @@ natural y redes neuronales}\\
         
         \subsection{¿Qué es Bert?}
         
-        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \par        
-        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\par        
-        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
+        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
+        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\\\\
         
         \subsection{¿Cómo funciona BERT?}
         
-        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\par        
-        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de "conocimiento". A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\par        
+        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\\\\     
+        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de “conocimiento”. A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\\\\        
         \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
         
         \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
@@ -716,12 +705,12 @@ natural y redes neuronales}\\
         	\centering 
         \end{figure} 
            
-        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\par        
+        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\\\\     
         Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
         
         \subsection{BERT en la actualidad}
         
-        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\par
+        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\\\\
         Así como en la realización de tareas tales como: \cite{refBertactualidad}
         \begin{itemize}
         	\item Generación de lenguaje basadas en secuencia a secuencia (Respuesta a preguntas, resúmenes de documentos, predicción de siguiente oración, chatbots). 
@@ -732,10 +721,10 @@ natural y redes neuronales}\\
         
         \subsection{¿Qué es GPT-2?}  
         
-        \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\par        
-        \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
-        El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\par        
-        Ya que en \acrshort{gpt} no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\par
+        \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
+        \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
+        El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\\\\        
+        Ya que en \acrshort{gpt} no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\\\\
         \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
         \begin{itemize}
         	\item Dividir palabra en secuencia de caracteres.
@@ -750,7 +739,7 @@ natural y redes neuronales}\\
     		\centering 
     	\end{figure}
     
-    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \par
+    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \\\\
     	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
     	
     	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2}
@@ -761,8 +750,8 @@ natural y redes neuronales}\\
     	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
 
         \section{Base de datos}
-        Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital con la finalidad de realizar distintas acciones como consultas futuras, ingreso de nuevos datos, actualización o eliminación de estos.\par
-		Las bases de datos se componen de una o más tablas divididas en columnas y filas y son las encargadas de guardar un conjunto de datos.\par
+        Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital con la finalidad de realizar distintas acciones como consultas futuras, ingreso de nuevos datos, actualización o eliminación de estos.\\\\
+		Las bases de datos se componen de una o más tablas divididas en columnas y filas y son las encargadas de guardar un conjunto de datos.\\\\
 		Una base de datos generalmente es manejada por un \acrfull{dbms}. En conjunto, los datos y el \acrshort{dbms}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
 			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo \acrshort{json}.\par
@@ -821,11 +810,11 @@ natural y redes neuronales}\\
 			\end{itemize}
 		\newpage
 		\section{Cadenas de Markov}
-	    Las cadenas de Markov son un \Gls{Sistema} matemático el cual experimenta con las transiciones de un \Gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que define a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\par
-		Son procesos \Gls{Estocastico}s, con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\par
-		En la teoría de probabilidad, el ejemplo más inmediato es el de una cadena de Markov homogénea en el tiempo, en la que la probabilidad de que ocurra cualquier transición de estado es independiente del tiempo.\par
+	    Las cadenas de Markov son un \Gls{Sistema} matemático el cual experimenta con las transiciones de un \Gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que define a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\\\\
+		Son procesos \Gls{Estocastico}s, con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\\\\
+		En la teoría de probabilidad, el ejemplo más inmediato es el de una cadena de Markov homogénea en el tiempo, en la que la probabilidad de que ocurra cualquier transición de estado es independiente del tiempo.\\\\
 		En el lenguaje de probabilidad condicional y variables aleatorias, una cadena de Markov es una secuencia X0, X1, X2, … de variables aleatorias que satisfacen la regla de independencia condicional.
-		En otras palabras, el conocimiento del estado anterior es todo lo que se necesita para determinar la distribución de probabilidad del estado actual. Esta definición es más amplia que la explorada anteriormente, ya que permite probabilidades de transición no estacionarias y, por lo tanto, cadenas de Markov no homogéneas en el tiempo; es decir, a medida que pasa el tiempo los pasos aumentan y la probabilidad de pasar de un estado a otro puede cambiar. \cite{refMarkov}\par
+		En otras palabras, el conocimiento del estado anterior es todo lo que se necesita para determinar la distribución de probabilidad del estado actual. Esta definición es más amplia que la explorada anteriormente, ya que permite probabilidades de transición no estacionarias y, por lo tanto, cadenas de Markov no homogéneas en el tiempo; es decir, a medida que pasa el tiempo los pasos aumentan y la probabilidad de pasar de un estado a otro puede cambiar. \cite{refMarkov}\\\\
 		Las cadenas de Markov pueden ser modeladas mediante \Gls{Maquinas de Estados Finitos}.\par
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Markov/CMarkov.png}
@@ -834,9 +823,9 @@ natural y redes neuronales}\\
 		\end{figure}
 
 		\section{Flask}
-		Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\par
-		La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\par
-		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que se hace es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias de este. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\par
+		Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\\\\
+		La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\\\
+		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que se hace es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias de este. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\\\\
 		Para poder hacer esto, en la terminal se escribe:\par
 		\begin{center}
 		virtualenv --no-site-packages myapp\par
@@ -876,7 +865,7 @@ natural y redes neuronales}\\
 		\begin{center}
 		* Running on http://127.0.0.1:5000/
 		\end{center}
-		Si se copia esa \acrshort{url} y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\par
+		Si se copia esa \acrshort{url} y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\\\\
 		Como se hizo mención al inicio, una de las características de Flask es que se pueden manejar las rutas de la aplicación web usando el método route(), siempre que un usuario visite esa ruta se va a ejecutar el método adjuntado a este.\par
 		Flask soporta diferentes tipos de estructuras de variables. Se pueden incluir cadenas personalizadas, números enteros y otros tipos de caracteres en las \acrshort{url}s.\par
 		Si se requiere manejar solicitudes, Flask tiene soporte para solicitudes de tipo GET y POST, por defecto Flask solo admite peticiones de tipo GET, por lo que si se necesita hacer uso de peticiones tipo POST esta debe de estar especificada como parámetro de la función route(), por ejemplo:\par
@@ -955,7 +944,7 @@ natural y redes neuronales}\\
 	    
 	    \section{Apache}
 	 	Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
-	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
+	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\\\\
 	 	Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 		
 		\newpage
@@ -988,13 +977,13 @@ natural y redes neuronales}\\
 		\end{table}
 
 	    \section{Servidor Web}
-	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\\
-	        Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java, y otros.\\
+	        El trabajo de un servidor web es mostrar sitios web en internet. Para conseguir este objetivo, actúa como un intermediario entre el servidor y las máquinas del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\\\\
+	        Los servidores web procesan archivos escritos en diferentes lenguajes de programación como PHP, Python, Java, y otros.\\\\
 	        Cuando se escuche la palabra ‘servidor web’, se puede pensar en ello como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
 
 		 \section{Certificado SSL}
-			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\par
-			Para establecer esta conexión segura, se instala en un servidor web un certificado \acrshort{ssl} (también llamado 'certificado digital') que cumple dos funciones:
+			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\\\\
+			Para establecer esta conexión segura, se instala en un servidor web un certificado \acrshort{ssl} (también llamado `certificado digital') que cumple dos funciones:
 			
 			\begin{itemize}
 				\item Autentificar la identidad del sitio web, garantizando a los visitantes que no están en un sitio falso. 
@@ -1012,7 +1001,7 @@ natural y redes neuronales}\\
 		\newpage
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
-		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\par 
+		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\\\\ 
 		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
 		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
@@ -1021,8 +1010,8 @@ natural y redes neuronales}\\
 		
 		\begin{itemize}
 			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (\acrfull{ec2} por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
-			Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\par 
-			El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\par 
+			Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\\\\ 
+			El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\\\\ 
 			Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
 			
 		\end{itemize}
@@ -1207,7 +1196,7 @@ natural y redes neuronales}\\
 	\chapter{\textcolor{azulescom}{Análisis.}}
 	    
     	\section{Estudio de Factibilidad.}
-    	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\par 
+    	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\\\\ 
     	Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
     	\begin{itemize}
     		\item \textbf{Factibilidad Técnica:} Este aspecto evalúa que la infraestructura, es decir, los equipos, el software, el conocimiento, la experiencia, etc. que se poseen son los necesarios para efectuar las actividades requeridas para la realización del trabajo terminal.
@@ -1378,12 +1367,12 @@ natural y redes neuronales}\\
     	\begin{center}
     		\$353,420.00
     	\end{center}
-    	\textbf{Conclusión} 
+    	\textbf{Conclusión\\} 
     	Tras realizar el análisis el estudio de factibilidad de este proyecto es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
     	
     	\section{Análisis de riesgo}
     	
-    	Dentro de este apartado determinaremos la probabilidad de que surja alguna problemática o riesgo el cual pueda impactar el desarrollo del proyecto, ya sea en términos del cronograma, la calidad o los costos.\par    	
+    	Dentro de este apartado determinaremos la probabilidad de que surja alguna problemática o riesgo el cual pueda impactar el desarrollo del proyecto, ya sea en términos del cronograma, la calidad o los costos.\\\\
     	Algunos riesgos que enfrentaremos durante el desarrollo del proyecto son los siguientes:\par
     	\begin{itemize}
     		
@@ -1407,36 +1396,34 @@ natural y redes neuronales}\\
 			\subsection{Software.}
 			Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
 			
-			\paragraph{HTML5.}
+			\paragraph{HTML5.\\}
 			\acrfull{html} comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de \acrshort{html} motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
 			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, \acrshort{html} y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
 			\acrshort{html}5 es una mejora de esta combinación, lo que unió todos estos elementos. \acrshort{html}5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, \acrshort{html} provee los elementos estructurales, \acrshort{css} se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que \acrshort{html}5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
 			
 			\paragraph{CSS.\\}
-			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\
+			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
 			
-			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveóan estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\
+			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveóan estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
 			
-			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\
+			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
 			
 			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
 			\paragraph {JavaScript. \\}
 			JavaScript es considerado como el lenguaje de programación de \acrshort{html} y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
-			Su primera aproximación a un uso real, fue en mayor parte para "dar vida a una página web", como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
-			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo "funciona" dentro de una página \acrshort{html}.\\
-			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\ 
-			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\
-			
+			Su primera aproximación a un uso real, fue en mayor parte para “dar vida a una página web”, como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
+			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo “funciona” dentro de una página \acrshort{html}.\\\\
+			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\\\ 
+			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\\\
 			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (\acrshort{api}s) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
 		    
 		    \paragraph{OpenSSL.\\}
-		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.
-            
+		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.\\
             Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios \acrshort{https}). Estas herramientas ayudan al sistema a implementar el \acrfull{ssl}, así como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
       
             \paragraph{MongoDB. \\}
-            MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o ''columnas'' que no tienen por qué repetirse de un registro a otro. \\
+            MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o “columnas” que no tienen por qué repetirse de un registro a otro. \\\\
             Las características más destacadas son su velocidad y su sencillo sistema de consulta de los contenidos de la base de datos. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
             MongoDB utiliza un modelo No\acrshort{sql} el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
             
@@ -1450,11 +1437,9 @@ natural y redes neuronales}\\
             \end{itemize}
                     
             \paragraph{MySQL. \\}
-            Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft \acrshort{sql} Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\
-            
+            Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft \acrshort{sql} Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
             El modelo relacional, para el modelado y la gestión de bases de datos, es un modelo de datos basado en la lógica de predicados y en la teoría de conjuntos.
-            Su idea fundamental es el uso de relaciones. Estas relaciones podrían considerarse en forma lógica como conjuntos de datos llamados tuplas. Es el modelo más utilizado en la actualidad para modelar problemas reales y administrar datos dinámicamente \cite{refER}.\\
-            
+            Su idea fundamental es el uso de relaciones. Estas relaciones podrían considerarse en forma lógica como conjuntos de datos llamados tuplas. Es el modelo más utilizado en la actualidad para modelar problemas reales y administrar datos dinámicamente \cite{refER}.\\\\
             Las principales ventajas son: 
             \begin{itemize}
                 \item Provee herramientas que garantizan evitar la duplicidad de registros.
@@ -1469,8 +1454,8 @@ natural y redes neuronales}\\
             \end{itemize}
 			
 			\paragraph{Flask. \\}
-			Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\par
-			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\
+			Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\\\\
+			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\\\
 			Las principales ventajas de Flask son: 
 			\begin{itemize}
 				\item Permite escalar con facilidad la aplicación.
@@ -1490,7 +1475,7 @@ natural y redes neuronales}\\
 			Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
 			
 			\paragraph{Python. \\}
-			Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\par
+			Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\\\\
 			Las principales ventajas de Python son: 
 			\begin{itemize}
 				\item Es fácil y rápido desarrollar una aplicación.
@@ -1504,14 +1489,14 @@ natural y redes neuronales}\\
 				\item Consume mucha memoria.
 			\end{itemize}
 			\paragraph{\acrshort{bert}. \\}
-			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \par        
-			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\par        
+			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
+			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
 			\paragraph{\acrshort{gpt}-2. \\}
-			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\par        
-			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\par
+			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
+			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
 			\paragraph{Amazon \acrshort{ec2}. \\}
-			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\
+			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
 			Las principales ventajas de Amazon \acrshort{ec2} son: 
 			\begin{itemize}
@@ -1520,7 +1505,7 @@ natural y redes neuronales}\\
 				\item Precios dependiendo del uso y características del equipo o servidor alquilado.
 			\end{itemize}
 			
-			Principales desventajas son: 
+			Las principales desventajas son: 
 			\begin{itemize}
 				\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
 				\item Los costos de soporte técnico son muy elevados..
@@ -1530,16 +1515,16 @@ natural y redes neuronales}\\
 			Amazon \acrfull{cli} es una herramienta que reúne todos los servicios de \acrshort{aws} en una consola central, lo que le brinda un control sencillo de varios servicios de \acrshort{aws} con una sola herramienta. Como su nombre indica, los usuarios operan los distintos servicios desde la línea de comandos. 
 			
 			\paragraph{Amazon SageMaker. \\}
-			Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores de datos a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\
-			Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\
-			Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y puede escalar fácilmente para entrenar los modelos a escala de petabytes. Para acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\
+			Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores de datos a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
+			Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
+			Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y puede escalar fácilmente para entrenar los modelos a escala de petabytes. Para acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
 			Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.			
 			\paragraph{Amazon S3. \\}
 			Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
 			
 			\paragraph{Apache. \\}
 			Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
-			Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\par
+			Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\\\\
 			Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 			
 		\subsection{Hardware.}
@@ -1671,7 +1656,7 @@ natural y redes neuronales}\\
 \section{Resultados} % Explicar los Resultados
 % Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 \newpage
-\appendixpage
+\appendixpageon
 	\begin{appendices}
 	%%Glosario
 	\newpage
@@ -1683,12 +1668,18 @@ natural y redes neuronales}\\
 	\printglossary[title={\textcolor{azulescom}{Acrónimos.}}, type=\acronymtype]
 \end{appendices}
 \begin{thebibliography}{20}
+	%Glossario
 	\bibitem{refRAE}  		
 	Real Academia Española (2020, noviembre), Diccionario de la lengua española, [En línea]. Disponible: https://dle.rae.es [Último acceso: 10 de diciembre del 2020].
 	
 	\bibitem{refOxfordLex}  		
 	Oxford Lexico (2020, noviembre), Definitions, Meanings, Synonyms, and Grammar by Oxford, [En línea]. Disponible: https://www.lexico.com [Último acceso: 2 de diciembre del 2020].
 	
+	\bibitem{refMaquinasFinitas}  		
+	J. A. Gutiérrez Orozco, Escuela Superior de Cómputo (2008, septiembre 15), Máquinas de Estados Finitos, [En línea]. Disponible: http://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/Summer\_Research\_files/maquinasef.pdf [Último acceso: 15 de diciembre del 2020].
+	
+	\bibitem{refSistema}  		
+	O. Jaramillo, Universidad Nacional Autonoma de México (2007, mayo 03), El concepto de Sistema, [En línea]. Disponible: https://www.ier.unam.mx/~ojs/pub/Termodinamica/node9.html [Último acceso: 2 de diciembre del 2020].
 	%  Introducción
 	\bibitem{Bourreau_and_Gensollen}  		
 	Chaney, D. (2012). The Music Industry in the Digital Age: Consumer Participation in Value Creation. International Journal of Arts Management, (1), pp. 15.
@@ -1705,6 +1696,7 @@ natural y redes neuronales}\\
 	\bibitem{Conditional_Rap_Lyrics_Generation}  	
 	Nikolov, N. I., Malmi, E., Northcutt, C. G., Parisi, L. (2020). Conditional Rap Lyrics Generation with Denoising Autoencoders. arXiv preprint arXiv:2004.03965.
 	
+	% Justificación
 	\bibitem{What_about_the_music}  	
 	Baker, F. A. (2015). What about the music? Music therapists’ perspectives on the role of music in the therapeutic songwriting process. Psychology of Music, 43(1), pp. 122-139.
 	
@@ -1716,92 +1708,80 @@ natural y redes neuronales}\\
 	
 	\bibitem{spaCy}  	
 	Honnibal, M.,\& Montani, I. (2017). spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing.
-	
-	\bibitem{refSistema}  		
-	O. Jaramillo, Universidad Nacional Autonoma de México (2007, mayo 03), El concepto de Sistema, [En línea]. Disponible: https://www.ier.unam.mx/~ojs/pub/Termodinamica/node9.html [Último acceso: 2 de diciembre del 2020].
-	
-	\bibitem{refMaquinasFinitas}  		
-	J. A. Gutiérrez Orozco, Escuela Superior de Cómputo (2008, septiembre 15), Máquinas de Estados Finitos, [En línea]. Disponible: http://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/Summer\_Research\_files/maquinasef.pdf [Último acceso: 15 de diciembre del 2020].
-	
+	% Marco Teórico IA
 	\bibitem{refInteligencia_Artificial2}
 	IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
 	
+	% Marco Teórico Neural Networks
 	\bibitem{refQueSonRedesNeu}  		
 	L. Hardesty  (2017, abril), Explained: Neural networks, [En línea]. Disponible: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414 [Último acceso: 15 de noviembre del 2020].	
-		
+	
+	% Redes Neuronales
 	\bibitem{refNeuronaNat}
 	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
-	
 	\bibitem{refNeuronaArt}
 	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
-	
 	\bibitem{refAprendizajeRedes}  		
 	Rubik's Code  (2018, febrero), How do Artificial Neural Networks learn?, [En línea]. Disponible: https://rubikscode.net/2018/01/15/how-artificial-neural-networks-learn/ [Último acceso: 7 de abril del 2021].	
-	
 	\bibitem{refTiposRedesNeu1}  		
 	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Network\_Zoo [Último acceso: 20 de noviembre del 2020].
-	
 	\bibitem{refTiposRedesNeu2}  		
 	A. Mehta (2019, enero 25), A Comprehensive Guide to Types of Neural Networks, [En línea]. Disponible: https://www.digitalvidya.com/blog/types-of-neural-networks/ [Último acceso: 15 de noviembre del 2020].
-	
 	\bibitem{refTiposRedesNeu3}  		
 	P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
-	
 	\bibitem{refTiposRedesNeu4} 
 	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
 	
+	%PLN
 	\bibitem{refProcesamientoLN}
 	ref IBM Cloud Education (2020, julio 2), Natural Language Processing [En línea]. Disponible: https://www.ibm.com/cloud/learn/natural-language-processing [Ultimo acceso: 20 de abril del 2021].
 	
+	%Transformer
 	\bibitem{refQueesuntransformer} 
 	ref A. Vaca (2020, mayo), Transformers en Procesamiento del Lenguaje Natural, [En línea]. Disponible: https://www.iic.uam.es/innovacion/transformers-en-procesamiento-del-lenguaje-natural/  [Ultimo acceso: 15 de abril del 2021].
-	
 	\bibitem{refArqTransformer} 
 	ref A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L. Kaiser \&  I. Polosukhin (2017, diciembre), Attention Is All You Need, [En línea]. Disponible: https://arxiv.org/pdf/1706.03762.pdf  [Ultimo acceso: 15 de abril del 2021].
-	
+
+	% Bert
 	\bibitem{refQueesBert} 
 	ref J. Devlin, M. Chang, K. Lee, K. Toutanova (2019, mayo), BERT: Pre-training of Deep Bidirectional Transformers for
 	Language Understanding, [En línea]. Disponible: https://arxiv.org/pdf/1810.04805.pdf [Ultimo acceso: 11 de abril del 2021].
-	
 	\bibitem{refComofuncionaBert} 
 	ref R. Horev (2018, noviembre), BERT Explained: State of the art language model for NLP, [En línea]. Disponible: https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270 [Ultimo acceso: 11 de abril del 2021].
-	
 	\bibitem{refBertactualidad} 
 	ref B. Lutkevich (2020, enero), BERT language model, [En línea]. Disponible: https://searchenterpriseai.techtarget.com/definition/BERT-language-model [Ultimo acceso: 12 de abril del 2021].
 	
+	%GPT-2
 	\bibitem{refQueesgpt} 
 	ref A. Radford, J. Wu, D. Amodei, D. Amodei, J. Clark, M. Brundage \& I. Sutskever (2020, enero), Better Language Models and Their Implications, [En línea]. Disponible: https://openai.com/blog/better-language-models/ [Ultimo acceso: 14 de abril del 2021].
-	
 	\bibitem{refbpe} 
 	ref M. Edward (2019, febrero), Too powerful NLP model (GPT-2), [En línea]. Disponible:  https://towardsdatascience.com/too-powerful-nlp-model-generative-pre-training-2-4cc6afb6655 [Ultimo acceso: 14 de abril del 2021].
-	
 	\bibitem{refarquitecturagpt} 
 	ref A. Radford, K. Narasimhan, T. Salimans \& I. Sutskever (2018), Improving Language Understanding by Generative Pre-Training, [En línea]. Disponible:  https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language\_understanding\_paper.pdf  [Ultimo acceso: 14 de abril del 2021].
-	
 	\bibitem{refarquitecturagpt2} 
 	ref J. Montantes(2019, mayo), Examining the Transformer Architecture, [En línea]. Disponible: https://towardsdatascience.com/examining-the-transformer-architecture-part-1-the-openai-gpt-2-controversy-feceda4363bb  [Ultimo acceso: 14 de abril del 2021].
-	
 	\bibitem{refarquitecturagpt3}
 	ref J. Vig(2019, marzo), GPT-2: Understanding Language Generation through Visualization, [En línea]. Disponible: https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8   [Ultimo acceso: 14 de abril del 2021].
 	
+	%Bases de Datos
 	\bibitem{refQueEsBD}  		
 	Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
-	
+
+	% Canción
 	\bibitem{refEstructuraCancion1}  		
 	Escribir Canciones (2008), Estructura y elementos de una canción, [En línea]. Disponible: https://dle.rae.es [Último acceso: 2 de diciembre del 2020].
-	
 	\bibitem{refEstructuraCancion2}  		
 	Swing this Music (2008), ¿QUÉ SECCIONES PUEDE TENER UNA CANCIÓN?española, [En línea]. Disponible: https://sites.google.com/site/swingthismusiccast/interpretacio/estructura-cancion/secciones-de-una-cancion [Último acceso: 2 de diciembre del 2020].
 	
+	% Markov
 	\bibitem{refMarkov}  		
 	J. R. Norris (1997), Markov Chains, [En línea]. Disponible: https://cape.fcfm.buap.mx/jdzf/cursos/procesos/libros/norris.pdf [Último acceso: 15 de diciembre del 2020].
-	
+
+	% Flask
 	\bibitem{refFlask1}  		
 	Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
-	
 	\bibitem{refFlask2}  		
 	Gajesh (2019, julio 17), The complete Flask beginner tutorial, [En línea]. Disponible: https://dev.to/gajesh/the-complete-flask-beginner-tutorial-124i [Último acceso: 16 de diciembre del 2020].
-	
 	\bibitem{refFlask3}  		
 	A. Abdelaal (2019), Deploying a Flask Application to Heroku, [En línea]. Disponible: https://stackabuse.com/deploying-a-flask-application-to-heroku/ [Último acceso: 16 de diciembre del 2020].
 	
@@ -1810,9 +1790,11 @@ natural y redes neuronales}\\
 	Documentation Group. (n.d.). Welcome! - The Apache HTTP Server Project. Apache. Retrieved April 6, 2021, from https://httpd.apache.org/
 	\bibitem{what_is_apache}  		
 	G., D. (2021, March 9). What is Apache? An In-Depth Overview of Apache Web Server. Hostinger Tutorials. https://www.hostinger.com/tutorials/what-is-apache
+	
 	% Servidor Web
 	\bibitem{What_is_a_web_server}  		
 	What is a web server? - Learn web development | MDN. (2021, January 27). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_web\_server
+	
 	% Certificado SSL
 	\bibitem{SSL}  		
 	https://letsencrypt.org/es/
@@ -1820,6 +1802,7 @@ natural y redes neuronales}\\
 	What is SSL? (2017, May 15). SSLSHOPPER. https://www.sslshopper.com/what-is-ssl.html
 	\bibitem{ssl_certificates} 
 	Verisign. (2015, August 30). ¿Qué es un certificado SSL? – Verisign. Verisign NameStudio. https://www.verisign.com/es\_LA/website-presence/online/ssl-certificates/index.xhtml
+
 	% Plataforma en la nube de ML 
 	\bibitem{data_science_in_the_cloud} 
 	Bavati, I. (2020, September 22). Data Science in the Cloud - Towards Data Science. Medium. https://towardsdatascience.com/data-science-in-the-cloud-239b795a5792 (September 2020)
