@@ -67,51 +67,51 @@
 \makeglossaries
 \newglossaryentry{Convolucional}
 {
-    name=Convolucional,
+    name=convolucional,
     description={Es un operador matemático el cual transforma dos funciones en una tercera función.\cite{refRAE}}
 }
 \newglossaryentry{Recurrente}{
-    name=Recurrente,
+    name=recurrente,
     description={Algo que vuelve a ocurrir o a aparecer después de un intervalo.\cite{refRAE}}
 }
 \newglossaryentry{Reconocimiento}{
-    name=Reconocimiento,
+    name=reconocimiento,
     description={Examinar algo o a alguien para así poder conocer su identidad, estado, naturaleza y circunstancias.  Distinguir o identificar a una persona o una cosa entre varas por una serie de características.\cite{refOxfordLex}}
 }
 \newglossaryentry{Aprende}{
-    name=Aprende,
+    name=aprende,
     description={Adquirir el conocimiento de algo por medio del estudio, análisis o de la experiencia.\cite{refRAE}}
 }
 \newglossaryentry{Sistema}{
-    name=Sistema,
+    name=sistema,
     description={Conjunto de elementos con relaciones de interacción e interdependencia las cuales le confieren entidad propia al formar un todo unificado.\cite{refSistema}}
 }
 \newglossaryentry{Estado}{
-    name=Estado,
+    name=estado,
     description={Situación en que se encuentra alguien o algo, y en especial cada uno de sus sucesivos modos de ser o estar.\cite{refRAE}}
 }
 \newglossaryentry{Armonia}{
-    name=Armonía,
+    name=armonía,
     description={Unión y combinación de sonidos simultáneos y diferentes, pero acordes.\cite{refRAE}}
 }
 \newglossaryentry{Melodia}{
-    name=Melodía,
+    name=melodía,
     description={Es una sucesión lineal ordenada y coherente de sonidos musicales los cuales forman una unidad estructurada con un sentido musical, independiente del acompañamiento. \\Sucesión de sonidos que por su manera de combinarse resulta agradable de oír.\cite{refOxfordLex}}
 }
 \newglossaryentry{Estrofa}{
-    name=Estrofa,
+    name=estrofa,
     description={Conjunto de versos que generalmente se ajustan a una medida y a un ritmo determinado y constante.\cite{refRAE}}
 }
 \newglossaryentry{Acordes}{
-    name=Acordes,
+    name=acordes,
     description={Conjunto de notas musicales sonando al mismo tiempo.\cite{refRAE}}
 }
 \newglossaryentry{Estocastico}{
-    name=Estocástico,
+    name=estocástico,
     description={Que está sometido al azar y que es un objeto de análisis estadístico.\cite{refRAE}}
 }
 \newglossaryentry{Maquinas de Estados Finitos}{
-    name=Máquinas de Estados Finitos,
+    name=máquinas de estados finitos,
     description={Conocidas también como Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
 
@@ -725,7 +725,7 @@ natural y redes neuronales}\\
         \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
         \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
         El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\\\\        
-        Ya que en \acrshort{gpt} no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\\\\
+        Ya que en \acrshort{gpt}-2 no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\\\\
         \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
         \begin{itemize}
         	\item Dividir palabra en secuencia de caracteres.
@@ -1404,11 +1404,8 @@ natural y redes neuronales}\\
 			
 			\paragraph{CSS.\\}
 			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
-			
 			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveóan estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
-			
 			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
-			
 			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
 			\paragraph {JavaScript. \\}
@@ -1493,9 +1490,9 @@ natural y redes neuronales}\\
 			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
 			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
-			\paragraph{\acrshort{gpt}-2. \\}
+			\paragraph{\acrshort{gpt}. \\}
 			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
-			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
+			\acrshort{gpt} es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
 			\paragraph{Amazon \acrshort{ec2}. \\}
 			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
@@ -1592,6 +1589,9 @@ natural y redes neuronales}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Arquitectura del sistema.}
 	        \subsection{Descripci\'on de la arquitectura del sistema.}
+	        -pagina
+	        -modelado de la red
+	        -base de datos
 	        \subsection{Aspectos Econ\'omicos}
 	        %Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
 	        \subsection{Aspectos Legales}
