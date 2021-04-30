@@ -255,9 +255,6 @@
    showtabs=false,
    captionpos=b
 }
-% Rename Appendice to Anexos
-\renewcommand\appendixpagename{Anexos}
-\renewcommand\appendixtocname{Anexos}
 
 \begin{document}
 	%PARA QUE DETECTE HASTA SUBSUBSECTION
@@ -343,6 +340,9 @@ natural y redes neuronales}\\
 %   				ÍNDICE 				  	  %
 %                               				  %
 %   %   %   %   %   %   %   %   %	%
+% Rename Appendice to Anexos
+\renewcommand\appendixpagename{Índice}
+\renewcommand\appendixtocname{Índice}
 \appendixpageoff
 	\begin{appendices}
 		\renewcommand*\contentsname{{\textcolor{azulescom}{Índice.}}}
@@ -1657,6 +1657,9 @@ natural y redes neuronales}\\
 \section{Resultados} % Explicar los Resultados
 % Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 \newpage
+% Rename Appendice to Anexos
+\renewcommand\appendixpagename{Anexos}
+\renewcommand\appendixtocname{Anexos}
 \appendixpageon
 	\begin{appendices}
 	%%Glosario
