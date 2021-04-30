@@ -48,19 +48,6 @@
 \usepackage[acronym]{glossaries}
 
 
-%%código
-% \usepackage{listings}
-\usepackage{minted}
-\newcommand*{\img}[1]{%
-    \raisebox{-.3\baselineskip}{%
-        \includegraphics[
-        height=2.5cm,
-        width=3cm,
-        keepaspectratio,
-        ]{#1}%
-    }%
-}
-
 %---------------------------GLOSARIO----------------------------%
 \usepackage{glossaries}
 
@@ -119,6 +106,7 @@
 
 %---------------------------ACRÓNIMOS----------------------------%
 
+\newacronym{mvc}{MVC}{Modelo-Vista-Controlador}
 \newacronym{orm}{ORM}{Object Relational Manager}
 \newacronym{wsgi}{WSGI}{Web Server Gateway Interface}
 \newacronym{dbms}{DBMS}{Sistema de gestión de base de datos}
@@ -605,7 +593,7 @@ natural y redes neuronales}\\
 				\subsubsection{Neurona Natural}
 				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\\\\
 				Este impulso viaja siempre en el mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, existe un espacio de separación entre ellas denominado sinapsis o espacio sináptico. Cuando el impulso nervioso llega al extremo del axón se liberan neurotransmisores al espacio sináptico transformando la señal eléctrica en otra química que penetra en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora y se repite el proceso con la contigua.\cite{refNeuronaNat}
-				\begin{figure}[H] \caption{Estructura de una neurona}
+				\begin{figure}[H] \caption{Estructura de una neurona \cite{refNeuronaNat2}}
 					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
 					\centering 
 				\end{figure}			
@@ -743,7 +731,7 @@ natural y redes neuronales}\\
     	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \\\\
     	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
     	
-    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2}
+    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2 \cite{refarquitecturagpt3}}
     		\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Gptsentence.png}
     		\centering 
     	\end{figure}
@@ -820,59 +808,15 @@ natural y redes neuronales}\\
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Markov/CMarkov.png}
 			\centering 
-			\caption{Diagrama De Estados finitos De Una Cadena De Markov}
+			\caption{Diagrama De Estados finitos De Una Cadena De Markov \cite{refMarkov}}
 		\end{figure}
 
 		\section{Flask}
-		Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\\\\
-		La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\\\
-		Para poder empezar a trabajar con un proyecto o aplicación web Flask lo primero que se hace es usar virtualenv para poder manejar un ambiente virtual separado para el proyecto y así evitar conflictos entre dependencias de este. Virtualenv en una herramienta que nos ayuda a crear ambientes Python aislados (en forma de un directorio).\\\\
-		Para poder hacer esto, en la terminal se escribe:\par
-		\begin{center}
-		virtualenv --no-site-packages myapp\par
-		\end{center}
-		Al usar ese comando se va a crear un directorio con la siguiente estructura:\par
-		\begin{itemize}
-		    \item myapp/
-		    \begin{itemize}
-		        \item bin/
-		        \item include/
-		        \item lib/
-		    \end{itemize}
-		\end{itemize}
-		Si se trabaja en Windows la estructura es la siguiente:\par
-		\begin{itemize}
-		    \item myapp/
-		    \begin{itemize}
-		        \item lib/
-		        \item Scripts/
-		    \end{itemize}
-		\end{itemize}
-		Para poder trabajar con este ambiente, en la terminal se debe acceder a la carpeta bin o Scripts y activar el ambiente de la siguiente manera:\par
-		\begin{center}
-		source myapp/bin/activate\par
-		source myapp/Scripts/activate
-		\end{center}
-		Posteriormente se procede a escribir el código de una aplicación, por ejemplo, el código mostrado a continuación es extraído de la documentación de flask.\cite{refFlask1}
-		\begin{minted}{python}
-		from flask import Flask  
-		app = Flask(__name__) 
-
-		@app.route('/')  
-		def hello_world():  
-		    return 'Hello, World!'  
-		\end{minted}
-		Se guarda como cualquier otra aplicación de Python y se ejecuta de la misma manera que una aplicación de Python. Una vez ejecutada aparecerá lo siguiente en terminal:\par
-		\begin{center}
-		* Running on http://127.0.0.1:5000/
-		\end{center}
-		Si se copia esa \acrshort{url} y se abre en un navegador se va a poder observar nuestra aplicación web en ejecución, en este caso, y habiendo hecho uso del ejemplo anterior, se mostrará en pantalla “Hello, World!”\\\\
-		Como se hizo mención al inicio, una de las características de Flask es que se pueden manejar las rutas de la aplicación web usando el método route(), siempre que un usuario visite esa ruta se va a ejecutar el método adjuntado a este.\par
-		Flask soporta diferentes tipos de estructuras de variables. Se pueden incluir cadenas personalizadas, números enteros y otros tipos de caracteres en las \acrshort{url}s.\par
-		Si se requiere manejar solicitudes, Flask tiene soporte para solicitudes de tipo GET y POST, por defecto Flask solo admite peticiones de tipo GET, por lo que si se necesita hacer uso de peticiones tipo POST esta debe de estar especificada como parámetro de la función route(), por ejemplo:\par
-		\begin{center}
-		@app.route('/login', methods=['POST'])
-		\end{center}
+		
+		Flask es un “micro” marco (framework) el cual nos permite crear de manera sencilla aplicaciones web utilizando Python, bajo el patrón de arquitectura \acrfull{mvc}; cabe mencionar que soporta otros lenguajes como PHP y Java.\cite{refFlask}\\\\
+		No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. Flask solo nos da las herramientas necesarias para poder crear una aplicación web funcional, pero si se requieren de otras herramientas para añadir alguna funcionalidad, se puede adaptar añadiéndole ciertos plugins.\\\\
+		En general es un marco de aplicación web \acrshort{wsgi}. \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\		
+		
 %	    A continuación en el cuadro \ref{cuadro:MetododsAutentificacion}, mostraremos algunas tablas comparativas que servirán para tener una mejor perspectiva de las ventajas, desventajas.
 		
 %		\begin{table}[H]
@@ -1452,12 +1396,12 @@ natural y redes neuronales}\\
             \end{itemize}
 			
 			\paragraph{Flask. \\}
-			Flask es un marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Realacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\cite{refFlask3}\\\\
-			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\cite{refFlask2}\\\\
+			Flask es un mini marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\\\\
+			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\
 			Las principales ventajas de Flask son: 
 			\begin{itemize}
 				\item Permite escalar con facilidad la aplicación.
-				\item Es de fácil desarrollo, si entiendes Python.
+				\item Es de fácil desarrollo.
 				\item Es flexible con la platillas que te da por default.
 				\item Es modular.
 			\end{itemize}
@@ -1722,9 +1666,11 @@ natural y redes neuronales}\\
 	
 	% Redes Neuronales
 	\bibitem{refNeuronaNat}
-	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
+	amBientech (2019, julio 30), ¿Qué es la neurona?, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
+	\bibitem{refNeuronaNat2}
+	National Cancer Institute (2021), Neurons \& Glial Cells, [En línea]. Disponible: https://training.seer.cancer.gov/brain/tumors/anatomy/neurons.html [Último acceso: 30 de abril del 2021].	
 	\bibitem{refNeuronaArt}
-	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://ambientech.org/la-neurona [Último acceso: 6 de abril del 2021].
+	C. Gershenson (2012, octubre), Artificial Neural Networks for Beginners, [En línea]. Disponible: https://www.uv.mx/mia/files/2012/10/Artificial-Neural-Networks-for-Beginners.pdf [Último acceso: 6 de abril del 2021].
 	\bibitem{refAprendizajeRedes}  		
 	Rubik's Code  (2018, febrero), How do Artificial Neural Networks learn?, [En línea]. Disponible: https://rubikscode.net/2018/01/15/how-artificial-neural-networks-learn/ [Último acceso: 7 de abril del 2021].	
 	\bibitem{refTiposRedesNeu1}  		
@@ -1782,12 +1728,8 @@ natural y redes neuronales}\\
 	J. R. Norris (1997), Markov Chains, [En línea]. Disponible: https://cape.fcfm.buap.mx/jdzf/cursos/procesos/libros/norris.pdf [Último acceso: 15 de diciembre del 2020].
 
 	% Flask
-	\bibitem{refFlask1}  		
+	\bibitem{refFlask}  		
 	Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
-	\bibitem{refFlask2}  		
-	Gajesh (2019, julio 17), The complete Flask beginner tutorial, [En línea]. Disponible: https://dev.to/gajesh/the-complete-flask-beginner-tutorial-124i [Último acceso: 16 de diciembre del 2020].
-	\bibitem{refFlask3}  		
-	A. Abdelaal (2019), Deploying a Flask Application to Heroku, [En línea]. Disponible: https://stackabuse.com/deploying-a-flask-application-to-heroku/ [Último acceso: 16 de diciembre del 2020].
 	
 	% Apache
 	\bibitem{Apache}  		
