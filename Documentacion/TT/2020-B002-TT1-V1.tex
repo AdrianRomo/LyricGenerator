@@ -737,7 +737,27 @@ natural y redes neuronales}\\
     	\end{figure}
     
     	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
-
+    	
+    	\section{BERT vs GPT-2}    	
+    	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías BERT y GPT-2, visualizada en la siguiente tabla:    	
+    	\begin{table}[h!]
+    		\begin{tabular}{|p{6.5cm}|p{6.5cm}|}
+    			\hline    			
+    			\rowcolor{guindapoli}
+    			{\textbf{\textcolor{white}{\acrshort{bert}}}} & {\textbf{\textcolor{white}{\acrshort{gpt}-2}}}\\
+    			\hline
+    			Es de naturaleza bidireccional. & Es de naturaleza autorregresivo.\\
+    			\hline
+    			El usuario puede entrenar sus propios modelos. & Puede resolver distintos problemas de \acrfull{pln} sin necesidad volver a entrenar la red neuronal.\\
+    			\hline
+    			La separación de palabras es manejada en tokens. & La separación de palabras es realizada por medio del algoritmo \acrfull{bpe} generando subpalabras.\\
+    			\hline
+    			Su uso es enfocado al análisis de textos. & Sus principales usos son para la generación de textos.\\
+    			\hline
+    		\end{tabular}
+    		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
+    	\end{table}
+        Con base en lo anterior y de las pruebas realizadas se determino que se va a utilizar XXXX el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
         \section{Base de datos}
         Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital con la finalidad de realizar distintas acciones como consultas futuras, ingreso de nuevos datos, actualización o eliminación de estos.\\\\
 		Las bases de datos se componen de una o más tablas divididas en columnas y filas y son las encargadas de guardar un conjunto de datos.\\\\
@@ -1539,6 +1559,12 @@ natural y redes neuronales}\\
 	        \subsection{Aspectos Econ\'omicos}
 	        %Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
 	        \subsection{Aspectos Legales}
+	        \subsubsection{Copyright}
+	        Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las no publicadas o inéditas.\cite{refCopyright}\\\\
+	        Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.\\\\
+	        \subsubsection{Originalidad}
+	        Los derechos de autor protegen la forma en que se expresan las ideas. Esta expresión es la forma única en la que las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
+	        Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que es protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
 	         
 \section{Diagrama de casos de uso general.}
 % Cada caso de uso llevará un Formato tipo:
@@ -1761,6 +1787,14 @@ natural y redes neuronales}\\
 	\bibitem{google_cloud_vs_aws} 
 	Jones, E. (2021, March 25). Google Cloud vs AWS in 2021 (Comparing the Giants). Kinsta. https://kinsta.com/blog/google-cloud-vs-aws/
 	
+	
+	% Aspectos Legales	
+	\bibitem{refCopyright}  		
+	Copyright.gov (2021), Copyright in General, [En línea]. Disponible: https://www.copyright.gov/help/faq/faq-general.html\#what [Último acceso: 04 de mayo del 2021].
+	\bibitem{refOriginalidadWipo}  		
+	World Intellectual Property Organization (2007), THE ARTS AND COPYRIGHT, [En línea]. Disponible: https://www.wipo.int/edocs/pubdocs/en/copyright/935/wipo\_pub\_935.pdf [Último acceso: 04 de mayo del 2021].
+	\bibitem{refOriginalidadLFDA}  		
+	CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN (2014, julio 14), LEY FEDERAL DEL DERECHO DE AUTOR, [En línea]. Disponible: https://www.ucol.mx/content/cms/13/file/federal/LEY\_FED\_DEL\_DERECHO\_DEL\_AUTOR.pdf [Último acceso: 05 de mayo del 2021].
 	
 	%-------Referencias Herramientas a usar---------%
 	\bibitem{refQuesPython}  
