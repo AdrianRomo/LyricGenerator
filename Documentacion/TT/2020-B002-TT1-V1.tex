@@ -1368,7 +1368,7 @@ natural y redes neuronales}\\
 			
 			\paragraph{CSS.\\}
 			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
-			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}4, no es parte de la especificación, es de hecho, un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveóan estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
+			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}5, es un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveían estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
 			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
 			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
@@ -1556,6 +1556,33 @@ natural y redes neuronales}\\
 	        -pagina
 	        -modelado de la red
 	        -base de datos
+	        \subsection{Diseño de la aplicación web}
+	        A continuación, se muestra cómo se pretende que se vea la aplicación web una vez terminada y funcionando.	        
+	        \begin{figure}[H] \caption{Aplicación web, pagina inicial.}
+	        	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
+	        	\centering 
+	        \end{figure}
+	        \begin{figure}[H] \caption{Aplicación web, pagina una vez generada una letra musical.}
+	        	\includegraphics[width=12cm]{./imagenes/Analisis/MockFrontGenerated.png}
+	        	\centering 
+	        \end{figure}        
+	        \subsection{Requerimientos funcionales y no funcionales}
+	        A continuación, se presentan algunos de los requerimientos funcionales mas importantes de nuestro proyecto:
+	        \begin{itemize}
+	        	\item Permitirá que cualquier usuario que acceda a la página, genere su letra musical, sin ninguna restricción.
+	        	\item Permitirá que cualquier usuario puede descargar la letra generada, a través de un archivo de texto.
+	        	\item Permitirá que el usuario puede generar otra letra musical distinta, usando los mismos parámetros que previamente había utilizado.
+	        	\item La generación de las letras musicales, solo se generarán si se cumplen con todos los valores pedidos al usuario, los cuales serán (una palabra y un porcentaje que defina la cantidad de rimas dentro de la letra)
+	        \end{itemize}
+        	Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto 
+	        \begin{itemize}
+		        \item La página debe ser capaz de procesar mas de 10 transacciones a la vez.
+		        \item La funcionalidad de la generación de letras musicales debe de responder al usuario en menos de 10 segundos.
+		        \item La pagina debe de ser capaz de operar adecuadamente con hasta 50 usuarios a la vez.
+		        \item El tiempo de aprendizaje del sistema por un usuario deberá de ser menor a 5 minutos.
+		        \item El pagina debe proporcionar mensajes de de error que sean informativos y que ayuden al usuario.
+		        \item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
+		    \end{itemize}
 	        \subsection{Aspectos Econ\'omicos}
 	        %Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
 	        \subsection{Aspectos Legales}
@@ -1683,6 +1710,9 @@ natural y redes neuronales}\\
 	\bibitem{spaCy}  	
 	Honnibal, M.,\& Montani, I. (2017). spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing.
 	% Marco Teórico IA
+	\bibitem{Inteligencia_Artificial}
+	V. Advani (2021, febrero 11), What is Artificial Intelligence? How does AI work, Types and Future of it?, [En línea]. Disponible:https://www.mygreatlearning.com/blog/what-is-artificial-intelligence/ [Último acceso: 6 de abril del 2021].
+	
 	\bibitem{refInteligencia_Artificial2}
 	IBM Corporation (2021, marzo 31), Artificial Intelligence (AI), [En línea]. Disponible: https://www.ibm.com/cloud/learn/what-is-artificial-intelligence [Último acceso: 6 de abril del 2021].
 	
