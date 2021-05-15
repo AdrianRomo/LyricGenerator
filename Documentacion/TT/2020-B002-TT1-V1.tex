@@ -143,6 +143,7 @@
 \newacronym{hdd}{HDD}{Hard Drive Disk}
 \newacronym{ssd}{SSD}{Solid State Drive}
 \newacronym{iso}{ISO}{International Standardization Organization}
+\newacronym{xml}{XML}{Extensible Markup Language}
 
 %------------------FINAL DE ACRÓNIMOS-----------------------%
 
@@ -674,6 +675,8 @@ natural y redes neuronales}\\
    			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
    			\centering 
    		\end{figure}     
+        En esta arquitectura el codificador mapea una secuencia de entrada de representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos de un elemento a la vez. En cada paso, el modelo es autorregresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
+        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura anterior, respectivamente. \cite{refArqTransformer}
         
         \section{BERT}
         
@@ -752,12 +755,12 @@ natural y redes neuronales}\\
     			\hline
     			La separación de palabras es manejada en tokens. & La separación de palabras es realizada por medio del algoritmo \acrfull{bpe} generando subpalabras.\\
     			\hline
-    			Su uso es enfocado al análisis de textos. & Sus principales usos son para la generación de textos.\\
+    			Su uso es enfocado al análisis y generación de textos. & Sus principales usos son para la generación de textos.\\
     			\hline
     		\end{tabular}
     		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
     	\end{table}
-        Con base en lo anterior y de las pruebas realizadas se determino que se va a utilizar XXXX el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
+        Con base en lo anterior y de las pruebas realizadas se determino que se va a utilizar \acrshort{bert} el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
         \section{Base de datos}
         Una base de datos es una colección organizada de información o datos, los cuales pertenecen a un mismo contexto, se encuentran almacenados de forma física o digital con la finalidad de realizar distintas acciones como consultas futuras, ingreso de nuevos datos, actualización o eliminación de estos.\\\\
 		Las bases de datos se componen de una o más tablas divididas en columnas y filas y son las encargadas de guardar un conjunto de datos.\\\\
@@ -1361,28 +1364,36 @@ natural y redes neuronales}\\
 			\subsection{Software.}
 			Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
 			
-			\paragraph{HTML5.\\}
-			\acrfull{html} comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de \acrshort{html} motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
-			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, \acrshort{html} y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
-			\acrshort{html}5 es una mejora de esta combinación, lo que unió todos estos elementos. \acrshort{html}5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, \acrshort{html} provee los elementos estructurales, \acrshort{css} se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que \acrshort{html}5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
+			\paragraph{HTML.\\}
+			
+			\acrfull{html} es un lenguaje de marcado que define la estructura de una página web y su contenido. \acrshort{html} consta de una serie de elementos que se utilizan para encerrar o envolver diferentes partes del contenido para que estos se visualicen de cierta manera o actúe de cierta manera. Las etiquetas adjuntas pueden hacer que una palabra o imagen sea un hipervínculo a otro lugar, pueden poner palabras en cursiva, pueden hacer que la fuente sea más grande o pequeña, etc. \cite{refHtml} \\\\\
+			\acrshort{html}5 es la versión mas reciente de html, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las paginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia así como una mejor integración a APIs y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}		
+			
+%			\acrfull{html} comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de \acrshort{html} motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
+%			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, \acrshort{html} y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
+%			\acrshort{html}5 es una mejora de esta combinación, lo que unió todos estos elementos. \acrshort{html}5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, \acrshort{html} provee los elementos estructurales, \acrshort{css} se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que \acrshort{html}5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
 			
 			\paragraph{CSS.\\}
-			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
-			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}5, es un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveían estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
-			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
-			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
+			
+			\acrfull{css} es el lenguaje para describir la presentación de las páginas web. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y se puede utilizar con cualquier lenguaje de marcado basado en \acrshort{xml}. La separación de \acrshort{html} de \acrshort{css} hace que sea más fácil mantener los sitios, compartir hojas de estilo entre páginas y adaptar las páginas a diferentes entornos. \cite{refcss}	
+			
+%			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
+%			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}5, es un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveían estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
+%			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
+%			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
 			\paragraph {JavaScript. \\}
-			JavaScript es considerado como el lenguaje de programación de \acrshort{html} y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
-			Su primera aproximación a un uso real, fue en mayor parte para “dar vida a una página web”, como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
-			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo “funciona” dentro de una página \acrshort{html}.\\\\
-			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\\\ 
-			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\\\
-			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (\acrshort{api}s) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
+			
+			JavaScript es un lenguaje de programación o secuencias de comandos que permite implementar funciones complejas en las páginas web. JavaScript permite crear contenido dinámico, controlar multimedia, animar imágenes, etc. \cite{refjs}
+%			JavaScript es considerado como el lenguaje de programación de \acrshort{html} y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
+%			Su primera aproximación a un uso real, fue en mayor parte para “dar vida a una página web”, como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
+%			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo “funciona” dentro de una página \acrshort{html}.\\\\
+%			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\\\ 
+%			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\\\
+%			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (\acrshort{api}s) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
 		    
 		    \paragraph{OpenSSL.\\}
-		    OpenSSL es un proyecto de software libre basado en SSLeay, desarrollado por Eric Young y Tim Hudson.\\
-            Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para acceso seguro a sitios \acrshort{https}). Estas herramientas ayudan al sistema a implementar el \acrfull{ssl}, así como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{opensslmillones}.
+           Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para el acceso seguro a sitios \acrshort{https}). Estas herramientas ayudan al sistema a implementar el \acrfull{ssl}, así como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{refopenssl}.
       
             \paragraph{MongoDB. \\}
             MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o “columnas” que no tienen por qué repetirse de un registro a otro. \\\\
@@ -1400,8 +1411,7 @@ natural y redes neuronales}\\
                     
             \paragraph{MySQL. \\}
             Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft \acrshort{sql} Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
-            El modelo relacional, para el modelado y la gestión de bases de datos, es un modelo de datos basado en la lógica de predicados y en la teoría de conjuntos.
-            Su idea fundamental es el uso de relaciones. Estas relaciones podrían considerarse en forma lógica como conjuntos de datos llamados tuplas. Es el modelo más utilizado en la actualidad para modelar problemas reales y administrar datos dinámicamente \cite{refER}.\\\\
+            El modelo relacional, para el modelado y la gestión de bases de datos, es donde se almacenan y se proporcionan acceso a puntos de datos relacionados entre sí. Esto gracias a que cada fila de la tabla es un registro con un ID único, las columnas de la tabla contienen atributos de los datos, y cada registro generalmente cuenta con un valor para cada atributo, lo que facilita el establecimiento de las relaciones entre los puntos de datos.\\\\
             Las principales ventajas son: 
             \begin{itemize}
                 \item Provee herramientas que garantizan evitar la duplicidad de registros.
@@ -1786,6 +1796,23 @@ natural y redes neuronales}\\
 	% Flask
 	\bibitem{refFlask}  		
 	Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
+	
+	%Herramientas a usar Software
+	
+	\bibitem{refHtml}
+	Mozilla.org (2021, febrero 19), HTML basics, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/Getting\_started\_with\_the\_web/HTML\_basics [Último acceso: 15 de mayo del 2021].
+	\bibitem{refHtml2}
+	Mozilla.org (2021, mayo 14), HTML5, [En línea]. Disponible: https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5 [Último acceso: 15 de mayo del 2021].
+	\bibitem{refcss}
+	W3C (2016), HTML \& CSS, [En línea]. Disponible:  [Último acceso: 15 de mayo del 2021].
+	\bibitem{refjs}
+	Mozilla.org (2021, abril 27), What is JavaScript?, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First\_steps/What\_is\_JavaScript [Último acceso: 15 de mayo del 2021].
+	\bibitem{refopenssl}
+	OpenSSL (2018), OpenSSL, [En línea]. Disponible: https://www.openssl.org [Último acceso: 15 de mayo del 2021].
+	
+	
+	
+	
 	
 	% Apache
 	\bibitem{Apache}  		
