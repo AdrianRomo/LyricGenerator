@@ -1,9 +1,22 @@
 
-[CLS] i ' ve got such a mess between my ears [SEP] like dishes in the sink . [SEP] stuff i don ' t believe just tumble ##s in [SEP] ' til i don ' t have room to think . [SEP] all my failures are on display [SEP]
+[CLS] i ' ve got such a mess between my ears
+[SEP] like dishes in the sink .
+[SEP] stuff i don ' t believe just tumble ##s in [SEP] ' til i don ' t have room to think .
+[SEP] all my failures are on display [SEP]
 
-[CLS] the broken dreams of yesterday [SEP] the stuff i should have thrown away . [SEP] but i ' ve kept it here instead [SEP] i ' ve gotta empty out the inside of my head . [SEP] this could be a room with such a view [SEP]
 
-[CLS] but it ' s covered up with junk [SEP] blocking off the place the light gets through . [SEP] so it keeps me in this funk [SEP] these dark clouds i ' ve st ##owed away . [SEP] just in case of a sunny day [SEP]
+
+[CLS] the broken dreams of yesterday
+[SEP] the stuff i should have thrown away .
+[SEP] but i ' ve kept it here instead
+[SEP] i ' ve gotta empty out the inside of my head .
+[SEP] this could be a room with such a view [SEP]
+
+[CLS] but it ' s covered up with junk
+[SEP] blocking off the place the light gets through .
+[SEP] so it keeps me in this funk
+[SEP] these dark clouds i ' ve st ##owed away .
+[SEP] just in case of a sunny day [SEP]
 
 [CLS] so i could stand in the pouring rain [SEP] of every tear i ' ve ever shed . [SEP] i ' ve gotta empty out the inside of my head [SEP] i ' d like to turn this place into my home . [SEP] instead of someplace that i dread [SEP]
 

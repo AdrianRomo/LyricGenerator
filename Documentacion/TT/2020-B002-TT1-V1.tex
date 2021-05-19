@@ -1,4 +1,4 @@
-% !TeX spellcheck = es
+% !TeX spellcheck = es_MX
 \documentclass[12pt, a4paper, titlepage]{report}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
@@ -24,34 +24,235 @@
 }
 %%Appendix
 \usepackage[toc,page]{appendix}
+
 %%Tablas
 \usepackage{tabularx}
+
 %%otros
 \usepackage{float}
 \usepackage{subfig}
 \usepackage{comment}
-\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+
+% http://ctan.org/pkg/booktabs
+\usepackage{booktabs}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 %%Imágenes
 \usepackage{graphicx}
+
 %%Colores de texto 
 \usepackage{xcolor}
 \usepackage{colortbl}
+
 %%Links
 \usepackage[hidelinks]{hyperref}
+
 %%Comentarios
 \usepackage{verbatim}
+
 %%PARA IMÁGENES EN LÍNEA
 %\usepackage[english]{babel}
-
-
 
 %%Acrónimos
 \usepackage[acronym]{glossaries}
 
-
-%---------------------------GLOSARIO----------------------------%
+%%Glosario
 \usepackage{glossaries}
+
+%%ESTILO DE CÓDIGO
+\lstdefinestyle{codeStyle}{
+	backgroundcolor=\color{backcolour},   commentstyle=\color{commentcolor},
+	keywordstyle=\color{guindapoli},
+	numberstyle=\tiny\color{azulescom},
+	stringstyle=\color{azulfuerte},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=3
+}
+\definecolor{delim}{RGB}{20,105,176}
+
+%% JSON
+\lstdefinelanguage{json}{
+	basicstyle=\normalfont\ttfamily,
+	numbers=left,
+	numberstyle=\tiny\color{azulescom},
+	stringstyle=\color{azulfuerte},
+	stepnumber=1,
+	numbersep=8pt,
+	showstringspaces=false,
+	breaklines=true,
+	backgroundcolor=\color{backcolour},
+	literate=
+	*{0}{{{\color{azulfuerte}0}}}{1}
+	{1}{{{\color{azulfuerte}1}}}{1}
+	{2}{{{\color{azulfuerte}2}}}{1}
+	{3}{{{\color{azulfuerte}3}}}{1}
+	{4}{{{\color{azulfuerte}4}}}{1}
+	{5}{{{\color{azulfuerte}5}}}{1}
+	{6}{{{\color{azulfuerte}6}}}{1}
+	{7}{{{\color{azulfuerte}7}}}{1}
+	{8}{{{\color{azulfuerte}8}}}{1}
+	{9}{{{\color{azulfuerte}9}}}{1}
+	{:}{{{\color{guindapoli}{:}}}}{1}
+	{,}{{{\color{guindapoli}{,}}}}{1}
+	{\{}{{{\color{guindapoli}{\{}}}}{1}
+	{\}}{{{\color{guindapoli}{\}}}}}{1}
+	{[}{{{\color{guindapoli}{[}}}}{1}
+	{]}{{{\color{guindapoli}{]}}}}{1},
+}
+
+\lstset{style=codeStyle}
+
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+%% Javascript
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, let, continue},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	language=JavaScript,
+	backgroundcolor=\color{lightgray},
+	extendedchars=true,
+	basicstyle=\footnotesize\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}
+
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+
+\lstset{
+	breaklines=true,
+	extendedchars=true,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+\lstdefinelanguage{python}{
+	morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},
+	morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern},
+	sensitive=true,
+	morecomment=[l]\#,
+	morestring=[b]',
+	morestring=[b]",
+	morestring=[s]{'''}{'''},
+	morestring=[s]{"""}{"""},
+	morestring=[s]{r'}{'},
+	morestring=[s]{r"}{"},
+	morestring=[s]{r'''}{'''},
+	morestring=[s]{r"""}{"""},
+	morestring=[s]{u'}{'},
+	morestring=[s]{u"}{"},
+	morestring=[s]{u'''}{'''},
+	morestring=[s]{u"""}{"""},
+	% {replace}{replacement}{lenght of replace}
+	% *{-}{-}{1} will not replace in comments and so on
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+	%
+	{^}{{{\color{ipython_purple}\^{}}}}1
+	{=}{{{\color{ipython_purple}=}}}1
+	%
+	{+}{{{\color{ipython_purple}+}}}1
+	{*}{{{\color{ipython_purple}$^\ast$}}}1
+	{/}{{{\color{ipython_purple}/}}}1
+	%
+	{+=}{{{+=}}}1
+	{-=}{{{-=}}}1
+	{*=}{{{$^\ast$=}}}1
+	{/=}{{{/=}}}1,
+	literate=
+	*{-}{{{\color{ipython_purple}-}}}1
+	{?}{{{\color{ipython_purple}?}}}1,
+	%
+	identifierstyle=\color{black}\ttfamily,
+	commentstyle=\color{ipython_cyan}\ttfamily,
+	stringstyle=\color{ipython_red}\ttfamily,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	rulecolor=\color{ipython_frame},
+	frame=single,
+	frameround={t}{t}{t}{t},
+	framexleftmargin=6mm,
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	backgroundcolor=\color{ipython_bg},
+	% extendedchars=true,
+	basicstyle=\scriptsize,
+	keywordstyle=\color{ipython_green}\ttfamily,
+}
+%------------------------------------------------ESTABLECER COLORES------------------------------------------------%
+
+\definecolor{guindapoli}{RGB}{102, 0, 51}
+\definecolor{azulescom}{RGB}{0, 0, 102}
+\definecolor{azulclaro}{RGB}{222, 232, 255}
+\definecolor{azulfuerte}{RGB}{60, 150, 250}
+
+%------------------------------------------------COLORES PARA CÓDIGO------------------------------------------------%
+
+\definecolor{commentcolor}{RGB}{ 192, 192, 192 }
+\definecolor{backcolour}{RGB}{ 249, 249, 249 }
+
+%------------------------------------------------FIN DE COLORES------------------------------------------------%
+
+%------------------------------------------------GLOSARIO------------------------------------------------%
 
 \makeglossaries
 \newglossaryentry{Convolucional}
@@ -68,7 +269,7 @@
 \newglossaryentry{Reconocimiento}{
 	name={Reconocimiento},
 	text={reconocimiento},
-    description={Examinar algo o a alguien para así poder conocer su identidad, estado, naturaleza y circunstancias.  Distinguir o identificar a una persona o una cosa entre varas por una serie de características.\cite{refOxfordLex}}
+    description={Examinar algo o a alguien para así poder conocer su identidad, estado, naturaleza y circunstancias. Distinguir o identificar a una persona o una cosa entre varas por una serie de características.\cite{refOxfordLex}}
 }
 \newglossaryentry{Aprende}{
 	name={Aprende},
@@ -116,9 +317,10 @@
     description={Conocidas también como Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
 
-%------------------FINAL DE GLOSARIO-----------------------%
+%------------------------------------------------FINAL DE GLOSARIO------------------------------------------------%
 
-%---------------------------ACRÓNIMOS----------------------------%
+
+%------------------------------------------------ACRÓNIMOS------------------------------------------------%
 
 \newacronym{mvc}{MVC}{Modelo-Vista-Controlador}
 \newacronym{orm}{ORM}{Object Relational Manager}
@@ -159,115 +361,19 @@
 \newacronym{iso}{ISO}{International Standardization Organization}
 \newacronym{xml}{XML}{Extensible Markup Language}
 
-%------------------FINAL DE ACRÓNIMOS-----------------------%
-
-%------------------ESTABLECER COLORES----------------------%
-\definecolor{guindapoli}{RGB}{102, 0, 51}
-\definecolor{azulescom}{RGB}{0, 0, 102}
-\definecolor{azulclaro}{RGB}{222, 232, 255}
-\definecolor{azulfuerte}{RGB}{60, 150, 250}
-%----------------------------COLORES PARA CÓDIGO -----%
-\definecolor{commentcolor}{RGB}{ 192, 192, 192 }
-\definecolor{backcolour}{RGB}{ 249, 249, 249 }
-
-%------------------FIN DE COLORES------------------%
-
-%ESTILO DE CÓDIGO
-\lstdefinestyle{codeStyle}{
-  backgroundcolor=\color{backcolour},   commentstyle=\color{commentcolor},
-  keywordstyle=\color{guindapoli},
-  numberstyle=\tiny\color{azulescom},
-  stringstyle=\color{azulfuerte},
-  basicstyle=\ttfamily\footnotesize,
-  breakatwhitespace=false,         
-  breaklines=true,                 
-  captionpos=b,                    
-  keepspaces=true,                 
-  numbers=left,                    
-  numbersep=5pt,                  
-  showspaces=false,                
-  showstringspaces=false,
-  showtabs=false,                  
-  tabsize=3
-}
-\definecolor{delim}{RGB}{20,105,176}
-
-\lstdefinelanguage{json}{
-    basicstyle=\normalfont\ttfamily,
-    numbers=left,
-    numberstyle=\tiny\color{azulescom},
-    stringstyle=\color{azulfuerte},
-    stepnumber=1,
-    numbersep=8pt,
-    showstringspaces=false,
-    breaklines=true,
-    backgroundcolor=\color{backcolour},
-    literate=
-     *{0}{{{\color{azulfuerte}0}}}{1}
-      {1}{{{\color{azulfuerte}1}}}{1}
-      {2}{{{\color{azulfuerte}2}}}{1}
-      {3}{{{\color{azulfuerte}3}}}{1}
-      {4}{{{\color{azulfuerte}4}}}{1}
-      {5}{{{\color{azulfuerte}5}}}{1}
-      {6}{{{\color{azulfuerte}6}}}{1}
-      {7}{{{\color{azulfuerte}7}}}{1}
-      {8}{{{\color{azulfuerte}8}}}{1}
-      {9}{{{\color{azulfuerte}9}}}{1}
-      {:}{{{\color{guindapoli}{:}}}}{1}
-      {,}{{{\color{guindapoli}{,}}}}{1}
-      {\{}{{{\color{guindapoli}{\{}}}}{1}
-      {\}}{{{\color{guindapoli}{\}}}}}{1}
-      {[}{{{\color{guindapoli}{[}}}}{1}
-      {]}{{{\color{guindapoli}{]}}}}{1},
-}
-
-\lstset{style=codeStyle}
-
-
-\definecolor{lightgray}{rgb}{.9,.9,.9}
-\definecolor{darkgray}{rgb}{.4,.4,.4}
-\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-
-\lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, let, continue},
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{black},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
-  morestring=[b]',
-  morestring=[b]"
-}
-
-\lstset{
-   language=JavaScript,
-   backgroundcolor=\color{lightgray},
-   extendedchars=true,
-   basicstyle=\footnotesize\ttfamily,
-   showstringspaces=false,
-   showspaces=false,
-   numbers=left,
-   numberstyle=\footnotesize,
-   numbersep=9pt,
-   tabsize=2,
-   breaklines=true,
-   showtabs=false,
-   captionpos=b
-}
+%------------------------------------------------FINAL DE ACRÓNIMOS------------------------------------------------%
 
 \begin{document}
-	%PARA QUE DETECTE HASTA SUBSUBSECTION
+	%%PARA QUE DETECTE HASTA SUBSUBSECTION
 	\setcounter{secnumdepth}{3}
 	
-%   %   %   %   %   %   %   %   %   %
-%		                       					  %
-%   			PORTADA 				  %
-%                               				  %
-%   %   %   %   %   %   %   %   %	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	PORTADA  																				  			 %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{titlepage}	
 		
 		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}									%%%\left
@@ -338,11 +444,13 @@ natural y redes neuronales}\\
 	
 	\end{titlepage}
 
-%   %   %   %   %   %   %   %   %   %
-%		                       					  %
-%   				ÍNDICE 				  	  %
-%                               				  %
-%   %   %   %   %   %   %   %   %	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 ÍNDICE  																				  			 	  %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Rename Appendice to Anexos
 \renewcommand\appendixpagename{Índice}
 \renewcommand\appendixtocname{Índice}
@@ -369,10 +477,10 @@ natural y redes neuronales}\\
     \renewcommand{\thepart}{}
     \renewcommand{\partname}{}
     %   %   %   %   %   %   %   %   %   %
-    %		           Capítulo 1  				 %
-    %   			Introducción 			   %
-    %                               				  %
-    %   %   %   %   %   %   %   %   %	%
+    %		           Capítulo 1  				   %
+    %   			Introducción 			    %
+    %                               				  		 %
+    %   %   %   %   %   %   %   %   %	 %
     \chapter{\textcolor{azulescom}{Introducción}}
     La industria musical obtiene ganancias a través de la creación y divulgación de la música de manera física y digital (Bourreau and Gensollen 2006 \cite{Bourreau_and_Gensollen}), dejando que aficionados y emprendedores de la música no tengan oportunidad de avanzar en su carrera por falta de creatividad, tiempo y/o recursos, haciendo que la creación de nuevas letras para sus canciones sea un gran obstáculo, nuestra propuesta implica la utilización de nuevas tecnologías que permitan la generación de letras para integrar con sus canciones. Esta es una de las tareas más populares y desafiantes en el área de procesamiento del lenguaje natural. Hay una gran cantidad de trabajos (Generating Text with Recurrent Neural Networks \cite{Generating_Text_with_RNN}, Convolutional Neural Networks for Sentence Classification\cite{CNN_for_Sentence_Classification}) que proponen generar texto utilizando redes neuronales recurrentes y/o convolucionales. Sin embargo, la mayoría de los trabajos actuales solo se enfocan en generar una o varias oraciones, ni siquiera un párrafo largo y mucho menos una canción completa.\\\\
     Las letras de canciones, como un tipo de texto, tienen algunas características propias, estas se constituyen de rimas, versos, coros y en algunos casos, patrones de repetición. Coro se refiere a la parte de una canción que se repite sin modificaciones dentro de la misma después de un verso, mientras que en el verso suelen cambiar una o varias líneas que lo componen. Estas características particulares hacen que generar letras musicales sea mucho más difícil que textos normales.\\\\
@@ -420,11 +528,11 @@ natural y redes neuronales}\\
 	}
 \end{table}
 
-\section{Objetivos.}
-	\subsection{Objetivo general.}
+\section{Objetivos}
+	\subsection{Objetivo general}
 	Crear una herramienta de apoyo para estudiantes o aficionados interesados en este rubro que se les dificulte componer nuevas letras musicales de un solo género musical debido a la carencia de creatividad, la falta de conocimientos en la estructura del género o que no tengan inspiración suficiente para poder crear nuevas canciones, esto con el fin de impulsar la carrera de futuros artistas en la industria musical que no tengan los suficientes recursos para poder contratar servicios particulares de compositores.
 	
-	\subsection{Objetivos particulares.}
+	\subsection{Objetivos particulares}
 		\begin{itemize}
 			\item Generar un conjunto de datos (dataset) con letras musicales de un género musical para efecto de entrenamiento de la red semántica.
     		\item Hacer uso de alguna herramienta de aprendizaje automático (machine learning) e implementar su uso en la nube para ayudar a procesar las letras musicales de un género en específico.
@@ -441,7 +549,7 @@ natural y redes neuronales}\\
     	A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta se va a centrar en generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales se tendrán resultados completamente diferentes con propuestas distintas.\\\\
     	En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software, se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial, Procesamiento de Lenguaje Natural, Web Application Development, Programación Orientada a Objetos, Análisis de Algoritmos, así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita.
     	
-	    \section{Metodolog\'ia.}
+	    \section{Metodolog\'ia}
 	    Para el desarrollo de este trabajo terminal se utilizará la metodología ágil Scrumban, que combina algunas partes de la 
 	    metodología Scrum y Kanban, debido a que este es un proceso de gestión el cual reduce la complejidad en el desarrollo de 
 	    productos para satisfacer las necesidades de los clientes. Además, permite trabajar colaborativamente de manera eficiente, 
@@ -516,51 +624,31 @@ natural y redes neuronales}\\
 	    
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
-            
 
-            \subsection{Capítulo 2. Marco teórico.}
+            \subsection{Capítulo 2. Marco teórico}
                 En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones, técnicas, herramientas, servicios, así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
              
             \subsection{Capítulo 3. Análisis.}
                 Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los tres componentes que tenemos en el sistema.
              
-            \subsection{Capítulo 4. Diseño.}
+            \subsection{Capítulo 4. Diseño}
                 En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrollan y explican los siguientes diagramas: `Casos de uso', `Flujo', `Flujo de datos', `Clases', `Secuencia' y `Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
-                
-            \subsection{Capítulo 5. Desarrollo.}
+             \begin{comment}
+				%% PARA TT2
+            \subsection{Capítulo 5. Desarrollo}
                 En este capítulo mostraremos lo que se ha desarrollado para este Trabajo Terminal I (Iteración I, Iteración II, Iteración III, Iteración IV). Se muestra que se cumplan los requerimientos que se impusieron en la sección de análisis.
             
-            \subsection{Capítulo 6. Avances y trabajo por hacer.}
+            \subsection{Capítulo 6. Avances y trabajo por hacer}
                 En el último capítulo de este reporte, hablaremos de los avances que hemos logrado a lo largo de la asignatura de Trabajo Terminal I y además, exponemos el trabajo esperado para la asignatura de Trabajo Terminal II.
-                
-    %   %   %   %   %   %   %   %   %   %
-    %		        Capítulo 2					%
-    %   	MARCO TEÓRICO 				%
-    %                               				  %
-    %   %   %   %   %   %   %   %   %	%        
-    
-	\chapter{\textcolor{azulescom}{Marco teórico}}
-
-%		\subsection{Github Student Pack}
-%		Se solicitó Github Students Pack para obtener el dominio donde se hospeda la aplicación web por un periodo de doce meses sin ningún costo por medio de namecheap.com, para ello primero se ingresa a la página principal del servicio de {Github Students Pack} {https://education.github.com/pack}, se crea una cuenta junto con el correo proporcionado por el Instituto Politécnico Nacional.\par
-%		\par ACOMODAR FOTOS DEL PROCESO CON EL PROCEDIMIENTO \par Una vez que la cuenta se activó, en la página web a un lado de este nos aparecerá el nombre de la institución educativa, en este caso, el Instituto Politécnico Nacional es la institución educativa que nos respalda. Y por último se nos pide agregar el que vamos a hacer en la plataforma.\par
-%		\begin{figure}[H]
-%			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/GitHub/GitS1.png}
-%			\centering 
-%			\caption{Github realacionado con el correo institucional}
-%		\end{figure}
-%		Ya cuando enviamos la solicitud con nuestra información nos aparece un mensaje en el cual nos dicen que obtendremos una respuesta sobre nuestra solicitud en menos de 22 días.\par
-%		\begin{figure}[H]
-%			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/GitHub/GitS2.png}
-%			\centering 
-%			\caption{Tiempo de espera de aprovación de la solicitud}
-%		\end{figure}
-%		Nunca se obtuvo una respuesta en forma de correo electronico por parte de Github, sino que simplemente a la cuenta con la que solicitamos este paquete de estudiante se le otorgo, este es posible saberlo, ya que entrando a la cuenta si checamos nuestro perfil, en la parte inferior aparecerá un icono de pro, con el cual se nos da el acceso solicitado.
-%		\begin{figure}[H]
-%			\includegraphics[width=4cm]{./imagenes/MarcoTeorico/GitHub/Githubpro.png}
-%			\centering 
-%			\caption{Activación del students pack}
-%		\end{figure}
+              \end{comment}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Capítulo 2  																				  			%
+%                                                      						   Marco Teórico																					   %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+ \chapter{\textcolor{azulescom}{Marco teórico}}
 		\section{Inteligencia Artificial}
 		Por Inteligencia Artificial se entiende a una simulación de procesos computacionales cognitivos para que simulen el comportamiento de una mente humana, estos comportamientos abarcan diferentes áreas de investigación, como el razonamiento, aprendizaje, percepción, comunicación y la capacidad de desarrollarse en entornos más complejos.
 		“La inteligencia no es una dimensión única, sino un espacio profusamente estructurado de capacidades diversas para procesar la información. Del mismo modo, la Inteligencia Artificial utiliza muchas técnicas diferentes para resolver una gran variedad de tareas que se encuentran en todas partes.” \cite{Inteligencia_Artificial}\\\\
@@ -568,56 +656,25 @@ natural y redes neuronales}\\
 		Como objetivo, la Inteligencia Artificial pretende hacer un uso de los recursos tecnológicos para desarrollar modelos computacionales y poder resolver problemas del mundo real evolucionando constantemente.
 	    \section{Redes neuronales}
 	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto.\\\\
-%	    El aprendizaje profundo o comunmente conocido como deep learning es un nombre o enfoque reciente de la inteligencia artificial llamada redes neuronales. 
+
 		Las redes neuronales son una forma de hacer que las computadoras aprendan, donde la computadora aprende a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\\\\
 		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia adelante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\\\\
 		Cuando una red neuronal está siendo entrenada la información de entrenamiento pasa a alimentar las capas inferiores (capas de entrada), donde será procesada y pasada a capas posteriores donde será transformada hasta llegar a las capas superiores (capas de salida).\cite{refQueSonRedesNeu}
 
-%        	\subsection{Tipos de Redes Neuronales}
-%        	    Los diferentes tipos de redes neuronales usan diferentes principios para determinar sus reglas. Cada uno de los tipos de redes neuronales tienen sus propias debilidades y fortalezas, a continuación, describiremos algunas de las más utilizadas y sus aplicaciones.
-%        	    \subsubsection{Feedforward Neural Network – Artificial Neuron}
-%				Una de las redes neuronales más simples, donde la información pasa a través de diferentes nodos de entrada, hasta alcanzar los nodos de salida. En otras palabras, la información solo fluye en una sola dirección, generalmente se hace uso de esta red para tecnologías que requieran \gls{Reconocimiento} de patrones o clasificación de objetos.\cite{refTiposRedesNeu3}\par
-%				\begin{figure}[H]
-%					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Feedforward.png}
-%					\centering 
-%					\caption{Diagrama Red Neuronal Feedforward}
-%				\end{figure}
-%				\subsubsection{Radial Basis Function Neural Network}
-%				Este tipo de red considera la distancia de cualquier punto en relación con el centro. Estas redes suelen estar constituidas por 2 capas. En la capa interior, donde la información se combina con la función de base radial, para luego, las salidas de esta capa se tomen en cuenta para calcular la próxima salida. Este tipo de redes suele implementarse en sistemas que requieran una restauración.\cite{refTiposRedesNeu2}\par
-%				\begin{figure}[H]
-%					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Radial.png}
-%					\centering 
-%					\caption{Diagrama Red Neuronal Radial Basis Function}
-%				\end{figure}
-%			\subsubsection{Multilayer Perception}
-%				Esta red cuenta con tres o más capas, las cuales están completamente conectadas, ya que cada uno de los nodos de cada capa se encuentra conectado con todos los nodos de la capa siguiente. Esta red es usada para clasificar información que no pueda ser separada de forma lineal como lo son el \gls{Reconocimiento} de voz o las traducciones automáticas.\cite{refTiposRedesNeu2}\par
-%				\begin{figure}[H]
-%					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Multilayer.png}
-%					\centering 
-%					\caption{Diagrama Red Neuronal Multilayer Perception}
-%				\end{figure}
-%				\subsubsection{Convolutional Neural Network}
-%				Es una variación de la Multilayer Perception. Contiene una o más capas convolucionales, las cuales pueden estar completamente interconectadas o agrupadas. Antes de pasar el resultado a la siguiente capa, la capa \gls{Convolucional} hace uso de una operación convolucional en la entrada. Como resultado de esta operación convolucional la red puede ser más profunda, pero con menos parámetros.\par
-%				Gracias a esto las redes neuronales convolucionales han demostrado buenos resultados en el \gls{Reconocimiento} de imágenes y video, procesamiento de lenguaje natural, así como para realizar recomendaciones.\cite{refTiposRedesNeu1}\par
-%				\begin{figure}[H]
-%					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Convolutional.png}
-%					\centering 
-%					\caption{Diagrama Red Neuronal Convolucional}
-%				\end{figure}
 				\subsection{Neuronas}
-				\subsubsection{Neurona Natural}
-				La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\\\\
-				Este impulso viaja siempre en el mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, existe un espacio de separación entre ellas denominado sinapsis o espacio sináptico. Cuando el impulso nervioso llega al extremo del axón se liberan neurotransmisores al espacio sináptico transformando la señal eléctrica en otra química que penetra en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora y se repite el proceso con la contigua.\cite{refNeuronaNat}
-				\begin{figure}[H] \caption{Estructura de una neurona \cite{refNeuronaNat2}}
-					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
-					\centering 
-				\end{figure}			
-				\subsubsection{Neurona Artificial}
-				La complejidad de las neuronas reales se abstrae mucho cuando se realiza el modelado de neuronas artificiales. Estas consisten básicamente en entradas, que se multiplican por pesos (fuerza de las respectivas señales), y luego calculada por una función matemática que determina la activación de la neurona. Otra función (que puede ser la identidad) calcula la salida de la neurona artificial (a veces en dependencia de un cierto umbral). Las redes neuronales combinan neuronas artificiales para procesar información.\cite{refNeuronaArt}
-				\begin{figure}[H] \caption{Neurona Artificial}
-					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
-					\centering 
-				\end{figure}
+						\subsubsection{Neurona Natural}
+						La neurona es un tipo de célula que representa la unidad estructural y funcional del sistema nervioso. Su función consiste en transmitir información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otro.\\\\
+						Este impulso viaja siempre en el mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, existe un espacio de separación entre ellas denominado sinapsis o espacio sináptico. Cuando el impulso nervioso llega al extremo del axón se liberan neurotransmisores al espacio sináptico transformando la señal eléctrica en otra química que penetra en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora y se repite el proceso con la contigua.\cite{refNeuronaNat}
+						\begin{figure}[H] \caption{Estructura de una neurona \cite{refNeuronaNat2}}
+							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
+							\centering 
+						\end{figure}			
+						\subsubsection{Neurona Artificial}
+						La complejidad de las neuronas reales se abstrae mucho cuando se realiza el modelado de neuronas artificiales. Estas consisten básicamente en entradas, que se multiplican por pesos (fuerza de las respectivas señales), y luego calculada por una función matemática que determina la activación de la neurona. Otra función (que puede ser la identidad) calcula la salida de la neurona artificial (a veces en dependencia de un cierto umbral). Las redes neuronales combinan neuronas artificiales para procesar información.\cite{refNeuronaArt}
+						\begin{figure}[H] \caption{Neurona Artificial}
+							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
+							\centering 
+						\end{figure}
 				\subsection{Aprendizaje de las Redes Neuronales}
 				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\\\\
 				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, o eliminarlas, o agregar y eliminar neuronas. Incluso podríamos modificar la función de entrada o la función de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\\\\
@@ -637,45 +694,35 @@ natural y redes neuronales}\\
 					\includegraphics[width=10cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
 				\end{figure}		
-%				\subsubsection{Modular Neural Network}
-%				Esta red está constituida por un numero variado de redes, las cuales funcionan de manera independiente y realizan subtareas. Las diferentes redes, en realidad no interactúan entre si durante la ejecución del proceso. Trabajan de manera independiente para lograr una misma salida.\par
-%				Como resultado, un largo y complejo proceso puede ser ejecutado rápido, separándolo en componentes individuales.\cite{refTiposRedesNeu2}\par
-%				\begin{figure}[H]
-%					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Modular.png}
-%					\centering 
-%					\caption{Diagrama Red Neuronal Modular}
-%				\end{figure}
         
         \section{Procesamiento de Lenguaje Natural}
         
         El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.\\\\
         El \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y `comprender' su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
         
-        \subsection{Tareas del Procesamiento de Lenguaje Natural}
-        
-        \begin{itemize}
-        	\item \textbf{Reconocimiento de voz: }La tarea pertinente al reconocimiento de voz es la conversión de la voz a texto, requiere convertir de manera confiable datos de voz en datos de texto. Lo que hace que el reconocimiento de voz sea especialmente desafiante es la forma en que las personas hablan: velocidad, arrastrando las palabras, con diferentes énfasis y entonación, así como con diferentes acentos.
-        	\item \textbf{Etiquetado de palabras: }Es el proceso de determinar la parte gramatical de una palabra o fragmento de texto en particular, en función de su uso y contexto.
-        	\item \textbf{Desambiguación de las palabras: }Es la selección del significado de una palabra con múltiples significados a través de un proceso de análisis semántico que determina la palabra que tiene más sentido en el contexto dado. 
-        	\item \textbf{Reconocimiento de entidad nombrada: }Identifica palabras o frases como entidades útiles, es decir, identifica nombres propios.
-        	\item \textbf{Resolución de correferencia: }Es la tarea de identificar si dos palabras se refieren a la misma entidad. El ejemplo más común es determinar la persona u objeto al que se refiere un determinado pronombre.
-        	\item \textbf{Análisis de sentimientos: }Intenta extraer del texto cualidades subjetivas (actitudes, emociones, sarcasmo, confusión, sospecha).
-        	\item \textbf{Generación de lenguaje natural: }Es la tarea de convertir información estructurada a lenguaje humano.
-        \end{itemize} 
-    
-    	\subsection{Usos del Procesamiento de Lenguaje Natural}
-    	
-    	El procesamiento del lenguaje natural es el cerebro detrás de la inteligencia artificial en muchas aplicaciones del mundo real. Algunos ejemplos son los siguientes:
-    	
-    	\begin{itemize}
-    		\item \textbf{Aplicaciones dedicadas a la traducción: }un ejemplo de estos es Google Translate, el cual hace uso de \acrshort{bert} para el procesamiento del lenguaje natural así como para el etiquetado de las palabras que requiere traducir.
-    		\item \textbf{Asistentes virtuales y chatbots: }Asistentes como Siri o Alexa requieren de un reconocimiento de voz para distinguir comandos, así como para responder adecuadamente a estos. En el caso de los chatbots realizan un análisis contextual de las preguntas para proveer respuestas relacionadas a las mismas.
-    		\item \textbf{Análisis de sentimientos en redes sociales: }Consta de analizar el lenguaje utilizado en publicaciones en redes sociales, respuestas, reseñas y más para extraer actitudes y emociones en respuesta a productos, promociones y eventos; información que las empresas pueden usar en diseños de productos, campañas publicitarias y más
-    		\item \textbf{Resúmenes de textos: }Consta de realizar resúmenes y sinopsis de distintos textos.
-    	\end{itemize} 
+		        \subsection{Tareas del Procesamiento de Lenguaje Natural}
+		        \begin{itemize}
+		        	\item \textbf{Reconocimiento de voz: }La tarea pertinente al reconocimiento de voz es la conversión de la voz a texto, requiere convertir de manera confiable datos de voz en datos de texto. Lo que hace que el reconocimiento de voz sea especialmente desafiante es la forma en que las personas hablan: velocidad, arrastrando las palabras, con diferentes énfasis y entonación, así como con diferentes acentos.
+		        	\item \textbf{Etiquetado de palabras: }Es el proceso de determinar la parte gramatical de una palabra o fragmento de texto en particular, en función de su uso y contexto.
+		        	\item \textbf{Desambiguación de las palabras: }Es la selección del significado de una palabra con múltiples significados a través de un proceso de análisis semántico que determina la palabra que tiene más sentido en el contexto dado. 
+		        	\item \textbf{Reconocimiento de entidad nombrada: }Identifica palabras o frases como entidades útiles, es decir, identifica nombres propios.
+		        	\item \textbf{Resolución de correferencia: }Es la tarea de identificar si dos palabras se refieren a la misma entidad. El ejemplo más común es determinar la persona u objeto al que se refiere un determinado pronombre.
+		        	\item \textbf{Análisis de sentimientos: }Intenta extraer del texto cualidades subjetivas (actitudes, emociones, sarcasmo, confusión, sospecha).
+		        	\item \textbf{Generación de lenguaje natural: }Es la tarea de convertir información estructurada a lenguaje humano.
+		        \end{itemize} 
+		    
+		    	\subsection{Usos del Procesamiento de Lenguaje Natural}
+		    	
+		    	El procesamiento del lenguaje natural es el cerebro detrás de la inteligencia artificial en muchas aplicaciones del mundo real. Algunos ejemplos son los siguientes:
+		    	
+		    	\begin{itemize}
+		    		\item \textbf{Aplicaciones dedicadas a la traducción: }un ejemplo de estos es Google Translate, el cual hace uso de \acrshort{bert} para el procesamiento del lenguaje natural así como para el etiquetado de las palabras que requiere traducir.
+		    		\item \textbf{Asistentes virtuales y chatbots: }Asistentes como Siri o Alexa requieren de un reconocimiento de voz para distinguir comandos, así como para responder adecuadamente a estos. En el caso de los chatbots realizan un análisis contextual de las preguntas para proveer respuestas relacionadas a las mismas.
+		    		\item \textbf{Análisis de sentimientos en redes sociales: }Consta de analizar el lenguaje utilizado en publicaciones en redes sociales, respuestas, reseñas y más para extraer actitudes y emociones en respuesta a productos, promociones y eventos; información que las empresas pueden usar en diseños de productos, campañas publicitarias y más
+		    		\item \textbf{Resúmenes de textos: }Consta de realizar resúmenes y sinopsis de distintos textos.
+		    	\end{itemize} 
         
         \section{Transformers}
-        
         El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra de una frase en función del resto de la secuencia, permitiendo así introducir el contexto en la representación matemática del texto.\\\\    
         Se suele trabajar con los transformadores en 2 etapas: \cite{refQueesuntransformer}
         \begin{itemize}
@@ -683,78 +730,74 @@ natural y redes neuronales}\\
         	\item \textbf{Afinado: }Se le añaden ciertas capas a la arquitectura para adaptar los modelos a tareas concretas, y se les re-entrena en esas tareas.
         \end{itemize}  
    
-   		\subsection{Arquitectura de un Transformer} 
-   		
-   		\begin{figure}[H] \caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
-   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
-   			\centering 
-   		\end{figure}     
-        En esta arquitectura el codificador mapea una secuencia de entrada de representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos de un elemento a la vez. En cada paso, el modelo es autorregresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
-        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura anterior, respectivamente. \cite{refArqTransformer}
+		   		\subsection{Arquitectura de un Transformer} 
+		   		
+		   		\begin{figure}[H] \caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
+		   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
+		   			\centering 
+		   		\end{figure}     
+		        En esta arquitectura el codificador mapea una secuencia de entrada de representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos de un elemento a la vez. En cada paso, el modelo es autorregresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
+		        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura anterior, respectivamente. \cite{refArqTransformer}
         
         \section{BERT}
-        
-        \subsection{¿Qué es Bert?}
-        
-        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
-        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
-        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\\\\
-        
-        \subsection{¿Cómo funciona BERT?}
-        
-        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\\\\     
-        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de “conocimiento”. A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\\\\        
-        \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
-        
-        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
-        	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
-        	\centering 
-        \end{figure} 
-           
-        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\\\\     
-        Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
-        
-        \subsection{BERT en la actualidad}
-        
-        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\\\\
-        Así como en la realización de tareas tales como: \cite{refBertactualidad}
-        \begin{itemize}
-        	\item Generación de lenguaje basadas en secuencia a secuencia (Respuesta a preguntas, resúmenes de documentos, predicción de siguiente oración, chatbots). 
-        	\item Comprensión del lenguaje natural (Entendimiento de la polisemia, la correferencia, la desambiguación de las palabras, clasificación de la palabras por sentimientos).
-        \end{itemize}         
-        
+		        \subsection{¿Qué es Bert?}
+		        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
+		        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
+		        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\\\\
+		        
+		        \subsection{¿Cómo funciona BERT?}
+		        
+		        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\\\\     
+		        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de “conocimiento”. A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\\\\        
+		        \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
+		        
+		        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
+		        	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
+		        	\centering 
+		        \end{figure} 
+		           
+		        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\\\\     
+		        Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
+		        
+		        \subsection{BERT en la actualidad}
+		        
+		        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\\\\
+		        Así como en la realización de tareas tales como: \cite{refBertactualidad}
+		        \begin{itemize}
+		        	\item Generación de lenguaje basadas en secuencia a secuencia (Respuesta a preguntas, resúmenes de documentos, predicción de siguiente oración, chatbots). 
+		        	\item Comprensión del lenguaje natural (Entendimiento de la polisemia, la correferencia, la desambiguación de las palabras, clasificación de la palabras por sentimientos).
+		        \end{itemize}         
+       
         \section{GPT-2}
-        
-        \subsection{¿Qué es GPT-2?}  
-        
-        \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
-        \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
-        El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\\\\        
-        Ya que en \acrshort{gpt}-2 no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\\\\
-        \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
-        \begin{itemize}
-        	\item Dividir palabra en secuencia de caracteres.
-        	\item Unirse al patrón de frecuencia más alta
-        	\item Continuar con el paso anterior hasta alcanzar el número máximo predefinido de subpalabras de iteraciones.
-        \end{itemize}
-    
-    	\subsection{Arquitectura GPT-2}
-    	
-    	\begin{figure}[H] \caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
-    		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
-    		\centering 
-    	\end{figure}
-    
-    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \\\\
-    	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
-    	
-    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2 \cite{refarquitecturagpt3}}
-    		\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Gptsentence.png}
-    		\centering 
-    	\end{figure}
-    
-    	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
-    	
+		        \subsection{¿Qué es GPT-2?}  
+		        \acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
+		        \acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt}-2 se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
+		        El conjunto de datos no requiere ningún paso de procesamiento previo. En otras palabras, se omiten las mayúsculas y minúsculas, la tokenización y otros pasos, ya que los autores creen que estos pasos de preprocesamiento restringen la capacidad del modelo y así ser capaz de evaluar todos los puntos de referencia del lenguaje.\\\\        
+		        Ya que en \acrshort{gpt}-2 no se aplica una representación de las palabras ni a nivel de palabra ni a nivel de carácter. Se elige una opción que se encuentra situada en medio, que es la subpalabra. La subpalabra se puede obtener mediante el algoritmo \acrfull{bpe}.\\\\
+		        \acrshort{bpe} es una forma de compresión donde se calculará una lista de subpalabras utilizando el siguiente algoritmo: \cite{refbpe}
+		        \begin{itemize}
+		        	\item Dividir palabra en secuencia de caracteres.
+		        	\item Unirse al patrón de frecuencia más alta
+		        	\item Continuar con el paso anterior hasta alcanzar el número máximo predefinido de subpalabras de iteraciones.
+		        \end{itemize}
+		    
+		    	\subsection{Arquitectura GPT-2}
+		    	
+		    	\begin{figure}[H] \caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
+		    		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
+		    		\centering 
+		    	\end{figure}
+		    
+		    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \\\\
+		    	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
+		    	
+		    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2 \cite{refarquitecturagpt3}}
+		    		\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Gptsentence.png}
+		    		\centering 
+		    	\end{figure}
+		    
+		    	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
+		    	
     	\section{BERT vs GPT-2}    	
     	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías BERT y GPT-2, visualizada en la siguiente tabla:    	
     	\begin{table}[h!]
@@ -781,23 +824,9 @@ natural y redes neuronales}\\
 		Una base de datos generalmente es manejada por un \acrfull{dbms}. En conjunto, los datos y el \acrshort{dbms}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
 			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo \acrshort{json}.\par
-			\begin{comment}
-%			\subsection{Tipos de bases de datos}
-%				\subsubsection{Bases de datos estáticas}
-%				Estas son de sólo lectura, utilizadas principalmente para almacenar datos históricos los cuales posteriormente se pueden utilizar para estudiar el comportamiento de un conjunto datos a través del tiempo, realizar proyecciones o tomar decisiones.\par
-%				\subsubsection{Bases de datos dinámicas}
-%				Estas son las que la información almacenada puede ser modificada con el tiempo, permitiendo operaciones como adición, actualización y eliminación de datos.\par
-%				\subsubsection{Bases de datos jerárquicas}
-%				Como su nombre su dice, almacenan la información en una estructura jerárquica, en este modelo la organización es similar a un árbol visto al revés, de donde un nodo padre se pueden tener varios nodos hijos, el nodo padre es llamado nodo raíz, y a los nodos que no tiene hijos se les conoce como hojas.\par
-%				Estas bases de datos son útiles cuando se anejan grandes cantidades de información y datos que requieren compartirse.\par
-%				\subsubsection{Bases de datos relacionales}
-%				En esta se almacenan y se proporcionan acceso a puntos de datos relacionados entre sí. Esto gracias a que cada fila de la tabla es un registro con un ID único, las columnas de la tabla contienes atributos de los datos, y cada registro generalmente cuenta con un valor para cada atributo, lo que facilita el establecimiento de las relaciones entre los puntos de datos.\par
-%				\subsubsection{Base de datos NoSQL o no relacionales}
-%				Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
-%				\subsubsection{Base de datos orientada a objetos}
-%				En esta se tratan de almacenar los objetos completos (\gls{Estado} y comportamiento), incorpora todos los conceptos del paradigma orientado a objetos (encapsulamiento, herencia, polimorfismo)\par
-\end{comment}
-		  \newpage
+		
+		\newpage
+	    
 	    \section{Canción}
 	    Una canción es una composición literaria, generalmente en verso, la cual puede ser acompañada con música para poder ser cantada.\cite{refEstructuraCancion1}\par
 			\subsection{Elementos de una canción}
@@ -836,7 +865,9 @@ natural y redes neuronales}\\
 			  \item Puente
 			  \item Cierre
 			\end{itemize}
+		
 		\newpage
+		
 		\section{Cadenas de Markov}
 	    Las cadenas de Markov son un \gls{Sistema} matemático el cual experimenta con las transiciones de un \gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que define a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\\\\
 		Son procesos \gls{Estocastico}s, con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\\\\
@@ -851,81 +882,10 @@ natural y redes neuronales}\\
 		\end{figure}
 
 		\section{Flask}
-		
 		Flask es un “micro” marco (framework) el cual nos permite crear de manera sencilla aplicaciones web utilizando Python, bajo el patrón de arquitectura \acrfull{mvc}; cabe mencionar que soporta otros lenguajes como PHP y Java.\cite{refFlask}\\\\
 		No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. Flask solo nos da las herramientas necesarias para poder crear una aplicación web funcional, pero si se requieren de otras herramientas para añadir alguna funcionalidad, se puede adaptar añadiéndole ciertos plugins.\\\\
 		En general es un marco de aplicación web \acrshort{wsgi}. \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\		
 		
-%	    A continuación en el cuadro \ref{cuadro:MetododsAutentificacion}, mostraremos algunas tablas comparativas que servirán para tener una mejor perspectiva de las ventajas, desventajas.
-		
-%		\begin{table}[H]
-%			\centering
-%			\resizebox{13cm}{!} {
-%				\begin{tabular}{l|l|l|l|l|l|l|l|}
-%					\cline{2-8}
-%					& Recordar & \begin{tabular}[c]{@{}l@{}}Otros\\ dispositivos\end{tabular} & Acciones & Facilidad & Tiempo & Errores & Recuperación \\ \hline
-%					\multicolumn{1}{|l|}{Contraseñas}                                                      & 1        & 3                                                            & 2        & 3         & 3      & 2       & 3            \\ \hline
-%					\multicolumn{1}{|l|}{Otros recursos}                                                   & 2        & 3                                                            & 3        & 3         & 3      & 3       & 2            \\ \hline
-%					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Contraseñas \\ gráficas\end{tabular}}  & 1        & 1                                                            & 2        & 3         & 3      & 2       & 3            \\ \hline
-%					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Contraseñas \\ dinámicas\end{tabular}} & 1        & 3                                                            & 2        & 2         & 3      & 2       & 2            \\ \hline
-%					\multicolumn{1}{|l|}{Tokens}                                                           & 3        & 1                                                            & 1        & 2         & 2      & 3       & 1            \\ \hline
-%					\multicolumn{1}{|l|}{Multivariación}                                                   & 1        & 1                                                            & 1        & 3         & 2      & 2       & 1            \\ \hline
-%					\multicolumn{1}{|l|}{Cryptografía}                                                     & 3        & 1                                                            & 1        & 1         & 1      & 2       & 1            \\ \hline
-%					\multicolumn{1}{|l|}{Biométricos}                                                      & 3        & 3                                                            & 2        & 3         & 2      & 2       & 1            \\ \hline
-%				\end{tabular}
-%			}
-%			\caption[Aplicación de los métodos de autentificación]{Tabla comparativa de la aplicación en los distintos métodos de autentificaci\'on}
-%			\label{cuadro:MetododsAutentificacion}
-%		\end{table}
-%		La tabla anterior concentra las siguientes características:
-%		
-%		\begin{itemize}
-%			\item Recordar: Hace referencia a que tan complicado es que un usuario se acuerde de los datos necesarios para la autentificaci\'on. 
-%			\item Otros dispositivos: El usuario usa una entidad externa para facilitar su autentificaci\'on.
-%			\item Acciones: Hace referencia a que tantas acciones adicionales se deben de realizar para autentificarse.
-%			\item Facilidad: Simplicidad de tecnología.
-%			\item Tiempo: Cantidad de recursos temporales que consume el método de autentificaci\'on.
-%			\item Errores: Posibles errores durante la autentificaci\'on. 
-%			\item Recuperación: Denota la dificultad de recuperar la clave de acceso en caso de pérdida.
-%		\end{itemize}
-		
-%		En el cuadro \ref{cuadro:VentajasMetodos} se muestra una tabla comparativa del nivel de seguridad en los distintos métodos de autentificaci\'on, donde 1 - baja seguridad, 2 – media seguridad y 3 – alta seguridad.
-		
-%		\begin{table}[H]
-%			\centering
-%			\resizebox{10cm}{!} {
-%				\begin{tabular}{l|l|l|l|l|}
-%					\cline{2-5}
-%					& \begin{tabular}[c]{@{}l@{}}Ataque por\\ fuerza bruta\end{tabular} & Observación & \begin{tabular}[c]{@{}l@{}}Hackeo\\ indirecto\end{tabular} & Phishing \\ \hline
-%					\multicolumn{1}{|l|}{Contraseñas}                                                      & 1                                                                 & 1           & 1                                                          & 1        \\ \hline
-%					\multicolumn{1}{|l|}{Otros recursos}                                                   & 2                                                                 & 2           & 3                                                          & 3        \\ \hline
-%					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Contraseñas \\ gráficas\end{tabular}}  & 1                                                                 & 1           & 2                                                          & 2        \\ \hline
-%					\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Contraseñas \\ dinamicas\end{tabular}} & 2                                                                 & 3           & 2                                                          & 2        \\ \hline
-%					\multicolumn{1}{|l|}{Tokens}                                                           & 3                                                                 & 3           & 3                                                          & 3        \\ \hline
-%					\multicolumn{1}{|l|}{Multivariación}                                                   & 1                                                                 & 1           & 3                                                          & 3        \\ \hline
-%					\multicolumn{1}{|l|}{Cryptografía}                                                     & 3                                                                 & 3           & 3                                                          & 3        \\ \hline
-%					\multicolumn{1}{|l|}{Biométricos}                                                      & 3                                                                 & 3           & 1                                                          & 1        \\ \hline
-%				\end{tabular}
-%			}
-%			\caption[Seguridad en los métodos de autentificación]{Tabla comparativa de la seguridad en los distintos métodos de autentificaci\'on}
-%			\label{cuadro:VentajasMetodos}
-%		\end{table}
-%		La tabla se enfoca principalmente en los siguientes problemas de seguridad: 
-		
-%		\begin{itemize}
-%			\item Ataque por fuerza bruta: Se descifra el método de autentificaci\'on con una gran cantidad de intentos, usualmente generados por un programa.
-%			\item Observación: Cuando se intenta ver directamente los datos necesarios para la autentificaci\'on desde una distancia cercana hasta incluso usando binoculares, cámaras o algún otro dispositivo.
-%			\item Hackeo indirecto: El usuario confía sus datos del método de autentificaci\'on a terceros quienes pueden ser atacados. 
-%			\item Phishing: Hace referencia a programas que se hacen pasar por entidades confiables para interceptar los datos que desean.
-%		\end{itemize}
-		
-%	    \textbf{Seguridad en internet}
-%	    En la actualidad, el incremento constante de internet ha impactado directamente en la seguridad de la información que se maneja cotidianamente y por la mayoría de usuarios. Existen infinidad de sitios donde es aplicada la seguridad, ya que sin ésta, se verían afectados todos los usuarios en  sus cuentas, pudiendo verse afectados desde un posible \gls{Palabra1} (Robo de identidad), hasta la perdida de dinero real dado que la base de algunas de éstas paginas son E-Commerce, estas paginas implican el manejo de tarjetas de crédito, paypal, etc.\\
-		
-%		Uno de los puntos más críticos de la seguridad en Internet son las herramientas que interactúan de forma directa con los usuarios. Es común escuchar sobre fallas en los sistemas de protección de los servidores más frecuentemente utilizados, por ejemplo Apache, NGINX, IIS, etc. O en los lenguajes de programación en que son escritas las aplicaciones \cite{refSeguridadWeb}. Sin embargo, la vulnerabilidad más grande dentro de un sistema, son los ataques directos a los usuarios finales durante la autentificación.\\
-	    
-%	    Una de las técnicas de autentificación que actualmente se usa es ''recordar la sesión'' usando las ''cookies'', en la siguiente sección, nos adentraremos en definir qué son las cookies y exponer sus vulnerabilidades.
-	    
 	    \section{Apache}
 	 	Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
 	 	Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\\\\
@@ -989,21 +949,21 @@ natural y redes neuronales}\\
 		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
 		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
-		\subsection{Amazon}
-		Dentro de las bondades que ofrecen los Servicios Web de Amazon (\acrfull{aws} por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
-		
-		\begin{itemize}
-			\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (\acrfull{ec2} por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
-			Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\\\\ 
-			El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\\\\ 
-			Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
-			
-		\end{itemize}
+				\subsection{Amazon Web Services}
+				Dentro de las bondades que ofrecen los Servicios Web de Amazon (\acrfull{aws} por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
+				
+				\begin{itemize}
+					\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (\acrfull{ec2} por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
+					Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\\\\ 
+					El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\\\\ 
+					Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
+					
+				\end{itemize}
 		
 		\begin{comment}
-		
-			\item \textbf{Lex:} Fue diseñado para integrar chatbots en aplicaciones. Lex cuenta con capacidades de aprendizaje profundo basado en procesamiento de lenguaje natural (NLP) y reconocimiento automático de voz. La API puede reconocer texto hablado y escrito. 
-			\item \textbf{Rekognition:} Es un servicio de visión computacional que simplifica el proceso de desarrollo para aplicaciones de reconocimiento de imagen y vídeo.
+				
+					\item \textbf{Lex:} Fue diseñado para integrar chatbots en aplicaciones. Lex cuenta con capacidades de aprendizaje profundo basado en procesamiento de lenguaje natural (NLP) y reconocimiento automático de voz. La API puede reconocer texto hablado y escrito. 
+					\item \textbf{Rekognition:} Es un servicio de visión computacional que simplifica el proceso de desarrollo para aplicaciones de reconocimiento de imagen y vídeo.
 		
 			\subsection{Azure}
 			Comparado a AWS, las propuestas del aprendiza de máquina de Azure son más flexibles en términos de algoritmos out-of-the-box.
@@ -1074,7 +1034,7 @@ natural y redes neuronales}\\
 		\end{table}
 	
 		\newpage
-		Los 3 proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue sencillos.\\
+		Los tres proveedores de la tabla anterior han alojado servicios de “Jupyter Notebook” (contienen tanto código de computadora como elementos ricos en texto como ecuaciones, figuras, etc.), experimentando seguimientos y control de versiones, y métodos de despliegue sencillos.\\
 		\\
 		Dentro de las características únicas de cada una de las plataformas podemos encontrar que la Plataforma de la Nube de Google (\acrshort{gcp}) usa un paquete llamado “what if tool” el cual se puede integrar junto a un “Jupyter Notebook” y de esa manera jugar con el modelo cambiando el umbral o un valor característico de un ejemplo dado, esto permite checar como es que ciertos cambios afectan el resultado predicho con anterioridad previo al cambio.\\
 		\\
@@ -1086,11 +1046,9 @@ natural y redes neuronales}\\
 		\\
 		Azure y \acrshort{gcp} puntúan ligeramente mejor que \acrshort{aws} en términos de rendimiento, esto no necesariamente significa que una plataforma es mejor que otra.\\
 		\\
-		El costo, por otro lado, resulta ser más interesante. El costo de \acrshort{aws} fue considerablemente menor que \acrshort{gcp} y Azure. Por supuesto, esta no es estrictamente una comparación de manzanas-manzanas.\\
+		El costo de \acrshort{aws} fue considerablemente menor que \acrshort{gcp} y Azure. Por supuesto, cada una tiene sus fuertes como puede verse en la tabla presentada anteriormente.\\
 		\\
-%		Si se tienen problemas con el presupuesto y el gasto por el 5 por ciento extra de mejora en el rendimiento no justifica el retorno, la historia se vuelve completamente distinta.\\
-		\\
-		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con aquellos nuevos en la ciencia de datos, con menos codeo ni antecedentes técnicos. \acrshort{aws} y \acrshort{gcp} parecen ser más enfocados a desarrolladores. Aunque puede resultar en un poco más de trabajo ensamblar una pipeline (o cadena de procesos), son más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la pipeline son usualmente desarrollados usando código y configuraciones, en vez de haciendo uso de una interfaz.\\
+		El diseñador de aprendizaje automático de Azure cuenta con una interfaz de arrastar y soltar el cual es bastante amigable con un usuario novato, esto es, porque requiere menos codeo y antecedentes técnicos. \acrshort{aws} y \acrshort{gcp} parecen ser más enfocados a desarrolladores aunque puede resultar en más de trabajo ensamblar una cadena de procesos (pipeline), estos resultan más personalizables con los diferentes componentes disponibles. Estos componentes y la conexión de la cadena de procesos son usualmente desarrollados usando código y configuraciones, en vez de utilizar una interfaz.\\
 		\\
 		Tanto \acrshort{gcp} como \acrshort{aws} ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
 		
@@ -1121,7 +1079,7 @@ natural y redes neuronales}\\
 			}
 		\end{table}
 	
-		En conclusión, la opción ideal para las necesidades de nuestro proyecto es \acrshort{aws} debido a que es más económico que las otras dos plataformas y cuenta con herramientas más útiles como SageMaker que nos permitirá saber cómo es que se está entrenando el modelo.
+		En conclusión, la opción ideal para las necesidades de nuestro proyecto es \acrshort{aws} debido a que es más económico que las otras dos plataformas y cuenta con herramientas más útiles como SageMaker que nos permitirá saber cómo se está entrenando el modelo.
 		
 		
             \begin{comment}
@@ -1171,15 +1129,17 @@ natural y redes neuronales}\\
          Para nuestro trabajo terminal usaremos \textit{Chaffing and Winnowing}, proponiendo así un nuevo método de autentificación para servicios web. \\
 	\end{comment}
 
-    
-%   %   %   %   %   %   %   %   %   %
-%		        Capítulo 3					%
-%   			ANÁLISIS 					%
-%                               				  %
-%   %   %   %   %   %   %   %   %	%   
-	\chapter{\textcolor{azulescom}{Análisis.}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Capítulo 3 																				  			 %
+%                                                      								Análisis																							   %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\chapter{\textcolor{azulescom}{Análisis}}
 	    
-    	\section{Estudio de Factibilidad.}
+    	\section{Estudio de Factibilidad}
     	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\\\\ 
     	Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
     	\begin{itemize}
@@ -1376,42 +1336,28 @@ natural y redes neuronales}\\
 	    	Factores externos que pueden afectar el desarrollo del proyecto pueden ser algún cambio en las leyes, cambio en alguna norma, desastre natural.
     	\end{itemize}
     	    
-    	\section{Herramientas a usar.}
-			\subsection{Software.}
+    	\section{Herramientas a usar}
+			\subsection{Software}
 			Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
 			
-			\paragraph{HTML.\\}
+			\paragraph{HTML\\}
 			
 			\acrfull{html} es un lenguaje de marcado que define la estructura de una página web y su contenido. \acrshort{html} consta de una serie de elementos que se utilizan para encerrar o envolver diferentes partes del contenido para que estos se visualicen de cierta manera o actúe de cierta manera. Las etiquetas adjuntas pueden hacer que una palabra o imagen sea un hipervínculo a otro lugar, pueden poner palabras en cursiva, pueden hacer que la fuente sea más grande o pequeña, etc. \cite{refHtml} \\\\\
 			\acrshort{html}5 es la versión mas reciente de html, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las paginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia así como una mejor integración a APIs y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}		
 			
-%			\acrfull{html} comenzó mucho tiempo atrás con una simple versión propuesta para crear la estructura básica de páginas web, organizar su contenido y compartir información, todo esto tenía la intención de comunicar información por medio de texto. El limitado objetivo de \acrshort{html} motivó a varias compañías a desarrollar nuevos lenguajes y programas para agregar características a la web nunca antes implementadas.   \\\\
-%			Dos de las opciones propuestas fueron Java y Javascript; ambas fueron muy aceptadas y consideradas como el objetivo de la internet, sin embargo, con el crecimiento exponencial del internet, éste dejó de ser únicamente para los aficionados de los computadores y pasó a ser usado como un campo estratégico para los negocios y para la interacción social, ciertas limitaciones presentes en ambas tecnologías probaron ser una sentencia de muerte. Esta falta de integración resultó ser crítica y preparó el camino para la evaluación de un lenguaje del cual hablaremos un poco más a detalle después: JavaScript. Sin embargo, pese a su gran impacto, el mercado no terminó de adoptarlo plenamente y rápidamente su popularidad fue declinando, y el mercado terminó enfocando su atención a Flash. No fue hasta que los navegadores mejoraron su intérprete para JavaScript y la gente se empezaba a dar cuenta de las limitaciones que ofrecía Flash, que JavaScript fue implementado y comenzó a innovar la forma en la que se programaba la web. Al cabo de unos años, JavaScript, \acrshort{html} y css eran considerados como la más perfecta combinación para evolucionar la Web. \\\\
-%			\acrshort{html}5 es una mejora de esta combinación, lo que unió todos estos elementos. \acrshort{html}5 propone estándares para cada aspecto de la Web y también un propósito claro para cada una de las tecnologías involucradas. A partir de esto, \acrshort{html} provee los elementos estructurales, \acrshort{css} se concentra en como volver esta estructura utilizable y atractiva a la vista, y JavaScript tiene todo lo necesario para brindar dinamismo y construir aplicaciones web completamente funcionales. Cabe mencionar que \acrshort{html}5 funciona diferente dependiendo del navegador y la versión en la que se esté trabajando, algunos soportan más carcterísticas o diferentes funcionalidades que otros.
-			
-			\paragraph{CSS.\\}
+			\paragraph{CSS\\}
 			
 			\acrfull{css} es el lenguaje para describir la presentación de las páginas web. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y se puede utilizar con cualquier lenguaje de marcado basado en \acrshort{xml}. La separación de \acrshort{html} de \acrshort{css} hace que sea más fácil mantener los sitios, compartir hojas de estilo entre páginas y adaptar las páginas a diferentes entornos. \cite{refcss}	
 			
-%			\acrshort{html}5 fue evolucionando a un grado de combinación de estructura y diseño, sin embargo, la web demanda diseño y funcionalidad, no solamente organización estructural o definición de secciones, la función de \acrshort{css} se concentra en volver la estructura de \acrshort{html} utilizable y atractivo a la vista.\\\\
-%			Oficialmente \acrshort{css} no tiene nada que ver con \acrshort{html}5, es un complemento desarrollado para superar las limitaciones y reducir la complejidad de \acrshort{html}. Al principio, atributos dentro de las etiquetas \acrshort{html} proveían estilos esenciales para cada elemento, pero a medida que \acrshort{html} evolucionó, la escritura de códigos se volvió más compleja y \acrshort{html} por sí mismo no pudo satisfacer más las demandas de los diseñadores.\\\\
-%			En consecuencia a esta demanda, \acrshort{css} fue adoptado como la forma de separar la estructura de la presentación, y ha ido creciendo y ganando importancia, pero siempre desarrollado en paralelo enfocado en las necesidades de los diseñadores y apartado de la estructura de \acrshort{html}.\\\\
-%			La versión 3 de \acrshort{css} sigue el mismo camino, pero esta vez con un mayor compromiso. La especificación de \acrshort{html}5 fue desarrollada considerando \acrshort{css} a cargo del diseño, Debido a esta consideración, la integración entre \acrshort{html} y \acrshort{css} es ahora vital para el desarrollo web y esta razón por la que cada vez que mencionamos \acrshort{html}5 también estamos haciendo referencia a \acrshort{css}3, aunque oficialmente se trate de dos tecnologías completamente separadas. Las nuevas características incorporadas en \acrshort{css}3 están siendo implementadas e incluidas junto al resto de la especificación en navegadores compatibles con \acrshort{html}5 \cite{refElGranLibro}.
 			
-			\paragraph {JavaScript. \\}
+			\paragraph {JavaScript \\}
 			
 			JavaScript es un lenguaje de programación o secuencias de comandos que permite implementar funciones complejas en las páginas web. JavaScript permite crear contenido dinámico, controlar multimedia, animar imágenes, etc. \cite{refjs}
-%			JavaScript es considerado como el lenguaje de programación de \acrshort{html} y de la web. Es un lenguaje de programación fácil de usar y muy versátil para el ámbito de la comunicación en redes. Los programas, llamados “scripts”, se ejecutan en el navegador (Mozilla, Google Chrome, Internet Explorer, etc.) normalmente consisten en unas funciones que son llamadas desde el propio html cuando algún evento sucede.\\\\
-%			Su primera aproximación a un uso real, fue en mayor parte para “dar vida a una página web”, como dar animaciones a un botón, interacciones en tiempo real, entre otras más. 
-%			JavaScript fue desarrollado por Brendan Eich, a partir del lenguaje Java, que en ese momento tenía mucho auge y popularidad, y su principal diferencia es que JavaScript sólo “funciona” dentro de una página \acrshort{html}.\\\\
-%			JavaScript fue declarado como estándar del \acrfull{ecma} en 1997, y poco después, también fue estandarizado por \acrshort{iso} \cite{refJavaScript}. \\\\ 
-%			JavaScript es un lenguaje interpretado, usado mayormente como complemento de ciertos objetivos específicos, sin embargo, uno de las innovaciones que ayudó a JavaScript fue el desarrollo de nuevos motores de interpretación, creados para acelerar el procesamiento del código. La clave de los motores más exitosos fue transformar el código de Javascript en código máquina para obtener una velocidad de ejecución mejor que antes. Esto a la vez permitió superar viejas limitaciones de rendimiento y confirmar el lenguaje JavaScript como la mejor opción para la Web.\\\\
-%			Para aprovechar esta prometedora plataforma de trabajo ofrecida por los nuevos navegadores, JavaScript fue expandido en cuestión de portabilidad e integración, a la vez, interfaces de programación de aplicaciones (\acrshort{api}s) fueron incorporando por defecto con cada navegador para asistir a JavaScript en funciones elementales. El objetivo de esto, fue principalmente hacer disponible funciones a través de técnicas de programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la Web \cite{refElGranLibro}.
 		    
-		    \paragraph{OpenSSL.\\}
+		    \paragraph{OpenSSL\\}
            Consiste en un robusto paquete de herramientas de administración y bibliotecas relacionadas con la criptografía, que suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (para el acceso seguro a sitios \acrshort{https}). Estas herramientas ayudan al sistema a implementar el \acrfull{ssl}, así como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL también permite crear certificados digitales que pueden aplicarse a un servidor, por ejemplo Apache \cite{refopenssl}.
       
-            \paragraph{MongoDB. \\}
+            \paragraph{MongoDB \\}
             MongoDB es un sistema de base de datos multiplataforma orientado a documentos, de esquema libre, esto significa que cada entrada o registro puede tener un esquema de datos diferente, con atributos o “columnas” que no tienen por qué repetirse de un registro a otro. \\\\
             Las características más destacadas son su velocidad y su sencillo sistema de consulta de los contenidos de la base de datos. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
             MongoDB utiliza un modelo No\acrshort{sql} el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
@@ -1425,7 +1371,7 @@ natural y redes neuronales}\\
                 \item Frecuentemente se aplican técnicas de desnormalización de los datos.
             \end{itemize}
                     
-            \paragraph{MySQL. \\}
+            \paragraph{MySQL \\}
             Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a Oracle y Microsoft \acrshort{sql} Server, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
             El modelo relacional, para el modelado y la gestión de bases de datos, es donde se almacenan y se proporcionan acceso a puntos de datos relacionados entre sí. Esto gracias a que cada fila de la tabla es un registro con un ID único, las columnas de la tabla contienen atributos de los datos, y cada registro generalmente cuenta con un valor para cada atributo, lo que facilita el establecimiento de las relaciones entre los puntos de datos.\\\\
             Las principales ventajas son: 
@@ -1441,7 +1387,7 @@ natural y redes neuronales}\\
                 \item No se manipulan de forma eficiente los bloques de texto como tipo de dato.
             \end{itemize}
 			
-			\paragraph{Flask. \\}
+			\paragraph{Flask \\}
 			Flask es un mini marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\\\\
 			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\
 			Las principales ventajas de Flask son: 
@@ -1458,11 +1404,11 @@ natural y redes neuronales}\\
 				\item No puede manejar peticiones multiples al mismo tiempo.
 			\end{itemize}
 		
-			\paragraph{Gunicorn. \\}
+			\paragraph{Gunicorn \\}
 			
 			Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
 			
-			\paragraph{Python. \\}
+			\paragraph{Python \\}
 			Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\\\\
 			Las principales ventajas de Python son: 
 			\begin{itemize}
@@ -1476,13 +1422,13 @@ natural y redes neuronales}\\
 				\item En ocasiones la ejecución del código es lenta.
 				\item Consume mucha memoria.
 			\end{itemize}
-			\paragraph{\acrshort{bert}. \\}
+			\paragraph{\acrshort{bert} \\}
 			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
 			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
 			\paragraph{\acrshort{gpt}. \\}
 			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
-			\acrshort{gpt} es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
+			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
 			\paragraph{Amazon \acrshort{ec2}. \\}
 			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
@@ -1498,11 +1444,11 @@ natural y redes neuronales}\\
 				\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
 				\item Los costos de soporte técnico son muy elevados..
 			\end{itemize}		
-			\paragraph{Amazon \acrshort{cli}. \\}
+			\paragraph{Amazon \acrshort{cli} \\}
 			
 			Amazon \acrfull{cli} es una herramienta que reúne todos los servicios de \acrshort{aws} en una consola central, lo que le brinda un control sencillo de varios servicios de \acrshort{aws} con una sola herramienta. Como su nombre indica, los usuarios operan los distintos servicios desde la línea de comandos. 
 			
-			\paragraph{Amazon SageMaker. \\}
+			\paragraph{Amazon SageMaker \\}
 			Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores de datos a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
 			Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
 			Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y puede escalar fácilmente para entrenar los modelos a escala de petabytes. Para acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
@@ -1510,12 +1456,12 @@ natural y redes neuronales}\\
 			\paragraph{Amazon S3. \\}
 			Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
 			
-			\paragraph{Apache. \\}
+			\paragraph{Apache \\}
 			Es un servidor web gratuito y de código abierto que permite que los dueños de sitios web muestren contenido en ellas, no es un servidor físico sino más bien un software que corre en un servidor.
 			Su trabajo es establecer la conexión entre un servidor y los navegadores de los visitantes del sitio web mientras se mandan archivos de ida y vuelta entre ellos (estructura cliente-servidor). El servidor y el cliente se comunican mediante el protocolo \acrshort{http}, y el software de Apache es responsable por la comunicación fluida y segura entre las 2 máquinas.\\\\
 			Apache trabaja sin problemas con muchos otros sistemas de gestión de contenido (Joomla, Drupal, etc.), marcos de trabajo web (Django, Laravel, etc.), y lenguajes de programación. Todo esto en conjunto lo vuelve una opción sólida al momento de escoger entre todos los tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 			
-		\subsection{Hardware.}
+		\subsection{Hardware}
 			Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
             \begin{table}[H]
             	\begin{tabular}{|p{3.5cm}||p{10cm}|}
@@ -1570,126 +1516,132 @@ natural y redes neuronales}\\
             	\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
             \end{table}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                       %
-%                                                       %
-%               Arquitectura de Sistema   %
-%                                                       %
-%                                                       %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Arquitectura del sistema.}
-	        \subsection{Descripci\'on de la arquitectura del sistema.}
-	        El sistema se compone de tres bloques los cuales se comunicar\'an v\'ia red:
-	        \begin{enumerate}
-	        	\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
-	        	\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
-	        	\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, contaremos con una tabla que contenga como principales campos:
-	        	\begin{itemize}
-	        		\item Artista
-	        		\item Género
-	        		\item Nombre de la Canción
-	        		\item Letra
-	        		\item Idioma
-	        	\end{itemize}
-        	Dicha base de datos se almacenará en un sistema especializado que se conecte a la nube para poder trabajar y almacenar estos datos sin mayor problema.
-	        \end{enumerate}
 
-	        \subsection{Diseño de la aplicación web}
-	        En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
-	        \begin{figure}[H] \caption{Aplicación web, pagina inicial.}
-	        	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
-	        	\centering 
-	        \end{figure}
-	        \begin{figure}[H] \caption{Aplicación web, pagina una vez generada una letra musical.}
-	        	\includegraphics[width=12cm]{./imagenes/Analisis/MockFrontGenerated.png}
-	        	\centering 
-	        \end{figure}        
-	        \subsection{Requerimientos funcionales y no funcionales}
-	        A continuación, se presentan los requerimientos funcionales mas importantes de nuestro proyecto:
-	        \begin{itemize}
-	        	\item Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
-	        	\item Permitirá al usuario descargar la letra generada como archivo de texto.
-	        	\item Permitirá al usuario generar cuantas veces quiera una letra musical.
-	        	\item Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
-	        \end{itemize}
-        	Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto
-	        \begin{itemize}
-		        \item El servicio web debe ser capaz de procesar más de diez solicitudes simultaneas.
-		        \item La página debe ser capaz de operar adecuadamente con hasta cincuenta usuarios simultáneamente.
-		        \item El tiempo que le toma a un usuario promedio en el aprendizaje del sistema de la interfaz deberá de ser menor a cinco minutos.
-		        \item La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
-		        \item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
-		    \end{itemize}
-	        \subsection{Aspectos Econ\'omicos}
-	        % Aqui van las licencias, descripción, software a utilizar, etc.
-	        \subsection{Aspectos Legales}
-	        \subsubsection{Copyright}
-	        Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
-	        Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.\\\\
-	        \subsubsection{Originalidad}
-	        Los derechos de autor protegen la forma en que se expresan las ideas. Esta expresión es la forma única en la que las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
-	        Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que es protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
-
-%   %   %   %   %   %   %   %   %	%	%
-%		       											%
-%   				Iteración 1 					  %
-%                               				  		%
-%   %   %   %   %   %   %   %   %	%   %     
 \chapter{\textcolor{azulescom}{Diseño}}
-\section{\textcolor{azulescom}{Iteración 1}}
-\subsection{Descripción.}
 
-\subsection{Base de Datos} % Explicar como se sacó la Base de Datos
-\subsection{Género Musical} % Explicar por qué se sacó de este género musical
-\subsection{Resultados}
-
-%   %   %   %   %   %   %   %   %	%	%
-%		       											%
-%   				Iteración 2 				   %
-%                               				  		%
-%   %   %   %   %   %   %   %   %	%   %     
-\section{\textcolor{azulescom}{Iteración 2}}
-\subsection{Descripción.}
-\subsection{Limpieza} % Explicar cómo se limpió la base de datos
-\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\subsection{Resultados} % Explicar los Resultados
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              													 Arquitectura de Sistema  																				   %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Arquitectura del sistema}
+		\subsection{Descripci\'on de la arquitectura del sistema}
+		El sistema se compone de tres bloques los cuales se comunicar\'an v\'ia red:
+		\begin{enumerate}
+			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
+			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
+			\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, contaremos con una tabla que contenga como principales campos:
+			\begin{itemize}
+				\item Artista
+				\item Género
+				\item Nombre de la Canción
+				\item Letra
+				\item Idioma
+			\end{itemize}
+			Dicha base de datos se almacenará en un sistema especializado que se conecte a la nube para poder trabajar y almacenar estos datos sin mayor problema.
+		\end{enumerate}
+		       
+		\subsection{Requerimientos funcionales y no funcionales}
+		A continuación, se presentan los requerimientos funcionales mas importantes de nuestro proyecto:
+		\begin{itemize}
+			\item Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
+			\item Permitirá al usuario descargar la letra generada como archivo de texto.
+			\item Permitirá al usuario generar cuantas veces quiera una letra musical.
+			\item Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
+		\end{itemize}
+		Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto
+		\begin{itemize}
+			\item El servicio web debe ser capaz de procesar más de diez solicitudes simultaneas.
+			\item La página debe ser capaz de operar adecuadamente con hasta cincuenta usuarios simultáneamente.
+			\item El tiempo que le toma a un usuario promedio en el aprendizaje del sistema de la interfaz deberá de ser menor a cinco minutos.
+			\item La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
+			\item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
+		\end{itemize}
+		\subsection{Aspectos Econ\'omicos}
+		% Aqui van las licencias, descripción, software a utilizar, etc.
+		\subsection{Aspectos Legales}
+			\begin{itemize}
+				\item \textbf{Copyright}\\\\
+				Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
+				Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.\\\\
+				\item \textbf{Originalidad}\\\\
+				Los derechos de autor protegen la forma en que se expresan las ideas. Esta expresión es la forma única en la que las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
+				Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que es protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
+		\end{itemize}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Iteración 1  																				  			 %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Base de Datos} % Explicar como se sacó la Base de Datos
+		\subsection{Descripción}
+		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
+		\subsection{Resultados}
+		
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Iteración 2 																				  			 %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Limpieza de la Base de Datos} % Explicar cómo se limpió la base de datos
+		\subsection{Descripción}
+		\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+		\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Resultados} % Explicar los Resultados
 
 \newpage
 
-%   %   %   %   %   %   %   %   %	%	%
-%		       											%
-%   				Iteración 3				       %
-%                               				  		%
-%   %   %   %   %   %   %   %   %	%   %     
-\section{\textcolor{azulescom}{Iteración 3}}
-\subsection{Descripción.}
-\subsection{Limpieza} % Explicar cómo se limpió la base de datos
-\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\subsection{Resultados} % Explicar los Resultados
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Iteración 3  																				  			 %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Titulo de la Iteracion 3} % Explicar cómo se limpió la base de datos
+		\subsection{Descripción}
+		\subsection{Subtema} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
+		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Resultados} % Explicar los Resultados
 
 \newpage
 
-%   %   %   %   %   %   %   %   %	%	%
-%		       											%
-%   				Iteración 4 				   %
-%                               				  		%
-%   %   %   %   %   %   %   %   %	%   %     
-\section{\textcolor{azulescom}{Iteración 4}}
-\subsection{Descripción.}
-\subsection{Limpieza} % Explicar cómo se limpió la base de datos
-\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\subsection{Resultados} % Explicar los Resultados
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Iteración 4  																				  			 %
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\section{Titulo de la Iteracion 4} % Explicar cómo se limpió la base de datos
+		\subsection{Descripción}
+		\subsection{Subtema} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
+		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Resultados} % Explicar los Resultados
 
-
-% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 \newpage
+
+\section{Aplicación web}
+En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
+\begin{figure}[H] \caption{Aplicación web, pagina inicial.}
+	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
+	\centering 
+\end{figure}
+\begin{figure}[H] \caption{Aplicación web, pagina una vez generada una letra musical.}
+	\includegraphics[width=12cm]{./imagenes/Analisis/MockFrontGenerated.png}
+	\centering 
+\end{figure} 
 % Rename Appendice to Anexos
 \renewcommand\appendixpagename{Anexos}
 \renewcommand\appendixtocname{Anexos}
@@ -1704,6 +1656,13 @@ natural y redes neuronales}\\
 	\renewcommand*\glossaryname{{\textcolor{azulescom}{Acrónimos.}}}
 	\printglossary[title={\textcolor{azulescom}{Acrónimos.}}, type=\acronymtype]
 \end{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       																																		  %
+%                                                      																																	  		  %
+%              																	 Bibliografía  																				  			%
+%                                                      																																			  %
+%                                                      																																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{20}
 	%Glossario
 	\bibitem{refRAE}  		
@@ -1836,10 +1795,6 @@ natural y redes neuronales}\\
 	\bibitem{refopenssl}
 	OpenSSL (2018), OpenSSL, [En línea]. Disponible: https://www.openssl.org [Último acceso: 15 de mayo del 2021].
 	
-	
-	
-	
-	
 	% Apache
 	\bibitem{Apache}  		
 	Documentation Group. (n.d.). Welcome! - The Apache HTTP Server Project. Apache. Retrieved April 6, 2021, from https://httpd.apache.org/
@@ -1869,7 +1824,6 @@ natural y redes neuronales}\\
 	I., A. (2015, October 2). Jupyter/IPython Notebook Quick Start Guide. Jupyter Notebook Beginner Guide. https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what\_is\_jupyter.html
 	\bibitem{google_cloud_vs_aws} 
 	Jones, E. (2021, March 25). Google Cloud vs AWS in 2021 (Comparing the Giants). Kinsta. https://kinsta.com/blog/google-cloud-vs-aws/
-	
 	
 	% Aspectos Legales	
 	\bibitem{refCopyright}  		
