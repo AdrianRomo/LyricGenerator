@@ -360,6 +360,7 @@
 \newacronym{ssd}{SSD}{Solid State Drive}
 \newacronym{iso}{ISO}{International Standardization Organization}
 \newacronym{xml}{XML}{Extensible Markup Language}
+\newacronym{svg}{SVG}{Scalable Vector Graphics}
 
 %------------------------------------------------FINAL DE ACRÓNIMOS------------------------------------------------%
 
@@ -1347,7 +1348,10 @@ natural y redes neuronales}\\
 			
 			\paragraph{CSS\\}
 			
-			\acrfull{css} es el lenguaje para describir la presentación de las páginas web. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y se puede utilizar con cualquier lenguaje de marcado basado en \acrshort{xml}. La separación de \acrshort{html} de \acrshort{css} hace que sea más fácil mantener los sitios, compartir hojas de estilo entre páginas y adaptar las páginas a diferentes entornos. \cite{refcss}	
+			\acrfull{css} es el lenguaje para describir la presentación de las páginas web así como hacerlas más atractivas. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y se puede utilizar con cualquier lenguaje de marcado basado en \acrshort{xml} o \acrshort{svg}. 
+			Usando CSS se pueden controlar con precisión cómo se ven los elementos \acrshort{html} en el navegador, que presentará para las etiquetas de marcado el diseño que cada uno desee.
+			La separación de \acrshort{html} de \acrshort{css} hace que sea más fácil mantener los sitios, compartir hojas de estilo entre páginas y adaptar las páginas a diferentes entornos. \cite{refcss}\\\\
+			Es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web.
 			
 			
 			\paragraph {JavaScript \\}
@@ -1607,9 +1611,23 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Titulo de la Iteracion 3} % Explicar cómo se limpió la base de datos
+\section{Modelo para Neural Network} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
-		\subsection{Subtema} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
+		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		\subsubsection{BERT}
+		Como ha sido expuesto con anterioridad BERT (Bidirectional Encoder Representations from Transformers) el cual se usarás para clasificar oraciones, se puede entender de forma más sencilla de la siguiente manera:
+		\begin{itemize}
+			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
+			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
+		\end{itemize}
+	
+		\subsubsection{Pytorch}
+		\subsubsection{Markovify}
+		
+		\subsection*{Integración de Bert y Pytorch}
+		En el proyecto haremos uso de la integración de Pytorch con Bert para la clasificación del texto suministrado por este último debido a lo rápido y flexible que es, y que opera redes neuronales recursivas para la generación y clasificación de texto para lo que lo ocupamos.\\
+		
 		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
 		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
 		\subsection{Resultados} % Explicar los Resultados
@@ -1623,9 +1641,13 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-\section{Titulo de la Iteracion 4} % Explicar cómo se limpió la base de datos
+\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
-		\subsection{Subtema} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		\subsection{Herramientas usadas para la generación del modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+			\subsubsection*{Amazon Sagemaker}
+			Es un servicio completamente administrado que brinda a todos los científicos de datos y desarrolladores la capacidad de crear, entrenar e implementar modelos de aprendizaje automático de forma rápida. SageMaker elimina las tareas arduas de cada paso del proceso de aprendizaje automático para que sea más fácil crear modelos de alta calidad.\\
+			
+			Amazon SageMaker Clarify ayuda a mejorar la transparencia del modelo mediante la detección de tendencias estadísticas en la totalidad del flujo de trabajo de aprendizaje automático. SageMaker Clarify revisa si hay desequilibrios durante la preparación de los datos, después del entrenamiento y de forma continua con el paso del tiempo. Además, incluye herramientas para explicar los modelos de aprendizaje automático y sus predicciones.
 		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
 		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
 		\subsection{Resultados} % Explicar los Resultados
