@@ -44,6 +44,8 @@
 %%PARA IMÁGENES EN LÍNEA
 %\usepackage[english]{babel}
 
+
+
 %%Acrónimos
 \usepackage[acronym]{glossaries}
 
@@ -54,51 +56,63 @@
 \makeglossaries
 \newglossaryentry{Convolucional}
 {
-    name=convolucional,
+	name={Convolucional},
+	text={convolucional},
     description={Es un operador matemático el cual transforma dos funciones en una tercera función.\cite{refRAE}}
 }
 \newglossaryentry{Recurrente}{
-    name=recurrente,
+	name={Recurrente},
+	text={recurrente},
     description={Algo que vuelve a ocurrir o a aparecer después de un intervalo.\cite{refRAE}}
 }
 \newglossaryentry{Reconocimiento}{
-    name=reconocimiento,
+	name={Reconocimiento},
+	text={reconocimiento},
     description={Examinar algo o a alguien para así poder conocer su identidad, estado, naturaleza y circunstancias.  Distinguir o identificar a una persona o una cosa entre varas por una serie de características.\cite{refOxfordLex}}
 }
 \newglossaryentry{Aprende}{
-    name=aprende,
+	name={Aprende},
+	text={aprende},
     description={Adquirir el conocimiento de algo por medio del estudio, análisis o de la experiencia.\cite{refRAE}}
 }
 \newglossaryentry{Sistema}{
-    name=sistema,
+	name={Sistema},
+	text={sistema},
     description={Conjunto de elementos con relaciones de interacción e interdependencia las cuales le confieren entidad propia al formar un todo unificado.\cite{refSistema}}
 }
 \newglossaryentry{Estado}{
-    name=estado,
+	name={Estado},
+	text={estado},
     description={Situación en que se encuentra alguien o algo, y en especial cada uno de sus sucesivos modos de ser o estar.\cite{refRAE}}
 }
 \newglossaryentry{Armonia}{
-    name=armonía,
+	name={Armonia},
+	text={armonia},
     description={Unión y combinación de sonidos simultáneos y diferentes, pero acordes.\cite{refRAE}}
 }
 \newglossaryentry{Melodia}{
-    name=melodía,
+	name={Melodia},
+	text={melodia},
     description={Es una sucesión lineal ordenada y coherente de sonidos musicales los cuales forman una unidad estructurada con un sentido musical, independiente del acompañamiento. \\Sucesión de sonidos que por su manera de combinarse resulta agradable de oír.\cite{refOxfordLex}}
 }
 \newglossaryentry{Estrofa}{
-    name=estrofa,
+	name={Estrofa},
+	text={estrofa},
     description={Conjunto de versos que generalmente se ajustan a una medida y a un ritmo determinado y constante.\cite{refRAE}}
 }
 \newglossaryentry{Acordes}{
-    name=acordes,
+	name={Acordes},
+	text={acordes},
     description={Conjunto de notas musicales sonando al mismo tiempo.\cite{refRAE}}
 }
 \newglossaryentry{Estocastico}{
-    name=estocástico,
+	name={Estocástico},
+	text={estocastico},
     description={Que está sometido al azar y que es un objeto de análisis estadístico.\cite{refRAE}}
 }
 \newglossaryentry{Maquinas de Estados Finitos}{
-    name=máquinas de estados finitos,
+	name={Máquinas de Estados Finitos},
+	text={máquinas de estados finitos},
     description={Conocidas también como Finite State Machines por su traducción en inglés, nos sirven para realizar procesos bien definidos en un tiempo discreto. Reciben una entrada, realizan un proceso y nos entregan una salida.\cite{refMaquinasFinitas}}
 }
 
@@ -562,7 +576,7 @@ natural y redes neuronales}\\
 %        	\subsection{Tipos de Redes Neuronales}
 %        	    Los diferentes tipos de redes neuronales usan diferentes principios para determinar sus reglas. Cada uno de los tipos de redes neuronales tienen sus propias debilidades y fortalezas, a continuación, describiremos algunas de las más utilizadas y sus aplicaciones.
 %        	    \subsubsection{Feedforward Neural Network – Artificial Neuron}
-%				Una de las redes neuronales más simples, donde la información pasa a través de diferentes nodos de entrada, hasta alcanzar los nodos de salida. En otras palabras, la información solo fluye en una sola dirección, generalmente se hace uso de esta red para tecnologías que requieran \Gls{Reconocimiento} de patrones o clasificación de objetos.\cite{refTiposRedesNeu3}\par
+%				Una de las redes neuronales más simples, donde la información pasa a través de diferentes nodos de entrada, hasta alcanzar los nodos de salida. En otras palabras, la información solo fluye en una sola dirección, generalmente se hace uso de esta red para tecnologías que requieran \gls{Reconocimiento} de patrones o clasificación de objetos.\cite{refTiposRedesNeu3}\par
 %				\begin{figure}[H]
 %					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Feedforward.png}
 %					\centering 
@@ -576,15 +590,15 @@ natural y redes neuronales}\\
 %					\caption{Diagrama Red Neuronal Radial Basis Function}
 %				\end{figure}
 %			\subsubsection{Multilayer Perception}
-%				Esta red cuenta con tres o más capas, las cuales están completamente conectadas, ya que cada uno de los nodos de cada capa se encuentra conectado con todos los nodos de la capa siguiente. Esta red es usada para clasificar información que no pueda ser separada de forma lineal como lo son el \Gls{Reconocimiento} de voz o las traducciones automáticas.\cite{refTiposRedesNeu2}\par
+%				Esta red cuenta con tres o más capas, las cuales están completamente conectadas, ya que cada uno de los nodos de cada capa se encuentra conectado con todos los nodos de la capa siguiente. Esta red es usada para clasificar información que no pueda ser separada de forma lineal como lo son el \gls{Reconocimiento} de voz o las traducciones automáticas.\cite{refTiposRedesNeu2}\par
 %				\begin{figure}[H]
 %					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Multilayer.png}
 %					\centering 
 %					\caption{Diagrama Red Neuronal Multilayer Perception}
 %				\end{figure}
 %				\subsubsection{Convolutional Neural Network}
-%				Es una variación de la Multilayer Perception. Contiene una o más capas convolucionales, las cuales pueden estar completamente interconectadas o agrupadas. Antes de pasar el resultado a la siguiente capa, la capa \Gls{Convolucional} hace uso de una operación convolucional en la entrada. Como resultado de esta operación convolucional la red puede ser más profunda, pero con menos parámetros.\par
-%				Gracias a esto las redes neuronales convolucionales han demostrado buenos resultados en el \Gls{Reconocimiento} de imágenes y video, procesamiento de lenguaje natural, así como para realizar recomendaciones.\cite{refTiposRedesNeu1}\par
+%				Es una variación de la Multilayer Perception. Contiene una o más capas convolucionales, las cuales pueden estar completamente interconectadas o agrupadas. Antes de pasar el resultado a la siguiente capa, la capa \gls{Convolucional} hace uso de una operación convolucional en la entrada. Como resultado de esta operación convolucional la red puede ser más profunda, pero con menos parámetros.\par
+%				Gracias a esto las redes neuronales convolucionales han demostrado buenos resultados en el \gls{Reconocimiento} de imágenes y video, procesamiento de lenguaje natural, así como para realizar recomendaciones.\cite{refTiposRedesNeu1}\par
 %				\begin{figure}[H]
 %					\includegraphics[width=12cm]{./imagenes/MarcoTeorico/RedesN/Convolutional.png}
 %					\centering 
@@ -614,8 +628,8 @@ natural y redes neuronales}\\
 					\item \textbf{Aprendizaje supervisado: }el conjunto de entrenamiento contiene entradas y salidas deseadas. De esta manera, la red puede verificar su salida calculada con la salida deseada y tomar las acciones pertinentes para reformular su cálculo.
 				\end{itemize}
 				\subsection{Recurrent Neural Network – Long Short Term Memory}
-				Una red neuronal \Gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\\\\
-				La primera capa esta formada de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo comenzará a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \Gls{Sistema} \Gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\\\\
+				Una red neuronal \gls{Recurrente} es un tipo de red neuronal artificial donde la salida de alguna capa en particular es salvada y sirve para retroalimentar la entrada de esta capa, lo cual ayuda a predecir futuras salidas de esta.\\\\
+				La primera capa esta formada de la misma manera que la Feedforward Neural Network, es decir, solo pasa la información que entra a la siguiente capa inmediata, posteriormente la siguiente capa con el paso del tiempo comenzará a retroalimentarse, pero manteniendo la propagación frontal. Haciendo uso de esta retroalimentación la capa en futuras operaciones puede realizar predicciones, si estas predicciones no son los resultados esperados, el \gls{Sistema} \gls{Aprende} y trabaja para corregir sus futuras predicciones.\cite{refTiposRedesNeu1}\\\\
 				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\\\\
 				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
 				\newpage
@@ -767,6 +781,7 @@ natural y redes neuronales}\\
 		Una base de datos generalmente es manejada por un \acrfull{dbms}. En conjunto, los datos y el \acrshort{dbms}, junto con las aplicaciones asociadas a ellos, se les conoce como un sistema de base de datos.\cite{refQueEsBD}\par
 			\subsection{Base de datos NoSQL o no relacionales}
 			Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo \acrshort{json}.\par
+			\begin{comment}
 %			\subsection{Tipos de bases de datos}
 %				\subsubsection{Bases de datos estáticas}
 %				Estas son de sólo lectura, utilizadas principalmente para almacenar datos históricos los cuales posteriormente se pueden utilizar para estudiar el comportamiento de un conjunto datos a través del tiempo, realizar proyecciones o tomar decisiones.\par
@@ -780,7 +795,8 @@ natural y redes neuronales}\\
 %				\subsubsection{Base de datos NoSQL o no relacionales}
 %				Estas bases permiten que los datos no estructurados y/o semiestructurados se almacenen y manipulen, a diferencia de la base de datos relacional donde se define como deben de componerse todos los datos insertados en esta. Generalmente los registros de este tipo de base de datos suelen almacenarse como un documento de tipo JSON.\par
 %				\subsubsection{Base de datos orientada a objetos}
-%				En esta se tratan de almacenar los objetos completos (\Gls{Estado} y comportamiento), incorpora todos los conceptos del paradigma orientado a objetos (encapsulamiento, herencia, polimorfismo)\par
+%				En esta se tratan de almacenar los objetos completos (\gls{Estado} y comportamiento), incorpora todos los conceptos del paradigma orientado a objetos (encapsulamiento, herencia, polimorfismo)\par
+\end{comment}
 		  \newpage
 	    \section{Canción}
 	    Una canción es una composición literaria, generalmente en verso, la cual puede ser acompañada con música para poder ser cantada.\cite{refEstructuraCancion1}\par
@@ -788,17 +804,17 @@ natural y redes neuronales}\\
 			Los elementos que conforman una canción son los siguientes:
 			\begin{itemize}
 				\item \textbf{Introducción}\par
-				Generalmente es una parte única la cual aparece al inicio de una canción, acompañada de una \Gls{Armonia} o \Gls{Melodia} compuesta solo para este inicio. El objetivo principal de la introducción es captar la atención y generar un ambiente.\cite{refEstructuraCancion2}\par
+				Generalmente es una parte única la cual aparece al inicio de una canción, acompañada de una \gls{Armonia} o \gls{Melodia} compuesta solo para este inicio. El objetivo principal de la introducción es captar la atención y generar un ambiente.\cite{refEstructuraCancion2}\par
 				\item \textbf{Verso}\par
-				Es la parte encargada de comenzar a desarrollar la idea a transmitir, trata de contarnos el tema de la canción, y ya cuenta con una \Gls{Armonia}  bien establecida.\par
+				Es la parte encargada de comenzar a desarrollar la idea a transmitir, trata de contarnos el tema de la canción, y ya cuenta con una \gls{Armonia}  bien establecida.\par
 				\item \textbf{Pre-estribillo}\par
 				Es un arreglo que permite realizar una transición, su función principal es conectar el verso con el estribillo. También ayuda a evitar que el estribillo se estanque en la monotonía.\par
 				\item \textbf{Estribillo}\par
-				Es una \Gls{Estrofa} la cual se repite varias veces dentro de una composición. La función principal del estribillo es destacar la idea de la canción tanto en la letra como en lo musical. El estribillo es considerado la parte más importante de la canción y en algunas ocasiones es repetido al inicio y al final de la misma.\par
+				Es una \gls{Estrofa} la cual se repite varias veces dentro de una composición. La función principal del estribillo es destacar la idea de la canción tanto en la letra como en lo musical. El estribillo es considerado la parte más importante de la canción y en algunas ocasiones es repetido al inicio y al final de la misma.\par
 				\item \textbf{Puente}\par
-				Es un interludio la cual conecta dos partes de una canción, permitiendo construir una \Gls{Armonia}  entre ellas, suele ser usado para llevar a la canción a su clímax, para prepararlo para el desarrollo final de la canción.\par
+				Es un interludio la cual conecta dos partes de una canción, permitiendo construir una \gls{Armonia}  entre ellas, suele ser usado para llevar a la canción a su clímax, para prepararlo para el desarrollo final de la canción.\par
 				\item \textbf{Cierre}\par
-				Hay distintas formas de terminar o concluir una canción, puede ser un quiebre brusco generado por un silencio repentino o por una sucesión de \Gls{Acordes}. Pero la forma más común es haciendo uso de la repetición de un estribillo.\par
+				Hay distintas formas de terminar o concluir una canción, puede ser un quiebre brusco generado por un silencio repentino o por una sucesión de \gls{Acordes}. Pero la forma más común es haciendo uso de la repetición de un estribillo.\par
 			\end{itemize}
 			
 			\subsection{Estructura de una canción}
@@ -822,12 +838,12 @@ natural y redes neuronales}\\
 			\end{itemize}
 		\newpage
 		\section{Cadenas de Markov}
-	    Las cadenas de Markov son un \Gls{Sistema} matemático el cual experimenta con las transiciones de un \Gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que define a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\\\\
-		Son procesos \Gls{Estocastico}s, con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\\\\
+	    Las cadenas de Markov son un \gls{Sistema} matemático el cual experimenta con las transiciones de un \gls{Estado} a otro de acuerdo con ciertas reglas probabilísticas. La característica que define a una cadena de Markov es que no importa cómo llegó el proceso a su estado actual, y sus posibles estados futuros son fijos. En otras palabras, la probabilidad de pasar a cualquier otro estado depende únicamente del estado actual y del tiempo transcurrido. El espacio de estados o conjunto de todos los posibles estados, pueden ser cualquier cosa: letras, números, puntuaciones de un partido, acciones, etc.\\\\
+		Son procesos \gls{Estocastico}s, con la diferencia de que estos deben ser “sin memoria”, es decir, la probabilidad de las acciones futuras no depende ni se ve afectada de los pasos que la condujeron al estado actual. A esto se le denomina una propiedad de Markov.\\\\
 		En la teoría de probabilidad, el ejemplo más inmediato es el de una cadena de Markov homogénea en el tiempo, en la que la probabilidad de que ocurra cualquier transición de estado es independiente del tiempo.\\\\
 		En el lenguaje de probabilidad condicional y variables aleatorias, una cadena de Markov es una secuencia X0, X1, X2, … de variables aleatorias que satisfacen la regla de independencia condicional.
 		En otras palabras, el conocimiento del estado anterior es todo lo que se necesita para determinar la distribución de probabilidad del estado actual. Esta definición es más amplia que la explorada anteriormente, ya que permite probabilidades de transición no estacionarias y, por lo tanto, cadenas de Markov no homogéneas en el tiempo; es decir, a medida que pasa el tiempo los pasos aumentan y la probabilidad de pasar de un estado a otro puede cambiar. \cite{refMarkov}\\\\
-		Las cadenas de Markov pueden ser modeladas mediante \Gls{Maquinas de Estados Finitos}.\par
+		Las cadenas de Markov pueden ser modeladas mediante \gls{Maquinas de Estados Finitos}.\par
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Markov/CMarkov.png}
 			\centering 
@@ -904,7 +920,7 @@ natural y redes neuronales}\\
 %		\end{itemize}
 		
 %	    \textbf{Seguridad en internet}
-%	    En la actualidad, el incremento constante de internet ha impactado directamente en la seguridad de la información que se maneja cotidianamente y por la mayoría de usuarios. Existen infinidad de sitios donde es aplicada la seguridad, ya que sin ésta, se verían afectados todos los usuarios en  sus cuentas, pudiendo verse afectados desde un posible \Gls{Palabra1} (Robo de identidad), hasta la perdida de dinero real dado que la base de algunas de éstas paginas son E-Commerce, estas paginas implican el manejo de tarjetas de crédito, paypal, etc.\\
+%	    En la actualidad, el incremento constante de internet ha impactado directamente en la seguridad de la información que se maneja cotidianamente y por la mayoría de usuarios. Existen infinidad de sitios donde es aplicada la seguridad, ya que sin ésta, se verían afectados todos los usuarios en  sus cuentas, pudiendo verse afectados desde un posible \gls{Palabra1} (Robo de identidad), hasta la perdida de dinero real dado que la base de algunas de éstas paginas son E-Commerce, estas paginas implican el manejo de tarjetas de crédito, paypal, etc.\\
 		
 %		Uno de los puntos más críticos de la seguridad en Internet son las herramientas que interactúan de forma directa con los usuarios. Es común escuchar sobre fallas en los sistemas de protección de los servidores más frecuentemente utilizados, por ejemplo Apache, NGINX, IIS, etc. O en los lenguajes de programación en que son escritas las aplicaciones \cite{refSeguridadWeb}. Sin embargo, la vulnerabilidad más grande dentro de un sistema, son los ataques directos a los usuarios finales durante la autentificación.\\
 	    
@@ -1563,11 +1579,23 @@ natural y redes neuronales}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Arquitectura del sistema.}
 	        \subsection{Descripci\'on de la arquitectura del sistema.}
-	        -pagina
-	        -modelado de la red
-	        -base de datos
+	        El sistema se compone de tres bloques los cuales se comunicar\'an v\'ia red:
+	        \begin{enumerate}
+	        	\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
+	        	\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
+	        	\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, contaremos con una tabla que contenga como principales campos:
+	        	\begin{itemize}
+	        		\item Artista
+	        		\item Género
+	        		\item Nombre de la Canción
+	        		\item Letra
+	        		\item Idioma
+	        	\end{itemize}
+        	Dicha base de datos se almacenará en un sistema especializado que se conecte a la nube para poder trabajar y almacenar estos datos sin mayor problema.
+	        \end{enumerate}
+
 	        \subsection{Diseño de la aplicación web}
-	        A continuación, se muestra cómo se pretende que se vea la aplicación web una vez terminada y funcionando.	        
+	        En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
 	        \begin{figure}[H] \caption{Aplicación web, pagina inicial.}
 	        	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
 	        	\centering 
@@ -1577,91 +1605,89 @@ natural y redes neuronales}\\
 	        	\centering 
 	        \end{figure}        
 	        \subsection{Requerimientos funcionales y no funcionales}
-	        A continuación, se presentan algunos de los requerimientos funcionales mas importantes de nuestro proyecto:
+	        A continuación, se presentan los requerimientos funcionales mas importantes de nuestro proyecto:
 	        \begin{itemize}
-	        	\item Permitirá que cualquier usuario que acceda a la página, genere su letra musical, sin ninguna restricción.
-	        	\item Permitirá que cualquier usuario puede descargar la letra generada, a través de un archivo de texto.
-	        	\item Permitirá que el usuario puede generar otra letra musical distinta, usando los mismos parámetros que previamente había utilizado.
-	        	\item La generación de las letras musicales, solo se generarán si se cumplen con todos los valores pedidos al usuario, los cuales serán (una palabra y un porcentaje que defina la cantidad de rimas dentro de la letra)
+	        	\item Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
+	        	\item Permitirá al usuario descargar la letra generada como archivo de texto.
+	        	\item Permitirá al usuario generar cuantas veces quiera una letra musical.
+	        	\item Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
 	        \end{itemize}
-        	Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto 
+        	Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto
 	        \begin{itemize}
-		        \item La página debe ser capaz de procesar mas de 10 transacciones a la vez.
-		        \item La funcionalidad de la generación de letras musicales debe de responder al usuario en menos de 10 segundos.
-		        \item La pagina debe de ser capaz de operar adecuadamente con hasta 50 usuarios a la vez.
-		        \item El tiempo de aprendizaje del sistema por un usuario deberá de ser menor a 5 minutos.
-		        \item El pagina debe proporcionar mensajes de de error que sean informativos y que ayuden al usuario.
+		        \item El servicio web debe ser capaz de procesar más de diez solicitudes simultaneas.
+		        \item La página debe ser capaz de operar adecuadamente con hasta cincuenta usuarios simultáneamente.
+		        \item El tiempo que le toma a un usuario promedio en el aprendizaje del sistema de la interfaz deberá de ser menor a cinco minutos.
+		        \item La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
 		        \item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
 		    \end{itemize}
 	        \subsection{Aspectos Econ\'omicos}
-	        %Aqui va lo que vienen siendo las licencias, descripción, software a utilizar, etc.
+	        % Aqui van las licencias, descripción, software a utilizar, etc.
 	        \subsection{Aspectos Legales}
 	        \subsubsection{Copyright}
-	        Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las no publicadas o inéditas.\cite{refCopyright}\\\\
+	        Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
 	        Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.\\\\
 	        \subsubsection{Originalidad}
 	        Los derechos de autor protegen la forma en que se expresan las ideas. Esta expresión es la forma única en la que las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
 	        Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que es protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
-	         
-\section{Diagrama de casos de uso general.}
-% Cada caso de uso llevará un Formato tipo:
-% \section{Nombre Caso de uso.} % Nombre de caso de uso
-% \section{Descripción de Caso de Uso.} % Nombre de caso de uso
-% \subsection{Estudio de requerimientos.} % Describir a detalle el caso de uso, 5-10 renglones
-% \subsubsection{Requerimientos Funcionales.} % Todos los Requerimientos funcionales para el caso de uso
-% \subsubsection{Requerimientos no Funcionales.} % Todos los Requerimientos funcionales para el caso de uso
-% \subsection{Reglas del negocio.} % Martin y Odell (1998) y Russel (1995) proponen que una regla de negocio es un restricción que opera sobre el sistema para este caso de uso
 
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
 %   				Iteración 1 					  %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-\chapter{\textcolor{azulescom}{Iteración 1.}}
-\section{Descripción.}
-\section{Base de Datos} % Explicar como se sacó la Base de Datos
-\section{Género Musical} % Explicar por qué se sacó de este género musical
-\section{Resultados}
+\chapter{\textcolor{azulescom}{Diseño}}
+\section{\textcolor{azulescom}{Iteración 1}}
+\subsection{Descripción.}
+
+\subsection{Base de Datos} % Explicar como se sacó la Base de Datos
+\subsection{Género Musical} % Explicar por qué se sacó de este género musical
+\subsection{Resultados}
+
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
 %   				Iteración 2 				   %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-\chapter{\textcolor{azulescom}{Iteración 2.}}
-\section{Descripción.}
-\section{Limpieza} % Explicar cómo se limpió la base de datos
-\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\section{Resultados} % Explicar los Resultados
-% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+\section{\textcolor{azulescom}{Iteración 2}}
+\subsection{Descripción.}
+\subsection{Limpieza} % Explicar cómo se limpió la base de datos
+\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\subsection{Resultados} % Explicar los Resultados
+
+
 \newpage
+
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
 %   				Iteración 3				       %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-\chapter{\textcolor{azulescom}{Iteración 3.}}
-\section{Descripción.}
-\section{Limpieza} % Explicar cómo se limpió la base de datos
-\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\section{Resultados} % Explicar los Resultados
-% Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
+\section{\textcolor{azulescom}{Iteración 3}}
+\subsection{Descripción.}
+\subsection{Limpieza} % Explicar cómo se limpió la base de datos
+\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\subsection{Resultados} % Explicar los Resultados
+
 \newpage
+
 %   %   %   %   %   %   %   %   %	%	%
 %		       											%
 %   				Iteración 4 				   %
 %                               				  		%
 %   %   %   %   %   %   %   %   %	%   %     
-\chapter{\textcolor{azulescom}{Iteración 4.}}
-\section{Descripción.}
-\section{Limpieza} % Explicar cómo se limpió la base de datos
-\section{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-\section{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-\section{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-\section{Resultados} % Explicar los Resultados
+\section{\textcolor{azulescom}{Iteración 4}}
+\subsection{Descripción.}
+\subsection{Limpieza} % Explicar cómo se limpió la base de datos
+\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+\subsection{Resultados} % Explicar los Resultados
+
+
 % Para agregar una cita en el documento se usa \cite{refKey}, por automático los ordena conforme se van agregando
 \newpage
 % Rename Appendice to Anexos
@@ -1740,7 +1766,7 @@ natural y redes neuronales}\\
 	\bibitem{refAprendizajeRedes}  		
 	Rubik's Code  (2018, febrero), How do Artificial Neural Networks learn?, [En línea]. Disponible: https://rubikscode.net/2018/01/15/how-artificial-neural-networks-learn/ [Último acceso: 7 de abril del 2021].	
 	\bibitem{refTiposRedesNeu1}  		
-	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Network\_Zoo [Último acceso: 20 de noviembre del 2020].
+	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Net\\work\_Zoo [Último acceso: 20 de noviembre del 2020].
 	\bibitem{refTiposRedesNeu2}  		
 	A. Mehta (2019, enero 25), A Comprehensive Guide to Types of Neural Networks, [En línea]. Disponible: https://www.digitalvidya.com/blog/types-of-neural-networks/ [Último acceso: 15 de noviembre del 2020].
 	\bibitem{refTiposRedesNeu3}  		
@@ -1787,7 +1813,7 @@ natural y redes neuronales}\\
 	\bibitem{refEstructuraCancion1}  		
 	Escribir Canciones (2008), Estructura y elementos de una canción, [En línea]. Disponible: https://dle.rae.es [Último acceso: 2 de diciembre del 2020].
 	\bibitem{refEstructuraCancion2}  		
-	Swing this Music (2008), ¿QUÉ SECCIONES PUEDE TENER UNA CANCIÓN?española, [En línea]. Disponible: https://sites.google.com/site/swingthismusiccast/interpretacio/estructura-cancion/secciones-de-una-cancion [Último acceso: 2 de diciembre del 2020].
+	Swing this Music (2008), ¿QUÉ SECCIONES PUEDE TENER UNA CANCIÓN?española, [En línea]. Disponible: https://sites.google.com/site/swingthismusiccast/interpretacio/estruct\\ura-cancion/secciones-de-una-cancion [Último acceso: 2 de diciembre del 2020].
 	
 	% Markov
 	\bibitem{refMarkov}  		
@@ -1795,7 +1821,7 @@ natural y redes neuronales}\\
 
 	% Flask
 	\bibitem{refFlask}  		
-	Flask (2019, julio 04), Flask´s Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
+	Flask (2019, julio 04), Flask Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
 	
 	%Herramientas a usar Software
 	
@@ -1848,10 +1874,12 @@ natural y redes neuronales}\\
 	% Aspectos Legales	
 	\bibitem{refCopyright}  		
 	Copyright.gov (2021), Copyright in General, [En línea]. Disponible: https://www.copyright.gov/help/faq/faq-general.html\#what [Último acceso: 04 de mayo del 2021].
+	
 	\bibitem{refOriginalidadWipo}  		
-	World Intellectual Property Organization (2007), THE ARTS AND COPYRIGHT, [En línea]. Disponible: https://www.wipo.int/edocs/pubdocs/en/copyright/935/wipo\_pub\_935.pdf [Último acceso: 04 de mayo del 2021].
+	World Intellectual Property Organization (2007), THE ARTS AND COPYRIGHT, [En línea]. Disponible: https://www.wipo.int/edocs/pubdocs/en/copyright/935/wipo\_pub\_935\\.pdf [Último acceso: 04 de mayo del 2021].
+	
 	\bibitem{refOriginalidadLFDA}  		
-	CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN (2014, julio 14), LEY FEDERAL DEL DERECHO DE AUTOR, [En línea]. Disponible: https://www.ucol.mx/content/cms/13/file/federal/LEY\_FED\_DEL\_DERECHO\_DEL\_AUTOR.pdf [Último acceso: 05 de mayo del 2021].
+	CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN (2014, julio 14), LEY FEDERAL DEL DERECHO DE AUTOR, [En línea]. Disponible: https://www.ucol.mx/content/cms/13/file/federal/\\LEY\_FED\_DEL\_DERECHO\_DEL\_AUTOR.pdf [Último acceso: 05 de mayo del 2021].
 	
 	%-------Referencias Herramientas a usar---------%
 	\bibitem{refQuesPython}  
