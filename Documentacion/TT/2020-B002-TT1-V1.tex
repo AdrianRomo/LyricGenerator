@@ -1565,42 +1565,36 @@ natural y redes neuronales}\\
 		\end{itemize}
 		\subsection{Aspectos Econ\'omicos}
 		% Aqui van las licencias, descripción, software a utilizar, etc.
-		Las herramientas que usaremos en el trabajo terminal y las cuales validarán la viabilidad del proyecto se presentan a continuación:
+		Las herramientas que usaremos en el trabajo terminal y las cuales validarán la viabilidad del proyecto se presentan a continuación:\\
 		
-		\begin{table}[h!]
-			\centering
-			\begin{tabular}{|c|c|c|c|}
-				\hline    			
-				\rowcolor{guindapoli}
-				\multicolumn{4}{|c|}{\textbf{\textcolor{white}{Herramientas de Software}}}\\
-				\hline
-				Software & Licencias & Descripción & Costo \\
-				\hline
-				OpenSSL &  &  & \\ 
-				\hline
-				MongoDB & & & \\ 
-				\hline
-				Flask & & & \\
-				\hline
-				Gunicorn & & & \\
-				\hline
-				BERT & & & \\
-				\hline
-				GPT & & & \\ 
-				\hline
-				Amazon EC2 & & & \\ 
-				\hline
-				Apache & & & \\ 
-				\hline
-				Amazon CLI & & & \\ 
-				\hline
-				Amazon SageMaker & & & \\ 
-				\hline
-				Amazon S3 & & & \\ 
-				\hline
-			\end{tabular}
-			\caption[Horas de trabajo]{Herramientas a utilizar en el presente trabajo terminal}
-		\end{table}
+		Herramientas OpenSource a utilizar en el presente trabajo terminal
+		
+		\begin{itemize}
+			\item Datamuse API \cite{refDatamuseLicense}
+			\item MongoDB - SSPL* \cite{refMongoDBLicense}
+			\item BERT - Apache 2.0 \cite{refBERTLicense}
+			\item Apache - Apache 2.0 \cite{refApacheLicense}
+			\item React - MIT \cite{refReactLicense}
+			\item Python - PSFL \cite{refPythonLicense}
+			\item Amazon - Elastic 2.0 y SSPL \cite{refAmazonLicense}
+		\end{itemize}
+		
+		*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licenia OpenSource "no genuina".\\
+		
+		Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo tal:\\
+		
+		Cuota gratuita primeros 2 meses:
+		\begin{itemize}
+			\item Instancia de bloc de notas: 250 horas
+			\item Entrenamiento: 50 horas 
+		\end{itemize}
+	
+		Cuotas:
+		\begin{itemize}
+			\item Instancia de bloc de notas  (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora
+			\item Entrenamiento (4 CPU's virtuales y 16Gb de memoria): 0.23 centavos de dólar/hora
+			\item Procesamiento (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora
+		\end{itemize}
 		
 		\subsection{Aspectos Legales}
 			\begin{itemize}
@@ -1915,6 +1909,27 @@ En este apartado se mostrará un primer boceto de la aplicación web una vez ter
 	
 	\bibitem{refmysql}
 	Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
+	
+	\bibitem{refDatamuseLicense}
+	https://www.onelook.com/about.shtml
+	
+	\bibitem{refMongoDBLicense}
+	https://www.mongodb.com/community/licensing
+	
+	\bibitem{refBERTLicense}
+	https://github.com/google-research/bert/blob/master/LICENSE
+	
+	\bibitem{refApacheLicense}
+	https://httpd.apache.org/docs/current/license.html
+	
+	\bibitem{refReactLicense}
+	https://github.com/facebook/react/blob/master/LICENSE
+	
+	\bibitem{refPythonLicense}	
+	https://docs.python.org/3/license.html
+	
+	\bibitem{refAmazonLicense}
+	https://www.elastic.co/es/licensing/elastic-license
 	
 \end{thebibliography}	
 \end{document}
