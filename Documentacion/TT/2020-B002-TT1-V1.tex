@@ -1664,28 +1664,55 @@ natural y redes neuronales}\\
 			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
 		\end{itemize}
 	
-		\subsubsection{Pytorch}
-		\subsubsection{Markovify}
+		\subsubsection{Transformer}
 		
 		\subsection*{Integración de Bert y Pytorch}
 		En el proyecto haremos uso de la integración de Pytorch con Bert para la clasificación del texto suministrado por este último debido a lo rápido y flexible que es, y que opera redes neuronales recursivas para la generación y clasificación de texto para lo que lo ocupamos.\\
 		
 		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
 		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Modelo} % Explicar como se obtuvo en código la base de datos limpia
+		
+		Para el diseño del modelo se tiene contemplado que una vez se tenga la salida del transformer se pase por una capa de clasificación, de manera general y última se usará la función "Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario, cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
+		\\\\
+		En última instancia, y de acuerdo a la probabilidad de rima dada por el usuario en la interfaz web, la última palabra puede o no contener una rima que haga juego con alguna de las palabras de la oración previa del verso.
+		
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.jpg}
+			\centering 
+			\caption{Diagrama de diseño del modelo}
+		\end{figure}
+		
 		\subsection{Resultados} % Explicar los Resultados
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                       																																		  %
-%                                                      																																	  		  %
-%              																	 Iteración 4  																				  			 %
-%                                                      																																			  %
-%                                                      																																			  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
-\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
-		\subsection{Descripción}
-		\subsection{Herramientas usadas para la generación del modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		
+		\newpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%                                                       																																		  %
+	%                                                      																																	  		  %
+	%              																	 Iteración 4  																				  			 %
+	%                                                      																																			  %
+	%                                                      																																			  %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+	\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
+	\subsection{Descripción}
+	
+	En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que .
+	
+	
+	\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
+	\centering 
+	\caption{Diagrama de interacción general del entrenamiento con SageMaker}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
+	\centering 
+	\caption{Diagrama interacción del administrador con \acrshort{aws}}
+	\end{figure}
+	
+	El usuario 
+	\subsection{Herramientas usadas para la generación del modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
 			\subsubsection*{Amazon Sagemaker}
 			Es un servicio completamente administrado que brinda a todos los científicos de datos y desarrolladores la capacidad de crear, entrenar e implementar modelos de aprendizaje automático de forma rápida. SageMaker elimina las tareas arduas de cada paso del proceso de aprendizaje automático para que sea más fácil crear modelos de alta calidad.\\
 			
