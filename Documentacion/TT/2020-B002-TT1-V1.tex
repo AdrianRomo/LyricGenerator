@@ -1657,14 +1657,7 @@ natural y redes neuronales}\\
 			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
 			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
 		\end{itemize}
-	
-		\subsubsection{Transformer}
 		
-		\subsection*{Integración de Bert y Pytorch}
-		En el proyecto haremos uso de la integración de Pytorch con Bert para la clasificación del texto suministrado por este último debido a lo rápido y flexible que es, y que opera redes neuronales recursivas para la generación y clasificación de texto para lo que lo ocupamos.\\
-		
-		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
-		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
 		\subsection{Modelo} % Explicar como se obtuvo en código la base de datos limpia
 		
 		Para el diseño del modelo se tiene contemplado que una vez se tenga la salida del transformer se pase por una capa de clasificación, de manera general y última se usará la función "Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario, cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
@@ -1672,12 +1665,19 @@ natural y redes neuronales}\\
 		En última instancia, y de acuerdo a la probabilidad de rima dada por el usuario en la interfaz web, la última palabra puede o no contener una rima que haga juego con alguna de las palabras de la oración previa del verso.
 		
 		\begin{figure}[H]
-			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.jpg}
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_preoutput_model.jpg}
 			\centering 
 			\caption{Diagrama de diseño del modelo}
 		\end{figure}
 		
 		\subsection{Resultados} % Explicar los Resultados
+		
+		Habiendo hecho el análisis del modelo anterior podemos mostrar una versión ligeramente modificada que se puede usar en el proyecto, de forma tal que la última palabra [RIMA] esté dada por el porcentaje de coincidencia seleccionado por el usuario y que tiene como objetivo rimar con la última palabra de la penúltima oración previa: 
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.jpg}
+			\centering 
+			\caption{Diagrama de diseño del modelo}
+		\end{figure}
 		
 		\newpage
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1690,30 +1690,69 @@ natural y redes neuronales}\\
 	\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
 	\subsection{Descripción}
 	
-	En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que .
+	En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que se obtiene el resultado.
 	
+	\section*{Herramientas para generar el modelo}
+	
+	\subsection*{Amazon Sagemaker}
+	Es un servicio completamente administrado que brinda a todos los científicos de datos y desarrolladores la capacidad de crear, entrenar e implementar modelos de aprendizaje automático de forma rápida. SageMaker elimina las tareas arduas de cada paso del proceso de aprendizaje automático para que sea más fácil crear modelos de alta calidad.\\
+	
+	Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
+	\begin{itemize}
+		\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
+		\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
+	\end{itemize}
+	
+	A continuación se muestra el proceso seguido para el entrenamiento de ML:
 	
 	\begin{figure}[H]
-	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
-	\centering 
-	\caption{Diagrama de interacción general del entrenamiento con SageMaker}
+		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/machine_learning_process.jpg}
+		\centering 
+		\caption{Diagrama de diseño del modelo}
 	\end{figure}
+	
+	Dentro del apartado podemos asignar las siguientes actividades como parte de las iteraciones 1 y 2, las cuales se centran:
+	\begin{itemize}
+		\item Colección de datos
+		\item Integración de los datos
+		\item Preparación y limpieza de los datos
+	\end{itemize}
 	
 	\begin{figure}[H]
-	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
-	\centering 
-	\caption{Diagrama interacción del administrador con \acrshort{aws}}
+		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/ml_process_e1.jpg}
+		\centering 
+		\caption{Diagrama de diseño del modelo}
 	\end{figure}
 	
-	El usuario 
-	\subsection{Herramientas usadas para la generación del modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-			\subsubsection*{Amazon Sagemaker}
-			Es un servicio completamente administrado que brinda a todos los científicos de datos y desarrolladores la capacidad de crear, entrenar e implementar modelos de aprendizaje automático de forma rápida. SageMaker elimina las tareas arduas de cada paso del proceso de aprendizaje automático para que sea más fácil crear modelos de alta calidad.\\
-			
-			Amazon SageMaker Clarify ayuda a mejorar la transparencia del modelo mediante la detección de tendencias estadísticas en la totalidad del flujo de trabajo de aprendizaje automático. SageMaker Clarify revisa si hay desequilibrios durante la preparación de los datos, después del entrenamiento y de forma continua con el paso del tiempo. Además, incluye herramientas para explicar los modelos de aprendizaje automático y sus predicciones.
-		\subsection{Subtema} % Explicar la técnica que se usó para scrappear la base de datos
-		\subsection{Subtema} % Explicar como se obtuvo en código la base de datos limpia
-		\subsection{Resultados} % Explicar los Resultados
+	Habiendo visto el proceso de alimentación de datos para el ML podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
+		\centering 
+		\caption{Diagrama de interacción general del entrenamiento con SageMaker}
+	\end{figure}
+	
+	El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_localmode.jpg}
+		\centering 
+		\caption{Diagrama }
+	\end{figure}
+	
+	Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
+		\centering 
+		\caption{Diagrama interacción del administrador con AWS}
+	\end{figure}
+	
+	\section{Resultados}
+	El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
+	
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
+		\centering 
+		\caption{Diagrama del posible proceso a seguir para la generación del modelo}
+	\end{figure}
 
 \newpage
 
