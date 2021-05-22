@@ -3,8 +3,8 @@
 \glossaryentry{GPT?\glossentry{gpt}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{GCP?\glossentry{gcp}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{AWS?\glossentry{aws}|setentrycounter[]{page}\glsnumberformat}{5}
-\glossaryentry{WIP?\glossentry{wip}|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{WIP?\glossentry{wip}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{WIP?\glossentry{wip}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{WIP?\glossentry{wip}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{22}
 \glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{22}
@@ -68,7 +68,6 @@
 \glossaryentry{HTTP?\glossentry{http}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{VPS?\glossentry{vps}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{VPS?\glossentry{vps}|setentrycounter[]{page}\glsnumberformat}{35}
-\glossaryentry{HTTP?\glossentry{http}|setentrycounter[]{page}\glsnumberformat}{36}
 \glossaryentry{SSL?\glossentry{ssl}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{SSL?\glossentry{ssl}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{SSL?\glossentry{ssl}|setentrycounter[]{page}\glsnumberformat}{37}
@@ -147,8 +146,8 @@
 \glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{52}
 \glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{52}
 \glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}\glsnumberformat}{52}
-\glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}\glsnumberformat}{52}
-\glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{52}
+\glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}\glsnumberformat}{53}
+\glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}\glsnumberformat}{53}
 \glossaryentry{MLM?\glossentry{mlm}|setentrycounter[]{page}\glsnumberformat}{53}
 \glossaryentry{MLM?\glossentry{mlm}|setentrycounter[]{page}\glsnumberformat}{53}
 \glossaryentry{GPT?\glossentry{gpt}|setentrycounter[]{page}\glsnumberformat}{53}
@@ -181,4 +180,3 @@
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{55}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{55}
 \glossaryentry{HDD?\glossentry{hdd}|setentrycounter[]{page}\glsnumberformat}{56}
-\glossaryentry{AWS?\glossentry{aws}|setentrycounter[]{page}\glsnumberformat}{65}
