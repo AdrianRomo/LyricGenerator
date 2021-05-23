@@ -2,6 +2,7 @@
 
 import pandas as pd
 import re
+
 m_columns = ['ALink','SName', 'SLink', 'Lyric', 'Idiom']
 
 df = pd.read_csv('lyrics-data.csv', encoding='latin-1', usecols=m_columns)
