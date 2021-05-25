@@ -5,6 +5,7 @@
 \usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
 \usepackage{enumitem,kantlipsum}
 \usepackage{array}
+\usepackage{placeins}
 % Códigos y codificación para caracteres en español
 \usepackage{listings}
 \usepackage{color}
@@ -493,18 +494,17 @@ natural y redes neuronales}\\
     	\item DeepBeat.
     	\item Premium Lyrics.
     \end{itemize}
-\newpage
+	\newpage
 	En el cuadro 1 que se presenta a continuación, se muestran las características de aplicaciones web similares y comparándolas con nuestra propuesta:
-	
-	\begin{table}[hbt!]
-		\begin{tabular}{|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
+	\begin{table}[!htbp]
+		\begin{tabular}{|m{3.5cm}|m{6.5cm}|m{3.5cm}|}
 			\hline    			
 			\rowcolor{guindapoli}
-			\hfil {\textbf{\textcolor{white}{Software}}} & \hfil {\textbf{\textcolor{white}{Características}}} & \hfil {\textbf{\textcolor{white}{Precio en el mercado}}} \\
+			\hfil {\textbf{\textcolor{white}{Software}}} & \hfil {\textbf{\textcolor{white}{Características}}} & \hfil {\textbf{\textcolor{white}{Precio}}} \\
 			\hline
 			These Lyrics do not Exist & Aplicación web que genera letras completamente originales de varios temas, hace uso de IA para generar coros y versos originales; se puede escoger el tema principal de la letra, género musical e incluso el estado de ánimo al que iría dirigido. & Gratuito (Contiene Anuncios) \\
 			\hline
-			Boredhumans \- lyrics\_generator & Aplicación web en el que la IA fue entrenada con una base de datos con miles de letras para generar letras de canciones totalmente nuevas. La letra que crea es única y no una copia de alguna que exista actualmente, sin embargo, no permite customizar la letra. & \hfil Gratuito \\
+			Boredhumans lyrics\_generator & Aplicación web en el que la IA fue entrenada con una base de datos con miles de letras para generar letras de canciones totalmente nuevas. La letra que crea es única y no una copia de alguna que exista actualmente, sin embargo, no permite customizar la letra. & \hfil Gratuito \\
 			\hline
 			\hfil DeepBeat & Aplicación web que por medio de IA genera letras de música enfocada principalmente en el género rap. Si una línea no es del agrado se puede sustituir por alguna de las otras propuestas de las que ofrece. & \hfil Gratuito \\
 			\hline
@@ -514,9 +514,9 @@ natural y redes neuronales}\\
 			\hline
 		\end{tabular}
 		\caption[Resumen de productos similares]{Resumen de productos similares comparados con nuestra propuesta}
-	\end{table}
-
-\section{Objetivos}
+\end{table}
+\newpage
+	\section{Objetivos}
 	\subsection{Objetivo general}
 	Crear una herramienta de apoyo para estudiantes o aficionados interesados en este rubro que se les dificulte componer nuevas letras musicales de un solo género musical debido a la carencia de creatividad, la falta de conocimientos en la estructura del género o que no tengan inspiración suficiente para poder crear nuevas canciones, esto con el fin de impulsar la carrera de futuros artistas en la industria musical que no tengan los suficientes recursos para poder contratar servicios particulares de compositores.
 	
@@ -541,9 +541,9 @@ natural y redes neuronales}\\
 	    Para el desarrollo de este trabajo terminal se utilizará la metodología ágil Scrumban, que combina algunas partes de la metodología Scrum y Kanban, debido a que este proceso de gestión reduce la complejidad al momento de desarrollar un producto el cual tratará de satisfacer las necesidades de los clientes. Además, permite trabajar colaborativamente de manera eficiente, es decir, en equipo, para obtener el mejor resultado posible.\\\\
 	    Scrumban combina la estructura utilizada por Scrum, con los métodos basados en el flujo y visualización de Kanban. Es decir, que permite a los equipos trabajar de manera ágil usando la metodología Scrum y la simplicidad de Kanban sin tener que utilizar las actualizaciones de roles y es más sencillo de adoptar.\\\\
 	    En la siguiente tabla se pueden observar las principales diferencias entre las tres metodologías:
-	      	
-	    \begin{table}[hbt!]
-	    	\begin{tabular}{|p{3.75cm}|p{3.75cm}|p{3.75cm}|p{3.75cm}|}
+    
+	    \begin{table}[htbp!]
+	    	\begin{tabular}{|m{1.75cm}|m{2.75cm}|m{2.75cm}|m{4.75cm}|}
 	    		\hline    			
 	    		\rowcolor{guindapoli}
 	    		 & \hfil {\textbf{\textcolor{white}{Scrum}}} & \hfil {\textbf{\textcolor{white}{Kanban}}} & \hfil {\textbf{\textcolor{white}{Scrumban}}}\\
@@ -563,7 +563,6 @@ natural y redes neuronales}\\
 	    	\end{tabular}
 	    	\caption[Comparación metodologías ágiles]{Tabla comparativa de las distintos metodologías ágiles contempladas}
 	    \end{table}
-	    
 	    Scrumban hace uso de iteraciones, las cuales monitorea con el apoyo de un recurso visual, como lo puede ser un tablero. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (\acrshort{wip} por sus siglas en inglés Work in Progress). Cuando \acrshort{wip} desciende de cierto nivel, se establece una acción para que el equipo sepa cuándo y qué tarea planificar a continuación.\\\\
 	    \textbf{Iteración}\\
 	    En Scrumban, las iteraciones son cortas para garantizar que el equipo pueda adaptarse al entorno cambiante durante el proyecto. La duración de estas iteraciones en este proyecto se medirán como máximo en lapsos de dos semanas.\\
@@ -585,7 +584,7 @@ natural y redes neuronales}\\
 	    	\includegraphics[width=12cm]{./imagenes/Introduccion/scrumban_buckets.jpg}
 	    	\centering \caption{Funcionamiento de la planificación por cubetas}
 	    \end{figure}
-	    
+	    \newpage
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
 
@@ -620,20 +619,19 @@ natural y redes neuronales}\\
 		Como objetivo, la Inteligencia Artificial pretende hacer un uso de los recursos tecnológicos para desarrollar modelos computacionales y poder resolver problemas del mundo real evolucionando constantemente.
 	    \section{Redes neuronales}
 	    Una red neuronal es una herramienta derivada de la inteligencia artificial que utiliza modelos matemáticos para ser utilizada como un mecanismo de predicción de texto.\\\\
-
 		Las redes neuronales son una forma de hacer que las computadoras aprendan, donde la computadora aprende a realizar alguna tarea analizando ejemplos de entrenamiento. Por lo general, estos ejemplos han sido etiquetados previamente.\\\\
 		Modelado vagamente en el cerebro humano, una red neuronal consiste en miles de millones de nodos de procesamiento los cuales están densamente interconectados. En la actualidad las redes neuronales están organizadas como capas de nodos, y estas capas están “alimentadas hacia adelante” (feed-forward), es decir, la información que se mueve a través de ellas solo fluye en una sola dirección. Un solo nodo puede estar conectado a muchos nodos en capas inferiores de las cuales recibe información y a su vez, puede estar conectado a nodos en capas superiores a los cuales envía información.\\\\
 		Cuando una red neuronal está siendo entrenada la información de entrenamiento pasa a alimentar las capas inferiores (capas de entrada), donde será procesada y pasada a capas posteriores donde será transformada hasta llegar a las capas superiores (capas de salida).\cite{refQueSonRedesNeu}
 
 				\subsection{Neuronas}
-						\subsubsection{Neurona Natural}
+						\subsubsection*{Neurona Natural}
 						La neurona es una de muchas células la cual representa a la unidad estructural y funcional del sistema nervioso. Esta trabaja transmitiendo la información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otra parte de este.\\\\
 						Dicho impulso nervioso o impulso eléctrico viaja siempre en un mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, entre ellas existe un espacio de separación denominado sinapsis o espacio sináptico. Una vez que el impulso nervioso llega al extremo final del axón este libera neurotransmisores al espacio sináptico transformando esta señal eléctrica en una señal química la cual se introduce en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora, repitiendo este proceso n veces hasta llegar a su destino final.\cite{refNeuronaNat}
 						\begin{figure}[H] \caption{Estructura de una neurona \cite{refNeuronaNat2}}
 							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
 							\centering 
 						\end{figure}			
-						\subsubsection{Neurona Artificial}
+						\subsubsection*{Neurona Artificial}
 						La complejidad de las neuronas reales se abstrae mucho cuando se realiza el modelado de neuronas artificiales. Estas consisten básicamente en entradas, que se multiplican por pesos (fuerza de las respectivas señales), y luego calculada por una función matemática que determina la activación de la neurona. Otra función (que puede ser la identidad) calcula la salida de la neurona artificial (a veces en dependencia de un cierto umbral). Las redes neuronales combinan neuronas artificiales para procesar información.\cite{refNeuronaArt}
 						\begin{figure}[H] \caption{Neurona Artificial}
 							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
@@ -642,7 +640,7 @@ natural y redes neuronales}\\
 				\subsection{Aprendizaje de las Redes Neuronales}
 				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\\\\
 				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, o eliminarlas, o agregar y eliminar neuronas. Incluso podríamos modificar la función de entrada o la función de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\\\\
-				El entrenamiento es un proceso necesario para toda red neuronal, y es un proceso en el que la red se familiariza con el problema que necesita resolver. En la práctica, generalmente se tienen algunos datos recopilados en función de los cuales necesitamos crear nuestras predicciones, clasificación, o cualquier otro procesamiento. Estos datos se denominan conjunto de entrenamiento. Según el comportamiento durante el entrenamiento y la naturaleza del conjunto de entrenamiento, tenemos algunos tipos de aprendizajes:
+				El entrenamiento es un proceso necesario para toda red neuronal, y es un proceso en el que la red se familiariza con el problema que necesita resolver. En la práctica, generalmente se tienen algunos datos recopilados en función de los cuales necesitamos crear nuestras predicciones, clasificación, o cualquier otro procesamiento. Estos datos se denominan conjunto de entrenamiento. Según el comportamiento durante el entrenamiento y la naturaleza del conjunto de entrenamiento, tenemos algunos tipos de aprendizajes:\\
 				\begin{itemize}
 					\item \textbf{Aprendizaje no supervisado: }el conjunto de entrenamiento solo contiene entradas. La red intenta identificar entradas similares y clasificarlas en ciertas categorías.
 					\item \textbf{Aprendizaje reforzado: }el conjunto de entrenamiento contiene entradas, pero la red también recibe información adicional durante la formación. Lo que sucede es que una vez que la red calcula la salida para una de las entradas, proporcionamos información que indica si el resultado fue correcto o incorrecto y, posiblemente, la naturaleza del error que cometió la red.
@@ -765,7 +763,7 @@ natural y redes neuronales}\\
     	\section{BERT vs GPT-2}    	
     	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías BERT y GPT-2, visualizada en la siguiente tabla:    	
     	\begin{table}[h!]
-    		\begin{tabular}{|p{6.5cm}|p{6.5cm}|}
+    		\begin{tabular}{|m{6.5cm}|m{6.5cm}|}
     			\hline    			
     			\rowcolor{guindapoli}
     			{\textbf{\textcolor{white}{\acrshort{bert}}}} & {\textbf{\textcolor{white}{\acrshort{gpt}-2}}}\\
@@ -797,20 +795,20 @@ natural y redes neuronales}\\
 	    Una canción es una composición literaria, generalmente escrita en versos, a la cual se le puede acompañar con música para poder ser cantada.\cite{refEstructuraCancion1}\par
 			\subsection{Elementos de una canción}
 			Los elementos que conforman una canción son los siguientes:
-			\begin{itemize}
-				\item \textbf{Introducción}\par
+
+				\subsubsection*{Introducción}\par
 				Generalmente es una parte única la cual se encuentra al inicio de una canción, acompañada de una \gls{Armonia} o \gls{Melodia} compuesta solo para este inicio. El objetivo de la introducción es de atraer la atención y producir un ambiente.\cite{refEstructuraCancion2}\par
-				\item \textbf{Verso}\par
+				\subsubsection*{Verso}\par
 				Es la parte encargada de comenzar a desarrollar la idea a transmitir, trata de contarnos el tema de la canción, y ya cuenta con una \gls{Armonia}  bien establecida.\par
-				\item \textbf{Pre-estribillo}\par
+				\subsubsection*{Pre-estribillo}\par
 				Es un arreglo que permite realizar una transición, su función principal es conectar el verso con el estribillo. También ayuda a evitar que el estribillo se estanque en la monotonía.\par
-				\item \textbf{Estribillo}\par
+				\subsubsection*{Estribillo}\par
 				Es una \gls{Estrofa} la cual se repite varias veces dentro de una composición. Su función principal es acentuar la idea principal de la canción tanto en su letra como en lo musical. Se considera como una de las partes más importantes dentro de una canción y en algunas ocasiones este es repetido al inicio y al final.\par
-				\item \textbf{Puente}\par
+				\subsubsection*{Puente}\par
 				Es un interludio el cual conecta dos fragmentos de una canción, permitiendo construir una \gls{Armonia}  entre ellas, suele ser usado para llevar a la canción a su clímax, para prepararlo para el desarrollo final de la canción.\par
-				\item \textbf{Cierre}\par
+				\subsubsection*{Cierre}\par
 				Este busca terminar o concluir una canción, una de las formas puede ser un ruptura brusca generada por un silencio imprevisto o por una secuencia de \gls{Acordes}. Pero la manera más ordinaria de cerrar es haciendo uso de la repetición de un estribillo.\par
-			\end{itemize}
+
 			
 			\subsection{Estructura de una canción}
 			La estructura mínima de una canción está compuesta de:\par
@@ -860,27 +858,34 @@ natural y redes neuronales}\\
 		\newpage
 			
 		\begin{table}[hbt!]
-			\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-				\hline    			
+			\begin{tabular}{|m{7.5cm}|m{7.5cm}|}
+				\hline    		
 				\rowcolor{guindapoli}
-				{\textbf{\textcolor{white}{Apache}}} & {\textbf{\textcolor{white}{NGINX}}}  & {\textbf{\textcolor{white}{Tomcat}}}\\
+				{\textbf{\textcolor{white}{Apache}}} & {\textbf{\textcolor{white}{NGINX}}}\\
 				\hline
-				Apache viene con ventajas útiles ante Nginx, ya que es fácil de configurar, cuenta con muchos módulos, así como un entorno amistoso con los primerizos. & Nginx fue creado para resolver el llamado “problema c10k”, significando que un servidor web que usa hilos para manejar solicitudes del usuario es incapaz de gestionar más de 10,000 conexiones al mismo tiempo. & Tomcat fue creado con el único propósito de ejecutar para aplicaciones web realizadas en Java, en tanto que Apache es un servidor HTTP de propósito general.\\
+				Es fácil de configurar, cuenta con muchos módulos, así como un entorno sencillo. &  Usa hilos para manejar solicitudes del usuario.\\
 				\hline
-				De código abierto y gratuito, inclusive si se usa de manera comercial. Software estable y confiable. Frecuentemente actualizado incluyendo actualizaciones regulares a los parches de seguridad. & Nginx es uno de los servidores web que soluciona el problema c10k y seguramente de los más exitoso al hacerlo, no crea un nuevo proceso por cada solicitud y en su lugar, maneja toda solicitud entrante en un único hilo. & Tomcat es menos configurable comparado a otros servidores web.\\
+				De código abierto y gratuito, inclusive si se usa de manera comercial. & Nginx es uno de los servidores web que soluciona el problema c10k y seguramente de los más exitoso al hacerlo.\\
 				\hline
-				Funciona de forma intuitiva, con sitios web hechos con WordPress. Comunidad grande y posibilidad de contactar con soporte disponible de manera sencilla en caso de cualquier problema. & El modelo basado en eventos de Nginx reparte las solicitudes de los usuarios entre procesos de trabajo de manera eficiente, llevando con ello a una mejor escalabilidad. & \\
+				Software estable y confiable. & No crea un nuevo proceso por cada solicitud.\\
 				\hline
-				Presenta inconvenientes de rendimiento con sitios web los cuales tienen alto tráfico. Al contar con muchas preferencias de configuración esto puede generar vulnerabilidades de seguridad. & Si requieres manejar un sitio web con demasiado tráfico, Nginx es muy buena opción, debido a que es capaz de  realizarlo con un uso mínimo de los recursos. & \\
+				Frecuentemente actualizado incluyendo actualizaciones regulares a los parches de seguridad. & Maneja toda solicitud entrante en un único hilo.\\
+				\hline
+				Funciona de forma intuitiva, con sitios web hechos con WordPress.  & El modelo basado en eventos de Nginx reparte las solicitudes de los usuarios entre procesos de trabajo de manera eficiente.\\
+				\hline
+				Comunidad grande y posibilidad de contactar con soporte disponible de manera sencilla en caso de cualquier problema. &  Cuenta con mejor escalabilidad.\\
+				\hline
+				Presenta inconvenientes de rendimiento con sitios web los cuales tienen alto tráfico. & Es capaz de manejar un sitio web con demasiado tráfico con un uso de recursos mínimo.\\
+				\hline
+				Al contar con muchas preferencias de configuración puede generar vulnerabilidades de seguridad. & \\
 				\hline
 			\end{tabular}
 			\caption[Comparación de servidores web]{Tabla comparativa de los distintos servidores web contemplados para nuestro proyecto}
 		\end{table}
-	
 	    \section{Servidor Web}
 	        La función es mostrar sitios web en internet. A fin de conseguir este objetivo, actúa como un mediador entre el servidor y el dispositivo del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\\\\
 	        Los servidores web son capaces de procesar archivos escritos en distintos lenguajes de programación como Java, PHP, Python, y otros.\\\\
-	        Cuando se escuche la palabra ‘servidor web’, se puede pensar en ello como la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
+	        Podría decirse que un servidor web es la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
 
 		 \section{Certificado SSL}
 			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\\\\
@@ -903,7 +908,7 @@ natural y redes neuronales}\\
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
 		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\\\\ 
-		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\
+		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\\\
 		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
 				\subsection{Amazon Web Services}
@@ -913,6 +918,7 @@ natural y redes neuronales}\\
 					\item \textbf{SageMaker:} Es una plataforma de aprendizaje automático completamente administrado para científicos de datos y desarrolladores. La plataforma corre en Cómputo Elástico en la  Nube (\acrfull{ec2} por sus siglas en inglés), y permite construir modelos de aprendizaje automático, organizar la información y escalar sus operaciones. \\
 					Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\\\\ 
 					El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\\\\ 
+					\newpage
 					Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
 					
 				\end{itemize}
@@ -1387,9 +1393,9 @@ natural y redes neuronales}\\
 			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
 			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
-			\paragraph{\acrshort{gpt}. \\}
+			\paragraph{\acrshort{gpt}-2. \\}
 			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
-			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}\\\\
+			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
 			\paragraph{Amazon \acrshort{ec2}. \\}
 			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
@@ -1413,7 +1419,8 @@ natural y redes neuronales}\\
 			Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
 			Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
 			Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalbilidad lo que permite entrenar los modelos a escala de petabytes. Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
-			Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.			
+			Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.		
+			\newpage	
 			\paragraph{Amazon S3. \\}
 			Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
 			
@@ -1421,7 +1428,7 @@ natural y redes neuronales}\\
 					
 			Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
 			Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
-			
+		\newpage	
 		\subsection{Hardware}
 			Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
             \begin{table}[H]
@@ -1491,9 +1498,7 @@ natural y redes neuronales}\\
 		\subsection{Descripci\'on de la arquitectura del sistema}
 		El sistema se compone de tres bloques los cuales se comunicar\'an v\'ia red:
 		\begin{enumerate}
-			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
-			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
-			\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, contaremos con una tabla que contenga como principales campos:
+			\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, se trabajará especialmente con una tabla que contenga como principales campos:
 			\begin{itemize}
 				\item Artista
 				\item Género
@@ -1502,6 +1507,8 @@ natural y redes neuronales}\\
 				\item Idioma
 			\end{itemize}
 			Dicha base de datos se almacenará en un sistema especializado que se conecte a la nube para poder trabajar y almacenar estos datos sin mayor problema.
+			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
+			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
 		\end{enumerate}
 		       
 		\subsection{Requerimientos funcionales y no funcionales}
@@ -1520,6 +1527,7 @@ natural y redes neuronales}\\
 			\item La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
 			\item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
 		\end{itemize}
+	\newpage
 		\subsection{Aspectos Econ\'omicos}
 		% Aqui van las licencias, descripción, software a utilizar, etc.
 		Las herramientas que usaremos en el trabajo terminal y las cuales validarán la viabilidad del proyecto se presentan a continuación:\\
@@ -1538,14 +1546,12 @@ natural y redes neuronales}\\
 		
 		*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licencia OpenSource "no genuina".\\
 		
-		Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo tal:\\
-		
+		Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo de:\\\\
 		Cuota gratuita primeros 2 meses:
 		\begin{itemize}
 			\item Instancia de bloc de notas: 250 horas.
 			\item Entrenamiento: 50 horas. 
 		\end{itemize}
-	
 		Cuotas:
 		\begin{itemize}
 			\item Instancia de bloc de notas (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora.
@@ -1554,16 +1560,14 @@ natural y redes neuronales}\\
 		\end{itemize}	
 
 		% Aqui van las licencias, descripción, software a utilizar, precio
-
+		\newpage
 		\subsection{Aspectos Legales}
-			\begin{itemize}
-				\item \textbf{Copyright}\\\\
+			\subsubsection*{Copyright}
 				Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
-				Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.\\\\
-				\item \textbf{Originalidad}\\\\
+				Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.
+				\subsubsection*{Originalidad}
 				Los derechos de autor protegen la forma en que se expresan las ideas. Esta manera única de expresar las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
 				Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que es protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
-		\end{itemize}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
@@ -1612,7 +1616,7 @@ natural y redes neuronales}\\
 		\subsection{Descripción}
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
 		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-		\subsubsection{BERT}
+		\subsubsection*{BERT}
 		Como ha sido expuesto con anterioridad BERT (Bidirectional Encoder Representations from Transformers) el cual se usarás para clasificar oraciones, se puede entender de forma más sencilla de la siguiente manera:
 		\begin{itemize}
 			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
@@ -1653,7 +1657,7 @@ natural y redes neuronales}\\
 	
 	En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que se obtiene el resultado.
 	
-	\section*{Herramientas para generar el modelo}
+	\subsection{Herramientas para generar el modelo}
 	
 	\subsection*{Amazon Sagemaker}
 	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\
@@ -1663,7 +1667,7 @@ natural y redes neuronales}\\
 		\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
 		\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
 	\end{itemize}
-	
+	\newpage
 	A continuación se muestra el proceso seguido para el entrenamiento de ML:
 	
 	\begin{figure}[H]
@@ -1706,7 +1710,7 @@ natural y redes neuronales}\\
 		\caption{Diagrama interacción del administrador con AWS}
 	\end{figure}
 
-	\subsubsection{Instancia de bloc de notas}
+	\subsubsection*{Instancia de bloc de notas}
 	Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
 	
 	\begin{figure}[H]
