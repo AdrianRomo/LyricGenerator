@@ -1511,6 +1511,93 @@ natural y redes neuronales}\\
 			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
 			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
 		\end{enumerate}
+	
+		\subsection{Historias de Usuario}
+		
+		\begin{table}[hbt!]\caption{Historia de Usuario 1}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de Usuario 1}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					 \begin{tabular}[c]{@{}l@{}}Nombre: Generar una letra de canción.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: Como un visitante de la\\ página web quiero generar una\\ letra de una canción a partir de una palabra\\ o palabras que proporcione.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: Con la palabra o palabras\\ proporcionadas por el usuario con ayuda del modelo\\ entrenado se generará una letra musical\\ relacionada a estas.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de Usuario 1}% is used to refer this table in the text
+			}
+		\end{table}
+	
+		\begin{table}[hbt!]\caption{Historia de Usuario 2}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de Usuario 2}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Nombre: Descargar una letra canción.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: Como un visitante de la\\ página web quiero poder descargar\\ la letra de la canción que se generó\\ a partir de la palabra o palabras que\\ proporcioné.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: El usuario podrá descargar\\ un archivo de texto que contendrá\\ la letra de la canción generada.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de Usuario 2}% is used to refer this table in the text
+			}
+		\end{table}
+	
+		\begin{table}[hbt!]\caption{Historia de Usuario 3}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de Usuario 3}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Nombre: Definir que tanto deseo que rime una canción\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: Me gustaría tener una opción\\ en la cual pueda definir que tanto quiero\\ que rime una canción, desde que\\ no rime nada hasta que rime toda. \end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: Se genera una letra de canción\\ con lo parámetros de rima que establece el\\ usuario.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de Usuario 3}% is used to refer this table in the text
+			}
+		\end{table}	
+	
+		\begin{table}[hbt!]\caption{Historia de Usuario 4}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de Usuario 4}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Nombre: Generar otra letra de canción con los mismos parámetros\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: Me gustaría generar otra\\ letra de canción con los mismo parámetros y\\ palabra(s) que ya había introducido.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: Brindar una opción al usuario\\ que una vez generada y desplegada la letra de\\ la canción pueda generar otra usando los\\ mismo parámetros que previamente había \\introducido.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de Usuario 4}% is used to refer this table in the text
+			}
+		\end{table}
+	
+		\begin{table}[hbt!]\caption{Historia de Usuario 5}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de Usuario 5}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Nombre: Validación de la palabra o palabras introducidas.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Sistema\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: La página web validará la palabra\\ o palabras proporcionadas por el usuario para\\ con ellas hacer la petición al servidor\\ y generar una letra de canción relacionada a estas. \end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: Con ayuda del modelo y la palabra\\ o palabras introducidas y procesadas por la página web\\ se genera y despliega la letra generada.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de Usuario 5}% is used to refer this table in the text
+			}
+		\end{table}
 		       
 		\subsection{Requerimientos funcionales y no funcionales}
 		A continuación, se presentan los requerimientos funcionales mas importantes de nuestro proyecto:
