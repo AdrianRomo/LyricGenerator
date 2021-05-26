@@ -961,7 +961,7 @@ natural y redes neuronales}\\
 			\resizebox{15cm}{!} {
 				\begin{tabular}{c c c c}% centered columns (3 columns)
 					\hline\hline                        %inserts double horizontal lines
-					Característica & \acrshort{gcp} & \acrshort{aws} & Azure \\ [0.5ex]% inserts table %heading
+					Característica & \acrshort{gcp} \cite{refGoogleCloudPlatform} & \acrshort{aws} \cite{refAmazonWebServices} & Azure \cite{refAzure} \\ [0.5ex]% inserts table %heading
 					\hline                  % inserts single horizontal line
 					\begin{tabular}[c]{@{}l@{}}Jupyter Notebook\\alojado de \\manera local\\ o remota\\\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Plataforma de IA\end{tabular}
@@ -1664,19 +1664,37 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Base de Datos} % Explicar como se sacó la Base de Datos
-%		\subsection{Descripción}
-%		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
-%		\subsection{Resultados}
+\section{Base de Datos} % Explicar como se sacó la Base de Datos
+		\subsection{Descripción}
+		En este apartado se expondrá por qué escogimos la base de datos que escogimos, qué tablas se pueden derivar de ella y el peso total del dataset que se utilizará para el entrenamiento del modelo.
 		
-%		\begin{figure}[H]
-%			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_1/Base de Datos/diagrama_ER_BD.jpg}
-%			\centering 
-%			\caption{Diagrama Entidad Relación de la Base de Datos}
-%		\end{figure}
+		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
+		El género musical que elegimos es Rock en inglés ya que el dataset que encontramos de este tipo de música fue el más extenso y menos usado por la competencia, otros géneros contemplados fueron Hip Hop y Pop que también cuentan con un extenso catálogo de datos pero ya hay modelos que usan esos géneros.
+		
+		\subsection{Dataset escogido}
+		El dataset seleccionado tiene por nombre "output.csv" siendo el formato del tipo ".csv" el más aceptado por Python para trabajar con datos muy grandes precisamente para proyectos de una índole similar. Este dataset tienen un total de [insete número] canciones qe incluye a diversos artistas siendo gracias a esto que el peso del archivo se va a los [peso] Mb.\\
+		
+		El dataset escogido proviene de la página [Vungalou?] e incluye 6 tipos de géneros de música los cuales son:\\
+		\begin{itemize}
+			\item Rock
+			\item Pop
+			\item Hip Hop
+			\item Samba
+			\item ...
+			\item ...
+		\end{itemize}
+		
+		\subsection{Resultados}
+		Al necesitar extraer información precisa para el entrenamiento del modelo no es necesario que la base de datos sea muy compleja, razón por la cual las tablas mostradas en el diagrama entidad-relación de aquí abajo se ven así, siendo lo de mayor relevancia el mostrar que un artista puede tener muchas canciones pero una canción le pertenece únicamente a un artista.
+		
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_1/Base de Datos/diagrama_ER_BD.jpg}
+			\centering 
+			\caption{Diagrama Entidad Relación de la Base de Datos}
+		\end{figure}
 		
 		
-%\newpage
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
 %                                                      																																	  		  %
@@ -1684,14 +1702,17 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%\section{Limpieza de la Base de Datos} % Explicar cómo se limpió la base de datos
-%		\subsection{Descripción}
-%		\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-%		\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-%		\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
-%		\subsection{Resultados} % Explicar los Resultados
+\section{Limpieza de la Base de Datos} % Explicar cómo se limpió la base de datos
+		\subsection{Descripción}
+		En esta sección se hablará del proceso seguido para limpiar la base de datos que se obtuvo, se mostrará la forma de evaluar los "errores" y con este criterio poder limpiar la base de datos.
+		
+		\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
+		Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. 
+		\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
+		\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Resultados} % Explicar los Resultados
 
-%\newpage
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
@@ -1713,7 +1734,7 @@ natural y redes neuronales}\\
 		
 		\subsection{Modelo} % Explicar como se obtuvo en código la base de datos limpia
 		
-		Para el diseño del modelo se tiene contemplado que una vez se tenga la salida del transformer se pase por una capa de clasificación, de manera general y última se usará la función "Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario, cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
+		Para el diseño del modelo se tiene contemplado el siguiente modelo del cual se puede decir que una vez se tiene la salida del transformer se pasa por una capa de clasificación, posterior a ello se usa la función "Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario y cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
 		\\\\
 		En última instancia, y de acuerdo a la probabilidad de rima dada por el usuario en la interfaz web, la última palabra puede o no contener una rima que haga juego con alguna de las palabras de la oración previa del verso.
 		
@@ -1725,11 +1746,38 @@ natural y redes neuronales}\\
 		
 		\subsection{Resultados} % Explicar los Resultados
 		
-		Habiendo hecho el análisis del modelo anterior podemos mostrar una versión ligeramente modificada que se puede usar en el proyecto, de forma tal que la última palabra [RIMA] esté dada por el porcentaje de coincidencia seleccionado por el usuario y que tiene como objetivo rimar con la última palabra de la penúltima oración previa: 
+		Habiendo hecho el análisis del modelo anterior y tomándolo como referencia para nuestro proyecto podemos adaptarla de forma tal que las entradas sean en su mayoría [MASK] las cuales serán las palabras predichas siendo la razón por la cual todas las palabras derivadas de ésto están en rojo ya que representan una entradas del tipo MASK, y la última palabra [RHYME] estará dada por el porcentaje de coincidencia seleccionado por el usuario y que tiene como objetivo, valga la redundancia, de rimar con la última palabra de la penúltima oración previa: 
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.jpg}
 			\centering 
 			\caption{Diagrama de diseño del modelo}
+		\end{figure}
+		
+		Siendo el resultado esperado uno muy similar a la estructura que se muestra a continuación y en la que se puede ver lo siguiente:\\\\
+		En todos los casos la palabra que rime tendrá un valor entre 0 y 1 (valor flotante) el cual determinará qué tan alta sería la posibilidad de que la palabra rime, siendo el valor 0 que no rime y el valor 1 representaría una rima segura. \\
+		
+		\subsubsection{Verso}
+		\begin{itemize}
+			\item Estará compuesto de 4 a 6 oraciones y el valor será decidido por un número random.
+			\item Las palabras que serán predichas en todo el verso serán de 4 a 5 y el valor será decidido por un número random.
+		\end{itemize}
+		
+		\subsubsection{Pre-Coro y Puente}
+		\begin{itemize}
+			\item Estará compuesto de 2 a 3 oraciones y el valor será decidido por un número random.
+			\item Las palabras que serán predichas en todo el verso serán de 6 a 10 y el valor será decidido por un número random.
+		\end{itemize}
+	
+		\subsubsection{Coro}
+		\begin{itemize}
+			\item Estará compuesto de 3 a 4 oraciones y el valor será decidido por un número random.
+			\item Las palabras que serán predichas en todo el verso serán de 3 a 8 y el valor será decidido por un número random.
+		\end{itemize}
+		
+		\begin{figure}[H]
+			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_3/lyrics_template.png}
+			\centering 
+			\caption{Diseño de la estructura del modelo}
 		\end{figure}
 		
 		\newpage
@@ -2044,25 +2092,34 @@ En este apartado se mostrará un primer boceto de la aplicación web una vez ter
 	Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
 	
 	\bibitem{refDatamuseLicense}
-	https://www.onelook.com/about.shtml
+	OneLook Dictionary Search (2016), Privacy Policy [En línea]. Disponible: https://www.onelook.com/about.shtml [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refMongoDBLicense}
-	https://www.mongodb.com/community/licensing
+	MongoDB Inc (2018), MongoDB Licensing [En línea]. Disponible: https://www.mongodb.com/community/licensing [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refBERTLicense}
-	https://github.com/google-research/bert/blob/master/LICENSE
+	Google Research: BERT (2018), LICENSE [En línea]. Disponible: https://github.com/google-research/bert/blob/master/LICENSE [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refApacheLicense}
-	https://httpd.apache.org/docs/current/license.html
+	Apache (2004), The Apache License, Version 2.0 [En línea]. Disponible: https://httpd.apache.org/docs/current/license.html [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refReactLicense}
-	https://github.com/facebook/react/blob/master/LICENSE
+	Facebook: React (2018), LICENSE [En línea]. Disponible: https://github.com/facebook/react/blob/master/LICENSE [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refPythonLicense}	
-	https://docs.python.org/3/license.html
+	Python (2001), History and License [En línea]. Disponible: https://docs.python.org/3/license.html [Último acceso: 19 Mayo 2021]
 	
 	\bibitem{refAmazonLicense}
-	https://www.elastic.co/es/licensing/elastic-license
+	Elastic (2021), Elastic License 2.0 [En línea]. Disponible: https://www.elastic.co/es/licensing/elastic-license [Último acceso: 19 Mayo 2021]
+	
+	\bibitem{refGoogleCloudPlatform}
+	Google Cloud Platform (2021), Descripción general de Google Cloud [En línea]. Disponible: https://cloud.google.com/docs/overview [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{refAmazonWebServices}
+	Amazon Web Services (2021), Informática en la nube con AWS [En línea]. Disponible: https://aws.amazon.com/es/what-is-aws/ [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{refAzure}
+	Azure (2021), Conozca Azure [En línea]. Disponible: https://azure.microsoft.com/es-mx/overview/ [Último acceso: 25 Mayo 2021]
 	
 \end{thebibliography}	
 \end{document}
