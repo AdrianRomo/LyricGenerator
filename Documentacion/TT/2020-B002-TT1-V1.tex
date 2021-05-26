@@ -1666,29 +1666,46 @@ natural y redes neuronales}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Base de Datos} % Explicar como se sacó la Base de Datos
 		\subsection{Descripción}
-		En este apartado se expondrá por qué escogimos la base de datos que escogimos, qué tablas se pueden derivar de ella y el peso total del dataset que se utilizará para el entrenamiento del modelo.
+		En este apartado se hará el diseño de la base de datos para poder generar un modelo acorde a los requerimientos funcionales del proyecto.
 		
-		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
-		El género musical que elegimos es Rock en inglés ya que el dataset que encontramos de este tipo de música fue el más extenso y menos usado por la competencia, otros géneros contemplados fueron Hip Hop y Pop que también cuentan con un extenso catálogo de datos pero ya hay modelos que usan esos géneros.
+		\subsection{Obtención de la Base de Datos}
+		Para iniciar la búsqueda de la base de datos primero diseñamos un diagrama de datos esenciales que se muestra a continuación para poder generar el modelo:
 		
-		\subsection{Dataset escogido}
-		El dataset seleccionado tiene por nombre "output.csv" siendo el formato del tipo ".csv" el más aceptado por Python para trabajar con datos muy grandes precisamente para proyectos de una índole similar. Este dataset tienen un total de [insete número] canciones qe incluye a diversos artistas siendo gracias a esto que el peso del archivo se va a los [peso] Mb.\\
+		%Imagen
 		
-		El dataset escogido proviene de la página [Vungalou?] e incluye 6 tipos de géneros de música los cuales son:\\
+		Se hizo dicha búsqueda en páginas que contienen datasets con licencia del tipo open source, tales como Kaggle \cite{kaggle}, Google datasets \cite{googleDatasets}, \acrshort{aws} Open Data \cite{awsOpenData} y en papers de investigación.\\\\
+		Encontramos diferentes datasets que contaban con algunas de las necesidades del sistema pero por una u otra razón no se podían utilizar, tal fue el caso del dataset de Music4All \cite{music4all} que contaba con las necesidades del sistema pero el uso de los datos era muy restringido.\\
+
+		En Kaggle \cite{kaggle} se encontró un dataset llamado "Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160790 letras de canciones.\\\\
+		
+		Dicha base de datos se sacó originalmente de la página de Vagalume \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación, los cuales son:
 		\begin{itemize}
 			\item Rock
 			\item Pop
 			\item Hip Hop
 			\item Samba
-			\item ...
-			\item ...
+			\item Sertanejo
+			\item Funk Carioca
 		\end{itemize}
+	
+		Esta base de datos cuenta con dos tablas que cumplen con las características ideales para realizar el modelo acorde a los requerimientos funcionales.
+		
+		A continuación se muestran las columnas de la base de datos en la primer tabla, como se puede observar, se utilizarán las columnas “Genre” para separar el dataset en géneros musicales y “Link” que servirá como enlace a la segunda tabla.
+		
+		%Agregar archivo de artists-data CAPTION: artist-data contiene los datos del artista
+		
+		En esta segunda tabla que se muestra a continuación se utilizarán las columnas de “Lyric” para poder entrenar el modelo, “Idiom” para seleccionar y utilizar las canciones en el idioma inglés y “ALink” que nos servirá para fusionar la tabla mencionada anteriormente con la actual y así poder usar esas columnas.
+		
+		%Agregar archivo de lyrics-data CAPTION: lyrics-data contiene los datos de la letra
+		
+		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
+		El género musical que elegimos es Pop en inglés debido a que es un género musical flexible en su estructura y en su léxico, otros géneros contemplados fueron Hip Hop y Rock que también cuentan con un extenso catálogo de datos pero se encontraron modelos que ya utilizan esos géneros.
 		
 		\subsection{Resultados}
-		Al necesitar extraer información precisa para el entrenamiento del modelo no es necesario que la base de datos sea muy compleja, razón por la cual las tablas mostradas en el diagrama entidad-relación de aquí abajo se ven así, siendo lo de mayor relevancia el mostrar que un artista puede tener muchas canciones pero una canción le pertenece únicamente a un artista.
+		Al necesitar extraer información precisa para el entrenamiento del modelo no es necesario que la base de datos sea muy compleja, razón por la cual las tablas mostradas en el diagrama entidad-relación se ve así, siendo lo de mayor relevancia el mostrar que un artista puede tener muchas canciones pero una canción le pertenece únicamente a un artista.
 		
 		\begin{figure}[H]
-			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_1/Base de Datos/diagrama_ER_BD.jpg}
+			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_1/Base de Datos/diagrama_ER_BD.jpg}
 			\centering 
 			\caption{Diagrama Entidad Relación de la Base de Datos}
 		\end{figure}
@@ -1702,6 +1719,8 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{comment}
+	
 \section{Limpieza de la Base de Datos} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
 		En esta sección se hablará del proceso seguido para limpiar la base de datos que se obtuvo, se mostrará la forma de evaluar los "errores" y con este criterio poder limpiar la base de datos.
@@ -1713,7 +1732,7 @@ natural y redes neuronales}\\
 		\subsection{Resultados} % Explicar los Resultados
 
 \newpage
-
+\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
 %                                                      																																	  		  %
@@ -1758,20 +1777,20 @@ natural y redes neuronales}\\
 		
 		\subsubsection{Verso}
 		\begin{itemize}
-			\item Estará compuesto de 4 a 6 oraciones y el valor será decidido por un número random.
-			\item Las palabras que serán predichas en todo el verso serán de 4 a 5 y el valor será decidido por un número random.
+			\item Estará compuesto de 4 a 6 oraciones y el valor será decidido por un número al azar.
+			\item Las palabras que serán predichas en todo el verso serán de 4 a 5 y el valor será decidido por un número al azar.
 		\end{itemize}
 		
-		\subsubsection{Pre-Coro y Puente}
+		\subsubsection{Pre-coro y puente}
 		\begin{itemize}
-			\item Estará compuesto de 2 a 3 oraciones y el valor será decidido por un número random.
-			\item Las palabras que serán predichas en todo el verso serán de 6 a 10 y el valor será decidido por un número random.
+			\item Estará compuesto de 2 a 3 oraciones y el valor será decidido por un número al azar.
+			\item Las palabras que serán predichas en todo el verso serán de 6 a 10 y el valor será decidido por un número al azar.
 		\end{itemize}
 	
 		\subsubsection{Coro}
 		\begin{itemize}
-			\item Estará compuesto de 3 a 4 oraciones y el valor será decidido por un número random.
-			\item Las palabras que serán predichas en todo el verso serán de 3 a 8 y el valor será decidido por un número random.
+			\item Estará compuesto de 3 a 4 oraciones y el valor será decidido por un número al azar.
+			\item Las palabras que serán predichas en todo el verso serán de 3 a 8 y el valor será decidido por un número al azar.
 		\end{itemize}
 		
 		\begin{figure}[H]
@@ -1788,83 +1807,84 @@ natural y redes neuronales}\\
 	%                                                      																																			  %
 	%                                                      																																			  %
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
-	\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
-	\subsection{Descripción}
-	
-	En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que se obtiene el resultado.
-	
-	\subsection{Herramientas para generar el modelo}
-	
-	\subsection*{Amazon Sagemaker}
-	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\
-	
-	Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
-	\begin{itemize}
+	\begin{comment}
+		\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
+		\subsection{Descripción}
+		
+		En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que se obtiene el resultado.
+		
+		\subsection{Herramientas para generar el modelo}
+		
+		\subsection*{Amazon Sagemaker}
+		Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\\\
+		Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
+		\begin{itemize}
 		\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
 		\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
-	\end{itemize}
-	\newpage
-	A continuación se muestra el proceso seguido para el entrenamiento de ML:
-	
-	\begin{figure}[H]
+		\end{itemize}
+		\newpage
+		A continuación se muestra el proceso seguido para el entrenamiento del modelo:
+		
+		\begin{figure}[H]
 		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/machine_learning_process.jpg}
 		\centering 
 		\caption{Diagrama de diseño del modelo}
-	\end{figure}
-	
-	Dentro del apartado podemos asignar las siguientes actividades como parte de las iteraciones 1 y 2, las cuales se centran:
-	\begin{itemize}
+		\end{figure}
+		
+		Dentro del apartado podemos asignar las siguientes actividades como parte de la primer y segunda iteración, las cuales se centran en:
+		\begin{itemize}
 		\item Colección de datos
 		\item Integración de los datos
 		\item Preparación y limpieza de los datos
-	\end{itemize}
-	
-	\begin{figure}[H]
+		\end{itemize}
+		
+		\begin{figure}[H]
 		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/ml_process_e1.jpg}
 		\centering 
 		\caption{Diagrama de diseño del modelo}
-	\end{figure}
-	
-	Habiendo visto el proceso de alimentación de datos para el ML podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
-	\begin{figure}[H]
+		\end{figure}
+		
+		Habiendo visto el proceso de alimentación de datos para el modelo podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
+		\begin{figure}[H]
 		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
 		\centering 
 		\caption{Diagrama de interacción general del entrenamiento con SageMaker}
-	\end{figure}
-	
-	El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
-	\begin{figure}[H]
+		\end{figure}
+		
+		El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
+		\begin{figure}[H]
 		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_localmode.jpg}
 		\centering 
 		\caption{Diagrama }
-	\end{figure}
-	
-	Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
-	\begin{figure}[H]
+		\end{figure}
+		
+		Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
+		\begin{figure}[H]
 		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
 		\centering 
 		\caption{Diagrama interacción del administrador con AWS}
-	\end{figure}
-
-	\subsubsection*{Instancia de bloc de notas}
-	Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
-	
-	\begin{figure}[H]
+		\end{figure}
+		
+		\subsubsection*{Instancia de bloc de notas}
+		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
+		
+		\begin{figure}[H]
 		\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
 		\centering 
 		\caption{Instancia creada en AWS}
-	\end{figure}	
-	
-	\section{Resultados}
-	El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
-	
-	\begin{figure}[H]
-		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
+		\end{figure}	
+		
+		\section{Resultados}
+		El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
+		
+		\begin{figure}[H]
+		\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
 		\centering 
 		\caption{Diagrama del posible proceso a seguir para la generación del modelo}
-	\end{figure}
-
-\newpage
+		\end{figure}
+		
+		\newpage
+	\end{comment}
 
 \section{Aplicación web}
 En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
