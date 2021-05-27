@@ -1287,18 +1287,142 @@ natural y redes neuronales}\\
     		\item \textbf{Riesgo de costo}\\
 	    	Si sobrepasamos el costo  de desarrollo previsto, quizá nos enfrentemos a problemas relacionados con el alcance y los requerimientos funcionales y no funcionales del proyecto.
 	    	
+	    	\begin{table}[hbt!]\caption{Riesgo de costo}% title of Table
+	    		\centering % used for centering table
+	    		\resizebox{8cm}{!} {
+	    			\begin{tabular}{|c|c|}% centered columns (3 columns)
+	    				\hline                        %inserts double horizontal lines
+	    				\multicolumn{2}{|c|}{Riesgo: Costos Elevados}\\% inserts table %heading
+	    				\hline                  % inserts single horizontal line
+	    				\begin{tabular}[c]{@{}l@{}}Impacto: Medio alto (7).\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}Nivel: Alto (49)\end{tabular} \\% inserting body of the table 
+	    				\hline
+	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio alto (7)\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+	    				\hline
+	    			\end{tabular}\label{table:Riesgo de Costo}% is used to refer this table in the text
+	    		}
+	    	\end{table}
+    	
+    		\begin{figure}[H]
+    			\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/Costos_elevados.png}
+    			\centering 
+    			\caption{Matriz de Riesgo de Costo}
+    		\end{figure}
+	    	
 	    	\item \textbf{Riesgo de calendario}\\
 	    	Si se realizó una mala estimación del tiempo necesario para el desarrollo, si se asignaron mal los recursos, si hubo alguna afectación dentro del recurso humano, lo más probable es que el proyecto no se termine de desarrollar en el tiempo establecido.
+	    	
+	    	\begin{table}[hbt!]\caption{Riesgo de calendario}% title of Table
+	    		\centering % used for centering table
+	    		\resizebox{8cm}{!} {
+	    			\begin{tabular}{|c|c|}% centered columns (3 columns)
+	    				\hline                        %inserts double horizontal lines
+	    				\multicolumn{2}{|c|}{Riesgo: Falta de Tiempo}\\% inserts table %heading
+	    				\hline                  % inserts single horizontal line
+	    				\begin{tabular}[c]{@{}l@{}}Impacto: Medio bajo (4).\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}Nivel: Medio Medio (16)\end{tabular} \\% inserting body of the table 
+	    				\hline
+	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio bajo (4)\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+	    				\hline
+	    			\end{tabular}\label{table:Riesgo de calendario}% is used to refer this table in the text
+	    		}
+	    	\end{table}
+	    	
+	    	\begin{figure}[H]
+	    		\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/faltadetiempo.png}
+	    		\centering 
+	    		\caption{Matriz de Riesgo de calendario}
+	    	\end{figure}
 	    	
 	    	\item \textbf{Riesgo tecnológico}\\
 	    	Si no logramos entender la complejidad de la herramientas que utilizaremos para el desarrollo del proyecto o nos toma demasiado tiempo que son nuevas para nosotros, como lo son la herramientas de AWS para la creación de los modelos de redes neuronales y su entrenamiento dentro de la misma plataforma, se podrían presentar problemas como: su integración a la página web, creación fallida de los modelos de redes neuronales, posible no adaptación con el hardware con el que contamos, entre otros.
 	    	
+	    	\begin{table}[hbt!]\caption{Riesgo tecnológico}% title of Table
+	    		\centering % used for centering table
+	    		\resizebox{8cm}{!} {
+	    			\begin{tabular}{|c|c|}% centered columns (3 columns)
+	    				\hline                        %inserts double horizontal lines
+	    				\multicolumn{2}{|c|}{Riesgo: Fallas de Equipos}\\% inserts table %heading
+	    				\hline                  % inserts single horizontal line
+	    				\begin{tabular}[c]{@{}l@{}}Impacto: Bajo (1).\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}Nivel: Bajo (7)\end{tabular} \\% inserting body of the table 
+	    				\hline
+	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio alto (7)\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+	    				\hline
+	    			\end{tabular}\label{table:Riesgo tecnológico}% is used to refer this table in the text
+	    		}
+	    	\end{table}
+	    	
+	    	\begin{figure}[H]
+	    		\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/Fallas_equipo.png}
+	    		\centering 
+	    		\caption{Matriz de Riesgo tecnológico}
+	    	\end{figure}
+	    	
 	    	\item \textbf{Riesgo operacional}\\
 	    	Si no se plantean posibles soluciones a posibles problemas que se pueden presentar durante el proyecto, si no se presenta liderazgo por parte de alguno de los miembros, si existe una mala comunicación, falta de motivación y si no hay una monitorización, se puede ver mermado el avance del proyecto.
 	    	
+	    	\begin{table}[hbt!]\caption{Riesgo operacional}% title of Table
+	    		\centering % used for centering table
+	    		\resizebox{8cm}{!} {
+	    			\begin{tabular}{|c|c|}% centered columns (3 columns)
+	    				\hline                        %inserts double horizontal lines
+	    				\multicolumn{2}{|c|}{Riesgo: Desorganización en el equipo}\\% inserts table %heading
+	    				\hline                  % inserts single horizontal line
+	    				\begin{tabular}[c]{@{}l@{}}Impacto: Medio bajo (4).\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}Nivel: Medio (16)\end{tabular} \\% inserting body of the table 
+	    				\hline
+	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio bajo (4)\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+	    				\hline
+	    			\end{tabular}\label{table:Riesgo operacional}% is used to refer this table in the text
+	    		}
+	    	\end{table}
+	    	
+	    	\begin{figure}[H]
+	    		\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/Desorganizacion.png}
+	    		\centering 
+	    		\caption{Matriz de Riesgo operacional}
+	    	\end{figure}
+	    	
 	    	\item \textbf{Riesgos externos}\\
 	    	Factores externos que pueden afectar el desarrollo del proyecto pueden ser algún cambio en las leyes, cambio en alguna norma, desastre natural.
+	    	
+	    	\begin{table}[hbt!]\caption{Riesgos externos}% title of Table
+	    		\centering % used for centering table
+	    		\resizebox{8cm}{!} {
+	    			\begin{tabular}{|c|c|}% centered columns (3 columns)
+	    				\hline                        %inserts double horizontal lines
+	    				\multicolumn{2}{|c|}{Riesgo: Factores Externos}\\% inserts table %heading
+	    				\hline                  % inserts single horizontal line
+	    				\begin{tabular}[c]{@{}l@{}}Impacto: Alto (10).\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}Nivel: Bajo (10)\end{tabular} \\% inserting body of the table 
+	    				\hline
+	    				\begin{tabular}[c]{@{}l}Probabilidad: Bajo (1)\end{tabular}
+	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
+	    				\hline
+	    			\end{tabular}\label{table:Riesgos externos}% is used to refer this table in the text
+	    		}
+	    	\end{table}
+	    	
+	    	\begin{figure}[H]
+	    		\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/Externos.png}
+	    		\centering 
+	    		\caption{Matriz de Riesgos externos}
+	    	\end{figure}
+	    	
     	\end{itemize}
+    
+    	\begin{figure}[H]
+    		\includegraphics[width=9cm]{./imagenes/Analisis/AnalisisRiesgo/analisisriesgos.png}
+    		\centering 
+    		\caption{Matriz General de Riesgos}
+    	\end{figure}
+    
+    	Se utilizó la herramienta llamada Matriz de Evaluación de Riesgos de ITM Platform para generar este análisis de riesgo. \cite{refMatrizEvaluacionRiesgos}
     	    
     	\section{Herramientas a usar}
 			\subsection{Software}
@@ -1511,6 +1635,9 @@ natural y redes neuronales}\\
 			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
 			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
 		\end{enumerate}
+	
+		\subsection{Funcionamiento General del Sistema}
+		
 	
 		\subsection{Historias de Usuario}
 		
@@ -1807,84 +1934,97 @@ natural y redes neuronales}\\
 	%                                                      																																			  %
 	%                                                      																																			  %
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
-	\begin{comment}
-		\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
-		\subsection{Descripción}
-		
-		En este apartado se explicará de manera general cómo es que se hará la generación del modelo en la nube desde que se alimenta la información de entrenamiento hasta que se obtiene el resultado.
-		
-		\subsection{Herramientas para generar el modelo}
-		
-		\subsection*{Amazon Sagemaker}
-		Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\\\
-		Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
-		\begin{itemize}
-		\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
-		\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
-		\end{itemize}
-		\newpage
-		A continuación se muestra el proceso seguido para el entrenamiento del modelo:
-		
-		\begin{figure}[H]
-		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/machine_learning_process.jpg}
-		\centering 
-		\caption{Diagrama de diseño del modelo}
-		\end{figure}
-		
-		Dentro del apartado podemos asignar las siguientes actividades como parte de la primer y segunda iteración, las cuales se centran en:
-		\begin{itemize}
-		\item Colección de datos
-		\item Integración de los datos
-		\item Preparación y limpieza de los datos
-		\end{itemize}
-		
-		\begin{figure}[H]
-		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/ml_process_e1.jpg}
-		\centering 
-		\caption{Diagrama de diseño del modelo}
-		\end{figure}
-		
-		Habiendo visto el proceso de alimentación de datos para el modelo podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
-		\begin{figure}[H]
-		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
-		\centering 
-		\caption{Diagrama de interacción general del entrenamiento con SageMaker}
-		\end{figure}
-		
-		El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
-		\begin{figure}[H]
-		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_localmode.jpg}
-		\centering 
-		\caption{Diagrama }
-		\end{figure}
-		
-		Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
-		\begin{figure}[H]
-		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
-		\centering 
-		\caption{Diagrama interacción del administrador con AWS}
-		\end{figure}
-		
-		\subsubsection*{Instancia de bloc de notas}
+	
+	\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
+	\subsection{Descripción}
+	
+	En este apartado se tocarán herramientas que utilizaremos, la interacción entre nosotros y el sistema para suministrar los datos a Amazon Sagemaker, el desarrollo que seguirá \acrshort{aws} para ir desde el entrenamiento del modelo hasta el despliegue del mismo para poder ser utilizado.
+	
+	\subsection{Amazon Sagemaker}
+	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\\\
+	Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
+	\begin{itemize}
+	\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
+	\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
+	\item Managed Spot Training: Es una herramienta que permite entrenar los modelos de aprendizaje automático con instancias de Amazon \acrshort{ec2} que pueden demorar más al entrenar a cambio de abaratar los costos de entrenamiento hasta en un 90\%.
+	\end{itemize}
+	\newpage
+	
+	\subsection{Suministrado de Datos}
+	Al ingresar a SageMaker lo primero que nos es requerido hacer es una instancia  bloc de notas (Jupyter Notebook) dentro del cual escribiremos el código en Python que ocuparemos para ejecutar todo el procedimiento visto en la iteración tres.
+	
+		\subsubsection{Instancia de bloc de notas}
 		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
 		
 		\begin{figure}[H]
-		\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
-		\centering 
-		\caption{Instancia creada en AWS}
-		\end{figure}	
-		
-		\section{Resultados}
-		El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
-		
-		\begin{figure}[H]
-		\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
-		\centering 
-		\caption{Diagrama del posible proceso a seguir para la generación del modelo}
+			\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
+			\centering 
+			\caption{Instancia creada en AWS}
 		\end{figure}
-		
-		\newpage
-	\end{comment}
+	
+	Habiendo visto el proceso de alimentación de datos para el modelo podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
+	
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
+		\centering 
+		\caption{Diagrama de interacción general del entrenamiento con SageMaker}
+	\end{figure}
+	
+	A continuación se muestra el proceso seguido para el entrenamiento del modelo:
+	
+	\begin{figure}[H]
+	\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/machine_learning_process.jpg}
+	\centering 
+	\caption{Diagrama de diseño del modelo}
+	\end{figure}
+	
+	Dentro del apartado podemos asignar las siguientes actividades como parte de la primer y segunda iteración, las cuales se centran en:
+	\begin{itemize}
+	\item Colección de datos
+	\item Integración de los datos
+	\item Preparación y limpieza de los datos
+	\end{itemize}
+	
+	\begin{figure}[H]
+	\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/ml_process_e1.jpg}
+	\centering 
+	\caption{Diagrama de diseño del modelo}
+	\end{figure}
+	
+	
+	El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
+	\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_localmode.jpg}
+	\centering 
+	\caption{Diagrama }
+	\end{figure}
+	
+	Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
+	\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
+	\centering 
+	\caption{Diagrama interacción del administrador con AWS}
+	\end{figure}
+	
+	\subsubsection*{Instancia de bloc de notas}
+	Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
+	
+	\begin{figure}[H]
+	\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
+	\centering 
+	\caption{Instancia creada en AWS}
+	\end{figure}	
+	
+	\section{Resultados}
+	El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
+	
+	\begin{figure}[H]
+	\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
+	\centering 
+	\caption{Diagrama del posible proceso a seguir para la generación del modelo}
+	\end{figure}
+	
+	\newpage
 
 \section{Aplicación web}
 En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
@@ -2140,6 +2280,28 @@ En este apartado se mostrará un primer boceto de la aplicación web una vez ter
 	
 	\bibitem{refAzure}
 	Azure (2021), Conozca Azure [En línea]. Disponible: https://azure.microsoft.com/es-mx/overview/ [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{refMatrizEvaluacionRiesgos}
+	ITM Platform (2010), Matriz de Evaluación de Riesgos [En línea]. Disponible: https://www.itmplatform.com/es/recursos/matriz-de-evaluacion-de-riesgos
+	/\#RiskSetId=rh25q/6IQWFCFvYIwSUF6A== [Último acceso: 26 Mayo 2021]
+	
+	\bibitem{kaggleDataset}
+	Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{kaggle}
+	Kaggle (2010), How to Use Kaggle [En línea]. Disponible: https://www.kaggle.com/docs/datasets [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{googleDatasets}
+	Google (2018, Septiembre 5), Dataset Search [En línea]. Disponible: https://datasetsearch.research.google.com [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{awsOpenData}
+	Amazon, Open Data on AWS [En línea]. Disponible: https://aws.amazon.com/es/opendata/?wwps-cards.sort-by=item.additionalFields.sortDate\&wwps-cards.sort-order=desc [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{music4all}
+	Music4All (2020), A New Music Database and Its Applications [En línea]. Disponible: https://sites.google.com/view/contact4music4all [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{vagalume}
+	Vagalume (2002), Vagalume: Music e tudo [En línea]. Disponible: https://www.vagalume.com.br/ [Último acceso: 25 Mayo 2021]
 	
 \end{thebibliography}	
 \end{document}
