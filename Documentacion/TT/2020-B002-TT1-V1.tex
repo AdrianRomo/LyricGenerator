@@ -855,6 +855,11 @@ natural y redes neuronales}\\
 	 	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
 	 	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 		
+		\section{NGINX}
+		
+		NGINX es un software de código abierto para servicio web, almacenamiento en caché, equilibrio de carga, proxy inverso, transmisión de medios y más. Inició como un servidor web diseñado para un máximo rendimiento y estabilidad. Además de sus capacidades de servidor HTTP, NGINX también puede funcionar como un servidor proxy para correo electrónico (IMAP, POP3 y SMTP) y un proxy inverso, así como un equilibrador de carga para servidores HTTP, TCP y UDP.\cite{refNginx}\\
+		
+		
 		\newpage
 			
 		\begin{table}[hbt!]
@@ -1638,6 +1643,24 @@ natural y redes neuronales}\\
 	
 		\subsection{Funcionamiento General del Sistema}
 		
+		A continuación se presentan unos diagramas que muestran el funcionamiento general de nuestro proyecto:
+				
+		\begin{figure}[H] \caption{Diagrama de obtención del dataset}
+			\includegraphics[scale=.5]{./imagenes/Disenio/Arquitectura/DiagramaFuncGen 1.png}
+			\centering 
+		\end{figure}
+	
+		\begin{figure}[H] \caption{Diagrama del entrenamiento y generación del modelo}
+			\includegraphics[scale=.5]{./imagenes/Disenio/Arquitectura/DiagramaFuncGen 2.png}
+			\centering 
+		\end{figure}	
+	
+		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto, una vez este implementado el modelo entrenado en la página web:
+		
+		\begin{figure}[H] \caption{Diagrama del funcionamiento general}
+			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura sistema.png}
+			\centering 
+		\end{figure}	
 	
 		\subsection{Historias de Usuario}
 		
@@ -2175,6 +2198,9 @@ En este apartado se mostrará un primer boceto de la aplicación web una vez ter
 	% Flask
 	\bibitem{refFlask}  		
 	Flask (2019, julio 04), Flask Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
+	
+	\bibitem{refNginx} 
+	NGINx (2016, mayo 17), What is NGINX?,  [En línea]. Disponible: https://www.nginx.com/resources/glossary/nginx/ [Último acceso: 27 de mayo del 2021].
 	
 	%Herramientas a usar Software
 	
