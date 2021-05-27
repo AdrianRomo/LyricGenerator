@@ -1986,7 +1986,7 @@ natural y redes neuronales}\\
 	Al ingresar a SageMaker lo primero que nos es requerido hacer es una instancia  bloc de notas (Jupyter Notebook) dentro del cual escribiremos el código en Python que ocuparemos para ejecutar todo el procedimiento visto en la iteración tres.
 	
 		\subsubsection{Instancia de bloc de notas}
-		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
+		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribirlo y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
 		
 		\begin{figure}[H]
 			\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
@@ -1994,14 +1994,27 @@ natural y redes neuronales}\\
 			\caption{Instancia creada en AWS}
 		\end{figure}
 	
-	Habiendo visto el proceso de alimentación de datos para el modelo podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:
+	Dentro de la instancia de Jupyter se va a realizar lo siguiente:
+	
+	\begin{itemize}
+		\item Filtrar y preparar el contenido del dataset que le proporcionemos.
+		\item Entrenar el modelo, el cual podremos supervisar desde una instancia proporcionada por Amazon SageMaker durante este paso llamado "Instancia de Entrenamiento de Aprendizaje de Máquina".
+		\item Generar el modelo.
+		\item Desplegar el modelo, para este paso de la misma forma que ocurre con el entrenamiento del modelo, Sagemaker proporciona una instancia que nos permitirá alojarlo para su posterior uso llamada "Instancia de Alojamiento de Aprendizaje de Máquina".
+	\end{itemize}
+	
+	Posterior a todos los pasos mencionados anteriormente que se realizarán dentro de la instancia de Jupyter se puede crear ahí mismo un `\acrshort{api} endpoint´ que responderá a una petición hecha por el usuario para acceder al modelo generado y así generar y devolver la letra de la canción.
 	
 	\begin{figure}[H]
-		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.jpg}
+		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.png}
 		\centering 
-		\caption{Diagrama de interacción general del entrenamiento con SageMaker}
+		\caption{Diagrama del funcionamiento de SageMaker}
 	\end{figure}
 	
+	Como se puede apreciar en el diagrama, dentro de Amazon SageMaker ocurrirán todos los procesos que requerimos se ejecuten para poder entrenar y generar el modelo al que el usuario final podrá contactar por medio de una \acrshort{api} para solicitar una letra de la canción según sus requerimientos especificados.
+	\begin{comment}
+		
+	Habiendo visto el proceso de alimentación de datos para el modelo podemos ahora mostrar de manera general el proceso que tomaremos para el entrenamiento de nuestro modelo, proceso que puede resumirse en el siguiente diagrama:\\\\
 	A continuación se muestra el proceso seguido para el entrenamiento del modelo:
 	
 	\begin{figure}[H]
@@ -2010,50 +2023,21 @@ natural y redes neuronales}\\
 	\caption{Diagrama de diseño del modelo}
 	\end{figure}
 	
-	Dentro del apartado podemos asignar las siguientes actividades como parte de la primer y segunda iteración, las cuales se centran en:
-	\begin{itemize}
-	\item Colección de datos
-	\item Integración de los datos
-	\item Preparación y limpieza de los datos
-	\end{itemize}
-	
-	\begin{figure}[H]
-	\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/ml_process_e1.jpg}
-	\centering 
-	\caption{Diagrama de diseño del modelo}
-	\end{figure}
-	
-	
-	El ejemplo anterior está pensado para el uso de un contenedor Docker dentro del cual operar una instancia de Jupyter, sin embargo y sólo de ser necesario también se podría manejar el proceso de manera local de forma que el proceso seguido para hacerlo se ve resumido en el diagrama mostrado a continuación:
-	\begin{figure}[H]
-	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_localmode.jpg}
-	\centering 
-	\caption{Diagrama }
-	\end{figure}
-	
 	Una vez se tienen los pasos necesarios para la generación del modelo podemos describir la interacción del administrador con el sistema de la siguiente manera:
 	\begin{figure}[H]
 	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/user_interaction.jpg}
 	\centering 
 	\caption{Diagrama interacción del administrador con AWS}
 	\end{figure}
-	
-	\subsubsection*{Instancia de bloc de notas}
-	Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribir ese código y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
-	
-	\begin{figure}[H]
-	\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
-	\centering 
-	\caption{Instancia creada en AWS}
-	\end{figure}	
+	\end{comment}
 	
 	\section{Resultados}
-	El resultado final al que podemos llegar dado todo lo anterior es que el camino que debemos de seguir en cuanto al diseño es uno muy similar al mostrado a continuación, puesto que va desde los datos suministrados por nosotros, el entrenamiento del modelo, la información proporcionada al usuario y la retroalimentación a los datos:
-	
+	De manera similar a la tratada para la generación del modelo de neural network en la iteración 3, la iteración 4 consistirá de un proceso muy similar al seguido en ese apartado con el diferenciador principal siendo que será en la nube, e incluso de una manera muy simple podríamos resumir los pasos a seguir del siguiente diagrama (tomado de nuestra arquitectura del sistema) y el cual simplifica aún más el proceso seguido por Amazon SageMaker para la generación del Modelo.
+		
 	\begin{figure}[H]
-	\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/roadtrip_sagemaker.jpg}
+	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/resultado_arquitectura.png}
 	\centering 
-	\caption{Diagrama del posible proceso a seguir para la generación del modelo}
+	\caption{Diagrama simple del proceso seguido para generar el modelo en la nube}
 	\end{figure}
 	
 	\newpage
