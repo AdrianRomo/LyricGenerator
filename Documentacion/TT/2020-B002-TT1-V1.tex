@@ -833,7 +833,7 @@ natural y redes neuronales}\\
 			Se pretende trabajar la estructura de la generación de letras musicales de la siguiente forma:
 			
 			\begin{figure}[H] \caption{Diagrama de la estructura para la generación de las letras musicales}
-				\includegraphics[scale=.45]{./imagenes/Disenio/Arquitectura/Generacion letras.png}
+				\includegraphics[scale=.45]{./imagenes/Disenio/Arquitectura/Generacion_letras.png}
 				\centering 
 			\end{figure}
 		
@@ -1275,20 +1275,62 @@ natural y redes neuronales}\\
     	Respecto a los costos monetarios de todo el proyecto se toma a consideración lo siguiente:
     	\begin{itemize}
     		\item \textbf{Servicios}\\
-    		Se considera un gasto mensual aproximado de \$1,600.00 que al ser multiplicado por todo el tiempo de elaboración contemplado nos da un total de \$14,400.00.
+    		Se considera un gasto mensual aproximado de \$1,400.00 que al ser multiplicado por todo el tiempo de elaboración contemplado nos da un total de \$11,200.00, por integrante.
     		\item \textbf{Software} \\
     		Durante algunos periodos se va a hacer uso principalmente de herramientas gratuitas y de software libre, en cuanto al servicio en la nube se pretende hacer uso de \acrshort{aws} y trabajar inicialmente con los planes gratuitos que ofrece, en caso de que se lleguen a consumir los recursos de este plan, entonces se procederá a cambiarnos a otro plan superior donde el costo actual se cobra en \$ 0.15 centavos de dólar por hora de uso.
     		\item \textbf{Hardware}\\
     		Se utilizarán los equipos de cómputo personal de cada integrante, lo que da un costo aproximado de \$24,012.00 aplicando los parámetros de vida útil de un equipo de cómputo y su depreciación anual del hardware. 
     		\item \textbf{Recursos Humanos}\\
-    		Se estima un gasto aproximado de \$15,000.00 por cada integrante del equipo para la elaboración del proyecto con lo que se generará un gasto total de \$45,000.00
+    		Se estima un gasto aproximado de \$12,000.00 por cada integrante del equipo para la elaboración del proyecto con lo que se generará un gasto total de \$36,000.00
     	\end{itemize}
-    	Tomando en cuenta el salario promedio de un desarrollador de software el cual es de \$15,000.00 mensuales (este dato fue obtenido de mx.indeed.com), se consideró este salario para el desarrollo del proyecto, el cual tendría una duración de desarrollo de 6 meses aproximadamente, dando como resultado un salario total para los integrantes del equipo de \$270,000.00; el costo final del desarrollo de este trabajo terminal sería de: \\
+    	Tomando en cuenta el salario promedio de un desarrollador de software el cual es de \$15,000.00 mensuales (este dato fue obtenido de mx.indeed.com), se consideró este salario para el desarrollo del proyecto, el cual tendría una duración de desarrollo de 8 meses aproximadamente, dando como resultado un salario total para los integrantes del equipo de \$360,000.00; el costo final del desarrollo de este trabajo terminal sería de: \\
     	\begin{center}
-    		\$353,420.00
+    		\$453,612.00
     	\end{center}
     	\textbf{Conclusión\\} 
     	Tras realizar el análisis el estudio de factibilidad de este proyecto es pertinente decir que los integrantes no cuentan con el apoyo financiero y que el hardware mencionado ya es propiedad de los integrantes, por lo que el trabajo terminal se califica como \textit{“Viable”} iniciando de esta manera su implementación acorde con las fechas mencionadas.
+    	
+    	\subsection{Aspectos Econ\'omicos}
+    	% Aqui van las licencias, descripción, software a utilizar, etc.
+    	Las herramientas que usaremos en el trabajo terminal y las cuales validarán la viabilidad del proyecto se presentan a continuación:\\
+    	
+    	Herramientas OpenSource a utilizar en el presente trabajo terminal
+    	
+    	\begin{itemize}
+    		\item Datamuse API \cite{refDatamuseLicense}
+    		\item MongoDB - SSPL* \cite{refMongoDBLicense}
+    		\item BERT - Apache 2.0 \cite{refBERTLicense}
+    		\item Apache - Apache 2.0 \cite{refApacheLicense}
+    		\item React - MIT \cite{refReactLicense}
+    		\item Python - PSFL \cite{refPythonLicense}
+    		\item Amazon - Elastic 2.0 y SSPL \cite{refAmazonLicense}
+    	\end{itemize}
+    	
+    	*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licencia OpenSource "no genuina".\\
+    	
+    	Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo de:\\\\
+    	Cuota gratuita primeros 2 meses:
+    	\begin{itemize}
+    		\item Instancia de bloc de notas: 250 horas.
+    		\item Entrenamiento: 50 horas. 
+    	\end{itemize}
+    	Cuotas:
+    	\begin{itemize}
+    		\item Instancia de bloc de notas (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora.
+    		\item Entrenamiento (4 CPU's virtuales y 16Gb de memoria): 0.23 centavos de dólar/hora.
+    		\item Procesamiento (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora.
+    	\end{itemize}	
+    	
+    	% Aqui van las licencias, descripción, software a utilizar, precio
+    	\subsection{Aspectos Legales}
+    	\subsubsection*{Copyright}
+    	Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
+    	Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.
+    	\subsubsection*{Originalidad}
+    	Los derechos de autor protegen la forma en que se expresan las ideas. Esta manera única de expresar las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
+    	Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que esta protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
+    	Con base en la Ley Federal del Derecho de Autor Capitulo IV articulo 107 "Las bases de datos o de otros materiales legibles por medio de máquinas o en otra forma, que por razones de selección y disposición de su contenido constituyan creaciones intelectuales, quedarán protegidas como compilaciones."\cite{refOriginalidadLFDA}\\\\
+    	Por ende las canciones generadas por nuestro sistema no se pretenden ni pueden registar, ya que estos resultados generados serian nuestros.
     	
     	\section{Análisis de riesgo}
     	
@@ -1364,7 +1406,7 @@ natural y redes neuronales}\\
 	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio alto (7)\end{tabular}
 	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
 	    				\hline
-	    			\end{tabular}\label{table:Riesgo tecnológico}% is used to refer this table in the text
+	    			\end{tabular}\label{table:Riesgo_tecnologico}% is used to refer this table in the text
 	    		}
 	    	\end{table}
 	    	
@@ -1390,7 +1432,7 @@ natural y redes neuronales}\\
 	    				\begin{tabular}[c]{@{}l}Probabilidad: Medio bajo (4)\end{tabular}
 	    				& \begin{tabular}[c]{@{}l@{}}\end{tabular} \\
 	    				\hline
-	    			\end{tabular}\label{table:Riesgo operacional}% is used to refer this table in the text
+	    			\end{tabular}\label{table:Riesgo_operacional}% is used to refer this table in the text
 	    		}
 	    	\end{table}
 	    	
@@ -1474,7 +1516,7 @@ natural y redes neuronales}\\
                 \item Permite reducir los problemas de concordancia entre estructuras de datos usadas por las aplicaciones y la base de datos.
                 \item Frecuentemente se aplican técnicas de desnormalización de los datos.
             \end{itemize}
-                    
+            \begin{comment}
             \paragraph{MySQL \\}
             Es un sistema de gestión de bases de datos desarrollado por Oracle Corporation, es considerada como la base de datos de código abierto más popular del mundo y una de las más populares, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
             El modelo más común utilizado en este sistema de gestión de base datos, es el modelo relacional, donde se almacenan y proporcionan acceso a puntos de datos relacionados entre sí. Esto es posible a que cada fila de la tabla cuenta con un registro y este tiene un ID único, las columnas contienen atributos de los datos, y cada registro en su mayoría cuenta con un valor para cada atributo, lo que favorece el establecimiento de las relaciones entre los datos.\\\\
@@ -1490,7 +1532,7 @@ natural y redes neuronales}\\
                 \item Presentan deficiencias con datos gráficos, multimedia, \acrshort{cad} y sistemas de información geográfica.
                 \item Dificulta la manipulación de bloques de texto como un tipo de dato.
             \end{itemize}
-			
+
 			\paragraph{Flask \\}
 			Flask es un mini marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\\\\
 			La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\
@@ -1507,11 +1549,11 @@ natural y redes neuronales}\\
 				\item No cuenta con muchas herramientas o librerias de apoyo.
 				\item No puede manejar peticiones multiples al mismo tiempo.
 			\end{itemize}
-		
+			
 			\paragraph{Gunicorn \\}
 			
 			Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
-			
+			\end{comment}
 			\paragraph{Python \\}
 			Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\\\\
 			Las principales ventajas de Python son: 
@@ -1530,9 +1572,11 @@ natural y redes neuronales}\\
 			\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
 			Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 			El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+			\begin{comment}
 			\paragraph{\acrshort{gpt}-2. \\}
 			\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
 			\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
+			\end{comment}
 			\paragraph{Amazon \acrshort{ec2}. \\}
 			Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 			Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
@@ -1546,7 +1590,7 @@ natural y redes neuronales}\\
 			Las principales desventajas son: 
 			\begin{itemize}
 				\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
-				\item Los costos de soporte técnico son muy elevados..
+				\item Los costos de soporte técnico son muy elevados.
 			\end{itemize}		
 			\paragraph{Amazon \acrshort{cli} \\}
 			
@@ -1632,8 +1676,10 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Arquitectura del sistema}
-		\subsection{Descripci\'on de la arquitectura del sistema}
-		El sistema se compone de tres bloques los cuales se comunicar\'an v\'ia red:
+		\subsection{Descripción de la arquitectura del sistema}
+		Para poder crear esta herramienta de apoyo para estudiantes o aficionados en el área musical con la creación de letras musicales, se propone crear un sistema basado en inteligencia artificial usando técnicas de procesamiento de lenguaje natural que pueda auxiliarlos y puedan lograr su meta propuesta.
+		
+		El sistema se compone de tres bloques los cuales se comunicarán vía red:
 		\begin{enumerate}
 			\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, se trabajará especialmente con una tabla que contenga como principales campos:
 			\begin{itemize}
@@ -1665,7 +1711,7 @@ natural y redes neuronales}\\
 		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto, una vez este implementado el modelo entrenado en la página web:
 		
 		\begin{figure}[H] \caption{Diagrama del funcionamiento general}
-			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura sistema.png}
+			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura_sistema.png}
 			\centering 
 		\end{figure}
 	
@@ -1775,49 +1821,6 @@ natural y redes neuronales}\\
 			\item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
 		\end{itemize}
 	\newpage
-		\subsection{Aspectos Econ\'omicos}
-		% Aqui van las licencias, descripción, software a utilizar, etc.
-		Las herramientas que usaremos en el trabajo terminal y las cuales validarán la viabilidad del proyecto se presentan a continuación:\\
-		
-		Herramientas OpenSource a utilizar en el presente trabajo terminal
-		
-		\begin{itemize}
-			\item Datamuse API \cite{refDatamuseLicense}
-			\item MongoDB - SSPL* \cite{refMongoDBLicense}
-			\item BERT - Apache 2.0 \cite{refBERTLicense}
-			\item Apache - Apache 2.0 \cite{refApacheLicense}
-			\item React - MIT \cite{refReactLicense}
-			\item Python - PSFL \cite{refPythonLicense}
-			\item Amazon - Elastic 2.0 y SSPL \cite{refAmazonLicense}
-		\end{itemize}
-		
-		*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licencia OpenSource "no genuina".\\
-		
-		Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo de:\\\\
-		Cuota gratuita primeros 2 meses:
-		\begin{itemize}
-			\item Instancia de bloc de notas: 250 horas.
-			\item Entrenamiento: 50 horas. 
-		\end{itemize}
-		Cuotas:
-		\begin{itemize}
-			\item Instancia de bloc de notas (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora.
-			\item Entrenamiento (4 CPU's virtuales y 16Gb de memoria): 0.23 centavos de dólar/hora.
-			\item Procesamiento (4 CPU's virtuales y 16Gb de memoria): 0.20 centavos de dólar/hora.
-		\end{itemize}	
-
-		% Aqui van las licencias, descripción, software a utilizar, precio
-		\newpage
-		\subsection{Aspectos Legales}
-			\subsubsection*{Copyright}
-				Los derechos de autor son una forma de protección para obras originales de autoría fijadas en un medio de expresión tangible. Los derechos de autor cubren tanto las obras publicadas como las que no o son inéditas.\cite{refCopyright}\\\\
-				Los derechos de autor protegen un gran rango de obras como lo son: obras literarias, obras musicales, obras pictóricas o escultóricas, coreografías, escenas dramáticas, producciones cinematográficas y demás audiovisuales, programas de cómputo, fotografías, entre muchas otras.
-				\subsubsection*{Originalidad}
-				Los derechos de autor protegen la forma en que se expresan las ideas. Esta manera única de expresar las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
-				Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que esta protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
-				Con base en la Ley Federal del Derecho de Autor Capitulo IV articulo 107 "Las bases de datos o de otros materiales legibles por medio de máquinas o en otra forma, que por razones de selección y disposición de su contenido constituyan creaciones intelectuales, quedarán protegidas como compilaciones."\cite{refOriginalidadLFDA}\\\\
-				Por ende las canciones generadas por nuestro sistema no se pretenden ni pueden registar, ya que estos resultados generados serian nuestros.
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
 %                                                      																																	  		  %
@@ -1866,7 +1869,7 @@ natural y redes neuronales}\\
 		Al necesitar extraer información precisa para el entrenamiento del modelo no es necesario que la base de datos sea muy compleja, razón por la cual las tablas mostradas en el diagrama entidad-relación se ve así, siendo lo de mayor relevancia el mostrar que un artista puede tener muchas canciones pero una canción le pertenece únicamente a un artista.
 		
 		\begin{figure}[H]
-			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_1/Base de Datos/diagrama_ER_BD.jpg}
+			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/diagrama_ER_BD.jpg}
 			\centering 
 			\caption{Diagrama Entidad Relación de la Base de Datos}
 		\end{figure}
@@ -1880,24 +1883,48 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{comment}
+
 	
 \section{Limpieza de la Base de Datos} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
-		En esta sección se hablará del proceso seguido para limpiar la base de datos que se obtuvo, se mostrará la forma de evaluar los "errores" y con este criterio poder limpiar la base de datos.
+		Una vez obtenida la base de datos, es necesario hacer una inspección de esta misma para verificar que los estos datos sean útiles para proceder a generar un modelo, este paso resulta de suma importancia, ya que de esto depende que la precisión de los resultados del modelo.\\\\
+		Para ello se identificarán datos que resulten incompletos, incorrectos, inexactos, no pertinentes para
+		luego sustituirlos, modificarlos o en su caso, eliminar estos datos.\\\\
+		Una vez realizada esta limpieza, la base de datos será compatible con el entrenamiento y los resultados generados al final serán más entendibles.\\\\
+		Estas inconsistencias en el conjunto de datos pueden ser causados por errores de entradas del usuario, corrupción de los datos, errores en el área de scraping, o simplemente tienen caracteres que no nos interesa procesar.\\\\
+		Se utilizará la librería de "Pandas" y en caso de que se requiera, utilizar la librería "re" para hacer esta limpieza, estás dos librerías de Python ayudarán a que los datos puedan ser utilizados para realizar el debido preprocesamiento como siguiente paso sin tener que cambiar cada campo manualmente, lo que mejora la eficiencia para poder lograr el objetivo propuesto.\\\\
+		Para limpiar los datos seguiremos el estándar de limpieza de datos: https://www.digitalvidya.com/blog/data-cleaning-techniques/
+		\begin{enumerate}
+			\item Remover carácteres innecesarios
+			\item Eliminar Duplicados
+			\item Evitar errores ortográficos o erores de similitud
+			\item Convertir los tipos de dato
+			\item Tratar los valores nulos o faltantes
+		\end{enumerate}
+		\newpage
+		\subsection{Remover caracteres  innecesarios} 
+		Es necesario remover este tipo de elementos del conjunto de datos para que al momento de entrenar el modelo, no arroje resultados con valores ilegibles o incluso, que no se pueda tratar la base de datos correctamente.\\\\
+		Para este paso, es necesario tener conocimiento de expresiones regulares básicas para poder delimitar los espacios dobles, letras o caracteres especiales ilegibles, saltos de línea, tabuladores, entre otros que peudan causar errores en los siguientes pasos.
 		
-		\subsection{Regular Expressions} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-		Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. 
-		\subsection{Técnicas de Scrapping} % Explicar la técnica que se usó para scrappear la base de datos
-		\subsection{Implementación} % Explicar como se obtuvo en código la base de datos limpia
+		\subsection{Eliminar Duplicados} 
+		Pueden existir datos duplicados dentro de la base de datos que para el entrenamiento sería inútil además que solicitaría recursos innecesarios al sistema el meter más datos de los necesarios, para ello, con la función drop.duplicates() de pandas, se podrá lograr el acometido sin problema alguno.
+		
+		\subsection{Evitar errores ortográficos o erores de similitud}
+		Existen librerías en el idioma inglés para corregir la ortografía, en este proyecto se quiere generar la letra apegada a la jerga utilizada en el idioma para poder generar las nuevas letras de canciones, por lo que no será necesario hacer a profundidad este paso.
+		
+		\subsection{Convertir los tipos de dato} 
+		Se va a corroborar que todas las celdas contengan únicamente el tipo varchar con un límite de 500 caracteres, número elegido al tener una media de todos los elementos de 350 caracteres aproximadamente. El número de filas que contienen más de 500 caracteres es muy bajo por lo que al cortar las canciones que tienen más puede ayudar a ahorrar la memoria utilizada a la hora del entrenamiento.
+		\subsection{Tratar los valores nulos o faltantes} 
+		Tener datos nulos en el entrenamiento puede llegar a ser fatal debido a que además de utilizar memoria en el entrenamiento, a la hora de generar resultados, estos resultan en resultados nulos, además que tratar la misma base de datos a la hora del preprocesamiento puede arrojarnos errores a la hora de manipular la base de datos.
+		
 		\subsection{Resultados} % Explicar los Resultados
-
+		Una vez realizada esta limpieza general del conjunto de datos, el resultado esperado es tener una base de datos útil y solo con los datos necesarios para poder tratarlos con el debido proceso para empezar el preprocesamiento de entrenamiento del modelo de la red reuronal, este proceso es necesario hacer solo una sola vez para cada género musical ingresado, en caso de que se lleguen a necesitar más datos, será necesario repetir el proceso para poder generar resultados de la manera más óptima posible.
 \newpage
-\end{comment}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                       																																		  %
 %                                                      																																	  		  %
-%              																	 Iteración 3  																				  			 %
+%              							Iteración 3  																				  			 %
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1906,7 +1933,7 @@ natural y redes neuronales}\\
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
 		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
 		\subsubsection*{BERT}
-		Como ha sido expuesto con anterioridad BERT (Bidirectional Encoder Representations from Transformers) el cual se usarás para clasificar oraciones, se puede entender de forma más sencilla de la siguiente manera:
+		Como ha sido expuesto con anterioridad BERT (Bidirectional Encoder Representations from Transformers) el cual se usará para clasificar oraciones, se puede entender de forma más sencilla de la siguiente manera:
 		\begin{itemize}
 			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
 			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
@@ -1936,33 +1963,34 @@ natural y redes neuronales}\\
 		Siendo el resultado esperado uno muy similar a la estructura que se muestra a continuación y en la que se puede ver lo siguiente:\\\\
 		En todos los casos la palabra que rime tendrá un valor entre 0 y 1 (valor flotante) el cual determinará qué tan alta sería la posibilidad de que la palabra rime, siendo el valor 0 que no rime y el valor 1 representaría una rima segura. \\
 		
-		\subsubsection{Verso}
+		\subsubsection*{Verso}
 		\begin{itemize}
 			\item Estará compuesto de 4 a 6 oraciones y el valor será decidido por un número al azar.
 			\item Las palabras que serán predichas en todo el verso serán de 4 a 5 y el valor será decidido por un número al azar.
 		\end{itemize}
 		
-		\subsubsection{Pre-coro y puente}
+		\subsubsection*{Pre-coro y puente}
 		\begin{itemize}
 			\item Estará compuesto de 2 a 3 oraciones y el valor será decidido por un número al azar.
 			\item Las palabras que serán predichas en todo el verso serán de 6 a 10 y el valor será decidido por un número al azar.
 		\end{itemize}
 	
-		\subsubsection{Coro}
+		\subsubsection*{Coro}
 		\begin{itemize}
 			\item Estará compuesto de 3 a 4 oraciones y el valor será decidido por un número al azar.
 			\item Las palabras que serán predichas en todo el verso serán de 3 a 8 y el valor será decidido por un número al azar.
 		\end{itemize}
 		
 		\begin{figure}[H]
-			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_3/lyrics_template.png}
+			\includegraphics[width=15cm]{./imagenes/Disenio/Arquitectura/Generacion_letras.png}
 			\centering 
 			\caption{Diseño de la estructura del modelo}
 		\end{figure}
 		
 		\newpage
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%                                                       																																		  %
+	%                                                       																																
+	%
 	%                                                      																																	  		  %
 	%              																	 Iteración 4  																				  			 %
 	%                                                      																																			  %
@@ -1987,7 +2015,7 @@ natural y redes neuronales}\\
 	\subsection{Suministrado de Datos}
 	Al ingresar a SageMaker lo primero que nos es requerido hacer es una instancia  bloc de notas (Jupyter Notebook) dentro del cual escribiremos el código en Python que ocuparemos para ejecutar todo el procedimiento visto en la iteración tres.
 	
-		\subsubsection{Instancia de bloc de notas}
+		\subsubsection*{Instancia de bloc de notas}
 		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribirlo y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
 		
 		\begin{figure}[H]
@@ -2005,7 +2033,7 @@ natural y redes neuronales}\\
 		\item Desplegar el modelo, para este paso de la misma forma que ocurre con el entrenamiento del modelo, Sagemaker proporciona una instancia que nos permitirá alojarlo para su posterior uso llamada "Instancia de Alojamiento de Aprendizaje de Máquina".
 	\end{itemize}
 	
-	Posterior a todos los pasos mencionados anteriormente que se realizarán dentro de la instancia de Jupyter se puede crear ahí mismo un `\acrshort{api} endpoint´ que responderá a una petición hecha por el usuario para acceder al modelo generado y así generar y devolver la letra de la canción.
+	Posterior a todos los pasos mencionados anteriormente que se realizarán dentro de la instancia de Jupyter se puede crear ahí mismo un `\acrshort{api} endpoint' que responderá a una petición hecha por el usuario para acceder al modelo generado y así generar y devolver la letra de la canción.
 	
 	\begin{figure}[H]
 		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.png}
@@ -2045,7 +2073,7 @@ natural y redes neuronales}\\
 	\newpage
 
 \section{Aplicación web}
-En este apartado se mostrará un primer boceto de la aplicación web una vez terminada y funcionando.	        
+En este apartado se mostrará un primer boceto de las vistas de la aplicación web.	        
 \begin{figure}[H] \caption{Aplicación web, pagina inicial.}
 	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
 	\centering 
@@ -2055,8 +2083,8 @@ En este apartado se mostrará un primer boceto de la aplicación web una vez ter
 	\centering 
 \end{figure} 
 % Rename Appendice to Anexos
-\renewcommand\appendixpagename{Anexos}
-\renewcommand\appendixtocname{Anexos}
+\renewcommand*\appendixpagename{{\textcolor{azulescom}{Anexos}}}
+\renewcommand*\appendixtocname{{\textcolor{azulescom}{Anexos}}}
 \appendixpageon
 	\begin{appendices}
 	%%Glosario
