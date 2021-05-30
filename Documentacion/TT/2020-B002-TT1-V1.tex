@@ -2105,15 +2105,14 @@ natural y redes neuronales}\\
 	Una vez que se hacen estas asignaciones, en el código tu puedes dejar que la generación de textos sea completamente aleatoria, o que se utilicen valores que cumplan ciertas condiciones, como puede ser que los textos generados sean con palabras de valores que van de 0.5 a 1 o de 0.5. a 0, también puedes manipular que tan largas o cortas quieres que sean los textos generados.\\\\
 	Para la generación de los textos de prueba se decidió no influir en la selección de palabras por sus valores, este atributo se dejo al azar, en lo que, si se influyó, fue en la cantidad de palabras por cada oración para evitar que los versos fuesen muy largos y que tampoco fuesen muy cortos.\\\\
 	Algunos resultados, son los siguientes:
-	\begin{figure}[H] \caption{Ejemplo 1 usando cadenas de Markov}
-		\includegraphics[scale=.5]{./imagenes/Disenio/Pruebas/Markov1.png}
-		\centering 
-	\end{figure}
-	\begin{figure}[H] \caption{Ejemplo 2 usando cadenas de Markov}
-		\includegraphics[scale=.5]{./imagenes/Disenio/Pruebas/Markov2.png}
-		\centering 
-	\end{figure}
-	Se opto por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad son copia y pega de las oraciones que se encuentran en el dataset, así como en ocasiones se encuentra la misma palabra repetida en la misma oración muchas veces o en algunos casos las oraciones generadas no tienen sentido alguno.\\\\
+	\begin{center}
+		\lstinputlisting{./imagenes/Disenio/Pruebas/lyric.txt}
+	\end{center}
+	El código utilizado para la generación de los textos fue el siguiente:
+	\begin{center}
+		\lstinputlisting[language=Python]{./imagenes/Disenio/Pruebas/markovif.py}
+	\end{center}
+	Se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad son copia y pega de las oraciones que se encuentran en el dataset, así como en ocasiones se encuentra la misma palabra repetida en la misma oración muchas veces o en algunos casos las oraciones generadas no tienen sentido alguno.\\\\
 	
 	\newpage
 
