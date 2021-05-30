@@ -2071,6 +2071,26 @@ natural y redes neuronales}\\
 	\end{figure}
 	
 	\newpage
+	
+	\section{Pruebas}
+	
+	\subsection{Cadenas de Markov}
+	Una de las primeras pruebas que se realizo durante el desarrollo del proyecto fue la generación de textos utilizando cadenas de markov, esto se logro gracias a que se utilizó una librería de Python llamada markovify.
+	Esta librería lo que hace es que una vez que el dataset se encuentra limpio y organizado, va a realizar un cálculo y asignación de valores tanto a las oraciones, como a las palabras que aparecen dentro de estas oraciones, los valores asignados, varían de 0 a 1 sin llegar a ser 0 o 1, y estos son asignados dependiendo a la frecuencia en la que la palabra va apareciendo.\\\\
+	Una vez que se hacen estas asignaciones, en el código tu puedes dejar que la generación de textos sea completamente aleatoria, o que se utilicen valores que cumplan ciertas condiciones, como puede ser que los textos generados sean con palabras de valores que van de 0.5 a 1 o de 0.5. a 0, también puedes manipular que tan largas o cortas quieres que sean los textos generados.\\\\
+	Para la generación de los textos de prueba se decidió no influir en la selección de palabras por sus valores, este atributo se dejo al azar, en lo que, si se influyó, fue en la cantidad de palabras por cada oración para evitar que los versos fuesen muy largos y que tampoco fuesen muy cortos.\\\\
+	Algunos resultados, son los siguientes:
+	\begin{figure}[H] \caption{Ejemplo 1 usando cadenas de Markov}
+		\includegraphics[scale=.5]{./imagenes/Disenio/Pruebas/Markov1.png}
+		\centering 
+	\end{figure}
+	\begin{figure}[H] \caption{Ejemplo 2 usando cadenas de Markov}
+		\includegraphics[scale=.5]{./imagenes/Disenio/Pruebas/Markov2.png}
+		\centering 
+	\end{figure}
+	Se opto por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad son copia y pega de las oraciones que se encuentran en el dataset, así como en ocasiones se encuentra la misma palabra repetida en la misma oración muchas veces o en algunos casos las oraciones generadas no tienen sentido alguno.\\\\
+	
+	\newpage
 
 \section{Aplicación web}
 En este apartado se mostrará un primer boceto de las vistas de la aplicación web.	        
