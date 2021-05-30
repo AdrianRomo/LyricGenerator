@@ -1,5 +1,7 @@
 import markovify
 import random 
+import pandas as pd
+import os
 
 def versos(cantidad):
 	for sentence in range(cantidad):
@@ -24,9 +26,12 @@ lenghtversos = [4, 5, 6]
 lenghtlyric = [80, 100, 120]
 lenghtcoros = [60, 80, 100]
 coro = []
-file = open('lyrics150k.txt', 'r') 
-text = file.read()
-markovifyModel = markovify.Text(text)
+m_columns = ['Lyric']
+path = os.chdir('..')
+path = os.path(os.getcwd())
+print(path)
+df = pd.read_csv('lyrics-data.csv', encoding='latin-1', usecols=m_columns)
+markovifyModel = markovify.Text(df)
 markovifyModel = markovifyModel.compile()
 generarcoros(random.choice(lenghtversos))
 for beginning in range(2): 
