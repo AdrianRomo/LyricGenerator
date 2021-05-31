@@ -585,6 +585,32 @@ natural y redes neuronales}\\
 	    	\includegraphics[width=12cm]{./imagenes/Introduccion/scrumban_buckets.jpg}
 	    	\centering \caption{Funcionamiento de la planificación por cubetas}
 	    \end{figure}
+    
+    	\subsection{Implementación}
+    	En el proyecto se aplicará esta metodología utilizando la aplicación de Trello para llevar a cabo el tablero, contando con cuatro listas importantes:
+    	\begin{itemize}
+    		\item Scrum Backlog: Contará con las características generales de la iteración en la que se pretende trabajar.
+    		\item  To Do: Lista en la que cada integrante del equipo agrega funcionalidades tanto las que son funcionales como las que no lo son  que tendrá el proyecto, en sus debidas reuniones se discutirá sobre la priorización de cada una de las tarjetas que se agreguen y cada integrante elegirá las que quiera desarrollar y cuántas pueda hacer.
+    		\item In Progress: Cuando el integrante del equipo ya esta trabajando en alguna de las tareas que eligió, pasa a formar parte de esta lista, esto quiere decir que en la siguiente reunión que se tenga tendrá que dar sus debidos resultados o en su defecto, comentar que ya se terminó.
+    		\item Done: Las tareas que forman parte de la iteración que ya se terminaron, van pasando a esta lista, dejando a las otras listas con menos tarjetas a realizar cada vez, una vez que ya estén todas las tareas realizadas, se puede volver a Backlog para poder proseguir con la siguiente iteración del proyecto, en caso de que queden tarjetas y el proyecto esté próximo a entregarse, se tendrán que parar las tareas que no sean vitales al proyecto para que se puedan realizar las tareas con más importancia.
+    	\end{itemize} 
+    	\subsection{Iteraciones}
+    	El proyecto se dividirá en cuatro iteraciones por proyecto terminal, cada iteración tiene una duración establecida de cuatro semanas o un mes, dejando cada iteración de la siguiente manera:
+    	\subsubsection*{Trabajo Terminal I}
+    	\begin{itemize}
+    		\item Se construirá una base de datos acorde al proyecto, la cual contendrá las letras musicales de distintos artistas, así como su género.
+    		\item Se realizará una limpieza a los datos extraídos de la base de datos.
+    		\item Se seleccionarán e implementarán las herramientas necesarias para trabajar en la construcción de un modelo para la red neuronal.
+    		\item Se integrará el modelo generado a la nube para su entrenamiento.
+    	\end{itemize}
+    	\subsubsection*{Trabajo Terminal II}
+    	\begin{itemize}
+    		\item Se implementará la interfaz.
+    		\item Se integrará el front-end con el back-end.
+    		\item Se realizarán las pruebas pertinentes, así como la reingeniería requerida.
+    		\item Se desarrollará el manual técnico y el de usuario.
+    	\end{itemize}
+    
 	    \newpage
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
@@ -801,32 +827,32 @@ natural y redes neuronales}\\
 				Generalmente es una parte única la cual se encuentra al inicio de una canción, acompañada de una \gls{Armonia} o \gls{Melodia} compuesta solo para este inicio. El objetivo de la introducción es de atraer la atención y producir un ambiente.\cite{refEstructuraCancion2}\par
 				\subsubsection*{Verso}\par
 				Es la parte encargada de comenzar a desarrollar la idea a transmitir, trata de contarnos el tema de la canción, y ya cuenta con una \gls{Armonia}  bien establecida.\par
-				\subsubsection*{Pre-estribillo}\par
-				Es un arreglo que permite realizar una transición, su función principal es conectar el verso con el estribillo. También ayuda a evitar que el estribillo se estanque en la monotonía.\par
-				\subsubsection*{Estribillo}\par
+				\subsubsection*{Pre-coro}\par
+				Es un arreglo que permite realizar una transición, su función principal es conectar el verso con el coro. También ayuda a evitar que el coro se estanque en la monotonía.\par
+				\subsubsection*{Coro}\par
 				Es una \gls{Estrofa} la cual se repite varias veces dentro de una composición. Su función principal es acentuar la idea principal de la canción tanto en su letra como en lo musical. Se considera como una de las partes más importantes dentro de una canción y en algunas ocasiones este es repetido al inicio y al final.\par
 				\subsubsection*{Puente}\par
 				Es un interludio el cual conecta dos fragmentos de una canción, permitiendo construir una \gls{Armonia}  entre ellas, suele ser usado para llevar a la canción a su clímax, para prepararlo para el desarrollo final de la canción.\par
 				\subsubsection*{Cierre}\par
-				Este busca terminar o concluir una canción, una de las formas puede ser un ruptura brusca generada por un silencio imprevisto o por una secuencia de \gls{Acordes}. Pero la manera más ordinaria de cerrar es haciendo uso de la repetición de un estribillo.\par
+				Este busca terminar o concluir una canción, una de las formas puede ser un ruptura brusca generada por un silencio imprevisto o por una secuencia de \gls{Acordes}. Pero la manera más ordinaria de cerrar es haciendo uso de la repetición de un coro.\par
 
 			
 			\subsection{Estructura de una canción}
 			La estructura mínima de una canción está compuesta de:\par
 			\begin{itemize}
 			  \item Verso
-			  \item Estribillo
+			  \item Coro
 			  \item Verso
-			  \item Estribillo
+			  \item Coro
 			\end{itemize}\par
 			La estructura más empleada en una canción es la siguiente:
 			\begin{itemize}
 			  \item Introducción
 			  \item Verso
-			  \item Pre-estribillo
-			  \item Estribillo
+			  \item Pre-coro
+			  \item Coro
 			  \item Verso
-			  \item Estribillo
+			  \item Coro
 			  \item Puente
 			  \item Cierre
 			\end{itemize}
@@ -1120,8 +1146,8 @@ natural y redes neuronales}\\
 	   Estos artistas pueden contar con ciertos servicios los cuales ofrecen letras de canciones, pero estas suelen estar precios muy altos o estas no cumplen con las expectativas de los artistas al invertir en ellas.
 	
 	\section{Posible Solución} % Como lo resuelvo
-	   Debido a lo anterior se decidió desarrollar una herramienta de apoyo para estudiantes o aficionados interesados, a los cuales se les dificulte componer nuevas letras musicales, con la finalidad de impulsar la carrera de futuros artistas en la industria musical que no cuentes con los recursos suficientes para poder contratar servicios particulares de compositores.
-	   Dicha herramienta de apoyo se realizará con ayuda de la inteligencia artificial, así como de un modelo de red neuronal recurrente para la generación de las nuevas letras musicales, los usuarios de esta herramienta podrán interactuar con la herramienta para generar letras con sus gustos y propuestas.
+	   Debido a lo anterior se decidió desarrollar una herramienta de apoyo para estudiantes o aficionados interesados, a los cuales se les dificulte componer nuevas letras musicales, con la finalidad de impulsar la carrera de futuros artistas en la industria musical que no cuenten con los recursos suficientes para poder contratar servicios particulares de compositores.
+	   Dicha herramienta de apoyo se realizará con ayuda de la inteligencia artificial, así como de un modelo de red neuronal recurrente para la generación de las nuevas letras musicales, los usuarios de esta herramienta podrán interactuar con la herramienta para generar letras personalizadas según sus propuestas dadas.
 	   
 	   	\section{Sistema a Desarrollar} % Que cosas hace el sistema para resolver el problema
 	   	
@@ -1146,6 +1172,9 @@ natural y redes neuronales}\\
 	   		Y en estos últimos años gracias al hardware que se tiene hoy en día, es posible tener avances en la generación de texto.
 	   	\end{itemize}
    		\subsection{¿Por qué utilizar Redes neuronales LSTM?}
+   		Se hará uso de este tipo de redes neuronales debido a que se ha visto que destacan para la generación de texto \cite{top_ten_lyric}, sobre todo de textos que requieren de contexto, esto es, que las palabras previamente escritas servirán para la inferencia de las posibles palabras futuras. Otros tipos de redes neuronales como las convolucionales o las de multicapas se enfocan en trabajar las palabras de una en una como van llegando sin tomar en cuenta el contexto o sentido dado por las palabras previas, dando poca o nula coherencia al texto generado por estas.\\\\
+   		En especial se pretende trabajar con las redes recurrentes de tipo LSTM debido a que estas pueden “recordar” estados previos y utilizar la información originada de esos estados previos para así poder generar con mayor eficiencia el resultado siguiente, la cual es una característica que no tiene una red neuronal recurrente estándar que en general solo se retroalimenta de un estado pasado o una GRU (Gated Recurrent Unit) la cual en términos generales tiene dos puertas las cuales controlan que información debe mantenerse en memoria así como que información debe de entrar para reajustar el modelo y la salida a generar.
+   		
 	   	\section{Herramientas a utilizar}
 	   	Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas y lenguajes de programación, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
 	   	\paragraph{Python \\}
@@ -2401,6 +2430,9 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	
 	\bibitem{vagalume}
 	Vagalume (2002), Vagalume: Music e tudo [En línea]. Disponible: https://www.vagalume.com.br/ [Último acceso: 25 Mayo 2021]
+	
+	\bibitem{top_ten_lyric}
+	TopTenAI (2020, Mayo 9), Top 10 Lyric Generator Review 2021 [En línea]. Disponible: https://topten.ai/lyric-generator-review/ [Último acceso: 30 Mayo 2021]
 	
 \end{thebibliography}	
 \end{document}
