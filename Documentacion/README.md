@@ -2,8 +2,8 @@
 ## General
 - [X] Checar como poner comillas correctamente en LaTex -> Se puede con “Hola”
 - [X] Arreglar Glosario y Acrónimos (No se muestra al principio del documento como debería)
-- [ ] Cambiar y agregar todos los acrónimos a formato LaTex -> **Jaime lo esta haciendo**
-- [ ] Cambiar y agregar todos las palabras técnicas a Glosario. -> **Jaime lo hace**
+- [X] Cambiar y agregar todos los acrónimos a formato LaTex 
+- [X] Cambiar y agregar todos las palabras técnicas a Glosario. 
 
 
 ## Información de cada sección Desglosada:
@@ -40,9 +40,9 @@
             - [X] 2.6. GPT-2
                 - [X] 2.6.1.  ¿Que es GPT-2?
                 - [X] 2.6.2.  Arquitectura GPT
-            - [ ] 2.7. Base de datos - Falta agregar información
-                - [ ] 2.7.1. Base de datos NoSQL o no relacionales - Faltan los alcances que se pueden tener con la base de datos nosql, comparación con una SQL e imágenes* (?)
-            - [ ] 2.8. Canción - Poner texto más formal y agregar una referencia con cita
+            - [X] 2.7. Base de datos - Falta agregar información
+                - [X] 2.7.1. Base de datos NoSQL o no relacionales
+            - [X] 2.8. Canción
                 - [X] 2.8.1. Elementos de una canción 
                 - [X] 2.8.2. Introducción 
                 - [X] 2.8.3. Verso 
@@ -70,31 +70,31 @@
             - [X] 3.3. Herramientas a usar  
                 - [X] 3.3.1. Software - Si hace falta alguna agregarla
                 - [X] 3.3.2. Hardware
-            - [ ] 3.4. Arquitectura del Sistema
-                - [ ] 3.4.1 Descripción de la Arquitectura del Sistema
-                - [ ] 3.4.2 Aspectos Económicos
-                - [ ] 3.4.3 Aspectos Legales
-            - [ ] 3.5 Diagrama de Casos de Uso General
-        - [ ] 4. Iteración 1. ( Base de Datos) - **Adrian lo hace**
-            - [ ] 4.1 Base de Datos - Explicar como se sacó la Base de Datos
-            - [ ] 4.2 Género Musical - Explicar por qué se sacó de este género musical
-            - [ ] 4.3 Resultados* - Explicar los Resultados
-        - [ ] 5. Iteración 2. ( Limpieza Base de Datos ) -> ** Adrian lo hace **
-            - [ ] 5.1 Descripción.
-            - [ ] 5.2 Limpieza - Explicar cómo se limpió la base de datos
-            - [ ] 5.3 Regular Expressions - Explicar qué es una regular expression, cómo se genera y para qué sirve
-            - [ ] 5.4 Técnicas de Scrapping - Explicar la técnica que se usó para scrappear la base de datos
-            - [ ] 5.5 Implementación - Explicar como se obtuvo en código la base de datos limpia
-            - [ ] 5.6 Resultado - Explicar resultados
-	- [ ] 6. Iteración 3. ( Modelo para Neural Networks )
-		- [ ] 6.1 Herramientas - Herramientas para generar el modelo
-		- [ ] 6.2 Modelo - Explicar las partes del modelo con sus diagramas
-		- [ ] 6.3 Implementación - Explicar como se implementó con código o pasos para obtener el modelo en AWS
-		- [ ] 6.4 Resultados - Explicar los resultados obtenidos
-	- [ ] 7. Iteración 4. ( Generación Modelo en la Nube )
-		- [ ] 7.1 Integración - Explicar cómo se configuró el modelo en la nube 
-		- [ ] 7.2 Herramientas - Explicar las herramientas más a fondo
-		- [ ] 7.3 Implementación - Explicar como se implementó con código o pasos para obtener el modelo en AWS
-		- [ ] 7.4 Resultado - Explicar los resultados obtenidos
-        - [ ] Bibliografía - Ordenar por orden de aparición. -> **Adrián lo hará**
+            - [X] 3.4. Arquitectura del Sistema
+                - [X] 3.4.1 Descripción de la Arquitectura del Sistema
+                - [X] 3.4.2 Aspectos Económicos
+                - [X] 3.4.3 Aspectos Legales
+            - [X] 3.5 Diagrama de Sistema General
+        - [X] 4. Iteración 1. (Base de Datos)
+            - [X] 4.1 Base de Datos 
+            - [X] 4.2 Género Musical 
+            - [X] 4.3 Resultados* 
+        - [X] 5. Iteración 2. (Limpieza Base de Datos) 
+            - [X] 5.1 Descripción.
+            - [X] 5.2 Limpieza 
+            - [X] 5.3 Regular Expressions 
+            - [X] 5.4 Técnicas de Scrapping 
+            - [X] 5.5 Implementación
+            - [X] 5.6 Resultado - Explicar resultados
+	- [X] 6. Iteración 3. (Modelo para Neural Networks)
+		- [X] 6.1 Herramientas 
+		- [X] 6.2 Modelo 
+		- [X] 6.3 Implementación 
+		- [X] 6.4 Resultados
+	- [X] 7. Iteración 4. (Generación Modelo en la Nube)
+		- [X] 7.1 Integración
+		- [X] 7.2 Herramientas 
+		- [X] 7.3 Implementación
+		- [X] 7.4 Resultado
+        - [X] Bibliografía
 
