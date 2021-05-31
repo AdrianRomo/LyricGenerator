@@ -363,7 +363,8 @@
 \newacronym{iso}{ISO}{International Standardization Organization}
 \newacronym{xml}{XML}{Extensible Markup Language}
 \newacronym{svg}{SVG}{Scalable Vector Graphics}
-
+\newacronym{rnn}{RNN}{Recurrent Neural Network}
+\newacronym{lstm}{LTSM}{Long Short Term Memory}
 %------------------------------------------------FINAL DE ACRÓNIMOS------------------------------------------------%
 
 \begin{document}
@@ -513,8 +514,8 @@ natural y redes neuronales}\\
 			\hline
 			\hfil Nuestra propuesta & Aplicación web que haciendo uso de una IA va a generar letras musicales originales a partir de un género musical en exclusivo, lo que asegurará un resultado original con coros y versos distintos cada vez que se utilice. & \hfil Gratuito \\
 			\hline
-		\end{tabular}
-		\caption[Resumen de productos similares]{Resumen de productos similares comparados con nuestra propuesta}
+		\end{tabular}\label{table:Propuestas}% is used to refer this table in the text
+		\caption[productossimilares]{Resumen de productos similares comparados con nuestra propuesta}
 \end{table}
 \newpage
 	\section{Objetivos}
@@ -562,7 +563,7 @@ natural y redes neuronales}\\
 	    		 \hfil Roles & Scrum master, Product owner, Scrum team & Pueden incluir especialistas o integrantes generalizados & No requiere un rol específico \\
 	    		 \hline
 	    	\end{tabular}
-	    	\caption[Comparación metodologías ágiles]{Tabla comparativa de las distintos metodologías ágiles contempladas}
+	    	\caption[Comparaciónmetodologíaságiles]{Tabla comparativa de las distintos metodologías ágiles contempladas}
 	    \end{table}
 	    Scrumban hace uso de iteraciones, las cuales monitorea con el apoyo de un recurso visual, como lo puede ser un tablero. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (\acrshort{wip} por sus siglas en inglés Work in Progress). Cuando \acrshort{wip} desciende de cierto nivel, se establece una acción para que el equipo sepa cuándo y qué tarea planificar a continuación.\\\\
 	    \textbf{Iteración}\\
@@ -615,14 +616,14 @@ natural y redes neuronales}\\
         \section{Organización del documento}
             Para dar inicio a este trabajo terminal, presentamos de manera breve la estructura de este reporte, con el objetivo de que el lector pueda tener un mejor entendimiento del trabajo.
 
-            \subsection{Capítulo 2. Marco teórico}
+            \subsection*{Capítulo 2. Marco teórico}
                 En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones, técnicas, herramientas, servicios, así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
              
-            \subsection{Capítulo 3. Análisis.}
-                Dentro de este capitulo se analiza el estudio de factibilidad tanto t\'ecnico como operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan resumidamente las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y el diagrama de casos de uso general. Finalmente se muestra el análisis de los tres componentes que tenemos en el sistema.
+            \subsection*{Capítulo 3. Análisis.}
+                Dentro de este capitulo se hará un análisis tanto del problema propuesto, como sus posibles soluciones, se hará un análisis de estudio de factibilidad t\'ecnico, operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y las historias de usuario del sistema.
              
-            \subsection{Capítulo 4. Diseño}
-                En el cuarto capítulo, nos adentraremos en el desarrollo de los prototipos, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrollan y explican los siguientes diagramas: `Casos de uso', `Flujo', `Flujo de datos', `Clases', `Secuencia' y `Actividades' y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
+            \subsection*{Capítulo 4. Diseño}
+                En el cuarto capítulo, nos adentraremos en el desarrollo de las iteraciones propuestas, es decir, se encuentran los diagramas pertinentes para poder modelar nuestro trabajo terminal y proceder a la etapa de implementación. En este capítulo se desarrolla el diseño de cada parte del sistema y se muestra la interfaz de usuario propuesta junto con los requisitos de diseño.
              \begin{comment}
 				%% PARA TT2
             \subsection{Capítulo 5. Desarrollo}
@@ -1142,224 +1143,275 @@ natural y redes neuronales}\\
 	\chapter{\textcolor{azulescom}{Análisis}}
 	
 	   \section{Problemática} % Que problema resuelvo
-	   Los nuevos artistas musicales suelen frustrarse durante el proceso creativo para la composición de una letra musical, debido a que no cuentan con la creatividad o el tiempo para realizarlas, además de que esta tarea puede ser agotadora, difícil y estresante, en consecuencia, pueden llegar a abandonar sus sueños y aspiraciones.
+	   Los nuevos artistas musicales suelen frustrarse durante el proceso creativo para la composición de una letra musical, debido a que no cuentan con la creatividad o el tiempo para realizarlas, además de que esta tarea puede ser agotadora, difícil y estresante, en consecuencia, pueden llegar a abandonar sus sueños y aspiraciones.\\\\
 	   Estos artistas pueden contar con ciertos servicios los cuales ofrecen letras de canciones, pero estas suelen estar precios muy altos o estas no cumplen con las expectativas de los artistas al invertir en ellas.
-	
-	\section{Posible Solución} % Como lo resuelvo
-	   Debido a lo anterior se decidió desarrollar una herramienta de apoyo para estudiantes o aficionados interesados, a los cuales se les dificulte componer nuevas letras musicales, con la finalidad de impulsar la carrera de futuros artistas en la industria musical que no cuenten con los recursos suficientes para poder contratar servicios particulares de compositores.
-	   Dicha herramienta de apoyo se realizará con ayuda de la inteligencia artificial, así como de un modelo de red neuronal recurrente para la generación de las nuevas letras musicales, los usuarios de esta herramienta podrán interactuar con la herramienta para generar letras personalizadas según sus propuestas dadas.
+	  
+	\section{Nuestra Solución} % Como lo resuelvo
+	   Debido a lo anterior se ha decidido desarrollar una herramienta de apoyo para estudiantes o aficionados interesados, a los cuales se les dificulte componer nuevas letras musicales, con la finalidad de impulsar la carrera de futuros artistas en la industria musical que no cuenten con los recursos suficientes para poder contratar servicios particulares de compositores.\\\\
+	   Dicha herramienta de apoyo se realizará con ayuda de la inteligencia artificial, así como de un modelo de red neuronal recurrente para la generación de las nuevas letras musicales, los usuarios de esta herramienta podrán interactuar con la herramienta para generar letras personalizadas según sus propuestas dadas.\\\\
+	   Para corroborar que sea la mejor opción, se implementarán pruebas con otras herramientas como BERT y Cadenas de Markov con las que podremos comparar el resultado.
 	   
-	   	\section{Sistema a Desarrollar} % Que cosas hace el sistema para resolver el problema
-	   	
-	   	\section{Profundización en la solución propuesta} % Porque elegi esas soluciones
-	   	
-	   	\subsection{¿Por qué utilizar Inteligencia Artificial?}
-	   	Elegimos la inteligencia artificial como tecnología principal para desarrollar este sistema, se quiere investigar el funcionamiento de las redes neuronales y su impacto que puede llegar a tener en el área de la creatividad y generación de texto, que es un campo relativamente nuevo y con muchos alcances que aún quedan por descubrir.
-	   	
-	   	Cabe destacar que aunque es un tema relacionado con la ingeniería en sistemas computacionales, no es algo que se aprenda como tema principal, por lo que requerirá una ardua investigación y desarrollo para poder lograr los objetivos propuestos.
-	   	
-	   	La inteligencia artificial nos permite buscar patrones y al mismo tiempo soluciones nuevas y eficientes, para problemas que antes no se podía saber que una computadora podría hacer.
-	   
-	   	\subsection{¿Por qué utilizar Procesamiento de Lenguaje Natural?}
-	   	El Procesamiento de Lenguaje Natural, es una rama de la inteligencia artificial que es estudiada desde 1940-1950\cite{HistoriaNPL} y ha tenido avances que han podido ayudar a diferentes áreas tales como:
-	   	\begin{itemize}
-	   		\item Analisis de Sentimientos
-	   		\item Clasificación de Texto
-	   		\item Chatbots \& Asistentes Virtuales
-	   		\item Extracción de texto
-	   		\item Traductores
-	   		\item Auto correctores.
-	   		Y en estos últimos años gracias al hardware que se tiene hoy en día, es posible tener avances en la generación de texto.
-	   	\end{itemize}
-   		\subsection{¿Por qué utilizar Redes neuronales LSTM?}
-   		Se hará uso de este tipo de redes neuronales debido a que se ha visto que destacan para la generación de texto \cite{top_ten_lyric}, sobre todo de textos que requieren de contexto, esto es, que las palabras previamente escritas servirán para la inferencia de las posibles palabras futuras. Otros tipos de redes neuronales como las convolucionales o las de multicapas se enfocan en trabajar las palabras de una en una como van llegando sin tomar en cuenta el contexto o sentido dado por las palabras previas, dando poca o nula coherencia al texto generado por estas.\\\\
-   		En especial se pretende trabajar con las redes recurrentes de tipo LSTM debido a que estas pueden “recordar” estados previos y utilizar la información originada de esos estados previos para así poder generar con mayor eficiencia el resultado siguiente, la cual es una característica que no tiene una red neuronal recurrente estándar que en general solo se retroalimenta de un estado pasado o una GRU (Gated Recurrent Unit) la cual en términos generales tiene dos puertas las cuales controlan que información debe mantenerse en memoria así como que información debe de entrar para reajustar el modelo y la salida a generar.
-   		
+	   	 \subsection{¿Por qué utilizar Inteligencia Artificial?}
+	   	 Se eligió la inteligencia artificial como tecnología principal para desarrollar este sistema, se quiere investigar el funcionamiento de las redes neuronales y su impacto que puede llegar a tener en el área de la creatividad y generación de texto, que es un campo relativamente nuevo y con muchos alcances que aún quedan por descubrir.
+	   	 
+	   	 Cabe destacar que aunque es un tema relacionado con la ingeniería en sistemas computacionales, no es algo que se aprenda como tema principal, por lo que requerirá una ardua investigación y desarrollo para poder lograr los objetivos propuestos.
+	   	 
+	   	 La inteligencia artificial nos permite buscar patrones y al mismo tiempo soluciones nuevas y eficientes, para problemas que antes no se podía saber que una computadora podría hacer.
+	   	 
+	   	 \subsection{¿Por qué utilizar Procesamiento de Lenguaje Natural?}
+	   	 El Procesamiento de Lenguaje Natural, es una rama de la inteligencia artificial que es estudiada desde 1940-1950\cite{HistoriaNPL} y ha tenido avances que han podido ayudar a diferentes áreas tales como:
+	   	 \begin{itemize}
+	   	 	\item Analisis de Sentimientos
+	   	 	\item Clasificación de Texto
+	   	 	\item Chatbots \& Asistentes Virtuales
+	   	 	\item Extracción de texto
+	   	 	\item Traductores
+	   	 	\item Auto correctores.
+	   	 	Y en estos últimos años gracias al hardware que se tiene hoy en día, es posible tener avances en la generación de texto.
+	   	 \end{itemize}
+   	 
+	   	 \subsection{¿Por qué utilizar Redes neuronales \acrfull{lstm}?}
+	   	 Se hará uso de este tipo de redes neuronales debido a que se ha visto que destacan para la generación de texto \cite{top_ten_lyric}, sobre todo de textos que requieren de contexto, esto es, que las palabras previamente escritas servirán para la inferencia de las posibles palabras futuras. Otros tipos de redes neuronales como las convolucionales o las de multicapas se enfocan en trabajar las palabras de una en una como van llegando sin tomar en cuenta el contexto o sentido dado por las palabras previas, dando poca o nula coherencia al texto generado por estas.\\\\
+	   	 En especial se pretende trabajar con las redes recurrentes de tipo LSTM debido a que estas pueden “recordar” estados previos y utilizar la información originada de esos estados previos para así poder generar con mayor eficiencia el resultado siguiente, la cual es una característica que no tiene una red neuronal recurrente estándar que en general solo se retroalimenta de un estado pasado o una GRU (Gated Recurrent Unit) la cual en términos generales tiene dos puertas las cuales controlan que información debe mantenerse en memoria así como que información debe de entrar para reajustar el modelo y la salida a generar.	
+	   	 		
 	   	\section{Herramientas a utilizar}
-	   	Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas y lenguajes de programación, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
-	   	\paragraph{Python \\}
-	   	Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\\\\
-	   	Las principales ventajas de Python son: 
+	   	\subsection{Software}
+		   	Para el desarrollo de software de este prototipo, es necesario hacer mención de algunas de las siguientes herramientas y lenguajes de programación, para tener una idea clara sobre qué herramientas estamos utilizando y porque es que las estamos utilizando:
+		   	\paragraph{Python \\}
+		   	Python es un lenguaje de programación orientado a objetos y de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con tipado dinámico y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código.\cite{refQuesPython}\\\\
+		   	Las principales ventajas de Python son: 
+		   	\begin{itemize}
+		   		\item Es fácil y rápido desarrollar una aplicación.
+		   		\item Cuenta con una gran cantidad de librerias.
+		   		\item Es fácil de entender el código y darle mantenimiento.
+		   	\end{itemize}
+		   	
+		   	Principales desventajas son: 
+		   	\begin{itemize}
+		   		\item En ocasiones la ejecución del código es lenta.
+		   		\item Consume mucha memoria.
+		   	\end{itemize}
+		   	\paragraph{\acrshort{bert} \\}
+		   	\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
+		   	Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
+		   	El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+		   	
+		   	\paragraph{HTML\\}
+		   	
+		   	\acrfull{html} es un lenguaje de marcado que define la estructura de una página web y su contenido. \acrshort{html} consta de una serie de elementos que se utilizan para encerrar o envolver diferentes partes del contenido para que estos se visualicen de cierta manera o actúe de cierta manera. Las etiquetas adjuntas pueden hacer que una palabra o imagen sea un hipervínculo a otro lugar, pueden poner palabras en cursiva, pueden hacer que la fuente sea más grande o pequeña, etc. \cite{refHtml} \\\\\
+		   	\acrshort{html}5 es la versión mas reciente de html, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las paginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia así como una mejor integración a APIs y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}		
+		   	
+		   	\paragraph{CSS\\}
+		   	
+		   	\acrfull{css} es el lenguaje para describir la presentación de las páginas web así como hacerlas más atractivas. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y puede ser empleado con cualquier otro lenguaje de marcado basado en \acrshort{xml} o \acrshort{svg}. Usando CSS se pueden controlar con precisión cómo se ven los elementos \acrshort{html} en el navegador, que presentará para las etiquetas de marcado el diseño que cada uno desee. La separación de \acrshort{html} de \acrshort{css} facilita el mantenimiento de los sitios, compartir las hojas de estilo entre páginas y adaptarlas a distintos ámbitos. \cite{refcss}\\\\
+		   	Es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web.\\\\
+		   	Antes de CSS, las etiquetas como fuente, color, estilo de fondo, alineación, borde y tamaño tenían que repetirse en cada elemento de una página web. Ahora con los CSS, podemos definir cómo se van a comportar las etiquetas, al ser guardado en un archivo por separado, esta misma configuración puede usarse en otra página web ahorrando tiempo diseñándola. Además de que CSS provee de mejor y más detallados atributos para cada etiqueta.
+		   	
+		   	\paragraph {JavaScript \\}
+		   	
+		   	JavaScript es un lenguaje de programación o secuencias de comandos que permite implementar funciones complejas en las páginas web. Estos scripts pueden ser desarrollados en el mismo \acrshort{html} para que sean ejecutados automáticamente cuando se carga dicha páginas web, estos scripts se proporcionan y ejecutan como texto sin formato. No necesitan una preparación especial ni una compilación para ejecutarse. \cite{refjs}\\\\
+		   	JavaScript puede ejecutarse no solo en un navegador, sino también en un servidor, o en cualquier dispositivo que tenga un programa especial llamado JavaScript engine, el cual permite interpretar y ejecutar los scripts.\\\\
+		   	JavaScript permite crear contenido dinámico dentro de las páginas web, reaccionar ante algunas acciones realizadas por los usuarios como lo son los clicks del ratón, el movimiento del puntero o el presionar cierta tecla, permite enviar peticiones al servidor, así como descargar y subir archivos, además es posible obtener y configurar cookies, mostrar mensajes o alertas al usuario.
+		   	
+		   	\paragraph{OpenSSL\\}
+		   	
+		   	Consiste en un paquete robusto de herramientas de administración y bibliotecas las cuales están relacionadas con la criptografía, estas suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (permitiendo un acceso seguro a sitios \acrshort{https}). Estas herramientas contribuyen al sistema a instaurar el protocolo \acrfull{ssl}, de igual manera como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL posibilita la creación certificados digitales los cuales pueden aplicarse a un servidor, por ejemplo a Apache \cite{refopenssl}.
+		   	
+		   	\paragraph{MongoDB \\}
+		   	MongoDB es un sistema de base de datos multiplataforma dirigido a documentos, de esquema libre, es decir, que cada registro o entrada es capaz de contar con un esquema de datos distinto, con columnas o atributos que pueden variar o no de un registro a otro.\\\\
+		   	Sus características más destacadas son su sencillo sistema de consulta de la base de datos y la velocidad. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
+		   	MongoDB utiliza un modelo No\acrshort{sql} el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
+		   	
+		   	Las ventajas que ofrece MongoDB como herramienta de desarrollo de base de datos no relacionales son:
+		   	\begin{itemize}
+		   		\item La base de datos no tiene un esquema de datos predefinido.
+		   		\item El esquema puede variar para instancias de datos que pertenecen a una misma entidad.
+		   		\item En ocasiones el gestor de la base de datos no es consciente del esquema de la base de datos.
+		   		\item Permite reducir los problemas de concordancia entre estructuras de datos usadas por las aplicaciones y la base de datos.
+		   		\item Frecuentemente se aplican técnicas de desnormalización de los datos.
+		   	\end{itemize}
+		   	\begin{comment}
+		   	\paragraph{MySQL \\}
+		   	Es un sistema de gestión de bases de datos desarrollado por Oracle Corporation, es considerada como la base de datos de código abierto más popular del mundo y una de las más populares, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
+		   	El modelo más común utilizado en este sistema de gestión de base datos, es el modelo relacional, donde se almacenan y proporcionan acceso a puntos de datos relacionados entre sí. Esto es posible a que cada fila de la tabla cuenta con un registro y este tiene un ID único, las columnas contienen atributos de los datos, y cada registro en su mayoría cuenta con un valor para cada atributo, lo que favorece el establecimiento de las relaciones entre los datos.\\\\
+		   	Las principales ventajas son: 
+		   	\begin{itemize}
+		   	\item Evita la duplicidad de registros, habilitando ciertas configuraciones.
+		   	\item Asegura una integridad referencial, es decir, al eliminar un registro elimina todos los registros relacionados.
+		   	\item Favorece la normalización al ser más comprensible y aplicable.
+		   	\end{itemize}
+		   	
+		   	Mientras que las principales desventajas son: 
+		   	\begin{itemize}
+		   	\item Presentan deficiencias con datos gráficos, multimedia, \acrshort{cad} y sistemas de información geográfica.
+		   	\item Dificulta la manipulación de bloques de texto como un tipo de dato.
+		   	\end{itemize}
+		   	
+		   	\paragraph{Flask \\}
+		   	Flask es un mini marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\\\\
+		   	La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\
+		   	Las principales ventajas de Flask son: 
+		   	\begin{itemize}
+		   	\item Permite escalar con facilidad la aplicación.
+		   	\item Es de fácil desarrollo.
+		   	\item Es flexible con la platillas que te da por default.
+		   	\item Es modular.
+		   	\end{itemize}
+		   	
+		   	Principales desventajas son: 
+		   	\begin{itemize}
+		   	\item No cuenta con muchas herramientas o librerias de apoyo.
+		   	\item No puede manejar peticiones multiples al mismo tiempo.
+		   	\end{itemize}
+		   	
+		   	\paragraph{Gunicorn \\}
+		   	
+		   	Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
+		   	\end{comment}
+		   	\begin{comment}
+		   	\paragraph{\acrshort{gpt}-2. \\}
+		   	\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
+		   	\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
+		   	\end{comment}
+		   	\paragraph{Amazon \acrshort{ec2}. \\}
+		   	Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
+		   	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
+		   	Las principales ventajas de Amazon \acrshort{ec2} son: 
+		   	\begin{itemize}
+		   		\item Cuenta con plantillas predeterminadas de maquinas virtuales y servidores.
+		   		\item Permite configurar la memoria, almacenamiento, CPU y otras caracteristicas dependiendo las necesidades del usuario.
+		   		\item Precios dependiendo del uso y características del equipo o servidor alquilado.
+		   	\end{itemize}
+		   	
+		   	Las principales desventajas son: 
+		   	\begin{itemize}
+		   		\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
+		   		\item Los costos de soporte técnico son muy elevados.
+		   	\end{itemize}		
+		   	
+		   	\paragraph{Amazon SageMaker \\}
+		   	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
+		   	Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
+		   	Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalbilidad lo que permite entrenar los modelos a escala de petabytes. Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
+		   	Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.		
+		   	\newpage	
+		   	
+		   	\paragraph{Amazon S3. \\}
+		   	Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
+		   	
+		   	\paragraph{Apache \\}
+		   	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
+		   	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
+			   	\subsection{Hardware}
+		Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
+		\begin{table}[H]
+			\begin{tabular}{|p{3.5cm}||p{10cm}|}
+				\rowcolor{guindapoli}
+				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
+				\hline
+				\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
+				\hline
+				\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
+				\hline
+				\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
+				\hline
+				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
+				\hline
+			\end{tabular}
+			\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{|p{3.5cm}||p{10cm}|}
+				\rowcolor{guindapoli}
+				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
+				\hline
+				\rowcolor{azulclaro}Marca & Apple\\
+				\hline
+				\rowcolor{white}Modelo & iMac Late 2012\\
+				\hline
+				\rowcolor{azulclaro}Procesador & Intel Core i5\\
+				\hline
+				\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
+				\hline
+				\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
+				\hline
+				\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
+				\hline
+			\end{tabular}
+			\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
+		\end{table}
+
+		\begin{table}[H]
+			\begin{tabular}{|p{3.5cm}||p{10cm}|}
+				\rowcolor{guindapoli}
+				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
+				\hline
+				\rowcolor{azulclaro}Procesador & Amd FX-8350\\
+				\hline
+				\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
+				\hline
+				\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
+				\hline
+				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
+				\hline
+			\end{tabular}
+			\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
+		\end{table}
+	   	\newpage
+	   	\section{Algoritmos Utilizados} % Porque elegi esas soluciones
+	   	La Inteligencia Artificial es un campo emergente donde se desarrollan nuevas aplicaciones de innovación continuamente.
+	   	Para este generador de letras musicales será necesario implementar diferentes estrategias para poder evaluar cuál es la mejor opción, para ello, se utilizarán tres recursos importantes para ver la evolución de las pruebas y poder evaluar el resultado óptimo a nuestras posibilidades para poder implementarlo en este proyecto.
+	   	
+	   	\subsection{Cadenas de Markov}
+	   	Este sería el algoritmo más sencillo a utilizar, consiste en generar texto de acuerdo a otro texto previo, sin embargo funciona de manera mecánica dando valores aleatorios para generar un texto, posiblemente los enunciados que se generan tienen una estructura medianamente correcta, sin embargo el sentido que tendrá el texto no tendrá ningún sentido, se hará esta prueba para ver el alcance que se tiene con este tipo de algoritmo y poder comparar los resultados finales del proyecto. 
+	   	
+	   	\subsection{Recurrent Neural Networks}
+	   	Anteriormente se explicó lo que eran las redes neuronales recurrentes, en el algoritmo, se aplica para predecir palabras dependiendo de los datos anteriores, a esto se le llaman datos secuenciales, debido a que este algoritmo recuerda la entrada debido a su memoria interna.\\\\
+	   	Centrándonos en la generación de nuevas letras musicales, si observamos atentamente el uso de este tipo de redes neuronales, los datos serán secuenciales ya que las letras de las canciones dependen una de otra. Por lo tanto se usarán redes neuronales del tipo \acrfull{lstm} de  \acrfull{rnn}.\\\\
+	   	Este tipo de redes neuronales son una extensión de  \acrfull{rnn} que ayuda a recordar, en el siguiente diagrama se muestran los componentes de una red neuronal de este tipo:
 	   	\begin{itemize}
-	   		\item Es fácil y rápido desarrollar una aplicación.
-	   		\item Cuenta con una gran cantidad de librerias.
-	   		\item Es fácil de entender el código y darle mantenimiento.
+	   	\item Estado de la celda
+	   	\item Olvida la puerta
+	   	\item Puerta de entrada
+	   	\item Puerta de salida
+	   	\item Memoria celular actual
+	   	\item Salida de celda actual
 	   	\end{itemize}
+   		Los resultados de este tipo de redes neuronales puede variar según el dataset que se utiliza y si la limpieza se hizo correctamente, de igual forma importa mucho el hardware utilizado para que el tiempo de generación del modelo no sea tardado y no consuma más de lo que tiene la computadora.
+   		\subsection{BERT}
+   		Como última opción de algoritmo, se utilizará BERT para generar nuevo texto, a través de las llamadas mascaras y separadores, es posible crear nuevas oraciones, sin embargo si se usa esta herramienta, es necesaria la implementación de otro tipo de herramientas, ya que al ser bidireccional, la generación de texto no saldrá si no se ingresa algún texto previamente.\\\\
+   		La idea es utilizar una API que genere palabras que rimen y que genere cierta cantidad de rimas que sirvan como texto previo para que BERT pueda generar algún texto sin ningún problema.
+   		 
+	   	\section{Pruebas}
 	   	
-	   	Principales desventajas son: 
-	   	\begin{itemize}
-	   		\item En ocasiones la ejecución del código es lenta.
-	   		\item Consume mucha memoria.
-	   	\end{itemize}
-	   	\paragraph{\acrshort{bert} \\}
-	   	\acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
-	   	Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
-	   	El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\par
+	   	\subsection{Cadenas de Markov}
+	   	Una de las primeras pruebas que se realizo durante el desarrollo del proyecto fue la generación de textos utilizando cadenas de markov.
+	   	Se ingresará el dataset limpio y organizado y este realizará un cálculo y la asignación de los valores, las oraciones y las palabras que aparecen dentro de estas.
+	   	Los valores asignados variarán entre los decimales de 0 y 1 sin llegar a ser enteros nunca, estos son asignados dependiendo a la frecuencia en la que la palabra va apareciendo.\\\\
+	   	Una vez asignadas, es posible determinar si la generación del texto se desea pseudo-aleatoria o utilizar valores que cumplan ciertas condiciones como generar textos arriba o abajo de 0.5 o el tamaño del texto generado.\\\\
+	   	Para esta prueba se decidió no influir en la selección de palabras por sus valores, dejando este atributo pseudo-aleatorio, sin embargo para no generar textos de tamaños diferentes, los parámetros de las palabras fueron manipulados para que cada oración diera un determinado número, esto para evitar que los versos fuesen de un tamaño no deseado.\\\\
+	   	A continuación un ejemplo de los resultados obtenidos:
+	   	\begin{center}
+	   		\lstinputlisting[language={}]{./imagenes/Disenio/Pruebas/lyric.txt}		
+	   	\end{center}
+   	
+   		Como se puede observar, el texto carece de sentido alguno y en algunas ocasiones se observa que la cadena completa es parte de una canción, por lo que resulta peligroso si el usuario desea usar esta cadena por cuestiones de derecho de autor.
+   		
+   		A continuación se muestra el código utilizando nuestra base de datos para generar texto usando cadenas de Markov:
+	   	\begin{center}
+	   		\lstinputlisting[language=Python]{./imagenes/Disenio/Pruebas/markovif.py}
+	   	\end{center}
+   	
+	   	En conclusión, se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad es texto entero reutilizado de las oraciones que se encuentran en el dataset, de igual forma llegaron a salir resultados utilizando la misma palabra en repetidas ocasiones, se tiene en cuenta que los usuarios a los que va dirigido este proyecto, se encontrarán en posición de buscar ideas nuevas para su proyecto, ideas que contengan un sentido y palabras acordes a lo que ellos buscan, es por ellos que seguimos probando con otros algoritmos.\\\\
 	   	
-	   	\paragraph{HTML\\}
+	   	\subsection{Pruebas con Recurrent Neural Networks}
+	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales, como se menciona anteriormente, se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. A continuación se mostrará el notebook hecho en jupyter para mostrar cada paso de la prueba.
 	   	
-	   	\acrfull{html} es un lenguaje de marcado que define la estructura de una página web y su contenido. \acrshort{html} consta de una serie de elementos que se utilizan para encerrar o envolver diferentes partes del contenido para que estos se visualicen de cierta manera o actúe de cierta manera. Las etiquetas adjuntas pueden hacer que una palabra o imagen sea un hipervínculo a otro lugar, pueden poner palabras en cursiva, pueden hacer que la fuente sea más grande o pequeña, etc. \cite{refHtml} \\\\\
-	   	\acrshort{html}5 es la versión mas reciente de html, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las paginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia así como una mejor integración a APIs y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}		
-	   	
-	   	\paragraph{CSS\\}
-	   	
-	   	\acrfull{css} es el lenguaje para describir la presentación de las páginas web así como hacerlas más atractivas. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y puede ser empleado con cualquier otro lenguaje de marcado basado en \acrshort{xml} o \acrshort{svg}. Usando CSS se pueden controlar con precisión cómo se ven los elementos \acrshort{html} en el navegador, que presentará para las etiquetas de marcado el diseño que cada uno desee. La separación de \acrshort{html} de \acrshort{css} facilita el mantenimiento de los sitios, compartir las hojas de estilo entre páginas y adaptarlas a distintos ámbitos. \cite{refcss}\\\\
-	   	Es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web.\\\\
-	   	Antes de CSS, las etiquetas como fuente, color, estilo de fondo, alineación, borde y tamaño tenían que repetirse en cada elemento de una página web. Ahora con los CSS, podemos definir cómo se van a comportar las etiquetas, al ser guardado en un archivo por separado, esta misma configuración puede usarse en otra página web ahorrando tiempo diseñándola. Además de que CSS provee de mejor y más detallados atributos para cada etiqueta.
-	   	
-	   	\paragraph {JavaScript \\}
-	   	
-	   	JavaScript es un lenguaje de programación o secuencias de comandos que permite implementar funciones complejas en las páginas web. Estos scripts pueden ser desarrollados en el mismo \acrshort{html} para que sean ejecutados automáticamente cuando se carga dicha páginas web, estos scripts se proporcionan y ejecutan como texto sin formato. No necesitan una preparación especial ni una compilación para ejecutarse. \cite{refjs}\\\\
-	   	JavaScript puede ejecutarse no solo en un navegador, sino también en un servidor, o en cualquier dispositivo que tenga un programa especial llamado JavaScript engine, el cual permite interpretar y ejecutar los scripts.\\\\
-	   	JavaScript permite crear contenido dinámico dentro de las páginas web, reaccionar ante algunas acciones realizadas por los usuarios como lo son los clicks del ratón, el movimiento del puntero o el presionar cierta tecla, permite enviar peticiones al servidor, así como descargar y subir archivos, además es posible obtener y configurar cookies, mostrar mensajes o alertas al usuario.
-	   	
-	   	\paragraph{OpenSSL\\}
-	   	
-	   	Consiste en un paquete robusto de herramientas de administración y bibliotecas las cuales están relacionadas con la criptografía, estas suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (permitiendo un acceso seguro a sitios \acrshort{https}). Estas herramientas contribuyen al sistema a instaurar el protocolo \acrfull{ssl}, de igual manera como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL posibilita la creación certificados digitales los cuales pueden aplicarse a un servidor, por ejemplo a Apache \cite{refopenssl}.
-	   	
-	   	\paragraph{MongoDB \\}
-	   	MongoDB es un sistema de base de datos multiplataforma dirigido a documentos, de esquema libre, es decir, que cada registro o entrada es capaz de contar con un esquema de datos distinto, con columnas o atributos que pueden variar o no de un registro a otro.\\\\
-	   	Sus características más destacadas son su sencillo sistema de consulta de la base de datos y la velocidad. Alcanzando así un balance perfecto entre rendimiento y funcionalidad. 
-	   	MongoDB utiliza un modelo No\acrshort{sql} el cual es un modelo de agregación que se basan en la noción de agregado, entendiendo el agregado como una colección de objetos relacionados que se desean tratar de forma semántica e independiente \cite{refMongoDB}.
-	   	
-	   	Las ventajas que ofrece MongoDB como herramienta de desarrollo de base de datos no relacionales son:
-	   	\begin{itemize}
-	   		\item La base de datos no tiene un esquema de datos predefinido.
-	   		\item El esquema puede variar para instancias de datos que pertenecen a una misma entidad.
-	   		\item En ocasiones el gestor de la base de datos no es consciente del esquema de la base de datos.
-	   		\item Permite reducir los problemas de concordancia entre estructuras de datos usadas por las aplicaciones y la base de datos.
-	   		\item Frecuentemente se aplican técnicas de desnormalización de los datos.
-	   	\end{itemize}
-	   	\begin{comment}
-	   	\paragraph{MySQL \\}
-	   	Es un sistema de gestión de bases de datos desarrollado por Oracle Corporation, es considerada como la base de datos de código abierto más popular del mundo y una de las más populares, sobre todo para entornos de desarrollo web \cite{refmysql}.\\\\
-	   	El modelo más común utilizado en este sistema de gestión de base datos, es el modelo relacional, donde se almacenan y proporcionan acceso a puntos de datos relacionados entre sí. Esto es posible a que cada fila de la tabla cuenta con un registro y este tiene un ID único, las columnas contienen atributos de los datos, y cada registro en su mayoría cuenta con un valor para cada atributo, lo que favorece el establecimiento de las relaciones entre los datos.\\\\
-	   	Las principales ventajas son: 
-	   	\begin{itemize}
-	   	\item Evita la duplicidad de registros, habilitando ciertas configuraciones.
-	   	\item Asegura una integridad referencial, es decir, al eliminar un registro elimina todos los registros relacionados.
-	   	\item Favorece la normalización al ser más comprensible y aplicable.
-	   	\end{itemize}
-	   	
-	   	Mientras que las principales desventajas son: 
-	   	\begin{itemize}
-	   	\item Presentan deficiencias con datos gráficos, multimedia, \acrshort{cad} y sistemas de información geográfica.
-	   	\item Dificulta la manipulación de bloques de texto como un tipo de dato.
-	   	\end{itemize}
-	   	
-	   	\paragraph{Flask \\}
-	   	Flask es un mini marco (framework) web, esto es, un modulo de Python el cual permite desarrollar aplicaciones web. No cuenta con un Manejador de Objetos Relacionales u \acrshort{orm} por sus siglas en inglés, pero si cuenta con características como el enrutamiento de \acrshort{url}S y un motor de plantillas. En general es un marco de aplicación web \acrshort{wsgi}.\\\\
-	   	La \acrfull{wsgi} es una especificación que describe como se va a comunicar un servidor web con una aplicación web, y como se pueden llegar a enlazar distintas aplicaciones web para procesar una solicitud o una petición.\\\\
-	   	Las principales ventajas de Flask son: 
-	   	\begin{itemize}
-	   	\item Permite escalar con facilidad la aplicación.
-	   	\item Es de fácil desarrollo.
-	   	\item Es flexible con la platillas que te da por default.
-	   	\item Es modular.
-	   	\end{itemize}
-	   	
-	   	Principales desventajas son: 
-	   	\begin{itemize}
-	   	\item No cuenta con muchas herramientas o librerias de apoyo.
-	   	\item No puede manejar peticiones multiples al mismo tiempo.
-	   	\end{itemize}
-	   	
-	   	\paragraph{Gunicorn \\}
-	   	
-	   	Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificacion \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
-	   	\end{comment}
-	   	\begin{comment}
-	   	\paragraph{\acrshort{gpt}-2. \\}
-	   	\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
-	   	\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
-	   	\end{comment}
-	   	\paragraph{Amazon \acrshort{ec2}. \\}
-	   	Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
-	   	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
-	   	Las principales ventajas de Amazon \acrshort{ec2} son: 
-	   	\begin{itemize}
-	   		\item Cuenta con plantillas predeterminadas de maquinas virtuales y servidores.
-	   		\item Permite configurar la memoria, almacenamiento, CPU y otras caracteristicas dependiendo las necesidades del usuario.
-	   		\item Precios dependiendo del uso y características del equipo o servidor alquilado.
-	   	\end{itemize}
-	   	
-	   	Las principales desventajas son: 
-	   	\begin{itemize}
-	   		\item Tiene una curva de aprendizaje alta para los nuevos usuarios.
-	   		\item Los costos de soporte técnico son muy elevados.
-	   	\end{itemize}		
-	   	\paragraph{Amazon \acrshort{cli} \\}
-	   	
-	   	Amazon \acrfull{cli} es una herramienta que reúne todos los servicios de \acrshort{aws} en una consola central, lo que le brinda un control sencillo de varios servicios de \acrshort{aws} con una sola herramienta. Como su nombre indica, los usuarios operan los distintos servicios desde la línea de comandos. 
-	   	
-	   	\paragraph{Amazon SageMaker \\}
-	   	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
-	   	Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
-	   	Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalbilidad lo que permite entrenar los modelos a escala de petabytes. Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
-	   	Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.		
-	   	\newpage	
-	   	\paragraph{Amazon S3. \\}
-	   	Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
-	   	
-	   	\paragraph{Apache \\}
-	   	
-	   	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
-	   	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
-	   	\newpage	
-	   	\subsection{Hardware}
-	   	Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
-	   	\begin{table}[H]
-	   		\begin{tabular}{|p{3.5cm}||p{10cm}|}
-	   			\rowcolor{guindapoli}
-	   			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
-	   			\hline
-	   			\rowcolor{azulclaro}Procesador & Ryzen 5 3600\\
-	   			\hline
-	   			\rowcolor{white}Tarjeta de video & Amd Radeon Rx580\\
-	   			\hline
-	   			\rowcolor{azulclaro}Memoria RAM & 32 Gb\\
-	   			\hline
-	   			\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
-	   			\hline
-	   		\end{tabular}
-	   		\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
-	   	\end{table}
-	   	\begin{table}[H]
-	   		\begin{tabular}{|p{3.5cm}||p{10cm}|}
-	   			\rowcolor{guindapoli}
-	   			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
-	   			\hline
-	   			\rowcolor{azulclaro}Marca & Apple\\
-	   			\hline
-	   			\rowcolor{white}Modelo & iMac Late 2012\\
-	   			\hline
-	   			\rowcolor{azulclaro}Procesador & Intel Core i5\\
-	   			\hline
-	   			\rowcolor{white}Tarjeta de video & NVIDIA GeForce GT 640M 512 Mb\\
-	   			\hline
-	   			\rowcolor{azulclaro}Memoria RAM & 8 Gb\\
-	   			\hline
-	   			\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
-	   			\hline
-	   		\end{tabular}
-	   		\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
-	   	\end{table}
-	   	\begin{table}[H]
-	   		\begin{tabular}{|p{3.5cm}||p{10cm}|}
-	   			\rowcolor{guindapoli}
-	   			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
-	   			\hline
-	   			\rowcolor{azulclaro}Procesador & Amd FX-8350\\
-	   			\hline
-	   			\rowcolor{white}Tarjeta de video & Nvidia Geforce 1050ti\\
-	   			\hline
-	   			\rowcolor{azulclaro}Memoria RAM & 16 Gb\\
-	   			\hline
-	   			\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
-	   			\hline
-	   		\end{tabular}
-	   		\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
-	   	\end{table}
+	   \subsection{Pruebas con BERT}
+	   	Como tercera y útlima prueba, se recurrió a utilizar BERT como generador de letras musicales, se implementó el código, sin embargo, para probar este tipo de tecnología, es necesario contar con una GPU de la marca NVIDIA, por lo que se atrasaron las pruebas de este tipo ya que se tienen que hacer en la nuebe y no localmente. Sin embargo se adjunta el código a continuación:
+	   	\newpage
+
     	\section{Estudio de Factibilidad}
     	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o un proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\\\\ 
     	Este estudio establecerá la viabilidad, si existe, del trabajo planteado previamente.
@@ -1753,26 +1805,12 @@ natural y redes neuronales}\\
 		\end{enumerate}
 	
 		\subsection{Funcionamiento General del Sistema}
-		
-		A continuación se presentan unos diagramas que muestran el funcionamiento general de nuestro proyecto:
-				
-		\begin{figure}[H] \caption{Diagrama de obtención del dataset}
-			\includegraphics[scale=.5]{./imagenes/Disenio/Arquitectura/DiagramaFuncGen 1.png}
-			\centering 
-		\end{figure}
-	
-		\begin{figure}[H] \caption{Diagrama del entrenamiento y generación del modelo}
-			\includegraphics[scale=.5]{./imagenes/Disenio/Arquitectura/DiagramaFuncGen 2.png}
-			\centering 
-		\end{figure}	
-	
 		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto, una vez este implementado el modelo entrenado en la página web:
 		
-		\begin{figure}[H] \caption{Diagrama del funcionamiento general}
+		\begin{figure}[H] \caption{Diagrama de funcionamiento general del sistema}
 			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura_sistema.png}
-			\centering 
 		\end{figure}
-	
+	\newpage
 		\subsection{Historias de Usuario}
 		
 		\begin{table}[hbt!]\caption{Historia de Usuario 1}% title of Table
@@ -1836,7 +1874,7 @@ natural y redes neuronales}\\
 					\begin{tabular}[c]{@{}l@{}}Nombre: Generar otra letra de canción con los mismos parámetros\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
 					\hline
-					\begin{tabular}[c]{@{}l@{}}Descripción: Me gustaría generar otra\\ letra de canción con los mismo parámetros y\\ palabra(s) que ya había introducido.\end{tabular}
+					\begin{tabular}[c]{@{}l@{}}Descripción: Como usuario, me gustaría generar otra\\ letra de canción con los mismo parámetros y\\ palabra(s) que ya había introducido.\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Validación: Brindar una opción al usuario\\ que una vez generada y desplegada la letra de\\ la canción pueda generar otra usando los\\ mismo parámetros que previamente había \\introducido.\end{tabular} \\
 					\hline
 				\end{tabular}\label{table:Historia de Usuario 4}% is used to refer this table in the text
@@ -1859,7 +1897,136 @@ natural y redes neuronales}\\
 				\end{tabular}\label{table:Historia de Usuario 5}% is used to refer this table in the text
 			}
 		\end{table}
-	
+		\begin{table}[hbt!]\caption{Historia de Usuario 6}% title of Table
+		\centering % used for centering table
+		\resizebox{15cm}{!} {
+			\begin{tabular}{|c|c|}% centered columns (3 columns)
+				\hline                        %inserts double horizontal lines
+				\multicolumn{2}{|c|}{Historia de Usuario 6}\\% inserts table %heading
+				\hline                  % inserts single horizontal line
+				\begin{tabular}[c]{@{}l@{}}Nombre: Limpiar base de batos.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+				\hline
+				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero una base de datos\\sin caracteres especiales\\ o palabras repetidas.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Validación: Con ayuda de un script\\ para quitar palabras innecesarias\\y caracteres inválidos\end{tabular} \\
+				\hline
+			\end{tabular}\label{table:Historia de Usuario 6}% is used to refer this table in the text
+		}
+	\end{table}
+		\begin{table}[hbt!]\caption{Historia de Usuario 7}% title of Table
+	\centering % used for centering table
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|c|c|}% centered columns (3 columns)
+			\hline                        %inserts double horizontal lines
+			\multicolumn{2}{|c|}{Historia de Usuario 7}\\% inserts table %heading
+			\hline                  % inserts single horizontal line
+			\begin{tabular}[c]{@{}l@{}}Nombre: Preprocesar la base de datos.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+			\hline
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar el modelo\\solo con los datos necesarios\\ para optimizar los tiempos de entrenamiento.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Validación: Con un script\\ para tokenizar y hacer pre-padding en\\ la base de datos\end{tabular} \\
+			\hline
+		\end{tabular}\label{table:Historia de Usuario 7}% is used to refer this table in the text
+	}
+		\end{table}
+				\begin{table}[hbt!]\caption{Historia de Usuario 8}% title of Table
+		\centering % used for centering table
+		\resizebox{15cm}{!} {
+			\begin{tabular}{|c|c|}% centered columns (3 columns)
+				\hline                        %inserts double horizontal lines
+				\multicolumn{2}{|c|}{Historia de Usuario 8}\\% inserts table %heading
+				\hline                  % inserts single horizontal line
+				\begin{tabular}[c]{@{}l@{}}Nombre: Subir Base de Datos a la nube.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+				\hline
+				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar el modelo\\con los datos necesarios\\ en la nube para optimizar espacio local.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Validación: Utilizando herramientas\\ NOSQL\\para subir la base de datos y esta no ocupe espacio local\end{tabular} \\
+				\hline
+			\end{tabular}\label{table:Historia de Usuario 8}% is used to refer this table in the text
+		}
+	\end{table}
+			\begin{table}[hbt!]\caption{Historia de Usuario 9}% title of Table
+		\centering % used for centering table
+		\resizebox{15cm}{!} {
+			\begin{tabular}{|c|c|}% centered columns (3 columns)
+				\hline                        %inserts double horizontal lines
+				\multicolumn{2}{|c|}{Historia de Usuario 9}\\% inserts table %heading
+				\hline                  % inserts single horizontal line
+				\begin{tabular}[c]{@{}l@{}}Nombre: Generar Modelo en la nube.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+				\hline
+				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir de un dataset proporcionado\\ anteriormente.\end{tabular}
+				& \begin{tabular}[c]{@{}l@{}}Validación: Con un script en una plataforma en línea\\ entrenar el modelo para generar\\ nuevas canciones\end{tabular} \\
+				\hline
+			\end{tabular}\label{table:Historia de Usuario 9}% is used to refer this table in the text
+		}
+	\end{table}
+			\begin{table}[hbt!]\caption{Historia de Usuario 10}% title of Table
+	\centering % used for centering table
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|c|c|}% centered columns (3 columns)
+			\hline                        %inserts double horizontal lines
+			\multicolumn{2}{|c|}{Historia de Usuario 10}\\% inserts table %heading
+			\hline                  % inserts single horizontal line
+			\begin{tabular}[c]{@{}l@{}}Nombre: Generar Modelo en la nube.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+			\hline
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir de un dataset limpio proporcionado\\ anteriormente.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Validación: Con un script en una plataforma en línea\\ entrenar el modelo para generar\\ nuevas canciones\end{tabular} \\
+			\hline
+		\end{tabular}\label{table:Historia de Usuario 10}% is used to refer this table in the text
+	}
+\end{table}
+			\begin{table}[hbt!]\caption{Historia de Usuario 11}% title of Table
+	\centering % used for centering table
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|c|c|}% centered columns (3 columns)
+			\hline                        %inserts double horizontal lines
+			\multicolumn{2}{|c|}{Historia de Usuario 11}\\% inserts table %heading
+			\hline                  % inserts single horizontal line
+			\begin{tabular}[c]{@{}l@{}}Nombre: Probar respuestas del modelo en la nube.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+			\hline
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir del modelo generado en la nube\\\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Validación: Con una función que genere algunos ejemplos\\ usando el modelo generado en la nube\end{tabular} \\
+			\hline
+		\end{tabular}\label{table:Historia de Usuario 11}% is used to refer this table in the text
+	}
+
+\end{table}
+			\begin{table}[hbt!]\caption{Historia de Usuario 12}% title of Table
+	\centering % used for centering table
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|c|c|}% centered columns (3 columns)
+			\hline                        %inserts double horizontal lines
+			\multicolumn{2}{|c|}{Historia de Usuario 12}\\% inserts table %heading
+			\hline                  % inserts single horizontal line
+			\begin{tabular}[c]{@{}l@{}}Nombre: Desarrollar la vista del usuario (Página Web).\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+			\hline
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ Quiero que el usuario tenga una vista\\intuitiva y fácil de utilizar\\ con la que pueda generar sus lyrics apropiadamente.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Validación: Creando la página web con vistas sencillas y ordenadas\\ para que el usuario no se pierda en\\ la navegación en ella.\end{tabular} \\
+			\hline
+		\end{tabular}\label{table:Historia de Usuario 12}% is used to refer this table in the text
+	}
+\end{table}
+
+\begin{table}[hbt!]\caption{Historia de Usuario 13}% title of Table
+\centering % used for centering table
+\resizebox{15cm}{!} {
+	\begin{tabular}{|c|c|}% centered columns (3 columns)
+		\hline                        %inserts double horizontal lines
+		\multicolumn{2}{|c|}{Historia de Usuario 13}\\% inserts table %heading
+		\hline                  % inserts single horizontal line
+		\begin{tabular}[c]{@{}l@{}}Nombre: Conectar la vista del usuario con el modelo.\end{tabular}
+		& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+		\hline
+		\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ Quiero que la vista del usuario\\y el modelo funcionen en conjunto\\ para que se pueda generar la lyric de la canción y se vea apropiadamente.\end{tabular}
+		& \begin{tabular}[c]{@{}l@{}}Validación: Conectando la página web con\\ el modelo generado\\ y las funciones para generar una lyric nueva\end{tabular} \\
+		\hline
+	\end{tabular}\label{table:Historia de Usuario 13}% is used to refer this table in the text
+}
+\end{table}
 		\pagebreak
 		       
 		\subsection{Requerimientos funcionales y no funcionales}
@@ -1951,8 +2118,8 @@ natural y redes neuronales}\\
 		Una vez realizada esta limpieza, la base de datos será compatible con el entrenamiento y los resultados generados al final serán más entendibles.\\\\
 		Estas inconsistencias en el conjunto de datos pueden ser causados por errores de entradas del usuario, corrupción de los datos, errores en el área de scraping, o simplemente tienen caracteres que no nos interesa procesar.\\\\
 		
-		Se utilizará la librería de “Pandas” y en caso de que se requiera, utilizar la librería "re" para hacer esta limpieza, estás dos librerías de Python ayudarán a que los datos puedan ser utilizados para realizar el debido preprocesamiento como siguiente paso sin tener que cambiar cada campo manualmente, lo que mejora la eficiencia para poder lograr el objetivo propuesto.\\\\
-		Para limpiar los datos seguiremos el estándar de limpieza de datos: https://www.digitalvidya.com/blog/data-cleaning-techniques/
+		Se utilizará la librería de “Pandas” y en caso de que se requiera, utilizar la librería de expresiones regulares para hacer esta limpieza, estás dos librerías de Python ayudarán a que los datos puedan ser utilizados para realizar el debido preprocesamiento como siguiente paso sin tener que cambiar cada campo manualmente, lo que mejora la eficiencia para poder lograr el objetivo propuesto.\\\\
+		Para limpiar los datos seguiremos el estándar de limpieza de datos:\cite{data_cleaning}
 		\begin{enumerate}
 			\item Remover carácteres innecesarios
 			\item Eliminar Duplicados
@@ -1977,7 +2144,13 @@ natural y redes neuronales}\\
 		Tener datos nulos en el entrenamiento puede llegar a ser fatal debido a que además de utilizar memoria en el entrenamiento, a la hora de generar resultados, estos resultan en resultados nulos, además que tratar la misma base de datos a la hora del preprocesamiento puede arrojarnos errores a la hora de manipular la base de datos.
 		
 		\subsection{Resultados} % Explicar los Resultados
-		Una vez realizada esta limpieza general del conjunto de datos, el resultado esperado es tener una base de datos útil y solo con los datos necesarios para poder tratarlos con el debido proceso para empezar el preprocesamiento de entrenamiento del modelo de la red reuronal, este proceso es necesario hacer solo una sola vez para cada género musical ingresado, en caso de que se lleguen a necesitar más datos, será necesario repetir el proceso para poder generar resultados de la manera más óptima posible.
+		Una vez realizada esta limpieza general del conjunto de datos, el resultado esperado es tener una base de datos útil y solo con los datos necesarios para poder tratarlos con el debido proceso para empezar el preprocesamiento de entrenamiento del modelo de la red neuronal, este proceso es necesario hacer solo una sola vez para cada género musical ingresado, en caso de que se lleguen a necesitar más datos, será necesario repetir el proceso para poder generar resultados de la manera más óptima posible.
+		A continuación se muestran las primeras líneas de la base de datos limpias.
+		\begin{figure}[H]
+			\includegraphics[width=7cm]{./imagenes/Disenio/Iteracion_2/Base_de_Datos/ResultadosLimpiezaBasedeDatos.png}
+			\centering 
+			\caption{Resultados de Limpieza de Base de Datos}
+		\end{figure}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2121,33 +2294,13 @@ natural y redes neuronales}\\
 	\end{comment}
 	
 	\section{Resultados}
-	De manera similar a la tratada para la generación del modelo de neural network en la iteración 3, la iteración 4 consistirá de un proceso muy similar al seguido en ese apartado con el diferenciador principal siendo que será en la nube, e incluso de una manera muy simple podríamos resumir los pasos a seguir del siguiente diagrama (tomado de nuestra arquitectura del sistema) y el cual simplifica aún más el proceso seguido por Amazon SageMaker para la generación del Modelo.
+	De manera similar a la tratada para la generación del modelo de neural network, consistirá de un proceso muy similar al seguido en ese apartado con el diferenciador principal siendo que será en la nube, e incluso de una manera muy simple podríamos resumir los pasos a seguir del siguiente diagrama (tomado de nuestra arquitectura del sistema) y el cual simplifica aún más el proceso seguido por Amazon SageMaker para la generación del Modelo.
 		
 	\begin{figure}[H]
 	\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/resultado_arquitectura.png}
 	\centering 
 	\caption{Diagrama simple del proceso seguido para generar el modelo en la nube}
 	\end{figure}
-	
-	\newpage
-	
-	\section{Pruebas}
-	
-	\subsection{Cadenas de Markov}
-	Una de las primeras pruebas que se realizo durante el desarrollo del proyecto fue la generación de textos utilizando cadenas de markov, esto se logro gracias a que se utilizó una librería de Python llamada markovify.
-	Esta librería lo que hace es que una vez que el dataset se encuentra limpio y organizado, va a realizar un cálculo y asignación de valores tanto a las oraciones, como a las palabras que aparecen dentro de estas oraciones, los valores asignados, varían de 0 a 1 sin llegar a ser 0 o 1, y estos son asignados dependiendo a la frecuencia en la que la palabra va apareciendo.\\\\
-	Una vez que se hacen estas asignaciones, en el código tu puedes dejar que la generación de textos sea completamente aleatoria, o que se utilicen valores que cumplan ciertas condiciones, como puede ser que los textos generados sean con palabras de valores que van de 0.5 a 1 o de 0.5. a 0, también puedes manipular que tan largas o cortas quieres que sean los textos generados.\\\\
-	Para la generación de los textos de prueba se decidió no influir en la selección de palabras por sus valores, este atributo se dejo al azar, en lo que, si se influyó, fue en la cantidad de palabras por cada oración para evitar que los versos fuesen muy largos y que tampoco fuesen muy cortos.\\\\
-	Algunos resultados, son los siguientes:
-	\begin{center}
-		\lstinputlisting[language={}]{./imagenes/Disenio/Pruebas/lyric.txt}		
-
-	\end{center}
-	El código utilizado para la generación de los textos fue el siguiente:
-	\begin{center}
-		\lstinputlisting[language=Python]{./imagenes/Disenio/Pruebas/markovif.py}
-	\end{center}
-	Se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad son copia y pega de las oraciones que se encuentran en el dataset, así como en ocasiones se encuentra la misma palabra repetida en la misma oración muchas veces o en algunos casos las oraciones generadas no tienen sentido alguno.\\\\
 	
 	\newpage
 
@@ -2357,6 +2510,9 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	\bibitem{refOriginalidadLFDA}  		
 	CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN (2014, julio 14), LEY FEDERAL DEL DERECHO DE AUTOR, [En línea]. Disponible: https://www.ucol.mx/content/cms/13/file/federal/\\LEY\_FED\_DEL\_DERECHO\_DEL\_AUTOR.pdf [Último acceso: 05 de mayo del 2021].
 	
+	% Iteración 2
+	\bibitem{data_cleaning}
+	Aaron Tay (2021, Abril 23), Data Cleaning Techniques [En línea]. Disponible:    https://www.digitalvidya.com/blog/data-cleaning-techniques/ [Último acceso: 30 Mayo 2021]
 	%-------Referencias Herramientas a usar---------%
 	\bibitem{refQuesPython}  
 	Python (2021), What is Python? Executive Summary, [En línea]. Disponible: https://www.python.org/doc/essays/blurb/ [Último acceso: 24 de abril del 2021].
