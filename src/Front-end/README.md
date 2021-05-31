@@ -1,6 +1,5 @@
 # TO DO Front end:
 
-- [ ] Falta todo <3
 - [ ] Investigar React
 - [ ] Hacer Plantillas para el proyecto
 - [ ] Integrar con Back-end
