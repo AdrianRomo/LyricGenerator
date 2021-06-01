@@ -530,7 +530,7 @@ natural y redes neuronales}\\
     		\item Desarrollar una interfaz web intuitiva en versión prototipo que utilice una aplicación web alojada en la nube para la visualización del verso musical generado a partir de un género.
     	\end{itemize}
 		
-    	\section{Justificación.}
+    	\section{Justificación}
     	El crear nuevas composiciones musicales puede llegar a ser muy difícil, estresante e incluso agotador para cualquier aficionado o incluso algunos expertos en este medio, esto se debe a la falta de creatividad y/o tiempo de quien lo quiera realizar \cite{What_about_the_music}. En ocasiones se pueden contratar servicios particulares para la producción de la letra de una canción, sin embargo, puede ser muy costoso y en ocasiones el resultado final no alcanza a llenar las expectativas de la inversión que se hace; por ende, se pretende crear una herramienta para estudiantes, aficionados o cualquier persona interesada en este rubro que se les dificulte componer nuevas letras musicales.\\\\
     	Normalmente las letras musicales creadas por el humano, tienden a estar compuestas por patrones de acuerdo al género musical \cite{genero_musical_en_la_musica_popular}. Algunos ejemplos de estos patrones pueden ser las rimas, enunciados, frases cortas y que tengan una semántica correcta, estos pueden ser encontrados por medio de procesamiento de lenguaje natural y una investigación profunda en la composición de letras de estos géneros.\\\\
     	Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma.\\\\
@@ -619,7 +619,7 @@ natural y redes neuronales}\\
             \subsection*{Capítulo 2. Marco teórico}
                 En esta parte del documento, se describen puntos esenciales de nuestro trabajo como definiciones, técnicas, herramientas, servicios, así como investigación realizada para llevar a cabo en la implementación dentro del trabajo. 
              
-            \subsection*{Capítulo 3. Análisis.}
+            \subsection*{Capítulo 3. Análisis}
                 Dentro de este capitulo se hará un análisis tanto del problema propuesto, como sus posibles soluciones, se hará un análisis de estudio de factibilidad t\'ecnico, operativo y económico con la finalidad de conocer los recursos necesarios para la elaboración de este trabajo terminal. Se mencionan las herramientas a utilizar y se explica de manera general la arquitectura del sistema  y las historias de usuario del sistema.
              
             \subsection*{Capítulo 4. Diseño}
@@ -807,7 +807,7 @@ natural y redes neuronales}\\
     		\end{tabular}
     		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
     	\end{table}
-        Con base en lo anterior y de las pruebas realizadas se determino que se va a utilizar \acrshort{bert} el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
+        Con base en lo anterior se determino que se va a utilizar \acrshort{bert} el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
         
         \section{Base de datos}
         
@@ -1273,7 +1273,7 @@ natural y redes neuronales}\\
 		   	\acrfull{gpt} es un transformer aprovechado para realizar tanto aprendizaje supervisado como aprendizaje no supervisado para el \acrfull{pln}.\\\\        
 		   	\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
 		   	\end{comment}
-		   	\paragraph{Amazon \acrshort{ec2}. \\}
+		   	\paragraph{Amazon \acrshort{ec2} \\}
 		   	Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 		   	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
 		   	Las principales ventajas de Amazon \acrshort{ec2} son: 
@@ -1296,7 +1296,7 @@ natural y redes neuronales}\\
 		   	Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.		
 		   	\newpage	
 		   	
-		   	\paragraph{Amazon S3. \\}
+		   	\paragraph{Amazon S3 \\}
 		   	Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
 		   	
 		   	\paragraph{Apache \\}
@@ -2032,18 +2032,18 @@ natural y redes neuronales}\\
 		\subsection{Requerimientos funcionales y no funcionales}
 		A continuación, se presentan los requerimientos funcionales mas importantes de nuestro proyecto:
 		\begin{itemize}
-			\item Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
-			\item Permitirá al usuario descargar la letra generada como archivo de texto.
-			\item Permitirá al usuario generar cuantas veces quiera una letra musical.
-			\item Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
+			\item RF1: Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
+			\item RF2: Permitirá al usuario descargar la letra generada como archivo de texto.
+			\item RF3: Permitirá al usuario generar cuantas veces quiera una letra musical.
+			\item RF4: Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
 		\end{itemize}
 		Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto
 		\begin{itemize}
-			\item El servicio web debe ser capaz de procesar más de diez solicitudes simultaneas.
-			\item La página debe ser capaz de operar adecuadamente con hasta cincuenta usuarios simultáneamente.
-			\item El tiempo que le toma a un usuario promedio en el aprendizaje del sistema de la interfaz deberá de ser menor a cinco minutos.
-			\item La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
-			\item La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
+			\item RNF1: El servicio web debe ser capaz de procesar más de diez solicitudes simultaneas.
+			\item RNF2: La página debe ser capaz de operar adecuadamente con hasta cincuenta usuarios simultáneamente.
+			\item RNF3: El tiempo que le toma a un usuario promedio en el aprendizaje del sistema de la interfaz deberá de ser menor a cinco minutos.
+			\item RNF4: La página proporcionará alertas de error que sean informativos y que ayuden a la experiencia de usuario.
+			\item RNF5: La aplicación web debe tener un diseño responsivo, es decir, que garantice una a adecuada visualización tanto en computadoras, tabletas y dispositivos móviles.
 		\end{itemize}
 	\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2164,8 +2164,8 @@ natural y redes neuronales}\\
 		\subsection{Descripción}
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
 		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-		\subsubsection*{BERT}
-		Como ha sido expuesto con anterioridad BERT (Bidirectional Encoder Representations from Transformers) el cual se usará para clasificar oraciones, se puede entender de forma más sencilla de la siguiente manera:
+		Se decido trabajar con BERT en lugar de GPT-2 debido a que usando BERT podemos entrenarlo y ajustarlo a resultados que consideramos satisfactorios, cosa que no es posible usando GPT-2, además BERT cuenta con la característica de ser Bidireccional, el cual nos permite analizar el texto anterior para poder generar el texto futuro.\\\\
+		BERT (Bidirectional Encoder Representations from Transformers) se usará para clasificar oraciones, este se puede entender de forma más sencilla de la siguiente manera:
 		\begin{itemize}
 			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
 			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
