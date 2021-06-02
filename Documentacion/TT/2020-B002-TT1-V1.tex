@@ -499,6 +499,7 @@ natural y redes neuronales}\\
 	\newpage
 	En el cuadro 1 que se presenta a continuación, se muestran las características de aplicaciones web similares y comparándolas con nuestra propuesta:
 	\begin{table}[!htbp]
+		\caption[productossimilares]{Resumen de productos similares comparados con nuestra propuesta}
 		\begin{tabular}{|m{3.5cm}|m{6.5cm}|m{3.5cm}|}
 			\hline    			
 			\rowcolor{guindapoli}
@@ -515,7 +516,6 @@ natural y redes neuronales}\\
 			\hfil Nuestra propuesta & Aplicación web que haciendo uso de una IA va a generar letras musicales originales a partir de un género musical en exclusivo, lo que asegurará un resultado original con coros y versos distintos cada vez que se utilice. & \hfil Gratuito \\
 			\hline
 		\end{tabular}\label{table:Propuestas}% is used to refer this table in the text
-		\caption[productossimilares]{Resumen de productos similares comparados con nuestra propuesta}
 \end{table}
 \newpage
 	\section{Objetivos}
@@ -545,6 +545,7 @@ natural y redes neuronales}\\
 	    En la siguiente tabla se pueden observar las principales diferencias entre las tres metodologías:
     
 	    \begin{table}[htbp!]
+	    	\caption[Comparaciónmetodologíaságiles]{Tabla comparativa de las distintos metodologías ágiles contempladas}
 	    	\begin{tabular}{|m{1.75cm}|m{2.75cm}|m{2.75cm}|m{4.75cm}|}
 	    		\hline    			
 	    		\rowcolor{guindapoli}
@@ -563,7 +564,6 @@ natural y redes neuronales}\\
 	    		 \hfil Roles & Scrum master, Product owner, Scrum team & Pueden incluir especialistas o integrantes generalizados & No requiere un rol específico \\
 	    		 \hline
 	    	\end{tabular}
-	    	\caption[Comparaciónmetodologíaságiles]{Tabla comparativa de las distintos metodologías ágiles contempladas}
 	    \end{table}
 	    Scrumban hace uso de iteraciones, las cuales monitorea con el apoyo de un recurso visual, como lo puede ser un tablero. Las reuniones para planificar se llevan a cabo cuando son necesarias para determinar las tareas a implementar hasta la próxima iteración. Para que estas iteraciones se mantengan cortas, se utiliza un límite de trabajo en progreso (\acrshort{wip} por sus siglas en inglés Work in Progress). Cuando \acrshort{wip} desciende de cierto nivel, se establece una acción para que el equipo sepa cuándo y qué tarea planificar a continuación.\\\\
 	    \textbf{Iteración}\\
@@ -655,15 +655,17 @@ natural y redes neuronales}\\
 						\subsubsection*{Neurona Natural}
 						La neurona es una de muchas células la cual representa a la unidad estructural y funcional del sistema nervioso. Esta trabaja transmitiendo la información a través de impulsos nerviosos o químicos, desde un lugar del cuerpo hacia otra parte de este.\\\\
 						Dicho impulso nervioso o impulso eléctrico viaja siempre en un mismo sentido, es decir, llega a la neurona a través de las dendritas, se procesa en el soma y posteriormente se transmite al axón, las neuronas no están en contacto entre sí, entre ellas existe un espacio de separación denominado sinapsis o espacio sináptico. Una vez que el impulso nervioso llega al extremo final del axón este libera neurotransmisores al espacio sináptico transformando esta señal eléctrica en una señal química la cual se introduce en la dendrita de la neurona contigua, desencadenando un impulso eléctrico en la neurona receptora, repitiendo este proceso n veces hasta llegar a su destino final.\cite{refNeuronaNat}
-						\begin{figure}[H] \caption{Estructura de una neurona \cite{refNeuronaNat2}}
+						\begin{figure}[H]
 							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Neurona.jpg}
-							\centering 
+							\centering  
+							\caption{Estructura de una neurona \cite{refNeuronaNat2}}
 						\end{figure}			
 						\subsubsection*{Neurona Artificial}
 						La complejidad de las neuronas reales se abstrae mucho cuando se realiza el modelado de neuronas artificiales. Estas consisten básicamente en entradas, que se multiplican por pesos (fuerza de las respectivas señales), y luego calculada por una función matemática que determina la activación de la neurona. Otra función (que puede ser la identidad) calcula la salida de la neurona artificial (a veces en dependencia de un cierto umbral). Las redes neuronales combinan neuronas artificiales para procesar información.\cite{refNeuronaArt}
-						\begin{figure}[H] \caption{Neurona Artificial}
+						\begin{figure}[H] 
 							\includegraphics[width=12cm]{./imagenes/MarcoTeorico/NeuronaArt.png}
 							\centering 
+							\caption{Neurona Artificial}
 						\end{figure}
 				\subsection{Aprendizaje de las Redes Neuronales}
 				Si observamos la naturaleza, podemos ver que los sistemas que pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura para aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y la salida deseada.\\\\
@@ -680,9 +682,10 @@ natural y redes neuronales}\\
 				Se distinguen por su “memoria”, ya que toman información de entradas anteriores para influir en la entrada y salida actuales. Mientras que las redes neuronales profundas tradicionales asumen que las entradas y salidas son independientes entre sí, la salida de las redes neuronales recurrentes depende de los elementos anteriores dentro de la secuencia. Si bien los eventos futuros también serían útiles para determinar la salida de una secuencia dada, las redes neuronales recurrentes unidireccionales no pueden tener en cuenta estos eventos en sus predicciones.\cite{refTiposRedesNeu4}\\\\
 				Estos algoritmos de aprendizaje profundo se utilizan comúnmente para problemas relacionados con la traducción de idiomas, el procesamiento del lenguaje natural, el reconocimiento de voz y los subtítulos de imágenes.
 				\newpage
-				\begin{figure}[H] \caption{Diagrama Red Neuronal Recurrente}
+				\begin{figure}[H] 
 					\includegraphics[width=10cm]{./imagenes/MarcoTeorico/RedesN/Recurrente.png}
 					\centering 
+					\caption{Diagrama Red Neuronal Recurrente}
 				\end{figure}		
         
         \section{Procesamiento de Lenguaje Natural}
@@ -722,9 +725,10 @@ natural y redes neuronales}\\
    
 		   		\subsection{Arquitectura de un Transformer} 
 		   		
-		   		\begin{figure}[H] \caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
+		   		\begin{figure}[H] 
 		   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
 		   			\centering 
+		   			\caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
 		   		\end{figure}     
 		        En esta arquitectura el codificador mapea una secuencia de entrada de representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos de un elemento a la vez. En cada paso, el modelo es autorregresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
 		        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura anterior, respectivamente. \cite{refArqTransformer}
@@ -741,9 +745,10 @@ natural y redes neuronales}\\
 		        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de “conocimiento”. A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\\\\        
 		        \acrshort{bert} es posible gracias a la investigación de Google sobre transformers. El transformer es la parte del modelo que le da a \acrshort{bert} su mayor capacidad para comprender el contexto y la ambigüedad en el lenguaje. El transformer hace esto procesando cualquier palabra dada en relación con todas las demás palabras en una oración, en lugar de procesarlas una a la vez.\par        
 		        
-		        \begin{figure}[H] \caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
+		        \begin{figure}[H] 
 		        	\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Bertprocess.png}
 		        	\centering 
+		        	\caption{Representación de entrada de \acrshort{bert} y la separación de la oración por palabras y la asignación de valores.\cite{refQueesBert}}
 		        \end{figure} 
 		           
 		        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\\\\     
@@ -773,24 +778,27 @@ natural y redes neuronales}\\
 		    
 		    	\subsection{Arquitectura GPT-2}
 		    	
-		    	\begin{figure}[H] \caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
+		    	\begin{figure}[H] 
 		    		\includegraphics[scale=.5]{./imagenes/MarcoTeorico/GPTransformer.png}
 		    		\centering 
+		    		\caption{Arquitectura del modelo de \acrshort{gpt}-2 \cite{refarquitecturagpt}}
 		    	\end{figure}
 		    
 		    	El modelo de \acrshort{gpt}-2 es un transformer decodificador de 12 capas, cada una con 12 mecanismos de atención independientes, llamados “cabezas”; el resultado es 12 x 12 = 144 patrones de atención distintos. Cada uno de estos patrones de atención corresponde a una propiedad lingüística capturada por el modelo. \cite{refarquitecturagpt2} \\\\
 		    	Lo que le permite identificar la relación que existe entre las palabras, entendiendo la oración y permitiendo predecir la siguiente palabra en relación a la oración.\par
 		    	
-		    	\begin{figure}[H] \caption{Ejemplo análisis de una oración por \acrshort{gpt}-2 \cite{refarquitecturagpt3}}
+		    	\begin{figure}[H] 
 		    		\includegraphics[width=9cm]{./imagenes/MarcoTeorico/Gptsentence.png}
 		    		\centering 
+		    		\caption{Ejemplo análisis de una oración por \acrshort{gpt}-2 \cite{refarquitecturagpt3}}
 		    	\end{figure}
 		    
 		    	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
 		    	
     	\section{BERT vs GPT-2}    	
     	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías BERT y GPT-2, visualizada en la siguiente tabla:    	
-    	\begin{table}[h!]
+    	\begin{table}[h!]    		
+    		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
     		\begin{tabular}{|m{6.5cm}|m{6.5cm}|}
     			\hline    			
     			\rowcolor{guindapoli}
@@ -805,7 +813,6 @@ natural y redes neuronales}\\
     			Su uso es enfocado al análisis y generación de textos. & Sus principales usos son para la generación de textos.\\
     			\hline
     		\end{tabular}
-    		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
     	\end{table}
         Con base en lo anterior se determino que se va a utilizar \acrshort{bert} el resto del trabajo terminal para ayudarnos en la generación de los textos. \pagebreak	
         
@@ -860,9 +867,10 @@ natural y redes neuronales}\\
 		
 			Se pretende trabajar la estructura de la generación de letras musicales de la siguiente forma:
 			
-			\begin{figure}[H] \caption{Diagrama de la estructura para la generación de las letras musicales}
+			\begin{figure}[H] 
 				\includegraphics[scale=.45]{./imagenes/Disenio/Arquitectura/Generacion_letras.png}
 				\centering 
+				\caption{Diagrama de la estructura para la generación de las letras musicales}
 			\end{figure}
 		
 		\newpage
@@ -897,6 +905,7 @@ natural y redes neuronales}\\
 		\newpage
 			
 		\begin{table}[hbt!]
+			\caption[Comparación de servidores web]{Tabla comparativa de los distintos servidores web contemplados para nuestro proyecto}
 			\begin{tabular}{|m{7.5cm}|m{7.5cm}|}
 				\hline    		
 				\rowcolor{guindapoli}
@@ -919,7 +928,6 @@ natural y redes neuronales}\\
 				Al contar con muchas preferencias de configuración puede generar vulnerabilidades de seguridad. & \\
 				\hline	
 			\end{tabular}
-			\caption[Comparación de servidores web]{Tabla comparativa de los distintos servidores web contemplados para nuestro proyecto}
 		\end{table}
 		En ambos casos, se mantienen en desarrollo, con actualizaciones constantes, así como frecuentemente sacando parches para evitar ataques de DDos.
 	    \section{Servidor Web}
@@ -1305,6 +1313,7 @@ natural y redes neuronales}\\
 			   	\subsection{Hardware}
 		Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
 		\begin{table}[H]
+			\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
 			\begin{tabular}{|p{3.5cm}||p{10cm}|}
 				\rowcolor{guindapoli}
 				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
@@ -1318,10 +1327,10 @@ natural y redes neuronales}\\
 				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
 				\hline
 			\end{tabular}
-			\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
 		\end{table}
 
 		\begin{table}[H]
+			\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
 			\begin{tabular}{|p{3.5cm}||p{10cm}|}
 				\rowcolor{guindapoli}
 				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
@@ -1339,10 +1348,10 @@ natural y redes neuronales}\\
 				\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
 				\hline
 			\end{tabular}
-			\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
 		\end{table}
 
 		\begin{table}[H]
+			\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
 			\begin{tabular}{|p{3.5cm}||p{10cm}|}
 				\rowcolor{guindapoli}
 				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
@@ -1356,7 +1365,6 @@ natural y redes neuronales}\\
 				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
 				\hline
 			\end{tabular}
-			\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
 		\end{table}
 	   	\newpage
 	   	\section{Algoritmos Utilizados} % Porque elegi esas soluciones
@@ -1425,6 +1433,7 @@ natural y redes neuronales}\\
     	Dentro de este apartado se explican detalladamente las tecnologías que se utilizarán, así como las características de nuestros equipos de cómputo actualmente. La elección de estas herramientas estuvo basada tanto en las tecnologías que más se utilizan en la actualidad como las que cuentan con el mayor soporte para su trabajo en la nube, esto se debe a que los equipos con los que contamos actualmente no soportarían todo el trabajo.
     	    	
     	\begin{table}[H]
+    		\caption[Equipo de cómputo ideal]{Equipo de cómputo ideal}
     		\begin{tabular}{|p{3.5cm}||p{10cm}|}
     			\rowcolor{guindapoli}
     			\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo ideal.}}}\\
@@ -1438,12 +1447,12 @@ natural y redes neuronales}\\
     			\rowcolor{white}Disco duro & 2Tb HDD y 512Gb SSD\\
     			\hline
     		\end{tabular}
-    		\caption[Equipo de cómputo ideal]{Equipo de cómputo ideal}
     	\end{table}
     	
     	En la tabla anterior se muestra el equipo que requeriríamos para poder trabajar sin mayor dificultad al momento de realizar los entrenamientos de los modelos de redes neuronales que necesitamos para la realización de este trabajo, debido a la situación actual de la pandemia, en el mercado actual los componentes para el equipo son escasos y su precio en el mercado aumento. Por esa razón se utilizarán servicios de la nube para la realización de estos entrenamientos y nuestros equipos para el desarrollo del resto del proyecto.
     	
     	\begin{table}[H]
+    		\caption[Herramientas de Software]{Herramientas de Software a utilizar}
     		\begin{tabular}{ |p{3.5cm}|p{9.5cm}|}
     			\hline
     			\rowcolor{guindapoli}
@@ -1465,12 +1474,12 @@ natural y redes neuronales}\\
     			Amazon Web Services\\
     			\hline    			
     		\end{tabular}
-    		\caption[Herramientas de Software]{Herramientas de Software a utilizar}
     	\end{table}
     
     	Además de las herramientas de software a utilizar, es necesario mencionar el equipo de hardware que se utiliza, tanto para desarrollar, como para probar e implementar cada uno de los prototipos a lo largo de este trabajo terminal.
     	
         \begin{table}[H]
+        	\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
 	    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
 	    		\rowcolor{guindapoli}
 	    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [1]}}}\\
@@ -1484,9 +1493,9 @@ natural y redes neuronales}\\
 	    		\rowcolor{white}Disco duro & 1Tb \acrshort{hdd} y 512Gb \acrshort{ssd}\\
 	    		\hline
 	    	\end{tabular}
-    	\caption[Equipo de cómputo 1]{Equipo de cómputo 1}
    	  \end{table}
       \begin{table}[H]
+      	\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
 	    	\begin{tabular}{|p{3.5cm}||p{10cm}|}
 	    		\rowcolor{guindapoli}
 	    		\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [2]}}}\\
@@ -1504,9 +1513,9 @@ natural y redes neuronales}\\
 	    		\rowcolor{white}Disco duro & 1Tb y 256 Gb \acrshort{ssd}\\
 	    		\hline
 	    	\end{tabular}
-    	\caption[Equipo de cómputo 2]{Equipo de cómputo 2}
     \end{table}
     \begin{table}[H]
+    	\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
 			\begin{tabular}{|p{3.5cm}||p{10cm}|}
 				\rowcolor{guindapoli}
 				\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Equipo de cómputo utilizado. [3]}}}\\
@@ -1520,7 +1529,6 @@ natural y redes neuronales}\\
 				\rowcolor{white}Disco duro & 1Tb \acrshort{hdd}\\
 				\hline
 			\end{tabular}
-		\caption[Equipo de cómputo 3]{Equipo de cómputo 3}
    \end{table}
 \newpage
     	Junto con las herramientas de hardware y software a utilizar es necesario mencionar los servicios b\'asicos que son relevantes para el desarrollo de este trabajo terminal como lo son:
@@ -1535,6 +1543,7 @@ natural y redes neuronales}\\
     	A continuación se presenta una tabla con los recursos operativos del trabajo terminal que se calcularon con base en los recursos humanos con los que se cuenta actualmente y un análisis de las horas en las que el personal estará en operación:
     	
     	\begin{table}[h!]
+    		\caption[Horas de trabajo]{Relación de horas de trabajo estimadas para la realización de este trabajo terminal}
     		\begin{tabular}{|p{2cm}|p{1.4cm}|p{2.2cm}|p{1.6cm}|p{2.2cm}|p{1.6cm}|}
     			\hline    			
     			\rowcolor{guindapoli}
@@ -1559,7 +1568,6 @@ natural y redes neuronales}\\
     			Noviembre & 31 & 8 & 18 & 2 & 36 \\ 
     			\hline
     		\end{tabular}
-    		\caption[Horas de trabajo]{Relación de horas de trabajo estimadas para la realización de este trabajo terminal}
     	\end{table}
     	Con esto podemos concluir que contamos con 286 horas, suficiente tiempo para el desarrollo de este trabajo terminal, ya que las horas totales de trabajo están contempladas para cada uno de los integrantes del equipo
     	
@@ -1603,7 +1611,7 @@ natural y redes neuronales}\\
     		\item Amazon - Elastic 2.0 y SSPL \cite{refAmazonLicense}
     	\end{itemize}
     	
-    	*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licencia OpenSource "no genuina".\\
+    	*SSPL: Aunque es clasificado como OpenSource por parte de MongoDB, al estar basado en la licencia de software libre de GPL3, la Iniciativa de Open Source (OSI) no la reconoce como licencia OpenSource al describirla como una licencia OpenSource “no genuina".\\
     	
     	Como se puede apreciar en el software presentado, las licencias son del tipo OpenSource con lo cual validamos la viabilidad económica del proyecto el cual no representará gasto monetario más allá del necesitado para el entrenamiento de la red neuronal, para el cual haremos uso de Amazon SageMaker que tiene un costo de:\\\\
     	Cuota gratuita primeros 2 meses:
@@ -1626,7 +1634,7 @@ natural y redes neuronales}\\
     	\subsubsection*{Originalidad}
     	Los derechos de autor protegen la forma en que se expresan las ideas. Esta manera única de expresar las palabras, notas musicales, colores, formas, etc. son elegidas y organizadas u ordenadas. Es la expresión lo que hace que una obra sea original. Esto significa que puede haber muchos trabajos diferentes sobre la misma idea y todos de ellos estarán protegidos por derechos de autor, siempre y cuando expresen esta idea de una manera original.\cite{refOriginalidadWipo}\\\\
     	Según la Ley Federal del Derecho de Autor, la forma en cómo se expresa un autor al momento de crear su obra es lo que esta protegido por la ley ante acciones fraudulentas.\cite{refOriginalidadLFDA}\\\\
-    	Con base en la Ley Federal del Derecho de Autor Capitulo IV articulo 107 "Las bases de datos o de otros materiales legibles por medio de máquinas o en otra forma, que por razones de selección y disposición de su contenido constituyan creaciones intelectuales, quedarán protegidas como compilaciones."\cite{refOriginalidadLFDA}\\\\
+    	Con base en la Ley Federal del Derecho de Autor Capitulo IV articulo 107 “Las bases de datos o de otros materiales legibles por medio de máquinas o en otra forma, que por razones de selección y disposición de su contenido constituyan creaciones intelectuales, quedarán protegidas como compilaciones."\cite{refOriginalidadLFDA}\\\\
     	Por ende las canciones generadas por nuestro sistema no se pretenden ni pueden registar, ya que estos resultados generados serian nuestros.
     	
     	\section{Análisis de riesgo}
@@ -1807,8 +1815,9 @@ natural y redes neuronales}\\
 		\subsection{Funcionamiento General del Sistema}
 		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto, una vez este implementado el modelo entrenado en la página web:
 		
-		\begin{figure}[H] \caption{Diagrama de funcionamiento general del sistema}
+		\begin{figure}[H] 
 			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura_sistema.png}
+			\caption{Diagrama de funcionamiento general del sistema}
 		\end{figure}
 	\newpage
 		\subsection{Historias de Usuario}
@@ -2065,7 +2074,7 @@ natural y redes neuronales}\\
 		Se hizo dicha búsqueda en páginas que contienen datasets con licencia del tipo open source, tales como Kaggle \cite{kaggle}, Google datasets \cite{googleDatasets}, \acrshort{aws} Open Data \cite{awsOpenData} y en papers de investigación.\\\\
 		Encontramos diferentes datasets que contaban con algunas de las necesidades del sistema pero por una u otra razón no se podían utilizar, tal fue el caso del dataset de Music4All \cite{music4all} que contaba con las necesidades del sistema pero el uso de los datos era muy restringido.\\
 
-		En Kaggle \cite{kaggle} se encontró un dataset llamado "Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160790 letras de canciones.\\\\
+		En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160790 letras de canciones.\\\\
 		
 		Dicha base de datos se sacó originalmente de la página de Vagalume \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación, los cuales son:
 		\begin{itemize}
@@ -2173,7 +2182,7 @@ natural y redes neuronales}\\
 		
 		\subsection{Modelo} % Explicar como se obtuvo en código la base de datos limpia
 		
-		Para el diseño del modelo se tiene contemplado el siguiente modelo del cual se puede decir que una vez se tiene la salida del transformer se pasa por una capa de clasificación, posterior a ello se usa la función "Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario y cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
+		Para el diseño del modelo se tiene contemplado el siguiente modelo del cual se puede decir que una vez se tiene la salida del transformer se pasa por una capa de clasificación, posterior a ello se usa la función “Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario y cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
 		\\\\
 		En última instancia, y de acuerdo a la probabilidad de rima dada por el usuario en la interfaz web, la última palabra puede o no contener una rima que haga juego con alguna de las palabras de la oración previa del verso.
 		
@@ -2238,7 +2247,7 @@ natural y redes neuronales}\\
 	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\\\
 	Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
 	\begin{itemize}
-	\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como "experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
+	\item SageMaker Experiments: Ayuda a organizar y rastrear iteraciones en los modelos de aprendizaje automático al capturar los parámetros de entrada, configuraciones y resultados y guardarlos como “experimentos", permitiendo que de forma posterior se pueda llevar una línea de tiempo de lo que ha sucedido y comparar los resultados de los experimentos de una manera visual.
 	\item SageMaker Debugger: Registra métricas del entrenamiento en tiempo real, genera advertencias y consejos de solución cuando se detectan problemas de entrenamiento comunes, así como monitorea los recursos del sistema para birndar recomendaciones respecto a cómo reasignar recursos y así reducir los costos.
 	\item Managed Spot Training: Es una herramienta que permite entrenar los modelos de aprendizaje automático con instancias de Amazon \acrshort{ec2} que pueden demorar más al entrenar a cambio de abaratar los costos de entrenamiento hasta en un 90\%.
 	\end{itemize}
@@ -2260,9 +2269,9 @@ natural y redes neuronales}\\
 	
 	\begin{itemize}
 		\item Filtrar y preparar el contenido del dataset que le proporcionemos.
-		\item Entrenar el modelo, el cual podremos supervisar desde una instancia proporcionada por Amazon SageMaker durante este paso llamado "Instancia de Entrenamiento de Aprendizaje de Máquina".
+		\item Entrenar el modelo, el cual podremos supervisar desde una instancia proporcionada por Amazon SageMaker durante este paso llamado “Instancia de Entrenamiento de Aprendizaje de Máquina".
 		\item Generar el modelo.
-		\item Desplegar el modelo, para este paso de la misma forma que ocurre con el entrenamiento del modelo, Sagemaker proporciona una instancia que nos permitirá alojarlo para su posterior uso llamada "Instancia de Alojamiento de Aprendizaje de Máquina".
+		\item Desplegar el modelo, para este paso de la misma forma que ocurre con el entrenamiento del modelo, Sagemaker proporciona una instancia que nos permitirá alojarlo para su posterior uso llamada “Instancia de Alojamiento de Aprendizaje de Máquina".
 	\end{itemize}
 	
 	Posterior a todos los pasos mencionados anteriormente que se realizarán dentro de la instancia de Jupyter se puede crear ahí mismo un `\acrshort{api} endpoint' que responderá a una petición hecha por el usuario para acceder al modelo generado y así generar y devolver la letra de la canción.
@@ -2306,13 +2315,15 @@ natural y redes neuronales}\\
 
 \section{Aplicación web}
 En este apartado se mostrará un primer boceto de las vistas de la aplicación web.	        
-\begin{figure}[H] \caption{Aplicación web, pagina inicial.}
+\begin{figure}[H] 
 	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
 	\centering 
+	\caption{Aplicación web, pagina inicial.}
 \end{figure}
-\begin{figure}[H] \caption{Aplicación web, pagina una vez generada una letra musical.}
+\begin{figure}[H] 
 	\includegraphics[width=12cm]{./imagenes/Analisis/MockFrontGenerated.png}
 	\centering 
+	\caption{Aplicación web, pagina una vez generada una letra musical.}
 \end{figure} 
 % Rename Appendice to Anexos
 \renewcommand*\appendixpagename{{\textcolor{azulescom}{Anexos}}}
