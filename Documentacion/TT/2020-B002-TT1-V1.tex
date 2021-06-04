@@ -60,6 +60,8 @@
 %%Glosario
 \usepackage{glossaries}
 
+\usepackage{pdfpages}
+
 %%ESTILO DE CÓDIGO
 \lstdefinestyle{codeStyle}{
 	backgroundcolor=\color{backcolour},   commentstyle=\color{commentcolor},
@@ -339,6 +341,11 @@
 \newacronym{json}{JSON}{Javascript Object Notation}
 \newacronym{url}{URL}{Uniform Source Locator}
 \newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{tcp}{TCP}{Transmission Control Protocol}
+\newacronym{udp}{UDP}{User Datagram Protocol}
+\newacronym{imap}{IMAP}{Internet Message Access Protocol}
+\newacronym{pop}{POP}{Post Office Protocol}
+\newacronym{smtp}{SMTP}{Simple Mail Transfer Protocol}
 \newacronym{vps}{VPS}{Virtual Private Server}
 \newacronym{ssl}{SSL}{Secure Socket Layer}
 \newacronym{fqdn}{FQDN}{Fully Qualified Domain Name}
@@ -900,7 +907,7 @@ natural y redes neuronales}\\
 		\begin{comment}
 		\section{NGINX}
 		
-		NGINX es un software de código abierto para servicio web, almacenamiento en caché, equilibrio de carga, proxy inverso, transmisión de medios y más. Inició como un servidor web diseñado para un máximo rendimiento y estabilidad. Además de sus capacidades de servidor HTTP, NGINX también puede funcionar como un servidor proxy para correo electrónico (IMAP, POP3 y SMTP) y un proxy inverso, así como un equilibrador de carga para servidores HTTP, TCP y UDP.\cite{refNginx}\\
+		NGINX es un software de código abierto para servicio web, almacenamiento en caché, equilibrio de carga, proxy inverso, transmisión de medios y más. Inició como un servidor web diseñado para un máximo rendimiento y estabilidad. Además de sus capacidades de servidor \acrshort{http}, NGINX también puede funcionar como un servidor proxy para correo electrónico (\acrshort[IMAP], \acrshort[POP] y \acrshort[SMTP]) y un proxy inverso, así como un equilibrador de carga para servidores \acrshort{http}, \acrshort[TCP] y \acrshort[UDP].\cite{refNginx}\\
 		\end{comment}
 		\newpage
 			
@@ -2359,6 +2366,11 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 % Rename Appendice to Anexos
 \renewcommand*\appendixpagename{{\textcolor{azulescom}{Anexos}}}
 \renewcommand*\appendixtocname{{\textcolor{azulescom}{Anexos}}}
+\pagebreak
+
+\includepdf[pages=-]{./anexos/CadenasdeMarkov.pdf}
+
+\pagebreak
 \appendixpageon
 	\begin{appendices}
 	%%Glosario
