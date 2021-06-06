@@ -543,7 +543,7 @@ natural y redes neuronales}\\
     	Se eligió el idioma inglés debido a que existe una gran cantidad de bases de datos para procesar, al igual que herramientas y documentación para este idioma.\\\\
     	Nos proponemos orientar esta solución en un entorno de nube, donde la información de configuración, servicios y datos necesarios pueden mantenerse de forma independiente a la implementación, facilitando la adaptación y flexibilidad de la plataforma.\\\\
     	Nuestro proyecto ayudará al usuario utilizando herramientas como el procesamiento de lenguaje natural, redes neuronales, aprendizaje de máquina (machine learning) y servidores en la nube. Se hará uso de un conjunto de datos (dataset) y herramientas alojadas en la nube (Google Cloud Platform o Amazon Web Services) para procesar estos datos; se pretende utilizar un módulo que encuentre patrones por medio de redes neuronales para analizar la semántica mediante técnicas y herramientas ya existentes de procesamiento de lenguaje natural. Se van a realizar pruebas y experimentos con estas herramientas antes de la implementación (Bert \cite{Bert}, spaCy\cite{spaCy}) para poder generar versos. A su vez se va a desarrollar una interfaz web intuitiva en versión prototipo donde el usuario va a poder utilizar esta herramienta la cual le va a mostrar la letra musical que se va a generar en ese momento.\\\\
-    	A diferencia de los proyectos señalados en la Tabla 1 nuestra propuesta se va a centrar en generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales se tendrán resultados completamente diferentes con propuestas distintas.\\\\
+    	A diferencia de los proyectos señalados en la Tabla \ref{table:Propuestas} nuestra propuesta se va a centrar en generar letras musicales con métodos y tecnologías distintas a los que se usaron, esto es, aunque se utilicen los mismos géneros musicales se tendrán resultados completamente diferentes con propuestas distintas.\\\\
     	En el desarrollo de este proyecto haremos uso de los conocimientos adquiridos durante el transcurso de la carrera. Se van a utilizar técnicas de diseño de proyectos aprendidas en el curso de Ingeniería de Software, se van a aplicar los conocimientos de programación adquiridos en unidades de aprendizaje como Inteligencia Artificial, Procesamiento de Lenguaje Natural, Web Application Development, Programación Orientada a Objetos, Análisis de Algoritmos, así como técnicas de construcción de documentos y análisis de semántica vistas en Análisis y Diseño orientado a Objetos y Comunicación Oral y Escrita.
     	
 	    \section{Metodolog\'ia}
@@ -698,7 +698,7 @@ natural y redes neuronales}\\
         \section{Procesamiento de Lenguaje Natural}
         
         El \acrfull{pln} se refiere a una rama de la informática, específicamente, a una rama de la inteligencia artificial, la cual se ocupa de dar a las computadoras la capacidad de comprender texto y palabras de la misma manera que los seres humanos.\\\\
-        El \acrfull{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y `comprender' su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
+        El \acrshort{pln} combina la lingüística computacional con modelos estadísticos, machine learning y deep learning. Juntas, estas tecnologías permiten a las computadoras procesar el lenguaje humano en forma de texto o datos de voz y `comprender' su significado completo, es decir, la intención y el sentimiento del hablante o escritor. \cite{refProcesamientoLN}
         
 		        \subsection{Tareas del Procesamiento de Lenguaje Natural}
 		        \begin{itemize}
@@ -724,7 +724,7 @@ natural y redes neuronales}\\
         
         \section{Transformers}
         El Transformer en \acrfull{pln} es una arquitectura que tiene como objetivo codificar cada palabra que compone una frase en función a la secuencia que cada palabra sigue, permitiendo así agregar un contexto o una representación matemática dentro del texto.\\\\    
-        Se suele trabajar con los transformadores en 2 etapas: 
+        Se suele trabajar con los transformadores en dos etapas: 
         \begin{itemize}
         	\item \textbf{Pre-entrenamiento: }En esta etapa, el modelo aprende cómo se estructura el lenguaje de forma general, así como de obtener un conocimiento general del significado de las palabras dentro de la frase trabajada.\cite{refQueesuntransformer}
         	\item \textbf{Afinado: }En esta etapa se añaden ciertas capas o funciones a la arquitectura para adaptar los modelos y que estos realicen ciertas tareas, para después estos modelos ser reentrenados y cumplan con las tareas establecidas de manera correcta.\cite{refQueesuntransformer}
@@ -733,20 +733,20 @@ natural y redes neuronales}\\
 		   		\subsection{Arquitectura de un Transformer} 
 		   		
 		   		\begin{figure}[H] 
-		   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}
+		   			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Transformerarchitecture.png}\label{ArqTransformer}
 		   			\centering 
 		   			\caption{Arquitectura general de un Transformer \cite{refArqTransformer}}
 		   		\end{figure}     
 		        En esta arquitectura el codificador mapea una secuencia de entrada de representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos de un elemento a la vez. En cada paso, el modelo es autorregresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
-		        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura anterior, respectivamente. \cite{refArqTransformer}
+		        El transformer sigue esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura\ref{ArqTransformer} anterior, respectivamente. \cite{refArqTransformer}
         
-        \section{BERT}
+        \section{\acrshort{bert}}
 		        \subsection{¿Qué es Bert?}
 		        \acrfull{bert} es un marco de aprendizaje automático de código abierto para el \acrfull{pln}. \acrshort{bert}, significa Representaciones de codificador bidireccional de transformers, basado en transformers, el cual es un modelo de aprendizaje profundo en el que cada elemento de salida está conectado a cada elemento de entrada y las ponderaciones entre ellos se calculan dinámicamente en función de su conexión. \cite{refQueesBert} \\\\        
 		        Al contar con  la capacidad bidireccional, \acrshort{bert} está previamente entrenado en dos tareas de \acrshort{pln} diferentes, pero relacionadas: el modelado de lenguaje enmascarado y la predicción de la siguiente oración.\\\\        
 		        El objetivo del entrenamiento del \acrfull{mlm} es ocultar una palabra en una oración y luego hacer que el programa prediga qué palabra se ha ocultado en función del contexto de la palabra oculta. El objetivo del entrenamiento de predicción de la siguiente oración es que el programa prediga si dos oraciones dadas tienen una conexión lógica secuencial o si su relación es simplemente aleatoria.\\\\
 		        
-		        \subsection{¿Cómo funciona BERT?}
+		        \subsection{¿Cómo funciona \acrshort{bert}?}
 		        
 		        El objetivo de cualquier técnica de \acrshort{pln} es comprender el lenguaje humano tal como se habla de forma natural. En el caso de \acrshort{bert}, esto normalmente significa predecir la siguiente palabra. Para hacer esto, los modelos normalmente necesitan entrenarse usando un gran repositorio de datos de entrenamiento especializados y etiquetados.\\\\     
 		        \acrshort{bert}, sin embargo, fue entrenado previamente usando solo un corpus de texto plano sin etiquetar (textos de Wikipedia en inglés). Continúa aprendiendo sin supervisión del texto sin etiquetar y mejorando incluso cuando se usa en aplicaciones prácticas. Su entrenamiento previo sirve como una capa base de “conocimiento”. A partir de ahí, \acrshort{bert} puede adaptarse al creciente cuerpo de contenido y consultas para ajustarse a las especificaciones del usuario. Este proceso se conoce como aprendizaje por transferencia.\\\\        
@@ -761,7 +761,7 @@ natural y redes neuronales}\\
 		        En la figura anterior, lo que se realiza es que se inserta un token [\acrfull{cls}] al principio de la primera oración y un token [\acrfull{sep}] al final de cada oración, cada palabra es separada en una ficha, a cada ficha se agrega una inserción que indica si se trata de la oración A o la oración B, finalmente se agrega una incrustación posicional a cada token para indicar su posición en la secuencia. \cite{refComofuncionaBert}\\\\     
 		        Esto contrasta con el método tradicional de procesamiento del lenguaje, conocido como incrustación de palabras, en el que los modelos mapeaban cada palabra en un vector, que representa sólo una dimensión, es decir, el significado de esa palabra.\par
 		        
-		        \subsection{BERT en la actualidad}
+		        \subsection{\acrshort{bert} en la actualidad}
 		        
 		        \acrshort{bert} se utiliza actualmente en Google para optimizar la interpretación de las búsquedas de los usuarios.\\\\
 		        Así como en la realización de tareas tales como: \cite{refBertactualidad}
@@ -802,10 +802,10 @@ natural y redes neuronales}\\
 		    
 		    	Las líneas, leídas de izquierda a derecha, muestran dónde presta atención el modelo prediciendo la siguiente palabra en la oración (la intensidad del color representa la fuerza de la atención). Entonces, al tratar de predecir la siguiente palabra después de correr (ran), el modelo presta mucha atención al perro (dog) en este caso. Esto ya que necesita saber quién o qué está corriendo para predecir qué viene a continuación. \cite{refarquitecturagpt3}    	
 		    	
-    	\section{BERT vs GPT-2}    	
-    	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías BERT y GPT-2, visualizada en la siguiente tabla:    	
+    	\section{\acrshort{bert} vs GPT-2}    	
+    	Dentro de esta sección mostramos una pequeña comparación entre las tecnologías \acrshort{bert} y GPT-2, visualizada en la siguiente tabla:    	
     	\begin{table}[h!]    		
-    		\caption[BERTvsGPT-2]{Comparación entre las tecnologías BERT y GPT-2}
+    		\caption[\acrshort{bert}vsGPT-2]{Comparación entre las tecnologías \acrshort{bert} y GPT-2}
     		\begin{tabular}{|m{6.5cm}|m{6.5cm}|}
     			\hline    			
     			\rowcolor{guindapoli}
@@ -892,7 +892,7 @@ natural y redes neuronales}\\
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/MarcoTeorico/Markov/CMarkov.png}
 			\centering 
-			\caption{Diagrama De Estados finitos De Una Cadena De Markov \cite{refMarkov}}
+			\caption{Diagrama de estados finitos de una cadena de Markov \cite{refMarkov}}
 		\end{figure}
 		\begin{comment}
 		\section{Flask}
@@ -962,9 +962,9 @@ natural y redes neuronales}\\
 		\newpage
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
-		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitn esta gran cantidad de iteraciones para producir el modelo más preciso.\\\\ 
+		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitan esta gran cantidad de iteraciones para producir el modelo más preciso.\\\\ 
 		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\\\
-		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsift ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
+		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsoft ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
 				\subsection{Amazon Web Services}
 				Dentro de las bondades que ofrecen los Servicios Web de Amazon (\acrfull{aws} por sus siglas en ingl\'es) y que nos pueden ser de utilidad para las nacesidades de nuestro proyecto se pueden encontrar: 
@@ -1164,13 +1164,11 @@ natural y redes neuronales}\\
 	\section{Nuestra Solución} % Como lo resuelvo
 	   Debido a lo anterior se ha decidido desarrollar una herramienta de apoyo para estudiantes o aficionados interesados, a los cuales se les dificulte componer nuevas letras musicales, con la finalidad de impulsar la carrera de futuros artistas en la industria musical que no cuenten con los recursos suficientes para poder contratar servicios particulares de compositores.\\\\
 	   Dicha herramienta de apoyo se realizará con ayuda de la inteligencia artificial, así como de un modelo de red neuronal recurrente para la generación de las nuevas letras musicales, los usuarios de esta herramienta podrán interactuar con la herramienta para generar letras personalizadas según sus propuestas dadas.\\\\
-	   Para corroborar que sea la mejor opción, se implementarán pruebas con otras herramientas como BERT y Cadenas de Markov con las que podremos comparar el resultado.
+	   Para corroborar que sea la mejor opción, se implementarán pruebas con otras herramientas como \acrshort{bert} y Cadenas de Markov con las que podremos comparar el resultado.
 	   
 	   	 \subsection{¿Por qué utilizar Inteligencia Artificial?}
-	   	 Se eligió la inteligencia artificial como tecnología principal para desarrollar este sistema, se quiere investigar el funcionamiento de las redes neuronales y su impacto que puede llegar a tener en el área de la creatividad y generación de texto, que es un campo relativamente nuevo y con muchos alcances que aún quedan por descubrir.
-	   	 
-	   	 Cabe destacar que aunque es un tema relacionado con la ingeniería en sistemas computacionales, no es algo que se aprenda como tema principal, por lo que requerirá una ardua investigación y desarrollo para poder lograr los objetivos propuestos.
-	   	 
+	   	 Se eligió la inteligencia artificial como tecnología principal para desarrollar este sistema, se quiere investigar el funcionamiento de las redes neuronales y su impacto que puede llegar a tener en el área de la creatividad y generación de texto, que es un campo relativamente nuevo y con muchos alcances que aún quedan por descubrir.\\\\
+	   	 Cabe destacar que aunque es un tema relacionado con la ingeniería en sistemas computacionales, no es algo que se aprenda como tema principal, por lo que requerirá una ardua investigación y desarrollo para poder lograr los objetivos propuestos.\\\\
 	   	 La inteligencia artificial nos permite buscar patrones y al mismo tiempo soluciones nuevas y eficientes, para problemas que antes no se podía saber que una computadora podría hacer.
 	   	 
 	   	 \subsection{¿Por qué utilizar Procesamiento de Lenguaje Natural?}
@@ -1394,9 +1392,9 @@ natural y redes neuronales}\\
 	   	\item Salida de celda actual
 	   	\end{itemize}
    		Los resultados de este tipo de redes neuronales puede variar según el dataset que se utiliza y si la limpieza se hizo correctamente, de igual forma importa mucho el hardware utilizado para que el tiempo de generación del modelo no sea tardado y no consuma más de lo que tiene la computadora.
-   		\subsection{BERT}
-   		Como última opción de algoritmo, se utilizará BERT para generar nuevo texto, a través de las llamadas mascaras y separadores, es posible crear nuevas oraciones, sin embargo si se usa esta herramienta, es necesaria la implementación de otro tipo de herramientas, ya que al ser bidireccional, la generación de texto no saldrá si no se ingresa algún texto previamente.\\\\
-   		La idea es utilizar una API que genere palabras que rimen y que genere cierta cantidad de rimas que sirvan como texto previo para que BERT pueda generar algún texto sin ningún problema.
+   		\subsection{\acrshort{bert}}
+   		Como última opción de algoritmo, se utilizará \acrshort{bert} para generar nuevo texto, a través de las llamadas mascaras y separadores, es posible crear nuevas oraciones, sin embargo si se usa esta herramienta, es necesaria la implementación de otro tipo de herramientas, ya que al ser bidireccional, la generación de texto no saldrá si no se ingresa algún texto previamente.\\\\
+   		La idea es utilizar una API que genere palabras que rimen y que genere cierta cantidad de rimas que sirvan como texto previo para que \acrshort{bert} pueda generar algún texto sin ningún problema.
    		 
 	   	\section{Pruebas}
 	   	
@@ -1421,10 +1419,7 @@ natural y redes neuronales}\\
 	   	En conclusión, se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad es texto entero reutilizado de las oraciones que se encuentran en el dataset, de igual forma llegaron a salir resultados utilizando la misma palabra en repetidas ocasiones, se tiene en cuenta que los usuarios a los que va dirigido este proyecto, se encontrarán en posición de buscar ideas nuevas para su proyecto, ideas que contengan un sentido y palabras acordes a lo que ellos buscan, es por ellos que seguimos probando con otros algoritmos.\\\\
 	   	
 	   	\subsection{Pruebas con Recurrent Neural Networks}
-	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales, como se menciona anteriormente, se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. A continuación se mostrará el notebook hecho en jupyter para mostrar cada paso de la prueba.
-	   	
-	   \subsection{Pruebas con BERT}
-	   	Como tercera y útlima prueba, se recurrió a utilizar BERT como generador de letras musicales, se implementó el código, sin embargo, para probar este tipo de tecnología, es necesario contar con una GPU de la marca NVIDIA, por lo que se atrasaron las pruebas de este tipo ya que se tienen que hacer en la nuebe y no localmente. Sin embargo se adjunta el código a continuación:
+	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el árticulo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{prueba2} se mostrará el notebook hecho en jupyter para mostrar cada paso de la prueba junto con los resultados obtenidos.
 	   	\newpage
 
     	\section{Estudio de Factibilidad}
@@ -1611,7 +1606,7 @@ natural y redes neuronales}\\
     	\begin{itemize}
     		\item Datamuse API \cite{refDatamuseLicense}
     		\item MongoDB - SSPL* \cite{refMongoDBLicense}
-    		\item BERT - Apache 2.0 \cite{refBERTLicense}
+    		\item \acrshort{bert} - Apache 2.0 \cite{refBERTLicense}
     		\item Apache - Apache 2.0 \cite{refApacheLicense}
     		\item React - MIT \cite{refReactLicense}
     		\item Python - PSFL \cite{refPythonLicense}
@@ -2211,8 +2206,8 @@ natural y redes neuronales}\\
 		\subsection{Descripción}
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
 		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-		Se decido trabajar con BERT en lugar de GPT-2 debido a que usando BERT podemos entrenarlo y ajustarlo a resultados que consideramos satisfactorios, cosa que no es posible usando GPT-2, además BERT cuenta con la característica de ser Bidireccional, el cual nos permite analizar el texto anterior para poder generar el texto futuro.\\\\
-		BERT (Bidirectional Encoder Representations from Transformers) se usará para clasificar oraciones, este se puede entender de forma más sencilla de la siguiente manera:
+		Se decido trabajar con \acrshort{bert} en lugar de GPT-2 debido a que usando \acrshort{bert} podemos entrenarlo y ajustarlo a resultados que consideramos satisfactorios, cosa que no es posible usando GPT-2, además \acrshort{bert} cuenta con la característica de ser Bidireccional, el cual nos permite analizar el texto anterior para poder generar el texto futuro.\\\\
+		\acrshort{bert} (Bidirectional Encoder Representations from Transformers) se usará para clasificar oraciones, este se puede entender de forma más sencilla de la siguiente manera:
 		\begin{itemize}
 			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
 			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
@@ -2367,13 +2362,14 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 \renewcommand*\appendixpagename{{\textcolor{azulescom}{Anexos}}}
 \renewcommand*\appendixtocname{{\textcolor{azulescom}{Anexos}}}
 \pagebreak
-
-\includepdf[pages=-]{./anexos/CadenasdeMarkov.pdf}
-
-\pagebreak
 \appendixpageon
 	\begin{appendices}
+	% Cadenas de Markov
+	\centering
+	\includepdf[pages=-]{./anexos/CadenasdeMarkov.pdf}\label{prueba2}
 	%%Glosario
+	\newpage
+		\includepdf[pages=-]{./anexos/LSTM.pdf}
 	\newpage
 	\renewcommand*\glossaryname{{\textcolor{azulescom}{Glosario.}}}
 	\printglossary
