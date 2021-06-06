@@ -902,8 +902,8 @@ natural y redes neuronales}\\
 		\end{comment}
 	    \section{Apache}
 	    
-	 	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
-	 	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
+	 	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\cite{Apache}\\\\
+	 	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\cite{what_is_apache}\\
 		\begin{comment}
 		\section{NGINX}
 		
@@ -916,7 +916,7 @@ natural y redes neuronales}\\
 			\begin{tabular}{|m{7.5cm}|m{7.5cm}|}
 				\hline    		
 				\rowcolor{guindapoli}
-				{\textbf{\textcolor{white}{Apache}}} & {\textbf{\textcolor{white}{NGINX}}}\\
+				{\textbf{\textcolor{white}{Apache}}} & {\textbf{\textcolor{white}{NGINX \cite{refNginx}}}}\\
 				\hline
 				Es fácil de configurar, cuenta con muchos módulos, así como un entorno sencillo. &  Usa hilos para manejar solicitudes del usuario.\\
 				\hline
@@ -938,12 +938,12 @@ natural y redes neuronales}\\
 		\end{table}
 		En ambos casos, se mantienen en desarrollo, con actualizaciones constantes, así como frecuentemente sacando parches para evitar ataques de DDos.
 	    \section{Servidor Web}
-	        La función es mostrar sitios web en internet. A fin de conseguir este objetivo, actúa como un mediador entre el servidor y el dispositivo del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\\\\
+	        La función es mostrar sitios web en internet. A fin de conseguir este objetivo, actúa como un mediador entre el servidor y el dispositivo del cliente. Obtiene el contenido del servidor en cada petición hecha por el usuario y lo entrega al sitio web.\cite{What_is_a_web_server}\\\\
 	        Los servidores web son capaces de procesar archivos escritos en distintos lenguajes de programación como Java, PHP, Python, y otros.\\\\
 	        Podría decirse que un servidor web es la herramienta responsable por la correcta comunicación entre el cliente y el servidor.
 
 		 \section{Certificado SSL}
-			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje. Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\\\\
+			Conocido como \acrfull{ssl} o (Capa de Conexión Segura) es un estándar de seguridad global que fue originalmente creado por Netscape en los 90's. \acrshort{ssl} crea una conexión encriptada entre tu servidor web y el navegador web de tu visitante permitiendo que la información privada sea transmitida sin que ocurran problemas como serían espionaje, manipulación de la información, y falsificación de los datos del mensaje.\cite{what_is_SSL} Básicamente, la capa \acrshort{ssl} permite que dos partes tengan una “conversación” privada.\\\\
 			Para establecer esta conexión segura, se instala en un servidor web un certificado \acrshort{ssl} (también llamado `certificado digital') que cumple dos funciones:
 			
 			\begin{itemize}
@@ -951,7 +951,7 @@ natural y redes neuronales}\\
 				\item Cifrar la informaci\'on transmitida.
 			\end{itemize}
 		
-			Hay varios tipos de certificados \acrshort{ssl} según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo:
+			Hay varios tipos de certificados \acrshort{ssl} \cite{ssl_certificates} según la cantidad de nombres de dominio o subdominios que se tengan, como por ejemplo:
 			
 			\begin{itemize}
 				\item \'Unico: Asegura un nombre de dominio o subdominio completo (\acrfull{fqdn} por sus siglas en ingl\'es). 
@@ -963,7 +963,7 @@ natural y redes neuronales}\\
 		\section{Plataforma en la Nube de Aprendizaje Autom\'atico}
 		
 		El entrenamiento de aprendizaje automático y de modelos de aprendizaje profundo involucra miles de iteraciones. Se necesitan esta gran cantidad de iteraciones para producir el modelo más preciso.\\\\ 
-		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\\\
+		El cómputo en la nube permite modelar capacidad de almacenamiento y manejar cargas a escala \cite{data_science_in_the_cloud}, o escalar el procesamiento a través de los nodos. Por ejemplo, \acrshort{aws} ofrece instancias de \acrshort{gpu}s con capacidad de memoria que va de los 8Gb's a los 256Gb's, estas instancias son cobradas a ritmos por hora.\\\\
 		Las \acrshort{gpu}s son procesadores especializados diseñados para procesado complejo de imágenes. Azure de Microsoft ofrece \acrshort{gpu}s de alto rendimiento de la serie NC para aplicaciones o algoritmos de cómputo de alto rendimiento.
 		
 				\subsection{Amazon Web Services}
@@ -974,7 +974,7 @@ natural y redes neuronales}\\
 					Algunas aplicaciones de aprendizaje automático en SageMaker van desde reconocimiento de voz hasta visión de computadora, e incluso recomendaciones basadas en el comportamiento aprendido del usuario.\\\\ 
 					El mercado de \acrshort{aws} ofrece modelos que se pueden usar en lugar de empezar desde cero, posterior a eso se puede entonces empezar a entrenar y optimizar el modelo; las elecciones más comunes son frameworks como Keras, TensorFlow, y PyTorch; Sagemaker puede optimizar y configurar estos frameworks automáticamente, o pueden ser entrenadas de manera personal.\\\\ 
 					\newpage
-					Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
+					Uno mismo puede incluso desarrollar su propio algoritmo construyéndolo en un contenedor de Docker o se puede hacer uso de una “Jupyter notebook” \cite{what_is_jupyter} para construir un modelo propio de aprendizaje automático y visualizar su información usada para el entrenamiento del modelo siendo este punto lo que más nos interesa para nuestro proyecto.
 					
 				\end{itemize}
 		
@@ -1010,7 +1010,7 @@ natural y redes neuronales}\\
 			\end{itemize}
 		\end{comment}
 		
-		\begin{table}[hbt!]\caption{Tabla comparativa de las diversas plataformas contempladas}% title of Table
+		\begin{table}[hbt!]\caption{Tabla comparativa de las diversas plataformas contempladas \cite{comparing-google-cloud-platform-aws-and-azure}}% title of Table
 			\centering % used for centering table
 			\resizebox{15cm}{!} {
 				\begin{tabular}{c c c c}% centered columns (3 columns)
@@ -1070,7 +1070,7 @@ natural y redes neuronales}\\
 		\\
 		Tanto \acrshort{gcp} como \acrshort{aws} ofrecen un modelo de pago “pay-as-you-go”. Este modelo es el mejor para aquellos individuos que puedan llegar a esperar un uso intermitente de la nube, ya que permite un enfoque flexible para añadir y remover servicios cuando se necesite. Por supuesto, este nivel de flexibilidad tiene un costo, haciendo al modelo “pay-as-you-go” el más caro por hora.
 		
-		\begin{table}[hbt!]\caption{Tabla comparativa \acrshort{gcp} vs \acrshort{aws} (en dólares)}% title of Table
+		\begin{table}[hbt!]\caption{Tabla comparativa \acrshort{gcp} vs \acrshort{aws} (en dólares) \cite{google_cloud_vs_aws}}% title of Table
 			\centering % used for centering table
 			\resizebox{13cm}{!} {
 				\begin{tabular}{c c c}% centered columns (3 columns)
@@ -1228,7 +1228,7 @@ natural y redes neuronales}\\
 		   	
 		   	\paragraph{OpenSSL\\}
 		   	
-		   	Consiste en un paquete robusto de herramientas de administración y bibliotecas las cuales están relacionadas con la criptografía, estas suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (permitiendo un acceso seguro a sitios \acrshort{https}). Estas herramientas contribuyen al sistema a instaurar el protocolo \acrfull{ssl}, de igual manera como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL posibilita la creación certificados digitales los cuales pueden aplicarse a un servidor, por ejemplo a Apache \cite{refopenssl}.
+		   	Consiste en un paquete robusto de herramientas de administración y bibliotecas las cuales están relacionadas con la criptografía, estas suministran funciones criptográficas a otros paquetes como OpenSSH y navegadores web (permitiendo un acceso seguro a sitios \acrshort{https}) \cite{refNodeOpenSSL}. Estas herramientas contribuyen al sistema a instaurar el protocolo \acrfull{ssl}, de igual manera como otros protocolos relacionados con la seguridad, como el \acrfull{tls}. OpenSSL posibilita la creación certificados digitales los cuales pueden aplicarse a un servidor, por ejemplo a Apache \cite{refopenssl}.
 		   	
 		   	\paragraph{MongoDB \\}
 		   	MongoDB es un sistema de base de datos multiplataforma dirigido a documentos, de esquema libre, es decir, que cada registro o entrada es capaz de contar con un esquema de datos distinto, con columnas o atributos que pueden variar o no de un registro a otro.\\\\
@@ -1287,7 +1287,7 @@ natural y redes neuronales}\\
 		   	\acrshort{gpt}-2 es el sucesor de \acrshort{gpt}, es un gran modelo de lenguaje basado en transformers con 1500 millones de parámetros, entrenado en un conjunto de datos de 8 millones de páginas web. \acrshort{gpt} se entrena con un objetivo simple: predecir la siguiente palabra, dadas todas las palabras anteriores dentro de un texto. \cite{refQueesgpt}
 		   	\end{comment}
 		   	\paragraph{Amazon \acrshort{ec2} \\}
-		   	Amazon \acrfull{ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
+		   	Amazon \acrfull{ec2} \cite{amazon_ec2}proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 		   	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
 		   	Las principales ventajas de Amazon \acrshort{ec2} son: 
 		   	\begin{itemize}
@@ -1303,17 +1303,17 @@ natural y redes neuronales}\\
 		   	\end{itemize}		
 		   	
 		   	\paragraph{Amazon SageMaker \\}
-		   	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
+		   	Amazon SageMaker \cite{amazon_sagemaker} es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
 		   	Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
 		   	Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalbilidad lo que permite entrenar los modelos a escala de petabytes. Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
 		   	Para desplegar el modelo entrenado, el modelo se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.		
 		   	\newpage	
 		   	
 		   	\paragraph{Amazon S3 \\}
-		   	Amazon \acrfull{s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
+		   	Amazon \acrfull{s3} \cite{amazon_s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento. Este almacenamiento es altamente escalable en la nube. 
 		   	
 		   	\paragraph{Apache \\}
-		   	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
+		   	Es un servidor web gratuito y de código abierto el cual permite que los desarrolladores de sitios web puedan desplegar el contenido de ellas, este no es un servidor que se encuentre físicamente, sino que se trata de un software el cual ejecuta un servidor \cite{refTomcat}. Su función es instaurar la conexión entre un servidor y los usuarios del sitio web mientras estos intercambian archivos entre ellos (siguiendo una estructura cliente-servidor). El servidor y el cliente interactúan mediante el protocolo \acrshort{http}, y el software de Apache es el encargado de mantener una comunicación ágil y segura entre las 2 partes.\\\\
 		   	Apache trabaja sin problemas con otros sistemas de gestión de contenido (Drupal, Joomla, etc.), marcos de trabajo (Django, Laravel, etc.), y lenguajes de programación. Por estas razones se vuelve una opción sólida al momento de escoger entre los distintos tipos de plataformas de alojamiento web, como serían \acrfull{vps} o alojamiento compartido.\\
 			   	\subsection{Hardware}
 		Se usarán los equipos de cómputo con los que los integrantes del equipo contamos actualmente, los cuales se especifican a continuación: 
@@ -1419,7 +1419,7 @@ natural y redes neuronales}\\
 	   	En conclusión, se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad es texto entero reutilizado de las oraciones que se encuentran en el dataset, de igual forma llegaron a salir resultados utilizando la misma palabra en repetidas ocasiones, se tiene en cuenta que los usuarios a los que va dirigido este proyecto, se encontrarán en posición de buscar ideas nuevas para su proyecto, ideas que contengan un sentido y palabras acordes a lo que ellos buscan, es por ellos que seguimos probando con otros algoritmos.\\\\
 	   	
 	   	\subsection{Pruebas con Recurrent Neural Networks}
-	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el árticulo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{prueba2} se mostrará el notebook hecho en jupyter para mostrar cada paso de la prueba junto con los resultados obtenidos.
+	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales \cite{PruebaLSTM}, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el árticulo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{prueba2} se mostrará el notebook hecho en jupyter para mostrar cada paso de la prueba junto con los resultados obtenidos.
 	   	\newpage
 
     	\section{Estudio de Factibilidad}
@@ -2448,10 +2448,6 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	Rubik's Code  (2018, febrero), How do Artificial Neural Networks learn?, [En línea]. Disponible: https://rubikscode.net/2018/01/15/how-artificial-neural-networks-learn/ [Último acceso: 7 de abril del 2021].	
 	\bibitem{refTiposRedesNeu1}  		
 	S. Leijnen, F. van Veen (2020, mayo), The Neural Network Zoo, [En línea]. Disponible: https://www.researchgate.net/publication/341373030\_The\_Neural\_Net\\work\_Zoo [Último acceso: 20 de noviembre del 2020].
-	\bibitem{refTiposRedesNeu2}  		
-	A. Mehta (2019, enero 25), A Comprehensive Guide to Types of Neural Networks, [En línea]. Disponible: https://www.digitalvidya.com/blog/types-of-neural-networks/ [Último acceso: 15 de noviembre del 2020].
-	\bibitem{refTiposRedesNeu3}  		
-	P. Shukla, R. Iriondo (2020, agosto 11), Main Types of Neural Networks and its Applications, [En línea]. Disponible: https://medium.com/towards-artificial-intelligence/main-types-of-neural-networks-and-its-applications-tutorial-734480d7ec8e [Último acceso: 20 de noviembre del 2020].
 	\bibitem{refTiposRedesNeu4} 
 	IBM Cloud Education (2020, septiembre 14), What are Recurrent Neural Networks?, [En línea]. Disponible: https://www.ibm.com/cloud/learn/recurrent-neural-networks [Último acceso: 26 de marzo del 2021].
 	
@@ -2464,7 +2460,7 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	ref A. Vaca (2020, mayo), Transformers en Procesamiento del Lenguaje Natural, [En línea]. Disponible: https://www.iic.uam.es/innovacion/transformers-en-procesamiento-del-lenguaje-natural/  [Ultimo acceso: 15 de abril del 2021].
 	\bibitem{refArqTransformer} 
 	ref A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L. Kaiser \&  I. Polosukhin (2017, diciembre), Attention Is All You Need, [En línea]. Disponible: https://arxiv.org/pdf/1706.03762.pdf  [Ultimo acceso: 15 de abril del 2021].
-
+	
 	% Bert
 	\bibitem{refQueesBert} 
 	ref J. Devlin, M. Chang, K. Lee, K. Toutanova (2019, mayo), BERT: Pre-training of Deep Bidirectional Transformers for
@@ -2489,7 +2485,7 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	%Bases de Datos
 	\bibitem{refQueEsBD}  		
 	Oracle México (2020, noviembre), ¿Qué es una base de datos?, [En línea]. Disponible: https://www.oracle.com/mx/database/what-is-database/ [Último acceso: 20 de noviembre del 2020].
-
+	
 	% Canción
 	\bibitem{refEstructuraCancion1}  		
 	Escribir Canciones (2008), Estructura y elementos de una canción, [En línea]. Disponible: https://dle.rae.es [Último acceso: 2 de diciembre del 2020].
@@ -2499,10 +2495,6 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	% Markov
 	\bibitem{refMarkov}  		
 	J. R. Norris (1997), Markov Chains, [En línea]. Disponible: https://cape.fcfm.buap.mx/jdzf/cursos/procesos/libros/norris.pdf [Último acceso: 15 de diciembre del 2020].
-
-	% Flask
-	\bibitem{refFlask}  		
-	Flask (2019, julio 04), Flask Documentation, [En línea]. Disponible: https://flask.palletsprojects.com/en/1.0.x/ [Último acceso: 16 de diciembre del 2020].
 	
 	\bibitem{refNginx} 
 	NGINx (2016, mayo 17), What is NGINX?,  [En línea]. Disponible: https://www.nginx.com/resources/glossary/nginx/ [Último acceso: 27 de mayo del 2021].
@@ -2531,20 +2523,16 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	What is a web server? - Learn web development | MDN. (2021, January 27). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_web\_server
 	
 	% Certificado SSL
-	\bibitem{SSL}  		
-	https://letsencrypt.org/es/
 	\bibitem{what_is_SSL} 
 	What is SSL? (2017, May 15). SSLSHOPPER. https://www.sslshopper.com/what-is-ssl.html
 	\bibitem{ssl_certificates} 
 	Verisign. (2015, August 30). ¿Qué es un certificado SSL? – Verisign. Verisign NameStudio. https://www.verisign.com/es\_LA/website-presence/online/ssl-certificates/index.xhtml
-
+	
 	% Plataforma en la nube de ML 
 	\bibitem{data_science_in_the_cloud} 
 	Bavati, I. (2020, September 22). Data Science in the Cloud - Towards Data Science. Medium. https://towardsdatascience.com/data-science-in-the-cloud-239b795a5792 (September 2020)
 	\bibitem{comparing-google-cloud-platform-aws-and-azure} 
 	G. (2021, March 5). Comparing Google Cloud Platform, AWS and Azure - Georgian Impact Blog. Medium. https://medium.com/georgian-impact-blog/comparing-google-cloud-platform-aws-and-azure-d4a52a3adbd2
-	\bibitem{cloud_vs_onprem} 
-	J. (2020, July 30). Choosing Your Deep Learning Infrastructure: The Cloud vs. On-Prem Debate. Determined AI. https://determined.ai/blog/cloud-v-onprem
 	\bibitem{what_is_jupyter} 
 	I., A. (2015, October 2). Jupyter/IPython Notebook Quick Start Guide. Jupyter Notebook Beginner Guide. https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what\_is\_jupyter.html
 	\bibitem{google_cloud_vs_aws} 
@@ -2573,17 +2561,11 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	\bibitem{refMongoDB}
 	MongoDB. (2019), ¿Qué es MongoDB?, [En línea]. Disponible: https://www.mongodb.com/es. [Último acceso: 26 Marzo 2021].
 	
-	\bibitem{refCookies}
-	Universitat de Valéncia (2016), ¿Qué son las cookies? [En línea]. Disponible:           https://www.uv.es/uvweb/universidad/es/politica-privacidad/politica-cookies/son-cookies--1285919089226.html [Último acceso: 26 Marzo 2021]
-	
 	\bibitem{refNodeOpenSSL}
 	Noteworthy Programming Masterpiece (2019), openssl-nodejs [En línea]. Disponible: https://www.npmjs.com/package/openssl-nodejs [Último acceso: 26 Marzo 2021]
 	
 	\bibitem{refTomcat}
 	The Apache Software Foundation (2019), Apache Tomcat [En línea]. Disponible: http://tomcat.apache.org/index.html [Último acceso: 26 Marzo 2021]
-	
-	\bibitem{refmysql}
-	Oracle (2018), MySQL [En línea]. Disponible: https://www.oracle.com/mysql/ [Último acceso: 26 Marzo 2021]
 	
 	\bibitem{refDatamuseLicense}
 	OneLook Dictionary Search (2016), Privacy Policy [En línea]. Disponible: https://www.onelook.com/about.shtml [Último acceso: 19 Mayo 2021]
@@ -2639,6 +2621,28 @@ En este apartado se mostrará un primer boceto de las vistas de la aplicación w
 	
 	\bibitem{top_ten_lyric}
 	TopTenAI (2020, Mayo 9), Top 10 Lyric Generator Review 2021 [En línea]. Disponible: https://topten.ai/lyric-generator-review/ [Último acceso: 30 Mayo 2021]
+	
+	\bibitem{adam}
+	Kingma, D. P., Ba, J. (2014). Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980.
+	
+	\bibitem{adam2}
+	Sanjeevi, M. (2018, June 21). Chapter 10.1: DeepNLP — LSTM (Long Short Term Memory) Networks with Math. Medium. https://medium.com/deep-math-machine-learning-ai/chapter-10-1-deepnlp-lstm-long-short-term-memory-networks-with-math-21477f8e4235
+	 
+	\bibitem{HistoriaNPL}
+	Foote, K. D. (2019, June 17). A Brief History of Natural Language Processing (NLP). DATAVERSITY. https://www.dataversity.net/a-brief-history-of-natural-language-processing-nlp/
+	 
+	\bibitem{amazon_ec2}
+	Amazon (2021), Amazon EC2 [En línea]. Disponible: https://aws.amazon.com/es/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime\&ec2-whats-new.sort-order=desc [Último acceso: 1 Junio 2021]
+	
+	\bibitem{amazon_sagemaker}
+	Amazon (2021), Amazon SageMaker [En línea]. Disponible: https://aws.amazon.com/es/sagemaker/ [Último acceso: 1 Junio 2021]
+	
+	\bibitem{amazon_s3}
+	Amazon (2021), Amazon S3 [En línea]. Disponible: https://aws.amazon.com/es/s3/ [Último acceso: 1 Junio 2021]
+	
+	\bibitem{PruebaLSTM}
+	Bansal, S. (2018, May 27). Language Modelling and Text Generation using LSTMs — Deep Learning for NLP. Medium. https://medium.com/@shivambansal36/language-modelling-text-generation-using-lstms-deep-learning-for-nlp-ed36b224b275
+	
 	
 \end{thebibliography}	
 \end{document}
