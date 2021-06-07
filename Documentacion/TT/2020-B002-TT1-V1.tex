@@ -414,7 +414,7 @@
 			\vspace*{0.4in}
 			
 			\begin{large}
-				Trabajo Terminal.\\
+				Trabajo Terminal\\
 			\end{large}
 			
 			\vspace*{0.2in}
@@ -428,7 +428,7 @@ natural y redes neuronales}\\
 			\vspace*{0.2in}
 			
 			\begin{large}
-				TT2020-B002.\\
+				TT2020-B002\\
 			\end{large}
 			
 			\vspace*{0.2in}
@@ -462,6 +462,25 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Firma directores
+\newpage
+\section*{Firmas de Directores}
+
+\vfill  % push the rest to the bottom of the page
+\noindent 
+\parbox[b]{0.4\linewidth}{% size of the first signature box
+	\strut 
+	Firmado por: \\[3cm]% This 2cm is the space for the signature under the names
+	\hrule
+	Profesor: Ariel López Rojas} 
+\hspace{1cm} % distance between the two signature blocks 
+\parbox[b]{0.4\linewidth}{% ...and the second one
+	\strut 
+	\\[3cm]% This 2cm is the space for the signature under the names
+	\hrule
+	Doctora Olga Kolesnikova} 
+\par\vspace{1cm} 
+\newpage
 % Rename Appendice to Anexos
 \renewcommand\appendixpagename{Índice}
 \renewcommand\appendixtocname{Índice}
@@ -1815,32 +1834,16 @@ natural y redes neuronales}\\
 		\end{enumerate}
 	
 		\subsection{Funcionamiento General del Sistema}
-		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto, una vez este implementado el modelo entrenado en la página web:
-		
-		\begin{figure}[H] 
-			\includegraphics[scale=.25]{./imagenes/Disenio/Arquitectura/Arquitectura_sistema.png}
-			\caption{Diagrama de funcionamiento general del sistema}
-		\end{figure}
+		El siguiente diagrama muestra como se espera que quede el funcionamiento general del proyecto.
 	
 		\begin{figure}[H] 
 			\includegraphics[scale=.4]{./imagenes/Disenio/Arquitectura/general.png}
 			\caption{Diagrama general del sistema}
 		\end{figure}
-
-		\begin{figure}[H] 
-			\includegraphics[scale=.4]{./imagenes/Disenio/Arquitectura/Dataset_cleaned.png}
-			\caption{Diagrama de obtención de dataset}
-		\end{figure}
-
-		\begin{figure}[H] 
-			\includegraphics[scale=.75]{./imagenes/Disenio/Arquitectura/Instancias.png}
-			\caption{Diagrama de instancias de AWS}
-		\end{figure}
-	
-		\begin{figure}[H] 
-			\includegraphics[scale=.75]{./imagenes/Disenio/Arquitectura/Usuario_modelo.png}
-			\caption{Diagrama de conexión entre modelo y usuario}
-		\end{figure}
+	Como se observa en la figura anterior, se tendrán tres procesos principales para lograr el objetivo final.\\\\
+	En primer instancia se tendrá que obtener la base de datos y por medio de extracción y transformación, se obtendrá el dataset deseado para poder generar el modelo. \\\\
+	Después de un proceso de limpieza de este dataset, se hará un entrenamiento del modelo en la nube para poder generar funciones utilizando este modelo para poder generar textos.
+	una vez teniendo esta aplicación funcional, se configurará el servidor web para que se pueda comunicar con el usuario final y con la aplicación que utiliza el modelo vía web, logrando así los objetivos.
 	\newpage
 	
 		\subsection{Diagrama caso de uso}
@@ -2099,16 +2102,29 @@ natural y redes neuronales}\\
 		\subsection{Descripción}
 		En este apartado se hará el diseño de la base de datos para poder generar un modelo acorde a los requerimientos funcionales del proyecto.
 		
+		\begin{figure}[H] 
+			\includegraphics[scale=.4]{./imagenes/Disenio/Arquitectura/Dataset_cleaned.png}
+			\caption{Diagrama de obtención de dataset}
+		\end{figure}
+		
 		\subsection{Obtención de la Base de Datos}
-		Para iniciar la búsqueda de la base de datos primero diseñamos un diagrama de datos esenciales que se muestra a continuación para poder generar el modelo:
+		Para iniciar la búsqueda de la base de datos primero se eligieron las características esenciales que se muestra a continuación para poder generar el modelo:
 		
-		%Imagen
+		\begin{itemize}
+		\item Letra de la canción.
+		\item Idioma.
+		\item Artista.
+		\end{itemize}
 		
-		Se hizo dicha búsqueda en páginas que contienen datasets con licencia del tipo open source, tales como Kaggle \cite{kaggle}, Google datasets \cite{googleDatasets}, \acrshort{aws} Open Data \cite{awsOpenData} y en papers de investigación.\\\\
+		Se hizo la búsqueda de datasets con estás características en páginas que contienen datasets con licencia del tipo open source, tales como Kaggle \cite{kaggle}, Google datasets \cite{googleDatasets}, \acrshort{aws} Open Data \cite{awsOpenData} y en papers de investigación.\\\\
 		Encontramos diferentes datasets que contaban con algunas de las necesidades del sistema pero por una u otra razón no se podían utilizar, tal fue el caso del dataset de Music4All \cite{music4all} que contaba con las necesidades del sistema pero el uso de los datos era muy restringido.\\
 
-		En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160790 letras de canciones.\\\\
-		
+		En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160,790 letras de canciones con las tablas mostradas a continuación:\\\\
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/diagrama_ER_BD.jpg}
+			\centering 
+			\caption{Diagrama Entidad Relación de la Base de Datos}
+		\end{figure}
 		Dicha base de datos se sacó originalmente de la página de Vagalume \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación, los cuales son:
 		\begin{itemize}
 			\item Rock
@@ -2119,26 +2135,23 @@ natural y redes neuronales}\\
 			\item Funk Carioca
 		\end{itemize}
 	
-		Esta base de datos cuenta con dos tablas que cumplen con las características ideales para realizar el modelo acorde a los requerimientos funcionales.
-		
-		A continuación se muestran las columnas de la base de datos en la primer tabla, como se puede observar, se utilizarán las columnas “Genre” para separar el dataset en géneros musicales y “Link” que servirá como enlace a la segunda tabla.
-		
-		%Agregar archivo de artists-data CAPTION: artist-data contiene los datos del artista
-		
-		En esta segunda tabla que se muestra a continuación se utilizarán las columnas de “Lyric” para poder entrenar el modelo, “Idiom” para seleccionar y utilizar las canciones en el idioma inglés y “ALink” que nos servirá para fusionar la tabla mencionada anteriormente con la actual y así poder usar esas columnas.
-		
-		%Agregar archivo de lyrics-data CAPTION: lyrics-data contiene los datos de la letra
-		
+		Se cuenta con dos tablas que cumplen con las características ideales para realizar el modelo acorde a los requerimientos funcionales.\\\\
+		Como se puede observar, se tienen las columnas “Genre” que utilizaremos para separar el dataset en géneros musicales y “Link” que servirá como enlace a la segunda tabla.\\\\
+		Se utilizarán las columnas de “Lyric” para poder entrenar el modelo, “Idiom” para seleccionar y utilizar las canciones en el idioma inglés y “ALink” que nos servirá para fusionar la tabla mencionada anteriormente con la actual y así poder usar esas columnas, quedando un resultado como en la siguiente figura:
+		\begin{figure}[H]
+			\includegraphics[width=5cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/Songs_with_Artists.png}
+			\centering 
+			\caption{Diagrama Entidad Relación de la Base de Datos}
+		\end{figure}
 		\subsection{Género Musical} % Explicar por qué se sacó de este género musical
 		El género musical que elegimos es Pop en inglés debido a que es un género musical flexible en su estructura y en su léxico, otros géneros contemplados fueron Hip Hop y Rock que también cuentan con un extenso catálogo de datos pero se encontraron modelos que ya utilizan esos géneros.
 		
 		\subsection{Resultados}
 		Al necesitar extraer información precisa para el entrenamiento del modelo no es necesario que la base de datos sea muy compleja, razón por la cual las tablas mostradas en el diagrama entidad-relación se ve así, siendo lo de mayor relevancia el mostrar que un artista puede tener muchas canciones pero una canción le pertenece únicamente a un artista.
-		
 		\begin{figure}[H]
-			\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/diagrama_ER_BD.jpg}
+			\includegraphics[width=10cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/Hip_Hop.png}
 			\centering 
-			\caption{Diagrama Entidad Relación de la Base de Datos}
+			\caption{Diagrama Entidad Relación de las tablas Finales}
 		\end{figure}
 		
 		
@@ -2162,6 +2175,7 @@ natural y redes neuronales}\\
 		
 		Se utilizará la librería de “Pandas” y en caso de que se requiera, utilizar la librería de expresiones regulares para hacer esta limpieza, estás dos librerías de Python ayudarán a que los datos puedan ser utilizados para realizar el debido preprocesamiento como siguiente paso sin tener que cambiar cada campo manualmente, lo que mejora la eficiencia para poder lograr el objetivo propuesto.\\\\
 		Para limpiar los datos seguiremos el estándar de limpieza de datos:\cite{data_cleaning}
+		
 		\begin{enumerate}
 			\item Remover carácteres innecesarios
 			\item Eliminar Duplicados
@@ -2204,7 +2218,7 @@ natural y redes neuronales}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelo para Neural Network} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
-		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web.
+		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que se piensa que se puedan integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web. 
 		\subsection{Herramientas usadas para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
 		Se decido trabajar con \acrshort{bert} en lugar de GPT-2 debido a que usando \acrshort{bert} podemos entrenarlo y ajustarlo a resultados que consideramos satisfactorios, cosa que no es posible usando GPT-2, además \acrshort{bert} cuenta con la característica de ser Bidireccional, el cual nos permite analizar el texto anterior para poder generar el texto futuro.\\\\
 		\acrshort{bert} (Bidirectional Encoder Representations from Transformers) se usará para clasificar oraciones, este se puede entender de forma más sencilla de la siguiente manera:
@@ -2274,8 +2288,13 @@ natural y redes neuronales}\\
 	\section{Generación del Modelo en la Nube} % Explicar cómo se limpió la base de datos
 	\subsection{Descripción}
 	
-	En este apartado se tocarán herramientas que utilizaremos, la interacción entre nosotros y el sistema para suministrar los datos a Amazon Sagemaker, el desarrollo que seguirá \acrshort{aws} para ir desde el entrenamiento del modelo hasta el despliegue del mismo para poder ser utilizado.
-	
+	En este apartado se hablará de las herramientas que utilizaremos, la interacción entre el desarrollador y el sistema para suministrar la base de datos a Amazon Sagemaker, el desarrollo que seguirá \acrshort{aws} para ir desde el entrenamiento del modelo hasta el despliegue del mismo para poder ser utilizado.
+	El diagrama a continuación muestra el funcionamiento general para este capítulo:
+	\begin{figure}[H] 
+		\includegraphics[scale=.75]{./imagenes/Disenio/Arquitectura/Instancias.png}
+		\caption{Diagrama de instancias de AWS}
+	\end{figure}
+	Como se observa, se ingresará la base de datos generada y se utilizará una instancia EC2, que a su vez usará en caso de necesitar más recursos un bucket de S3 para crear checkpoints resultando con el modelo entrenado a través de un número dado de epochs.
 	\subsection{Amazon Sagemaker}
 	Amazon SageMaker es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning de forma rápida. SageMaker suprime las tareas difíciles y tediosas de cada paso del proceso de machine learning para que sea más fácil crear modelos de alta calidad.\\\\
 	Dentro de las virtudes de SageMaker, y razón por la cual lo preferimos sobre la compentencia, es que cuenta con 2 herramientas escenciales las cuales nos servirán al momento de entrenar el modelo:
@@ -2293,7 +2312,7 @@ natural y redes neuronales}\\
 		Dentro de Amazon Sagemaker creamos un bloc de notas (Jupyter Notebook) dentro del cual podremos operar con código Python y el cual tiene como ventaja principal el correr código por bloques evitando de esta manera el tener que reescribirlo y pudiendo correr todo de manera secuencial nuevamente o insertar nuevos bloques entre los previamente creados según veamos más conveniente.\\
 		
 		\begin{figure}[H]
-			\includegraphics[width=16cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/JupyterInstance.jpg}
 			\centering 
 			\caption{Instancia creada en AWS}
 		\end{figure}
@@ -2310,7 +2329,7 @@ natural y redes neuronales}\\
 	Posterior a todos los pasos mencionados anteriormente que se realizarán dentro de la instancia de Jupyter se puede crear ahí mismo un `\acrshort{api} endpoint' que responderá a una petición hecha por el usuario para acceder al modelo generado y así generar y devolver la letra de la canción.
 	
 	\begin{figure}[H]
-		\includegraphics[width=15cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.png}
+		\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_4/sagemaker_function.png}
 		\centering 
 		\caption{Diagrama del funcionamiento de SageMaker}
 	\end{figure}
@@ -2335,7 +2354,7 @@ natural y redes neuronales}\\
 	\end{figure}
 	\end{comment}
 	
-	\section{Resultados}
+	\subsection{Resultados}
 	De manera similar a la tratada para la generación del modelo de neural network, consistirá de un proceso muy similar al seguido en ese apartado con el diferenciador principal siendo que será en la nube, e incluso de una manera muy simple podríamos resumir los pasos a seguir del siguiente diagrama (tomado de nuestra arquitectura del sistema) y el cual simplifica aún más el proceso seguido por Amazon SageMaker para la generación del Modelo.
 		
 	\begin{figure}[H]
@@ -2347,6 +2366,11 @@ natural y redes neuronales}\\
 	\newpage
 
 \section{Aplicación web}
+\begin{figure}[H] 
+	\includegraphics[scale=.75]{./imagenes/Disenio/Arquitectura/Usuario_modelo.png}
+	\caption{Diagrama de conexión entre modelo y usuario}
+\end{figure}
+La figura anterior, muestra el funcionamiento general entre la aplicación del modelo entrenado para generar lyrics en línea y el usuario final a través de un webserver de Apache.
 En este apartado se mostrará un primer boceto de las vistas de la aplicación web.	        
 \begin{figure}[H] 
 	\includegraphics[width=12cm]{./imagenes/Analisis/MockFront.png}
