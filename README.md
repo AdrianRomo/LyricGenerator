@@ -92,7 +92,9 @@ Currently on Development.
 
 ## Team
 
-[![Adrian Romo](https://avatars1.githubusercontent.com/u/17463208?v=4&s=144)](https://github.com/AdrianRomo)  | [![Jaime Lechuga](https://pkimgcdn.peekyou.com/8a3305196bab395057994e0b738029b8.jpeg)](https://github.com/JamesDLechu) | [![Alfredo Gómez](https://avatars1.githubusercontent.com/u/62784088?v=4&s=144)](https://github.com/alfredoesg)
+[![Adrian Romo](https://avatars1.githubusercontent.com/u/17463208?v=4&s=144)](https://github.com/AdrianRomo)
+| [![Jaime Lechuga](https://avatars.githubusercontent.com/u/22138329?v=4&s=144)](https://github.com/JamesDLechu)
+| [![Alfredo Gómez](https://avatars1.githubusercontent.com/u/62784088?v=4&s=144)](https://github.com/alfredoesg)
 ---|---|---
 [Adrian Romo ](https://github.com/AdrianRomo) |[Jaime Lechuga](https://github.com/JamesDLechu) |[Alfredo Salgado](https://github.com/alfredoesg)
 
