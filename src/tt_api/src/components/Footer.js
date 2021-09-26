@@ -10,7 +10,6 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               Lyrics.ia
-              <i class="far fa-play-circle"></i>
             </Link>
           </div>
           <small class='website-rights'>Lyrics.ia © 2021</small>

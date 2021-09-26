@@ -6,8 +6,9 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Faq from './components/pages/Faq';
 import Samples from './components/pages/Samples';
+import Dev from './components/pages/Dev';
 import GenerateSong from './components/pages/GenerateSong';
-import GeneratedSong from './components/pages/GeneratedSong';
+import LyricPage from './components/pages/LyricPage';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <Route path='/about' component={About} />
         <Route path='/faq' component={Faq} />
         <Route path='/samples' component={Samples} />
+        <Route path='/dev' component={Dev} />
         <Route path='/generatesong' component={GenerateSong} />
-        <Route path='/generatedsong' component={GeneratedSong} />
+        <Route path='/lyricpage' component={LyricPage} />
       </Switch>
     </Router>      
     </>
