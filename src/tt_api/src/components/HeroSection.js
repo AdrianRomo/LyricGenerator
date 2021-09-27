@@ -11,8 +11,8 @@ var engword
 
     function sendWord() {
 
-        engword = document.getElementById("english-word").value
-        percentval = document.getElementById("percentage").value
+        engword =  'love' //document.getElementById("english-word").value
+        percentval = 50 //document.getElementById("percentage").value
 
         localStorage.setItem("EnglishWord-Value",engword); 
         localStorage.setItem("Percentage-Value",percentval); 
@@ -122,7 +122,7 @@ function HeroSection() {
                     document.getElementById('thirdDiv').className= 'contentTwo-show-opacity';
                     document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
 
-                    //sendWord();
+                    sendWord();
                     }}>
                     Generar Canción <i class="fas fa-play fa-xs" />
                 </Button>
@@ -166,7 +166,9 @@ function HeroSection() {
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
                     Download
                 </Button>
-                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
+                    //sendWord();
+                }}>
                     Regenerate Lyrics
                 </Button>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {

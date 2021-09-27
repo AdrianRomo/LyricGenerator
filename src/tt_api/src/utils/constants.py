@@ -3,7 +3,7 @@ from os import environ
 from dotenv import load_dotenv
 
 # Execution environment.
-FLASK_ENV = 'development'
+FLASK_ENV = 'test'
 VERSION = '1.0.0'
 PROJECT = 'lyric-generator'
 MODEL_PATH = 'un/path/para/el/modelo'
