@@ -23,7 +23,7 @@ function LyricPage () {
     }, [])
     
     const fetchLyricAsync = async () =>{
-        const result = await axios.get("")
+        const result = await axios.get("Url de Adrian")
         console.log(result)
     }
     */

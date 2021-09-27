@@ -90,7 +90,7 @@ function HeroSection() {
                     </Button>
                 </div>
                 <div id="imagenGato" className='fade-in-image-show'>
-                    <img src="/images/nezuko.webp"></img>
+                    <img src="/images/cat.png"></img>
                 </div>
             </div>
             <div id='secondDiv' className='contentTwo'>
@@ -100,47 +100,90 @@ function HeroSection() {
                 <input className='generatesong-input' id='english-word' type='text' placeholder='Love' required/>
                 <p>Porcentaje de rimas dentro de la canción: </p>            
                 <DiscreteSlider/>
-                <Link to="/lyricpage">
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
-                        console.log('Valor del slideBar:  ' + document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
+                    document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
+                    document.getElementById('firstDiv').className= 'contentOne';
+                    document.getElementById('imagenGato').className= 'fade-in-image-show';
 
-                        //sendWord();
-                        }}>
-                        Generar Canción <i class="fas fa-play fa-xs" />
-                    </Button>
-                </Link>   
+                    //sendWord();
+                    }}>
+                    Home
+                </Button>
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
+                    console.log('Valor del slideBar:  ' + document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
+                    /*
+                    if(document.getElementById('secondDiv').className == 'contentTwo-show-opacity'){
+                        document.getElementById('thirdDiv').className= 'contentTwo-hide-opacity';
+                        document.getElementById('secondDiv').className= 'contentTwo-show-opacity';
+                    }
+                    else{
+                    }
+                    */
+                    document.getElementById('thirdDiv').className= 'contentTwo-show-opacity';
+                    document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
+
+                    //sendWord();
+                    }}>
+                    Generar Canción <i class="fas fa-play fa-xs" />
+                </Button>
+                {
+                    /*
+                    <Link to="/lyricpage">
+                        <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
+                            console.log('Valor del slideBar:  ' + document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
+
+                            if(document.getElementById('secondDiv').className == 'contentTwo-show-opacity'){
+                                document.getElementById('thirdDiv').className= 'contentTwo-hide-opacity';
+                                document.getElementById('secondDiv').className= 'contentTwo-show-opacity';
+                            }
+                            else{
+                                document.getElementById('thirdDiv').className= 'contentTwo-show-opacity';
+                                document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
+                            }
+
+                            //sendWord();
+                            }}>
+                            Generar Canción <i class="fas fa-play fa-xs" />
+                        </Button>
+                    </Link>
+                    */
+                }   
                 {
                     //<button className='btn btn--outline btn--medium' type="button" onClick={sendWord}>Generar Canción</button>
-
                 }
-                <div id='thirdDiv' className='contentThree'>
-                    <h1 on onLoad={clearCacheData}>Lyric generada</h1>
-                    <textarea id='textoly' hidden>texto lyric generado</textarea>
-                    <Typewriter onInit={(typewriter) => {
-                        typewriter.typeString('Nuestros gatos compositores estan trabajando')
-                        .pauseFor(2500)
-                        .deleteAll()
-                        typewriter.typeString('Lyric generada woooooo escribo soooolloooooo')
-                        .start();
-                    }}
-                    />
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
-                        Download
-                    </Button>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
-                        Regenerate Lyrics
-                    </Button>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
-                        Start Again
-                    </Button>
-                    {
-                        /*
-                        <button type="button" onClick={lyricgen}>Descargar</button>
-                        <button type="button" onClick={sendWord}><Link to="/lyricpage"> Generar nuevamente </Link></button>
-                        <button type="button" ><Link to="/generatesong"> Nuevos parametros </Link></button>
-                        */
-                    }
-                </div>
+            </div>
+            <div id='thirdDiv' className='contentThree'>
+                <h1 on onLoad={clearCacheData}>Lyric generada</h1>
+                <textarea id='textoly' hidden>texto lyric generado</textarea>
+                <Typewriter onInit={(typewriter) => {
+                    typewriter.typeString('Nuestros gatos compositores estan trabajando')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    typewriter.typeString('Lyric generada woooooo escribo soooolloooooo')
+                    .start();
+                }}
+                />
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
+                    Download
+                </Button>
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {}}>
+                    Regenerate Lyrics
+                </Button>
+                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
+
+                    document.getElementById('thirdDiv').className= 'contentTwo-hide-opacity';
+                    document.getElementById('secondDiv').className= 'contentTwo-show-opacity';
+
+                    }}>
+                    Start Again
+                </Button>
+                {
+                    /*
+                    <button type="button" onClick={lyricgen}>Descargar</button>
+                    <button type="button" onClick={sendWord}><Link to="/lyricpage"> Generar nuevamente </Link></button>
+                    <button type="button" ><Link to="/generatesong"> Nuevos parametros </Link></button>
+                    */
+                }
             </div>
         </div>
     )

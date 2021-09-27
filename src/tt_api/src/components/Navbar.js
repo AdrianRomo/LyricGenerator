@@ -8,6 +8,7 @@ function Navbar() {
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+    const refreshPage = () => {window.location.reload()}
 
     const showButton = () => {
         if(window.innerWidth <= 960) {
@@ -27,7 +28,11 @@ function Navbar() {
         <>
             <nav className="navbar">                
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                    <Link to="/" className="navbar-logo" onClick={() => {
+                        closeMobileMenu();
+                        if(window.location.pathname.length < 2)
+                            refreshPage();
+                    }}>
                         Lyrics.ia
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>

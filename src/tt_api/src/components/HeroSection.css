@@ -41,6 +41,17 @@ video {
     object-fit: contain;
   }
 
+  .contentThree {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
   .hero-container .contentOne > h1 {
     color: #fff;
     font-size: 100px;
@@ -128,6 +139,17 @@ video {
     transition: opacity 2s;
   }
   
+  .contentThree-show-opacity{
+    opacity: 0%;
+    display: none;
+    transition: opacity 2s;
+  }
+
+  .contentThree-hide-opacity{
+    opacity: 0%;
+    display: none;
+    transition: opacity 2s;
+  }
   
   @media screen and (max-width: 960px) {
     .hero-container .contentOne > h1 {
