@@ -9,10 +9,7 @@ import Typewriter from 'typewriter-effect';
 var engword
     var percentval
 
-    function sendWord() {
-
-        engword =  'love' //document.getElementById("english-word").value
-        percentval = 50 //document.getElementById("percentage").value
+    function sendWord(engword, percentval) {
 
         localStorage.setItem("EnglishWord-Value",engword); 
         localStorage.setItem("Percentage-Value",percentval); 
@@ -122,7 +119,7 @@ function HeroSection() {
                     document.getElementById('thirdDiv').className= 'contentTwo-show-opacity';
                     document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
 
-                    sendWord();
+                    sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
                     }}>
                     Generar Canción <i class="fas fa-play fa-xs" />
                 </Button>
