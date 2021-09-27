@@ -5,7 +5,7 @@ import Footer from '../Footer';
 function Dev () {
     return (
         <>
-            <iframe title='swagger' width="800" height="800" src="http://localhost:3000/faq"/>
+            <iframe title='swagger' width="100%" height="100%" src="http://localhost:5000/swagger-ui/"/>
             <Footer />
         </>
     );
