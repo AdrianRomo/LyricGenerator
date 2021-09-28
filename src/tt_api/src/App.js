@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/js/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Faq from './components/pages/Faq';
-import Samples from './components/pages/Samples';
-import Dev from './components/pages/Dev';
-import GenerateSong from './components/pages/GenerateSong';
-import LyricPage from './components/pages/LyricPage';
+import Home from './pages/js/Home';
+import About from './pages/js/About';
+import Faq from './pages/js/Faq';
+import Samples from './pages/js/Samples';
+import Developers from './pages/js/Dev';
 
 function App() {
   return (
@@ -20,9 +18,7 @@ function App() {
         <Route path='/about' component={About} />
         <Route path='/faq' component={Faq} />
         <Route path='/samples' component={Samples} />
-        <Route path='/dev' component={Dev} />
-        <Route path='/generatesong' component={GenerateSong} />
-        <Route path='/lyricpage' component={LyricPage} />
+        <Route path='/dev' component={Developers} />
       </Switch>
     </Router>      
     </>
