@@ -1,0 +1,44 @@
+.about-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+    object-fit: contain;    
+  }
+  
+  .about-container > h1 {
+    color: #000;
+    font-size: 100px;
+    margin-top: -250px;
+  }
+  
+  .about-container > p {
+    margin-top: 8px;
+    color: #000;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+
+  @media screen and (max-width: 960px) {
+    .about-container > h1 {
+      font-size: 70px;
+      margin-top: -200px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-container > h1 {
+      font-size: 40px;
+      margin-top: -200px;
+    }
+  
+    .about-container > p {
+      font-size: 20px;      
+      text-align: center;
+    }
+  }
+  
