@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
-import Footer from '../Footer';
-import Lyricgenerator from '../Lyricgenerator';
+import Lyricgenerator from '../js/Lyricgenerator';
+import Footer from './Footer';
 
 function Home () {
     return (

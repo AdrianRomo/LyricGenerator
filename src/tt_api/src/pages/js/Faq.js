@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
-import Footer from '../Footer';
-import './Faq.css'
+import Footer from './Footer';
+import '../css/Faq.css'
 
 function Faq () {
     return (
