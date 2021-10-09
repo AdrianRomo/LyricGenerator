@@ -4,15 +4,15 @@ from flask import Flask, jsonify
 from flask_restful import Resource, Api
 from flask_apispec import marshal_with, doc, use_kwargs
 from flask_apispec.views import MethodResource
-from marshmallow import Schema, fields
 from apispec import APISpec
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec.extension import FlaskApiSpec
 from flask_cors import CORS
 
 # Own Libraries
+from utils.schemas import HealthSchema, GetLyrics, PostLyrics
 from utils.generate_lyrics import GenerateLyric
-from utils.constants import FLASK_ENV, MODEL_PATH, VERSION, PROJECT
+from utils.constants import FLASK_ENV, VERSION, PROJECT
 
 app = Flask(__name__)
 api = Api(app)  # Flask restful wraps Flask app around it.
@@ -30,26 +30,8 @@ app.config.update({
 })
 docs = FlaskApiSpec(app)
 
-# Schemas
-class HealthSchema(Schema):
-    project = fields.String(default='',example=PROJECT)
-    version = fields.String(default='',example=VERSION)
-    environment = fields.String(default='',example=FLASK_ENV)
-    date = fields.String(default='',example=datetime.now())
-
-class GetLyrics(Schema):
-    lyric_input = fields.String(required=True, default='',example='Love')
-    percentage = fields.Integer(required=True, default=100,example=100)
-
-class ResponsePost(Schema):
-    setup = fields.String(required=True, default='',example=MODEL_PATH)
-    generated_lyric = fields.String(required=True, default='',example='Love is in the air')
-
-class PostLyrics(Schema):
-    response = fields.Nested(ResponsePost())
-
 # Endpoints
-class Source(MethodResource):
+class Lyrics(MethodResource, Resource):
     """
     Source endpoint to check health of the API
     """
@@ -66,7 +48,6 @@ class Source(MethodResource):
         'date': datetime.now(),
         }
 
-class Lyrics(MethodResource, Resource):
     """
     Class to generate the lyric of the API
     """
@@ -101,11 +82,9 @@ class Lyrics(MethodResource, Resource):
         }
 
 # Add Endpoints
-api.add_resource(Source, '/health')
 api.add_resource(Lyrics, '/lyrics')
 
 # Add Swagger Documentation
-docs.register(Source)
 docs.register(Lyrics)
 
 # Handling of 404 errors.

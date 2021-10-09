@@ -6,16 +6,11 @@ class GenerateLyric(object):
     - Generate Model and integrate it in this class.
     - Integrate it in React
     """
-    def __init__(self, lyric_input, percentage):
-        self.inp = lyric_input
-        self.perc = percentage
-
     def setup(self):
-        model_path = MODEL_PATH
-        return model_path
+        return MODEL_PATH
 
-    def generate_lyric(self):
-        return self.inp + " Is in the air"
+    def generate_lyric(self, lyric_input, percentage):
+        return lyric_input + " Is in the air", percentage
 
     def show(self):
         response = "Hola soy una lyric"
