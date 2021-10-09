@@ -695,7 +695,7 @@ natural y redes neuronales}\\
 						\end{figure}
 				\subsection{Aprendizaje de las redes neuronales}
 				Si observamos la naturaleza, podremos ver que a pesar de existir muchos tipos de sistemas, los que  pueden aprender son altamente adaptables. En su búsqueda por adquirir conocimientos, estos sistemas utilizan información del mundo exterior y modifican la información que ya han recopilado o modifican su estructura interna. Eso es exactamente lo que hacen las redes neuronales. Adaptan y modifican su arquitectura logrando aprender. Para ser más precisos, las redes neuronales cambian los pesos de las conexiones según la entrada y salida deseada.\\\\
-				¿por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, eliminarlas y/o agregar más de estas. Incluso se podría modificar la función de entrada o la de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\\\\
+				¿Por qué tienen un peso?, bueno, si observamos la estructura de las redes neuronales, hay algunos componentes que podríamos cambiar, si queremos modificar su arquitectura. Por ejemplo, podríamos crear nuevas conexiones entre neuronas, eliminarlas y/o agregar más de estas. Incluso se podría modificar la función de entrada o la de activación. Resulta que cambiar los pesos es el enfoque más práctico. Además, la mayoría de los otros casos podrían cubrirse cambiando los pesos. La eliminación de una conexión, por ejemplo, se puede hacer estableciendo el peso en 0. Y una neurona se puede eliminar si establecemos los pesos de todas sus conexiones en cero.\cite{refAprendizajeRedes}\\\\
 				El entrenamiento es un proceso necesario para toda red neuronal, y consiste en que la red se familiariza con el problema que necesita resolver. En la práctica, generalmente se tienen algunos datos recopilados en función de los cuales necesitamos crear nuestras predicciones, clasificación, o cualquier otro procesamiento. Estos datos se denominan conjunto de entrenamiento y según el comportamiento y la naturaleza, tenemos algunos tipos de aprendizajes:\\
 				\begin{itemize}
 					\item \textbf{Aprendizaje no supervisado: }el conjunto de entrenamiento solo contiene entradas. La red intenta identificar entradas similares y clasificarlas en ciertas categorías.
@@ -757,7 +757,7 @@ natural y redes neuronales}\\
 		   			\caption{Arquitectura general de un transformer \cite{refArqTransformer}}
 		   		\end{figure}     
 		        El codificador mapea una secuencia de entrada las cuales son representaciones de símbolos (x1, ..., xn) a una secuencia de representaciones continuas z = (z1, ..., zn). Dado z, el decodificador genera una salida secuencia (y1, ..., ym) de símbolos, un elemento a la vez. En cada paso, el modelo es autor-regresivo, consumiendo los símbolos generados previamente como entrada adicional para generar el siguiente.\\\\
-		        Los transformers siguen esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura\ref{ArqTransformer} anterior, respectivamente. \cite{refArqTransformer}
+		        Los transformers siguen esta arquitectura general usando auto-atención, es decir, las capas están completamente conectadas tanto para el codificador como para el decodificador, que se muestran en las mitades izquierda y derecha de la Figura 2.4 anterior, respectivamente. \cite{refArqTransformer}
         
         \section{\acrshort{bert}}
 		        \subsection{¿Qué es BERT?}
@@ -1424,7 +1424,7 @@ natural y redes neuronales}\\
    		 
 	   	\section{Pruebas}
 	   	
-	   	\subsection{Cadenas de Markov}
+	   	\subsection{Pruebas con cadenas de Markov}
 	   	Una de las primeras pruebas que se realizo durante el desarrollo del proyecto fue la generación de textos utilizando cadenas de markov.
 	   	Se ingresará el dataset limpio y organizado para realizar un cálculo y asignación de los valores estos serán las oraciones y palabras que aparecen.
 	   	Los valores asignados variarán entre los decimales de 0 y 1 sin llegar a ser enteros nunca, estos son asignados dependiendo a la frecuencia en que la palabra va apareciendo.\\\\
@@ -1446,6 +1446,16 @@ natural y redes neuronales}\\
 	   	\subsection{Pruebas con recurrent neural networks}
 	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales \cite{PruebaLSTM}, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el artículo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{pruebaslstm} se mostrará el notebook hecho en Jupyter para mostrar cada paso de la prueba junto con los resultados obtenidos.
 	   	\newpage
+	   	
+	   	\subsection{Pruebas con BERT}
+	   	Como última prueba fue generar algunos textos utilizando BERT, pero desafortunadamente estas pruebas no fueron exitosas debido a que si se desea trabajar con este algoritmo se requiere hacer uso de Tensorflow y para trabajar con esta biblioteca es necesario contar con una tarjeta de video de Nvidia con características específicas como los son la capacidad de la memoria de dicha tarjeta, hardware con el que no contamos. Se intentaron realizar las pruebas, pero se obtuvo lo siguiente: 
+	   	\begin{figure}[H]
+	   		\includegraphics[width=13.5cm]{./imagenes/Analisis/ErrorBert.png}
+	   		\centering 
+	   		\caption{Error tensorflow BERT}
+	   	\end{figure}
+	   	En la imagen anterior se observa que tensorflow requiere del archivo cudart64\_100.dll disponible solo en tarjetas de video de Nvidia y siendo más específicos en las llamadas  CUDA GPUs las cuales son aquellas tarjetas de video de la familia RTX o Quadro y que para trabajar con CUDA (Arquitectura Unificada de Dispositivos de Cómputo) requiere de un gran ancho de banda en la memoria de las tarjetas y los dispositivos de la familias antes mencionadas son los que cuentan con la arquitectura y la capacidad de memoria para realizar estas tareas.
+	   	
 
     	\section{Estudio de factibilidad}
     	El estudio de factibilidad es un instrumento que sirve para orientar la toma de decisiones, así como para determinar la posibilidad de desarrollar un negocio o proyecto; corresponde a la última fase de la etapa pre-operativa del ciclo del proyecto. Se formula con base en información que tiene la menor incertidumbre posible para medir las posibilidades de éxito o fracaso de un proyecto, apoyándose en el resultado se tomará la decisión de proceder o no con su implementación.\\\\ 
@@ -2120,7 +2130,7 @@ natural y redes neuronales}\\
 		Se hizo la búsqueda de datasets con estás características en páginas que contienen datasets con licencia del tipo open source, tales como Kaggle \cite{kaggle}, Google datasets \cite{googleDatasets}, \acrshort{aws} Open Data \cite{awsOpenData} y en papers de investigación.\\\\
 		Encontramos diferentes datasets que contaban con algunas de las necesidades del sistema pero por una u otra razón no se podían utilizar, tal fue el caso del dataset de Music4All \cite{music4all} que contaba con las necesidades del sistema pero el uso de los datos era muy restringido.\\
 
-		En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyric for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160,790 letras de canciones con las tablas mostradas a continuación:\\\\
+		En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyrics for 6 musical genres" \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160,790 letras de canciones con las tablas mostradas a continuación:\\\\
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_1/Base_de_Datos/diagrama_ER_BD.jpg}
 			\centering 
@@ -2221,12 +2231,7 @@ natural y redes neuronales}\\
 		\subsection{Descripción}
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que podrían integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web. 
 		\subsection{Redes neuronales para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
-		Se decido trabajar con \acrshort{bert} en lugar de GPT-2 debido a que usando \acrshort{bert} podemos entrenarlo y ajustarlo a resultados que consideramos satisfactorios, cosa que no es posible usando GPT-2, además \acrshort{bert} cuenta con la característica de ser Bidireccional, el cual nos permite analizar el texto anterior para poder generar el texto futuro.\\\\
-		\acrshort{bert} (Bidirectional Encoder Representations from Transformers) se usará para clasificar oraciones, este se puede entender de forma más sencilla de la siguiente manera:
-		\begin{itemize}
-			\item Bidirectional: Para entender el texto es necesario dar un vistazo hacia atrás (a las palabras previas) y hacia adelante (a las palabras que siguen).
-			\item Transformers: El Transformer lee secuencias enteras de tokens de una vez. En un sentido, el modelo es no-direccional, mientras que las redes del tipo LSTM (Long-Short Term Memory) leen de forma secuencial (izquierda-derecha o derecha-izquierda). El mecanismo de atención permite aprender relaciones contextuales entre palabras.
-		\end{itemize}
+		Se decidió trabajar con un modelo generado por nosotros usando como base redes neuronales de tipo \acrshort{lstm} bidireccionales debido a los problemas encontrados al tratar de usar \acrshort{bert}, este tipo de redes se pueden entrenar e ir ajustándolas hasta obtener resultados que consideremos satisfactorios. Al contar con la característica de ser bidireccional esta puede analizar el texto anterior para poder generar el texto futuro.
 		
 		\subsection{Modelo} % Explicar como se obtuvo en código la base de datos limpia
 		
@@ -2628,12 +2633,12 @@ En este apartado se mostrará un primer boceto de las vistas que verá el usuari
 	ITM Platform (2010), Matriz de Evaluación de Riesgos [En línea]. Disponible: https://www.itmplatform.com/es/recursos/matriz-de-evaluacion-de-riesgos
 	/\#RiskSetId=rh25q/6IQWFCFvYIwSUF6A== [Último acceso: 26 Mayo 2021]
 	
-	\bibitem{kaggleDataset}
-	Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
-	
 	\bibitem{kaggle}
 	Kaggle (2010), How to Use Kaggle [En línea]. Disponible: https://www.kaggle.com/docs/datasets [Último acceso: 25 Mayo 2021]
 	
+	\bibitem{kaggleDataset}
+	Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
+		
 	\bibitem{googleDatasets}
 	Google (2018, Septiembre 5), Dataset Search [En línea]. Disponible: https://datasetsearch.research.google.com [Último acceso: 25 Mayo 2021]
 	
@@ -6184,5 +6189,3 @@ Si comparamos el tiempo de inicio de sesión del Prototipo 1, el cual era de 110
 \end{comment}
 
 %\end{document}
-
-
