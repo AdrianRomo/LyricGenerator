@@ -568,11 +568,221 @@
 		\centering \caption{Diagrama general del sistema}
 	\end{figure}
 	\newpage
-	\section{Aspecto técnico del desarrollo del sistema}
+	\section{Base de datos}
+	Lo primero que se realizo fue obtener una base de datos la cual contuviera en ella letras de canciones pertenecientes al género musical con el que íbamos a trabajar, que en este caso fue el género pop, así como que estas se encontraran en el idioma inglés. Para ello buscamos en distintas plataformas, datasets que cumplieran con estos requisitos y que estuvieran disponibles para su uso, es decir, de tipo open source.\\\\
+	En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyrics for 6 musical genres” \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160,790 letras de canciones con las tablas mostradas a continuación: 
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/BasedeDatos/diagrama_ER_BD.jpg}
+		\centering 
+		\caption{Diagrama entidad-relación de la base de datos}
+	\end{figure}
+	Dicha base de datos se obtuvo originalmente de la página de vagalume.com \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación.
+	\begin{itemize}
+		\item Rock
+		\item Pop
+		\item Hip Hop
+		\item Samba
+		\item Sertanejo
+		\item Funk Carioca
+	\end{itemize}
+	Como se puede observar, se tenía la columna “Genre” la cual fue utilizada para separar el dataset en géneros musicales y “Link” la cual servía como enlace a la segunda tabla. Se fusionaron tablas dando el siguiente resultado:
+	\begin{figure}[H]
+		\includegraphics[width=5cm]{./Imagenes/BasedeDatos/Songs_with_Artists.png}
+		\centering 
+		\caption{Diagrama entidad-relación de la base de datos procesada}
+	\end{figure}
+	Posteriormente es necesario extraer la información precisa que se va utilizar para el entrenamiento del modelo, para ello se utilizaron las columnas de “Lyric” para seleccionar las letras que se utilizaran para entrenar el modelo, “Idiom” para separar las canciones en el idioma inglés y la columna de “Genre” para tamizar las canciones que forman parte del género pop, formando una base de datos simple la cual solo contiene las letras de canciones del género pop en el idioma inglés.
+	\begin{figure}[H]
+		\includegraphics[width=5cm]{./Imagenes/BasedeDatos/Pop.png}
+		\centering 
+		\caption{Diagrama entidad-relación final}
+	\end{figure}
+	\newpage
+	\section{Limpieza de la base de datos}
+	Una vez obtenida la base de datos, es necesario hacer una inspección de esta misma para verificar que los estos datos sean útiles para proceder a generar un modelo, este paso resulta de suma importancia, ya que de esto depende que la precisión de los resultados del modelo.\\\\
+	Para ello se identificarán datos que resulten incompletos, incorrectos, inexactos o no pertinentes para luego sustituirlos, modificarlos o en su caso, eliminar estos datos. \\\\\
+	Estas inconsistencias en el conjunto de datos pueden ser causados por errores de entrada del usuario, corrupción de los datos, errores al realizar el scraping, o simplemente cuenta con caracteres que no nos interesa procesar. Una vez realizada esta limpieza, la base de datos será conciliable para usarse en el entrenamiento y así los resultados generados finales tendrán una mejor comprensión. \\\\
+	Para ello se utilizó la librería de “Pandas” así como la librería de expresiones regulares. Para limpiar los datos se siguió el estándar de limpieza de datos: \cite{data_cleaning}
+	\begin{enumerate}
+		\item Remover caracteres innecesarios
+		\item Eliminar Duplicados
+		\item Evitar errores ortográficos de similitud
+		\item Convertir los tipos de dato
+		\item Tratar los valores nulos o faltantes
+	\end{enumerate}
+	Con la limpieza del conjunto de datos se tuvo como resultado una base de datos útil solo con los datos necesarios para poder tratarlos con el debido proceso para empezar el entrenamiento del modelo de la red neuronal, este proceso es necesario hacer solo una sola vez para cada género musical ingresado, en caso de que se lleguen a necesitar más datos, será necesario repetir el proceso para poder generar resultados de la manera más óptima posible. A continuación, se muestran las primeras líneas de la base de datos limpias.
+	\begin{figure}[H]
+		\includegraphics[width=7cm]{./Imagenes/BasedeDatos/ResultadosLimpiezaBasedeDatos.png}
+		\centering 
+		\caption{Resultados de limpieza en la base de batos}
+	\end{figure}
+	\newpage
+	\section{Desarrollo del modelo}
+	Para el desarrollo del modelo se utilizó una libreta de Kaggle. Cabe mencionar que el lenguaje de programación utilizado para el desarrollo del modelo fue Python, lo primero que se trabajó en la libreta, fue realizar la importación de librerías que se fueran a necesitar, las más importantes son:	
+	\begin{itemize}
+		\item Pandas: la cual nos permite manipular y analizar la información.
+		\item Wordcloud: es una herramienta que nos ayuda al momento de generar la siguiente palabra de una oración.
+		\item Tensorflow: una herramienta que nos ayuda en el procesamiento del aprendizaje automático.
+		\item Keras: una herramienta que nos ayuda en el procesamiento del aprendizaje profundo.
+	\end{itemize}
+	A continuación, procedemos a importar el conjunto de datos previamente trabajado y limpiado, pero en esta ocasión apoyándonos de la librería de pandas, solo nos vamos a quedar con letra de estas canciones, ya que es la información que nos interesa trabajar y la cual vamos a estar manipulando.\\\\
+	Al usar Kaggle debemos tener en cuenta sus limitantes, en este caso se cuenta solamente con 16Gb de RAM, un disco de 73Gb y una GPU de 13GB para el procesamiento de nuestro conjunto de datos, por eso debemos limitar nuestro modelo, en lugar de utilizar todos los datos (28441), vamos a trabajar solo con 700 letras de canciones por el momento.\\\\
+	Utilizando estas 700 lyrics, se decidió obtener información de ellas, siendo más específicos, estadísticas sobre el numero de palabras en cada canción, esto con el fin de determinar la frecuencia de distribución del número de palabras de cada texto y para tener una idea del promedio de palabras, esto con el fin de tenerlo en cuenta al momento de realizar la generación de texto.
+	\begin{figure}[H]
+		\includegraphics[width=5cm]{./Imagenes/Modelo/estadistica.png}
+		\centering 
+		\caption{Estadísticas de las palabras}
+	\end{figure}
+	Lo que podemos observar en la imagen anterior es:
+	\begin{itemize}
+		\item Count: el cual es el número de canciones analizadas.
+		\item Mean: el promedio de palabras por canción.
+		\item Std: la desviación estándar de las palabras.
+		\item Min: la menor cantidad de palabras encontradas en una canción.
+		\item Max: la mayor cantidad de palabras encontradas en una canción.
+	\end{itemize}
+	Además, se le realizo una tokenizacion a las letras de nuestras 700 canciones, esto quiere decir que se separo cada palabra y cada palabra se convirtió en un número. Para este proceso se hizo uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
+	\begin{itemize}
+		\item \_fit\_ontext(): El cual actualiza el vocabulario interno en función de una lista de textos determinada o, en este caso, la columna "Lyrics", donde cada entrada de la lista será un token.
+		\item \_texts\_tosequences(): El cual transforma cada texto dentro de la lista de textos proporcionados en una secuencia de números enteros; solo se considerarán las palabras conocidas por el tokenizador.
+	\end{itemize}	
+	\begin{figure}[H]
+		\includegraphics[width=10cm]{./Imagenes/Modelo/tokenization.png}
+		\centering 
+		\caption{Tokenizado de las palabras \cite{tokenimagen}}
+	\end{figure}
+	Antes de la generación del modelo, es necesario normalizar todas las oraciones a una misma longitud estándar, para evitar el desbordamiento de la memoria y conseguir que las capas del modelo sean mucho más profundas, este es un proceso simple el cual consta de agregar ceros al comienzo del texto, dando como resultado capas del mismo tamaño.\\\\
+	La posición donde se sumarán los ceros viene determinada por el relleno del argumento, en este caso, se hará al comienzo de la secuencia.
+	\begin{figure}[H]
+		\includegraphics[width=10cm]{./Imagenes/Modelo/padding.png}
+		\centering 
+		\caption{Padding del tokenizado de las palabras}
+	\end{figure}	
+	\newpage	
+	\section{Creación del modelo}
+	En este caso se utilizó el modelo LSTM Bidireccional, este tipo de redes neuronales se ejecutan como su nombre lo indica: en dos direcciones. Esto quiere decir que va del pasado al futuro y viceversa, así es como el modelo conserva la información de ambos estados en cualquier momento. Las redes neuronales de LSTM se utilizan principalmente cuando el contexto está involucrado.\\\\
+	Los modelos en Keras se definen como una secuencia de capas, y el modelo secuencial se trata de agregar capas de una en una. Las capas son el componente básico de la red neuronal.\\\\
+	Dentro de estas capas podemos encontrar:
+	\subsection{Embedding o incrustación}
+	Es una capa central, solo se puede usar como la primera capa en un modelo, convierte los números enteros positivos en vectores densos de un tamaño fijo (el primer parámetro es el tamaño del vocabulario, el segundo parámetro es la dimensión de la incrustación densa y el tercer parámetro es sobre la longitud de las secuencias, este se requiere ya que usaremos una capa densa más adelante)
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/embedding.py}
+	\end{center}
+	\subsection{Bidireccional}
+	Es una capa recurrente, una envoltura bidireccional para las redes neuronales de tipo RNN's que recibirá una capa como entrada, siendo la capa LSTM la que elegimos, recibirá un entero positivo como entrada que se refiere a la cantidad de nodos de salida que se deben devolver.
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/bidireccional.py}
+	\end{center}
+	\subsection{Dropout}
+	Es una capa de regularización. Esta capa establece aleatoriamente las unidades de entrada en 0, con una frecuencia del valor que le pasamos, en cada paso durante el tiempo de entrenamiento, lo que ayuda a evitar el sobreajuste.
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/dropout.py}
+	\end{center}
+	\subsection{Densidad}
+	Es una capa central y una capa de red neuronal densamente conectada. Recibe como primer parámetro un entero positivo que se refiere a la cantidad de nodos de salida que deben devolverse. El segundo parámetro es el llamado activación que define el tipo de predicciones que puede hacer el modelo; para el tipo de problema que estamos considerando, el que se adapta mejor es softmax, que genera un vector de valores (entrada) que puede interpretarse como probabilidades de ser utilizado.
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/dense.py}
+	\end{center}
+	\subsection{Método de compilación, algoritmo de optimización y métrica de rendimiento}
+	Perdida: También conocida como función de costos; funciona durante el proceso de optimización y su función es calcular el error del modelo. La entropía cruzada se utiliza para estimar la diferencia entre una distribución de probabilidad estimada y predicha. Se utilizará categorical\_cross-entropy porque es más adecuado para este tipo de problemas y se usa casi universalmente para entrenar redes neuronales de aprendizaje profundo debido a los resultados que produce.
+	Optimización: Se encarga de reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida porque es la mejor opción que ofrece Keras para entrenar la red neuronal en menos tiempo y de manera más eficiente. Earlystop detendrá el entrenamiento si el modelo ha dejado de mejorar, esto se verificará al final de cada epoch. En este caso, la "precisión" o “accuracy” se utilizará como métrica de rendimiento.
+	El método fit es el encargado de entrenar el modelo para el número fijo de epochs dados.	
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/compile.py}
+	\end{center}
+	Quedando como resultado el código del modelo de la siguiente forma:
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/modelo.py}
+	\end{center}
+	\subsection{Importación del modelo}
+	Una vez completado el entrenamiento de nuestro modelo, lo que falta es importarlo para probar cómo funciona, en nuestro caso nombramos al modelo “song\_lyrics\_generator” y se importo de la siguiente forma, llamándola link de nuestra libreta de Kaggle:
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/import.py}
+	\end{center}
+	Ya que contemos con el modelo importado, se creó una función que se utilizará para generar la letra de una canción utilizando el modelo previamente entrenado, predecirá las siguientes palabras en base a la palabra(s) de entrada suministradas como 'seed\_text'. Para que esto funcione, se debe aplicar una tokenización al seed\_text, luego se aplicará un relleno a las secuencias generadas y se pasará al modelo entrenado para que se pueda predecir la siguiente palabra.
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/Modelo/function.py}
+	\end{center}	
 	\newpage
 	\section{Desarrollo de la aplicación web}
+	Para el desarrollo de la aplicación web se decidió realizarla haciendo uso de React o mejor conocida como ReactJS la cual se trata de una biblioteca de Java para crear interfaces interactivas, con la cual se puedes diseñar vistas simples y en las cuales se actualizarán y renderizarán los componentes necesarios cuando haya cambios en los datos.\\\\
+	Se decidió usar este, debido a que nos da la posibilidad de que sea compatible con dispositivos móviles sin la necesidad de volver a escribir código para esta tecnología.\\\\
+	Lo primero que se requirió para poder trabajar con React fue descargar Node.js desde su página (https://nodejs.org/es/) la cual nos va a permitir crear aplicaciones web utilizando JavaScript, además de que al instalarlo obtendremos npm el cual posteriormente nos permitirá instalar paquetes con los que añadiremos nuevas funciones a nuestra aplicación y que a su vez son compatibles con React.\\\\
+	Una vez que se tiene instalado Node.js para poder ejecutar una aplicación web, en terminal tendremos que escribir npm start, lo cual ejecutara un servidor de desarrollo de manera local, a la cual se puede acceder a través de la siguiente dirección (localhost:3000) en cualquier navegador.\\\\
+	Como React se basa en crear vistas lo primero que se hizo fue visualizar que es lo que queremos que vea el usuario, por ello se creó una carpeta en la cual se colocaron las páginas con las cuales se iban a trabajar y con las que el usuario va a interactuar. Estas fueron la página de inicio, la de preguntas frecuentes, la de ejemplos de canciones previamente generadas y una acerca de nosotros.\\\\
+	\begin{figure}[H]
+		\includegraphics[width=5cm]{./Imagenes/AplicacionWeb/Paginas.png}
+		\centering 
+		\caption{Páginas trabajadas}
+	\end{figure}
+	La más importante de estas páginas es la página principal, debido a que es esta la primer a que va a ver el usuario y con la que más va a interactuar, en esta, aparece un mensaje con un botón el cual invita al usuario a generar su propia letra musical.
+	\begin{figure}[H]
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pbienvenida.png}
+		\centering 
+		\caption{Página de bienvenida}
+	\end{figure}
+	Si el usuario le da clic al botón, como React usa estados para renderizar lo que ve el usuario, se muestra en pantalla el formulario donde se le pide al usuario que introduzca una palabra en el idioma inglés, así como se muestra una barra donde el usuario puede ingresar que tanto quiere que rime la letra de esta canción.
+	\begin{figure}[H]
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pformulario.png}
+		\centering 
+		\caption{Formulario}
+	\end{figure}
+	En esta parte debemos detenernos para habar acerca de cómo es que los datos proporcionados por el usuario son leídos y posteriormente enviados a nuestro back-end para ser procesados futuramente por el modelo. A continuación, se muestra el código de la función la cual realiza este proceso.
+	\begin{center}
+		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Sendword.js}
+	\end{center}
+	En esta función lo primero que se hace es recibir los datos (la palabra y el porcentaje) que introdujo el usuario, esto se hace buscado los identificadores de los elemento de la página y obteniendo sus valores, estos, se enviaran al back-end usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro back-end y busca el método post de esta, como el método post de nuestro back-end recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato.\\\\
+	Una vez que el usuario le dio clic al botón de generar canción se muestra una leyenda la cual le pide al usuario que aguarde unos segundos, que se está trabajando en su letra. Pasados unos segundos después, en pantalla se le mostrara la letra de la canción generada, así como 3 botones, el primero de ellos le permite descargar la letra generada en un archivo de texto, el segundo le permite al usuario generar una nueva canción utilizando los mismos parámetros con los que genero la letra actual y el ultimo lo regresa al estado anterior para introducir nuevos parámetros y con estos generar una nueva letra.
+	\begin{figure}[H]
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pleyenda.png}
+		\centering 
+		\caption{Leyenda mostrada}
+	\end{figure}
+	\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Ptexto.png}
+	\centering 
+	\caption{Texto generado}
+	\end{figure}
+	Adentrándonos a esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el back-end para que la página pueda recibir el texto generado por el modelo.
+	\begin{center}
+		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/ModelConection.js}
+	\end{center}
+	Lo que se hace en el código anterior es realizar una conexión asíncrona con el back-end, esto para que mientras no se reciba una respuesta el usuario en pantalla vea una leyenda que diga que se está trabajando en su texto, cuando en la conexión se reciba una respuesta la leyenda que ve el usuario cambiara, mostrando el texto recibido en la función.
+	\begin{center}
+		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Download.js}
+	\end{center}
+	Con esta función se permite crear un archivo de texto el cual es posible descargarse en la computadora del usuario y el cual va a contener la letra de la canción que se generó en ese momento.
+	\begin{figure}[H]
+		\includegraphics[width=10cm]{./Imagenes/AplicacionWeb/Archivo.png}
+		\centering 
+		\caption{Archivo de texto descargado}
+	\end{figure}	
+	Para el segundo botón se utiliza la misma función que se ve en la vista previa se reenvía al back-end los parámetros utilizados y se renderiza nuevamente la vista con la leyenda de que espere unos segundos. En el caso del tercer botón solo se activa el estado que permite renderizar la parte donde el usuario introduce los datos.
 	\newpage
-	\section{Generación del modelo}
+	\section{Desarrollo del back-end}
+	Para el back-end se decidió trabajar con una aplicación web desarrollada en Flask, debido a que de esta manera era fácil y rápida de implementar, además que permitía una mejor integración con el modelo y la aplicación web previamente trabajada en React.\\\\
+	Para poder trabajar con una aplicación web en Flask lo primero que se tiene que hacer o que se recomienda hacer es crear un ambiente virtual usando virtualenv esto para separar nuestro Python instalado originalmente en la computadora del que se va a utilizar en la aplicación. Una vez realizado esto, se inició el desarrollo del código.
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/BackEnd/app.py}
+	\end{center}
+	En el código app.py mostrado anteriormente es el código principal de nuestro back-end ya que es este el que se despliega en el navegador web, en este lo primero que se visualiza al entrar es información con respecto a esta aplicación como su nombre, versión y los plugins con los que esta cuenta.\\\\
+	Para poder ver un cómo es que realmente funciona el back-end se realizó una pequeña interfaz y es posible acceder a ella a través de la siguiente dirección x/swagger-ui/ en ella podemos encontrar con mayor detalle el status actual de la api, la cual se encuentra ubicada en el espacio nombrado como health.
+	\begin{figure}[H]
+		\includegraphics[width=13.5cm]{./Imagenes/BackEnd/Health.png}
+		\centering 
+		\caption{Cuadro de status del Back-end}
+	\end{figure}
+	Un poco más abajo se encuentra el método post de la api, este es el encargado de recibir la información de la aplicación web realizada en React en formato json, para posteriormente enviar esta información al modelo
+	\begin{figure}[H]
+		\includegraphics[width=13.5cm]{./Imagenes/BackEnd/Post.png}
+		\centering 
+		\caption{Cuadro del método Post}
+	\end{figure}
+	Para realizar esta tarea se desarrolló el siguiente código
+	\begin{center}
+		\lstinputlisting[language=Python]{./Imagenes/BackEnd/generate_lyrics.py}
+	\end{center}
+	En este código utilizando la palabra y el porcentaje introducidos por el usuario son enviados al modelo para ser procesados generando así un texto, este procedimiento se realiza en la función generate\_lyric, e; texto generado va a ser regresado a nuestra api para mandarlo a la aplicación web en React para posteriormente mostrarla en el navegador web del usuario.
 	\newpage
 	\section{Conexión entre el modelo y la aplicación web}
 	\newpage
@@ -592,6 +802,17 @@
 		\bibitem{amazon_sagemaker}
 		Amazon (2021), Amazon SageMaker [En línea]. Disponible: https://aws.amazon.com/es/sagemaker/ [Último acceso: 1 Junio 2021]		
 		\bibitem{amazon_s3}
-		Amazon (2021), Amazon S3 [En línea]. Disponible: https://aws.amazon.com/es/s3/ [Último acceso: 1 Junio 2021]
+		Amazon (2021), Amazon S3 [En línea]. Disponible: https://aws.amazon.com/es/s3/ [Último acceso: 1 Junio 2021]		
+		\bibitem{kaggle}
+		Kaggle (2010), How to Use Kaggle [En línea]. Disponible: https://www.kaggle.com/docs/datasets [Último acceso: 25 Mayo 2021]
+		\bibitem{kaggleDataset}
+		Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
+		\bibitem{vagalume}
+		Vagalume (2002), Vagalume: Music e tudo [En línea]. Disponible: https://www.vagalume.com.br/ [Último acceso: 25 Mayo 2021]		
+		\bibitem{data_cleaning}
+		Aaron Tay (2021, Abril 23), Data Cleaning Techniques [En línea]. Disponible: https://www.digitalvidya.com/blog/data-cleaning-techniques/ [Último acceso: 30 Mayo 2021]
+		\bibitem{tokenimagen}
+		B. Lee (2019, Noviembre 17), How to 10x Response Rates on Surveys [En línea]. Disponible: https://bryankmlee3.medium.com/conducting-surveys-with-nlp-d38df4c29e39 [Último acceso: 5 Junio 2021]
+		
 	\end{thebibliography}	
 \end{document}
