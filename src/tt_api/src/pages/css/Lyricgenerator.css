@@ -29,35 +29,33 @@ img {
     object-fit: contain;
   }
 
-  .contentTwo {
-    height: 100vh;
-    width: 100%;
-    display: none;
+  .contentTwo, .contentThree {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    opacity: 0%;
+    pointer-events: none;
     position: absolute;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     object-fit: contain;
   }
 
-  .contentThree {
+  .divTest {
     height: 100vh;
-    width: 100%;
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
+    width: 50%;
+    background-color: orangered;
   }
 
-  .hero-container .contentOne > h1 {
+  .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
     color: #fff;
     font-size: 100px;
     margin-top: -100px;
   }
   
-  .hero-container .contentOne > p {
+  .hero-container > p, .contentOne > p, .contentOne-hide > p, .contentOne-show > p {
     margin-top: 8px;
     color: #fff;
     font-size: 32px;
@@ -114,6 +112,68 @@ img {
     transition:opacity 4s
   }
 
+  .contentOne-hide{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 2s;
+  }
+
+  .contentOne-show{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    opacity: 100%;
+    pointer-events: inherit;
+    transition: opacity 2s;
+  }
+
+  .contentTwoThree-show {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    object-fit: contain;
+    opacity: 100%;
+    pointer-events: inherit;
+    transition: opacity 2s;
+  }
+
+  .contentTwoThree-hide {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    object-fit: contain;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 2s;
+  }
+
   .contentTwo-show-translation {
     margin: 16px;
     transform: translateX(0px);
@@ -125,45 +185,21 @@ img {
     transform: translateX(-1500px);
     transition: transform 2s;
   }
-
-  .contentTwo-show-opacity {
-    opacity: 100%;
-    display: block;
-    transition: opacity 2s;
-  }
-
-  .contentTwo-hide-opacity {
-    opacity: 0%;
-    display: none;
-    transition: opacity 2s;
-  }
-  
-  .contentThree-show-opacity{
-    opacity: 0%;
-    display: none;
-    transition: opacity 2s;
-  }
-
-  .contentThree-hide-opacity{
-    opacity: 0%;
-    display: none;
-    transition: opacity 2s;
-  }
   
   @media screen and (max-width: 960px) {
-    .hero-container .contentOne > h1 {
+    .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
       font-size: 70px;
       margin-top: -150px;
     }
   }
   
   @media screen and (max-width: 768px) {
-    .hero-container .contentOne > h1 {
+    .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
       font-size: 50px;
       margin-top: -100px;
     }
   
-    .hero-container .contentOne > p {
+    .hero-container > p, .contentOne > p, .contentOne-hide > p, .contentOne-show > p {
       font-size: 30px;
     }
   

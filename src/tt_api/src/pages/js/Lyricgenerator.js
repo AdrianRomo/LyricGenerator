@@ -33,9 +33,9 @@ function Lyricgenerator() {
                 <p>Lyrics generated using Artificial Intelligence</p>
                 <div className="hero-btns">
                     <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => { 
-                        console.log('Me hicieron click :3 ... ' + cont++);
-                            document.getElementById('secondDiv').className= 'contentTwo-show-opacity';
-                            document.getElementById('firstDiv').className= 'contentTwo-hide-opacity';
+                            console.log('Me hicieron click :3 ... ' + cont++);
+                            document.getElementById('secondDiv').className= 'contentTwoThree-show';
+                            document.getElementById('firstDiv').className= 'contentOne-hide';
                         }}>
                         Generate your own song <i class="fas fa-play fa-xs" />
                     </Button>
@@ -49,14 +49,14 @@ function Lyricgenerator() {
                 <p>Porcentaje de rimas dentro de la canción: </p>            
                 <DiscreteSlider/>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
-                    document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
-                    document.getElementById('firstDiv').className= 'contentOne';
+                    document.getElementById('secondDiv').className= 'contentTwoThree-hide';
+                    document.getElementById('firstDiv').className= 'contentOne-show';
                     }}>
                     Home
                 </Button>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
-                    document.getElementById('thirdDiv').className= 'contentTwo-show-opacity';
-                    document.getElementById('secondDiv').className= 'contentTwo-hide-opacity';
+                    document.getElementById('thirdDiv').className= 'contentTwoThree-show';
+                    document.getElementById('secondDiv').className= 'contentTwoThree-hide';
 
                     sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
                     }}>
@@ -84,8 +84,8 @@ function Lyricgenerator() {
                 </Button>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
 
-                    document.getElementById('thirdDiv').className= 'contentTwo-hide-opacity';
-                    document.getElementById('secondDiv').className= 'contentTwo-show-opacity';
+                    document.getElementById('thirdDiv').className= 'contentTwoThree-hide';
+                    document.getElementById('secondDiv').className= 'contentTwoThree-show';
 
                     }}>
                     Start Again
