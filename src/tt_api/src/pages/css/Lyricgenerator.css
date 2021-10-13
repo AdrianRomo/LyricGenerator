@@ -54,7 +54,6 @@ img {
     font-size: 100px;
     margin-top: -100px;
   }
-  
   .hero-container > p, .contentOne > p, .contentOne-hide > p, .contentOne-show > p {
     margin-top: 8px;
     color: #fff;
@@ -195,6 +194,7 @@ img {
   
   @media screen and (max-width: 768px) {
     .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
+
       font-size: 50px;
       margin-top: -100px;
     }

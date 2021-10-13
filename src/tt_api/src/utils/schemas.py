@@ -1,6 +1,6 @@
 from datetime import datetime
 from marshmallow import Schema, fields
-from utils.constants import FLASK_ENV, MODEL_PATH, VERSION, PROJECT
+from .constants import FLASK_ENV, MODEL_PATH, VERSION, PROJECT
 # Schemas
 class HealthSchema(Schema):
     project = fields.String(default='',example=PROJECT)

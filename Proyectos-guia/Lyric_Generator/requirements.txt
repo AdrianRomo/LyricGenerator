@@ -29,10 +29,24 @@ pyasn1-modules==0.2.6     # via google-auth
 pyasn1==0.4.7             # via pyasn1-modules, rsa
 pytz==2019.2              # via google-api-core, google-cloud-firestore
 requests==2.22.0
-rsa==4.0                  # via google-auth
-six==1.12.0               # via flask-limiter, google-api-core, google-auth, google-resumable-media, grpcio, limits, protobuf
-urllib3==1.25.3           # via requests
-werkzeug==0.15.6          # via flask
+    # via
+    #   -r requirements.in
+    #   google-api-core
+rsa==4.7
+    # via google-auth
+six==1.12.0
+    # via
+    #   flask-limiter
+    #   google-api-core
+    #   google-auth
+    #   google-resumable-media
+    #   grpcio
+    #   limits
+    #   protobuf
+urllib3==1.25.3
+    # via requests
+werkzeug==0.15.6
+    # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools==41.4.0        # via google-api-core, protobuf

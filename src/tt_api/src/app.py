@@ -10,9 +10,9 @@ from flask_apispec.extension import FlaskApiSpec
 from flask_cors import CORS
 
 # Own Libraries
-from utils.schemas import HealthSchema, GetLyrics, PostLyrics
-from utils.generate_lyrics import GenerateLyric
-from utils.constants import FLASK_ENV, VERSION, PROJECT
+from .utils.schemas import HealthSchema, GetLyrics, PostLyrics
+from .utils.generate_lyrics import GenerateLyric
+from .utils.constants import FLASK_ENV, VERSION, PROJECT
 
 app = Flask(__name__)
 api = Api(app)  # Flask restful wraps Flask app around it.
@@ -60,13 +60,11 @@ class Lyrics(MethodResource, Resource):
         """
         try:
             response = {}
-            lyrics = GenerateLyric(**kwargs)
-            response["setup"] = lyrics.setup()
-            response["generated_lyric"] = lyrics.generate_lyric()
+            lyrics = GenerateLyric(kwargs)
+            response["generated_lyric"], response["percentage"] = lyrics.generate_lyric()
         except Exception as e:
             return {"error": f'Error:{str(e)}'}
-
-        return {"response":response}
+        return jsonify(response)
 
     @doc(description='Health-check to see the status of the API.', tags=['Lyric Generator Status'])
     @marshal_with(HealthSchema)
