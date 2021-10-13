@@ -8,7 +8,7 @@ from apispec import APISpec
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec.extension import FlaskApiSpec
 from flask_cors import CORS
-
+from random import randint
 # Own Libraries
 from .utils.schemas import HealthSchema, GetLyrics, PostLyrics
 from .utils.generate_lyrics import GenerateLyric
@@ -61,7 +61,11 @@ class Lyrics(MethodResource, Resource):
         try:
             response = {}
             lyrics = GenerateLyric(kwargs)
-            response["generated_lyric"], response["percentage"] = lyrics.complete_this_song(20)
+            response['chorus'] = lyrics.chorus(randint(10,15))
+            response['first_verse'] = lyrics.complete_this_song(randint(10,15))
+            response['generated_lyric'], response['percentage'] = lyrics.complete_this_song(randint(10,15))
+            response['end_verse'] = lyrics.complete_this_song(randint(10,15))
+
         except Exception as e:
             return {"error": f'Error:{str(e)}'}
         return jsonify(response)
@@ -92,4 +96,5 @@ def page_not_found(e):
 
 # We run the Flask application and, if it is running in a development environment,
 # we run the application in debug mode.
+# to run only ```FLASK_ENV=test FLASK_APP=src.app python -m flask run --host=0.0.0.0 --port=80```
 app.run(debug=FLASK_ENV == 'development', host='0.0.0.0')

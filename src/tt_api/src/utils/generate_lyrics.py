@@ -7,8 +7,8 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 
-df = pd.read_csv('/Users/adriannava/Documents/Cursando/LyricGenerator/src/tt_api/src/utils/pop_model.csv')
-model = load_model('/Users/adriannava/Documents/Cursando/LyricGenerator/src/tt_api/src/song_lyrics_generator.h5')
+df = pd.read_csv(MODEL_PATH + '/pop_model.csv')
+model = load_model(MODEL_PATH + '/song_lyrics_generator.h5')
 
 tokenizer = Tokenizer()
 tokenizer.fit_on_texts(df['Lyric'].astype(str).str.lower())
@@ -32,7 +32,6 @@ class GenerateLyric(object):
     - Integrate it in React
     """
     def __init__(self, kwargs):
-        self.model_path = MODEL_PATH
         self.seed_text, self.percentage = kwargs["lyric_input"], kwargs["percentage"]
 
     def complete_this_song(self, next_words):
@@ -47,3 +46,16 @@ class GenerateLyric(object):
                     break
             self.seed_text += " " + output_word
         return self.seed_text, self.percentage
+
+    def chorus(self, next_words):
+            for _ in range(next_words):
+                token_list = tokenizer.texts_to_sequences([self.seed_text])[0]
+                token_list = pad_sequences([token_list], maxlen=max_sequence_len-1, padding='pre')
+                predicted = model.predict_classes(token_list, verbose=1)        
+                output_word = ""
+                for word, index in tokenizer.word_index.items():
+                    if index == predicted:
+                        output_word = word
+                        break
+                self.seed_text += " " + output_word
+            return self.seed_text, self.percentage
