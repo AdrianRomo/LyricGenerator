@@ -61,7 +61,7 @@ class Lyrics(MethodResource, Resource):
         try:
             response = {}
             lyrics = GenerateLyric(kwargs)
-            response["generated_lyric"], response["percentage"] = lyrics.generate_lyric()
+            response["generated_lyric"], response["percentage"] = lyrics.complete_this_song(20)
         except Exception as e:
             return {"error": f'Error:{str(e)}'}
         return jsonify(response)
