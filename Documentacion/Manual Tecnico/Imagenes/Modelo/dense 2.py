@@ -1,1 +1,0 @@
-model.add(Dense(total_words, activation='softmax'))

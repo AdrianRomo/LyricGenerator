@@ -1,1 +1,0 @@
-model.add(Bidirectional(LSTM(250)))

@@ -2344,11 +2344,15 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">referencia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">neuronart</bcf:citekey>
-    <bcf:citekey order="2">redneurnn</bcf:citekey>
-    <bcf:citekey order="3">kaggle1</bcf:citekey>
-    <bcf:citekey order="4">kaggleDataset</bcf:citekey>
-    <bcf:citekey order="5">data_cleaning</bcf:citekey>
+    <bcf:citekey order="1">actmusica</bcf:citekey>
+    <bcf:citekey order="2">refneuralnet</bcf:citekey>
+    <bcf:citekey order="3">refneuralclass</bcf:citekey>
+    <bcf:citekey order="4">neuronart</bcf:citekey>
+    <bcf:citekey order="5">redneurnn</bcf:citekey>
+    <bcf:citekey order="6">kaggle1</bcf:citekey>
+    <bcf:citekey order="7">kaggleDataset</bcf:citekey>
+    <bcf:citekey order="8">data_cleaning</bcf:citekey>
+    <bcf:citekey order="9">tokenimagen</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
