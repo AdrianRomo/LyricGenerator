@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-
+print(MODEL_PATH)
 df = pd.read_csv(MODEL_PATH + '/pop_model.csv')
 model = load_model(MODEL_PATH + '/song_lyrics_generator.h5')
 
@@ -25,6 +25,7 @@ input_sequences = np.array(pad_sequences(input_sequences, maxlen=max_sequence_le
 # create predictors and label
 X, labels = input_sequences[:,:-1],input_sequences[:,-1]
 y = tf.keras.utils.to_categorical(labels, num_classes=total_words)
+
 class GenerateLyric(object):
     """
     TODO:
@@ -38,7 +39,7 @@ class GenerateLyric(object):
         for _ in range(next_words):
             token_list = tokenizer.texts_to_sequences([self.seed_text])[0]
             token_list = pad_sequences([token_list], maxlen=max_sequence_len-1, padding='pre')
-            predicted = model.predict_classes(token_list, verbose=1)        
+            predicted = np.argmax(model.predict(token_list, verbose=0), axis=1)
             output_word = ""
             for word, index in tokenizer.word_index.items():
                 if index == predicted:
@@ -51,7 +52,7 @@ class GenerateLyric(object):
             for _ in range(next_words):
                 token_list = tokenizer.texts_to_sequences([self.seed_text])[0]
                 token_list = pad_sequences([token_list], maxlen=max_sequence_len-1, padding='pre')
-                predicted = model.predict_classes(token_list, verbose=1)        
+                predicted = np.argmax(model.predict(token_list, verbose=0), axis=1)
                 output_word = ""
                 for word, index in tokenizer.word_index.items():
                     if index == predicted:

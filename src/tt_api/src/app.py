@@ -58,16 +58,13 @@ class Lyrics(MethodResource, Resource):
         """
         Post method represents a POST API method
         """
-        try:
-            response = {}
-            lyrics = GenerateLyric(kwargs)
-            response['chorus'] = lyrics.chorus(randint(10,15))
-            response['first_verse'] = lyrics.complete_this_song(randint(10,15))
-            response['generated_lyric'], response['percentage'] = lyrics.complete_this_song(randint(10,15))
-            response['end_verse'] = lyrics.complete_this_song(randint(10,15))
-
-        except Exception as e:
-            return {"error": f'Error:{str(e)}'}
+        response = {}
+        lyrics = GenerateLyric(kwargs)
+        response['chorus'] = lyrics.chorus(randint(10,15))
+        response['first_verse'] = lyrics.complete_this_song(randint(10,15))
+        response['generated_lyric'], response['percentage'] = lyrics.complete_this_song(randint(10,15))
+        response['end_verse'] = lyrics.complete_this_song(randint(10,15))
+        
         return jsonify(response)
 
     @doc(description='Health-check to see the status of the API.', tags=['Lyric Generator Status'])
