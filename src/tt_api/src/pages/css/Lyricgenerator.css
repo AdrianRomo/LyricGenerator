@@ -276,3 +276,13 @@ img {
       transform: scale(0.9);
     }
   }
+
+  .contentThree span{
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker{
+    50%{
+      opacity: 0;
+    }
+  }

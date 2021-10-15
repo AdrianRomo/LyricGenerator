@@ -6,11 +6,13 @@ const STYLES = ['btn--primary', 'btn--outline'];
 const SIZES = ['btn--medium', 'btn--large'];
 
 export const Button = ({
+  buttonId,
   children,
   type,
   onClick,
   buttonStyle,
-  buttonSize
+  buttonSize,
+  isEnabled
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -20,9 +22,11 @@ export const Button = ({
 
   return (
     <button
+        id={buttonId}
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
         type={type}
+        disabled={isEnabled}
       >
         {children}
       </button>
