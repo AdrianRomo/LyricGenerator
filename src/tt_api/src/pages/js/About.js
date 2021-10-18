@@ -7,6 +7,7 @@ function About () {
     return (
         <>
             <div className='about-container'>
+            <img alt='' src='/videos/vinyl.webp'/>
                 <h1>¿Qué es Neural Lyrics?</h1>
                 <p>Es un servicio gratuito el cual ofrece a los usuarios la posibilidad de generar nuevas letras musicales por medio de inteligencia artificial,</p>
                 <p>gracias a un modelo generado por una base de datos con alrededor de 28,000 letras de canciones de distintos artistas de género Pop.</p>

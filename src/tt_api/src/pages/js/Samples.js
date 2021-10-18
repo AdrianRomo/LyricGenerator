@@ -6,7 +6,8 @@ import Footer from './Footer';
 function Samples () {
     return (
         <>
-            <div className='samples-container'>
+            <div className='samples-container'>                
+            <img alt='' src='/videos/vinyl.webp'/>
                 <h1>Samples</h1>
                 <p>A continuación, ponemos a disposición algunos ejemplos de letras generadas por la inteligencia artificial de NeuraLyrics.com,</p>
                 <p>los usuarios son libres de descargar y modificar los textos generados. </p>

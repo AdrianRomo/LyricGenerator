@@ -6,7 +6,8 @@ import '../css/Faq.css'
 function Faq () {
     return (
         <>
-            <div className='faq-container'>
+            <div className='faq-container'>                
+            <img alt='' src='/videos/vinyl.webp'/>
                 <h1>Preguntas frecuentes</h1>
                 <h2>¿Qué tipo de inteligencia artificial utiliza el servicio?</h2>
                 <p>El servicio de NeuraLyrics.com fue realizado haciendo uso de la red neuronal recurrente de tipo LSTM (Long Short Term Memory) de tipo bidireccional.</p>

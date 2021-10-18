@@ -89,8 +89,10 @@ function Lyricgenerator() {
                 <h2>Introduce una palabra en idioma inglés, así como escoge un porcentaje de rimas para poder generar tu canción.</h2>
                 <p>Palabra en inglés:</p>
                 <input className='generatesong-input' id='english-word' type='text' placeholder='Love' onChange={(e)=> updateInput(e)} required/>
-                <p>Porcentaje de rimas dentro de la canción: </p>            
+                <p>Porcentaje de rimas dentro de la canción: </p> 
+                <div align='center' className='dslider'>          
                 <DiscreteSlider/>
+                </div>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
                     document.getElementById('secondDiv').className= 'contentTwoThree-hide';
                     document.getElementById('firstDiv').className= 'contentOne-show';
