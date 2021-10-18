@@ -43,6 +43,16 @@ img {
     object-fit: contain;
   }
 
+  #thirdDiv {
+    word-wrap: break-word;
+    width: 20%;
+  }
+
+  #secondDiv{
+    word-wrap: break-word;
+    width: 35%;
+  }
+
   .divTest {
     height: 100vh;
     width: 50%;
