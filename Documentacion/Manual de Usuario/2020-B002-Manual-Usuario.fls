@@ -1,0 +1,217 @@
+PWD /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario
+INPUT /usr/local/texlive/2017/texmf.cnf
+INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.tex
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.log
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/unicode-data/CaseFolding.txt
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/comment/comment.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/comment/comment.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pppdftex.def
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pppdftex.def
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.aux
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.aux
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.aux
+INPUT /usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.pdf
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/lscape.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/graphics/lscape.sty
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoescom.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoescom.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoescom.png
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoipn.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoipn.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/Imagenes/Logos/logoipn.png
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.toc
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.toc
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.toc
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.lof
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.lof
+OUTPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.lof
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pprincipal.jpg
+INPUT ./Imagenes/Capturas/pprincipal.jpg
+INPUT ./Imagenes/Capturas/pprincipal.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pformulario.jpg
+INPUT ./Imagenes/Capturas/pformulario.jpg
+INPUT ./Imagenes/Capturas/pformulario.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pcortina.jpg
+INPUT ./Imagenes/Capturas/pcortina.jpg
+INPUT ./Imagenes/Capturas/pcortina.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/ptextogenerado.jpg
+INPUT ./Imagenes/Capturas/ptextogenerado.jpg
+INPUT ./Imagenes/Capturas/ptextogenerado.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pdescarga.jpg
+INPUT ./Imagenes/Capturas/pdescarga.jpg
+INPUT ./Imagenes/Capturas/pdescarga.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pvisualizacion.jpg
+INPUT ./Imagenes/Capturas/pvisualizacion.jpg
+INPUT ./Imagenes/Capturas/pvisualizacion.jpg
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pejemplos.png
+INPUT ./Imagenes/Capturas/pejemplos.png
+INPUT ./Imagenes/Capturas/pejemplos.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/./Imagenes/Capturas/pdev.png
+INPUT ./Imagenes/Capturas/pdev.png
+INPUT ./Imagenes/Capturas/pdev.png
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.aux
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /Users/adriannava/Documents/Cursando/LyricGenerator/Documentacion/Manual de Usuario/2020-B002-Manual-Usuario.out
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
