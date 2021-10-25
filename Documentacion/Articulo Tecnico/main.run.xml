@@ -53,12 +53,12 @@
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>standard.bbx</file>
       <file>numeric.bbx</file>
+      <file>standard.bbx</file>
       <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
-      <file>brazilian.lbx</file>
       <file>brazil.lbx</file>
+      <file>brazilian.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="1">

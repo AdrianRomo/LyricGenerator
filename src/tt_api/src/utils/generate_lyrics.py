@@ -1,4 +1,5 @@
 from ..utils.constants import MODEL_PATH
+from random import randint
 # Keras
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -6,6 +7,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+
+# Aqui se carga el modelo y se vuelve a tokenizar para cargar
+# las posibles respuestas del modelo
 print(MODEL_PATH)
 df = pd.read_csv(MODEL_PATH + '/pop_model.csv')
 model = load_model(MODEL_PATH + '/song_lyrics_generator.h5')
@@ -60,3 +64,17 @@ class GenerateLyric(object):
                         break
                 self.seed_text += " " + output_word
             return self.seed_text, self.percentage
+
+def main():
+    inp = input()
+    response = {}
+    lyrics = GenerateLyric(inp)
+    response['chorus'] = lyrics.chorus(randint(10,15))
+    response['first_verse'] = lyrics.complete_this_song(randint(10,15))
+    response['generated_lyric'], response['percentage'] = lyrics.complete_this_song(randint(10,15))
+    response['end_verse'] = lyrics.complete_this_song(randint(10,15))
+    print(response)
+
+if __name__ == '__main__':
+    main()
+    
