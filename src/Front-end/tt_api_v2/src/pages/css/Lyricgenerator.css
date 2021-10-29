@@ -1,0 +1,350 @@
+.hero-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+  .contentOne{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+  .contentTwo, .contentThree {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    opacity: 0%;
+    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+  .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
+    color: #fff;
+    /*font-size: 100px;*/
+    margin-top: -100px;
+  }
+  .hero-container > p, .contentOne > p, .contentOne-hide > p, .contentOne-show > p {
+    margin-top: 8px;
+    color: #fff;
+    /*font-size: 32px;*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+
+  .contentTwoThree-show > h1, .contentTwoThree-hide > h1 {
+    color: #fff;
+    /*font-size: 50px;*/
+    text-align: center;
+    margin-top: -50px;
+  }
+
+  .contentTwoThree-show > h5, .contentTwoThree-hide > h5, .container > h5, form > h6 {
+    color: #fff;
+    /*font-size: 30px;*/
+  }
+
+  .contentTwoThree-show > p, .contentTwoThree-hide > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #secondDiv.input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 225px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+  #secondDiv.input[type=text]:focus {
+    border: 3px solid #555;
+  }
+
+  .hero-btns {
+    margin-top: 32px;
+    -webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
+    font-size: 16px;
+    background: #009bf7;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 2px;
+    text-align: center;  
+  }
+  
+  #secondDiv > button, #thirdDiv > button{
+    margin: 8px 89px;
+  }
+
+  .hero-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play {
+    margin-left: 4px;
+  }
+
+  .fade-in-image {
+    opacity: 100%;
+  }
+  
+  .fade-in-image-show {
+    opacity:100%;
+    transition:opacity 2s
+  }
+
+  .fade-in-image-hide {
+    opacity:0%;
+    transition:opacity 2s
+  }
+
+  .fade-in-div-show {
+    opacity:100%;
+    transition:opacity 2s
+  }
+
+  .fade-in-div-hide {
+    opacity:0%;
+    transition:opacity 2s
+  }
+
+  .fade-in-image:hover {
+    opacity:0%;
+    transition:opacity 4s
+  }
+
+  .contentOne-hide{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 2s;
+  }
+
+  .contentOne-show{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    opacity: 100%;
+    pointer-events: inherit;
+    transition: opacity 2s;
+  }
+
+  .contentTwoThree-show {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    opacity: 100%;
+    pointer-events: inherit;
+    transition: opacity 2s;
+  }
+
+  .contentTwoThree-hide {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 2s;
+  }
+
+  .contentTwo-show-translation {
+    margin: 16px;
+    transform: translateX(0px);
+    transition: transform 2s;
+  }
+
+  .contentTwo-hide-translation {
+    margin: 16px;
+    transform: translateX(-1500px);
+    transition: transform 2s;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
+      /*font-size: 70px;*/
+      margin-top: -150px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
+
+      /*font-size: 50px;*/
+      margin-top: -100px;
+      text-align: center;
+    }
+  
+    .hero-container > p, .contentOne > p, .contentOne-hide > p, .contentOne-show > p {
+      /*font-size: 30px;   */
+      text-align: center;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+    #secondDiv.input[type=text] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 25px;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
+    }
+    
+    #secondDiv.input[type=text]:focus {
+      border: 3px solid #555;
+    }
+
+    .contentTwoThree-show > h1, .contentTwoThree-hide > h1 {
+      color: #fff;
+      /*font-size: 35px;*/
+      text-align: center;
+      margin-top: -50px;
+    }
+    .contentTwoThree-show > p, .contentTwoThree-hide > p {
+      margin-top: 8px;
+      color: #fff;
+      /*font-size: 15px;*/
+      text-align: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    }
+
+    .contentTwoThree-show > button, .contentTwoThree-hide > button{
+      margin: 8px 10px;
+      padding: 8px 0px;
+      font-size: 17px;
+    }
+
+    .contentTwoThree-show > .dslider, .contentTwoThree-hide > .dslider{
+      margin: 8px -100px;
+    }
+  }
+
+  #breathing-button {
+    width: 180px;
+    padding: 12px;
+    margin: 50px auto;
+    border: 1px solid #3cc8b4;
+    -webkit-animation: breathing 5s ease-out infinite normal;
+    animation: breathing 5s ease-out infinite normal;
+    font-family:'Lantinghei SC';
+    font-size: 16px;
+    background: #3cc8b4;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 2px;
+    text-align: center;    
+    }
+
+  @-webkit-keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    25% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    100% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  
+  @keyframes breathing {
+    0% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    25% {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  
+    60% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    100% {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+
+  .contentThree span{
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker{
+    50%{
+      opacity: 0;
+    }
+  }
