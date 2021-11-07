@@ -1,7 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import '../css/Lyricgenerator.css';
 import { Button } from '../../components/Button.js';
 import DiscreteSlider from '../../components/Slider.js';
+import { Canvas } from './Canvas';
+import { Writing } from './Writing';
 
 var quoteArray;
 var textPosition = 0; 
@@ -25,15 +28,46 @@ function sendWord(engword, percentval) {
         var wholeAnswer= JSON.stringify(json)
         console.log('Se recibe: ' + wholeAnswer);
         var resp= JSON.parse(wholeAnswer);
-        console.log('Respuesta: ' + resp.generated_lyric);
-        
-        document.querySelector("#myTextReceived").innerHTML= '';
-        rebooted= false;
-        quoteArray= [resp.generated_lyric];
-        textPosition= 0;
-        myTypewriter();
 
-        document.getElementById('MyTestButton').disabled= false;
+        if(resp.message !== null ){
+            console.log('Respuesta: ' + resp.generated_lyric);
+            
+            document.querySelector("#myTextReceived").innerHTML= '';
+
+
+            let ele = document.getElementById('lyricContainer');
+            var one = document.createElement('div');;
+            ReactDOM.render(<Writing lyricTitle="Verso 1" lyricParagraphId="verso_1" />, one);
+            ele.innerHTML += one.innerText;
+            ReactDOM.render(<Writing lyricTitle="Coro" lyricParagraphId="coro_1" />, one);
+            ele.innerHTML += one.innerText;
+            ReactDOM.render(<Writing lyricTitle="Verso 2" lyricParagraphId="verso_2" />, one);
+            ele.innerHTML += one.innerText;
+            ReactDOM.render(<Writing lyricTitle="Coro" lyricParagraphId="coro_2" />, one);
+            ele.innerHTML += one.innerText;
+
+            console.log('Texto: ' + ele.innerText);
+            console.log('HTML: ' + ele.innerHTML);
+            ele.style.display= 'contents';
+            
+            //Esto es importante
+            rebooted= false;
+            quoteArray= [resp.first_verse[0], resp.chorus[0], resp.end_verse[0]];
+            textPosition= 0;
+            myTypewriter('verso_1', 0, 0);
+            myTypewriter('coro_1', 1, 0);
+            myTypewriter('verso_2', 2, 0);
+            myTypewriter('coro_2', 1, 0);
+            /*
+            */
+            
+            document.getElementById('downloadButton').disabled= false;
+            document.getElementById('regenerateButton').disabled= false;
+            document.getElementById('MyTestButton').disabled= false;
+            ReactDOM.unmountComponentAtNode(one);
+        }else
+            alert('Oops, ocurrió un error');
+
     }).catch(error => {
         console.log(error)
     })
@@ -44,12 +78,14 @@ function updateInput(e){
     e.target.value = e.target.value.replace(/\s/g, "");
 }
 
-function myTypewriter(){
-    document.getElementById("myTextReceived").innerHTML = quoteArray[0].substring(0, textPosition) + '<span>\u25AE</span>';
+function myTypewriter(receivedId, arrayPosition, textPosition){
+    document.getElementById(receivedId).innerHTML = quoteArray[arrayPosition].substring(0, textPosition) + '<span>\u25AE</span>';
   
-    if((textPosition++ < quoteArray[0].length) && !rebooted){
-        console.log('Posicion: ' + textPosition);
-        setTimeout(myTypewriter, speed);
+    if((textPosition++ < quoteArray[arrayPosition].length) && !rebooted){
+        console.log('Se lleva= ' + document.getElementById(receivedId).innerHTML);
+        setTimeout(myTypewriter.bind(null, receivedId, arrayPosition, textPosition), speed);
+    }else{
+        document.getElementById(receivedId).innerHTML = quoteArray[arrayPosition].substring(0, textPosition);
     }
 }
 
@@ -67,19 +103,24 @@ function download(filename, text) {
 }
 
 function Lyricgenerator() {
+
     return (
         <div className='hero-container'>
             <div id='firstDiv' className='contentOne'>
                 <h1>Lyric Generator</h1>
                 <p>Lyrics generated using Artificial Intelligence</p>
+                <Canvas className='breathable-button' width={120} height={120} onClick={() => { 
+                    console.log('Me hicieron click :3 ... ');
+                    document.getElementsByClassName('site-section')[0].style.display= 'none';
+                    document.getElementsByClassName('site-section')[1].style.display= 'none';
+                    document.getElementsByClassName('site-section')[2].style.display= 'none';
+                    document.getElementsByClassName('site-section')[3].style.display= 'none';
+                    document.getElementsByClassName('site-blocks-cover overlay inner-page-cover subscribe')[0].style.display='none';
+                    document.getElementsByClassName('bg-primary')[0].style.display= 'none';
+                    document.getElementById('secondDiv').className= 'contentTwoThree-show';
+                    document.getElementById('firstDiv').className= 'contentOne-hide';
+                }}/>
                 <div className="hero-btns">
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => { 
-                            console.log('Me hicieron click :3 ... ');
-                            document.getElementById('secondDiv').className= 'contentTwoThree-show';
-                            document.getElementById('firstDiv').className= 'contentOne-hide';
-                        }}>
-                        Generate your own song <i className="fas fa-play fa-xs" />
-                    </Button>
                 </div>
             </div>
             <div id='secondDiv' className='contentTwo'>
@@ -95,79 +136,66 @@ function Lyricgenerator() {
                             <div align='center' className='dslider'>          
                                 <DiscreteSlider/>
                             </div>
-                            <div className="input-group">
-                                <button className="btn btn-primary" type="button" id="button-addon2" onClick={() => { 
+                            <div className="centering">
+                                <Button buttonId='button-addon2' buttonClass='btn btn-primary' type="button" onClick={() => {
                                     document.getElementById('secondDiv').className= 'contentTwoThree-hide';
                                     document.getElementById('firstDiv').className= 'contentOne-show';
-                                    }}>Home</button>
-                            </div>
-                            <div className="input-group">
-                                <button className="btn btn-primary" type="button" id="button-addon2" onClick={() => { 
+                                    document.getElementsByClassName('site-section')[0].style.display= 'inline';
+                                    document.getElementsByClassName('site-section')[1].style.display= 'inline';
+                                    document.getElementsByClassName('site-section')[2].style.display= 'inline';
+                                    document.getElementsByClassName('site-section')[3].style.display= 'inline';
+                                    document.getElementsByClassName('site-blocks-cover overlay inner-page-cover subscribe')[0].style.display='block';
+                                    document.getElementsByClassName('bg-primary')[0].style.display= 'block';
+                                }}>
+                                    Home
+                                </Button>
+                                <Button buttonId='button-addon2' buttonClass='btn btn-primary' type="button" onClick={() => {
                                     document.getElementById('thirdDiv').className= 'contentTwoThree-show';
                                     document.getElementById('secondDiv').className= 'contentTwoThree-hide';
                                     document.getElementById('MyTestButton').disabled= true;
+                                    document.getElementById('downloadButton').disabled= true;
+                                    document.getElementById('regenerateButton').disabled= true;
                                     quoteArray= ["Nuestros gatos compositores estan trabajando..."];
                                     textPosition= 0;
-                                    myTypewriter();
+                                    myTypewriter('myTextReceived', 0, 0);
                                     sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
-                                    }}>Generar Canción <i className="fas fa-play fa-xs" /></button>
+                                }}>
+                                    Generar Canción <i className="fas fa-play fa-xs" />
+                                </Button>
                             </div>
                         </form>
                     </div>
                 </div>
-                {/*<h1>Genera tu letra de canción</h1>
-                <h5>Introduce una palabra en idioma inglés, así como escoge un porcentaje de rimas para poder generar tu canción.</h5>
-                <p>Palabra en inglés:</p>
-                <input className='generatesong-input' id='english-word' type='text' placeholder='Love' onChange={(e)=> updateInput(e)} required/>
-                <p>Porcentaje de rimas dentro de la canción: </p> 
-                <div align='center' className='dslider'>          
-                    <DiscreteSlider/>
-                </div>
-                <div align='center'>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
-                        document.getElementById('secondDiv').className= 'contentTwoThree-hide';
-                        document.getElementById('firstDiv').className= 'contentOne-show';
-                        }}>
-                        Home
-                    </Button>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium' onClick={() => { 
-                        document.getElementById('thirdDiv').className= 'contentTwoThree-show';
-                        document.getElementById('secondDiv').className= 'contentTwoThree-hide';
-                        document.getElementById('MyTestButton').disabled= true;
-                        quoteArray= ["Nuestros gatos compositores estan trabajando..."];
-                        textPosition= 0;
-                        myTypewriter();
-                        sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
-                        }}>
-                        Generar Canción <i className="fas fa-play fa-xs" />
-                    </Button>
-                    </div>*/}
             </div>
             <div id='thirdDiv' className='contentThree'>
                 <h1>Lyric generada</h1>
                 <p id='myTextReceived'></p>
-                <div align='center'>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
-                        var textToBeDownloaded= document.querySelector("#myTextReceived").innerHTML;
+                <div id='lyricContainer'></div>
+                <div className= 'centering'>
+                    <Button buttonId='downloadButton' buttonClass='btn btn-primary' type="button" onClick={() => {
+                        var textToBeDownloaded= document.querySelector("#lyricContainer").innerText;
                         textToBeDownloaded= textToBeDownloaded.replace('<span>\u25AE</span>','');
 
                         download('Lyric.txt',textToBeDownloaded);
                     }}>
                         Download
                     </Button>
-                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
+                    <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
                         quoteArray= ["Nuestros gatos compositores estan trabajando..."];
                         textPosition= 0;
                         rebooted= false;
-                        myTypewriter();
+                        myTypewriter('myTextReceived', 0, 0);
                         sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
                     }}>
                         Regenerate Lyrics
                     </Button>
-                    <Button buttonId='MyTestButton' className='btns' buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => {
+                    <Button buttonId='MyTestButton' buttonClass='btn btn-primary' type="button" onClick={() => {
 
                         document.getElementById('thirdDiv').className= 'contentTwoThree-hide';
                         document.getElementById('secondDiv').className= 'contentTwoThree-show';
+
+                        let ele = document.getElementById('lyricContainer');
+                        ele.innerHTML = "";
                         }}>
                         Start Again
                     </Button>

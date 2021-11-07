@@ -32,6 +32,25 @@
     object-fit: contain;
   }
 
+  .breathable-button {
+    margin-top: 32px;
+    -webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .centering > button {
+    width: fit-content;  
+    display: inline-block;
+    vertical-align: top; 
+    text-align:center;
+    margin:2%;   
+  }
+
+  .centering {
+    width: 100%;
+  }
+
   .hero-container > h1, .contentOne > h1, .contentOne-hide > h1, .contentOne-show > h1 {
     color: #fff;
     /*font-size: 100px;*/
@@ -60,12 +79,22 @@
   .contentTwoThree-show > p, .contentTwoThree-hide > p {
     margin-top: 8px;
     color: #fff;
-    font-size: 20px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   }
   
+  #firstDiv {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
   #secondDiv.input[type=text] {
     width: 30%;
     padding: 12px 20px;
@@ -86,7 +115,6 @@
     -webkit-animation: breathing 4s ease-out infinite normal;
     animation: breathing 4s ease-out infinite normal;
     font-size: 16px;
-    background: #009bf7;
     color: #fff;
     -webkit-font-smoothing: antialiased;
     border-radius: 2px;
@@ -211,6 +239,31 @@
       justify-content: center;
       align-items: center;
     }
+
+  }
+
+  @media screen and (max-width: 4000px) {
+    .hero-container  p {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .hero-container  p {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-container  p {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero-container  p {
+      font-size: 0.7rem;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -231,9 +284,6 @@
       text-decoration: none;
     }
   
-    .btn {
-      width: 100%;
-    }
     #secondDiv.input[type=text] {
       width: 70%;
       padding: 12px 20px;
@@ -267,7 +317,7 @@
     .contentTwoThree-show > button, .contentTwoThree-hide > button{
       margin: 8px 10px;
       padding: 8px 0px;
-      font-size: 17px;
+      /*font-size: 17px;*/
     }
 
     .contentTwoThree-show > .dslider, .contentTwoThree-hide > .dslider{
@@ -339,8 +389,13 @@
     }
   }
 
-  .contentThree span{
-    animation: blinker 1s linear infinite;
+  #thirdDiv span{
+    animation: blinker 0.5s linear infinite;
+  }
+
+  #lyricContainer {
+    grid-area: inner-content;
+    overflow-y: scroll;
   }
   
   @keyframes blinker{

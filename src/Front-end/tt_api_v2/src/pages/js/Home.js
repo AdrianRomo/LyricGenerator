@@ -7,7 +7,6 @@ import Footer from "../../components/Footer";
 function Home() {
     return (
         <>
-            <Navbar />
             <div className="site-mobile-menu">
                 <div className="site-mobile-menu-header">
                     <div className="site-mobile-menu-close mt-3">
@@ -240,7 +239,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }
