@@ -627,7 +627,7 @@
 	\end{itemize}
 	A continuación, procedemos a importar el conjunto de datos previamente trabajado y limpiado, pero en esta ocasión apoyándonos de la librería de pandas, solo nos vamos a quedar con letra de estas canciones, ya que es la información que nos interesa trabajar y la cual vamos a estar manipulando.\\\\
 	Al usar Kaggle debemos tener en cuenta sus limitantes, en este caso se cuenta solamente con 16Gb de RAM, un disco de 73Gb y una GPU de 13GB para el procesamiento de nuestro conjunto de datos, por eso debemos limitar nuestro modelo, en lugar de utilizar todos los datos (28441), vamos a trabajar solo con 700 letras de canciones por el momento.\\\\
-	Utilizando estas 700 lyrics, se decidió obtener información de ellas, siendo más específicos, estadísticas sobre el numero de palabras en cada canción, esto con el fin de determinar la frecuencia de distribución del número de palabras de cada texto y para tener una idea del promedio de palabras, esto con el fin de tenerlo en cuenta al momento de realizar la generación de texto.
+	Utilizando estas 700 lyrics, se decidió obtener información de ellas, siendo más específicos, estadísticas sobre el número de palabras en cada canción, esto con el fin de determinar la frecuencia de distribución del número de palabras de cada texto y para tener una idea del promedio de palabras, esto con el fin de tenerlo en cuenta al momento de realizar la generación de texto.
 	\begin{figure}[H]
 		\includegraphics[width=5cm]{./Imagenes/Modelo/estadistica.png}
 		\centering 
@@ -784,7 +784,68 @@
 	\end{center}
 	En este código utilizando la palabra y el porcentaje introducidos por el usuario son enviados al modelo para ser procesados generando así un texto, este procedimiento se realiza en la función generate\_lyric, e; texto generado va a ser regresado a nuestra api para mandarlo a la aplicación web en React para posteriormente mostrarla en el navegador web del usuario.
 	\newpage
-	\section{Conexión entre el modelo y la aplicación web}
+	\section{Desplegando componentes}
+	
+	\subsection{Despliegue del back-end}
+	
+	\subsection{Despliegue de la página web}
+	
+	Para el despliegue de la pagina web nos apoyamos de la plataforma Vercel, la cual permite que los desarrolladores puedan desplegar sus paginas de manera rápida, así como poder actualizarla y escalarla de manera sencilla, además permite hacer despliegues de proyectos que se encuentran dentro de una cuenta de Github\\\\
+	Lo primero que debemos hacer para poder trabajar con la línea de comandos de Vercel es instalarlo, para ello debemos recurrir a nuestra terminal e instarlo usando el comando npm i -g vercel o yarn global add vercel.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Instalacion.png}
+		\centering 
+		\caption{Instalando CLI de Vercel}
+	\end{figure}
+	Una vez instalado, debemos abrir la carpeta de nuestro proyecto a desplegar, y en una terminal dentro de esa carpeta solo es necesario escribir vercel para abrir el CLI de Vercel el cual nos preguntara si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, a lo cual damos una respuesta afirmativa, posteriormente nos pide quien lo va a desplegar, para ello usamos una cuenta creada en esta plataforma o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Acciones.png}
+		\centering 
+		\caption{Indicando acciones para el despliegue}
+	\end{figure}
+	Después de dar las indicaciones anteriores el CLI de vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React, para por último preguntar si se quiere cambiar la configuración del trabajo encontrado, en este caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Deteccion.png}
+		\centering 
+		\caption{Deteccion del tipo de proyecto a desplegar}
+	\end{figure}
+	Vercel comienza a desplegar la aplicación web y nos da un enlace en el cual podemos ver como se encuentra el despliegue, si se presentara algún problema, en la terminal nos indicara cual es.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Desplegando.png}
+		\centering 
+		\caption{Desplegando el proyecto}
+	\end{figure}
+	Al momento de desplegar la aplicación nos marca un error.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Error.png}
+		\centering 
+		\caption{Desplegando el proyecto}
+	\end{figure}
+	Este error está relacionado con unas librerías opcionales localizadas dentro de la careta node\_modules de nuestro proyecto, vercel no reconoce que estas librerías son opcionales, para poder hacer el despliegue y que no nos marque estas librerías opcionales como error debemos entrar a la parte de configuraciones de nuestro proyecto.	
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Ajustes.jpeg}
+		\centering 
+		\caption{Configuración del proyecto desplegado}
+	\end{figure}
+	Luego en la parte de variables de entorno y en esta sección agregar la variable CI con un valor de false
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Varaiblesentorno.jpeg}
+		\centering 
+		\caption{Varaible de entorno}
+	\end{figure}
+	Después de realizar esto volvemos a nuestra terminal, volvemos a escribir vercel y automáticamente vuelve a realizar el despliegue de la aplicación web, de esta misma forma solo escribiendo vercel en la terminal la actualización de la página desplegada ante algún cambio en el código.\\\\
+	Una vez completado el despliegue, se nos genera un enlace con el cual se puede acceder a la aplicación web ya desplegada desde cualquier dispositivo.
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Desplegada.png}
+		\centering 
+		\caption{Aplicación web desplegada}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{./Imagenes/Despliegue/Paginaweb.png}
+		\centering 
+		\caption{Accediendo a la aplicación web desplegada}
+	\end{figure}
+	En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido.
 	\newpage
 	\begin{thebibliography}{20}
 		\bibitem{refQuesPython} 
