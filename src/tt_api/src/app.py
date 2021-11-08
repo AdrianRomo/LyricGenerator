@@ -9,14 +9,17 @@ from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec.extension import FlaskApiSpec
 from flask_cors import CORS
 from random import randint
+from werkzeug.exceptions import HTTPException
 # Own Libraries
 from .utils.schemas import HealthSchema, GetLyrics, PostLyrics
 from .utils.generate_lyrics import GenerateLyric
 from .utils.constants import FLASK_ENV, VERSION, PROJECT
+from .utils.load_pop_model import ModelGeneration
 
 app = Flask(__name__)
 api = Api(app)  # Flask restful wraps Flask app around it.
 cors = CORS(app)
+model_generation = ModelGeneration()
 
 app.config.update({
     'APISPEC_SPEC': APISpec(
@@ -59,12 +62,12 @@ class Lyrics(MethodResource, Resource):
         Post method represents a POST API method
         """
         response = {}
-        lyrics = GenerateLyric(kwargs)
-        response['chorus'] = lyrics.chorus(randint(10,15))
-        response['first_verse'] = lyrics.complete_this_song(randint(10,15))
-        response['generated_lyric'], response['percentage'] = lyrics.complete_this_song(randint(10,15))
-        response['end_verse'] = lyrics.complete_this_song(randint(10,15))
-        
+        lyrics = GenerateLyric(model_generation, kwargs)
+        response['title'] = lyrics.complete_this_song(randint(2,5))
+        response['first_verse'] = lyrics.complete_this_song(randint(40,60))
+        response['chorus'] = lyrics.chorus(randint(30,50))    
+        for medium in range(2,4): 
+            response['verse_'+str(medium)] = lyrics.complete_this_song(randint(40,60))
         return jsonify(response)
 
     @doc(description='Health-check to see the status of the API.', tags=['Lyric Generator Status'])
@@ -91,6 +94,12 @@ docs.register(Lyrics)
 def page_not_found(e):
     return jsonify({"error": "resource not found", "code": "404"}), 404
 
+@app.errorhandler(Exception)
+def handle_error(e):
+    code = 500
+    if isinstance(e, HTTPException):
+        code = e.code
+    return jsonify(error=str(e)), code
 # We run the Flask application and, if it is running in a development environment,
 # we run the application in debug mode.
 # to run only ```FLASK_ENV=test FLASK_APP=src.app python -m flask run --host=0.0.0.0 --port=80```
