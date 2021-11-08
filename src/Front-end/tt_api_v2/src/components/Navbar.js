@@ -7,7 +7,9 @@ function Navbar() {
           <div className="container py-1">
             <div className="row align-items-center">
               <div className="col-8 col-md-8 col-lg-4">
-                <h1 className="mb-0"><a href="index.html" className="text-white h2 mb-0"><strong>Neural Lyrics<span className="text-primary">.</span></strong></a></h1>
+                <h1 className="mb-0">
+                  <a href="/" className="text-white h2 mb-0"><strong>Neural Lyrics<span className="text-primary">.</span></strong></a>
+                </h1>
               </div>
               <div className="col-4 col-md-4 col-lg-8">
                 <nav className="site-navigation text-right text-md-right" role="navigation">
@@ -18,7 +20,7 @@ function Navbar() {
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="#">Developers</a></li>
+                    <li><a href="developers.html">Developers</a></li>
                   </ul>
                 </nav>
               </div>

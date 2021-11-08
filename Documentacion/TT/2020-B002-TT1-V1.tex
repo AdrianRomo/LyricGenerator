@@ -1398,7 +1398,7 @@ natural y redes neuronales}\\
 			\end{tabular}
 		\end{table}
 	   	\newpage
-	   	\section{Algoritmos utilizados} % Porque elegí esas soluciones
+	   	\section{Algoritmos analizados} % Porque elegí esas soluciones
 	   	La Inteligencia Artificial es un campo emergente donde se desarrollan nuevas aplicaciones de innovación continuamente.
 	   	Para este generador de letras musicales será necesario implementar diferentes estrategias para poder evaluar cuál es la mejor opción, para ello, se utilizarán tres recursos importantes para ver la evolución de las pruebas y poder evaluar el resultado óptimo a nuestras posibilidades para poder implementarlo en este proyecto.
 	   	
@@ -1444,7 +1444,21 @@ natural y redes neuronales}\\
 	   	En conclusión, se optó por no utilizar cadenas de Markov debido a que en ocasiones las oraciones que genera, en realidad es texto entero reutilizado de las oraciones que se encuentran en el dataset, de igual forma llegaron a salir resultados utilizando la misma palabra en repetidas ocasiones, se tiene en cuenta que los usuarios objetivos este proyecto, se encontrarán en posición de buscar ideas nuevas para su proyecto, ideas que contengan un sentido y palabras acordes a lo que ellos buscan, es por ellos que seguimos probando con otros algoritmos, para ver las matemáticas detrás de este proceso, consulte la sección de Anexos \ref{prueba2}.\\\\
 	   	
 	   	\subsection{Pruebas con recurrent neural networks}
-	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales \cite{PruebaLSTM}, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el artículo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{pruebaslstm} se mostrará el notebook hecho en Jupyter para mostrar cada paso de la prueba junto con los resultados obtenidos.
+	   	Como segunda prueba, se recurrió a utilizar este tipo de redes neuronales \cite{PruebaLSTM}, y utilizando como optimizador adam\cite{adam} el cuál nos servirá para generar el modelo de la mejor forma de acuerdo con el artículo \cite{adam2}se han tenido resultados satisfactorios utilizando este tipo de redes neuronales. En la sección de anexos \ref{pruebaslstm} se mostrará el notebook hecho en Jupyter para mostrar cada paso de la prueba junto con todos los resultados obtenidos.
+	   	
+	   	A continuación mostramos algunos de los resultados obtenidos:
+	   	\begin{figure}[H]
+	   		\includegraphics[width=13cm]{./imagenes/Analisis/Lstm1.png}
+	   		\centering 
+	   		\caption{Texto generado utilizando LSTM y la oración en inglés "Love flowers"}
+	   	\end{figure}
+   	
+	   	\begin{figure}[H]
+	   		\includegraphics[width=13cm]{./imagenes/Analisis/Lstm2.png}
+	   		\centering 
+	   		\caption{Texto generado utilizando LSTM y la oración en inglés "It's a cruel and random world"}
+	   	\end{figure}
+	   	
 	   	\newpage
 	   	
 	   	\subsection{Pruebas con BERT}
@@ -1827,8 +1841,7 @@ natural y redes neuronales}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Arquitectura del sistema}
 		\subsection{Descripción de la arquitectura del sistema}
-		Para poder crear esta herramienta de apoyo para estudiantes o aficionados en el área musical con la creación de letras musicales, se propone crear un sistema basado en inteligencia artificial usando técnicas de procesamiento de lenguaje natural que pueda auxiliarlos y puedan lograr su meta propuesta.
-		
+		Para poder crear esta herramienta de apoyo para estudiantes o aficionados en el área musical con la creación de letras musicales, se propone crear un sistema basado en inteligencia artificial usando técnicas de procesamiento de lenguaje natural que pueda auxiliarlos y puedan lograr su meta propuesta.\\\\	
 		El sistema se compone de tres bloques los cuales se comunicarán vía red:
 		\begin{enumerate}
 			\item \textbf{Base de datos:} En este módulo se almacenan los datos de canciones, se trabajará especialmente con una tabla que contenga como principales campos:
@@ -1840,7 +1853,7 @@ natural y redes neuronales}\\
 				\item Idioma
 			\end{itemize}
 			Dicha base de datos se almacenará en un sistema especializado que se conecte a la nube para poder trabajar y almacenar estos datos sin mayor problema.
-			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese . Para la generación de dichas letras musicales, se utiliza un servicio en la nube para procesar la solicitud del usuario. 
+			\item \textbf{Modelado de la red neuronal:} Este bloque va ser el encargado de generar las letras musicales para cada usuario que ingrese. Para la generación de dichas letras musicales, se utilizará un servicio en la nube para procesar la solicitud del usuario. 
 			\item \textbf{Página Web}: Este primer bloque es el que se encuentra directamente enlazado con el usuario de nuestro sistema y al mismo tiempo con el servicio en la nube que aloja a las redes neuronales, el usuario utilizando su navegador podrá realizar peticiones al servicio en la web.
 		\end{enumerate}
 	
@@ -1851,11 +1864,10 @@ natural y redes neuronales}\\
 			\includegraphics[scale=.4]{./imagenes/Disenio/Arquitectura/general.png}
 			\caption{Diagrama general del sistema}
 		\end{figure}
-	Como se observa en la figura anterior, se tendrán tres procesos principales para lograr el objetivo final.\\\\
-	En primer instancia se tendrá que obtener la base de datos y por medio de extracción y transformación, se obtendrá el dataset deseado para poder generar el modelo. \\\\
-	Después de un proceso de limpieza de este dataset, se hará un entrenamiento del modelo en la nube para poder generar funciones utilizando este modelo para poder generar textos.
-	una vez teniendo esta aplicación funcional, se configurará el servidor web para que se pueda comunicar con el usuario final y con la aplicación que utiliza el modelo vía web, logrando así los objetivos.
-	\newpage
+		Como se observa en la figura anterior, se tendrán tres procesos principales para lograr el objetivo final.\\\\
+		En primer instancia se tendrá que obtener la base de datos y por medio de extracción y transformación, se obtendrá el dataset deseado para poder generar el modelo. \\\\
+		Después de un proceso de limpieza de este dataset, se hará un entrenamiento del modelo en la nube para poder generar funciones utilizando este modelo para poder generar textos.
+		una vez teniendo esta aplicación funcional, se configurará el servidor web para que se pueda comunicar con el usuario final y con la aplicación que utiliza el modelo vía web, logrando así los objetivos.
 	
 		\subsection{Diagrama caso de uso}
 		
@@ -1866,7 +1878,76 @@ natural y redes neuronales}\\
 			\centering 
 			\caption{Diagrama de caso de uso}
 		\end{figure}
-	\newpage
+		\newpage
+		\begin{table}[hbt!]\caption{Caso de uso 1}% title of Table
+			\centering % used for centering table
+			\resizebox{13.5cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Introduce palabra en inglés\end{tabular} \\% inserting body of the table 
+					\hline				                     
+					\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web proporciona una palabra\\ en el idioma inglés para con ella poder generar un texto \end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Caso de uso 1}% is used to refer this table in the text
+			}
+		\end{table}
+		\begin{table}[hbt!]\caption{Caso de uso 2}% title of Table
+			\centering % used for centering table
+			\resizebox{13.5cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Descargar texto generado\end{tabular} \\% inserting body of the table 
+					\hline				                     
+					\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web tiene la posibilidad\\ de descargar el texto generado por el modelo  \end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Caso de uso 2}% is used to refer this table in the text
+			}
+		\end{table}	
+		\begin{table}[hbt!]\caption{Caso de uso 3}% title of Table
+			\centering % used for centering table
+			\resizebox{13.5cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Solicitar nueva letra\end{tabular} \\% inserting body of the table 
+					\hline				                     
+					\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Al usuario dentro de la aplicación web se le da posibilidad de volver\\ a generar otra letra musical usando los mismos parámetros que proporcionó\\ o utilizando unos nuevos\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Caso de uso 3}% is used to refer this table in the text
+			}
+		\end{table}	
+		\begin{table}[hbt!]\caption{Caso de uso 4}% title of Table
+			\centering % used for centering table
+			\resizebox{13.5cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Genera letra de canción\end{tabular} \\% inserting body of the table 
+					\hline				                     
+					\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Servidor\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}El servidor envia el texto generado por el modelo a la aplicación web,\\ la cual se encarga de mostrarla al usuario final \end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Caso de uso41}% is used to refer this table in the text
+			}
+		\end{table}
+		\newpage
 		\subsection{Historias de usuario}
 		
 		\begin{table}[hbt!]\caption{Historia de usuario 1}% title of Table
@@ -1903,6 +1984,7 @@ natural y redes neuronales}\\
 			}
 		\end{table}
 	
+		\begin{comment}		
 		\begin{table}[hbt!]\caption{Historia de usuario 3}% title of Table
 			\centering % used for centering table
 			\resizebox{15cm}{!} {
@@ -1918,7 +2000,25 @@ natural y redes neuronales}\\
 					\hline
 				\end{tabular}\label{table:Historia de usuario 3}% is used to refer this table in the text
 			}
-		\end{table}	
+		\end{table}			
+		\end{comment}
+	
+		\begin{table}[hbt!]\caption{Historia de usuario 3}% title of Table
+			\centering % used for centering table
+			\resizebox{15cm}{!} {
+				\begin{tabular}{|c|c|}% centered columns (3 columns)
+					\hline                        %inserts double horizontal lines
+					\multicolumn{2}{|c|}{Historia de usuario 3}\\% inserts table %heading
+					\hline                  % inserts single horizontal line
+					\begin{tabular}[c]{@{}l@{}}Nombre: Generar otra letra de canción con los mismos parámetros\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
+					\hline
+					\begin{tabular}[c]{@{}l@{}}Descripción: Como usuario, me gustaría generar otra\\ letra de canción con los mismo parámetros y\\ palabra que ya había introducido.\end{tabular}
+					& \begin{tabular}[c]{@{}l@{}}Validación: Brindar una opción al usuario\\ que una vez generada y desplegada la letra de\\ la canción pueda generar otra usando los\\ mismo parámetros que previamente había \\introducido.\end{tabular} \\
+					\hline
+				\end{tabular}\label{table:Historia de usuario 3}% is used to refer this table in the text
+			}
+		\end{table}
 	
 		\begin{table}[hbt!]\caption{Historia de usuario 4}% title of Table
 			\centering % used for centering table
@@ -1927,38 +2027,21 @@ natural y redes neuronales}\\
 					\hline                        %inserts double horizontal lines
 					\multicolumn{2}{|c|}{Historia de usuario 4}\\% inserts table %heading
 					\hline                  % inserts single horizontal line
-					\begin{tabular}[c]{@{}l@{}}Nombre: Generar otra letra de canción con los mismos parámetros\end{tabular}
-					& \begin{tabular}[c]{@{}l@{}}Usuario: Visitante\end{tabular} \\% inserting body of the table 
-					\hline
-					\begin{tabular}[c]{@{}l@{}}Descripción: Como usuario, me gustaría generar otra\\ letra de canción con los mismo parámetros y\\ palabra que ya había introducido.\end{tabular}
-					& \begin{tabular}[c]{@{}l@{}}Validación: Brindar una opción al usuario\\ que una vez generada y desplegada la letra de\\ la canción pueda generar otra usando los\\ mismo parámetros que previamente había \\introducido.\end{tabular} \\
-					\hline
-				\end{tabular}\label{table:Historia de usuario 4}% is used to refer this table in the text
-			}
-		\end{table}
-	
-		\begin{table}[hbt!]\caption{Historia de usuario 5}% title of Table
-			\centering % used for centering table
-			\resizebox{15cm}{!} {
-				\begin{tabular}{|c|c|}% centered columns (3 columns)
-					\hline                        %inserts double horizontal lines
-					\multicolumn{2}{|c|}{Historia de usuario 5}\\% inserts table %heading
-					\hline                  % inserts single horizontal line
 					\begin{tabular}[c]{@{}l@{}}Nombre: Validación de la palabra introducida.\end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Usuario: Sistema\end{tabular} \\% inserting body of the table 
 					\hline
 					\begin{tabular}[c]{@{}l@{}}Descripción: La página web validará la palabra\\ proporcionada por el usuario para\\ con ella hacer la petición al servidor\\ y generar una letra de canción relacionada a esta. \end{tabular}
 					& \begin{tabular}[c]{@{}l@{}}Validación: Con ayuda del modelo y la palabra\\ introducida y procesada por la página web\\ se genera y despliega la letra generada.\end{tabular} \\
 					\hline
-				\end{tabular}\label{table:Historia de usuario 5}% is used to refer this table in the text
+				\end{tabular}\label{table:Historia de usuario 4}% is used to refer this table in the text
 			}
 		\end{table}
-		\begin{table}[hbt!]\caption{Historia de usuario 6}% title of Table
+		\begin{table}[hbt!]\caption{Historia de usuario 5}% title of Table
 		\centering % used for centering table
 		\resizebox{15cm}{!} {
 			\begin{tabular}{|c|c|}% centered columns (3 columns)
 				\hline                        %inserts double horizontal lines
-				\multicolumn{2}{|c|}{Historia de usuario 6}\\% inserts table %heading
+				\multicolumn{2}{|c|}{Historia de usuario 5}\\% inserts table %heading
 				\hline                  % inserts single horizontal line
 				\begin{tabular}[c]{@{}l@{}}Nombre: Limpiar base de batos.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
@@ -1966,15 +2049,15 @@ natural y redes neuronales}\\
 				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero una base de datos\\sin caracteres especiales\\ o palabras repetidas.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Validación: Con ayuda de un script\\ para quitar palabras innecesarias\\y caracteres inválidos\end{tabular} \\
 				\hline
-			\end{tabular}\label{table:Historia de usuario 6}% is used to refer this table in the text
+			\end{tabular}\label{table:Historia de usuario 5}% is used to refer this table in the text
 		}
 	\end{table}
-		\begin{table}[hbt!]\caption{Historia de usuario 7}% title of Table
+		\begin{table}[hbt!]\caption{Historia de usuario 6}% title of Table
 	\centering % used for centering table
 	\resizebox{15cm}{!} {
 		\begin{tabular}{|c|c|}% centered columns (3 columns)
 			\hline                        %inserts double horizontal lines
-			\multicolumn{2}{|c|}{Historia de usuario 7}\\% inserts table %heading
+			\multicolumn{2}{|c|}{Historia de usuario 6}\\% inserts table %heading
 			\hline                  % inserts single horizontal line
 			\begin{tabular}[c]{@{}l@{}}Nombre: Pre-procesar la base de datos.\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
@@ -1982,15 +2065,15 @@ natural y redes neuronales}\\
 			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar el modelo\\solo con los datos necesarios\\ para optimizar los tiempos de entrenamiento.\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Validación: Con un script\\ para tokenizar y hacer pre-padding en\\ la base de datos\end{tabular} \\
 			\hline
-		\end{tabular}\label{table:Historia de usuario 7}% is used to refer this table in the text
+		\end{tabular}\label{table:Historia de usuario 6}% is used to refer this table in the text
 	}
 		\end{table}
-				\begin{table}[hbt!]\caption{Historia de usuario 8}% title of Table
+				\begin{table}[hbt!]\caption{Historia de usuario 7}% title of Table
 		\centering % used for centering table
 		\resizebox{15cm}{!} {
 			\begin{tabular}{|c|c|}% centered columns (3 columns)
 				\hline                        %inserts double horizontal lines
-				\multicolumn{2}{|c|}{Historia de usuario 8}\\% inserts table %heading
+				\multicolumn{2}{|c|}{Historia de usuario 7}\\% inserts table %heading
 				\hline                  % inserts single horizontal line
 				\begin{tabular}[c]{@{}l@{}}Nombre: Subir Base de Datos a la nube.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
@@ -1998,15 +2081,15 @@ natural y redes neuronales}\\
 				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar el modelo\\con los datos necesarios\\ en la nube para optimizar espacio local.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Validación: Utilizando herramientas\\ NOSQL\\para subir la base de datos y esta no ocupe espacio local\end{tabular} \\
 				\hline
-			\end{tabular}\label{table:Historia de usuario 8}% is used to refer this table in the text
+			\end{tabular}\label{table:Historia de usuario 7}% is used to refer this table in the text
 		}
 	\end{table}
-			\begin{table}[hbt!]\caption{Historia de usuario 9}% title of Table
+			\begin{table}[hbt!]\caption{Historia de usuario 8}% title of Table
 		\centering % used for centering table
 		\resizebox{15cm}{!} {
 			\begin{tabular}{|c|c|}% centered columns (3 columns)
 				\hline                        %inserts double horizontal lines
-				\multicolumn{2}{|c|}{Historia de usuario 9}\\% inserts table %heading
+				\multicolumn{2}{|c|}{Historia de usuario 8}\\% inserts table %heading
 				\hline                  % inserts single horizontal line
 				\begin{tabular}[c]{@{}l@{}}Nombre: Generar Modelo en la nube.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
@@ -2014,15 +2097,15 @@ natural y redes neuronales}\\
 				\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir de un dataset proporcionado\\ anteriormente.\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Validación: Con un script en una plataforma en línea\\ entrenar el modelo para generar\\ nuevas canciones\end{tabular} \\
 				\hline
-			\end{tabular}\label{table:Historia de usuario 9}% is used to refer this table in the text
+			\end{tabular}\label{table:Historia de usuario 8}% is used to refer this table in the text
 		}
 	\end{table}
-			\begin{table}[hbt!]\caption{Historia de usuario 10}% title of Table
+			\begin{table}[hbt!]\caption{Historia de usuario 9}% title of Table
 	\centering % used for centering table
 	\resizebox{15cm}{!} {
 		\begin{tabular}{|c|c|}% centered columns (3 columns)
 			\hline                        %inserts double horizontal lines
-			\multicolumn{2}{|c|}{Historia de usuario 10}\\% inserts table %heading
+			\multicolumn{2}{|c|}{Historia de usuario 9}\\% inserts table %heading
 			\hline                  % inserts single horizontal line
 			\begin{tabular}[c]{@{}l@{}}Nombre: Generar Modelo en la nube.\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
@@ -2030,8 +2113,25 @@ natural y redes neuronales}\\
 			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir de un dataset limpio proporcionado\\ anteriormente.\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Validación: Con un script en una plataforma en línea\\ entrenar el modelo para generar\\ nuevas canciones\end{tabular} \\
 			\hline
+		\end{tabular}\label{table:Historia de usuario 9}% is used to refer this table in the text
+	}
+\end{table}
+			\begin{table}[hbt!]\caption{Historia de usuario 10}% title of Table
+	\centering % used for centering table
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|c|c|}% centered columns (3 columns)
+			\hline                        %inserts double horizontal lines
+			\multicolumn{2}{|c|}{Historia de usuario 10}\\% inserts table %heading
+			\hline                  % inserts single horizontal line
+			\begin{tabular}[c]{@{}l@{}}Nombre: Probar respuestas del modelo en la nube.\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
+			\hline
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir del modelo generado en la nube\\\end{tabular}
+			& \begin{tabular}[c]{@{}l@{}}Validación: Con una función que genere algunos ejemplos\\ usando el modelo generado en la nube\end{tabular} \\
+			\hline
 		\end{tabular}\label{table:Historia de usuario 10}% is used to refer this table in the text
 	}
+
 \end{table}
 			\begin{table}[hbt!]\caption{Historia de usuario 11}% title of Table
 	\centering % used for centering table
@@ -2040,47 +2140,30 @@ natural y redes neuronales}\\
 			\hline                        %inserts double horizontal lines
 			\multicolumn{2}{|c|}{Historia de usuario 11}\\% inserts table %heading
 			\hline                  % inserts single horizontal line
-			\begin{tabular}[c]{@{}l@{}}Nombre: Probar respuestas del modelo en la nube.\end{tabular}
-			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
-			\hline
-			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero generar nuevas letras de canciones\\a partir del modelo generado en la nube\\\end{tabular}
-			& \begin{tabular}[c]{@{}l@{}}Validación: Con una función que genere algunos ejemplos\\ usando el modelo generado en la nube\end{tabular} \\
-			\hline
-		\end{tabular}\label{table:Historia de usuario 11}% is used to refer this table in the text
-	}
-
-\end{table}
-			\begin{table}[hbt!]\caption{Historia de usuario 12}% title of Table
-	\centering % used for centering table
-	\resizebox{15cm}{!} {
-		\begin{tabular}{|c|c|}% centered columns (3 columns)
-			\hline                        %inserts double horizontal lines
-			\multicolumn{2}{|c|}{Historia de usuario 12}\\% inserts table %heading
-			\hline                  % inserts single horizontal line
 			\begin{tabular}[c]{@{}l@{}}Nombre: Desarrollar la vista del usuario (Página Web).\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
 			\hline
-			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ Quiero que el usuario tenga una vista\\intuitiva y fácil de utilizar\\ con la que pueda generar sus lyrics apropiadamente.\end{tabular}
+			\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero que el usuario tenga una vista\\intuitiva y fácil de utilizar\\ con la que pueda generar sus lyrics apropiadamente.\end{tabular}
 			& \begin{tabular}[c]{@{}l@{}}Validación: Creando la página web con vistas sencillas y ordenadas\\ para que el usuario no se pierda en\\ la navegación en ella.\end{tabular} \\
 			\hline
-		\end{tabular}\label{table:Historia de usuario 12}% is used to refer this table in the text
+		\end{tabular}\label{table:Historia de usuario 11}% is used to refer this table in the text
 	}
 \end{table}
 
-\begin{table}[hbt!]\caption{Historia de usuario 13}% title of Table
+\begin{table}[hbt!]\caption{Historia de usuario 12}% title of Table
 \centering % used for centering table
 \resizebox{15cm}{!} {
 	\begin{tabular}{|c|c|}% centered columns (3 columns)
 		\hline                        %inserts double horizontal lines
-		\multicolumn{2}{|c|}{Historia de usuario 13}\\% inserts table %heading
+		\multicolumn{2}{|c|}{Historia de usuario 12}\\% inserts table %heading
 		\hline                  % inserts single horizontal line
 		\begin{tabular}[c]{@{}l@{}}Nombre: Conectar la vista del usuario con el modelo.\end{tabular}
 		& \begin{tabular}[c]{@{}l@{}}Usuario: Desarrollador\end{tabular} \\% inserting body of the table 
 		\hline
-		\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ Quiero que la vista del usuario\\y el modelo funcionen en conjunto\\ para que se pueda generar la lyric de la canción y se vea apropiadamente.\end{tabular}
+		\begin{tabular}[c]{@{}l@{}}Descripción: Como un desarrollador\\ quiero que la vista del usuario\\y el modelo funcionen en conjunto\\ para que se pueda generar la lyric de la canción y se vea apropiadamente.\end{tabular}
 		& \begin{tabular}[c]{@{}l@{}}Validación: Conectando la página web con\\ el modelo generado\\ y las funciones para generar una lyric nueva\end{tabular} \\
 		\hline
-	\end{tabular}\label{table:Historia de usuario 13}% is used to refer this table in the text
+	\end{tabular}\label{table:Historia de usuario 12}% is used to refer this table in the text
 }
 \end{table}
 		\pagebreak
@@ -2091,7 +2174,7 @@ natural y redes neuronales}\\
 			\item RF1: Permitirá a cualquier usuario que acceda a la página, generar uno o más versos musicales.
 			\item RF2: Permitirá al usuario descargar la letra generada como archivo de texto.
 			\item RF3: Permitirá al usuario generar cuantas veces quiera una letra musical.
-			\item RF4: Solo se generarán las letras musicales si se cumplen todos los requisitos obligatorios proporcionados por el usuario, los cuales serán: una palabra y el porcentaje de rima de la canción.
+			\item RF4: Solo se generarán las letras musicales si se cumple con el requisito obligatorio, proporcionado por el usuario, el cual será: una palabra en el idioma inglés.
 		\end{itemize}
 		Ahora, se presentan algunos de los requerimientos no funcionales más importantes de nuestro proyecto
 		\begin{itemize}
@@ -2109,7 +2192,7 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Base de datos} % Explicar como se sacó la Base de Datos
+	\section{Base de datos} % Explicar como se sacó la Base de Datos
 		\subsection{Descripción}
 		En este apartado se hará el diseño de la base de datos para poder generar un modelo acorde a los requerimientos funcionales del proyecto.
 		
@@ -2174,9 +2257,8 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
 	
-\section{Limpieza de la base de datos} % Explicar cómo se limpió la base de datos
+	\section{Limpieza de la base de datos} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
 		Una vez obtenida la base de datos, es necesario hacer una inspección de esta misma para verificar que los estos datos sean útiles para proceder a generar un modelo, este paso resulta de suma importancia, ya que de esto depende que la precisión de los resultados del modelo.\\\\
 		Para ello se identificarán datos que resulten incompletos, incorrectos, inexactos, no pertinentes para
@@ -2227,7 +2309,7 @@ natural y redes neuronales}\\
 %                                                      																																			  %
 %                                                      																																			  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Redes neuronales a utilizar} % Explicar cómo se limpió la base de datos
+	\section{Redes neuronales a utilizar} % Explicar cómo se limpió la base de datos
 		\subsection{Descripción}
 		En este apartado expondremos las herramientas pensadas para el desarrollo del modelo de red neuronal, así como la manera en que podrían integrar a nuestro proyecto y las conexiones que puede tener tanto con la base de datos como con el servidor en la nube o la interfaz web. 
 		\subsection{Redes neuronales para generar el modelo} % Explicar qué es una regular expression, cómo se genera y para qué sirve
@@ -2237,7 +2319,9 @@ natural y redes neuronales}\\
 		
 		Para el diseño del modelo se tiene contemplado el siguiente modelo del cual se puede decir que una vez se tiene la salida del transformer se pasa por una capa de clasificación, posterior a ello se usa la función “Softmax" de Python para calcular la probabilidad de aparición de cada palabra que se tiene en el vocabulario y cuyo resultado final determinará la palabra usada para la máscara (marcada de color rojo).
 		\\\\
+		\begin{comment}
 		En última instancia, y de acuerdo a la probabilidad de rima dada por el usuario en la interfaz web, la última palabra puede o no contener una rima que haga juego con alguna de las palabras de la oración previa del verso.
+		\end{comment}		
 		
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_preoutput_model.jpg}
@@ -2247,15 +2331,21 @@ natural y redes neuronales}\\
 		
 		\subsection{Resultados} % Explicar los Resultados
 		
-		Habiendo hecho el análisis del modelo anterior y tomándolo como referencia para nuestro proyecto podemos adaptarla de forma tal que las entradas sean en su mayoría [MASK] las cuales serán las palabras predichas siendo la razón por la cual todas las derivadas de ésto están en rojo ya que representan una entradas del tipo MASK, y la última palabra [RHYME] estará dada por el porcentaje de coincidencia seleccionado por el usuario y que tiene como objetivo, valga la redundancia, de rimar con la última palabra de la penúltima oración previa: 
-		\begin{figure}[H]
-			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.jpg}
-			\centering 
-			\caption{Diagrama de diseño del modelo}
-		\end{figure}
+		Habiendo hecho el análisis del modelo anterior y tomándolo como referencia para nuestro proyecto podemos adaptarla de forma tal que las entradas sean en su mayoría [MASK] las cuales serán las palabras predichas siendo la razón por la cual todas las derivadas de ésto están en rojo ya que representan una entradas del tipo MASK. 
 		
-		Siendo el resultado esperado uno muy similar a la estructura que se muestra a continuación y en la que se puede ver lo siguiente:\\\\
+		
+		Siendo el resultado esperado uno muy similar a la estructura que se muestra a continuación y en la que se puede ver lo siguiente:\\
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./imagenes/Disenio/Iteracion_3/bert_output_model.png}
+			\centering 
+			\caption{Diagrama de diseño final del modelo}
+		\end{figure}
+	
+		\begin{comment}
 		En todos los casos la palabra que rime tendrá un valor entre 0 y 1 (valor flotante) el cual determinará qué tan alta sería la posibilidad de que la palabra rime, siendo el valor 0 que no rime y el valor 1 representaría una rima segura. \\
+		\end{comment}
+		
+		La estructura de las letras musicales generadas se planea que sean de la siguiente forma:		
 		
 		\subsubsection*{Verso}
 		\begin{itemize}
@@ -2388,6 +2478,302 @@ En este apartado se mostrará un primer boceto de las vistas que verá el usuari
 	\centering 
 	\caption{Aplicación web, pagina una vez generada la letra musical.}
 \end{figure} 
+
+\chapter{\textcolor{azulescom}{Desarrollo}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%                                                                Desarrollo del Sistema                                                                                    %
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo del modelo}
+
+A continuación, explicaremos la herramienta que se utilizó para desarrollar el modelo de generación de letras musicales.
+
+\subsection{Amazon AWS}
+
+
+Originalmente se planeaba trabajar con Amazon AWS, pero al momento de crear las máquinas virtuales donde se iba a laborar con la creación del modelo, nos encontramos con la problemática de que, para realizar algunas acciones, los comandos requeridos para estas tenían un cargo monetario extra a la cuenta además de lo que se invertía en mantener la máquina virtual activa.\\\\
+Aunado a esto la herramienta nos amigable con el usuario, y no te brinda un manual para facilitar el manejo de esta. Por esta razón, además de ser más costoso de lo planeado se decidió cambiar de plataforma para el desarrollo del modelo.
+
+\subsection{Google Cloud Platform}
+
+Después se probó trabajar con la plataforma de Google la cual es similar en la creación de máquinas  virtuales a la plataforma de Microsoft Azure, esta plataforma de Google es más amigable e intuitiva para el usuario, al momento de crear tu cuenta en esta, se te otorgan 300 dólares, los cuales lo mas probable es que utilices en la maquina en la que vas a trabajar en un futuro.
+\begin{figure}[H] 
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Maquina.png}
+	\centering 
+	\caption{Máquina creada para el desarrollo del modelo.}
+\end{figure}
+Para el desarrollo de modelos en esta plataforma es como utilizar una libreta de Jupyter, creando una libreta en la máquina virtual que va a procesar la información y la cual va a estar trabajando con los datos del modelo, así como una cubeta donde se va a encontrar tu base de datos que el modelo va procesar, en este caso las letras de las canciones del genero pop.
+\begin{figure}[H] 
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Notebook.png}
+	\centering 
+	\caption{Libreta y entrenamiento del modelo.}
+\end{figure}
+\begin{figure}[H] 
+\includegraphics[width=12cm]{./imagenes/Desarrollo/Bucket.png}
+\centering 
+\caption{Cubeta donde se encuentra la base de datos que contiene las letras de las canciones.}
+\end{figure}
+No utilizamos esta herramienta al final, principalmente a que los resultados obtenidos fueron similares a los conseguidos con el modelo desarrollado en la plataforma de Kaggle, además debemos considerar que el mantenimiento de la máquina virtual en la plataforma de Google era de 265 dólares mensuales y no se cuenta con el presupuesto para este mantenimiento.
+
+\subsection{Kaggle}
+
+Al final de realizar prueba decidimos utilizar la plataforma de Kaggle la cual con una cuenta gratuita puedes hacer funciones similares a las presentadas en la plataforma de Google, con algunas limitantes en cuanto a los recursos que puedes emplear al momento de trabajar.\\\\
+En esta plataforma también debes seleccionar los elementos con los cuales tu ambiente va a trabajar, en este caso el máximo de memoria RAM disponible era de 16Gb, un disco de 73Gb y un GPU de 13 Gb, estos recursos fueron los utilizados para el procesamiento de nuestro conjunto de datos, así como una libreta la cual va a ser el área donde vamos a estar trabajando.\\\\
+Debido a las limitantes de procesamiento nos vimos en la necesidad de limitar el modelo a entrenar, en lugar de utilizar las 28441 letras de canciones del genero pop, solo se pudo trabajar con 700.\\\\
+Con estas 700 lyrics, se decidió obtener información de ellas, siendo más específicos, estadísticas como el número de palabras en cada canción, esto con el fin de determinar la frecuencia de distribución del número de palabras de cada texto y para tener una idea del promedio de palabras, esto con el fin de tenerlo en cuenta al momento de realizar la generación de texto.
+	\begin{figure}[H]
+	\includegraphics[width=5cm]{./imagenes/Desarrollo/Kaggle/estadistica.png}
+	\centering 
+	\caption{Estadísticas de las palabras}
+\end{figure}
+Lo que podemos observar en la imagen anterior es:
+\begin{itemize}
+	\item \textbf{Count:} el cual es el número de canciones analizadas.
+	\item \textbf{Mean:} el promedio de palabras por canción.
+	\item \textbf{Std:} la desviación estándar de las palabras.
+	\item \textbf{Min:} la menor cantidad de palabras encontradas en una canción.
+	\item \textbf{Max:} la mayor cantidad de palabras encontradas en una canción.
+\end{itemize}
+Además, se realizo una tokenizacion a las letras de nuestras 700 canciones, esto quiere decir que se separo cada palabra y cada palabra se convirtió en un número. Para este proceso se hizo uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
+\begin{itemize}
+	\item \textbf{\_fit\_ontext():} El cual actualiza el vocabulario interno en función de una lista de textos determinada o, en este caso, la columna "Lyrics", donde cada entrada de la lista será un token.
+	\item \textbf{\_texts\_tosequences():} El cual transforma cada texto dentro de la lista de textos proporcionados en una secuencia de números enteros; solo se considerarán las palabras conocidas por el tokenizador.
+\end{itemize}	
+\begin{figure}[H]
+	\includegraphics[width=10cm]{./imagenes/Desarrollo/Kaggle/tokenization.png}
+	\centering 
+	\caption{Tokenizado de las palabras \cite{tokenimagen}}
+\end{figure}
+Antes de la generación del modelo, es necesario normalizar todas las oraciones a una misma longitud, para evitar el desbordamiento de la memoria y conseguir que las capas del modelo sean mucho más profundas, este es un proceso simple el cual consiste en agregar ceros al comienzo del texto, dando como resultado capas del mismo tamaño.\\\\
+La posición donde se sumarán los ceros viene determinada por el relleno del argumento, en este caso, se hará al comienzo de la secuencia.
+\begin{figure}[H]
+	\includegraphics[width=10cm]{./imagenes/Desarrollo/Kaggle/padding.png}
+	\centering 
+	\caption{Padding del tokenizado de las palabras}
+\end{figure}	
+\newpage	
+\section{Creación del modelo}
+En este caso se utilizó el modelo LSTM Bidireccional, este tipo de redes neuronales se ejecutan como su nombre lo indica: en dos direcciones. Esto quiere decir que va del pasado al futuro y viceversa, así es como el modelo conserva la información de ambos estados en cualquier momento. Las redes neuronales de LSTM se utilizan principalmente cuando el contexto está involucrado.\\\\
+Los modelos en Keras se definen como una secuencia de capas, y el modelo secuencial se trata de agregar capas de una en una. Las capas son el componente básico de la red neuronal.\\\\
+Dentro de estas capas podemos encontrar:
+\subsection{Embedding o incrustación}
+Es una capa central, solo se puede usar como la primera capa en un modelo, convierte los números enteros positivos en vectores densos de un tamaño fijo (el primer parámetro es el tamaño del vocabulario, el segundo parámetro es la dimensión de la incrustación densa y el tercer parámetro es sobre la longitud de las secuencias, este se requiere ya que usaremos una capa densa más adelante)
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/embedding.py}
+\end{center}
+\subsection{Bidireccional}
+Es una capa recurrente, una envoltura bidireccional para las redes neuronales de tipo RNN's que recibirá una capa como entrada, siendo la capa LSTM la que elegimos, recibirá un entero positivo como entrada que se refiere a la cantidad de nodos de salida que se deben devolver.
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/bidireccional.py}
+\end{center}
+\subsection{Dropout}
+Es una capa de regularización. Esta capa establece aleatoriamente las unidades de entrada en 0, con una frecuencia del valor que le pasamos, en cada paso durante el tiempo de entrenamiento, lo que ayuda a evitar el sobreajuste.
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/dropout.py}
+\end{center}
+\subsection{Densidad}
+Es una capa central y una capa de red neuronal densamente conectada. Recibe como primer parámetro un entero positivo que se refiere a la cantidad de nodos de salida que deben devolverse. El segundo parámetro es el llamado activación que define el tipo de predicciones que puede hacer el modelo; para el tipo de problema que estamos considerando, el que se adapta mejor es softmax, que genera un vector de valores (entrada) que puede interpretarse como probabilidades de ser utilizado.
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/dense.py}
+\end{center}
+\subsection{Método de compilación, algoritmo de optimización y métrica de rendimiento}
+Perdida: También conocida como función de costos; funciona durante el proceso de optimización y su función es calcular el error del modelo. La entropía cruzada se utiliza para estimar la diferencia entre una distribución de probabilidad estimada y predicha. Se utilizará categorical\_cross-entropy porque es más adecuado para este tipo de problemas y se usa casi universalmente para entrenar redes neuronales de aprendizaje profundo debido a los resultados que produce.
+Optimización: Se encarga de reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida porque es la mejor opción que ofrece Keras para entrenar la red neuronal en menos tiempo y de manera más eficiente. Earlystop detendrá el entrenamiento si el modelo ha dejado de mejorar, esto se verificará al final de cada epoch. En este caso, la "precisión" o “accuracy” se utilizará como métrica de rendimiento.
+El método fit es el encargado de entrenar el modelo para el número fijo de epochs dados.	
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/compile.py}
+\end{center}
+Quedando como resultado el código del modelo de la siguiente forma:
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/modelo.py}
+\end{center}
+Una vez completado el entrenamiento de nuestro modelo, lo que falta es importarlo para probar cómo funciona, en nuestro caso nombramos al modelo “song\_lyrics\_generator” y se importo de la siguiente forma, llamándola a través del enlace de nuestra libreta de Kaggle:
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/import.py}
+\end{center}
+Ya que contemos con el modelo importado, se creó una función para generar la letra de una canción utilizando el modelo previamente entrenado, el cual predecirá las siguientes palabras en base a la palabra(s) de entrada suministradas como 'seed\_text'. Para que esto funcione, se debe aplicar una tokenización al seed\_text, luego se aplicará un relleno a las secuencias generadas y se pasará al modelo entrenado para que se pueda predecir la siguiente palabra.
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/Kaggle/function.py}
+\end{center}	
+\newpage
+
+\section{Desarrollo del back-end}
+
+Para el back-end se decidió trabajar con una aplicación web desarrollada en Flask, debido a que de esta era fácil y rápida de implementar, además que permitía una mejor integración con el modelo que se elaboró usando Python y la aplicación web trabajada en React.\\\\
+Si se desea desarrollar una aplicación web en Flask lo primero que se tiene que hacer o que se recomienda hacer es crear un ambiente virtual usando virtualenv esto para separar nuestro entorno Python instalado originalmente del que se va a utilizar en la aplicación. Una vez realizado este procedimiento, se inició el desarrollo del código.
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/BackEnd/app.py}
+\end{center}
+El código app.py mostrado anteriormente es el código principal de nuestro back-end y es este el que se despliega en el navegador web, lo primero que se visualiza al entrar es información con respecto a esta aplicación como su nombre, versión y los plugin con los que esta cuenta.\\\\
+Para poder ver un cómo es que realmente funciona el back-end se realizó una pequeña interfaz y es posible acceder a ella a través de la dirección x/swagger-ui/ en ella podemos encontrar con mayor detalle el estado actual del api, esta información se encuentra ubicada en el espacio nombrado como health.
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/BackEnd/Health.png}
+	\centering 
+	\caption{Información sobre el estado del Back-end}
+\end{figure}
+Un poco más abajo se encuentra el método post de la api, este es el encargado de recibir la información de la aplicación web realizada en React en formato json, siendo más específicos la palabra en inglés introducida por el usuario, para posteriormente enviar esta información al modelo.
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/BackEnd/Post.png}
+	\centering 
+	\caption{Cuadro del método Post}
+\end{figure}
+Para realizar la tarea más importante del proyecto, es decir, la generación del texto, se desarrolló el siguiente código:
+\begin{center}
+	\lstinputlisting[language=Python]{./imagenes/Desarrollo/BackEnd/generate_lyrics.py}
+\end{center}
+En este código lo primero que realiza es cargar el modelo previamente entrenado debido a que va a ser requerido para la generación de texto, utilizando la palabra introducida por el usuario es procesada y ocupada en nuestra clase GenerateLyric donde la palabra al igual que el resto de palabras en nuestro modelo es tokenizada y separada en caso de haber recibido mas de una vocablo, posteriormente utilizado el modelo previamente cargado y valor de la palabra tokenizada va a tratar de predecir la siguiente palabra.\\\\
+Este proceso de tokenizar el texto y generar la próxima palabra a partir del valor obtenido de la tokenizacion se va a repetir hasta que se cumpla con el tamaño del verso o coro en el que se esté trabajando.\\\\
+Una vez terminado con la generación del texto, es enviado a la pagina web desarrollada en React como una respuesta.
+
+\newpage
+\section{Desarrollo de la página web}
+El desarrollo de la aplicación web se decidió realizarla haciendo uso de la biblioteca de Javascritpt conocida como React o ReactJS la cual consiste en crear interfaces interactivas, con la cual se puede diseñar vistas simples, en las cuales se actualizan y renderizarán los componentes necesarios cuando exista algún cambio en los datos.\\\\
+Se decidió usar este recurso para el desarrollo de la página web, debido a que permite que esta sea compatible con dispositivos móviles sin la necesidad de volver a escribir código para estas tecnologías.\\\\
+Para poder trabajar con React fue necesario descargar Node.js desde su página (https://nodejs.org/es/) la cual nos va a permitir crear aplicaciones web utilizando JavaScript, además de que al instalarlo obtendremos npm herramienta que posteriormente nos permitirá instalar paquetes con los cuales podemos añadir nuevas funciones a nuestra aplicación y que a su vez son compatibles con React.\\\\
+Una vez que se tiene instalado Node.js, para poder ejecutar una aplicación web en terminal, debemos escribir npm start, lo cual ejecutara un servidor de desarrollo de manera local, al cual se puede acceder a través de la siguiente dirección (localhost:3000) en cualquier navegador.\\\\
+Como React se basa en crear vistas, debíamos tener claro que queremos que el usuario vea, por ello se creó una carpeta en la cual se colocaron las páginas con las cuales se iban a trabajar y con las que el usuario va a interactuar. Estas fueron la página de inicio, la de preguntas frecuentes, la de ejemplos de canciones previamente generadas, una acerca de nosotros, una de contacto y una que despliega de manera grafica el back-end.\\\\
+\begin{figure}[H]
+	\includegraphics[width=5cm]{./imagenes/Desarrollo/AplicacionWeb/Paginas.png}
+	\centering 
+	\caption{Páginas trabajadas}
+\end{figure}
+La página más importe al momento de desarrollar la aplicación es la página principal, debido a que es esta la primera que va a ver el usuario al entrar y con la que más va a interactuar, en esta, aparece un mensaje con un botón el cual invita al usuario a generar su propia letra musical.
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/AplicacionWeb/Pbienvenida.png}
+	\centering 
+	\caption{Página de bienvenida}
+\end{figure}
+Si el usuario le da clic al botón, como React usa estados para renderizar lo que ve el usuario, se muestra en pantalla el formulario donde se le pide al usuario que introduzca una palabra en el idioma inglés.
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/AplicacionWeb/Pformulario.png}
+	\centering 
+	\caption{Formulario}
+\end{figure}
+Es en esta parte donde los datos proporcionados por el usuario son leídos y posteriormente enviados a nuestro back-end para ser procesados futuramente por el modelo. A continuación, se muestra el código de la función la cual realiza este proceso.
+\begin{center}
+	\lstinputlisting[language=JavaScript]{./imagenes/Desarrollo/AplicacionWeb/Sendword.js}
+\end{center}
+Esta función lo primero que se hace es recibir los datos (la palabra) que introdujo el usuario, esto se hace buscado el identificador del elemento de la página y obteniendo su valor, este, se enviará al back-end usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro back-end y busca el método post de este, como el método post de nuestro back-end recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato, usando JSON.stringfy y poniendole a la palabra un identificador que el back-end utilizará.\\\\
+Después de que el usuario le dio clic al botón de generar canción se muestra una leyenda la cual le pide al usuario que espere unos segundos, que se está trabajando en su letra. Pasado un breve tiempo de espera, en pantalla se le mostrará la letra de la canción generada, esta presentación se realizara haciendo un efecto similar al de una máquina de escribir, así como 3 botones, el primero de ellos le permite descargar la letra generada en un archivo de texto, el segundo le permite al usuario generar una nueva canción utilizando los mismos parámetros con los que genero la letra actual y el ultimo lo regresa al estado anterior para introducir nuevos parámetros y con estos generar una nueva letra.
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/AplicacionWeb/Pleyenda.png}
+	\centering 
+	\caption{Leyenda mostrada}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=13.5cm]{./imagenes/Desarrollo/AplicacionWeb/Ptexto.png}
+	\centering 
+	\caption{Texto generado}
+\end{figure}
+Adentrándonos más en esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el back-end para que la página pueda recibir el texto generado por el modelo.
+\begin{center}
+	\lstinputlisting[language=JavaScript]{./imagenes/Desarrollo/AplicacionWeb/ModelConection.js}
+\end{center}
+Lo que se hace en el código anterior es realizar una conexión asíncrona con el back-end, esto para que mientras no se reciba una respuesta, el usuario en pantalla va a ver una leyenda que diga que se está trabajando en su texto, cuando en la conexión se reciba una respuesta la leyenda que ve el usuario cambiara, mostrando el texto recibido en la respuesta.
+\begin{center}
+	\lstinputlisting[language=JavaScript]{./imagenes/Desarrollo/AplicacionWeb/Download.js}
+\end{center}
+Con esta función se permite crear un archivo de texto el cual puede ser descargado en el equipo del usuario y el cual va a contener la letra de la canción que se generó en ese momento.
+\begin{figure}[H]
+	\includegraphics[width=10cm]{./imagenes/Desarrollo/AplicacionWeb/Archivo.png}
+	\centering 
+	\caption{Archivo de texto descargado}
+\end{figure}	
+Si el usuario utiliza el segundo botón, este, utilizando la misma palabra previamente introducido por el usuario llama a la función que conecta con el back-end enviándole una nueva petición de generación de texto y se renderiza nuevamente la vista con la leyenda de que espere unos segundos. En caso de utilizar el tercer botón solo activa el estado que renderiza la parte donde el usuario introduce los datos.
+\newpage
+\section{Desplegando componentes}
+
+\subsection{Despliegue del back-end}
+
+\subsection{Despliegue de la página web}
+
+Para el despliegue de la pagina web nos apoyamos de la plataforma Vercel, la cual permite que los desarrolladores puedan desplegar sus paginas de manera rápida, así como poder actualizarla y escalarla de manera sencilla, además permite hacer despliegues de proyectos que se encuentran dentro de una cuenta de Github\\\\
+Lo primero que debemos hacer para poder trabajar con la línea de comandos de Vercel es instalarlo, para ello debemos recurrir a nuestra terminal e instarlo usando el comando npm i -g vercel o yarn global add vercel.
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Instalacion.png}
+	\centering 
+	\caption{Instalando CLI de Vercel}
+\end{figure}
+Una vez instalado, debemos abrir la carpeta de nuestro proyecto a desplegar, y en una terminal dentro de esa carpeta solo es necesario escribir vercel para abrir el CLI de Vercel el cual nos preguntara si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, a lo cual damos una respuesta afirmativa, posteriormente nos pide quien lo va a desplegar, para ello usamos una cuenta creada en esta plataforma o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Acciones.png}
+	\centering 
+	\caption{Indicando acciones para el despliegue}
+\end{figure}
+Después de dar las indicaciones anteriores el CLI de vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React, para por último preguntar si se quiere cambiar la configuración del trabajo encontrado, en este caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Deteccion.png}
+	\centering 
+	\caption{Deteccion del tipo de proyecto a desplegar}
+\end{figure}
+Vercel comienza a desplegar la aplicación web y nos da un enlace en el cual podemos ver como se encuentra el despliegue, si se presentara algún problema, en la terminal nos indicara cual es.
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Desplegando.png}
+	\centering 
+	\caption{Desplegando el proyecto}
+\end{figure}
+Una vez completado el despliegue, se nos genera un enlace con el cual se puede acceder a la aplicación web ya desplegada desde cualquier dispositivo.
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Desplegada.png}
+	\centering 
+	\caption{Aplicación web desplegada}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/Desarrollo/Despliegue/Paginaweb.png}
+	\centering 
+	\caption{Accediendo a la aplicación web desplegada}
+\end{figure}
+En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido.
+
+\section{Pruebas}
+
+\chapter{\textcolor{azulescom}{Conclusiones}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%                                                                Conclusiones del trabajo                                                                                  %
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{\textcolor{azulescom}{Trabajo a futuro}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%                                                                Trabajo a futuro                                                                                  %
+%                                                                                                                                                                                                 %
+%                                                                                                                                                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Generar rimas en los textos}
+
+Se pretende como trabajo a futuro poder generar textos con rimas, estas rimas se generarán a partir de la ultima palabra del primer verso de la letra de la canción generada, además se le pedirá al usuario que indique que tanto desea que rime una letra.\\\\
+Las rimas generadas serás a partir de que estas se escriban de una manera similar a la palabra o que las estas suenen similares.\\\\
+Se utilizaría la siguiente composición al momento de generar los textos
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/TrabajoFuturo/bert_output_model_rhyme.jpg}
+	\centering 
+	\caption{Estructura primer verso}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=12cm]{./imagenes/TrabajoFuturo/Generacion_letras_rima.png}
+	\centering 
+	\caption{Estructura de la letra de la canción con rimas}
+\end{figure}
+
+\section{Generar textos a partir de otros géneros}
+
+Ya que sabemos como entrenar un modelo, podemos utilizar la base de datos original o buscar otra con otros géneros musicales y realizar un procedimiento similar al que se siguió para conseguir el conjunto de datos de las letras de canciones del género pop.\\\\
+Una vez obtenidos los conjuntos de datos separados de los géneros que queremos trabajar, hacer modelos usando redes neuronales y añadirlos a nuestro back-end.\\\\
+Para que de esta forma si el usuario en la pagina principal decide crear una canción, se le muestre que puede seleccionar un genero musical que previamente se ha trabajado.
+
+
 % Rename Appendice to Anexos
 \renewcommand*\appendixpagename{{\textcolor{azulescom}{Anexos}}}
 \renewcommand*\appendixtocname{{\textcolor{azulescom}{Anexos}}}
@@ -2675,6 +3061,8 @@ En este apartado se mostrará un primer boceto de las vistas que verá el usuari
 	\bibitem{PruebaLSTM}
 	Bansal, S. (2018, May 27). Language Modelling and Text Generation using LSTMs — Deep Learning for NLP. Medium. https://medium.com/@shivambansal36/language-modelling-text-generation-using-lstms-deep-learning-for-nlp-ed36b224b275
 	
+	\bibitem{tokenimagen}
+	B. Lee (2019, Noviembre 17), How to 10x Response Rates on Surveys [En línea]. Disponible: https://bryankmlee3.medium.com/conducting-surveys-with-nlp-d38df4c29e39 [Último acceso: 5 Junio 2021]
 	
 \end{thebibliography}	
 \end{document}
