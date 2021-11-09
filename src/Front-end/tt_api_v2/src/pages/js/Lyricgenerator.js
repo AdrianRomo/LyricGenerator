@@ -29,7 +29,12 @@ function sendWord(engword, percentval) {
         console.log('Se recibe: ' + wholeAnswer);
         var resp= JSON.parse(wholeAnswer);
 
-        if(resp.message !== null ){            
+        if(typeof resp.message !== 'undefined' && resp.message.length > 0){
+            console.log('Respuesta: ' + resp.message);
+            alert('Oops, ocurrió un error');
+            document.getElementById('MyTestButton').disabled= false;
+            ReactDOM.unmountComponentAtNode(one);
+        }else{
             document.querySelector("#myTextReceived").innerHTML= '';
 
             let ele = document.getElementById('lyricContainer');
@@ -49,12 +54,54 @@ function sendWord(engword, percentval) {
             
             //Esto es importante
             rebooted= false;
-            quoteArray= [resp.verse_1[0], resp.chorus[0], resp.verse_2[0]];
+            var tempArray= [];
+            var verse_counter= 1;
+            var chorus_counter= 0;
+            for (const [key, value] of Object.entries(resp)) {
+                
+                if(key.includes('verse')){
+                    if(key.includes('_1')){
+                        tempArray.splice((1), 0, value[0]);
+                        console.log('Buscará: ' + '' + verse_counter);
+                        verse_counter++;
+                        console.log('[1]' + key, value[0]);
+                    }else if(key.includes('_2')){
+                        tempArray.splice((2), 0, value[0]);
+                        console.log('Buscará: ' + '' + verse_counter);
+                        verse_counter++;
+                        console.log('[2]' + key, value[0]);
+                    }else{
+                        tempArray.splice((3), 0, value[0]);
+                        console.log('Buscará: ' + '' + verse_counter);
+                        verse_counter++;
+                        console.log('[3]' + key, value[0]);
+                    }
+                }else{
+                    if(chorus_counter++ == 0){
+                        tempArray.splice(0, 0, value[0]);
+                        console.log('[0]' + key, value[0]);
+                    }
+                }
+            }
+
+            quoteArray= [];
+            for(var i= 0; i< tempArray.length; i++){
+                quoteArray.push(tempArray[i]);
+                console.log('Valor: ' + tempArray[i]);
+            }
+
             textPosition= 0;
-            myTypewriter('verso_1', 0, 0);
-            myTypewriter('coro_1', 1, 0);
+            myTypewriter('verso_1', 1, 0);
+            myTypewriter('coro_1', 0, 0);
             myTypewriter('verso_2', 2, 0);
-            myTypewriter('coro_2', 1, 0);
+            myTypewriter('coro_2', 0, 0);
+
+            if(quoteArray.length > 3){
+                ReactDOM.render(<Writing lyricTitle="Verso 3" lyricParagraphId="verso_3" />, one);
+                ele.innerHTML += one.innerText;
+                myTypewriter('verso_3', 3, 0);
+            }
+
             /*
             */
             
@@ -62,8 +109,8 @@ function sendWord(engword, percentval) {
             document.getElementById('regenerateButton').disabled= false;
             document.getElementById('MyTestButton').disabled= false;
             ReactDOM.unmountComponentAtNode(one);
-        }else
-            alert('Oops, ocurrió un error');
+        }
+
 
     }).catch(error => {
         console.log(error)
@@ -71,7 +118,6 @@ function sendWord(engword, percentval) {
 }
 
 function updateInput(e){
-    console.log('Valor: ' + e.target.value);
     e.target.value = e.target.value.replace(/\s/g, "");
 }
 
@@ -79,7 +125,6 @@ function myTypewriter(receivedId, arrayPosition, textPosition){
     document.getElementById(receivedId).innerHTML = quoteArray[arrayPosition].substring(0, textPosition) + '<span>\u25AE</span>';
   
     if((textPosition++ < quoteArray[arrayPosition].length) && !rebooted){
-        console.log('Se lleva= ' + document.getElementById(receivedId).innerHTML);
         setTimeout(myTypewriter.bind(null, receivedId, arrayPosition, textPosition), speed);
     }else{
         document.getElementById(receivedId).innerHTML = quoteArray[arrayPosition].substring(0, textPosition);
@@ -107,7 +152,6 @@ function Lyricgenerator() {
                 <h1>Lyric Generator</h1>
                 <p>Lyrics generated using Artificial Intelligence</p>
                 <Canvas className='breathable-button' width={120} height={120} onClick={() => { 
-                    console.log('Me hicieron click :3 ... ');
                     document.getElementsByClassName('site-section')[0].style.display= 'none';
                     document.getElementsByClassName('site-section')[1].style.display= 'none';
                     document.getElementsByClassName('site-section')[2].style.display= 'none';
@@ -129,10 +173,14 @@ function Lyricgenerator() {
                             <div className="input-group mb-3">
                                 <input id='english-word' type="text" className="form-control border-secondary text-white bg-transparent" placeholder="Love" aria-label="Enter a Word" onChange={(e)=> updateInput(e)} aria-describedby="button-addon2" required/>
                             </div>
-                            <h6>Porcentaje de rimas dentro de la canción: </h6> 
-                            <div align='center' className='dslider'>          
-                                <DiscreteSlider/>
-                            </div>
+                            {
+                                /*
+                                    <h6>Porcentaje de rimas dentro de la canción: </h6> 
+                                    <div align='center' className='dslider'>          
+                                        <DiscreteSlider/>
+                                    </div>
+                                 */
+                            }
                             <div className="centering">
                                 <Button buttonId='button-addon2' buttonClass='btn btn-primary' type="button" onClick={() => {
                                     document.getElementById('secondDiv').className= 'contentTwoThree-hide';
@@ -155,7 +203,7 @@ function Lyricgenerator() {
                                     quoteArray= ["Nuestros gatos compositores estan trabajando..."];
                                     textPosition= 0;
                                     myTypewriter('myTextReceived', 0, 0);
-                                    sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
+                                    sendWord(document.getElementById('english-word').value, 50);
                                 }}>
                                     Generar Canción <i className="fas fa-play fa-xs" />
                                 </Button>
@@ -182,7 +230,7 @@ function Lyricgenerator() {
                         textPosition= 0;
                         rebooted= false;
                         myTypewriter('myTextReceived', 0, 0);
-                        sendWord(document.getElementById('english-word').value, document.getElementsByClassName('MuiSlider-root MuiSlider-colorPrimary')[0].children[2].value);
+                        sendWord(document.getElementById('english-word').value, 50);
                     }}>
                         Regenerate Lyrics
                     </Button>
