@@ -29,11 +29,8 @@ function sendWord(engword, percentval) {
         console.log('Se recibe: ' + wholeAnswer);
         var resp= JSON.parse(wholeAnswer);
 
-        if(resp.message !== null ){
-            console.log('Respuesta: ' + resp.generated_lyric);
-            
+        if(resp.message !== null ){            
             document.querySelector("#myTextReceived").innerHTML= '';
-
 
             let ele = document.getElementById('lyricContainer');
             var one = document.createElement('div');;
@@ -52,7 +49,7 @@ function sendWord(engword, percentval) {
             
             //Esto es importante
             rebooted= false;
-            quoteArray= [resp.first_verse[0], resp.chorus[0], resp.end_verse[0]];
+            quoteArray= [resp.verse_1[0], resp.chorus[0], resp.verse_2[0]];
             textPosition= 0;
             myTypewriter('verso_1', 0, 0);
             myTypewriter('coro_1', 1, 0);

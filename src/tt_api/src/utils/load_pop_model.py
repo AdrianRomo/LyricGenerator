@@ -9,7 +9,9 @@ from tensorflow.keras.utils import to_categorical
 class ModelGeneration:
     def __init__(self):
         self.df = read_csv(MODEL_PATH + '/pop_model.csv')
-        self.model = load_model(MODEL_PATH + '/song_lyrics_generator.h5')    
+        self.model = load_model(MODEL_PATH + '/song_lyrics_generator.h5')
+
+    def create_tokenization_from_model(self):
         self.tokenizer = Tokenizer()
         self.tokenizer.fit_on_texts(self.df['Lyric'].astype(str).str.lower())
         self.total_words = len(self.tokenizer.word_index)+1
@@ -22,6 +24,7 @@ class ModelGeneration:
                 self.input_sequences.append(self.n_gram_sequence)
         self.max_sequence_len = max([len(x) for x in self.input_sequences])
         self.input_sequences = array(pad_sequences(self.input_sequences, maxlen=self.max_sequence_len, padding='pre'))
-        # create predictors and label
+        # Create predictors and label
         self.x, self.labels = self.input_sequences[:,:-1],self.input_sequences[:,-1]
         self.y = to_categorical(self.labels, num_classes=self.total_words)
+        return self

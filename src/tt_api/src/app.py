@@ -19,8 +19,6 @@ from .utils.load_pop_model import ModelGeneration
 app = Flask(__name__)
 api = Api(app)  # Flask restful wraps Flask app around it.
 cors = CORS(app)
-model_generation = ModelGeneration()
-
 app.config.update({
     'APISPEC_SPEC': APISpec(
         title='Lyric Generator',
@@ -32,6 +30,8 @@ app.config.update({
     'APISPEC_SWAGGER_UI_URL': '/swagger-ui/'  # URI to access UI of API Doc
 })
 docs = FlaskApiSpec(app)
+
+model_loaded = ModelGeneration().create_tokenization_from_model()
 
 # Endpoints
 class Lyrics(MethodResource, Resource):
@@ -62,9 +62,9 @@ class Lyrics(MethodResource, Resource):
         Post method represents a POST API method
         """
         response = {}
-        lyrics = GenerateLyric(model_generation, kwargs)
+        lyrics = GenerateLyric(model_loaded, kwargs)
         response['title'] = lyrics.complete_this_song(randint(2,5))
-        response['first_verse'] = lyrics.complete_this_song(randint(40,60))
+        response['verse_1'] = lyrics.complete_this_song(randint(40,60))
         response['chorus'] = lyrics.chorus(randint(30,50))    
         for medium in range(2,4): 
             response['verse_'+str(medium)] = lyrics.complete_this_song(randint(40,60))
