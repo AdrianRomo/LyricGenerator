@@ -28,19 +28,18 @@ function Footer() {
                     <li><a href="/">Home</a></li>
                     <li><a href="/samples">Samples</a></li>
                     <li><a href="/team">Team</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/developers">Developers</a></li>
                   </ul>
                 </div>
                 <div className="col-md-6 col-lg-6">
                   <ul className="list-unstyled">
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
                     <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/developers">Developers</a></li>
+                    <li><a href="/faq">FAQ</a></li>
                   </ul>
                 </div>
               </div>
-              <div className="row">
+              {/*<div className="row">
                 <div className="col-md-12">
                   <h3 className="footer-heading mb-4">Follow Us</h3>
                   <div>
@@ -50,7 +49,7 @@ function Footer() {
                     <a href="#" className="pl-3 pr-3"><span className="icon-linkedin" /></a>
                   </div>
                 </div>
-              </div>
+              </div>*/}
             </div>
             <div className="col-lg-4 mb-5 mb-lg-0">
               <div className="mb-5">

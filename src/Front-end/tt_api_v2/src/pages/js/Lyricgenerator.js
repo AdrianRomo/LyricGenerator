@@ -139,8 +139,6 @@ function Lyricgenerator() {
                     document.getElementsByClassName('site-section')[0].style.display= 'none';
                     document.getElementsByClassName('site-section')[1].style.display= 'none';
                     document.getElementsByClassName('site-section')[2].style.display= 'none';
-                    document.getElementsByClassName('site-section')[3].style.display= 'none';
-                    document.getElementsByClassName('site-blocks-cover overlay inner-page-cover subscribe')[0].style.display='none';
                     document.getElementsByClassName('bg-primary')[0].style.display= 'none';
                     document.getElementById('secondDiv').className= 'contentTwoThree-show';
                     document.getElementById('firstDiv').className= 'contentOne-hide';
@@ -152,7 +150,8 @@ function Lyricgenerator() {
                 <div className="overlay inner-page-cover subscribe" style={{ background: '' }} >
                     <div className="container">
                         <h1>Generate your own song!</h1>
-                        <h5>Insert an english word and click the button to begin.</h5>
+                        <h5>Insert an english word and click the button to begin.</h5>                        
+                        <h5>Remember that this word will be the topic of your lyric.</h5>
                         <div className="site-block-subscribe">
                             <div className="input-group mb-3">
                                 <input id='english-word' type="text" className="form-control border-secondary text-white bg-transparent" placeholder="e.g. Love" aria-label="Enter a Word" onChange={(e)=> updateInput(e)} aria-describedby="button-addon2" required/>
@@ -172,8 +171,6 @@ function Lyricgenerator() {
                                     document.getElementsByClassName('site-section')[0].style.display= 'inline';
                                     document.getElementsByClassName('site-section')[1].style.display= 'inline';
                                     document.getElementsByClassName('site-section')[2].style.display= 'inline';
-                                    document.getElementsByClassName('site-section')[3].style.display= 'inline';
-                                    document.getElementsByClassName('site-blocks-cover overlay inner-page-cover subscribe')[0].style.display='block';
                                     document.getElementsByClassName('bg-primary')[0].style.display= 'block';
                                 }}>
                                     Home

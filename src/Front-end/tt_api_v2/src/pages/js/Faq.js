@@ -120,6 +120,20 @@ function FAQ() {
                                             </div>
                                         </div>
                                     </div> {/* .accordion-item */}
+                                    <div className="accordion-item">
+                                        <h3 className="mb-0 heading">
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseSeven" role="button" aria-expanded="false" aria-controls="collapseSeven">
+                                                The word that I submit it's important?
+                                            <span className="icon" /></a>
+                                        </h3>
+                                        <div id="collapseSeven" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div className="body-text">
+                                                <p>
+                                                    Yes, the word that it's submitted by the user it's very important because with that word we generate the rest of the lyric, in other words it's the topic of the song.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> {/* .accordion-item */}
                                 </div>
                             </div>
                         </div>

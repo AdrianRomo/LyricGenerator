@@ -20,38 +20,39 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-                            <h2 className="mb-5">Some Samples</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+                            <h2 className="mb-5">Some interesting articles about Artificial Intelligence!</h2>
+                            <p>Here you can find some articles that influenced us to come up with this great idea.</p>
                         </div>
                     </div>
                     <div className="site-block-retro d-block d-md-flex">
-                        <a href="#" className="col1 unit-9 no-height" data-aos="fade-up" data-aos-delay={100}>
+                        <a href="https://levelup.gitconnected.com/lyrics-generation-using-lstm-5a5a0bcac4fa" className="col1 unit-9 no-height" data-aos="fade-up" data-aos-delay={100}>
                             <div className="image" style={{ backgroundImage: 'url("images/img_2.jpg")' }} />
                             <div className="unit-9-content">
-                                <h2>Classic Songs For Classic People</h2>
-                                <span>Friday 1:00pm — 2:30pm</span>
+                                <h2>Lyrics Generator using LSTM</h2>
+                                <span>Indie project to generate Taylor Swift alike lyrics with AI</span>
                             </div>
                         </a>
                         <div className="col2 ml-auto">
-                            <a href="#" className="col2-row1 unit-9 no-height" data-aos="fade-up" data-aos-delay={200}>
+                            <a href="https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/" className="col2-row1 unit-9 no-height" data-aos="fade-up" data-aos-delay={200}>
                                 <div className="image" style={{ backgroundImage: 'url("images/img_3.jpg")' }} />
                                 <div className="unit-9-content">
-                                    <h2>Classic Songs For Classic People</h2>
-                                    <span>Friday 1:00pm — 2:30pm</span>
+                                    <h2>Build and deploy a React page with Bootstrap</h2>
+                                    <span>Brief explanation to create a webapp with React</span>
                                 </div>
                             </a>
-                            <a href="#" className="col2-row2 unit-9 no-height" data-aos="fade-up" data-aos-delay={300}>
+                            <a href="https://www.theverge.com/2016/9/26/13055938/ai-pop-song-daddys-car-sony" className="col2-row2 unit-9 no-height" data-aos="fade-up" data-aos-delay={300}>
                                 <div className="image" style={{ backgroundImage: 'url("images/img_1.jpg")' }} />
                                 <div className="unit-9-content">
-                                    <h2>Classic Songs For Classic People</h2>
-                                    <span>Friday 1:00pm — 2:30pm</span>
+                                    <h2>AI-written pop dire warning for humanity</h2>
+                                    <span>A Lyric Generator using "The Beatles" songs</span>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="site-section bg-light block-13">
+            
+            {/*<div className="site-section bg-light block-13">
                 <div className="container" data-aos="fade-up">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
@@ -133,13 +134,13 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>*/}
             <div className="site-section">
                 <div className="container" data-aos="fade-up">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
                             <h2 className="mb-5">Our Team</h2>
-                            <p>Here there are the three Computer Science graduates of the National Polytechnic Institute joined and collaborated in every aspect to develop this incredible tool to you</p>
+                            <p>Three Computer Science graduates of the National Polytechnic Institute joined and collaborated in every aspect to develop this tool</p>
                         </div>
                     </div>
                     <div className="row">
@@ -195,33 +196,33 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-                            <h2 className="mb-5">News &amp; Samples</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+                            <h2 className="mb-5">Samples</h2>
+                            <p>Here are some examples of lyrics previously generated, also you can see which word was used.</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={100}>
-                            <a href="#"><img src="images/img_4.jpg" alt="Image" className="img-fluid" /></a>
+                            <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
                             <div className="p-4 bg-white">
-                                <span className="d-block text-secondary small text-uppercase">Jan 20th, 2021</span>
-                                <h2 className="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt, voluptatum reprehenderit deserunt illum rem.</p>
+                                <center><span className="d-block text-secondary small text-uppercase">Word used</span></center>
+                                <center><h2 className="h5 text-black mb-3">Love</h2></center>
+                                <center><p>Love is such a kiawah bloody holiday it seems that i don't wanna know know know know who's taking earthshaking you home home home home and loving you so so so so the way i used to love you oh i don't wanna know know know know </p></center>
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={200}>
-                            <a href="#"><img src="images/img_2.jpg" alt="Image" className="img-fluid" /></a>
+                            <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
                             <div className="p-4 bg-white">
-                                <span className="d-block text-secondary small text-uppercase">Jan 20th, 2021</span>
-                                <h2 className="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt, voluptatum reprehenderit deserunt illum rem.</p>
+                                <center><span className="d-block text-secondary small text-uppercase">Word used</span></center>
+                                <center><h2 className="h5 text-black mb-3">Mad</h2></center>
+                                <center><p>Mad at the ceiling in the sky this is our song and i wouldn't have to have held it to back to the dance but if i could take you the first time i think that haircut i heard you the best of love you believe me too long to realise and from me and i can't stop thinking about you</p></center>
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={300}>
-                            <a href="#"><img src="images/img_3.jpg" alt="Image" className="img-fluid" /></a>
+                            <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
                             <div className="p-4 bg-white">
-                                <span className="d-block text-secondary small text-uppercase">Jan 20th, 2021</span>
-                                <h2 className="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt, voluptatum reprehenderit deserunt illum rem.</p>
+                                <center><span className="d-block text-secondary small text-uppercase">Word used</span></center>
+                                <center><h2 className="h5 text-black mb-3">Wonderful</h2></center>
+                                <center><p>Wonderful things that you come round impound here you see me your mind you see my body off your hand it feels like a conversation  i don't wanna know know know know i don't know why i don't know why</p></center>
                             </div>
                         </div>
                     </div>
