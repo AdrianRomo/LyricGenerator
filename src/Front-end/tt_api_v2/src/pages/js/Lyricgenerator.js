@@ -15,7 +15,6 @@ function sendWord(engword, percentval) {
     localStorage.setItem("EnglishWord-Value",engword); 
     localStorage.setItem("Percentage-Value",percentval); 
 
-    console.log('Se intentará enviar: ' + engword + " y " + percentval);
     fetch('http://localhost/lyrics', {
         method:'POST',
         headers:{'content-type':'application/json','Access-Control-Allow-Origin':'*'},
@@ -26,11 +25,9 @@ function sendWord(engword, percentval) {
     }).then(json => {        
 
         var wholeAnswer= JSON.stringify(json)
-        console.log('Se recibe: ' + wholeAnswer);
         var resp= JSON.parse(wholeAnswer);
 
         if(typeof resp.message !== 'undefined' && resp.message.length > 0){
-            console.log('Respuesta: ' + resp.message);
             alert('Oops, ocurrió un error');
             document.getElementById('MyTestButton').disabled= false;
             ReactDOM.unmountComponentAtNode(one);
@@ -39,20 +36,18 @@ function sendWord(engword, percentval) {
 
             let ele = document.getElementById('lyricContainer');
             var one = document.createElement('div');;
-            ReactDOM.render(<Writing lyricTitle="Verso 1" lyricParagraphId="verso_1" />, one);
+            ReactDOM.render(<Writing lyricTitle="Verse 1" lyricParagraphId="verso_1" />, one);
             ele.innerHTML += one.innerText;
-            ReactDOM.render(<Writing lyricTitle="Coro" lyricParagraphId="coro_1" />, one);
+            ReactDOM.render(<Writing lyricTitle="Chorus" lyricParagraphId="coro_1" />, one);
             ele.innerHTML += one.innerText;
-            ReactDOM.render(<Writing lyricTitle="Verso 2" lyricParagraphId="verso_2" />, one);
+            ReactDOM.render(<Writing lyricTitle="Verse 2" lyricParagraphId="verso_2" />, one);
             ele.innerHTML += one.innerText;
-            ReactDOM.render(<Writing lyricTitle="Coro" lyricParagraphId="coro_2" />, one);
+            ReactDOM.render(<Writing lyricTitle="Chorus" lyricParagraphId="coro_2" />, one);
             ele.innerHTML += one.innerText;
 
-            console.log('Texto: ' + ele.innerText);
-            console.log('HTML: ' + ele.innerHTML);
             ele.style.display= 'contents';
             
-            //Esto es importante
+            // Important!
             rebooted= false;
             var tempArray= [];
             var verse_counter= 1;
@@ -62,24 +57,17 @@ function sendWord(engword, percentval) {
                 if(key.includes('verse')){
                     if(key.includes('_1')){
                         tempArray.splice((1), 0, value[0]);
-                        console.log('Buscará: ' + '' + verse_counter);
                         verse_counter++;
-                        console.log('[1]' + key, value[0]);
                     }else if(key.includes('_2')){
                         tempArray.splice((2), 0, value[0]);
-                        console.log('Buscará: ' + '' + verse_counter);
                         verse_counter++;
-                        console.log('[2]' + key, value[0]);
                     }else{
                         tempArray.splice((3), 0, value[0]);
-                        console.log('Buscará: ' + '' + verse_counter);
                         verse_counter++;
-                        console.log('[3]' + key, value[0]);
                     }
                 }else{
                     if(chorus_counter++ == 0){
                         tempArray.splice(0, 0, value[0]);
-                        console.log('[0]' + key, value[0]);
                     }
                 }
             }
@@ -87,7 +75,6 @@ function sendWord(engword, percentval) {
             quoteArray= [];
             for(var i= 0; i< tempArray.length; i++){
                 quoteArray.push(tempArray[i]);
-                console.log('Valor: ' + tempArray[i]);
             }
 
             textPosition= 0;
@@ -97,13 +84,10 @@ function sendWord(engword, percentval) {
             myTypewriter('coro_2', 0, 0);
 
             if(quoteArray.length > 3){
-                ReactDOM.render(<Writing lyricTitle="Verso 3" lyricParagraphId="verso_3" />, one);
+                ReactDOM.render(<Writing lyricTitle="Verse 3" lyricParagraphId="verso_3" />, one);
                 ele.innerHTML += one.innerText;
                 myTypewriter('verso_3', 3, 0);
             }
-
-            /*
-            */
             
             document.getElementById('downloadButton').disabled= false;
             document.getElementById('regenerateButton').disabled= false;
@@ -167,11 +151,11 @@ function Lyricgenerator() {
             <div id='secondDiv' className='contentTwo'>
                 <div className="overlay inner-page-cover subscribe" style={{ background: '' }} >
                     <div className="container">
-                        <h1>Genera tu letra de canción</h1>
-                        <h5>Introduce una palabra en idioma inglés, así como escoge un porcentaje de rimas para poder generar tu canción. ☺️</h5>
-                        <form action="#" method="post" className="site-block-subscribe">
+                        <h1>Generate your own song!</h1>
+                        <h5>Insert an english word and click the button to begin.</h5>
+                        <div className="site-block-subscribe">
                             <div className="input-group mb-3">
-                                <input id='english-word' type="text" className="form-control border-secondary text-white bg-transparent" placeholder="Love" aria-label="Enter a Word" onChange={(e)=> updateInput(e)} aria-describedby="button-addon2" required/>
+                                <input id='english-word' type="text" className="form-control border-secondary text-white bg-transparent" placeholder="e.g. Love" aria-label="Enter a Word" onChange={(e)=> updateInput(e)} aria-describedby="button-addon2" required/>
                             </div>
                             {
                                 /*
@@ -200,20 +184,20 @@ function Lyricgenerator() {
                                     document.getElementById('MyTestButton').disabled= true;
                                     document.getElementById('downloadButton').disabled= true;
                                     document.getElementById('regenerateButton').disabled= true;
-                                    quoteArray= ["Nuestros gatos compositores estan trabajando..."];
+                                    quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
                                     textPosition= 0;
                                     myTypewriter('myTextReceived', 0, 0);
                                     sendWord(document.getElementById('english-word').value, 50);
                                 }}>
-                                    Generar Canción <i className="fas fa-play fa-xs" />
+                                    Generate a Song <i className="fas fa-play fa-xs" />
                                 </Button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id='thirdDiv' className='contentThree'>
-                <h1>Lyric generada</h1>
+                <h1>Generated Lyric</h1>
                 <p id='myTextReceived'></p>
                 <div id='lyricContainer'></div>
                 <div className= 'centering'>
@@ -226,7 +210,7 @@ function Lyricgenerator() {
                         Download
                     </Button>
                     <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
-                        quoteArray= ["Nuestros gatos compositores estan trabajando..."];
+                        quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
                         textPosition= 0;
                         rebooted= false;
                         myTypewriter('myTextReceived', 0, 0);

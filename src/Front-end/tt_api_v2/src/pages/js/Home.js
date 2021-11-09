@@ -20,7 +20,7 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-                            <h2 className="mb-5">Aquí podrían ir ejemplos</h2>
+                            <h2 className="mb-5">Some Samples</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
                         </div>
                     </div>
@@ -230,12 +230,12 @@ function Home() {
             <div className="bg-primary" data-aos="fade">
                 <div className="container">
                     <div className="row">
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-facebook text-white" /></a>
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-twitter text-white" /></a>
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-instagram text-white" /></a>
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-linkedin text-white" /></a>
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-pinterest text-white" /></a>
-                        <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-youtube text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-facebook text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-twitter text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-instagram text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-linkedin text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-pinterest text-white" /></a>
+                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-youtube text-white" /></a>
                     </div>
                 </div>
             </div>

@@ -16,12 +16,12 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/about.html' component={About} />
-          <Route path='/samples.html' component={Samples} />
-          <Route path='/team.html' component={Team} />
-          <Route path='/contact.html' component={Contact} />
-          <Route path='/faq.html' component={FAQ} />
-          <Route path='/developers.html' component={Developer} />
+          <Route path='/about' component={About} />
+          <Route path='/samples' component={Samples} />
+          <Route path='/team' component={Team} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/faq' component={FAQ} />
+          <Route path='/developers' component={Developer} />
         </Switch>
       </Router>
       <Footer />

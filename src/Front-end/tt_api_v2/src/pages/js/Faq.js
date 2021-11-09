@@ -28,41 +28,95 @@ function FAQ() {
                                 <div className="accordion unit-8" id="accordion">
                                     <div className="accordion-item">
                                         <h3 className="mb-0 heading">
-                                            <a className="btn-block" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">What kind of artifitial intelligence does Neural Lyrics use?<span className="icon" /></a>
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+                                                Why my lyric doesn't make sense?
+                                                <span className="icon" /></a>
                                         </h3>
                                         <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div className="body-text">
-                                                <p>El servicio de NeuraLyrics.com fue realizado haciendo uso de la red neuronal recurrente de tipo LSTM (Long Short Term Memory) de tipo bidireccional.</p>
+                                                <p>
+                                                    NeuraLyrics makes an API call to a loaded model with tokenized words and according the most used words
+                                                    in other lyrics from other artists, makes a prediction with the most accurate word, right now, our model was trained with 700
+                                                    lyrics but in a future project the idea is to generate a model with a dataset that we already have with 28000+ lyrics to get
+                                                    better and more useful predictions.
+                                                </p>
                                             </div>
                                         </div>
                                     </div> {/* .accordion-item */}
                                     <div className="accordion-item">
                                         <h3 className="mb-0 heading">
-                                            <a className="btn-block" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">¿El servicio de NeuraLyrics.com puede aceptar más de 1 palabra al momento de generar la canción?<span className="icon" /></a>
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+                                                Why I can't put more than one word in my lyric?
+                                            <span className="icon" /></a>
                                         </h3>
                                         <div id="collapseTwo" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div className="body-text">
-                                                <p>En teoría la aplicación puede aceptar más de 1 palabra para generar una canción, pero recomendamos usar solo 1 palabra para evitar que los textos generados carezcan de sentido o semántica.</p>
+                                                <p>
+                                                    To give better and more coherent results and to operate in more devices due time processing of each request,
+                                                    the application will only accept only one word.
+                                                </p>
                                             </div>
                                         </div>
                                     </div> {/* .accordion-item */}
                                     <div className="accordion-item">
                                         <h3 className="mb-0 heading">
-                                            <a className="btn-block" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">¿Qué soporte de idiomas tienen?<span className="icon" /></a>
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                                How many languages do you support?
+                                                <span className="icon" /></a>
                                         </h3>
                                         <div id="collapseThree" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div className="body-text">
-                                                <p>Por el momento solo contamos con idioma inglés, esto es debido a que no contamos con una buena base de datos de canciones en otro idioma.</p>
+                                                <p>
+                                                    At the moment we only support English, this is because the dataset we used only has english songs,
+                                                    maybe in the future we'll support Spanish, Portuguese, and more!
+                                                </p>
                                             </div>
                                         </div>
                                     </div> {/* .accordion-item */}
                                     <div className="accordion-item">
                                         <h3 className="mb-0 heading">
-                                            <a className="btn-block" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">¿La base de datos utilizada en NeuraLyrics.com consta de canciones de un solo género musical o varios géneros?<span className="icon" /></a>
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">
+                                                How many genres do you support?
+                                            <span className="icon" /></a>
                                         </h3>
                                         <div id="collapseFour" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div className="body-text">
-                                                <p>La base de datos utilizada para la construcción del modelo de NeuraLyrics.com es de un solo género musical, en este caso es del género Pop, ya que encontramos que este género cuenta con una estructura mas definida que otros géneros, pero también contamos con bases de otros géneros como rock o hip hop y esperamos poder generar algún modelo usando estos géneros en un futuro</p>
+                                                <p>
+                                                    The database used for the construction of NeuraLyrics model is
+                                                    Pop genre, since we found that has a more defined structure than other genres, we also have
+                                                    bases from other genres such as rock, hip hop, samba, sertanejo, funk and we hope to be able to add them to the model 
+                                                    in the future.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> {/* .accordion-item */}
+                                    <div className="accordion-item">
+                                        <h3 className="mb-0 heading">
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false" aria-controls="collapseFive">
+                                                What kind of Neural Networks do NeuraLyrics use?
+                                            <span className="icon" /></a>
+                                        </h3>
+                                        <div id="collapseFive" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div className="body-text">
+                                                <p>
+                                                    NeuraLyrics goal is to  predict text to help musicians and create new text based in other text,
+                                                    so to reach that, we used Bidirectional Long Short Term Memory Neural Networks.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> {/* .accordion-item */}
+                                    <div className="accordion-item">
+                                        <h3 className="mb-0 heading">
+                                            <a className="btn-block" data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="false" aria-controls="collapseSix">
+                                                Why is there a Developer tab?
+                                            <span className="icon" /></a>
+                                        </h3>
+                                        <div id="collapseSix" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div className="body-text">
+                                                <p>
+                                                    If anyone in the future wants to use the model API, in the Developers section, they can read the documentation to interact with the API and
+                                                    the model.
+                                                </p>
                                             </div>
                                         </div>
                                     </div> {/* .accordion-item */}
@@ -74,12 +128,12 @@ function FAQ() {
                 <div className="bg-primary" data-aos="fade">
                     <div className="container">
                         <div className="row">
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-facebook text-white" /></a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-twitter text-white" /></a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-instagram text-white" /></a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-linkedin text-white" /></a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-pinterest text-white" /></a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block"><span className="icon-youtube text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-facebook text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-twitter text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-instagram text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-linkedin text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-pinterest text-white" /></a>
+                            <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-youtube text-white" /></a>
                         </div>
                     </div>
                 </div>
