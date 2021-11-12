@@ -10,10 +10,18 @@ var quoteArray;
 var textPosition = 0; 
 var speed = 20;
 var rebooted= false;
+var funfacts= ['Oh mira, tu gfa es hombre...', 'el dinero es dinero, el dinero es dinero...', 'No existe el conejo de pascua , no existe el ratón de los dientes, y no existe la reina de Inglaterra!!!', 'Ah, eres un villano si, pero no un supervillano', 'Lo tenemos todo y no tenemos nada...', 'La nada es la ausencia de todo, qué es todo? Todo es con cebolla, cilantro, salsa y limón' , 'Frase genérica, ya no se me ocurrió nada']
 function sendWord(engword, percentval) {
 
     localStorage.setItem("EnglishWord-Value",engword); 
     localStorage.setItem("Percentage-Value",percentval); 
+
+    var myVar= setInterval(myFunFactsFunction, 6000); 
+    function myFunFactsFunction(){
+        var position= getRandomInt(0, funfacts.length - 1);
+
+        myFunFactsTypewriter('myTextReceived', position, 0);
+    }
 
     fetch('http://localhost/lyrics', {
         method:'POST',
@@ -27,11 +35,12 @@ function sendWord(engword, percentval) {
         var wholeAnswer= JSON.stringify(json)
         var resp= JSON.parse(wholeAnswer);
 
+        clearInterval(myVar);
         if(typeof resp.message !== 'undefined' && resp.message.length > 0){
             alert('Oops, ocurrió un error');
             document.getElementById('MyTestButton').disabled= false;
-            ReactDOM.unmountComponentAtNode(one);
         }else{
+            console.log('Texto: ' + resp);
             document.querySelector("#myTextReceived").innerHTML= '';
 
             let ele = document.getElementById('lyricContainer');
@@ -101,8 +110,22 @@ function sendWord(engword, percentval) {
     })
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
 function updateInput(e){
     e.target.value = e.target.value.replace(/\s/g, "");
+}
+
+function myFunFactsTypewriter(receivedId, arrayPosition, textPosition){
+    document.getElementById(receivedId).innerHTML = funfacts[arrayPosition].substring(0, textPosition) + '<span>\u25AE</span>';
+  
+    if((textPosition++ < funfacts[arrayPosition].length) && !rebooted){
+        setTimeout(myFunFactsTypewriter.bind(null, receivedId, arrayPosition, textPosition), speed);
+    }else{
+        document.getElementById(receivedId).innerHTML = funfacts[arrayPosition].substring(0, textPosition);
+    }
 }
 
 function myTypewriter(receivedId, arrayPosition, textPosition){
@@ -207,6 +230,8 @@ function Lyricgenerator() {
                         Download
                     </Button>
                     <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
+                        let ele = document.getElementById('lyricContainer');
+                        ele.innerHTML = "";
                         quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
                         textPosition= 0;
                         rebooted= false;
