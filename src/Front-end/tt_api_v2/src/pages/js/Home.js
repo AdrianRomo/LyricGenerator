@@ -1,23 +1,19 @@
 import React from 'react';
 import Lyricgenerator from './Lyricgenerator';
 import Navbar from "../../components/Navbar";
-import Header from "../../components/Header";
+import { Header } from "../../components/Header";
 import Footer from "../../components/Footer";
+import MobileMenu from '../../components/MobileMenu';
+import SocialNetworksFooter from '../../components/SocialNetworksFooter';
+import { AboutLink } from '../../components/AboutLink';
 
 function Home() {
     return (
         <>
-            <div className="site-mobile-menu">
-                <div className="site-mobile-menu-header">
-                    <div className="site-mobile-menu-close mt-3">
-                        <span className="icon-close2 js-menu-toggle" />
-                    </div>
-                </div>
-                <div className="site-mobile-menu-body" />
-            </div> {/* .site-mobile-menu */}
-            <Header />
+            <MobileMenu />
+            <Header headerClass="site-blocks-cover overlay" background={'url("images/hero_bg_3.jpg")'} headerChildren={<Lyricgenerator/>}/>
             <div className="site-section">
-                <div className="container">
+            <div className="container">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
                             <h2 className="mb-5">Some interesting articles about Artificial Intelligence!</h2>
@@ -25,28 +21,13 @@ function Home() {
                         </div>
                     </div>
                     <div className="site-block-retro d-block d-md-flex">
-                        <a href="https://levelup.gitconnected.com/lyrics-generation-using-lstm-5a5a0bcac4fa" className="col1 unit-9 no-height" data-aos="fade-up" data-aos-delay={100}>
-                            <div className="image" style={{ backgroundImage: 'url("images/img_2.jpg")' }} />
-                            <div className="unit-9-content">
-                                <h2>Lyrics Generator using LSTM</h2>
-                                <span>Indie project to generate Taylor Swift alike lyrics with AI</span>
-                            </div>
-                        </a>
+                        <AboutLink aboutClassName="col1 unit-9 no-height" aboutLink="https://levelup.gitconnected.com/lyrics-generation-using-lstm-5a5a0bcac4fa" aboutDelay={100} aboutBackground={'url("images/img_2.jpg")'} 
+                            aboutTitle="Lyrics Generator using LSTM" aboutText="Indie project to generate Taylor Swift alike lyrics with AI"/>
                         <div className="col2 ml-auto">
-                            <a href="https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/" className="col2-row1 unit-9 no-height" data-aos="fade-up" data-aos-delay={200}>
-                                <div className="image" style={{ backgroundImage: 'url("images/img_3.jpg")' }} />
-                                <div className="unit-9-content">
-                                    <h2>Build and deploy a React page with Bootstrap</h2>
-                                    <span>Brief explanation to create a webapp with React</span>
-                                </div>
-                            </a>
-                            <a href="https://www.theverge.com/2016/9/26/13055938/ai-pop-song-daddys-car-sony" className="col2-row2 unit-9 no-height" data-aos="fade-up" data-aos-delay={300}>
-                                <div className="image" style={{ backgroundImage: 'url("images/img_1.jpg")' }} />
-                                <div className="unit-9-content">
-                                    <h2>AI-written pop dire warning for humanity</h2>
-                                    <span>A Lyric Generator using "The Beatles" songs</span>
-                                </div>
-                            </a>
+                            <AboutLink aboutClassName="col2-row1 unit-9 no-height" aboutLink="https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121" aboutDelay={200} aboutBackground={'url("images/img_3.jpg")'} 
+                                aboutTitle="Build and deploy a React page with Bootstrap" aboutText="Brief explanation to create a webapp with React"/>
+                            <AboutLink aboutClassName="col2-row2 unit-9 no-height" aboutLink="https://www.theverge.com/2016/9/26/13055938/ai-pop-song-daddys-car-sony" aboutDelay={300} aboutBackground={'url("images/img_1.jpg")'} 
+                                aboutTitle="AI-written pop dire warning for humanity" aboutText='A Lyric Generator using "The Beatles" songs'/>
                         </div>
                     </div>
                 </div>
@@ -228,18 +209,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-primary" data-aos="fade">
-                <div className="container">
-                    <div className="row">
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-facebook text-white" /></a>
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-twitter text-white" /></a>
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-instagram text-white" /></a>
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-linkedin text-white" /></a>
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-pinterest text-white" /></a>
-                        <a href="" className="col-2 text-center py-4 social-icon d-block"><span className="icon-youtube text-white" /></a>
-                    </div>
-                </div>
-            </div>
+            <SocialNetworksFooter />
         </>
     );
 }

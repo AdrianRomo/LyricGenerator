@@ -199,15 +199,19 @@ function Lyricgenerator() {
                                     Home
                                 </Button>
                                 <Button buttonId='button-addon2' buttonClass='btn btn-primary' type="button" onClick={() => {
-                                    document.getElementById('thirdDiv').className= 'contentTwoThree-show';
-                                    document.getElementById('secondDiv').className= 'contentTwoThree-hide';
-                                    document.getElementById('MyTestButton').disabled= true;
-                                    document.getElementById('downloadButton').disabled= true;
-                                    document.getElementById('regenerateButton').disabled= true;
-                                    quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
-                                    textPosition= 0;
-                                    myTypewriter('myTextReceived', 0, 0);
-                                    sendWord(document.getElementById('english-word').value, 50);
+                                    if(document.getElementById('english-word').value.length > 0){
+                                        document.getElementById('thirdDiv').className= 'contentTwoThree-show';
+                                        document.getElementById('secondDiv').className= 'contentTwoThree-hide';
+                                        document.getElementById('MyTestButton').disabled= true;
+                                        document.getElementById('downloadButton').disabled= true;
+                                        document.getElementById('regenerateButton').disabled= true;
+                                        quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
+                                        textPosition= 0;
+                                        myTypewriter('myTextReceived', 0, 0);
+                                        sendWord(document.getElementById('english-word').value, 50);
+                                    }else{
+                                        alert('Oops! Olvidaste poner la palabra con la que se generará la canción 😱');
+                                    }
                                 }}>
                                     Generate a Song <i className="fas fa-play fa-xs" />
                                 </Button>
