@@ -10,6 +10,7 @@ var quoteArray;
 var textPosition = 0; 
 var speed = 20;
 var rebooted= false;
+var lyricCounterToEnableButtons= 0;
 var funfacts= ['Oh mira, tu gfa es hombre...', 'el dinero es dinero, el dinero es dinero...', 'No existe el conejo de pascua , no existe el ratón de los dientes, y no existe la reina de Inglaterra!!!', 'Ah, eres un villano si, pero no un supervillano', 'Lo tenemos todo y no tenemos nada...', 'La nada es la ausencia de todo, qué es todo? Todo es con cebolla, cilantro, salsa y limón' , 'Frase genérica, ya no se me ocurrió nada']
 function sendWord(engword, percentval) {
 
@@ -97,10 +98,11 @@ function sendWord(engword, percentval) {
                 ele.innerHTML += one.innerText;
                 myTypewriter('verso_3', 3, 0);
             }
-            
+            /*
             document.getElementById('downloadButton').disabled= false;
             document.getElementById('regenerateButton').disabled= false;
             document.getElementById('MyTestButton').disabled= false;
+            */
             ReactDOM.unmountComponentAtNode(one);
         }
 
@@ -135,6 +137,13 @@ function myTypewriter(receivedId, arrayPosition, textPosition){
         setTimeout(myTypewriter.bind(null, receivedId, arrayPosition, textPosition), speed);
     }else{
         document.getElementById(receivedId).innerHTML = quoteArray[arrayPosition].substring(0, textPosition);
+        lyricCounterToEnableButtons++;
+
+        if(lyricCounterToEnableButtons > 4){
+            document.getElementById('downloadButton').disabled= false;
+            document.getElementById('regenerateButton').disabled= false;
+            document.getElementById('MyTestButton').disabled= false;
+        }
     }
 }
 
