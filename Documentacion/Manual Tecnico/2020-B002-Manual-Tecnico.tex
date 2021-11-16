@@ -717,13 +717,13 @@
 	\end{figure}
 	La más importante de estas páginas es la página principal, debido a que es esta la primer a que va a ver el usuario y con la que más va a interactuar, en esta, aparece un mensaje con un botón el cual invita al usuario a generar su propia letra musical.
 	\begin{figure}[H]
-		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pbienvenida.png}
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Paginaweb.png}
 		\centering 
 		\caption{Página de bienvenida}
 	\end{figure}
 	Si el usuario le da clic al botón, como React usa estados para renderizar lo que ve el usuario, se muestra en pantalla el formulario donde se le pide al usuario que introduzca una palabra en el idioma inglés, así como se muestra una barra donde el usuario puede ingresar que tanto quiere que rime la letra de esta canción.
 	\begin{figure}[H]
-		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pformulario.png}
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/pform.png}
 		\centering 
 		\caption{Formulario}
 	\end{figure}
@@ -734,16 +734,17 @@
 	En esta función lo primero que se hace es recibir los datos (la palabra y el porcentaje) que introdujo el usuario, esto se hace buscado los identificadores de los elemento de la página y obteniendo sus valores, estos, se enviaran al back-end usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro back-end y busca el método post de esta, como el método post de nuestro back-end recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato.\\\\
 	Una vez que el usuario le dio clic al botón de generar canción se muestra una leyenda la cual le pide al usuario que aguarde unos segundos, que se está trabajando en su letra. Pasados unos segundos después, en pantalla se le mostrara la letra de la canción generada, así como 3 botones, el primero de ellos le permite descargar la letra generada en un archivo de texto, el segundo le permite al usuario generar una nueva canción utilizando los mismos parámetros con los que genero la letra actual y el ultimo lo regresa al estado anterior para introducir nuevos parámetros y con estos generar una nueva letra.
 	\begin{figure}[H]
-		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Pleyenda.png}
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/pgenerating.png}
 		\centering 
 		\caption{Leyenda mostrada}
 	\end{figure}
 	\begin{figure}[H]
-	\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Ptexto.png}
+	\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/x.png}
 	\centering 
 	\caption{Texto generado}
 	\end{figure}
 	Adentrándonos a esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el back-end para que la página pueda recibir el texto generado por el modelo.
+	\newpage
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/ModelConection.js}
 	\end{center}

@@ -2727,9 +2727,130 @@ Una vez completado el despliegue, se nos genera un enlace con el cual se puede a
 	\centering 
 	\caption{Accediendo a la aplicación web desplegada}
 \end{figure}
-En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido.
+En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel al enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido, este es  \textbf{www.neuralyrics.com}
 
 \section{Pruebas}
+
+En esta sección se observan capturas de pantalla de nuestra aplicación web, en ejecución, es decir, generando textos, permitiendo al usuario descargarlos, generar nuevos textos usando la misma palabra previamente introducida o con una nueva, así como dejándolo acceder a las distintas pestañas de la pagina web.
+
+\subsection{Acceso a la aplicación web}
+
+Lo primero que se debe hacer, es ingresar al sitio web \textbf{www.neuralyrics.com} y una vez este termine de desplegarse, se podrá empezar a interactuar.\\\\
+\begin{figure}[H]
+	\includegraphics[width=13cm]{./imagenes/Pruebas/pprincipal.png}
+	\centering \caption{Pantalla principal al terminar la carga.}
+\end{figure}
+Al entrar, se muestra la siguiente pantalla donde se muestran dos leyendas breves y un botón invitando a empezar el funcionamiento principal de la aplicación web.
+\begin{figure}[H]
+	\includegraphics[width=13cm]{./imagenes/Pruebas/pprincipal.png}
+	\centering \caption{Página de inicio de la aplicación web.}
+\end{figure}
+
+\subsection{Inicio de la generación de letras de canciones}
+
+Si se da clic al botón mencionado anteriormente, se va a iniciar un efecto de desvanecimiento del texto de toda la pantalla para iniciar otro efecto para que aparezcan nuevas instrucciones en esta misma pantalla, todo esto sin necesidad de otra interacción, esto con el objetivo de que las distracciones se eliminen completamente y se pueda concentrar en el funcionamiento de la aplicación.
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pform.png}
+	\centering \caption{Segunda pantalla al dar clic al botón principal.}
+\end{figure}
+
+\subsection{Segunda pantalla para generar letras de canciones}
+
+La siguiente pantalla después del desvanecimiento, muestra instrucciones para ingresar una palabra en idioma inglés dentro de un campo vacío, así como un botón para empezar a generar la letra musical.
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pform.png}
+	\centering \caption{Página del funcionamiento para generar una letra de canción.}
+\end{figure}
+
+Si el campo se deja vacío y se da clic al botón para generar una canción, se mostrará un mensaje obligando a rellenar el campo.
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/Noword.png}
+	\centering \caption{Mensaje mostrado si el campo se dejó vacío.}
+\end{figure}
+
+Para esta prueba se va a utilizar la palabra x como tema principal de la letra musical a generar
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+	\centering \caption{Página de funcionamiento para generar una letra de canción usando la palabra x.}
+\end{figure}
+
+\subsection{Resultado mostrando la letra de canción}
+Después de dar clic al botón cumpliendo los requerimientos presentados en las instrucciones, se seguirá a una pantalla de carga en lo que se procesa la solicitud al sistema central de la aplicación, estos mensajes son para indicar al usuario que se esta trabajando en generar la letra musical y que espere un momento, evitando que este se frustre y recargue la pagina.
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pgenerating.png}
+	\centering \caption{Pantalla de carga.}
+\end{figure}
+
+Una vez procesada la solicitud, se empezará a generar la canción con un efecto de typewriter y separando los versos y coros de la letra generada como resultado final, ademas de  tres botones diferentes, estos, mientras se esta generando la letra, se encontraran bloqueados.
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+	\centering \caption{Página con la letra generada.}
+\end{figure}
+
+Los botones que se pueden encontrar debajo de la letra generada son:
+
+\begin{itemize}
+	\item Download: Permite descargar la canción en formato txt.
+	
+	\begin{figure}[H] 
+		\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+		\centering \caption{Botón de descarga en funcionamiento.}
+	\end{figure}
+
+	\begin{figure}[H] 
+		\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+		\centering \caption{Documento con letra generada.}
+	\end{figure}
+	
+	\item Regenerate Lyrics: Da la posibilidad de generar otra letra de canción con la misma palabra de la primera solicitud.
+	
+	\begin{figure}[H] 
+		\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+		\centering \caption{Botón para generar lyric de nuevo.}
+	\end{figure}
+	
+	\item Start Again: Lleva a la pantalla anterior para volver a rellenar el campo con la palabra deseada.
+	
+	\begin{figure}[H] 
+		\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+		\centering \caption{Botón para reiniciar el proceso.}
+	\end{figure}
+\end{itemize}
+
+Se hizo clic al botón Regenerate Lyrics para probar volver a generar otra letra de canción utilizando la misma palabra previamente introducida (x).
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/x.png}
+	\centering \caption{Letra de canción nuevamente generada usando la palabra x.}
+\end{figure}
+
+\subsection{Pantalla Developers}
+Es una pantalla que muestra la documentación apropiada de la API generada a desarrolladores, en caso de que se requiera implementar llamadas al microservicio creado para poder generar lyrics, el usuario podrá acceder a esta pantalla y revisar los endpoints funcionales con una interfaz amigable para los desarrolladores.
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pdev.png}
+	\centering \caption{Pantalla de developers mostrando los endpoints a los que se pueden acceder para llamar al microservicio.}
+\end{figure}
+
+\subsection{Pantalla Contact}
+Permite tener contacto directo con los desarrolladores del micro-servicio y la página accediendo a esta pantalla, si se rellena el formulario con los datos de cada campo y dando clic al botón de “Enviar", se establecerá comunicación por medio de correo electrónico a la dirección ttlyrics.escom@gmail.com, el cual será revisado y contestado personalmente por algún integrante del equipo desarrollador.
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pcontact.png}
+	\centering \caption{Pantalla de contacto.}
+\end{figure}
+
+\begin{figure}[H] 
+	\includegraphics[width=13.5cm]{./imagenes/Pruebas/pcontact.png}
+	\centering \caption{Correo recibido.}
+\end{figure}
+
+
+\newpage
 
 \chapter{\textcolor{azulescom}{Conclusiones}}
 
@@ -2740,6 +2861,8 @@ En nuestro caso, previamente se había adquirido un dominio, para realizar el ca
 %                                                                                                                                                                                                 %
 %                                                                                                                                                                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 
 \chapter{\textcolor{azulescom}{Trabajo a futuro}}
 

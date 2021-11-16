@@ -16,18 +16,18 @@ function Home() {
             <div className="container">
                     <div className="row">
                         <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-                            <h2 className="mb-5">Some interesting articles about Artificial Intelligence!</h2>
-                            <p>Here you can find some articles that influenced us to come up with this great idea.</p>
+                            <h2 className="mb-5">Documents about this project</h2>
+                            <p>Here you can find in detail how the project was developed, researched, and deployed.</p>
                         </div>
                     </div>
                     <div className="site-block-retro d-block d-md-flex">
-                        <AboutLink aboutClassName="col1 unit-9 no-height" aboutLink="https://levelup.gitconnected.com/lyrics-generation-using-lstm-5a5a0bcac4fa" aboutDelay={100} aboutBackground={'url("images/img_2.jpg")'} 
-                            aboutTitle="Lyrics Generator using LSTM" aboutText="Indie project to generate Taylor Swift alike lyrics with AI"/>
+                        <AboutLink aboutClassName="col1 unit-9 no-height" aboutLink="docs/2020-B002-TT.pdf" aboutDelay={100} aboutBackground={'url("images/img_2.jpg")'} 
+                            aboutTitle="2020-B002 Document" aboutText="This research paper contains all the information about the specs and research in order to complete this project"/>
                         <div className="col2 ml-auto">
-                            <AboutLink aboutClassName="col2-row1 unit-9 no-height" aboutLink="https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121" aboutDelay={200} aboutBackground={'url("images/img_3.jpg")'} 
-                                aboutTitle="Build and deploy a React page with Bootstrap" aboutText="Brief explanation to create a webapp with React"/>
-                            <AboutLink aboutClassName="col2-row2 unit-9 no-height" aboutLink="https://www.theverge.com/2016/9/26/13055938/ai-pop-song-daddys-car-sony" aboutDelay={300} aboutBackground={'url("images/img_1.jpg")'} 
-                                aboutTitle="AI-written pop dire warning for humanity" aboutText='A Lyric Generator using "The Beatles" songs'/>
+                            <AboutLink aboutClassName="col2-row1 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Tecnico.pdf" aboutDelay={200} aboutBackground={'url("images/img_3.jpg")'} 
+                                aboutTitle="Technical Manual" aboutText="Manual that contains all the technologies and tools used to develop and deploy this web page, the model and the back end that contains that model and the one that generates the lyrics."/>
+                            <AboutLink aboutClassName="col2-row2 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Usuario.pdf" aboutDelay={300} aboutBackground={'url("images/img_1.jpg")'} 
+                                aboutTitle="User Manual" aboutText='Brief manual that describes all the web page and how to make a correct use of it '/>
                         </div>
                     </div>
                 </div>
@@ -157,15 +157,15 @@ function Home() {
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
                             <div className="team-member">
-                                <img src="images/person_3.jpg" alt="Image" className="img-fluid" />
+                                <img src="images/Alfredo.png" alt="Image" className="img-fluid" />
                                 <div className="text">
                                     <h2 className="mb-2 font-weight-light h4">Alfredo Gómez</h2>
                                     <span className="d-block mb-2 text-white-opacity-05">Backend Developer</span>
-                                    <p className="mb-4">Aquí va a ir una breve descripción de nosotros.</p>
+                                    <p className="mb-4">I’m a person who does with interest the things that he likes and attracts his attention, if they don’t interest me, I postpone them as long as possible.</p>
                                     <p>
-                                        <a href="#" className="text-white p-2"><span className="icon-facebook" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-twitter" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-linkedin" /></a>
+                                        <a href="" className="text-white p-2"><span className="icon-facebook" /></a>
+                                        <a href="" className="text-white p-2"><span className="icon-twitter" /></a>
+                                        <a href="" className="text-white p-2"><span className="icon-linkedin" /></a>
                                     </p>
                                 </div>
                             </div>

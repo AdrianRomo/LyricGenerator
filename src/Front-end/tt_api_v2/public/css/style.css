@@ -73,7 +73,8 @@ a {
   .btn.btn-sm {
     font-size: 0.9rem; }
   .btn.btn-primary {
-    color: #fff; }
+    color: #fff;
+    margin-left: 20px; }
   .btn.btn-outline-primary:hover {
     color: #fff !important; }
   .btn.btn-black {
