@@ -12,26 +12,6 @@ function Home() {
         <>
             <MobileMenu />
             <Header headerClass="site-blocks-cover overlay" background={'url("images/hero_bg_3.jpg")'} headerChildren={<Lyricgenerator/>}/>
-            <div className="site-section">
-            <div className="container">
-                    <div className="row">
-                        <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-                            <h2 className="mb-5">Documents about this project</h2>
-                            <p>Here you can find in detail how the project was developed, researched, and deployed.</p>
-                        </div>
-                    </div>
-                    <div className="site-block-retro d-block d-md-flex">
-                        <AboutLink aboutClassName="col1 unit-9 no-height" aboutLink="docs/2020-B002-TT.pdf" aboutDelay={100} aboutBackground={'url("images/img_2.jpg")'} 
-                            aboutTitle="2020-B002 Document" aboutText="This research paper contains all the information about the specs and research in order to complete this project"/>
-                        <div className="col2 ml-auto">
-                            <AboutLink aboutClassName="col2-row1 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Tecnico.pdf" aboutDelay={200} aboutBackground={'url("images/img_3.jpg")'} 
-                                aboutTitle="Technical Manual" aboutText="Manual that contains all the technologies and tools used to develop and deploy this web page, the model and the back end that contains that model and the one that generates the lyrics."/>
-                            <AboutLink aboutClassName="col2-row2 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Usuario.pdf" aboutDelay={300} aboutBackground={'url("images/img_1.jpg")'} 
-                                aboutTitle="User Manual" aboutText='Brief manual that describes all the web page and how to make a correct use of it '/>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             {/*<div className="site-section bg-light block-13">
                 <div className="container" data-aos="fade-up">
@@ -116,63 +96,6 @@ function Home() {
                     </div>
                 </div>
             </div>*/}
-            <div className="site-section">
-                <div className="container" data-aos="fade-up">
-                    <div className="row">
-                        <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-                            <h2 className="mb-5">Our Team</h2>
-                            <p>Three Computer Science graduates of the National Polytechnic Institute joined and collaborated in every aspect to develop this tool</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
-                            <div className="team-member">
-                                <img src="images/person_1.jpg" alt="Image" className="img-fluid" />
-                                <div className="text">
-                                    <h2 className="mb-2 font-weight-light h4">Adrian Romo</h2>
-                                    <span className="d-block mb-2 text-white-opacity-05">Fullstack and Machine Learning Developer</span>
-                                    <p className="mb-4">Aquí va a ir una breve descripción de nosotros.</p>
-                                    <p>
-                                        <a href="#" className="text-white p-2"><span className="icon-facebook" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-twitter" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-linkedin" /></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
-                            <div className="team-member">
-                                <img src="images/person_2.jpg" alt="Image" className="img-fluid" />
-                                <div className="text">
-                                    <h2 className="mb-2 font-weight-light h4">Jaime Lechuga</h2>
-                                    <span className="d-block mb-2 text-white-opacity-05">Frontend Developer</span>
-                                    <p className="mb-4">Aquí va a ir una breve descripción de nosotros.</p>
-                                    <p>
-                                        <a href="#" className="text-white p-2"><span className="icon-facebook" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-twitter" /></a>
-                                        <a href="#" className="text-white p-2"><span className="icon-linkedin" /></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
-                            <div className="team-member">
-                                <img src="images/Alfredo.png" alt="Image" className="img-fluid" />
-                                <div className="text">
-                                    <h2 className="mb-2 font-weight-light h4">Alfredo Gómez</h2>
-                                    <span className="d-block mb-2 text-white-opacity-05">Backend Developer</span>
-                                    <p className="mb-4">I’m a person who does with interest the things that he likes and attracts his attention, if they don’t interest me, I postpone them as long as possible.</p>
-                                    <p>
-                                        <a href="" className="text-white p-2"><span className="icon-facebook" /></a>
-                                        <a href="" className="text-white p-2"><span className="icon-twitter" /></a>
-                                        <a href="" className="text-white p-2"><span className="icon-linkedin" /></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className="site-section bg-light">
                 <div className="container">
                     <div className="row">
@@ -205,6 +128,83 @@ function Home() {
                                 <center><h2 className="h5 text-black mb-3">Wonderful</h2></center>
                                 <center><p>Wonderful things that you come round impound here you see me your mind you see my body off your hand it feels like a conversation  i don't wanna know know know know i don't know why i don't know why</p></center>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="site-section">
+                <div className="container" data-aos="fade-up">
+                    <div className="row">
+                        <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+                            <h2 className="mb-5">Our Team</h2>
+                            <p>Three Computer Science graduates of the National Polytechnic Institute joined and collaborated in every aspect to develop this tool</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                            <div className="team-member">
+                                <img src="images/Adrian1.jpg" alt="Image" className="img-fluid" />
+                                <div className="text">
+                                    <h2 className="mb-2 font-weight-light h4">Adrian Romo</h2>
+                                    <span className="d-block mb-2 text-white-opacity-05">Fullstack and Machine Learning Developer</span>
+                                    <p className="mb-4">Aquí va a ir una breve descripción de nosotros.</p>
+                                    <p>
+                                        <a href="#" className="text-white p-2"><span className="icon-facebook" /></a>
+                                        <a href="#" className="text-white p-2"><span className="icon-twitter" /></a>
+                                        <a href="#" className="text-white p-2"><span className="icon-linkedin" /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                            <div className="team-member">
+                                <img src="images/Jaime1.jpg" alt="Image" className="img-fluid" />
+                                <div className="text">
+                                    <h2 className="mb-2 font-weight-light h4">Jaime Lechuga</h2>
+                                    <span className="d-block mb-2 text-white-opacity-05">Frontend Developer</span>
+                                    <p className="mb-4">Aquí va a ir una breve descripción de nosotros.</p>
+                                    <p>
+                                        <a href="#" className="text-white p-2"><span className="icon-facebook" /></a>
+                                        <a href="#" className="text-white p-2"><span className="icon-twitter" /></a>
+                                        <a href="#" className="text-white p-2"><span className="icon-linkedin" /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                            <div className="team-member">
+                                <img src="images/Alfredo.png" alt="Image" className="img-fluid" />
+                                <div className="text">
+                                    <h2 className="mb-2 font-weight-light h4">Alfredo Gómez</h2>
+                                    <span className="d-block mb-2 text-white-opacity-05">Backend Developer</span>
+                                    <p className="mb-4">I’m a person who does with interest the things that he likes and attracts his attention, if they don’t interest me, I postpone them as long as possible.</p>
+                                    <p>
+                                        <a href="" className="text-white p-2"><span className="icon-facebook" /></a>
+                                        <a href="" className="text-white p-2"><span className="icon-twitter" /></a>
+                                        <a href="" className="text-white p-2"><span className="icon-linkedin" /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="site-section">
+            <div className="container">
+                    <div className="row">
+                        <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
+                            <h2 className="mb-5">Documents about this project</h2>
+                            <p>Here you can find in detail how the project was developed, researched, and deployed.</p>
+                        </div>
+                    </div>
+                    <div className="site-block-retro d-block d-md-flex">
+                        <AboutLink aboutClassName="col1 unit-9 no-height" aboutLink="docs/2020-B002-TT.pdf" aboutDelay={100} aboutBackground={'url("images/img_2.jpg")'} 
+                            aboutTitle="2020-B002 Document" aboutText="This research paper contains all the information about the specs and research in order to complete this project"/>
+                        <div className="col2 ml-auto">
+                            <AboutLink aboutClassName="col2-row1 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Tecnico.pdf" aboutDelay={200} aboutBackground={'url("images/img_3.jpg")'} 
+                                aboutTitle="Technical Manual" aboutText="Manual that contains all the technologies and tools used to develop and deploy this web page, the model and the back end that contains that model and the one that generates the lyrics."/>
+                            <AboutLink aboutClassName="col2-row2 unit-9 no-height" aboutLink="docs/2020-B002-Manual-Usuario.pdf" aboutDelay={300} aboutBackground={'url("images/img_1.jpg")'} 
+                                aboutTitle="User Manual" aboutText='Brief manual that describes all the web page and how to make a correct use of it '/>
                         </div>
                     </div>
                 </div>
