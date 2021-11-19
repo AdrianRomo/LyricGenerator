@@ -3,18 +3,18 @@ import React from 'react'
 function Form() {
     return (
         <>
-            <form action="https://formspree.io/f/xknklaew"
+            <form action="https://formspree.io/f/xknklaew" onsubmit="this.submit(); this.reset(); return false;"
                 method="POST" className="p-5 bg-white" name="contactform">
                 <div className="row form-group">
                     <div className="col-md-12 mb-3 mb-md-0">
                         <label className="font-weight-bold" htmlFor="fullname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" className="form-control" placeholder="Full Name" />
+                        <input type="text" id="fullname" name="fullname" className="form-control" placeholder="John" />
                     </div>
                 </div>
                 <div className="row form-group">
                     <div className="col-md-12">
                         <label className="font-weight-bold" htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" className="form-control" placeholder="Email Address" />
+                        <input type="email" id="email" name="email" className="form-control" placeholder="your_name@mail.com" />
                     </div>
                 </div>
                 <div className="row form-group">

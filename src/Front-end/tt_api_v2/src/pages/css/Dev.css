@@ -1,3 +1,19 @@
-.dev-container {
-    overflow: auto;
-  }
+.myDevContainer {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+}
+
+.myDevContainer {
+    overflow: hidden;
+    /* 16:9 aspect ratio */
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.myDevContainer iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

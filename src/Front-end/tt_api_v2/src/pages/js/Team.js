@@ -10,16 +10,33 @@ function Team() {
             <div>
                 <MobileMenu />
                 <Header headerClass="site-blocks-cover inner-page-cover overlay" headerTitle= "Our Team" headerTitleClass="text-white h1" background={'url("images/hero_bg_3.jpg")'}/>
-                <TeamContainer containerTitle="Featured DJ — Adrian Romo" containerBackground= {'url(images/Adrian1.jpg)'} containerImageOrder="image bg-image order-1" containerTextOrder= "text order-2"
-                    containerText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus."
-                    containerSubtext="Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et."/>
-                <TeamContainer containerTitle="Featured DJ — Jaime Espinosa" containerBackground= {'url(images/Jaime1.jpg)'} containerImageOrder="image bg-image order-2" containerTextOrder= "text order-1"
-                    containerText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus."
-                    containerSubtext="Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et."/>
+                <TeamContainer containerTitle="Edgar Adrian Nava Romo" containerBackground= {'url(images/Adrian1.jpg)'} containerImageOrder="image bg-image order-1" containerTextOrder= "text order-2"
+                    containerText="Full-stack and Machine Learning Developer"
+                    containerSubtext={
+                        <>
+                            <p>Adrian always has loved technology since he remembers, he always have that passion for the new innovations in the market and fantasized about all the wonders that the computers can reach.</p>
+                            <p>He is currently a graduate in Computer Science in National Polytechnic Institute in a continous search for new innovations, exploring new technologies to develop software solutions using the creativity and teamwork with an expertize in Artificial Intelligence, Systems Design, and Data Science.</p>
+                            <p>In his free time, he likes to play videogames, search for IoT projects and tour around the city as hobbies/side hustles.</p>
+                        </>
+                    }/>
+                <TeamContainer containerTitle="Jaime Daniel Espinosa de los Monteros Lechuga" containerBackground= {'url(images/Jaime2.jpg)'} containerImageOrder="image bg-image order-2" containerTextOrder= "text order-1"
+                    containerText="Front-end and Mobile Developer"
+                    containerSubtext={
+                        <>
+                            <p>Fascinated with new mobile technologies, Jaime decided to study Computer Science in National Polytechnic Institute where he increased the love and knowledges for web and mobile apps, reaching even more than 100k downloads of an app per year.</p>
+                            <p>Watch movies, series, share social network memes and enter to hackathons to challenge his knowledge are some of his hobbies.</p>
+                            <p>Always in continous search of new mobile coding and design related technologies to develop new applications to help the world and improve the day to day of many people with his apps while he does what he loves the most.</p>
+                        </>
+                    }/>
                 <TeamContainer containerTitle="Alfredo Emilio Salgado Gómez" containerBackground= {'url(images/Alfredo2.png)'} containerImageOrder="image bg-image order-1" containerTextOrder= "text order-2"
-                    containerText="Proud graduate of the center for scientific and technological studies no.13 “Ricardo Flores Magón”, a school to which I am grateful for my education. Graduated from this school as a computer technician, I’m a person who does with interest the things that he likes and attracts his attention, if they don’t interest me, I postpone them as long as possible."
-                    containerSubtext="What I like to do the most and what I dedicate almost all my free time and passion is drawing, painting and designing, mainly interior design. I’m always looking to learn new things that I know may be useful to me in the future. One problem I have is that sometimes I become a perfectionist."/>
-                <SocialNetworksFooter />
+                    containerText="Front-end Developer"
+                    containerSubtext={
+                    <>
+                        <p>His story begins in the center for scientific and technological studies no.13 “Ricardo Flores Magón”, a school to which he is very grateful for the education.</p>
+                        <p>Now, he is a graduate from Computer Science engineer in the National Polytechnic Institute, focused on the design of the front end with expertize in cryptography and artifficial intelligence, looking for the things he likes the most and attracts his attention.</p>
+                        <p>Some of his passions are drawing, painting and making awesome designs, mainly interior designs. Always looking to learn new things that he knows can be useful in the future.</p>
+                    </>
+                }/>
             </div>
 
         </>

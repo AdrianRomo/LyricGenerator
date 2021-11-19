@@ -36,7 +36,6 @@ function Contact() {
                         </>
                     }/>
                 </div>
-                <SocialNetworksFooter />
             </div>
         </>
     );

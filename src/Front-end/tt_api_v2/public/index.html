@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Generate your Lyrics with AI!"/>
@@ -28,12 +28,14 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/fl-bigmug-line.css">
+    <link rel="stylesheet" type="text/css" href="css/swagger-ui.css">
     
   
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <title>Neural Lyrics</title>
+    <title>NeuraLyrics</title>
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -54,5 +56,23 @@
     <script src="js/circleaudioplayer.js"></script>
 
     <script src="js/main.js"></script>
+    
+    <script src="swagger-ui-bundle.js"></script>
+    <script src="swagger-ui-standalone-preset.js"></script>
+
+    <script>
+    window.onload = function() {
+      const ui = SwaggerUIBundle({
+        url: "https://localhost/swagger.json",
+        dom_id: '#swagger-ui',
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ]
+      })
+
+      window.ui = ui
+    }
+    </script>
   </body>
 </html>

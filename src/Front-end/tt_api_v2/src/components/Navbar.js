@@ -8,7 +8,7 @@ function Navbar() {
             <div className="row align-items-center">
               <div className="col-8 col-md-8 col-lg-4">
                 <h1 className="mb-0">
-                  <a href="/" className="text-white h2 mb-0"><strong>Neural Lyrics<span className="text-primary">.</span></strong></a>
+                  <a href="/" className="text-white h2 mb-0"><strong>NeuraLyrics<span className="text-primary">.</span></strong></a>
                 </h1>
               </div>
               <div className="col-4 col-md-4 col-lg-8">

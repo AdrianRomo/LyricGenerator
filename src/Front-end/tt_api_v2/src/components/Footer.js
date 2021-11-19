@@ -7,7 +7,7 @@ function Footer() {
           <div className="row">
             <div className="col-lg-4">
               <div className="mb-5">
-                <h3 className="footer-heading mb-4">About Neural Lyrics</h3>
+                <h3 className="footer-heading mb-4">About NeuraLyrics</h3>
                 <p>
                   NeuraLyrics is a free webapp that offer the possibility
                   to generate a new world of ideas for musicians for lyric
@@ -53,7 +53,7 @@ function Footer() {
             </div>
             <div className="col-lg-4 mb-5 mb-lg-0">
               <div className="mb-5">
-                <h3 className="footer-heading mb-4">More about NeuraLyric</h3>
+                <h3 className="footer-heading mb-4">More about NeuraLyrics</h3>
                 <div className="block-16">
                   <figure>
                     <img src="images/img_1.jpg" alt="Image placeholder" className="img-fluid rounded" />
