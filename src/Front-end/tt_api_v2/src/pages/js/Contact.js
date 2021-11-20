@@ -3,8 +3,6 @@ import { BasicContainer } from '../../components/BasicContainer';
 import Form from '../../components/Form';
 import { Header } from '../../components/Header';
 import MobileMenu from '../../components/MobileMenu';
-import SocialNetworksFooter from '../../components/SocialNetworksFooter';
-
 function Contact() {
     return (
         <>
@@ -25,7 +23,7 @@ function Contact() {
                                     {/* <p className="mb-0 font-weight-bold">Phone</p> */}
                                     {/* <p className="mb-4"><a href="#">+52 55 4392 5179</a></p> */}
                                     <p className="mb-0 font-weight-bold">Email Address</p>
-                                    <p className="mb-0"><a href="">ttlyrics.escom@gmail.com</a></p>
+                                    <p className="mb-0"><a href="ttlyrics.escom@gmail.com">ttlyrics.escom@gmail.com</a></p>
                                 </div>
                                 {/* <div className="p-4 mb-3 bg-white">
                                     <h3 className="h5 text-black mb-3">More Info</h3>

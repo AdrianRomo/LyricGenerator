@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import '../css/Lyricgenerator.css';
 import { Button } from '../../components/Button.js';
-import DiscreteSlider from '../../components/Slider.js';
 import { Canvas } from './Canvas';
 import { Writing } from './Writing';
 
 var quoteArray;
-var textPosition = 0; 
 var speed = 20;
 var rebooted= false;
 var lyricCounterToEnableButtons= 0;
@@ -60,23 +58,19 @@ function sendWord(engword, percentval) {
             // Important!
             rebooted= false;
             var tempArray= [];
-            var verse_counter= 1;
             var chorus_counter= 0;
             for (const [key, value] of Object.entries(resp)) {
                 
                 if(key.includes('verse')){
                     if(key.includes('_1')){
                         tempArray.splice((1), 0, value[0]);
-                        verse_counter++;
                     }else if(key.includes('_2')){
                         tempArray.splice((2), 0, value[0]);
-                        verse_counter++;
                     }else{
                         tempArray.splice((3), 0, value[0]);
-                        verse_counter++;
                     }
                 }else{
-                    if(chorus_counter++ == 0){
+                    if(chorus_counter++ === 0){
                         tempArray.splice(0, 0, value[0]);
                     }
                 }
@@ -87,7 +81,6 @@ function sendWord(engword, percentval) {
                 quoteArray.push(tempArray[i]);
             }
 
-            textPosition= 0;
             myTypewriter('verso_1', 1, 0);
             myTypewriter('coro_1', 0, 0);
             myTypewriter('verso_2', 2, 0);
@@ -98,11 +91,6 @@ function sendWord(engword, percentval) {
                 ele.innerHTML += one.innerText;
                 myTypewriter('verso_3', 3, 0);
             }
-            /*
-            document.getElementById('downloadButton').disabled= false;
-            document.getElementById('regenerateButton').disabled= false;
-            document.getElementById('MyTestButton').disabled= false;
-            */
             ReactDOM.unmountComponentAtNode(one);
         }
 
@@ -215,7 +203,6 @@ function Lyricgenerator() {
                                         document.getElementById('downloadButton').disabled= true;
                                         document.getElementById('regenerateButton').disabled= true;
                                         quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
-                                        textPosition= 0;
                                         myTypewriter('myTextReceived', 0, 0);
                                         sendWord(document.getElementById('english-word').value, 50);
                                     }else{
@@ -246,7 +233,6 @@ function Lyricgenerator() {
                         let ele = document.getElementById('lyricContainer');
                         ele.innerHTML = "";
                         quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
-                        textPosition= 0;
                         rebooted= false;
                         myTypewriter('myTextReceived', 0, 0);
                         sendWord(document.getElementById('english-word').value, 50);

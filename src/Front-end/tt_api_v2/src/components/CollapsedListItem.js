@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CollapsedList_Item = ({
+export const CollapsedListItem = ({
     itemId,
     itemTitle,
     itemParagraph,
@@ -8,8 +8,8 @@ export const CollapsedList_Item = ({
 }) => {
 
     var collapsedClass;
-    if(isExpanded == "true")
-        collapsedClass= "collapse show"
+    if(isExpanded === "true")
+        collapsedClass= "collapse show";
     else
         collapsedClass= "collapse";
 
@@ -17,12 +17,12 @@ export const CollapsedList_Item = ({
         <>
             <div className="accordion-item">
                 <h3 className="mb-0 heading">
-                    <a className="btn-block" data-toggle="collapse" href={"#" + itemId} role="button" aria-expanded={isExpanded} aria-controls={itemId}>
+                    <a className="btn-block" data-toggle="collapse" href="/#" data-target={"#" + itemId} role="button" aria-expanded={isExpanded} aria-controls={itemId}>
                         {itemTitle} <span className="icon" /></a>
                 </h3>
                 <div id={itemId} className={collapsedClass} aria-labelledby="headingOne" data-parent="#accordion">
                     <div className="body-text">
-                        <p> {itemParagraph} </p>
+                        {itemParagraph} 
                     </div>
                 </div>
             </div> {/* .accordion-item */}

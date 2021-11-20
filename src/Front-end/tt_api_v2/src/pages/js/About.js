@@ -1,10 +1,8 @@
 import React from 'react';
-import { AboutLink } from '../../components/AboutLink';
 import { BasicContainer } from '../../components/BasicContainer';
 import Documents from '../../components/Documents';
 import { Header } from '../../components/Header';
 import MobileMenu from '../../components/MobileMenu';
-import SocialNetworksFooter from '../../components/SocialNetworksFooter';
 
 function About() {
     return (
@@ -16,7 +14,7 @@ function About() {
                     <>
                         <div className="col-md-12 mb-3" data-aos="fade-up"><h2 className="text-primary h4">Our Inspiration</h2></div>
                         <div className="col-lg-5 ml-auto order-lg-2 mb-5" data-aos="fade-up" data-aos-delay={200}>
-                            <img src="images/hero_bg_1.jpg" alt="Image" className="img-fluid" />
+                            <img src="images/hero_bg_1.jpg" alt="Placeholder" className="img-fluid" />
                         </div>
                         <div className="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay={100}>
                             <p className="lead"> 

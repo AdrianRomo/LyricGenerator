@@ -1,17 +1,10 @@
 import React from "react";
 
-const STYLES = ['btn--primary', 'btn--outline'];
-
-const SIZES = ['btn--medium', 'btn--large'];
-
 export const Canvas = ({
-  canvasId,
   className,
-  type,
   onClick,
   width,
-  height,
-  isEnabled
+  height
 }) => {
   React.useEffect(() => {
     var  size= 120;

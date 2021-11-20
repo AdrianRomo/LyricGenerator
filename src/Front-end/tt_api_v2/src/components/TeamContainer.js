@@ -19,7 +19,7 @@ export const TeamContainer = ({
                     <div className={containerTextOrder} data-aos="fade-up">
                         <h2 className="h4 text-black mb-3">{containerTitle}</h2>
                         <p className="lead">{containerText}</p>
-                        <p>{containerSubtext}</p>
+                        {containerSubtext}
                     </div>
                 </div>
             </div>

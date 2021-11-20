@@ -39,24 +39,13 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              {/*<div className="row">
-                <div className="col-md-12">
-                  <h3 className="footer-heading mb-4">Follow Us</h3>
-                  <div>
-                    <a href="#" className="pl-0 pr-3"><span className="icon-facebook" /></a>
-                    <a href="#" className="pl-3 pr-3"><span className="icon-twitter" /></a>
-                    <a href="#" className="pl-3 pr-3"><span className="icon-instagram" /></a>
-                    <a href="#" className="pl-3 pr-3"><span className="icon-linkedin" /></a>
-                  </div>
-                </div>
-              </div>*/}
             </div>
             <div className="col-lg-4 mb-5 mb-lg-0">
               <div className="mb-5">
                 <h3 className="footer-heading mb-4">More about NeuraLyrics</h3>
                 <div className="block-16">
                   <figure>
-                    <img src="images/img_1.jpg" alt="Image placeholder" className="img-fluid rounded" />
+                    <img src="images/img_1.jpg" alt="Placeholder" className="img-fluid rounded" />
                     <a href="https://vimeo.com/channels/staffpicks/93951774" className="play-button popup-vimeo"><span className="icon-play" /></a>
                   </figure>
                 </div>
@@ -66,7 +55,7 @@ function Footer() {
           <div className="row pt-5 mt-5 text-center">
             <div className="col-md-12">
               <p>
-                Copyright ©2021 All rights reserved | Made with <i className="icon-heart text-danger" aria-hidden="true" /> by <a href="https://adrianromo.me" target="_blank">Team 2020-B002</a>
+                Copyright ©2021 All rights reserved | Made with <i className="icon-heart text-danger" aria-hidden="true" /> by <a href="https://adrianromo.me" target="_blank" rel="noreferrer">Team 2020-B002</a>
               </p>
             </div>
           </div>

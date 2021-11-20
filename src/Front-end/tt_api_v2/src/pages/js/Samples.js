@@ -3,7 +3,6 @@ import { BasicContainer } from '../../components/BasicContainer';
 import { Header } from '../../components/Header';
 import { LyricSample } from '../../components/LyricSample';
 import MobileMenu from '../../components/MobileMenu';
-import SocialNetworksFooter from '../../components/SocialNetworksFooter';
 
 function Samples() {
     return (
@@ -46,23 +45,6 @@ function Samples() {
                             delay= {300}/>
                     </>
                 }/>
-                {/*<div className="container mt-5" data-aos="fade-up">
-                    <div className="row">
-                        <div className="col-md-12 text-center">
-                            <div className="site-block-27">
-                                <ul>
-                                    <li><a href="#">&lt;</a></li>
-                                    <li className="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&gt;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>*/}
             </div>
         </>
     );

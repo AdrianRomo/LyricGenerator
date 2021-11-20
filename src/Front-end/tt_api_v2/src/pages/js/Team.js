@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from '../../components/Header';
 import MobileMenu from '../../components/MobileMenu';
-import SocialNetworksFooter from '../../components/SocialNetworksFooter';
 import { TeamContainer } from '../../components/TeamContainer';
 
 function Team() {
