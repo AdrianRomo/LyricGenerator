@@ -29,7 +29,7 @@ app.config.update({
     'APISPEC_SWAGGER_UI_URL': '/swagger-ui/'  # URI to access UI of API Doc
 })
 docs = FlaskApiSpec(app)
-
+print("ready")
 
 # Endpoints
 class Lyrics(MethodResource, Resource):
@@ -42,6 +42,7 @@ class Lyrics(MethodResource, Resource):
         """
         Get method represents a GET API method
         """
+        print("get")
         return {
             'project': PROJECT,
             'version': VERSION,
@@ -68,18 +69,6 @@ class Lyrics(MethodResource, Resource):
             response['verse_'+str(medium)] = lyrics.complete_this_song(randint(40,60))
         return jsonify(response)
 
-    @doc(description='Health-check to see the status of the API.', tags=['Lyric Generator Status'])
-    @marshal_with(HealthSchema)
-    def get(self):
-        """
-        Get method represents a GET API method
-        """
-        return {
-            'project': PROJECT,
-            'version': VERSION,
-            'environment': FLASK_ENV,
-            'date': datetime.now(),
-        }
 
 
 # Add Endpoints

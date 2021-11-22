@@ -11,13 +11,12 @@ from tensorflow.keras.models import load_model
 class GenerateLyric(object):
     def __init__(self, kwargs):
         self.seed_text, self.percentage = kwargs["lyric_input"], kwargs["percentage"]
-        self.model = load_model(os.path.abspath('song_lyrics_generator.h5'))
-        with open(os.path.abspath('tokenizer_data.pkl'), 'rb') as f:
+        self.model = load_model(os.path.abspath('src/song_lyrics_generator.h5'))
+        with open(os.path.abspath('src/tokenizer_data.pkl'), 'rb') as f:
             data = pickle.load(f)
             self.tokenizer = data['tokenizer']
             self.max_len = data['max_sequence_len']
-            print(self.seed_text, self.percentage)
-
+        print(self.seed_text, self.percentage)
     def complete_this_song(self, next_words):
         try:
             link = f'https://api.datamuse.com/words?rel_rhy={self.seed_text}'
@@ -43,7 +42,6 @@ class GenerateLyric(object):
 
     def chorus(self, next_words):
         try:
-
             link = f'https://api.datamuse.com/words?rel_rhy={self.seed_text}'
             rhyme = requests.get(link).json()
             if rhyme:
