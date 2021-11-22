@@ -1,4 +1,4 @@
-from ..utils.constants import MODEL_PATH
+from constants import MODEL_PATH
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -27,7 +27,7 @@ class ModelGeneration:
         # Create predictors and label
         self.x, self.labels = self.input_sequences[:,:-1],self.input_sequences[:,-1]
         self.y = to_categorical(self.labels, num_classes=self.total_words)
-        self.save_model()
+        self.save_pickled_model()
         print("Modelo Guardado")
         return self
 
