@@ -4,7 +4,7 @@ import "swagger-ui-react/swagger-ui.css"
 function Swagger() {
     return (
         <>
-            <SwaggerUI url="http://localhost/swagger/" />
+            <SwaggerUI url="http://172.17.0.2:5000/swagger/" />
         </>
     )
 }

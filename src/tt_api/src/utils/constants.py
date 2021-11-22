@@ -1,6 +1,4 @@
 # encoding: utf-8
-import os
-
 
 # Execution environment.
 FLASK_ENV = 'test'
