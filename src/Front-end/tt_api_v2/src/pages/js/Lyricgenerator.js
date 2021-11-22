@@ -22,7 +22,7 @@ function sendWord(engword, percentval) {
         myFunFactsTypewriter('myTextReceived', position, 0);
     }
 
-    fetch('http://172.17.0.2:5000/lyrics', {
+    fetch('http://192.168.1.155:5000/lyrics', {
         method:'POST',
         headers:{'content-type':'application/json','Access-Control-Allow-Origin':'*'},
         body:JSON.stringify({"lyric_input":engword,"percentage":percentval})

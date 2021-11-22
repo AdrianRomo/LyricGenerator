@@ -6,10 +6,13 @@ from numpy import array
 from pandas import read_csv
 from tensorflow.keras.utils import to_categorical
 import pickle
+import os
+
+
 class ModelGeneration:
     def __init__(self):
-        self.df = read_csv(MODEL_PATH + 'pop_model.csv')
-        self.model = load_model(MODEL_PATH + 'song_lyrics_generator.h5')
+        self.df = read_csv(os.path.abspath('pop_model.csv'))
+        self.model = load_model(os.path.abspath('song_lyrics_generator.h5'))
 
     def create_tokenization_from_model(self):
         self.tokenizer = Tokenizer()
@@ -39,13 +42,6 @@ class ModelGeneration:
                     'total_words':self.total_words,
                     'max_sequence_len':self.max_sequence_len
                 }, handle)
-    
-    def load_pickled_model(self):
-        tokens = {}
-        with open("tokenizer_data.pkl", 'rb') as f:
-            data = pickle.load(f)
-            tokens['tokenizer'] = data['tokenizer']
-            tokens['num_words'] = data['total_words']
-            tokens['maxlen'] = data['max_sequence_len']
-        return tokens
-        
+
+
+ModelGeneration().create_tokenization_from_model()

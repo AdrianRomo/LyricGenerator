@@ -1,21 +1,21 @@
 import requests
 import random
 import pickle
+import os
 from datetime import datetime
 from numpy import argmax
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
-from ..utils.constants import MODEL_PATH
 
 
 class GenerateLyric(object):
     def __init__(self, kwargs):
         self.seed_text, self.percentage = kwargs["lyric_input"], kwargs["percentage"]
-        self.model = load_model(MODEL_PATH + 'song_lyrics_generator.h5')
-        with open(MODEL_PATH + 'tokenizer_data.pkl', 'rb') as f:
+        self.model = load_model(os.path.abspath('song_lyrics_generator.h5'))
+        with open(os.path.abspath('tokenizer_data.pkl'), 'rb') as f:
             data = pickle.load(f)
             self.tokenizer = data['tokenizer']
-            self.maxlen = data['max_sequence_len']
+            self.max_len = data['max_sequence_len']
             print(self.seed_text, self.percentage)
 
     def complete_this_song(self, next_words):
@@ -31,7 +31,7 @@ class GenerateLyric(object):
         
         for _ in range(next_words):
             token_list = self.tokenizer.texts_to_sequences([seed_text])[0]
-            token_list = pad_sequences([token_list], maxlen=self.maxlen-1, padding='pre')
+            token_list = pad_sequences([token_list], maxlen=self.max_len-1, padding='pre')
             predicted = argmax(self.model.predict(token_list, verbose=0), axis=-1)
             output_word = ""
             for word, index in self.tokenizer.word_index.items():
@@ -54,7 +54,7 @@ class GenerateLyric(object):
             seed_text = self.seed_text
         for _ in range(next_words):
             token_list = self.tokenizer.texts_to_sequences([seed_text])[0]
-            token_list = pad_sequences([token_list], maxlen=self.maxlen-1, padding='pre')
+            token_list = pad_sequences([token_list], maxlen=self.max_len-1, padding='pre')
             predicted = argmax(self.model.predict(token_list, verbose=0), axis=-1)
             output_word = ""
             for word, index in self.tokenizer.word_index.items():

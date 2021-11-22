@@ -30,6 +30,7 @@ app.config.update({
 })
 docs = FlaskApiSpec(app)
 
+
 # Endpoints
 class Lyrics(MethodResource, Resource):
     """
@@ -42,17 +43,17 @@ class Lyrics(MethodResource, Resource):
         Get method represents a GET API method
         """
         return {
-        'project': PROJECT,
-        'version': VERSION,
-        'environment': FLASK_ENV,
-        'date': datetime.now(),
+            'project': PROJECT,
+            'version': VERSION,
+            'environment': FLASK_ENV,
+            'date': datetime.now(),
         }
 
     """
     Class to generate the lyric of the API
     """
     @doc(description='Send input to generate Lyric', tags=['Generate Lyric'])
-    @use_kwargs(GetLyrics, location=('json'))
+    @use_kwargs(GetLyrics, location='json')
     @marshal_with(PostLyrics)
     def post(self,**kwargs):
         """
@@ -74,11 +75,12 @@ class Lyrics(MethodResource, Resource):
         Get method represents a GET API method
         """
         return {
-        'project': PROJECT,
-        'version': VERSION,
-        'environment': FLASK_ENV,
-        'date': datetime.now(),
+            'project': PROJECT,
+            'version': VERSION,
+            'environment': FLASK_ENV,
+            'date': datetime.now(),
         }
+
 
 # Add Endpoints
 api.add_resource(Lyrics, '/lyrics')
@@ -86,10 +88,12 @@ api.add_resource(Lyrics, '/lyrics')
 # Add Swagger Documentation
 docs.register(Lyrics)
 
+
 # Handling of 404 errors.
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify({"error": "resource not found", "code": "404"}), 404
+
 
 @app.errorhandler(Exception)
 def handle_error(e):
@@ -97,6 +101,8 @@ def handle_error(e):
     if isinstance(e, HTTPException):
         code = e.code
     return jsonify(error=str(e)), code
+
+
 # We run the Flask application and, if it is running in a development environment,
 # we run the application in debug mode.
 # to run only ```FLASK_ENV=test FLASK_APP=src.app python -m flask run --host=0.0.0.0 --port=80```
