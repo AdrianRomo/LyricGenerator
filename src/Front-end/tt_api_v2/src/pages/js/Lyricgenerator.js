@@ -159,7 +159,6 @@ function Lyricgenerator() {
                     document.getElementsByClassName('site-section')[0].style.display= 'none';
                     document.getElementsByClassName('site-section')[1].style.display= 'none';
                     document.getElementsByClassName('site-section')[2].style.display= 'none';
-                    document.getElementsByClassName('bg-primary')[0].style.display= 'none';
                     document.getElementById('secondDiv').className= 'contentTwoThree-show';
                     document.getElementById('firstDiv').className= 'contentOne-hide';
                 }}/>
@@ -191,7 +190,6 @@ function Lyricgenerator() {
                                     document.getElementsByClassName('site-section')[0].style.display= 'inline';
                                     document.getElementsByClassName('site-section')[1].style.display= 'inline';
                                     document.getElementsByClassName('site-section')[2].style.display= 'inline';
-                                    document.getElementsByClassName('bg-primary')[0].style.display= 'block';
                                 }}>
                                     Home
                                 </Button>
