@@ -39,7 +39,8 @@ function sendWord(engword, percentval) {
             alert('Oops, ocurrió un error');
             document.getElementById('MyTestButton').disabled= false;
         }else{
-            console.log('Texto: ' + resp);
+            rebooted= false;
+            document.querySelector("#myTextReceived").style.display='none';
             document.querySelector("#myTextReceived").innerHTML= '';
 
             let ele = document.getElementById('lyricContainer');
@@ -56,7 +57,6 @@ function sendWord(engword, percentval) {
             ele.style.display= 'contents';
             
             // Important!
-            rebooted= false;
             var tempArray= [];
             var chorus_counter= 0;
             for (const [key, value] of Object.entries(resp)) {
@@ -230,6 +230,10 @@ function Lyricgenerator() {
                     <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
                         let ele = document.getElementById('lyricContainer');
                         ele.innerHTML = "";
+                        document.getElementById('MyTestButton').disabled= true;
+                        document.getElementById('downloadButton').disabled= true;
+                        document.getElementById('regenerateButton').disabled= true;
+                        document.querySelector("#myTextReceived").style.display='block';
                         quoteArray= ["Generating your Lyric and making some magic with Artificial Intelligence!..."];
                         rebooted= false;
                         myTypewriter('myTextReceived', 0, 0);
@@ -244,6 +248,8 @@ function Lyricgenerator() {
 
                         let ele = document.getElementById('lyricContainer');
                         ele.innerHTML = "";
+                        document.querySelector("#myTextReceived").style.display='block';
+
                         }}>
                         Start Again
                     </Button>
