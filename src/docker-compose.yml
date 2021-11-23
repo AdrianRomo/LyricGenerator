@@ -1,6 +1,6 @@
 version: '3.8'
 services:
   neuralyrics:
-    image: adrianromo/neuralyrics:latest
+    image: adrianromo/neuralyrics:version1
     ports:
       - "80:5000"
