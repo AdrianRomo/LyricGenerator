@@ -9,7 +9,7 @@ var quoteArray;
 var speed = 20;
 var rebooted= false;
 var lyricCounterToEnableButtons= 0;
-var funfacts= ['Oh mira, tu gfa es hombre...', 'el dinero es dinero, el dinero es dinero...', 'No existe el conejo de pascua , no existe el ratón de los dientes, y no existe la reina de Inglaterra!!!', 'Ah, eres un villano si, pero no un supervillano', 'Lo tenemos todo y no tenemos nada...', 'La nada es la ausencia de todo, qué es todo? Todo es con cebolla, cilantro, salsa y limón' , 'Frase genérica, ya no se me ocurrió nada']
+var funfacts= ['Music helps people with brain injuries recall personal memories', 'Heavy metal and classical music fans have similar personality traits', 'Cows produce more milk when listening to slow music', ' A song that gets stuck in your head is called an earworm', 'Loud music causes you to drink more in less time', 'Music is physically good for your heart by triggering physiological changes that modulate blood pressure, heart rate, and respiratory functions', 'Listening to music utilizes the entire brain', 'None of The Beatles could read or write music', 'Music helps plants grow faster', 'Music affects your perception of the world', 'Some people feel nothing toward music', 'In 2016, Mozart sold more CDs than Beyoncé ','Other Funfact']
 function sendWord(engword, percentval) {
 
     localStorage.setItem("EnglishWord-Value",engword); 
