@@ -23,7 +23,7 @@ class GenerateLyric(object):
     def generate_rhyme(self, first_verse):
         try:
             if first_verse is False:
-                link = f'https://api.datamuse.com/words?rel_rhy={self.seed_text}'
+                link = f'https://api.datamuse.com/words?sl={self.seed_text}'
                 rhyme = requests.get(link).json()
                 if rhyme is not None:
                     try:

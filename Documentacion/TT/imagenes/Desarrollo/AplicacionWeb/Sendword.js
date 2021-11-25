@@ -3,7 +3,7 @@ function sendWord(engword, percentval) {
     localStorage.setItem("EnglishWord-Value",engword); 
     localStorage.setItem("Percentage-Value",percentval); 
 
-    fetch('http://neuralyrics.us-east-1.elasticbeanstalk.com/lyrics', {
+    fetch('https://api.neuralyrics.com//lyrics', {
         method:'POST',
         headers:{'content-type':'application/json','Access-Control-Allow-Origin':'*'},
         body:JSON.stringify({"lyric_input":engword,"percentage":percentval})
