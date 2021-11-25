@@ -14,7 +14,7 @@ function Form() {
             <div className="row form-group">
                 <div className="col-md-12 mb-3 mb-md-0">
                     <label className="font-weight-bold" htmlFor="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" className="form-control" placeholder="John" />
+                    <input type="text" id="fullname" name="fullname" className="form-control" placeholder="John Doe" />
                 </div>
             </div>
             <div className="row form-group">

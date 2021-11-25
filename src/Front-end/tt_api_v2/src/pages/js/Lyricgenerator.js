@@ -169,8 +169,8 @@ function Lyricgenerator() {
                 <div className="overlay inner-page-cover subscribe" style={{ background: '' }} >
                     <div className="container">
                         <h1>Generate your own song!</h1>
-                        <h5>Insert an english word and click the button to begin.</h5>                        
-                        <h5>Remember that this word will be the topic of your lyric.</h5>
+                        <h5>Insert a word in english that will be the topic of your song and click the button to begin.</h5>
+                        <p>It takes 30 to 40 seconds to display the lyrics :)</p>
                         <div className="site-block-subscribe">
                             <div className="input-group mb-3">
                                 <input id='english-word' type="text" className="form-control border-secondary text-white bg-transparent" placeholder="e.g. Love" aria-label="Enter a Word" onChange={(e)=> updateInput(e)} aria-describedby="button-addon2" required/>
