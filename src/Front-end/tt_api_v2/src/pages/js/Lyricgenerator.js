@@ -169,7 +169,7 @@ function Lyricgenerator() {
                 <div className="overlay inner-page-cover subscribe" style={{ background: '' }} >
                     <div className="container">
                         <h1>Generate your own song!</h1>
-                        <h5>Insert a word in english that will be the topic of your song and click the button to begin.</h5>
+                        <h1>Insert a word in english that will be the topic of your song and click the button to begin.</h1>
                         <p>It takes 30 to 40 seconds to display the lyrics :)</p>
                         <div className="site-block-subscribe">
                             <div className="input-group mb-3">
