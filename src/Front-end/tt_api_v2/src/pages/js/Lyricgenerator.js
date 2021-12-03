@@ -5,6 +5,7 @@ import { Button } from '../../components/Button.js';
 import { Canvas } from './Canvas';
 import { Writing } from './Writing';
 
+var myVar;
 var quoteArray;
 var speed = 20;
 var rebooted= false;
@@ -15,7 +16,7 @@ function sendWord(engword, percentval) {
     localStorage.setItem("EnglishWord-Value",engword); 
     localStorage.setItem("Percentage-Value",percentval); 
 
-    var myVar= setInterval(myFunFactsFunction, 6000); 
+    myVar= setInterval(myFunFactsFunction, 6000); 
     function myFunFactsFunction(){
         var position= getRandomInt(0, funfacts.length - 1);
 
@@ -155,6 +156,7 @@ function Lyricgenerator() {
             <div id='firstDiv' className='contentOne'>
                 <h1>Lyric Generator</h1>
                 <p>Lyrics generated using Artificial Intelligence</p>
+                <p>Click here to begin!</p>
                 <Canvas className='breathable-button' width={120} height={120} onClick={() => { 
                     document.getElementsByClassName('site-section')[0].style.display= 'none';
                     document.getElementsByClassName('site-section')[1].style.display= 'none';
@@ -230,6 +232,8 @@ function Lyricgenerator() {
                     <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
                         let ele = document.getElementById('lyricContainer');
                         ele.innerHTML = "";
+                        lyricCounterToEnableButtons= 0;
+                        clearInterval(myVar);
                         document.getElementById('MyTestButton').disabled= true;
                         document.getElementById('downloadButton').disabled= true;
                         document.getElementById('regenerateButton').disabled= true;
@@ -243,6 +247,8 @@ function Lyricgenerator() {
                     </Button>
                     <Button buttonId='MyTestButton' buttonClass='btn btn-primary' type="button" onClick={() => {
 
+                        lyricCounterToEnableButtons= 0;
+                        clearInterval(myVar);
                         document.getElementById('thirdDiv').className= 'contentTwoThree-hide';
                         document.getElementById('secondDiv').className= 'contentTwoThree-show';
 

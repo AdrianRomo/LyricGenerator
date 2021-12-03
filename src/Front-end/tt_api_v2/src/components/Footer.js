@@ -46,7 +46,7 @@ function Footer() {
                 <div className="block-16">
                   <figure>
                     <img src="images/img_1.jpg" alt="Placeholder" className="img-fluid rounded" />
-                    <a href="https://youtu.be/zUY7cvynfPA" className="play-button popup-vimeo"><span className="icon-play" /></a>
+                    <a href="https://vimeo.com/650435165" className="play-button popup-vimeo"><span className="icon-play" /></a>
                   </figure>
                 </div>
               </div>
