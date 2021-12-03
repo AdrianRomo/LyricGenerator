@@ -5,6 +5,7 @@ import { Button } from '../../components/Button.js';
 import { Canvas } from './Canvas';
 import { Writing } from './Writing';
 
+var myVar;
 var quoteArray;
 var speed = 20;
 var rebooted= false;
@@ -15,7 +16,7 @@ function sendWord(engword, percentval) {
     localStorage.setItem("EnglishWord-Value",engword); 
     localStorage.setItem("Percentage-Value",percentval); 
 
-    var myVar= setInterval(myFunFactsFunction, 6000); 
+    myVar= setInterval(myFunFactsFunction, 6000); 
     function myFunFactsFunction(){
         var position= getRandomInt(0, funfacts.length - 1);
 
@@ -63,15 +64,23 @@ function sendWord(engword, percentval) {
                 
                 if(key.includes('verse')){
                     if(key.includes('_1')){
-                        tempArray.splice((1), 0, value[0]);
+                        var myVal= value[0];
+                        myVal= myVal.charAt(0).toUpperCase() + myVal.substring(1, myVal.length);
+                        tempArray.splice((1), 0, myVal);
                     }else if(key.includes('_2')){
-                        tempArray.splice((2), 0, value[0]);
+                        var myVal= value[0];
+                        myVal= myVal.charAt(0).toUpperCase() + myVal.substring(1, myVal.length);
+                        tempArray.splice((2), 0, myVal);
                     }else{
-                        tempArray.splice((3), 0, value[0]);
+                        var myVal= value[0];
+                        myVal= myVal.charAt(0).toUpperCase() + myVal.substring(1, myVal.length);
+                        tempArray.splice((3), 0, myVal);
                     }
                 }else{
                     if(chorus_counter++ === 0){
-                        tempArray.splice(0, 0, value[0]);
+                        var myVal= value[0];
+                        myVal= myVal.charAt(0).toUpperCase() + myVal.substring(1, myVal.length);
+                        tempArray.splice(0, 0, myVal);
                     }
                 }
             }
@@ -155,6 +164,7 @@ function Lyricgenerator() {
             <div id='firstDiv' className='contentOne'>
                 <h1>Lyric Generator</h1>
                 <p>Lyrics generated using Artificial Intelligence</p>
+                <p>Click here to begin!</p>
                 <Canvas className='breathable-button' width={120} height={120} onClick={() => { 
                     document.getElementsByClassName('site-section')[0].style.display= 'none';
                     document.getElementsByClassName('site-section')[1].style.display= 'none';
@@ -230,6 +240,8 @@ function Lyricgenerator() {
                     <Button buttonId='regenerateButton' buttonClass='btn btn-primary' type="button" onClick={() => {
                         let ele = document.getElementById('lyricContainer');
                         ele.innerHTML = "";
+                        lyricCounterToEnableButtons= 0;
+                        clearInterval(myVar);
                         document.getElementById('MyTestButton').disabled= true;
                         document.getElementById('downloadButton').disabled= true;
                         document.getElementById('regenerateButton').disabled= true;
@@ -243,6 +255,8 @@ function Lyricgenerator() {
                     </Button>
                     <Button buttonId='MyTestButton' buttonClass='btn btn-primary' type="button" onClick={() => {
 
+                        lyricCounterToEnableButtons= 0;
+                        clearInterval(myVar);
                         document.getElementById('thirdDiv').className= 'contentTwoThree-hide';
                         document.getElementById('secondDiv').className= 'contentTwoThree-show';
 
