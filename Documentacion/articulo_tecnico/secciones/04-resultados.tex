@@ -1,4 +1,16 @@
 \section{Resultados}
-El modelo generado y entrenado dentro de la plataforma de Kaggle se extrajo y se llevó completamente a la práctica, funcionando dentro de una aplicación web, permitiendo a aquellos usuarios que ingresaran a la siguiente dirección (x) pudieran probar de primera mano la generación de texto realizada por nuestro modelo, obteniendo letras de canciones a partir de una o varias palabras en idioma inglés introducidas por el usuario.\\\\
-Destacamos que la generación de texto de nuestro modelo no es el mejor, esto debido a las limitantes con las que contábamos al momento de realizar el entrenamiento del modelo, ya que este se fue realizando en bloques, es decir de 700 en 700 letras de canciones en lugar de darle a procesar todos los textos. Pero a pesar de este inconveniente, consideramos que da buenos resultados.\\\\
-A continuación, dejamos algunos ejemplos de los textos obtenidos:
+Se obtuvo Neuralyrics, una aplicación web con inteligencia artificial en línea funcional para la generación de nuevas letras musicales pop para ayudar a artistas en necesidad de ideas para generar nuevas canciones y un modelo entrenado con el 2.5\% del dataset original.\\
+El algoritmo para llamar al modelo consta de dos elementos esenciales para generar la letra: estructura y semántica.\\
+Se evaluó al algoritmo con la precisión que arrojó al modelo que fue un 58\%, esto indica que por cada palabra que se predice, hay una probabilidad muy alta de que sea muy parecida a otra canción existente, dato que nos indica la probabilidad de que con un modelo entrenado con más canciones pueda tener una precisión más baja y pueda generar una palabra verdaderamente al azar y con una semántica correcta. Igualmente se obtuvieron registros de las interacciones de los usuarios en la página web para poder analizar las partes que fueron relevantes y cuánto impacto se tiene en el internet.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{figuras/Graficapre.png}
+	\caption{Gráfica sobre la presición del modelo}
+	\label{fig:Gráfica sobre la presición del modelo}
+\end{figure}
+\subsection{Demostración online}
+Una demostración online para la generación de letras musicales esta disponible en neuralyrics.com esta herramienta fue creada para:
+(1) poner el generador a disposición del público, (2) proporcionar
+los usuarios formas fáciles de personalizar las letras generadas, y
+(3) recopile registros de uso limitado para evaluar y mejorar el algoritmo. El sitio web se lanzó en noviembre del
+2021.

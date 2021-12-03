@@ -97,21 +97,28 @@ Es una capa de regularización. Esta capa establece aleatoriamente las unidades 
 Es una capa central y una capa de red neuronal densamente conectada. Recibe como primer parámetro un entero positivo que se refiere a la cantidad de nodos de salida que deben devolverse. El segundo parámetro es el llamado activación que define el tipo de predicciones que puede hacer el modelo; para el tipo de problema que estamos considerando, el que se adapta mejor es softmax, que genera un vector de valores (entrada) que puede interpretarse como probabilidades de ser utilizado.
 \subsubsection{Método de compilación, algoritmo de optimización y métrica de rendimiento}
 Perdida: También conocida como función de costos; funciona durante el proceso de optimización y su función es calcular el error del modelo. La entropía cruzada se utiliza para estimar la diferencia entre una distribución de probabilidad estimada y predicha. Se utilizará categorical\_cross-entropy porque es más adecuado para este tipo de problemas y se usa casi universalmente para entrenar redes neuronales de aprendizaje profundo debido a los resultados que produce.\\\\
-Optimización: Se encarga de reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida porque es la mejor opción que ofrece Keras para entrenar la red neuronal en menos tiempo y de manera más eficiente. Earlystop detendrá el entrenamiento si el modelo ha dejado de mejorar, esto se verificará al final de cada epoch. En este caso, la "precisión" o “accuracy” se utilizará como métrica de rendimiento.
+Optimización: Se encarga de reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida porque es la mejor opción que ofrece Keras para entrenar la red neuronal en menos tiempo y de manera más eficiente. Earlystop detendrá el entrenamiento si el modelo ha dejado de mejorar, esto se verificará al final de cada epoch. En este caso, la precisión se utilizará como métrica de rendimiento.
 El método fit es el encargado de entrenar el modelo para el número fijo de epochs dados.\\\\
 Quedando como resultado el código del modelo de la siguiente forma:
-
-\begin{center}
-	\lstinputlisting[language=Python]{figuras/modelo.py}
-\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{figuras/Modelo.png}
+	\caption{Código del modelo}
+	\label{fig:Código del modelo}
+\end{figure}
 \subsubsection{Importación del modelo y función de generación}
 Una vez completado el entrenamiento de nuestro modelo, lo que falta es importarlo para probar cómo funciona, en nuestro caso nombramos al modelo “song\_lyrics\_generator” y se importó de la siguiente forma:
-
-\begin{center}
-	\lstinputlisting[language=Python]{figuras/import.py}
-\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{figuras/Import.png}
+	\caption{Código del modelo importado}
+	\label{fig:Código del modelo importado}
+\end{figure}
 Ya que contemos con el modelo importado, se creó una función que se utilizará para generar la letra de una canción utilizando el modelo previamente entrenado, predecirá las siguientes palabras en base a la palabra(s) de entrada suministradas como 'seed\_text'. Para que esto funcione, se debe aplicar una tokenización al seed\_text, luego se aplicará un relleno a las secuencias generadas y se pasará al modelo entrenado para que se pueda predecir la siguiente palabra.
 
-\begin{center}
-	\lstinputlisting[language=Python]{figuras/function.py}
-\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{figuras/Import.png}
+	\caption{Función para la generación de texto}
+	\label{fig:Función generación de texto}
+\end{figure}
