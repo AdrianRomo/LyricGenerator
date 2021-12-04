@@ -10,8 +10,12 @@ function sendWord(engword, percentval) {
     }).then(response => {    
         return response.json()
     }).then(json => {        
-        this.setState({englishword: json[0]})
+
+        var wholeAnswer= JSON.stringify(json);
+        var resp= JSON.parse(wholeAnswer);
+        console.log('Data to work with: ' + resp);
+
     }).catch(error => {
-        console.log(error)
+        console.log(error);
     })
 }

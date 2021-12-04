@@ -444,16 +444,48 @@
 	Informar al usuario sobre la estructura y conformación de la aplicación web con el fin de que pueda darle soporte, realizar modificaciones o actualizaciones a la misma, a través de una descripción de los componentes y funcionalidades que lo conforman.
 	\newpage
 	\section{Requerimientos mínimos técnicos}
+	\subsection{Requisitos de hardware de aplicaciones web}
+	En la tabla siguiente se enumeran los requisitos
+	de hardware mínimos y recomendados para la aplicación web.
+	
+	\begin{table}[!htbp]
+		\caption[Requisitos hardware]{Requisitos de hardware mínimos y recomendados}
+		\begin{tabular}{| p{4cm} | p{4cm} | p{4cm} |} 
+			\hline
+			\textbf{Componente} & \textbf{Mínimo} & \textbf{Recomendado} \\ 
+			\hline
+			Procesador & Procesador de x86 o x64 bits de doble núcleo de 1,9 gigahercios (GHz) o más con el conjunto de instrucciones SSE2 & Procesador de 64 bits de doble núcleo de 3,3 gigahercios (GHz) o más con el conjunto de instrucciones SSE2 \\ 
+			\hline
+			Memoria & 2 GB de RAM & 4 GB de RAM o más \\
+			\hline
+			Resolución  & Súper VGA con una resolución de 1024 x 768 & Súper VGA con una resolución de 1024 x 768 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	
+	La ejecución de aplicaciones basadas en modelo en un equipo
+	que no cumpla los requisitos recomendados puede producir un
+	rendimiento inadecuado. Además, puede experimentarse
+	rendimiento satisfactorio ejecutando sistemas que usan otra
+	configuración de hardware que los publicados aquí.\\\\
+	Por ejemplo, un sistema con un procesador moderno
+	de cuatro núcleos, velocidad de reloj más baja y más RAM.
+	
+	\subsection{Requisitos de red}
+	Las aplicaciones basadas en modelo están diseñadas para funcionar
+	mejor en redes que tienen los siguientes elementos:
+	
 	\begin{itemize}
-		\item Procesador: Intel Core i3
-		\item Memoria RAM: 4 Gb
-		\item Disco duro: 500 Gb		
+		\item Ancho de banda superior a 50 KBps (400 kbps)
+		\item Latencia inferior a 150 ms
 	\end{itemize}
-	\section{Requerimientos mínimos de software}
-	\begin{itemize}
-		\item Sistema Operativo: Windows 7/8.1/10	
-	\end{itemize}
-	\newpage
+	
+	Tenga en cuenta que estos valores son recomendaciones y no garantizan
+	un rendimiento satisfactorio. Los valores recomendados se basan en los
+	sistemas que usan solicitudes de un formulario con palabras usuales,
+	el resultado podría variar.
+	
 	\section{Herramientas utilizadas para el desarrollo}
 	\subsection{Python}
 	Python es un lenguaje de programación orientado a objetos, de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con el tipado y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código. \cite{refQuesPython}
