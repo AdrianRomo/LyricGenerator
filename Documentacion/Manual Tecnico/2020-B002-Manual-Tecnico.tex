@@ -475,12 +475,14 @@
 	Gunicorn, también conocido como unicornio verde “Green Unicorn”, es una de las muchas implementaciones de un \acrfull{wsgi} y se usa comúnmente para ejecutar aplicaciones web hechas con Python. Esta implemente la especificación \acrshort{wsgi} de frameworks como Django, Flask o Bottle.
 	\subsection{Amazon EC2}	
 	Amazon \acrfull{ec2} \cite{amazon_ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
-	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.	
+	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.
+	\begin{comment}	
 	\subsection{Amazon SageMaker}
 	Amazon SageMaker \cite{amazon_sagemaker} es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
 	Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
 	Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalabilidad. lo que permite entrenar los modelos a escala de peta-bytes Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
-	Para desplegar el modelo entrenado, se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.	
+	Para desplegar el modelo entrenado, se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.
+	\end{comment}	
 	\subsection{Amazon S3}
 	Amazon \acrfull{s3} \cite{amazon_s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento altamente escalable en la nube.
 	\newpage
@@ -847,6 +849,24 @@
 		\caption{Accediendo a la aplicación web desplegada}
 	\end{figure}
 	En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido.
+	\newpage
+	\section{Configuración de SSL y DNS}
+	
+	Para permitir que nuestra pagina web pueda accederse desde otros dispositivos es necesario hacer la configuración correcta de DNS y darle un certificado de seguridad. Debido a que nuestra pagina web fue desplegada en la plataforma de Vercel, para que esta pueda direccionarse de manera correcta con nuestro dominio se requiere la configuración de un DNS especifico que nos pide Vercel.
+	\begin{figure}[H] 
+		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns1.png}
+		\centering \caption{Dirección IP requerida para la configuración del DNS.}
+	\end{figure}
+	\begin{figure}[H] 
+		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns2.png}
+		\centering \caption{Nombre requerido para la configuración del DNS.}
+	\end{figure}
+	
+	Estas reglas de DNS deben agregarse en la plataforma de Cloudflare de la siguiente manera …..
+	
+	
+	En cuanto a la parte de seguridad de nuestra pagina web, como requiere que el usuario introduzca una palabra y esta posteriormente procesarla y mandarla a nuestro back-end, para ello se requirió configurar un certificado SSL para de esta manera tener una seguridad en el manejo de la información entre el servido del front-end y el back-end.\\\\
+	Para esta configuración nos apoyamos en Amazon Elastic Beans la cual nos permite darle el certificado que requiere el servidor del back-end siguiendo los siguientes pasos……
 	\newpage
 	\begin{thebibliography}{20}
 		\bibitem{refQuesPython} 
