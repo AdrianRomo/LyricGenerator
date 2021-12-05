@@ -491,7 +491,7 @@
 	Python es un lenguaje de programación orientado a objetos, de alto nivel con semántica dinámica. Sus estructuras de datos integradas de alto nivel, combinadas con el tipado y enlace dinámico, lo hacen muy atractivo para el desarrollo rápido de aplicaciones, así como para su uso en scripts o para conectar componentes ya existentes. La sintaxis simple y fácil de aprender de Python enfatiza la legibilidad y, por lo tanto, reduce el costo de mantenimiento del programa. Python admite módulos y paquetes, lo que fomenta la modularidad del programa y la reutilización del código. \cite{refQuesPython}
 	\subsection{HTML}
 	\acrfull{html} es un lenguaje de marcado que define la estructura de una página web y su contenido. \acrshort{html} consta de una serie de elementos que se utilizan para encerrar o envolver diferentes partes del contenido para que estos se visualicen o actúen de cierta manera. Las etiquetas adjuntas pueden hacer que una palabra o imagen sea un hipervínculo a otro lugar, pueden poner palabras en cursiva, hacer que la fuente sea más grande o pequeña, etc. \cite{refHtml} \\\\\
-	\acrshort{html}5 es la versión más reciente de HTML, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las páginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia, así como una mejor integración a APIs y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}
+	\acrshort{html}5 es la versión más reciente de HTML, la cual integra nuevos elementos, atributos y comportamientos. Permite describir de mejor manera el contenido de la página web, así como mejora su conectividad con el servidor y almacenamiento, posibilita que las páginas web puedan operar sin conexión usando los datos almacenados localmente del lado del cliente, otorga un mejor soporte al contenido multimedia, así como una mejor integración a API's y un mejor diseño usando \acrshort{css}3.	\cite{refHtml2}
 	\subsection{CSS}
 	\acrfull{css} es el lenguaje para describir la presentación de las páginas web, así como hacerlas más atractivas. Permite adaptar la presentación a diferentes tipos de dispositivos. \acrshort{css} es independiente de \acrshort{html} y puede ser empleado con cualquier otro lenguaje de marcado basado en \acrshort{xml} o \acrshort{svg}. Usando CSS se pueden controlar con precisión cómo se ven los elementos \acrshort{html} en el navegador, que presentará para las etiquetas de marcado el diseño que cada uno desee. La separación de \acrshort{html} de \acrshort{css} facilita el mantenimiento de los sitios, compartir las hojas de estilo entre páginas y adaptarlas a distintos ámbitos. \cite{refcss}\\\\
 	Es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web.\\\\
@@ -508,12 +508,14 @@
 	\subsection{Amazon EC2}	
 	Amazon \acrfull{ec2} \cite{amazon_ec2} proporciona una infraestructura de tecnologías de información que se ejecuta en la nube y funciona como un centro de datos que se ejecuta en su propia sede. Es ideal para empresas que necesitan rendimiento, flexibilidad y potencia al mismo tiempo.\\\\
 	Amazon \acrshort{ec2} es un servicio que permite alquilar un servidor o máquina virtual de forma remota para ejecutar aplicaciones.
+	\subsection{Amazon Elastic Beanstalk}	
+	Amazon Elastic Beanstalk \cite{amazon_elastic_beanstalk} es un servicio para implementar y escalar servicios y aplicaciones web con diferentes lenguajes de programación, para este proyecto será útil directamente para la administración de la API, entre las ventajas que se tienen en esta herramienta son el control total de los recursos, tiene una administración de escalamiento de acuerdo a las peticiones y recursos necesarios, la infraestructura detecta automáticamente la última versión y la corre por su cuenta y la implementación general es muy sencilla.
 	\begin{comment}	
-	\subsection{Amazon SageMaker}
-	Amazon SageMaker \cite{amazon_sagemaker} es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
-	Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
-	Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalabilidad. lo que permite entrenar los modelos a escala de peta-bytes Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
-	Para desplegar el modelo entrenado, se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.
+		\subsection{Amazon SageMaker}
+		Amazon SageMaker \cite{amazon_sagemaker} es un servicio que ayuda a científicos y desarrolladores a construir, entrenar e implementar de manera rápida y sencilla modelos de machine learning.\\\\
+		Para construir el modelo, este servicio cuenta con algoritmos de machine learning más utilizados que vienen preinstalados. También está preconfigurado para que pueda ejecutar Apache MXNet y TensorFlow.\\\\
+		Para el entrenamiento, con un solo clic en la consola de servicio, es fácil comenzar a entrenar su modelo. Amazon SageMaker se encarga de cada infraestructura y facilita la escalabilidad. lo que permite entrenar los modelos a escala de peta-bytes Si se desea acelerar y simplificar el proceso de entrenamiento, se puede ajustar automáticamente el modelo para obtener la mejor precisión.\\\\
+		Para desplegar el modelo entrenado, se aloja en un clúster de escalado automático de Amazon \acrshort{ec2}.
 	\end{comment}	
 	\subsection{Amazon S3}
 	Amazon \acrfull{s3} \cite{amazon_s3}, como su nombre lo indica, es un servicio web proporcionado por \acrfull{aws} que proporciona almacenamiento altamente escalable en la nube.
@@ -589,7 +591,7 @@
 				& \begin{tabular}[c]{@{}l@{}}Servidor\end{tabular} \\% inserting body of the table 
 				\hline
 				\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}El servidor envia el texto generado por el modelo a la aplicación web,\\ la cual se encarga de mostrarla al usuario final \end{tabular} \\
+				& \begin{tabular}[c]{@{}l@{}}El servidor envía el texto generado por el modelo a la aplicación web,\\ la cual se encarga de mostrarla al usuario final \end{tabular} \\
 				\hline
 			\end{tabular}\label{table:Caso de uso41}% is used to refer this table in the text
 		}
@@ -675,7 +677,7 @@
 		\item Min: la menor cantidad de palabras encontradas en una canción.
 		\item Max: la mayor cantidad de palabras encontradas en una canción.
 	\end{itemize}
-	Además, se le realizo una tokenizacion a las letras de nuestras 700 canciones, esto quiere decir que se separo cada palabra y cada palabra se convirtió en un número. Para este proceso se hizo uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
+	Además, se le realizo una tokenización a las letras de nuestras 700 canciones, esto quiere decir que se separo cada palabra y cada palabra se convirtió en un número. Para este proceso se hizo uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
 	\begin{itemize}
 		\item \_fit\_ontext(): El cual actualiza el vocabulario interno en función de una lista de textos determinada o, en este caso, la columna "Lyrics", donde cada entrada de la lista será un token.
 		\item \_texts\_tosequences(): El cual transforma cada texto dentro de la lista de textos proporcionados en una secuencia de números enteros; solo se considerarán las palabras conocidas por el tokenizador.
@@ -708,7 +710,7 @@
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/bidireccional.py}
 	\end{center}
 	\subsection{Dropout}
-	Es una capa de regularización. Esta capa establece aleatoriamente las unidades de entrada en 0, con una frecuencia del valor que le pasamos, en cada paso durante el tiempo de entrenamiento, lo que ayuda a evitar el sobreajuste.
+	Es una capa de regularización. Esta capa establece aleatoriamente las unidades de entrada en 0, con una frecuencia del valor que le pasamos, en cada paso durante el tiempo de entrenamiento, lo que ayuda a evitar el sobre ajuste.
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/dropout.py}
 	\end{center}
@@ -761,11 +763,11 @@
 		\centering 
 		\caption{Formulario}
 	\end{figure}
-	En esta parte debemos detenernos para habar acerca de cómo es que los datos proporcionados por el usuario son leídos y posteriormente enviados a nuestro back-end para ser procesados futuramente por el modelo. A continuación, se muestra el código de la función la cual realiza este proceso.
+	En esta parte debemos detenernos para habar acerca de cómo es que los datos proporcionados por el usuario son leídos y posteriormente enviados a nuestro backend para ser procesados futuramente por el modelo. A continuación, se muestra el código de la función la cual realiza este proceso.
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Sendword.js}
 	\end{center}
-	En esta función lo primero que se hace es recibir los datos (la palabra y el porcentaje) que introdujo el usuario, esto se hace buscado los identificadores de los elemento de la página y obteniendo sus valores, estos, se enviaran al back-end usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro back-end y busca el método post de esta, como el método post de nuestro back-end recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato.\\\\
+	En esta función lo primero que se hace es recibir los datos (la palabra y el porcentaje) que introdujo el usuario, esto se hace buscado los identificadores de los elemento de la página y obteniendo sus valores, estos, se enviaran al backend usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro backend y busca el método post de esta, como el método post de nuestro backend recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato.\\\\
 	Una vez que el usuario le dio clic al botón de generar canción se muestra una leyenda la cual le pide al usuario que aguarde unos segundos, que se está trabajando en su letra. Pasados unos segundos después, en pantalla se le mostrara la letra de la canción generada, así como 3 botones, el primero de ellos le permite descargar la letra generada en un archivo de texto, el segundo le permite al usuario generar una nueva canción utilizando los mismos parámetros con los que genero la letra actual y el ultimo lo regresa al estado anterior para introducir nuevos parámetros y con estos generar una nueva letra.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/pgenerating.png}
@@ -773,16 +775,16 @@
 		\caption{Leyenda mostrada}
 	\end{figure}
 	\begin{figure}[H]
-	\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Generated.png}
-	\centering 
-	\caption{Texto generado}
+		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Generated.png}
+		\centering 
+		\caption{Texto generado}
 	\end{figure}
-	Adentrándonos a esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el back-end para que la página pueda recibir el texto generado por el modelo.
+	Adentrándonos a esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el backend para que la página pueda recibir el texto generado por el modelo.
 	\newpage
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/ModelConection.js}
 	\end{center}
-	Lo que se hace en el código anterior es realizar una conexión asíncrona con el back-end, esto para que mientras no se reciba una respuesta el usuario en pantalla vea una leyenda que diga que se está trabajando en su texto, cuando en la conexión se reciba una respuesta la leyenda que ve el usuario cambiara, mostrando el texto recibido en la función.
+	Lo que se hace en el código anterior es realizar una conexión asíncrona con el backend, esto para que mientras no se reciba una respuesta el usuario en pantalla vea una leyenda que diga que se está trabajando en su texto, cuando en la conexión se reciba una respuesta la leyenda que ve el usuario cambiara, mostrando el texto recibido en la función.
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Download.js}
 	\end{center}
@@ -792,20 +794,20 @@
 		\centering 
 		\caption{Archivo de texto descargado}
 	\end{figure}	
-	Para el segundo botón se utiliza la misma función que se ve en la vista previa se reenvía al back-end los parámetros utilizados y se renderiza nuevamente la vista con la leyenda de que espere unos segundos. En el caso del tercer botón solo se activa el estado que permite renderizar la parte donde el usuario introduce los datos.
+	Para el segundo botón se utiliza la misma función que se ve en la vista previa se reenvía al backend los parámetros utilizados y se renderiza nuevamente la vista con la leyenda de que espere unos segundos. En el caso del tercer botón solo se activa el estado que permite renderizar la parte donde el usuario introduce los datos.
 	\newpage
-	\section{Desarrollo del back-end}
-	Para el back-end se decidió trabajar con una aplicación web desarrollada en Flask, debido a que de esta manera era fácil y rápida de implementar, además que permitía una mejor integración con el modelo y la aplicación web previamente trabajada en React.\\\\
+	\section{Desarrollo del backend}
+	Para el backend se decidió trabajar con una aplicación web desarrollada en Flask, debido a que de esta manera era fácil y rápida de implementar, además que permitía una mejor integración con el modelo y la aplicación web previamente trabajada en React.\\\\
 	Para poder trabajar con una aplicación web en Flask lo primero que se tiene que hacer o que se recomienda hacer es crear un ambiente virtual usando virtualenv esto para separar nuestro Python instalado originalmente en la computadora del que se va a utilizar en la aplicación. Una vez realizado esto, se inició el desarrollo del código.
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/BackEnd/app.py}
 	\end{center}
-	En el código app.py mostrado anteriormente es el código principal de nuestro back-end ya que es este el que se despliega en el navegador web, en este lo primero que se visualiza al entrar es información con respecto a esta aplicación como su nombre, versión y los plugins con los que esta cuenta.\\\\
-	Para poder ver un cómo es que realmente funciona el back-end se realizó una pequeña interfaz y es posible acceder a ella a través de la siguiente dirección x/swagger-ui/ en ella podemos encontrar con mayor detalle el status actual de la api, la cual se encuentra ubicada en el espacio nombrado como health.
+	En el código app.py mostrado anteriormente es el código principal de nuestro backend ya que es este el que se despliega en el navegador web, en este lo primero que se visualiza al entrar es información con respecto a esta aplicación como su nombre, versión y los plugins con los que esta cuenta.\\\\
+	Para poder ver un cómo es que realmente funciona el backend se realizó una pequeña interfaz y es posible acceder a ella a través de la siguiente dirección https://www.neuralyrics.com/developers en ella podemos encontrar con mayor detalle el status actual de la api, la cual se encuentra ubicada en el espacio nombrado como health.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/BackEnd/Health.png}
 		\centering 
-		\caption{Cuadro de status del Back-end}
+		\caption{Cuadro de status del Backend}
 	\end{figure}
 	Un poco más abajo se encuentra el método post de la api, este es el encargado de recibir la información de la aplicación web realizada en React en formato json, para posteriormente enviar esta información al modelo
 	\begin{figure}[H]
@@ -817,12 +819,82 @@
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/BackEnd/generate_lyrics.py}
 	\end{center}
-	En este código utilizando la palabra y el porcentaje introducidos por el usuario son enviados al modelo para ser procesados generando así un texto, este procedimiento se realiza en la función generate\_lyric, e; texto generado va a ser regresado a nuestra api para mandarlo a la aplicación web en React para posteriormente mostrarla en el navegador web del usuario.
+	En este código utilizando la palabra introducido por el usuario es enviado al modelo para ser procesado generando así un texto, este procedimiento se realiza en la función generate\_lyric, el texto generado va a ser regresado en forma de json para mandarlo a la aplicación web en React para posteriormente mostrarla en el navegador web del usuario.
 	\newpage
 	\section{Desplegando componentes}
+		Una vez lista la comunicación con el modelo, es necesario conectar la función para que pueda recibir llamadas por medio de peticiones web, por lo que se desarrolló una API utilizando Flask para recibir dichas peticiones que en local funcionan llamando al localhost y una vez que se hace la comunicación entre la página y API localmente, se procede a desplegar estos componentes por separado, ya que se manejan diferentes lenguajes de programación y por cuestiones de escalamiento y evitar errores de estructuras monolíticas, se despliega cada componente por separado.
+		
+	\subsection{Despliegue del backend}
+		Para poder desplegar la API, primero se procede a crear una imagen de docker donde se corren todos los comandos y se instalan las dependencias necesarias para poder crear un contenedor con la API y que pueda correr en cualquier sistema operativo compatible con Docker.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/dockerfile.png}
+			\centering 
+			\caption{Código para la creación de una imagen de Docker con las dependencias necesarias para crear un contenedor con la API.}
+		\end{figure}
+		Una vez listo el contenedor corriendo localmente, se a crea un repositorio con la imagen en un archivo Dockerfile a plataforma https://hub.docker.com/ para que la herramienta de AWS Elastic Beanstalk descargue la imagen desde ahí con una instrucción de un archivo de Docker Compose como se muestra a continuación.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/dockercompose.png}
+			\centering 
+			\caption{Archivo YML con instrucciones para AWS Elastic Beanstalk para subir la imagen correspondiente con la API.}
+		\end{figure}
+		Teniendo estos dos archivos, se procede a crear una cuenta en AWS, se recomienda crear un usuario administrador para que se pueda tener acceso a todas las aplicaciones para configurar las herramientas de cualquier manera, los pasos a seguir para poder crear un entorno en Elastic Beanstalk son los siguientes:
 	
-	\subsection{Despliegue del back-end}
-	
+		Se selecciona el tipo de entorno que será, en este caso es un entorno web ya que será un API.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_1.png}
+			\centering 
+			\caption{Tipos de entornos.}
+		\end{figure}
+		Se le da un nombre al entorno, se elige un nombre para generar el link a la API y una breve descripción del proyecto.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_2.png}
+			\centering 
+			\caption{Crear un entorno de servidor.}
+		\end{figure}
+		Se elige el tipo de plataforma a crear, en este caso se seleccionó como plataforma Docker y se dejaron las configuraciones recomendadas por la misma plataforma.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_3.png}
+			\centering 
+			\caption{Elegir tipo de plataforma que utilizará el entorno.}
+		\end{figure}
+		Como último paso para crear el entorno, se carga el código en un bucket alojado en S3, este es el archivo con extensión .YML creado previamente para que se pueda crear el entorno a partir de la imagen de docker implementada previamente.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_4.png}
+			\centering 
+			\caption{Subir el código de la aplicación.}
+		\end{figure}
+		Cuando se le da click al botón de crear entorno, se empezará a cargar la imagen y se debería ver el siguiente estado cuando este listo:
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_5.png}
+			\centering 
+			\caption{Despliegue del entorno.}
+		\end{figure}
+		En este punto ya se puede ver en el link generado la API, sin embargo hay algunas configuraciones a cambiar que se muestran a continuación del entorno general para que no haya ningún inconveniente al conectar después el Front-end por medio de SSL.
+		En esta primera parte, es importante mencionar que se cambió manualmente el tipo de capacidad de instancia individual a carga balanceada con un mínimo de 1 y máximo de 1, esto no genera ningún cargo extra y nos permitirá después configurar correctamente los certificados para escuchar al puerto 443 de SSL.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/config_1.png}
+			\centering 
+			\caption{Primera parte de las configuraciones generales de Elastic Beanstalk.}
+		\end{figure}
+		En esta segunda parte, se cambió la configuración del balanceador de carga para que pueda redirigir los puertos de agente de escucha directamente a la API abriendo el puerto de SSL.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/config_2.png}
+			\centering 
+			\caption{Segunda parte de las configuraciones generales de Elastic Beanstalk.}
+		\end{figure}
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/config_balanceador.png}
+			\centering 
+			\caption{Despliegue del entorno.}
+		\end{figure}
+		Una vez configurado esto, se puede probar que la API este corriendo con los endpoints establecidos en el código de FLASK.
+		\begin{figure}[H]
+			\includegraphics[width=12cm]{./Imagenes/BackEnd/api_corriendo.png}
+			\centering 
+			\caption{Estatus de la API corriendo con el endpoint configurado.}
+		\end{figure}
+		Una vez lista la API se recomienda hacer pruebas del funcionamiento total de la aplicación generada, y checar los registros que arroja la plataforma de AWS, ya que cualquier error que tenga en este punto la API puede afectar directamente a la página web también, de igual forma se recomienda en este punto crear el certificado que aparece en la parte de Configuración de SSL y DNS para un correcto funcionamiento de la API con HTTPS.
+	\newpage
 	\subsection{Despliegue de la página web}
 	
 	Para el despliegue de la pagina web nos apoyamos de la plataforma Vercel, la cual permite que los desarrolladores puedan desplegar sus paginas de manera rápida, así como poder actualizarla y escalarla de manera sencilla, además permite hacer despliegues de proyectos que se encuentran dentro de una cuenta de Github\\\\
@@ -832,17 +904,17 @@
 		\centering 
 		\caption{Instalando CLI de Vercel}
 	\end{figure}
-	Una vez instalado, debemos abrir la carpeta de nuestro proyecto a desplegar, y en una terminal dentro de esa carpeta solo es necesario escribir vercel para abrir el CLI de Vercel el cual nos preguntara si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, a lo cual damos una respuesta afirmativa, posteriormente nos pide quien lo va a desplegar, para ello usamos una cuenta creada en esta plataforma o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
+	Una vez instalado, debemos abrir la carpeta de nuestro proyecto a desplegar, y en una terminal dentro de esa carpeta solo es necesario escribir vercel para abrir el CLI de Vercel el cual nos preguntará si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, posteriormente nos pide quien lo va a desplegar, para ello usamos una cuenta creada en esta plataforma o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Acciones.png}
 		\centering 
 		\caption{Indicando acciones para el despliegue}
 	\end{figure}
-	Después de dar las indicaciones anteriores el CLI de vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React, para por último preguntar si se quiere cambiar la configuración del trabajo encontrado, en este caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
+	Después de dar las indicaciones anteriores el CLI de vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React y por último pregunta si se quiere cambiar la configuración del trabajo encontrado, en este caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Deteccion.png}
 		\centering 
-		\caption{Deteccion del tipo de proyecto a desplegar}
+		\caption{Detección del tipo de proyecto a desplegar}
 	\end{figure}
 	Vercel comienza a desplegar la aplicación web y nos da un enlace en el cual podemos ver como se encuentra el despliegue, si se presentara algún problema, en la terminal nos indicara cual es.
 	\begin{figure}[H]
@@ -866,7 +938,7 @@
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Varaiblesentorno.jpeg}
 		\centering 
-		\caption{Varaible de entorno}
+		\caption{Variable de entorno}
 	\end{figure}
 	Después de realizar esto volvemos a nuestra terminal, volvemos a escribir vercel y automáticamente vuelve a realizar el despliegue de la aplicación web, de esta misma forma solo escribiendo vercel en la terminal la actualización de la página desplegada ante algún cambio en el código.\\\\
 	Una vez completado el despliegue, se nos genera un enlace con el cual se puede acceder a la aplicación web ya desplegada desde cualquier dispositivo.
@@ -884,7 +956,7 @@
 	\newpage
 	\section{Configuración de SSL y DNS}
 	
-	Para permitir que nuestra pagina web pueda accederse desde otros dispositivos es necesario hacer la configuración correcta de DNS y darle un certificado de seguridad. Debido a que nuestra pagina web fue desplegada en la plataforma de Vercel, para que esta pueda direccionarse de manera correcta con nuestro dominio se requiere la configuración de un DNS especifico que nos pide Vercel.
+	Para permitir que nuestra pagina web pueda accederse desde otros dispositivos es necesario hacer la configuración correcta de DNS y darle un certificado de seguridad. Debido a que nuestra pagina web fue desplegada en la plataforma de Vercel, para que esta pueda direccionar de manera correcta con nuestro dominio se requiere la configuración de un DNS especifico que nos pide Vercel.
 	\begin{figure}[H] 
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns1.png}
 		\centering \caption{Dirección IP requerida para la configuración del DNS.}
@@ -893,40 +965,51 @@
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns2.png}
 		\centering \caption{Nombre requerido para la configuración del DNS.}
 	\end{figure}
+	Por la parte del backend, se utilizó la herramienta gratuita de AWS Certificate Manager, la cuál nos permite agregar un certificado con el puerto número 443 abierto redirigiendo de HTTP a HTTPS, 	configurándolo para *neuralyrics.com, esto para que se pueda agregar un registro redireccionando a la API y no haya problemas de compatibilidad, una vez que la plataforma haya creado el certificado, se agregan dos registros a Cloudflare:
 	
-	Estas reglas de DNS deben agregarse en la plataforma de Cloudflare de la siguiente manera (METELE TEXTO ADRIAN QWQWQWQWQWQWQWQWQWQWQWQWQWQW)
 	
-	
-	En cuanto a la parte de seguridad de nuestra pagina web, como requiere que el usuario introduzca una palabra y esta posteriormente procesarla y mandarla a nuestro back-end, para ello se requirió configurar un certificado SSL para de esta manera tener una seguridad en el manejo de la información entre el servido del front-end y el back-end.\\\\
-	Para esta configuración nos apoyamos en Amazon Elastic Beans la cual nos permite darle el certificado que requiere el servidor del back-end siguiendo los siguientes pasos (METELE TEXTO ADRIAN QWQWQWQWQWQWQWQWQWQWQWQWQWQW)
+	\begin{figure}[H] 
+		\includegraphics[width=10cm]{./Imagenes/DnsSSL/DNS_aws.png}
+		\centering \caption{Estado del certificado SSL que se agregará en Cloudflare para que la API pueda funcionar con HTTPS.}
+	\end{figure}
+	Estas reglas de DNS deben agregarse en la plataforma de Cloudflare quedando de la siguiente manera 
+	\begin{figure}[H] 
+		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Config_DNS.png}
+		\centering \caption{Configuración final de los registros DNS.}
+	\end{figure}
+	\begin{enumerate}
+	\item El primero es el código del certificado creado en AWS de tipo CNAME con el nombre y contenido proporcionado por AWS.
+	\item El segundo sería otro tipo CNAME con el nombre de 'api' y con contenido a la API directamente.
+	\end{enumerate}
+	Una vez Desplegada la parte de la página web y de la API, si se hizo correctamente debería ser posible poder comunicarse por medio de los links generados al final respectivamente, cada parte tendrá su propio versionamiento y como ventaja de esto es que pueden crecer los dos servicios de forma separada sin necesidad de depender forzosamente para que funcione el link una de la otra.
 	\newpage
-	\begin{thebibliography}{20}
-		\bibitem{refQuesPython} 
-		Python (2021), What is Python? Executive Summary, [En línea]. Disponible: https://www.python.org/doc/essays/blurb/ [Último acceso: 24 de abril del 2021].
-		\bibitem{refHtml}
-		Mozilla.org (2021, febrero 19), HTML basics, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/Getting\_started\_with\_the\_web/HTML\_basics [Último acceso: 15 de mayo del 2021].
-		\bibitem{refHtml2}
-		Mozilla.org (2021, mayo 14), HTML5, [En línea]. Disponible: https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5 [Último acceso: 15 de mayo del 2021].
-		\bibitem{refcss}
-		W3C (2016), HTML \& CSS, [En línea]. Disponible: [Último acceso: 15 de mayo del 2021].		
-		\bibitem{refjs}
-		Mozilla.org (2021, abril 27), What is JavaScript?, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First\_steps/What\_is\_JavaScript [Último acceso: 15 de mayo del 2021].
-		\bibitem{amazon_ec2}
-		Amazon (2021), Amazon EC2 [En línea]. Disponible: https://aws.amazon.com/es/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime\&ec2-whats-new.sort-order=desc [Último acceso: 1 Junio 2021]		
-		\bibitem{amazon_sagemaker}
-		Amazon (2021), Amazon SageMaker [En línea]. Disponible: https://aws.amazon.com/es/sagemaker/ [Último acceso: 1 Junio 2021]		
-		\bibitem{amazon_s3}
-		Amazon (2021), Amazon S3 [En línea]. Disponible: https://aws.amazon.com/es/s3/ [Último acceso: 1 Junio 2021]		
-		\bibitem{kaggle}
-		Kaggle (2010), How to Use Kaggle [En línea]. Disponible: https://www.kaggle.com/docs/datasets [Último acceso: 25 Mayo 2021]
-		\bibitem{kaggleDataset}
-		Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
-		\bibitem{vagalume}
-		Vagalume (2002), Vagalume: Music e tudo [En línea]. Disponible: https://www.vagalume.com.br/ [Último acceso: 25 Mayo 2021]		
-		\bibitem{data_cleaning}
-		Aaron Tay (2021, Abril 23), Data Cleaning Techniques [En línea]. Disponible: https://www.digitalvidya.com/blog/data-cleaning-techniques/ [Último acceso: 30 Mayo 2021]
-		\bibitem{tokenimagen}
-		B. Lee (2019, Noviembre 17), How to 10x Response Rates on Surveys [En línea]. Disponible: https://bryankmlee3.medium.com/conducting-surveys-with-nlp-d38df4c29e39 [Último acceso: 5 Junio 2021]
-		
-	\end{thebibliography}	
-\end{document}
+		\begin{thebibliography}{20}
+			\bibitem{refQuesPython} 
+			Python (2021), What is Python? Executive Summary, [En línea]. Disponible: https://www.python.org/doc/essays/blurb/ [Último acceso: 24 de abril del 2021].
+			\bibitem{refHtml}
+			Mozilla.org (2021, febrero 19), HTML basics, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/Getting\_started\_with\_the\_web/HTML\_basics [Último acceso: 15 de mayo del 2021].
+			\bibitem{refHtml2}
+			Mozilla.org (2021, mayo 14), HTML5, [En línea]. Disponible: https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5 [Último acceso: 15 de mayo del 2021].
+			\bibitem{refcss}
+			W3C (2016), HTML \& CSS, [En línea]. Disponible: [Último acceso: 15 de mayo del 2021].		
+			\bibitem{refjs}
+			Mozilla.org (2021, abril 27), What is JavaScript?, [En línea]. Disponible: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First\_steps/What\_is\_JavaScript [Último acceso: 15 de mayo del 2021].
+			\bibitem{amazon_ec2}
+			Amazon (2021), Amazon EC2 [En línea]. Disponible: https://aws.amazon.com/es/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime\&ec2-whats-new.sort-order=desc [Último acceso: 1 Junio 2021]
+			\bibitem{amazon_elastic_beanstalk}
+			Services, A. (2021). Introducción a AWS Elastic Beanstalk. Amazon Web Services, Inc. https://aws.amazon.com/es/elasticbeanstalk/ [Último acceso: 1 Junio 2021]
+			\bibitem{amazon_s3}
+			Amazon (2021), Amazon S3 [En línea]. Disponible: https://aws.amazon.com/es/s3/ [Último acceso: 1 Junio 2021]		
+			\bibitem{kaggle}
+			Kaggle (2010), How to Use Kaggle [En línea]. Disponible: https://www.kaggle.com/docs/datasets [Último acceso: 25 Mayo 2021]
+			\bibitem{kaggleDataset}
+			Kaggle (2019, Noviembre 17), Song lyrics from 6 musical genres [En línea]. Disponible: https://www.kaggle.com/neisse/scrapped-lyrics-from-6-genres [Último acceso: 25 Mayo 2021]
+			\bibitem{vagalume}
+			Vagalume (2002), Vagalume: Music e tudo [En línea]. Disponible: https://www.vagalume.com.br/ [Último acceso: 25 Mayo 2021]		
+			\bibitem{data_cleaning}
+			Aaron Tay (2021, Abril 23), Data Cleaning Techniques [En línea]. Disponible: https://www.digitalvidya.com/blog/data-cleaning-techniques/ [Último acceso: 30 Mayo 2021]
+			\bibitem{tokenimagen}
+			B. Lee (2019, Noviembre 17), How to 10x Response Rates on Surveys [En línea]. Disponible: https://bryankmlee3.medium.com/conducting-surveys-with-nlp-d38df4c29e39 [Último acceso: 5 Junio 2021]
+			
+		\end{thebibliography}	
+	\end{document}
