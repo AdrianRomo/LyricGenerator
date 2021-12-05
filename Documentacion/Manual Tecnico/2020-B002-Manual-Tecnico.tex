@@ -657,7 +657,6 @@
 	Para el desarrollo del modelo se utilizó una libreta de Kaggle. Cabe mencionar que el lenguaje de programación utilizado para el desarrollo del modelo fue Python, lo primero que se trabajó en la libreta, fue realizar la importación de librerías que se fueran a necesitar, las más importantes son:	
 	\begin{itemize}
 		\item Pandas: la cual nos permite manipular y analizar la información.
-		\item Wordcloud: es una herramienta que nos ayuda al momento de generar la siguiente palabra de una oración.
 		\item Tensorflow: una herramienta que nos ayuda en el procesamiento del aprendizaje automático.
 		\item Keras: una herramienta que nos ayuda en el procesamiento del aprendizaje profundo.
 	\end{itemize}
@@ -965,7 +964,7 @@
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns2.png}
 		\centering \caption{Nombre requerido para la configuración del DNS.}
 	\end{figure}
-	Por la parte del backend, se utilizó la herramienta gratuita de AWS Certificate Manager, la cuál nos permite agregar un certificado con el puerto número 443 abierto redirigiendo de HTTP a HTTPS, 	configurándolo para *neuralyrics.com, esto para que se pueda agregar un registro redireccionando a la API y no haya problemas de compatibilidad, una vez que la plataforma haya creado el certificado, se agregan dos registros a Cloudflare:
+	Por la parte del backend, se utilizó la herramienta gratuita de AWS Certificate Manager, la cuál nos permite agregar un certificado con el puerto número 443 abierto redirigiendo de HTTP a HTTPS, 	configurándolo para neuralyrics.com, esto para que se pueda agregar un registro redireccionando a la API y no haya problemas de compatibilidad, una vez que la plataforma haya creado el certificado, se agregan dos registros a Cloudflare:
 	
 	
 	\begin{figure}[H] 
@@ -978,10 +977,12 @@
 		\centering \caption{Configuración final de los registros DNS.}
 	\end{figure}
 	\begin{enumerate}
-	\item El primero es el código del certificado creado en AWS de tipo CNAME con el nombre y contenido proporcionado por AWS.
-	\item El segundo sería otro tipo CNAME con el nombre de 'api' y con contenido a la API directamente.
+	\item El primero es la dirección de DNS proporcionado por Vercel de tipo, el cual permite enlazar una direccion con un nombre de dominio.
+	\item El segundo es el código del certificado creado en AWS de tipo CNAME con el nombre y contenido proporcionado por AWS.
+	\item El tercero sería otro tipo CNAME con el nombre de 'api' y con contenido a la API directamente.
+	\item El cuarto es el valor de tipo CNAME proporcioando por Vercel
 	\end{enumerate}
-	Una vez Desplegada la parte de la página web y de la API, si se hizo correctamente debería ser posible poder comunicarse por medio de los links generados al final respectivamente, cada parte tendrá su propio versionamiento y como ventaja de esto es que pueden crecer los dos servicios de forma separada sin necesidad de depender forzosamente para que funcione el link una de la otra.
+	Una vez desplegada la parte de la página web y de la API, si se hizo correctamente debería ser posible poder comunicarse por medio de los links generados al final respectivamente, cada parte tendrá su propio versionamiento y como ventaja de esto es que pueden crecer los dos servicios de forma separada sin necesidad de depender forzosamente para que funcione el link una de la otra.
 	\newpage
 		\begin{thebibliography}{20}
 			\bibitem{refQuesPython} 
