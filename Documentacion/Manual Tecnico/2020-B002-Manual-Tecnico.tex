@@ -82,6 +82,12 @@
 }
 \definecolor{delim}{RGB}{20,105,176}
 
+%% CENTRADO VERTICAL
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+%% CENTRADO HORIZONTAL
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
 %% JSON
 \lstdefinelanguage{json}{
 	basicstyle=\normalfont\ttfamily,
@@ -433,24 +439,23 @@
 	\end{appendices}
 	
 	\section{Presentación}
-	El siguiente manual se ha desarrollado con la finalidad de dar a conocer la información necesaria para aquellos que darán soporte a la aplicación web, este les brindara información sobre los requerimientos, el desarrollo de la aplicación web, la generación del modelo, la conexión de la aplicación web con el modelo, las herramientas empleadas y la funcionalidad final.
+	El presente manual se ha desarrollado con el objetivo de dar a conocer la información necesaria requerida por quien llegue a dar soporte a la aplicación web. La intención es proporcionar detalles, en un mayor desglose, de los requerimientos seguidos para su elaboración, así como del desarrollo de la aplicación web, la generación del modelo, la conexión entre la aplicación web y el modelo, las herramientas empleadas y la funcionalidad final.
 	\section{Resumen}
-	El manual detalla aspectos técnicos e informáticos relacionados con el desarrollo de la aplicación web, tiene como finalidad dar a conocer la información necesaria al personal que vaya a administrarlo, modificarlo o para realizar mantenimiento. En este manual se detallan las herramientas que se utilizaron durante el desarrollo. 
+	El manual detalla los aspectos técnicos e informáticos relacionados con el desarrollo de la aplicación web y la finalidad es dar a conocer información necesaria para su manejo u operación al personal que vaya a administrarlo, modificarlo o que tenga como intención el darle mantenimiento, así mismo se exponen en mayor detalle las herramientas utilizadas para su desarrollo.
 	\newpage
 	\section{Introducción}
-	Este manual describe los pasos necesarios para que cualquier persona con ciertas bases en sistemas computacionales pueda administrar, editar o configurar la aplicación web, y que cuando lo haga este responda de una manera adecuada.\\\\
-	Se darán a conocer las herramientas que se utilizaron para el desarrollo de la aplicación web, su despliegue, así como se hará apoyo de diagramas e ilustraciones alusivas al funcionamiento del producto.	Además se detallarán los requerimientos mínimos de hardware y software para el correcto funcionamiento de la aplicación web.
+	El manual describe los pasos requeridos que deben de seguirse para que cualquier operador con nociones básicas de sistemas computacionales pueda administrar, editar o configurar la aplicación web de tal manera que el sistema responda de una manera adecuada y acorde a lo esperado.\\\\
+	Se presentan las herramientas utilizadas para el desarrollo de la aplicación web, así como los pasos que fueron necesarios para la configuración y despliegue de la misma haciendo uso de diagramas e ilustraciones alusivas al funcionamiento como una forma de apoyo visual; se detallan los requerimientos mínimos de hardware y software requeridos para el correcto desempeño de la aplicación web.
 	\section{Objetivo}
-	Informar al usuario sobre la estructura y conformación de la aplicación web con el fin de que pueda darle soporte, realizar modificaciones o actualizaciones a la misma, a través de una descripción de los componentes y funcionalidades que lo conforman.
+	Dar a conocer al usuario la estructura de la aplicación web y la forma en la cual está conformada con la finalidad de que pueda darle soporte, realizar modificaciones o hacer actualizaciones a la misma.
 	\newpage
 	\section{Requerimientos mínimos técnicos}
 	\subsection{Requisitos de hardware de aplicaciones web}
-	En la tabla siguiente se enumeran los requisitos
-	de hardware mínimos y recomendados para la aplicación web.
+	En la siguiente tabla se enumeran los requisitos mínimos de hardware recomendados para el correcto desempeño de la aplicación web.
 	
 	\begin{table}[!htbp]
-		\caption[Requisitos hardware]{Requisitos de hardware mínimos y recomendados}
-		\begin{tabular}{| p{4cm} | p{4cm} | p{4cm} |} 
+		\caption[Requisitos hardware]{Requisitos mínimos recomendados de hardware}
+		\begin{tabular}{| M{4cm} | M{4cm} | M{4cm} |} 
 			\hline
 			\textbf{Componente} & \textbf{Mínimo} & \textbf{Recomendado} \\ 
 			\hline
@@ -463,28 +468,18 @@
 		\end{tabular}
 	\end{table}
 	
-	
-	La ejecución de aplicaciones basadas en modelo en un equipo
-	que no cumpla los requisitos recomendados puede producir un
-	rendimiento inadecuado. Además, puede experimentarse
-	rendimiento satisfactorio ejecutando sistemas que usan otra
-	configuración de hardware que los publicados aquí.\\\\
-	Por ejemplo, un sistema con un procesador moderno
-	de cuatro núcleos, velocidad de reloj más baja y más RAM.
+	La ejecución de la aplicación web en un equipo que no cumpla los requisitos recomendados puede producir un rendimiento inadecuado o no satisfactorio, y de no cumplir con los mínimos puede incluso llevar a un estado de error o de no ejecución.\\
+	Haciendo uso del hardware adecuado (superior o igual al recomendado) se podrá percibir un rendimiento satisfactorio y agradable de la aplicación web, esto es, por ejemplo, un sistema con un procesador moderno de cuatro núcleos, velocidad de reloj más baja y más RAM.
 	
 	\subsection{Requisitos de red}
-	Las aplicaciones basadas en modelo están diseñadas para funcionar
-	mejor en redes que tienen los siguientes elementos:
+	La aplicación web fue diseñada de tal manera que funciona mejor en redes que cuentan con las siguientes características:
 	
 	\begin{itemize}
 		\item Ancho de banda superior a 50 KBps (400 kbps)
 		\item Latencia inferior a 150 ms
 	\end{itemize}
 	
-	Tenga en cuenta que estos valores son recomendaciones y no garantizan
-	un rendimiento satisfactorio. Los valores recomendados se basan en los
-	sistemas que usan solicitudes de un formulario con palabras usuales,
-	el resultado podría variar.
+	Hay que tener en cuenta que estos valores son los recomendados y no garantizan un rendimiento satisfactorio. Los valores sugeridos se tomaron de ejemplos de sistemas que usan solicitudes de un formulario con palabras recurrentes por lo que el resultado podría variar.
 	
 	\section{Herramientas utilizadas para el desarrollo}
 	\subsection{Python}
@@ -534,13 +529,13 @@
 			\begin{tabular}{|c|c|}% centered columns (3 columns)
 				\hline                        %inserts double horizontal lines
 				\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}Introduce palabra en inglés\end{tabular} \\% inserting body of the table 
+				& \begin{tabular}[c]{@{}l@{}}Introducción de palabra en inglés\end{tabular} \\% inserting body of the table 
 				\hline				                     
 				\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
 				\hline
 				\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web proporciona una palabra\\ en el idioma inglés para con ella poder generar un texto \end{tabular} \\
+				& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web proporciona una palabra\\ en el idioma inglés con la finalidad de generar un texto. \end{tabular} \\
 				\hline
 			\end{tabular}\label{table:Caso de uso 1}% is used to refer this table in the text
 		}
@@ -557,7 +552,7 @@
 				& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
 				\hline
 				\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web tiene la posibilidad\\ de descargar el texto generado por el modelo  \end{tabular} \\
+				& \begin{tabular}[c]{@{}l@{}}El usuario dentro de la aplicación web tiene la posibilidad\\ de descargar el texto generado por el modelo.  \end{tabular} \\
 				\hline
 			\end{tabular}\label{table:Caso de uso 2}% is used to refer this table in the text
 		}
@@ -574,7 +569,7 @@
 				& \begin{tabular}[c]{@{}l@{}}Usuario\end{tabular} \\% inserting body of the table 
 				\hline
 				\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}Al usuario dentro de la aplicación web se le da posibilidad de volver\\ a generar otra letra musical usando los mismos parámetros que proporcionó\\ o utilizando unos nuevos\end{tabular} \\
+				& \begin{tabular}[c]{@{}l@{}}Al usuario dentro de la aplicación web se le da la posibilidad de volver\\ a generar otra letra musical haciendo uso de la misma palabra que \\proporcionó o utilizando una nueva.\end{tabular} \\
 				\hline
 			\end{tabular}\label{table:Caso de uso 3}% is used to refer this table in the text
 		}
@@ -585,34 +580,34 @@
 			\begin{tabular}{|c|c|}% centered columns (3 columns)
 				\hline                        %inserts double horizontal lines
 				\begin{tabular}[c]{@{}l@{}}Caso de uso\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}Genera letra de canción\end{tabular} \\% inserting body of the table 
+				& \begin{tabular}[c]{@{}l@{}}Generar letra de canción\end{tabular} \\% inserting body of the table 
 				\hline				                     
 				\begin{tabular}[c]{@{}l@{}}Actores\end{tabular}
 				& \begin{tabular}[c]{@{}l@{}}Servidor\end{tabular} \\% inserting body of the table 
 				\hline
 				\begin{tabular}[c]{@{}l@{}}Descripción\end{tabular}
-				& \begin{tabular}[c]{@{}l@{}}El servidor envía el texto generado por el modelo a la aplicación web,\\ la cual se encarga de mostrarla al usuario final \end{tabular} \\
+				& \begin{tabular}[c]{@{}l@{}}El servidor envía el texto generado por el modelo de vuelta a la \\aplicación web y ésta se encarga de mostrarla al usuario final. \end{tabular} \\
 				\hline
 			\end{tabular}\label{table:Caso de uso41}% is used to refer this table in the text
 		}
 	\end{table}
 	\newpage
 	\section{Funcionamiento general del sistema}
-	El siguiente diagrama muestra el funcionamiento general del producto, donde se ejemplifica a grandes rasgos la extracción del dataset con el cual, después de limpiarlo se realiza el entrenamiento del modelo, el cual puede generar textos, dichos textos en comunicación con el servidor web se muestran al usuario final.
+	El siguiente diagrama muestra el funcionamiento general del sistema, donde se exponen los pasos seguidos para la realización del mismo, camino que empieza con la extracción del dataset y la limpieza del mismo, el entrenamiento del modelo que con la información obtenida en el paso previo resulta en la generación de textos, los cuales son devueltos por el servidor web y mostrados al usuario final.
 	\begin{figure}[H] 
 		\includegraphics[width=13.5cm]{./Imagenes/Diagramas/general.png}
 		\centering \caption{Diagrama general del sistema}
 	\end{figure}
 	\newpage
 	\section{Base de datos}
-	Lo primero que se realizo fue obtener una base de datos la cual contuviera en ella letras de canciones pertenecientes al género musical con el que íbamos a trabajar, que en este caso fue el género pop, así como que estas se encontraran en el idioma inglés. Para ello buscamos en distintas plataformas, datasets que cumplieran con estos requisitos y que estuvieran disponibles para su uso, es decir, de tipo open source.\\\\
-	En Kaggle \cite{kaggle} se encontró un dataset llamado “Song lyrics for 6 musical genres” \cite{kaggleDataset} el cual contiene todos los datos necesarios para el sistema con un total de 160,790 letras de canciones con las tablas mostradas a continuación: 
+	El primer paso realizado fue la obtención de una base de datos que contuviera letras de canciones pertenecientes al género musical con el que íbamos a trabajar, que en este caso fue del género pop, y que se encontraran en el idioma inglés. Se hizo una búsqueda de datasets, en distintas plataformas, que cumplieran con los requisitos ya mencionados y que estuvieran disponibles para su uso libre, es decir, que fueran del tipo open source.\\\\
+	En la plataforma Kaggle \cite{kaggle} se encontró un dataset titulado “Song lyrics for 6 musical genres” \cite{kaggleDataset} el cual contiene todos los datos necesarios y cumplía con los requisitos buscados para el sistema con un total de 160,790 letras de canciones y cuya información se muestra a continuación como se vería en una base de datos, esto es, en tablas: 
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/BasedeDatos/diagrama_ER_BD.jpg}
 		\centering 
 		\caption{Diagrama entidad-relación de la base de datos}
 	\end{figure}
-	Dicha base de datos se obtuvo originalmente de la página de vagalume.com \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación.
+	La base de datos de Kaggle se obtuvo originalmente de la página de vagalume.com \cite{vagalume} e incluye 6 tipos de géneros musicales mencionados a continuación.
 	\begin{itemize}
 		\item Rock
 		\item Pop
@@ -621,13 +616,13 @@
 		\item Sertanejo
 		\item Funk Carioca
 	\end{itemize}
-	Como se puede observar, se tenía la columna “Genre” la cual fue utilizada para separar el dataset en géneros musicales y “Link” la cual servía como enlace a la segunda tabla. Se fusionaron tablas dando el siguiente resultado:
+	Como se puede ver, se contaba con la columna “Genre” la cual fue utilizada para separar el dataset en géneros musicales y “Link” la cual se usó como enlace a la segunda tabla. Las tablas fueron fusionadas dando dando como resultado la siguiente:
 	\begin{figure}[H]
 		\includegraphics[width=5cm]{./Imagenes/BasedeDatos/Songs_with_Artists.png}
 		\centering 
 		\caption{Diagrama entidad-relación de la base de datos procesada}
 	\end{figure}
-	Posteriormente es necesario extraer la información precisa que se va utilizar para el entrenamiento del modelo, para ello se utilizaron las columnas de “Lyric” para seleccionar las letras que se utilizaran para entrenar el modelo, “Idiom” para separar las canciones en el idioma inglés y la columna de “Genre” para tamizar las canciones que forman parte del género pop, formando una base de datos simple la cual solo contiene las letras de canciones del género pop en el idioma inglés.
+	En este punto se requiere extraer la información precisa que se va utilizar para el entrenamiento del modelo, para ello se hace uso de la columna “Lyric” y así seleccionar las letras que se usarán para entrenar el modelo, “Idiom” para separar las canciones en el idioma inglés y la columna de “Genre” para tamizar las canciones que forman parte del género pop, formando así una base de datos simple que contiene únicamente las letras de canciones del género pop en el idioma inglés.
 	\begin{figure}[H]
 		\includegraphics[width=5cm]{./Imagenes/BasedeDatos/Pop.png}
 		\centering 
@@ -654,15 +649,15 @@
 	\end{figure}
 	\newpage
 	\section{Desarrollo del modelo}
-	Para el desarrollo del modelo se utilizó una libreta de Kaggle. Cabe mencionar que el lenguaje de programación utilizado para el desarrollo del modelo fue Python, lo primero que se trabajó en la libreta, fue realizar la importación de librerías que se fueran a necesitar, las más importantes son:	
+	Para el desarrollo del modelo se utilizó una libreta de Kaggle. El lenguaje de programación utilizado para el desarrollo del modelo fue Python, y lo primero que se hizo en la libreta de Kaggle fue la importación de las librerías que se fueran a necesitar, siendo las más importantes:	
 	\begin{itemize}
-		\item Pandas: la cual nos permite manipular y analizar la información.
-		\item Tensorflow: una herramienta que nos ayuda en el procesamiento del aprendizaje automático.
-		\item Keras: una herramienta que nos ayuda en el procesamiento del aprendizaje profundo.
+		\item Pandas: permite manipular y analizar la información.
+		\item Tensorflow: herramienta que ayuda en el procesamiento del aprendizaje automático.
+		\item Keras: herramienta que ayuda en el procesamiento del aprendizaje profundo.
 	\end{itemize}
-	A continuación, procedemos a importar el conjunto de datos previamente trabajado y limpiado, pero en esta ocasión apoyándonos de la librería de pandas, solo nos vamos a quedar con letra de estas canciones, ya que es la información que nos interesa trabajar y la cual vamos a estar manipulando.\\\\
-	Al usar Kaggle debemos tener en cuenta sus limitantes, en este caso se cuenta solamente con 16Gb de RAM, un disco de 73Gb y una GPU de 13GB para el procesamiento de nuestro conjunto de datos, por eso debemos limitar nuestro modelo, en lugar de utilizar todos los datos (28441), vamos a trabajar solo con 700 letras de canciones por el momento.\\\\
-	Utilizando estas 700 lyrics, se decidió obtener información de ellas, siendo más específicos, estadísticas sobre el número de palabras en cada canción, esto con el fin de determinar la frecuencia de distribución del número de palabras de cada texto y para tener una idea del promedio de palabras, esto con el fin de tenerlo en cuenta al momento de realizar la generación de texto.
+	Llegados a este punto se procede a importar el conjunto de datos previamente limpiado, apoyándonos ahora de la librería de Pandas y conservando únicamente la letra de las canciones, ya que es la información con la que nos interesa trabajar y la cual vamos a estar manipulando.\\\\
+	Al usar Kaggle debemos tomar en consideración sus limitantes, siendo algunas de ellas el solamente contar con 16Gb de RAM, un disco de 73Gb y una GPU de 13GB para el procesamiento de nuestro conjunto de datos, razón por la cual debemos limitar nuestro modelo y así en lugar de utilizar todos los datos (28,441), por el momento sólo podemos trabajar de manera estable con 700 letras de canciones.\\\\
+	Haciendo uso de esas 700 letras se decidió obtener información específica, como el número de palabras en cada canción con el fin de determinar la frecuencia de distribución del número de palabras de cada texto, y así tener una idea del promedio de palabras al momento de realizar la generación de texto.
 	\begin{figure}[H]
 		\includegraphics[width=5cm]{./Imagenes/Modelo/estadistica.png}
 		\centering 
@@ -670,24 +665,24 @@
 	\end{figure}
 	Lo que podemos observar en la imagen anterior es:
 	\begin{itemize}
-		\item Count: el cual es el número de canciones analizadas.
+		\item Count: el número de canciones analizadas.
 		\item Mean: el promedio de palabras por canción.
 		\item Std: la desviación estándar de las palabras.
 		\item Min: la menor cantidad de palabras encontradas en una canción.
 		\item Max: la mayor cantidad de palabras encontradas en una canción.
 	\end{itemize}
-	Además, se le realizo una tokenización a las letras de nuestras 700 canciones, esto quiere decir que se separo cada palabra y cada palabra se convirtió en un número. Para este proceso se hizo uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
+	Aunado a esto, se le realizó una tokenización a las letras de nuestras 700 canciones, esto significa que se separo cada palabra, y cada una se convirtió en un número. Este proceso se llevo acabo con el uso de Keras y la clase Tokenizer(), la cual cuenta con dos métodos importantes:
 	\begin{itemize}
-		\item \_fit\_ontext(): El cual actualiza el vocabulario interno en función de una lista de textos determinada o, en este caso, la columna "Lyrics", donde cada entrada de la lista será un token.
-		\item \_texts\_tosequences(): El cual transforma cada texto dentro de la lista de textos proporcionados en una secuencia de números enteros; solo se considerarán las palabras conocidas por el tokenizador.
+		\item \_fit\_ontext(): Actualiza el vocabulario interno en función de una lista de textos determinada o, en este caso, la columna “Lyrics”, donde cada entrada de la lista será un token.
+		\item \_texts\_tosequences(): Transforma cada texto dentro de la lista de textos proporcionados en una secuencia de números enteros; solo se considerarán las palabras conocidas por el tokenizador.
 	\end{itemize}	
 	\begin{figure}[H]
 		\includegraphics[width=10cm]{./Imagenes/Modelo/tokenization.png}
 		\centering 
 		\caption{Tokenizado de las palabras \cite{tokenimagen}}
 	\end{figure}
-	Antes de la generación del modelo, es necesario normalizar todas las oraciones a una misma longitud estándar, para evitar el desbordamiento de la memoria y conseguir que las capas del modelo sean mucho más profundas, este es un proceso simple el cual consta de agregar ceros al comienzo del texto, dando como resultado capas del mismo tamaño.\\\\
-	La posición donde se sumarán los ceros viene determinada por el relleno del argumento, en este caso, se hará al comienzo de la secuencia.
+	Antes de la generación del modelo es necesario normalizar todas las oraciones a una misma longitud estándar para evitar el desbordamiento de la memoria y conseguir así que las capas del modelo sean mucho más profundas, este es un proceso simple conocido como “Padding”, el cual agrega ceros al comienzo del texto dando como resultado capas del mismo tamaño.\\\\
+	La posición donde se agregarán los ceros viene determinada por el “Padding”, en este caso, se hará al comienzo de la secuencia.
 	\begin{figure}[H]
 		\includegraphics[width=10cm]{./Imagenes/Modelo/padding.png}
 		\centering 
@@ -695,11 +690,10 @@
 	\end{figure}	
 	\newpage	
 	\section{Creación del modelo}
-	En este caso se utilizó el modelo LSTM Bidireccional, este tipo de redes neuronales se ejecutan como su nombre lo indica: en dos direcciones. Esto quiere decir que va del pasado al futuro y viceversa, así es como el modelo conserva la información de ambos estados en cualquier momento. Las redes neuronales de LSTM se utilizan principalmente cuando el contexto está involucrado.\\\\
-	Los modelos en Keras se definen como una secuencia de capas, y el modelo secuencial se trata de agregar capas de una en una. Las capas son el componente básico de la red neuronal.\\\\
-	Dentro de estas capas podemos encontrar:
+	Se utilizó un modelo del tipo LSTM Bidireccional, este tipo de redes neuronales se ejecutan como su nombre lo indica: en dos direcciones. Esto quiere decir que va del pasado al futuro y viceversa, así es como el modelo conserva la información de ambos estados en cualquier momento. Las redes neuronales del tipo LSTM se utilizan principalmente cuando el contexto importa.\\\\
+	Los modelos en Keras se definen como una secuencia de capas, y las capas son el componente básico de la red neuronal. Algunos ejemplos de tales capas son:
 	\subsection{Embedding o incrustación}
-	Es una capa central, solo se puede usar como la primera capa en un modelo, convierte los números enteros positivos en vectores densos de un tamaño fijo (el primer parámetro es el tamaño del vocabulario, el segundo parámetro es la dimensión de la incrustación densa y el tercer parámetro es sobre la longitud de las secuencias, este se requiere ya que usaremos una capa densa más adelante)
+	Es una capa central, solo es posible usarla como la primera capa en un modelo, convierte los números enteros positivos en vectores densos de un tamaño fijo (el primer parámetro es el tamaño del vocabulario, el segundo parámetro es la dimensión de la incrustación densa, y el tercer parámetro trata la longitud de las secuencias, este se requiere ya que se hará uso de una capa del tipo Denso más adelante).
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/embedding.py}
 	\end{center}
@@ -719,55 +713,57 @@
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/dense.py}
 	\end{center}
 	\subsection{Método de compilación, algoritmo de optimización y métrica de rendimiento}
-	Perdida: También conocida como función de costos; funciona durante el proceso de optimización y su función es calcular el error del modelo. La entropía cruzada se utiliza para estimar la diferencia entre una distribución de probabilidad estimada y predicha. Se utilizará categorical\_cross-entropy porque es más adecuado para este tipo de problemas y se usa casi universalmente para entrenar redes neuronales de aprendizaje profundo debido a los resultados que produce.
-	Optimización: Se encarga de reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida porque es la mejor opción que ofrece Keras para entrenar la red neuronal en menos tiempo y de manera más eficiente. Earlystop detendrá el entrenamiento si el modelo ha dejado de mejorar, esto se verificará al final de cada epoch. En este caso, la "precisión" o “accuracy” se utilizará como métrica de rendimiento.
-	El método fit es el encargado de entrenar el modelo para el número fijo de epochs dados.	
+	“Loss”: También conocida como función de costos; funciona durante el proceso de optimización y su trabajo es calcular el error del modelo. La entropía cruzada se utiliza para estimar la diferencia entre una distribución de probabilidad estimada y predicha. Se utilizará categorical\_cross-entropy porque es más adecuado para este tipo de problemas y se usa casi universalmente para entrenar redes neuronales de aprendizaje profundo debido a los resultados que produce.\\
+	“Optimizer”: Su tarea es reducir las pérdidas y brindar los resultados más precisos posibles. Adam es la opción elegida debido a que es la mejor opción que ofrece Keras para entrenar la red neuronal en el menor tiempo y de la forma más eficiente.\\
+	“Earlystop”: Detendrá el entrenamiento si el modelo ha dejado de mejorar, y esto es comprobado al final de cada “epoch” o iteración.\\
+	En este caso, la “precisión” o “accuracy” se utilizará como métrica de rendimiento.
+	“fit”: Encargado de entrenar el modelo por un número fijo de epochs dados.	
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/compile.py}
 	\end{center}
-	Quedando como resultado el código del modelo de la siguiente forma:
+	El código del modelo queda entonces de la siguiente forma:
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/modelo.py}
 	\end{center}
 	\subsection{Importación del modelo}
-	Una vez completado el entrenamiento de nuestro modelo, lo que falta es importarlo para probar cómo funciona, en nuestro caso nombramos al modelo “song\_lyrics\_generator” y se importo de la siguiente forma, llamándola link de nuestra libreta de Kaggle:
+	Una vez completado el entrenamiento de nuestro modelo, sólo queda importarlo y así probar su funcionamiento, en nuestro caso nombramos al modelo “song\_lyrics\_generator” y se importó de la siguiente manera, llamando al enlace de nuestra libreta de Kaggle:
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/import.py}
 	\end{center}
-	Ya que contemos con el modelo importado, se creó una función que se utilizará para generar la letra de una canción utilizando el modelo previamente entrenado, predecirá las siguientes palabras en base a la palabra(s) de entrada suministradas como 'seed\_text'. Para que esto funcione, se debe aplicar una tokenización al seed\_text, luego se aplicará un relleno a las secuencias generadas y se pasará al modelo entrenado para que se pueda predecir la siguiente palabra.
+	Una vez que contamos con el modelo importado se crea una función que se usará para generar la letra de una canción utilizando el modelo previamente entrenado, y éste predecirá las siguientes palabras tomando como contexto a la(s) palabra(s) de entrada suministradas como “seed\_text”. Para que esto funcione, se debe aplicar una tokenización al seed\_text, posterior a ello se aplicará un padding a las secuencias generadas y se pasarán al modelo entrenado, obteniendo de esta manera que se pueda predecir la siguiente palabra.
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/Modelo/function.py}
 	\end{center}	
 	\newpage
 	\section{Desarrollo de la aplicación web}
-	Para el desarrollo de la aplicación web se decidió realizarla haciendo uso de React o mejor conocida como ReactJS la cual se trata de una biblioteca de Java para crear interfaces interactivas, con la cual se puedes diseñar vistas simples y en las cuales se actualizarán y renderizarán los componentes necesarios cuando haya cambios en los datos.\\\\
-	Se decidió usar este, debido a que nos da la posibilidad de que sea compatible con dispositivos móviles sin la necesidad de volver a escribir código para esta tecnología.\\\\
-	Lo primero que se requirió para poder trabajar con React fue descargar Node.js desde su página (https://nodejs.org/es/) la cual nos va a permitir crear aplicaciones web utilizando JavaScript, además de que al instalarlo obtendremos npm el cual posteriormente nos permitirá instalar paquetes con los que añadiremos nuevas funciones a nuestra aplicación y que a su vez son compatibles con React.\\\\
-	Una vez que se tiene instalado Node.js para poder ejecutar una aplicación web, en terminal tendremos que escribir npm start, lo cual ejecutara un servidor de desarrollo de manera local, a la cual se puede acceder a través de la siguiente dirección (localhost:3000) en cualquier navegador.\\\\
-	Como React se basa en crear vistas lo primero que se hizo fue visualizar que es lo que queremos que vea el usuario, por ello se creó una carpeta en la cual se colocaron las páginas con las cuales se iban a trabajar y con las que el usuario va a interactuar. Estas fueron la página de inicio, la de preguntas frecuentes, la de ejemplos de canciones previamente generadas y una acerca de nosotros.\\\\
+	El desarrollo de la aplicación web fue llevado a cabo haciendo uso de React, mejor conocida como ReactJS, la cual es una biblioteca de Javacript usada en mayor parte para la creación de interfaces interactivas diseñadas sobre componentes, los cuales una vez renderizados son mostrados al usuario final.\\\\
+	La biblioteca fue escogida debido a que hace posible la compatibilidad con dispositivos móviles sin la necesidad de escribir código específico para esta tecnología, esto es, nos ofrece un estado responsivo que cambie en función del dispositivo donde se muestre la aplicación web.\\\\
+	Previo a empezar el trabajo con React fue necesario descargar “Node.js” desde su página (https://nodejs.org/es/) el cual permite crear aplicaciones web utilizando Javascript, y al haberlo instalado se obtiene el comando “npm” usado en la terminal, el cual permite instalar paquetes al proyecto sobre el que se trabaje posibilitando la adición de nuevas funciones a nuestra aplicación web.\\\\
+	Teniendo instalado Node.js y haciendo uso de una terminal es necesario escribir el comando “npm start”, el cual ejecuta un servidor de desarrollo de forma local al que se puede acceder colocando la dirección “localhost:3000” en cualquier navegador, donde se mostrará cómo va quedando el proyecto sobre el que se esté trabajando.\\\\
+	Para el diseño de la aplicación web nos enfocamos en que su estructura se trabajara bajo el entendido de que las pestañas que se fueran a mostrar sean aquellas que consideramos como las más relevantes, siendo estas: Página de Inicio, Preguntas Frecuentes, Ejemplos de letras de canciones previamente generadas y una acerca del equipo.\\\\
 	\begin{figure}[H]
 		\includegraphics[width=5cm]{./Imagenes/AplicacionWeb/Paginas.png}
 		\centering 
 		\caption{Páginas trabajadas}
 	\end{figure}
-	La más importante de estas páginas es la página principal, debido a que es esta la primer a que va a ver el usuario y con la que más va a interactuar, en esta, aparece un mensaje con un botón el cual invita al usuario a generar su propia letra musical.
+	Entre todo el diseño, la página principal es la más importante debido a que esta es la primera que ve el usuario al acceder a la aplicación web y con la que más va a interactuar durante su estadía; lo primero que se muestra es un mensaje con un botón verde, colocado con clara intención de invitar al usuario a presionarlo.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/Paginaweb.png}
 		\centering 
 		\caption{Página de bienvenida}
 	\end{figure}
-	Si el usuario le da clic al botón, como React usa estados para renderizar lo que ve el usuario, se muestra en pantalla el formulario donde se le pide al usuario que introduzca una palabra en el idioma inglés, así como se muestra una barra donde el usuario puede ingresar que tanto quiere que rime la letra de esta canción.
+	Si el usuario decide presionar el botón será llevado a un formulario sin necesidad de pasar a otra página, maximizando así la sensación de no demora, donde inmediatamente se le es requerido que introduzca una palabra en el idioma inglés en el único campo de entrada de texto, teniendo así la posibilidad de regresar al inicio o de generar la letra con la palabra proporcionada.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/pform.png}
 		\centering 
 		\caption{Formulario}
 	\end{figure}
-	En esta parte debemos detenernos para habar acerca de cómo es que los datos proporcionados por el usuario son leídos y posteriormente enviados a nuestro backend para ser procesados futuramente por el modelo. A continuación, se muestra el código de la función la cual realiza este proceso.
+	Se hace una pausa para mostrar la manera en que el dato proporcionado por el usuario es leído y enviado al servidor para ser procesado por el modelo, y así un resultado más personalizados pueda ser devuelto. A continuación, se presenta el código utilizado para la realización de este proceso.
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Sendword.js}
 	\end{center}
-	En esta función lo primero que se hace es recibir los datos (la palabra y el porcentaje) que introdujo el usuario, esto se hace buscado los identificadores de los elemento de la página y obteniendo sus valores, estos, se enviaran al backend usando la función de fetch, lo que hace dicha función es buscar la url, que en este caso es donde se encuentra alojado nuestro backend y busca el método post de esta, como el método post de nuestro backend recibe datos en formato json, los datos que introdujo el usuario deben ser enviados en este formato.\\\\
-	Una vez que el usuario le dio clic al botón de generar canción se muestra una leyenda la cual le pide al usuario que aguarde unos segundos, que se está trabajando en su letra. Pasados unos segundos después, en pantalla se le mostrara la letra de la canción generada, así como 3 botones, el primero de ellos le permite descargar la letra generada en un archivo de texto, el segundo le permite al usuario generar una nueva canción utilizando los mismos parámetros con los que genero la letra actual y el ultimo lo regresa al estado anterior para introducir nuevos parámetros y con estos generar una nueva letra.
+	Lo que recibe la función es la palabra que introdujo el usuario, esto es hecho ubicando el identificador del campo de texto y obteniendo su valor, el cual es enviado al servidor mediante el uso de la función “fetch”, lo que hace dicha función es buscar la url que se le proporciona (donde se encuentra alojado el servidor) y busca el método post el cual espera recibir los datos en formato Json; los datos proporcionados por el usuario deben ser enviados al servidor en formato json.\\\\
+	Si el usuario decide presionar el botón de Generar Canción será desplegada una leyenda que pide aguardar unos segundos en lo que queda generada la letra. Segundos después, la letra de la canción generada irá siendo actualizada y mostrada al usuario dando un efecto de ser escrita al momento; aparecerán al final de la letra 3 botones, el primero permite descargar la letra generada en un archivo de texto, el segundo posibilita al usuario el generar una nueva canción utilizando la misma palabra con la que genero la letra actual pero esperando un resultado distinto, y el último botón regresa a la interfaz previa si lo que se busca es generar una nueva letra con una palabra distinta a la ya usada.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/AplicacionWeb/pgenerating.png}
 		\centering 
@@ -778,104 +774,104 @@
 		\centering 
 		\caption{Texto generado}
 	\end{figure}
-	Adentrándonos a esta sección, la primera función que debemos revisar es la que permite hacer la conexión con el backend para que la página pueda recibir el texto generado por el modelo.
 	\newpage
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/ModelConection.js}
 	\end{center}
-	Lo que se hace en el código anterior es realizar una conexión asíncrona con el backend, esto para que mientras no se reciba una respuesta el usuario en pantalla vea una leyenda que diga que se está trabajando en su texto, cuando en la conexión se reciba una respuesta la leyenda que ve el usuario cambiara, mostrando el texto recibido en la función.
+	El código anterior tiene como objetivo el actualizar la pantalla con una serie de textos pensados para la espera, de manera tal que el usuario vea que se sigue trabajando y no piense que el sitio se congeló, una vez que la letra es recibida se detendrá la generación de datos curiosos y se desplegarán los versos y coros.
 	\begin{center}
 		\lstinputlisting[language=JavaScript]{./Imagenes/AplicacionWeb/Download.js}
 	\end{center}
-	Con esta función se permite crear un archivo de texto el cual es posible descargarse en la computadora del usuario y el cual va a contener la letra de la canción que se generó en ese momento.
+	La función “download” permite crear un archivo de texto conteniendo la letra de la canción que se generó en ese momento y descargarla al dispositivo que se esté usando.
 	\begin{figure}[H]
 		\includegraphics[width=10cm]{./Imagenes/AplicacionWeb/Archivo.png}
 		\centering 
 		\caption{Archivo de texto descargado}
 	\end{figure}	
-	Para el segundo botón se utiliza la misma función que se ve en la vista previa se reenvía al backend los parámetros utilizados y se renderiza nuevamente la vista con la leyenda de que espere unos segundos. En el caso del tercer botón solo se activa el estado que permite renderizar la parte donde el usuario introduce los datos.
+	El segundo botón hace uso de la misma función y el mismo parámetro con los que se genera la letra, esto es, se reenvía al backend los parámetros utilizados y los elementos dentro de la ventana son renderizados nuevamente mostrando una vez la serie de datos curiosos en lo que se recibe respuesta del servidor.\\
+	El tercer botón tiene como función regresar al usuario al campo de texto donde puede ingresar la palabra con la que quiere que se genere la letra de la canción.
 	\newpage
 	\section{Desarrollo del backend}
-	Para el backend se decidió trabajar con una aplicación web desarrollada en Flask, debido a que de esta manera era fácil y rápida de implementar, además que permitía una mejor integración con el modelo y la aplicación web previamente trabajada en React.\\\\
-	Para poder trabajar con una aplicación web en Flask lo primero que se tiene que hacer o que se recomienda hacer es crear un ambiente virtual usando virtualenv esto para separar nuestro Python instalado originalmente en la computadora del que se va a utilizar en la aplicación. Una vez realizado esto, se inició el desarrollo del código.
+	Se tomó la decisión de trabajarlo con una aplicación web desarrollada en Flask, esto debido a que la implementación es relativamente fácil y rápida de lograr aunado a que permite una mejor integración con el modelo y la aplicación web trabajada en React.\\\\
+	Para poder trabajar con una aplicación web en Flask lo primero que se requiere hacer, o que se recomienda, es crear un ambiente virtual usando “virtualenv” con la finalidad de separar las librerías Python instaladas originalmente en la computadora de las que se requieren por el proyecto con el que se va a trabajar. Una vez se tiene esto preparado, se procede al desarrollo del código.
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/BackEnd/app.py}
 	\end{center}
-	En el código app.py mostrado anteriormente es el código principal de nuestro backend ya que es este el que se despliega en el navegador web, en este lo primero que se visualiza al entrar es información con respecto a esta aplicación como su nombre, versión y los plugins con los que esta cuenta.\\\\
-	Para poder ver un cómo es que realmente funciona el backend se realizó una pequeña interfaz y es posible acceder a ella a través de la siguiente dirección https://www.neuralyrics.com/developers en ella podemos encontrar con mayor detalle el status actual de la api, la cual se encuentra ubicada en el espacio nombrado como health.
+	El código anterior se puede encontrar en el archivo “app.py”, es el código principal de nuestro backend y se despliega en el navegador web; muestra información relacionada a la aplicación que se está trabajando como su nombre, versión y los plugins con los que esta cuenta.\\\\
+	Con el objetivo de dar mayor claridad a la manera en que funciona el backend, se realizó una pequeña interfaz a la que es posible acceder desde la siguiente dirección “https://www.neuralyrics.com/developers” y en ella podemos encontrar desglosado en mayor detalle el status actual de la API, la cual se encuentra ubicada en el espacio que lleva por nombre “Health”.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/BackEnd/Health.png}
 		\centering 
 		\caption{Cuadro de status del Backend}
 	\end{figure}
-	Un poco más abajo se encuentra el método post de la api, este es el encargado de recibir la información de la aplicación web realizada en React en formato json, para posteriormente enviar esta información al modelo
+	Yéndonos más abajo dentro de la misma dirección se puede encontrar el método post de la API, el cuál tiene como tarea el recibir la información de la aplicación web realizada en React en formato json, y así enviar esta información al modelo.
 	\begin{figure}[H]
 		\includegraphics[width=13.5cm]{./Imagenes/BackEnd/Post.png}
 		\centering 
 		\caption{Cuadro del método Post}
 	\end{figure}
-	Para realizar esta tarea se desarrolló el siguiente código
+	Para realizar esta tarea se desarrolló el siguiente código:
 	\begin{center}
 		\lstinputlisting[language=Python]{./Imagenes/BackEnd/generate_lyrics.py}
 	\end{center}
-	En este código utilizando la palabra introducido por el usuario es enviado al modelo para ser procesado generando así un texto, este procedimiento se realiza en la función generate\_lyric, el texto generado va a ser regresado en forma de json para mandarlo a la aplicación web en React para posteriormente mostrarla en el navegador web del usuario.
+	La palabra introducida por el usuario es enviada al modelo para ser procesada,  generando de esta manera un texto con la letra de la canción, este procedimiento se realiza en la función “generate\_lyric” y el texto generado es regresado en formato json a la aplicación web en React, que será posteriormente mostrada en el navegador web del usuario.
 	\newpage
 	\section{Desplegando componentes}
-		Una vez lista la comunicación con el modelo, es necesario conectar la función para que pueda recibir llamadas por medio de peticiones web, por lo que se desarrolló una API utilizando Flask para recibir dichas peticiones que en local funcionan llamando al localhost y una vez que se hace la comunicación entre la página y API localmente, se procede a desplegar estos componentes por separado, ya que se manejan diferentes lenguajes de programación y por cuestiones de escalamiento y evitar errores de estructuras monolíticas, se despliega cada componente por separado.
+		Una vez se tiene lista la comunicación con el modelo, se vuelve necesario conectar la función para que pueda recibir llamadas por medio de peticiones web, por lo que se desarrolló una API utilizando Flask para recibir dichas peticiones que en local funcionan llamando al “localhost”, y una vez que se establece la comunicación entre la página y la API de forma local se procede a desplegar estos componentes por separado ya que se manejan distintos lenguajes de programación y puede ocasionar error tener todo junto, así como por cuestiones de escalamiento y para evitar errores ocasionadas por las estructuras monolíticas.
 		
 	\subsection{Despliegue del backend}
-		Para poder desplegar la API, primero se procede a crear una imagen de docker donde se corren todos los comandos y se instalan las dependencias necesarias para poder crear un contenedor con la API y que pueda correr en cualquier sistema operativo compatible con Docker.
+		Para poder desplegar la API primero se procede a crear una imagen de Docker donde se corren todos los comandos y se instalan las dependencias necesarias para poder crear un contenedor que incluirá a la API y que pueda correr en cualquier sistema operativo compatible con Docker.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/dockerfile.png}
 			\centering 
 			\caption{Código para la creación de una imagen de Docker con las dependencias necesarias para crear un contenedor con la API.}
 		\end{figure}
-		Una vez listo el contenedor corriendo localmente, se a crea un repositorio con la imagen en un archivo Dockerfile a plataforma https://hub.docker.com/ para que la herramienta de AWS Elastic Beanstalk descargue la imagen desde ahí con una instrucción de un archivo de Docker Compose como se muestra a continuación.
+		Una vez listo el contenedor corriendo localmente, se crea un repositorio con la imagen en un archivo Dockerfile en la plataforma https://hub.docker.com/ con la finalidad de que la herramienta de AWS “Elastic Beanstalk” descargue la imagen desde ahí con una instrucción de un archivo de Docker Compose como se muestra a continuación.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/dockercompose.png}
 			\centering 
 			\caption{Archivo YML con instrucciones para AWS Elastic Beanstalk para subir la imagen correspondiente con la API.}
 		\end{figure}
-		Teniendo estos dos archivos, se procede a crear una cuenta en AWS, se recomienda crear un usuario administrador para que se pueda tener acceso a todas las aplicaciones para configurar las herramientas de cualquier manera, los pasos a seguir para poder crear un entorno en Elastic Beanstalk son los siguientes:
+		Una vez se cuenta con los dos archivos, se procede a crear una cuenta en AWS (se recomienda crear un usuario administrador para que se pueda tener acceso a todas las aplicaciones y así configurar las herramientas a conveniencia y según sus necesidades particulares), los pasos a seguir para poder crear un entorno en Elastic Beanstalk son los siguientes:
 	
-		Se selecciona el tipo de entorno que será, en este caso es un entorno web ya que será un API.
+		Se selecciona el tipo de entorno en el que se trabajará, en este caso es un entorno web ya que se trata de una API.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_1.png}
 			\centering 
 			\caption{Tipos de entornos.}
 		\end{figure}
-		Se le da un nombre al entorno, se elige un nombre para generar el link a la API y una breve descripción del proyecto.
+		Se le da un nombre al entorno, se elige un nombre para generar el enlace a la API y una breve descripción del proyecto.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_2.png}
 			\centering 
 			\caption{Crear un entorno de servidor.}
 		\end{figure}
-		Se elige el tipo de plataforma a crear, en este caso se seleccionó como plataforma Docker y se dejaron las configuraciones recomendadas por la misma plataforma.
+		Se elige el tipo de plataforma que se creará, en este caso se seleccionó como plataforma a Docker y se dejaron las configuraciones recomendadas por la misma plataforma.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_3.png}
 			\centering 
 			\caption{Elegir tipo de plataforma que utilizará el entorno.}
 		\end{figure}
-		Como último paso para crear el entorno, se carga el código en un bucket alojado en S3, este es el archivo con extensión .YML creado previamente para que se pueda crear el entorno a partir de la imagen de docker implementada previamente.
+		Como último paso requerido para crear el entorno es necesario cargar el código en un bucket alojado en Amazon S3, siendo este el archivo con extensión .YML creado previamente, y así se pueda crear el entorno a partir de la imagen de Docker implementada previamente.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_4.png}
 			\centering 
 			\caption{Subir el código de la aplicación.}
 		\end{figure}
-		Cuando se le da click al botón de crear entorno, se empezará a cargar la imagen y se debería ver el siguiente estado cuando este listo:
+		Cuando se le da click al botón de crear entorno, se empezará a cargar la imagen y se debería mostrar el siguiente estado cuando se encuentre listo:
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/paso_5.png}
 			\centering 
 			\caption{Despliegue del entorno.}
 		\end{figure}
-		En este punto ya se puede ver en el link generado la API, sin embargo hay algunas configuraciones a cambiar que se muestran a continuación del entorno general para que no haya ningún inconveniente al conectar después el Front-end por medio de SSL.
-		En esta primera parte, es importante mencionar que se cambió manualmente el tipo de capacidad de instancia individual a carga balanceada con un mínimo de 1 y máximo de 1, esto no genera ningún cargo extra y nos permitirá después configurar correctamente los certificados para escuchar al puerto 443 de SSL.
+		Si todo salió bien en este punto ya se puede vislumbrar la API dentro del link generado, sin embargo, hay algunas configuraciones del entorno general (Fig. 25) que requieren unos cambios para que no haya ningún inconveniente al conectar el Front-end por medio de SSL.\\
+		Es importante mencionar que se cambió manualmente el tipo de capacidad de “instancia individual” a “carga balanceada” con un mínimo de 1 y máximo de 1, esto no genera ningún cargo extra y permitirá configurar después y de manera correcta los certificados para escuchar al puerto 443 de SSL.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/config_1.png}
 			\centering 
 			\caption{Primera parte de las configuraciones generales de Elastic Beanstalk.}
 		\end{figure}
-		En esta segunda parte, se cambió la configuración del balanceador de carga para que pueda redirigir los puertos de agente de escucha directamente a la API abriendo el puerto de SSL.
+		Continuando con las configuraciones requeridas, se cambió la configuración del balanceador de carga para que pueda redirigir los puertos de agente de escucha directamente a la API abriendo el puerto de SSL.
 		\begin{figure}[H]
 			\includegraphics[width=12cm]{./Imagenes/BackEnd/config_2.png}
 			\centering 
@@ -892,30 +888,30 @@
 			\centering 
 			\caption{Estatus de la API corriendo con el endpoint configurado.}
 		\end{figure}
-		Una vez lista la API se recomienda hacer pruebas del funcionamiento total de la aplicación generada, y checar los registros que arroja la plataforma de AWS, ya que cualquier error que tenga en este punto la API puede afectar directamente a la página web también, de igual forma se recomienda en este punto crear el certificado que aparece en la parte de Configuración de SSL y DNS para un correcto funcionamiento de la API con HTTPS.
+		Una vez que la API se encuentre lista se recomienda hacer pruebas del funcionamiento total de la aplicación generada y checar los registros que arroja la plataforma de AWS, ya que cualquier error que la API pueda presentar en este punto puede afectar directamente a la página web, de igual forma se recomienda crear el certificado que aparece en la parte de “Configuración de SSL y DNS” para asegurar un correcto funcionamiento de la API usando HTTPS.
 	\newpage
 	\subsection{Despliegue de la página web}
 	
-	Para el despliegue de la pagina web nos apoyamos de la plataforma Vercel, la cual permite que los desarrolladores puedan desplegar sus paginas de manera rápida, así como poder actualizarla y escalarla de manera sencilla, además permite hacer despliegues de proyectos que se encuentran dentro de una cuenta de Github\\\\
-	Lo primero que debemos hacer para poder trabajar con la línea de comandos de Vercel es instalarlo, para ello debemos recurrir a nuestra terminal e instarlo usando el comando npm i -g vercel o yarn global add vercel.
+	Para el despliegue de la pagina web nos apoyamos de la plataforma Vercel, la cual permite que los desarrolladores puedan desplegar sus paginas de manera rápida, así como poder actualizarla y escalarla de forma sencilla, además permite hacer despliegues de proyectos que se encuentren dentro de una cuenta de Github.\\\\
+	Lo primero que se requiere hacer para poder trabajar con la línea de comandos de Vercel es instalarlo, para ello debemos recurrir a nuestra terminal y descargarlo usando el comando “npm i -g vercel” o “yarn global add vercel”.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Instalacion.png}
 		\centering 
 		\caption{Instalando CLI de Vercel}
 	\end{figure}
-	Una vez instalado, debemos abrir la carpeta de nuestro proyecto a desplegar, y en una terminal dentro de esa carpeta solo es necesario escribir vercel para abrir el CLI de Vercel el cual nos preguntará si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, posteriormente nos pide quien lo va a desplegar, para ello usamos una cuenta creada en esta plataforma o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
+	Una vez instalado, se debe de abrir la carpeta de nuestro proyecto a desplegar y abrir una terminal, es necesario escribir “vercel” para abrir el CLI de Vercel, el cual nos preguntará si el proyecto contenido dentro de la carpeta es el que se va a configurar y desplegar, posteriormente preguntará quien lo va a desplegar, para ello usamos una cuenta creada en la plataforma de Vercel o vinculamos la de Github para acceder, se nos pregunta el nombre del proyecto y el inicio de los archivos del proyecto a desplegar.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Acciones.png}
 		\centering 
 		\caption{Indicando acciones para el despliegue}
 	\end{figure}
-	Después de dar las indicaciones anteriores el CLI de vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React y por último pregunta si se quiere cambiar la configuración del trabajo encontrado, en este caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
+	Una vez se configuraron las indicaciones anteriores, el CLI de Vercel detecta automáticamente el tipo de proyecto trabajado, en este caso una aplicación web usando React, y por último pregunta si se quiere cambiar la configuración del trabajo encontrado, en nuestro caso decimos que no, ya que es correcto el tipo de aplicación encontrada con el trabajado.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Deteccion.png}
 		\centering 
 		\caption{Detección del tipo de proyecto a desplegar}
 	\end{figure}
-	Vercel comienza a desplegar la aplicación web y nos da un enlace en el cual podemos ver como se encuentra el despliegue, si se presentara algún problema, en la terminal nos indicara cual es.
+	Vercel comienza a desplegar la aplicación web y genera un enlace mediante el cual podemos ver el estado del despliegue, y de presentarse algún problema se nos estará indicando cual su origen en la misma terminal.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Desplegando.png}
 		\centering 
@@ -927,20 +923,20 @@
 		\centering 
 		\caption{Desplegando el proyecto}
 	\end{figure}
-	Este error está relacionado con unas librerías opcionales localizadas dentro de la careta node\_modules de nuestro proyecto, vercel no reconoce que estas librerías son opcionales, para poder hacer el despliegue y que no nos marque estas librerías opcionales como error debemos entrar a la parte de configuraciones de nuestro proyecto.	
+	Este error está relacionado con unas librerías opcionales localizadas dentro de la careta “node\_modules” de nuestro proyecto, Vercel no reconoce que estas librerías son opcionales por lo que para poder hacer el despliegue y que no nos marque error debemos entrar a las configuraciones de nuestro proyecto.	
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Ajustes.jpeg}
 		\centering 
 		\caption{Configuración del proyecto desplegado}
 	\end{figure}
-	Luego en la parte de variables de entorno y en esta sección agregar la variable CI con un valor de false
+	Una vez dentro de la configuración del proyecto se debe de ir a la sección de “variables de entorno” y ahí agregar la variable CI con un valor de false.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Varaiblesentorno.jpeg}
 		\centering 
 		\caption{Variable de entorno}
 	\end{figure}
-	Después de realizar esto volvemos a nuestra terminal, volvemos a escribir vercel y automáticamente vuelve a realizar el despliegue de la aplicación web, de esta misma forma solo escribiendo vercel en la terminal la actualización de la página desplegada ante algún cambio en el código.\\\\
-	Una vez completado el despliegue, se nos genera un enlace con el cual se puede acceder a la aplicación web ya desplegada desde cualquier dispositivo.
+	Habiendo realizado esos cambios se regresa a la terminal y se vuelve a escribir el comando “vercel” y automáticamente volverá a realizar el despliegue de la aplicación web. Con el comando vercel escrito en la terminal también es posible actualizar la página desplegada en caso de haber algún cambio en el código.\\\\
+	Ya completado el despliegue se nos genera un enlace con el cual se puede acceder a la aplicación web desplegada desde cualquier dispositivo.
 	\begin{figure}[H]
 		\includegraphics[width=12cm]{./Imagenes/Despliegue/Desplegada.png}
 		\centering 
@@ -951,11 +947,11 @@
 		\centering 
 		\caption{Accediendo a la aplicación web desplegada}
 	\end{figure}
-	En nuestro caso, previamente se había adquirido un dominio, para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio previamente adquirido, en nuestro proyecto, en la parte de configuración, en la de domino, se agrega el enlace y así es posible acceder a esta pagina web desde ese dominio adquirido.
+	En nuestro caso, previamente se había adquirido un dominio por lo que para realizar el cambio del enlace proporcionado por Vercel a el enlace del dominio adquirido hay que acceder nuevamente a la configuración del proyecto y ahí en la sección de “dominio” se agrega la nueva dirección desde la que queremos acceder.
 	\newpage
 	\section{Configuración de SSL y DNS}
 	
-	Para permitir que nuestra pagina web pueda accederse desde otros dispositivos es necesario hacer la configuración correcta de DNS y darle un certificado de seguridad. Debido a que nuestra pagina web fue desplegada en la plataforma de Vercel, para que esta pueda direccionar de manera correcta con nuestro dominio se requiere la configuración de un DNS especifico que nos pide Vercel.
+	Para permitir que nuestra página web pueda accederse desde otros dispositivos es necesario hacer la configuración correcta de DNS y proporcionarle un certificado de seguridad. Dado que nuestra página web fue desplegada en la plataforma de Vercel, para que esta pueda direccionar de manera correcta usando nuestro dominio personal se requiere de la configuración de un DNS especifico requerido por Vercel.
 	\begin{figure}[H] 
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns1.png}
 		\centering \caption{Dirección IP requerida para la configuración del DNS.}
@@ -964,14 +960,13 @@
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Dns2.png}
 		\centering \caption{Nombre requerido para la configuración del DNS.}
 	\end{figure}
-	Por la parte del backend, se utilizó la herramienta gratuita de AWS Certificate Manager, la cuál nos permite agregar un certificado con el puerto número 443 abierto redirigiendo de HTTP a HTTPS, 	configurándolo para neuralyrics.com, esto para que se pueda agregar un registro redireccionando a la API y no haya problemas de compatibilidad, una vez que la plataforma haya creado el certificado, se agregan dos registros a Cloudflare:
-	
+	Por parte del backend se utilizó la herramienta gratuita de AWS Certificate Manager, la cuál nos permite agregar un certificado con el puerto número 443 abierto redirigiendo de HTTP a HTTPS, configurándolo para neuralyrics.com de manera que se pueda agregar un registro redireccionando a la API y no haya problemas de compatibilidad; una vez que la plataforma haya creado el certificado, se agregan dos registros a Cloudflare.
 	
 	\begin{figure}[H] 
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/DNS_aws.png}
 		\centering \caption{Estado del certificado SSL que se agregará en Cloudflare para que la API pueda funcionar con HTTPS.}
 	\end{figure}
-	Estas reglas de DNS deben agregarse en la plataforma de Cloudflare quedando de la siguiente manera 
+	Estas reglas de DNS deben agregarse en la plataforma de Cloudflare quedando de la siguiente manera.
 	\begin{figure}[H] 
 		\includegraphics[width=10cm]{./Imagenes/DnsSSL/Config_DNS.png}
 		\centering \caption{Configuración final de los registros DNS.}
@@ -979,10 +974,10 @@
 	\begin{enumerate}
 	\item El primero es la dirección de DNS proporcionado por Vercel de tipo, el cual permite enlazar una direccion con un nombre de dominio.
 	\item El segundo es el código del certificado creado en AWS de tipo CNAME con el nombre y contenido proporcionado por AWS.
-	\item El tercero sería otro tipo CNAME con el nombre de 'api' y con contenido a la API directamente.
-	\item El cuarto es el valor de tipo CNAME proporcionado por Vercel
+	\item El tercero es otro tipo CNAME con el nombre de “api” y conteniendo a la API directamente.
+	\item El cuarto es el valor de tipo CNAME proporcionado por Vercel.
 	\end{enumerate}
-	Una vez desplegada la parte de la página web y de la API, si se hizo correctamente debería ser posible poder comunicarse por medio de los links generados al final respectivamente, cada parte tendrá su propio versionamiento y como ventaja de esto es que pueden crecer los dos servicios de forma separada sin necesidad de depender forzosamente para que funcione el link una de la otra.
+	Una vez desplegadas la página web y la API, y si todo se hizo correctamente, deberá ser posible comunicarse mediante los links generados al final de cada sección, cada parte tendrá su propio versionamiento, y una ventaja de esto es que pueden crecer los dos servicios de forma separada sin necesidad de depender de ellos, con lo que si una incurre en un error no deberá afectar el acceso al enlace de la otra.
 	\newpage
 		\begin{thebibliography}{20}
 			\bibitem{refQuesPython} 
