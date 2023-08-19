@@ -2,6 +2,6 @@ https://download.pytorch.org/whl/cpu/torch-1.3.1%2Bcpu-cp36-cp36m-linux_x86_64.w
 transformers==4.30.0
 numpy==1.22.0
 flask
-joblib==0.16.0
+joblib==1.2.0
 sentencepiece==0.1.91
 urllib3==1.25.10
