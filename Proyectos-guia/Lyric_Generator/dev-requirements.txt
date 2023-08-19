@@ -12,7 +12,7 @@ attrs==19.1.0
     # via pytest
 cachetools==3.1.1
     # via google-auth
-certifi==2019.6.16
+certifi==2023.7.22
     # via requests
 chardet==3.0.4
     # via requests
