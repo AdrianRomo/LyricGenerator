@@ -10,9 +10,9 @@ certifi==2023.7.22
     # via requests
 charset-normalizer==3.2.0
     # via requests
-click==7.0
+click==8.1.7
     # via flask
-flask==1.1.1
+flask==2.2.5
     # via
     #   -r requirements.in
     #   flask-basicauth
@@ -45,9 +45,9 @@ grpcio==1.53.0
     # via google-api-core
 idna==2.8
     # via requests
-itsdangerous==1.1.0
+itsdangerous==2.1.2
     # via flask
-jinja2==2.11.3
+jinja2==3.1.2
     # via flask
 limits==1.3
     # via flask-limiter

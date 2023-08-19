@@ -16,11 +16,11 @@ certifi==2023.7.22
     # via requests
 charset-normalizer==3.2.0
     # via requests
-click==7.0
+click==8.1.7
     # via
     #   flask
     #   pip-tools
-flask==1.1.1
+flask==2.2.5
     # via
     #   -r requirements.in
     #   flask-basicauth
@@ -59,9 +59,9 @@ importlib-metadata==0.18
     #   pytest
 isort==4.3.20
     # via pylint
-itsdangerous==1.1.0
+itsdangerous==2.1.2
     # via flask
-jinja2==2.11.3
+jinja2==3.1.2
     # via flask
 lazy-object-proxy==1.4.1
     # via astroid
